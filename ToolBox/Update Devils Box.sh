@@ -13,3 +13,4 @@ sudo rm -R Devils-Box
 git clone https://github.com/Retro-Devils/Devils-Box
 sudo rm -r /home/pi/RetroPie/retropiemenu/Devils-Box/.git
 sudo rm -r /home/pi/RetroPie/retropiemenu/Devils-Box/README.md
+sudo reboot
