@@ -8,7 +8,7 @@ if [ "$CONT" = "y" ]; then
 else
   echo "Rebooting Now";sudo reboot
 fi
-10sudo rm -r /home/pi/RetroPie/roms/amiga
+sudo rm -r /home/pi/RetroPie/roms/amiga
 cd
 mkdir test
 cd test
