@@ -6,6 +6,8 @@ if [ "$CONT" = "y" ]; then
 else
   echo "Exiting Now";sudo reboot
 fi
-sudo ./retropie_packages lr-snes9x2002
-sudo ./retropie_packages lr-snesx9x
+sudo /home/pi/RetroPie-Setup/retropie_packages.sh lr-snes9x2002
+sudo /home/pi/RetroPie-Setup/retropie_packages.sh lr-snesx9x
+echo "Complete REbooting Now"
+sleep 5
 sudo reboot
