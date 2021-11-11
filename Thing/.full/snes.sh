@@ -9,10 +9,6 @@ if [ "$CONT" = "y" ]; then
 else
   echo "Rebooting Now";sudo reboot
 fi
-echo "Installing Emulator(s) Now"
-sudo bash /home/pi/RetroPie-Setup/retropie_packages.sh lr-snes9x
-sudo bash /home/pi/RetroPie-Setup/retropie_packages.sh lr-snes9x
-echo "Installing & Cleaning Everything Else Now"
 sudo rm -r /home/pi/RetroPie/roms/snes
 cd
 mkdir test
