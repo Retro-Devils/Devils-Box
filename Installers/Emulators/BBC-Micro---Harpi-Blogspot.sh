@@ -31,3 +31,4 @@ sleep 1
 sudo make install
 echo "Complete Rebooting Now"
 sleep 5
+sudo reboot
