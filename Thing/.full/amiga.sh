@@ -15,4 +15,6 @@ sudo mv amiga /home/pi/RetroPie/roms
 sudo rm "Retro-Devils-amiga.7z"
 cd ..
 sudo rm -R test
+echo "Complete Rebooting Now"
+sleep 5
 sudo reboot
