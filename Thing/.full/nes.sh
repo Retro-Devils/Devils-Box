@@ -14,12 +14,12 @@ sleep 2
 sudo bash /home/pi/RetroPie-Setup/retropie_packages.sh lr-nestopia
 echo "Installing & Cleaning Everything Else Now"
 sleep 2
+sudo rm -r /home/pi/RetroPie/roms/nes
 cd
 mkdir test
 cd test
 wget -c https://archive.org/download/thing-box/Retro-Devils-NES.7z -q --show-progress
 7z x -y -aoa /home/pi/test/Retro-Devils-NES.7
-sudo rm -r /home/pi/RetroPie/roms/nes
 sudo mv nes /home/pi/RetroPie/roms
 sudo rm "Retro-Devils-NES.7"
 cd ..
