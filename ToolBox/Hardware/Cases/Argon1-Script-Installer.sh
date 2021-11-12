@@ -4,7 +4,7 @@ read -p "Do You Wish To Continue (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
   echo "Starting Tool";
 else
-  echo "Exiting Now";
+  echo "Exiting Now";emulationstation
 fi
 cat /home/pi/RetroPie/retropiemenu/Devils-Box/setup/txts/tools-launch.txt
 curl https://download.argon40.com/argon1.sh | bash
