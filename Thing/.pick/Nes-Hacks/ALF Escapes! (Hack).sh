@@ -8,7 +8,7 @@ if [ "$CONT" = "y" ]; then
 else
   echo "Exiting Now";emulationstation
 fi
-cd /home/pi/RetroPie/roms/nes/
+cd /home/pi/RetroPie/roms/nesh
 wget https://archive.org/download/thing-box2/nesh/ALF%20Escapes%21%20%28Hack%29.zip -q --show-progress
 7z x -y -aoa "/home/pi/test/ALF Escapes! (Hack).zip"
 sudo rm "ALF Escapes! (Hack).zip"
