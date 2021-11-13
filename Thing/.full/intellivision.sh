@@ -21,6 +21,8 @@ cd ..
 sudo rm -R test
 echo "Complete Rebooting Now"
 sleep 5
+echo "Complete Rebooting Now"
+sleep 5
 sudo reboot
 
 
