@@ -1,11 +1,15 @@
 #!/bin/bash
 cat /home/pi/RetroPie/retropiemenu/Devils-Box/setup/txts/packs-launch.txt
+sleep 2
+wget --spider https://archive.org/download/thing-box/Retro-Devils-Astrocade.7z
+echo "Above Is File Info & Size"
 read -p "Do You Wish To Continue (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
   echo "Starting Download";
 else
   echo "Rebooting Now";sudo reboot
 fi
+sudo rm -r /home/pi/RetroPie/roms/astrocade
 cd
 mkdir test
 cd test
@@ -15,6 +19,7 @@ sudo mv astrocade /home/pi/RetroPie/roms
 sudo rm "Retro-Devils-Astrocade.7z"
 cd ..
 sudo rm -R test
-touch /tmp/es-restart && kill -15 $(pidof emulationstation)
-
+echo "Complete Rebooting Now"
+sleep 5
+sudo reboot
 
