@@ -1,5 +1,6 @@
 #!/bin/bash
 cat /home/pi/RetroPie/retropiemenu/Devils-Box/setup/txts/packs-launch.txt
+sleep 2
 wget --spider https://archive.org/download/thing-box/Retro-Devils-SFC.7z
 read -p "Do You Wish To Continue (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
@@ -7,6 +8,7 @@ if [ "$CONT" = "y" ]; then
 else
   echo "Exiting Now";sudo reboot
 fi
+sudo rm -r /home/pi/RetroPie/roms/sfc
 cd
 mkdir test
 cd test
@@ -16,6 +18,8 @@ sudo mv sfc /home/pi/RetroPie/roms
 sudo rm "Retro-Devils-SFC.7z"
 cd ..
 sudo rm -R test
+echo "Complete Rebooting Now"
+sleep 5
 sudo reboot
 
 
