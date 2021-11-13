@@ -1,5 +1,6 @@
 #!/bin/bash
 cat /home/pi/RetroPie/retropiemenu/Devils-Box/setup/txts/packs-launch.txt
+sleep 2
 wget --spider https://archive.org/download/thing-box/Retro-Devils-SNES.7z
 echo "Above Is File Size & Info"
 read -p "Do You Wish To Continue (y/n)?" CONT
