@@ -2,6 +2,7 @@
 cat /home/pi/RetroPie/retropiemenu/Devils-Box/setup/txts/packs-launch.txt
 sleep 2
 wget --spider https://archive.org/download/thing-box/Retro-Devils-SFC.7z
+echo "Above Is File Info & Size"
 read -p "Do You Wish To Continue (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
   echo "Starting Download";
