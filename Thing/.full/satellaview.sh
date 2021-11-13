@@ -7,6 +7,7 @@ if [ "$CONT" = "y" ]; then
 else
   echo "Rebooting Now";sudo reboot
 fi
+sudo rm -r /home/pi/RetroPie/roms/satellaview
 cd
 mkdir test
 cd test
