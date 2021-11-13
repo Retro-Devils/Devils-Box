@@ -7,16 +7,18 @@ if [ "$CONT" = "y" ]; then
 else
   echo "Rebooting Now";sudo reboot
 fi
+sudo rm -r /home/pi/RetroPie/roms/supervision
 cd
 mkdir test
 cd test
 wget -c https://archive.org/download/thing-box/Retro-Devils-Supervision.7z -q --show-progress
 7z x -y -aoa /home/pi/test/Retro-Devils-Supervision.7z
-sudo rm -r /home/pi/RetroPie/roms/supervision
 sudo mv supervision /home/pi/RetroPie/roms
 sudo rm "Retro-Devils-Supervision.7z"
 cd ..
 sudo rm -R test
-sudo reboot 
+echo "Complete Rebooting Now"
+sleep 5
+sudo reboot
 
 
