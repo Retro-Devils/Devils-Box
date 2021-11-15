@@ -1,7 +1,7 @@
 #!/bin/bash
 cat /home/pi/RetroPie/retropiemenu/Devils-Box/setup/txts/packs-launch.txt
 sleep 2
-wget --spider https://archive.org/download/thing-box/Retro-Devils-Atari5200.7z
+wget --spider https://archive.org/download/Devils-Box2/Retro-Devils-Atari5200/atari5200/
 echo "Above Is File Info & Size"
 read -p "Do You Wish To Continue (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
@@ -9,17 +9,7 @@ if [ "$CONT" = "y" ]; then
 else
   echo "Rebooting Now";sudo reboot
 fi
-sudo rm -r /home/pi/RetroPie/roms/atari5200
-cd
-mkdir test
-cd test
-wget -c https://archive.org/download/thing-box/Retro-Devils-Atari5200.7z -q --show-progress
-7z x -y -aoa /home/pi/test/Retro-Devils-Atari5200.7z
-sudo mv atari5200 /home/pi/RetroPie/roms
-sudo rm "Retro-Devils-Atari5200.7z"
-cd ..
-sudo rm -R test
+wget -m -recursive -noparent https://archive.org/download/Devils-Box2/Retro-Devils-Atari5200/atari5200/ ~/Retropie/roms
 echo "Complete Rebooting Now"
-sleep 5
+sleep 2
 sudo reboot
-
