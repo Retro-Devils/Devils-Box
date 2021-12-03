@@ -7,16 +7,3 @@ Some stuff someone said at some point.
 Updated 12/2/2021
 
 Version 2.0 in the works.
-
-To Install:
-
-cd ~/RetroPie/retropiemenu
-
-wget https://github.com/Retro-Devils/Devils-Box/The-Devils-Box.sh
-
-
-To Remove:
-
-cd ~/RetroPie/retropiemenu
-
-sudo rm The-Devils-Box.sh
