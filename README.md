@@ -5,5 +5,4 @@ Some stuff someone said at some point.
 "In order to succeed, your desire for success should be greater than your fear of failure."
 
 Updated 12/2/2021
-Version 2.0 in the works
-All in a terminal UI now, no more zipped packs, get boxart seperate and a few other changes.
+Version 2.0 in the works.
