@@ -9,6 +9,8 @@ Updated 12/17/2021
 Version 2.0 worked out doing the things now to finish .
 
 
-Android 11 Variant Download
+Android 11 Variant 
 
-https://archive.org/download/bad-droid/Devils-Box-V1.zip/Devils-Box-V1.apk
+https://bit.ly/3GSShg1
+
+
