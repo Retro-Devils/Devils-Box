@@ -6,4 +6,4 @@ Some stuff someone said at some point.
 
 Updated 12/17/2021
 
-Version 2.0 worked doing the things now to finish .
+Version 2.0 worked out doing the things now to finish .
