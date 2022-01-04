@@ -6,10 +6,6 @@ ART_HOST="https://archive.org/download/devils-box-media"
 ROM_HOST="https://archive.org/download/the-devils-box_202112"
 ROM_HOST2="https://archive.org/download/the-devil-box"
 
-
-###  INTRO VIDEO     ###
-omxplayer /home/pi/Devils-Box/intro.mp4
-
 ###-----------------------###
 ### MAIN MENU FUNCTIONS   ###
 ###-----------------------###
