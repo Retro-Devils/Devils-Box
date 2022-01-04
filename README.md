@@ -12,12 +12,12 @@ curl -sSL https://git.io/JSDs7 | bash
 
 ## To install press f4 in retropie type 
 
-curl -sSL 
+curl -sSL https://git.io/JSDGq | bash 
 
 
 
 
-Android 11 Variant 
+## Android 11 Variant 
 
 https://bit.ly/3GSShg1
 
