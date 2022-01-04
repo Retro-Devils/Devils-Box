@@ -650,15 +650,17 @@ function db_tools() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX TOOLS MENU " \
       --ok-label Select --cancel-label Back \
       --menu "SYSTEM WILL REBOOT WITH REMOVAL OR UPDATE " 30 45 45 \
-      1 "About Devils Box   " \
-      2 "Remove Devils Box  " \
-      3 "Update Devils Box  " \
+      1 "About Devils Box    " \
+      2 "Help With Devils Box" \
+      3 "Remove Devils Box   " \
+      4 "Update Devils Box   " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) about_db ;;
-    2) remove_db ;;
-    3) update_db ;;
+    2) help_db
+    3) remove_db ;;
+    4) update_db ;;
     *) break ;;
     esac
   done
@@ -666,8 +668,15 @@ function db_tools() {
 #--------------------------_#
 #ABOUT DEVILS BOX #
 #---------------------------#
+function help_db() {
+  cat ~/Devils-Box/files/HELP-DB.txt
+  sleep 20
+}
+#--------------------------_#
+#HELP WITH DEVILS BOX #
+#---------------------------#
 function about_db() {
-  cat ~/Devils-Box/INFO.txt
+  cat ~/Devils-Box/files/INFO.txt
   sleep 20
 }
 #--------------------------_#
@@ -675,7 +684,7 @@ function about_db() {
 #---------------------------#
 function remove_db() {
   sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
-  sudo rm ~/Devils-Box
+  sudo rm -R ~/Devils-Box
   sudo reboot
 }
 
