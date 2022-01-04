@@ -18,8 +18,7 @@ WHATS THIS?    A DOWNLOADER & TOOL BOX
 CREATED BY?    THE RETRO DEVILS & OTHERS
 -------------------------------------- 
 CREATED WHEN?  2021/2022
---------------------------------------
-SYSTEM WILL REBOOT WHEN COMPLETE" 25 50 40 \
+--------------------------------------" 25 50 40 \
             1 "Install Devils Box " \
             2 "Update Devils Box  " \
             2>&1 > /dev/tty)
