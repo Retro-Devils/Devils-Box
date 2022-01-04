@@ -36,7 +36,7 @@ CREATED WHEN?  2021/2022
 function install_db() {
 sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
 git clone https://github.com/Retro-Devils/Devils-Box
-mv ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
+mv ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu
 }
 #------------------#
 #UPDATE DEVILS BOX #
