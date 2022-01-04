@@ -4,9 +4,17 @@ Some stuff someone said at some point.
 
 "In order to succeed, your desire for success should be greater than your fear of failure."
 
-Updated 12/17/2021
+Updated January 5 2022
 
-Version 2.0 worked out doing the things now to finish .
+## To run remotely press f4 in retropie type 
+
+curl -sSL https://git.io/JSDs7 | bash
+
+## To install press f4 in retropie type 
+
+curl -sSL 
+
+
 
 
 Android 11 Variant 
