@@ -37,7 +37,6 @@ SYSTEM WILL REBOOT WHEN COMPLETE" 25 50 40 \
 function install_db() {
 git clone https://github.com/Retro-Devils/Devils-Box -P ~/
 mv ~/Devils-Box/Devils-box.sh -P ~/RetroPie/retropiemenu/
-sudo reboot
 }
 #------------------#
 #UPDATE DEVILS BOX #
@@ -47,7 +46,6 @@ sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
 sudo rm -R ~/Devils-Box/
 git clone https://github.com/Retro-Devils/Devils-Box -P ~/
 mv ~/Devils-Box/Devils-box.sh -P ~/RetroPie/retropiemenu/
-sudo reboot
 }
 
 # Main
