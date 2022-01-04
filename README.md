@@ -6,11 +6,11 @@ Some stuff someone said at some point.
 
 Updated January 5 2022
 
-## To run remotely press f4 in retropie type 
+## To run remotely 
 
 curl -sSL https://git.io/JSDs7 | bash
 
-## To install press f4 in retropie type 
+## To install 
 
 curl -sSL https://git.io/JSDGq | bash 
 
