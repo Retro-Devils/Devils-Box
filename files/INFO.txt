@@ -1,0 +1,56 @@
+_____________________DEVILS BOX RETROPIE VARIANT V2.0___________________
+
+WHATS THIS?    A DOWNLOADER AND TOOL BOX 
+CREATED BY?    THE RETRO DEVILS AND OTHERS 
+CREATED WHEN?  DECEMBER 2021
+
+__FAQ________________________________________FREQUENTLY ASKED QUESTIONS_
+
+SLOW DOWNLOADS WHATS UP ?
+	- Free hosting site slower up and down speeds. FYI we dont plan on paying to host atm.
+SOME SYSTEMS DONT DO ANYTHING? 
+	- Please report to us, we will do our best to fix.
+HOW DO I ADD A TOOL OR DOWNLOAD?
+	- The Devils Box is wrote for you too understand. Wanna add for everyone contact us.
+WHY EVEN MAKE THIS?
+	- We want everyone to enjoy alL the games. If your getting em anyway, let us make it easy.
+WHAT DOES THIS WORK ON?
+	- This is built for things with RetroPie installed. Mainly PI 4.
+	- This will work on any system(s) with Retropie Installed. 
+		**The following is needed for Devils Box to work:
+	         *The location:    ~/RetroPie/retropiemenu/
+		 *The location:    ~/RetroPie/roms/
+		 *The Commands:    wget and curl
+	- The downloader will work any Retropie Device. That doesnt mean you can play all the consoles listed.
+		**example pi zero wont play N64. 
+	- Most tools will only work on pi 3 or 4.
+	- Android Variant (Slighly Different)
+		** Download .apk from "archive.org/download/bad-droid" 
+		 * You will see "Devils-Box-V1.zip". 
+		 * Download, unzip, transfer to android device and install. 
+WHY USE THIS ARTWORK INSTEAD OF SCRAPER?
+	- This art is set for these roms. So they will look nice. Scraper works and props to it.
+
+__CREDITS______________________________________________________CREDITS__
+
+--EMUS AND TOOLS CREDITS:
+	-All emus & tools from commmunity have credits in Devils Box menus.
+	**example. RetroPie Extras says "Zero Jay" at the far right of that line.
+
+--MISC CREDITS:
+-ALL THE RETRO DEVILS                   -RETROPIE----FOR EVERYTHING YOU DO 
+
+-CRASH----SCRIPTING KNOWLEDGE & ADVICE  -COMMUNITY----INPUT IN GENERAL
+
+-BIGED----SCRIPTING KNOWLEDE & ADVICE   -RETROPIE----FOR EVERYTHING THEY DO 
+
+__NOTES_________________________________________________________NOTES__
+-----------------------------------------------------------------------
+____WELCOME TO THE OTHERSIDE. WE HAVE BEEN WAITING FOR YOU MY FRIEND___
+-----------------------------------------------------------------------
+____I FEEL LIKE A SLICE OF BUTTER, ON A BIG OF PILE OF FLAPJACKS_______
+-----------------------------------------------------------------------
+____WINNERS DONT DO DRUGS OR PIRATE MOVIES? GUESS WE LOSERS____________
+-----------------------------------------------------------------------
+
+

@@ -1,0 +1,7 @@
+_____________________DEVILS BOX RETROPIE VARIANT V2.0___________________
+
+##SOME SYSTEMS MIGHT NOT SHOW ##
+
+##YOU WILL HAVE TO MANUALLY EDIT YOUR ES_SYSTEM.CFG FILE ##
+
+##LOCATED AT ~/.emulationstation ##
