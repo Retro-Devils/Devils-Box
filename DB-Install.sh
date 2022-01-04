@@ -4,7 +4,6 @@ export NCURSES_NO_UTF8_ACS=1
 ###----------------------------###
 ### INSTALLER MENU FUNCTIONS   ###
 ###----------------------------###
-
 function main_menu() {
     local choice
 
