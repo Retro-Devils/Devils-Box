@@ -692,10 +692,9 @@ function remove_db() {
 #UPDATE DEVILS BOX #
 #------------------#
 function update_db() {
-  sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
-  git clone https://github.com/Retro-Devils/Devils-Box -P ~/
-  mv ~/Devils-Box/Devils-box.sh -P ~/RetroPie/retropiemenu/
-  sudo reboot
+sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
+git clone https://github.com/Retro-Devils/Devils-Box
+mv ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
 }
 
 ###---------------------------------###
