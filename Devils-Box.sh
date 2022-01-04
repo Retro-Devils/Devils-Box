@@ -657,8 +657,8 @@ function db_tools() {
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) about_db ;;
-    2) help_db
+    1) about_db  ;;
+    2) help_db.  ;;
     3) remove_db ;;
     4) update_db ;;
     *) break ;;
