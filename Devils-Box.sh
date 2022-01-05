@@ -486,7 +486,7 @@ function community_tools() {
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 75 60 \
       1 "RetroPie Extras                                      Zero Jay   " \
-      2 "T.A.M.P.O                                            The Pitster" \
+      2 "T.A.M.P.O                                            thepitster" \
       2>&1 >/dev/tty)
 
     case "$choice" in
