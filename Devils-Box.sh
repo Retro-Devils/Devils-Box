@@ -310,7 +310,6 @@ function daphne() {
 function dragon32() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/dragon32/ -P ~/RetroPie/roms/dragon32 -erobots=off
 }
-
 function dreamcast() {
    -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
 }
@@ -335,18 +334,19 @@ function gamegear() {
 }
 
 function genesis() {
-   https://github.com/SinisterSpatula/Gpi2/blob/master/control_updater_menu.sh
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gamegear/ -P ~/RetroPie/roms/gamegear -erobots=off
+}
+
 }
 function intellivision() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
 }
 function lightgun() {
-  wget https://github.com/SinisterSpatula/Gpi2/blob/master/control_updater_menu.sh
+  wget  -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/lightgun/ -P ~/RetroPie/roms/lightgun -erobots=off
 }
 function markiii() {
-  wget https://github.com/SinisterSpatula/Gpi2/blob/master/control_updater_menu.sh
+  wget  -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/markiii/ -P ~/RetroPie/roms/markiii -erobots=off
 }
-
 function mastersystem() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/mastersystem/ -P ~/RetroPie/roms/mastersystem -erobots=off
 }
@@ -355,7 +355,7 @@ function megadrive() {
 }
 
 function mugen() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"mugen/ -P ~/RetroPie/roms/wine/mugens -erobots=off
 }
 function n64() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST2}"/N64/ -P ~/RetroPie/roms/n64 -erobots=off
@@ -369,17 +369,17 @@ function nds() {
 }
 
 function neogeo() {
-  wget https://github.com/SinisterSpatula/Gpi2/blob/master/control_updater_menu.sh
+  wget  -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/neogeo/ -P ~/RetroPie/roms/neogeo -erobots=off
 }
 function nes() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/nes/ -P ~/RetroPie/roms/nes -erobots=off
 }
 
 function openbor() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/openbor/ -P ~/RetroPie/roms/openbor -erobots=off
 }
 function oric() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/oric/ -P ~/RetroPie/roms/intellivision -erobots=off
 }
 
 function pcengine() {
