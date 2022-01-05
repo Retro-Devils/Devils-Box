@@ -425,24 +425,14 @@ function hacked() {
       --menu " PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
       1 "Gameboy Hacks                           04MB    019 GAMES " \
       2 "NES Hacks                               20MB    190 GAMES " \
-      3 "Gameboy Hacks                           04MB    019 GAMES " \
-      4 "NES Hacks                               20MB    190 GAMES " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) gbh ;;
     2) nesh ;;
-    3) gbh ;;
-    4) nesh ;;
     *) break ;;
     esac
   done
-}
-function gbh() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gbh/ -P ~/RetroPie/roms/gbh -erobots=off
-}
-function nesh() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/nesh/ -P ~/RetroPie/roms/nesh -erobots=off
 }
 function gbh() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gbh/ -P ~/RetroPie/roms/gbh -erobots=off
