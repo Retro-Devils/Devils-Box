@@ -3,8 +3,9 @@
 export NCURSES_NO_UTF8_ACS=1
 
 ART_HOST="https://archive.org/download/devils-box-media"
-ROM_HOST="https://archive.org/download/the-devils-box_202112"
-ROM_HOST2="https://archive.org/download/the-devil-box"
+HOST#1="https://archive.org/download/the-devils-box_202112"
+HOST#2="https://archive.org/download/the-devil-box"
+
 
 
 ###  INTRO VIDEO     ###
@@ -263,35 +264,35 @@ function consoles() {
   done
 }
 function amiga() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/amiga -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/intellivision/ -P ~/RetroPie/roms/amiga -erobots=off
 }
 
 function amigacd() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/amigacd/ -P ~/RetroPie/roms/amigacd -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/amigacd/ -P ~/RetroPie/roms/amigacd -erobots=off
 }
 function arcadia() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
 }
 
 function astrocade() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/astrocade/ -P ~/RetroPie/roms/astrocade -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/astrocade/ -P ~/RetroPie/roms/astrocade -erobots=off
 }
 function atari800() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/atari800/ -P ~/RetroPie/roms/atari800 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/atari800/ -P ~/RetroPie/roms/atari800 -erobots=off
 }
 
 function atari2600() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/atari2600/ -P ~/RetroPie/roms/atari2600 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/atari2600/ -P ~/RetroPie/roms/atari2600 -erobots=off
 }
 function atari5200() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/atari5200/ -P ~/RetroPie/roms/atari5200 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/atari5200/ -P ~/RetroPie/roms/atari5200 -erobots=off
 }
 
 function atari7800() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/atari7800/ -P ~/RetroPie/roms/atari7800 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/atari7800/ -P ~/RetroPie/roms/atari7800 -erobots=off
 }
 function atarilynx() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/atarilynx/ -P ~/RetroPie/roms/atarilynx-erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/atarilynx/ -P ~/RetroPie/roms/atarilynx-erobots=off
 }
 
 function atarist() {
