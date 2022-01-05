@@ -312,13 +312,13 @@ function dragon32() {
 }
 
 function dreamcast() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
+   -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
 }
 function fds() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
 }
 function gameandwatch() {
-  wget https://github.com/SinisterSpatula/Gpi2/blob/master/control_updater_menu.sh
+   -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gameandwatch/ -P ~/RetroPie/roms/gameandwatch -erobots=off
 }
 function gb() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gb/ -P ~/RetroPie/roms/gb -erobots=off
@@ -335,7 +335,7 @@ function gamegear() {
 }
 
 function genesis() {
-  wget https://github.com/SinisterSpatula/Gpi2/blob/master/control_updater_menu.sh
+   https://github.com/SinisterSpatula/Gpi2/blob/master/control_updater_menu.sh
 }
 function intellivision() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
