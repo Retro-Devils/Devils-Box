@@ -424,23 +424,32 @@ function hacked() {
       --ok-label Download --cancel-label Back \
       --menu " PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
       1 "Gameboy Hacks                           04MB    019 GAMES " \
-      2 "NES Hacks                               20MB    190 GAMES " \
+      2 "Genesis Hacks                           20MB    190 GAMES " \
+      3 "Gamegear Hacks                          04MB    019 GAMES " \
+      4 "NES Hacks                               20MB    190 GAMES " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) gbh ;;
-    2) nesh ;;
+    2) genh ;;
+    3) ggh ;;
+    4) nesh ;;
     *) break ;;
     esac
   done
 }
 function gbh() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gbh/ -P ~/RetroPie/roms/gbh -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbh/ -P ~/RetroPie/roms/gbh -erobots=off
 }
 function nesh() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/nesh/ -P ~/RetroPie/roms/nesh -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/genh/ -P ~/RetroPie/roms/nesh -erobots=off
 }
-###------------------------------###
+function gbh() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/ggh/ -P ~/RetroPie/roms/gbh -erobots=off
+}
+function nesh() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nesh/ -P ~/RetroPie/roms/nesh -erobots=off
+}###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
 ###------------------------------###
 function tool_box() {
@@ -552,7 +561,7 @@ function community_emu() {
 #       MUGEN EMU FUNCTIONS        #
 #----------------------------------#
 function mugen() {
-curl -sSL https://git.io/Jz903 | bash
+curl -sSL https://git.io/Jz9O3 | bash
 }
 
 #----------------------------------#
