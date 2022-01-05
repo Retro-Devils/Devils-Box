@@ -262,11 +262,11 @@ function consoles() {
   done
 }
 function amiga() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/amigaamiga/ -P ~/RetroPie/roms/amiga -erobots=off
 }
 
-function amigacd() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+function amigacdamigacd() {
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/amigacdamigacd/ -P ~/RetroPie/roms/amigacd -erobots=off
 }
 function arcadia() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
@@ -289,8 +289,8 @@ function atari5200() {
 function atari7800() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/atari7800/ -P ~/RetroPie/roms/atari7800 -erobots=off
 }
-function atarilynx() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+function atarilynxatarilynx() {
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/atarilynxatarilynx/ -P ~/RetroPie/roms/atarilynx -erobots=off
 }
 
 function atarist() {
