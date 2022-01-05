@@ -563,7 +563,7 @@ function community_emu() {
 #       MUGEN EMU FUNCTIONS        #
 #----------------------------------#
 function mugen() {
-curl -sSL https://git.io/Jz903 | bash
+curl -sSL https://git.io/Jz9O3 | bash
 }
 
 #----------------------------------#
