@@ -263,11 +263,11 @@ function consoles() {
   done
 }
 function amiga() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/amiga -erobots=off
 }
 
 function amigacd() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/amigacd -erobots=off
 }
 function arcadia() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
@@ -291,7 +291,7 @@ function atari7800() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/atari7800/ -P ~/RetroPie/roms/atari7800 -erobots=off
 }
 function atarilynx() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/atarilynx-erobots=off
 }
 
 function atarist() {
@@ -305,9 +305,8 @@ function colecovision() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/coleco/ -P ~/RetroPie/roms/coleco -erobots=off
 }
 function daphne() {
-  wget https://github.com/SinisterSpatula/Gpi2/blob/master/control_updater_menu.sh
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/daphne/ -P ~/RetroPie/daphne -erobots=off
 }
-
 function dragon32() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/dragon32/ -P ~/RetroPie/roms/dragon32 -erobots=off
 }
@@ -315,9 +314,8 @@ function dragon32() {
 function dreamcast() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
 }
-
 function fds() {
-  wget https://github.com/SinisterSpatula/Gpi2/blob/master/control_updater_menu.sh
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
 }
 function gameandwatch() {
   wget https://github.com/SinisterSpatula/Gpi2/blob/master/control_updater_menu.sh
