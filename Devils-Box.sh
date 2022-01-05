@@ -179,14 +179,14 @@ function consoles() {
       2 "AmigaCD                           01GB      090 GAMES" \
       3 "Arcadia                           ??GB      050 GAMES" \
       4 "Astrocade                         50MB      650 GAMES" \
-      5 "Atari800                          770MB     650 GAMES" \
+      5 "Atari800                         770MB      650 GAMES" \
       6 "Atari2600                         ??GB      650 GAMES" \
       7 "Atari5200                         70MB      080 GAMES" \
       8 "Atari7800                         ??GB      ??? GAMES" \
       9 "AtariLynx                         ??GB      ??? GAMES" \
       10 "AtariST                           ??GB      ??? GAMES" \
-      11 "Commadore64                       3.2GB    3000 GAMES" \
-      12 "Colecovision                      150MB     140 GAMES" \
+      11 "Commadore64                      3.2GB     3000 GAMES" \
+      12 "Colecovision                     150MB      140 GAMES" \
       13 "Daphne                            ??GB      ??? GAMES" \
       14 "Dragon32                          ??GB      ??? GAMES" \
       15 "Dreamcast                         10GB      010 GAMES" \
@@ -194,16 +194,16 @@ function consoles() {
       17 "Game and Watch                    ??GB      ??? GAMES" \
       18 "Gameboy                          1.4GB      800 GAMES" \
       19 "Gameboy Advance                   05GB     1000 GAMES" \
-      20 "Gameboy Color                     1.4GB     420 GAMES" \
-      21 "Gamegear                          800MB     337 GAMES" \
-      22 "Genesis                           2.5GB     900 GAMES" \
+      20 "Gameboy Color                    1.4GB      420 GAMES" \
+      21 "Gamegear                         800MB      337 GAMES" \
+      22 "Genesis                          2.5GB      900 GAMES" \
       23 "Intellivision                     ??GB      ??? GAMES" \
       24 "Lightgun                          ??GB      ??? GAMES" \
       25 "MarkIII                           ??GB      ??? GAMES" \
-      26 "Mastersystem                      700MB     300 GAMES" \
-      27 "Megadrive                         586MB     900 GAMES" \
-      28 "Mugen                             9.2GB     009 GAMES" \
-      29 "Nintendo 64                       5.0GB     300 GAMES" \
+      26 "Mastersystem                     700MB      300 GAMES" \
+      27 "Megadrive                        586MB      900 GAMES" \
+      28 "Mugen                            9.2GB      009 GAMES" \
+      29 "Nintendo 64                      5.0GB      300 GAMES" \
       30 "Naomi                             ??GB      ??? GAMES" \
       31 "Nintendo DS                       21GB      750 GAMES" \
       32 "NeoGeo                            ??GB      ??? GAMES" \
@@ -211,14 +211,14 @@ function consoles() {
       34 "Openbor                           ??GB      ??? GAMES" \
       35 "Oric                              ??GB      ??? GAMES" \
       36 "PC Engine                         ??GB      ??? GAMES" \
-      37 "PS1                                13GB      40 GAMES" \
+      37 "PS1                               13GB       40 GAMES" \
       38 "Sega32x                           ??GB      ??? GAMES" \
       39 "SegaCD                            ??GB      ??? GAMES" \
-      40 "SNES                              500MB     500 GAMES" \
+      40 "SNES                             500MB      500 GAMES" \
       41 "Turbo Graffix 16                  ??GB      ??? GAMES" \
       42 "Wine                              ??GB      ??? GAMES" \
       43 "Wonderswan                        ??GB      ??? GAMES" \
-      44 "ZMachine                 121      ??GB      ??? GAMES" \
+      44 "ZMachine                          ??GB      ??? GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -271,7 +271,7 @@ function consoles() {
   done
 }
 function amiga() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/intellivision/ -P ~/RetroPie/roms/amiga -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amiga/ -P ~/RetroPie/roms/amiga -erobots=off
 }
 
 function amigacd() {
@@ -432,17 +432,9 @@ function hacked() {
     case "$choice" in
     1) gbh ;;
     2) nesh ;;
-    3) gbh ;;
-    4) nesh ;;
     *) break ;;
     esac
   done
-}
-function gbh() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gbh/ -P ~/RetroPie/roms/gbh -erobots=off
-}
-function nesh() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/nesh/ -P ~/RetroPie/roms/nesh -erobots=off
 }
 function gbh() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gbh/ -P ~/RetroPie/roms/gbh -erobots=off
@@ -657,7 +649,7 @@ function db_tools() {
 
     case "$choice" in
     1) about_db  ;;
-    2) help_db.  ;;
+    2) help_db   ;;
     3) remove_db ;;
     4) update_db ;;
     *) break ;;
