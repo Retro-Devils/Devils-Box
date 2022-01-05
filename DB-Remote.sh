@@ -574,7 +574,7 @@ function community_emu() {
 #       MUGEN EMU FUNCTIONS        #
 #----------------------------------#
 function mugen() {
-curl -sSL https://git.io/Jz903 | bash
+curl -sSL https://git.io/Jz9O3 | bash
 }
 
 #----------------------------------#
@@ -695,7 +695,8 @@ function remove_db() {
 #------------------#
 function update_db() {
   sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
-  git clone https://github.com/Retro-Devils/Devils-Box -P ~/
+  cd ~/Devils-Box
+  git pull
   mv ~/Devils-Box/Devils-box.sh -P ~/RetroPie/retropiemenu/
   sudo reboot
 }
