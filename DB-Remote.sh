@@ -7,9 +7,9 @@ export NCURSES_NO_UTF8_ACS=1
 
 ##------------ART HOSTS-----------------##
 ART_HOST="https://archive.org/download/devils-box-media"
-ART_HOST1=
-ART_HOST2=
-ART_HOST4=
+#ART_HOST1=
+#ART_HOST2=
+#ART_HOST4=
 
 ##-------------GAME HOSTS---------------##
 HOST1="https://archive.org/download/the-devils-box_202112"
@@ -440,8 +440,6 @@ function hacked() {
     case "$choice" in
     1) gbh ;;
     2) nesh ;;
-    3) gbh ;;
-    4) nesh ;;
     *) break ;;
     esac
   done
@@ -452,12 +450,7 @@ function gbh() {
 function nesh() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/nesh/ -P ~/RetroPie/roms/nesh -erobots=off
 }
-function gbh() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gbh/ -P ~/RetroPie/roms/gbh -erobots=off
-}
-function nesh() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/nesh/ -P ~/RetroPie/roms/nesh -erobots=off
-}
+
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
 ###------------------------------###
