@@ -1,12 +1,19 @@
 #!/bin/bash
 
 export NCURSES_NO_UTF8_ACS=1
+##-------------------------##
+##       HOST SITES        ##
+##-------------------------##
 
+#--------ART HOSTS----------#
 ART_HOST="https://archive.org/download/devils-box-media"
+#ART_HOST#2=
+#ART_HOST#3=
+#--------GAME HOSTS---------#
 HOST#1="https://archive.org/download/the-devils-box_202112"
 HOST#2="https://archive.org/download/the-devil-box"
-
-
+#HOST#3=
+#HOST#4=
 
 ###  INTRO VIDEO     ###
 omxplayer /home/pi/Devils-Box/intro.mp4
@@ -296,42 +303,42 @@ function atarilynx() {
 }
 
 function atarist() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/atarist/ -P ~/RetroPie/roms/atarist -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/atarist/ -P ~/RetroPie/roms/atarist -erobots=off
 }
 function c64() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/c64/ -P ~/RetroPie/roms/c64 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/c64/ -P ~/RetroPie/roms/c64 -erobots=off
 }
 
 function colecovision() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/coleco/ -P ~/RetroPie/roms/coleco -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/coleco/ -P ~/RetroPie/roms/coleco -erobots=off
 }
 function daphne() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/daphne/ -P ~/RetroPie/daphne -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/daphne/ -P ~/RetroPie/daphne -erobots=off
 }
 function dragon32() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/dragon32/ -P ~/RetroPie/roms/dragon32 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/dragon32/ -P ~/RetroPie/roms/dragon32 -erobots=off
 }
 function dreamcast() {
-   -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
+   -m -r -np -nH -nd -R "index.html" "${HOST#1}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
 }
 function fds() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
 }
 function gameandwatch() {
-   -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gameandwatch/ -P ~/RetroPie/roms/gameandwatch -erobots=off
+   -m -r -np -nH -nd -R "index.html" "${HOST#1}"/gameandwatch/ -P ~/RetroPie/roms/gameandwatch -erobots=off
 }
 function gb() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gb/ -P ~/RetroPie/roms/gb -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/gb/ -P ~/RetroPie/roms/gb -erobots=off
 }
 function gba() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gba/ -P ~/RetroPie/roms/gba -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/gba/ -P ~/RetroPie/roms/gba -erobots=off
 }
 
 function gbc() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gbc/ -P ~/RetroPie/roms/gbc -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/gbc/ -P ~/RetroPie/roms/gbc -erobots=off
 }
 function gamegear() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gamegear/ -P ~/RetroPie/roms/gamegear -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST#1}"/gamegear/ -P ~/RetroPie/roms/gamegear -erobots=off
 }
 
 function genesis() {
