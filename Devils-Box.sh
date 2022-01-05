@@ -267,7 +267,7 @@ function amiga() {
 }
 
 function amigacd() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/amigacd -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/amigacd/ -P ~/RetroPie/roms/amigacd -erobots=off
 }
 function arcadia() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
@@ -291,7 +291,7 @@ function atari7800() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/atari7800/ -P ~/RetroPie/roms/atari7800 -erobots=off
 }
 function atarilynx() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/atarilynx-erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/atarilynx/ -P ~/RetroPie/roms/atarilynx-erobots=off
 }
 
 function atarist() {
@@ -334,9 +334,7 @@ function gamegear() {
 }
 
 function genesis() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gamegear/ -P ~/RetroPie/roms/gamegear -erobots=off
-}
-
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/genesis/ -P ~/RetroPie/roms/genesis -erobots=off
 }
 function intellivision() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
@@ -362,10 +360,10 @@ function n64() {
 }
 
 function naomi() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/naomi/ -P ~/RetroPie/roms/naomi -erobots=off
 }
 function nds() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/nds/ -P ~/RetroPie/roms/nds -erobots=off
 }
 
 function neogeo() {
@@ -379,37 +377,36 @@ function openbor() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/openbor/ -P ~/RetroPie/roms/openbor -erobots=off
 }
 function oric() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/oric/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/oric/ -P ~/RetroPie/roms/oric -erobots=off
 }
 
 function pcengine() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/pce/ -P ~/RetroPie/roms/pce -erobots=off
 }
 function ps1() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/psx/ -P ~/RetroPie/roms/psx -erobots=off
 }
 
 function sega32x() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/sega32x/ -P ~/RetroPie/roms/seg32x -erobots=off
 }
 function segacd() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/segacd/ -P ~/RetroPie/roms/segacd -erobots=off
 }
 function snes() {
   wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/snes/ -P ~/RetroPie/roms/snes -erobots=off
 }
 function tg16() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/tg16 -P ~/RetroPie/roms/tg16 -erobots=off
 }
 function wine() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/mugen/ -P ~/RetroPie/roms/wine/mugens-erobots=off
 }
 function wonderswan() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
 }
-
 function zmachine() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
 }
 
 ###------------------------------###
