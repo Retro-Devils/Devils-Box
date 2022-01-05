@@ -23,15 +23,18 @@ function main_menu() {
       4 "Tool Box" \
       5 "Reboot System" \
       6 "Show Disk Space" \
+      7 "Run Devils Box Installer " \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) artwork ;;
-    2) consoles ;;
-    3) hacked ;;
-    4) tool_box ;;
-    5) system_reboot ;;
-    6) show_disk ;;
+    1) artwork      ;;
+    2) consoles     ;;
+    3) hacked       ;;
+    4) tool_box     ;;
+    5) system_reboot;;
+    6) show_disk    ;;
+    7) db_install   ;;
+    
     *) break ;;
     esac
   done
@@ -471,6 +474,18 @@ function tool_box() {
     *) break ;;
     esac
   done
+}
+#---------------------------#
+#INSTALL DEVILS BOX #
+#---------------------------#
+function install_db() {
+if [ -f "$HOME/RetroPie/retropiemenu/Devils-Box.sh" ]; then 
+sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh; fi
+if [ -d "$HOME/Devils-Box/" ]; then 
+sudo rm -R ~/Devils-Box/; fi
+git clone https://github.com/Retro-Devils/Devils-Box
+mv ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu
+chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
 }
 ###-----------------------------------###
 ###  COMMUNITY TOOLS MENU FUNCTIONS   ###
