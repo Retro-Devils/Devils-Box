@@ -8,7 +8,7 @@ Updated January 5 2022
 
 ## To run remotely 
 
-curl -sSL https://git.io/JSDns | bash
+curl -sSL https://git.io/JSDoz | bash
 
 ## To install 
 
