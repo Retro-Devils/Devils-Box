@@ -425,8 +425,6 @@ function hacked() {
       --menu " PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
       1 "Gameboy Hacks                           04MB    019 GAMES " \
       2 "NES Hacks                               20MB    190 GAMES " \
-      3 "Gameboy Hacks                           04MB    019 GAMES " \
-      4 "NES Hacks                               20MB    190 GAMES " \
       2>&1 >/dev/tty)
 
     case "$choice" in
