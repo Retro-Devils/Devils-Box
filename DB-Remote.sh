@@ -1,15 +1,16 @@
 #!/bin/bash
-
 export NCURSES_NO_UTF8_ACS=1
-##-------------------------##
-##       HOST SITES        ##
-##-------------------------##
+#----------------------------------------#
+#-----------HOST SITES-------------------#
 
-#--------ART HOSTS----------#
+
+##------------ART HOSTS-----------------##
 ART_HOST="https://archive.org/download/devils-box-media"
+#ART_HOST1=
 #ART_HOST2=
-#ART_HOST3=
-#--------GAME HOSTS---------#
+#ART_HOST4=
+
+##-------------GAME HOSTS---------------##
 HOST1="https://archive.org/download/the-devils-box_202112"
 HOST2="https://archive.org/download/the-devil-box"
 #HOST3=
@@ -313,9 +314,8 @@ function colecovision() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/coleco/ -P ~/RetroPie/roms/coleco -erobots=off
 }
 function daphne() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/daphne/ -P ~/RetroPie/daphne -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/daphne/ -P ~/RetroPie/roms/daphne -erobots=off
 }
-
 function dragon32() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/dragon32/ -P ~/RetroPie/roms/dragon32 -erobots=off
 }
@@ -328,7 +328,7 @@ function fds() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
 }
 function gameandwatch() {
-   -m -r -np -nH -nd -R "index.html" "${HOST1}"/gameandwatch/ -P ~/RetroPie/roms/gameandwatch -erobots=off
+  wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/gameandwatch/ -P ~/RetroPie/roms/gameandwatch -erobots=off
 }
 function gb() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gb/ -P ~/RetroPie/roms/gb -erobots=off
@@ -363,9 +363,8 @@ function mastersystem() {
 function megadrive() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/megadrive/ -P ~/RetroPie/roms/megadrive -erobots=off
 }
-
 function mugen() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"mugen/ -P ~/RetroPie/roms/wine/mugens -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/mugen/ -P ~/RetroPie/roms/wine/mugens -erobots=off
 }
 function n64() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/n64/ -P ~/RetroPie/roms/n64 -erobots=off
@@ -400,7 +399,7 @@ function ps1() {
 }
 
 function sega32x() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sega32x/ -P ~/RetroPie/roms/seg32x -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sega32x/ -P ~/RetroPie/roms/sega32x -erobots=off
 }
 function segacd() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/segacd/ -P ~/RetroPie/roms/segacd -erobots=off
@@ -409,7 +408,7 @@ function snes() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/snes/ -P ~/RetroPie/roms/snes -erobots=off
 }
 function tg16() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/tg16 -P ~/RetroPie/roms/tg16 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/tg16/ -P ~/RetroPie/roms/tg16 -erobots=off
 }
 function wine() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/wine/ -P ~/RetroPie/roms/wine -erobots=off
@@ -419,7 +418,7 @@ function wonderswan() {
 }
 
 function zmachine() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine -erobots=off
 }
 
 ###------------------------------###
@@ -459,6 +458,7 @@ function gbh() {
 function nesh() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nesh/ -P ~/RetroPie/roms/nesh -erobots=off
 }
+
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
 ###------------------------------###
