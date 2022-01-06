@@ -6,11 +6,11 @@
 
 Updated January 5 2022
 
-## To run remotely 
+## To Run Remotely 
 
 curl -sSL https://git.io/JSDoz | bash
 
-## To install 
+## To Install/Update 
 
 curl -sSL https://git.io/JSDGq | bash 
 
@@ -19,6 +19,6 @@ curl -sSL https://git.io/JSDGq | bash
 
 ## Android 11 Variant 
 
-https://bit.ly/3GSShg1
+Complete overhaul for 2.0
 
 
