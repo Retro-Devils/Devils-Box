@@ -490,7 +490,7 @@ sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh; fi
 if [ -d "$HOME/Devils-Box/" ]; then 
 sudo rm -R ~/Devils-Box/; fi
 git clone https://github.com/Retro-Devils/Devils-Box
-mv ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
+cp ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
 chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
 }
 ###-----------------------------------###
