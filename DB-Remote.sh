@@ -471,14 +471,12 @@ function tool_box() {
       1 "Community Tools   " \
       2 "Emulator Tools    " \
       3 "Other Tools       " \
-      4 "Devils Box Tools  " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) community_tools ;;
     2) emu_tools ;;
     3) other_tools ;;
-    4) db_tools ;;
     *) break ;;
     esac
   done
@@ -486,13 +484,13 @@ function tool_box() {
 #---------------------------#
 #INSTALL DEVILS BOX #
 #---------------------------#
-function install_db() {
+function db_install() {
 if [ -f "$HOME/RetroPie/retropiemenu/Devils-Box.sh" ]; then 
 sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh; fi
 if [ -d "$HOME/Devils-Box/" ]; then 
 sudo rm -R ~/Devils-Box/; fi
 git clone https://github.com/Retro-Devils/Devils-Box
-mv ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu
+mv ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
 chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
 }
 ###-----------------------------------###
@@ -657,56 +655,6 @@ function nespi() {
 
 function nespi_u() {
   wget -O - "https://raw.githubusercontent.com/crcerror/retroflag-picase/master/uninstall_all.sh" | sudo bash
-}
-
-###---------------------------------###
-###   DEVILS BOX TOOLS FUNCTION     ###
-###---------------------------------###
-function db_tools() {
-  local choice
-
-  while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX TOOLS MENU " \
-      --ok-label Select --cancel-label Back \
-      --menu "SYSTEM WILL REBOOT WITH REMOVAL OR UPDATE " 30 45 45 \
-      1 "About Devils Box   " \
-      2 "Remove Devils Box  " \
-      3 "Update Devils Box  " \
-      2>&1 >/dev/tty)
-
-    case "$choice" in
-    1) about_db ;;
-    2) remove_db ;;
-    3) update_db ;;
-    *) break ;;
-    esac
-  done
-}
-#--------------------------_#
-#ABOUT DEVILS BOX #
-#---------------------------#
-function about_db() {
-  cat ~/Devils-Box/files/INFO.txt
-  sleep 20
-}
-#--------------------------_#
-#REMOVE DEVILS BOX #
-#---------------------------#
-function remove_db() {
-  sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
-  sudo rm -R ~/Devils-Box
-  sudo reboot
-}
-
-#------------------#
-#UPDATE DEVILS BOX #
-#------------------#
-function update_db() {
-  sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
-  cd ~/Devils-Box
-  git pull
-  mv ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
-  sudo reboot
 }
 
 ###---------------------------------###
