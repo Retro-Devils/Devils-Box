@@ -16,7 +16,7 @@ HOST2="https://archive.org/download/the-devil-box"
 #HOST4=
 
 ###  INTRO VIDEO     ###
-omxplayer /home/pi/Devils-Box/intro.mp4
+omxplayer ~/Devils-Box/intro.mp4
 
 ###-----------------------###
 ### MAIN MENU FUNCTIONS   ###
@@ -737,9 +737,6 @@ function system_update() {
     git checkout main
     cp ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
     chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
-    echo "Running the new version..."
-    exec ~/RetroPie/retropiemenu/Devils-Box.sh
-
     # Now exit this old instance
     exit 1
   }
