@@ -47,9 +47,8 @@ chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
 #------------------#
 function update_db() {
 sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh 
-sudo rm -R ~/Devils-Box/ 
-sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
-git clone https://github.com/Retro-Devils/Devils-Box
+cd ~/Devils-Box
+git pull
 mv ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
 chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
 }

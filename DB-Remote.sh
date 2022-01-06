@@ -1,6 +1,5 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
-
 #----------------------------------------#
 #-----------HOST SITES-------------------#
 
@@ -284,7 +283,7 @@ function arcadia() {
 }
 
 function astrocade() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/astrocade/ -P ~/RetroPie/roms/astrocade -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/astrocade/ -P ~/RetroPie/roms/astrocade -erobots=off
 }
 function atari800() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari800/ -P ~/RetroPie/roms/atari800 -erobots=off
@@ -326,7 +325,7 @@ function dreamcast() {
 }
 
 function fds() {
-  wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
 }
 function gameandwatch() {
   wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/gameandwatch/ -P ~/RetroPie/roms/gameandwatch -erobots=off
@@ -346,7 +345,7 @@ function gamegear() {
 }
 
 function genesis() {
-  wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/genesis/ -P ~/RetroPie/roms/genesis -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/genesis/ -P ~/RetroPie/roms/genesis -erobots=off
 }
 function intellivision() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
@@ -375,7 +374,7 @@ function naomi() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/naomi/ -P ~/RetroPie/roms/naomi -erobots=off
 }
 function nds() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nds/ -P ~/RetroPie/roms/nds -erobots=off
 }
 function neogeo() {
   wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/neogeo/ -P ~/RetroPie/roms/neogeo -erobots=off
@@ -385,7 +384,7 @@ function nes() {
 }
 
 function openbor() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/openbonbor/ -P ~/RetroPie/roms/openbor -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/openbor/ -P ~/RetroPie/roms/openbor -erobots=off
 }
 function oric() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/oric/ -P ~/RetroPie/roms/oric -erobots=off
@@ -418,7 +417,7 @@ function wonderswan() {
 }
 
 function zmachine() {
-  wget -m -r -np -nH -nd -R "index.html" "$HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine -erobots=off
 }
 
 ###------------------------------###
@@ -432,24 +431,31 @@ function hacked() {
       --ok-label Download --cancel-label Back \
       --menu " PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
       1 "Gameboy Hacks                           04MB    019 GAMES " \
-      2 "NES Hacks                               20MB    190 GAMES " \
-      3 "Gameboy Hacks                           04MB    019 GAMES " \
+      2 "Genesis Hacks                           20MB    190 GAMES " \
+      3 "Gamegear Hacks                          04MB    019 GAMES " \
       4 "NES Hacks                               20MB    190 GAMES " \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) gbh   ;;
-    2) nesh  ;;
-    3) genh  ;;
+    1) gbh ;;
+    2) genh ;;
+    3) ggh ;;
+    4) nesh ;;
     *) break ;;
     esac
   done
 }
 function gbh() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/gbh/ -P ~/RetroPie/roms/gbh -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbh/ -P ~/RetroPie/roms/gbh -erobots=off
 }
 function nesh() {
-  wget -m -r -np -nH -nd -R "index.html" "${ROM_HOST}"/nesh/ -P ~/RetroPie/roms/nesh -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/genh/ -P ~/RetroPie/roms/nesh -erobots=off
+}
+function gbh() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/ggh/ -P ~/RetroPie/roms/gbh -erobots=off
+}
+function nesh() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nesh/ -P ~/RetroPie/roms/nesh -erobots=off
 }
 
 ###------------------------------###
@@ -500,7 +506,7 @@ function community_tools() {
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 75 60 \
       1 "RetroPie Extras                                      Zero Jay   " \
-      2 "T.A.M.P.O                                            The Pitster" \
+      2 "T.A.M.P.O                                            thepitster" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -576,7 +582,7 @@ function community_emu() {
 #       MUGEN EMU FUNCTIONS        #
 #----------------------------------#
 function mugen() {
-curl -sSL https://git.io/Jz903 | bash
+curl -sSL https://git.io/Jz9O3 | bash
 }
 
 #----------------------------------#
@@ -680,7 +686,7 @@ function db_tools() {
 #ABOUT DEVILS BOX #
 #---------------------------#
 function about_db() {
-  cat ~/Devils-Box/INFO.txt
+  cat ~/Devils-Box/files/INFO.txt
   sleep 20
 }
 #--------------------------_#
@@ -688,7 +694,7 @@ function about_db() {
 #---------------------------#
 function remove_db() {
   sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
-  sudo rm ~/Devils-Box
+  sudo rm -R ~/Devils-Box
   sudo reboot
 }
 
@@ -697,8 +703,9 @@ function remove_db() {
 #------------------#
 function update_db() {
   sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
-  git clone https://github.com/Retro-Devils/Devils-Box -P ~/
-  mv ~/Devils-Box/Devils-box.sh -P ~/RetroPie/retropiemenu/
+  cd ~/Devils-Box
+  git pull
+  mv ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
   sudo reboot
 }
 
