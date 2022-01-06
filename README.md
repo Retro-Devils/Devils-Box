@@ -13,12 +13,3 @@ curl -sSL https://git.io/JSDoz | bash
 ## To Install/Update 
 
 curl -sSL https://git.io/JSDGq | bash 
-
-
-
-
-## Android 11 Variant 
-
-Complete overhaul for 2.0
-
-
