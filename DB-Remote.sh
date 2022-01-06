@@ -367,7 +367,7 @@ function mugen() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/mugen/ -P ~/RetroPie/roms/wine/mugens -erobots=off
 }
 function n64() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/n64/ -P ~/RetroPie/roms/n64 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/N64/ -P ~/RetroPie/roms/n64 -erobots=off
 }
 
 function naomi() {
