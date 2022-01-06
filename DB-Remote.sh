@@ -376,7 +376,6 @@ function naomi() {
 function nds() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nds/ -P ~/RetroPie/roms/nds -erobots=off
 }
-
 function neogeo() {
   wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/neogeo/ -P ~/RetroPie/roms/neogeo -erobots=off
 }
@@ -395,7 +394,7 @@ function pcengine() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/pce/ -P ~/RetroPie/roms/pce -erobots=off
 }
 function ps1() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/psx/ -P ~/RetroPie/roms/psx -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/ps1/ -P ~/RetroPie/roms/psx -erobots=off
 }
 
 function sega32x() {
