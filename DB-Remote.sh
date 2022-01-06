@@ -438,8 +438,9 @@ function hacked() {
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) gbh ;;
-    2) nesh ;;
+    1) gbh   ;;
+    2) nesh  ;;
+    3) genh  ;;
     *) break ;;
     esac
   done
