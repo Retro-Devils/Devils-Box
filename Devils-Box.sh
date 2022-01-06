@@ -721,5 +721,31 @@ function system_reboot() {
   sudo reboot
 }
 
+#-------------------#
+# UPDATES FUNCTION  #
+#-------------------#
+function system_update() {
+  if [ ! -d ~/Devils-Box/ ]; then 
+    git clone https://github.com/Retro-Devils/Devils-Box; fi
+  
+  cd ~/Devils-Box
+  git fetch
+
+  [ -n $(git diff --name-only origin/main | grep Devils-Box.sh) ] && {
+    echo "Found a new version and updating"
+    git pull --force
+    git checkout main
+    cp ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
+    chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
+    echo "Running the new version..."
+    exec ~/RetroPie/retropiemenu/Devils-Box.sh
+
+    # Now exit this old instance
+    exit 1
+  }
+  echo "Already the latest version."
+}
+
 # Main
+system_update
 main_menu
