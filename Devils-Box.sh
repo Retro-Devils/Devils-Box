@@ -12,8 +12,7 @@ ART_HOST="https://archive.org/download/devils-box-media"
 #--------GAME HOSTS---------#
 HOST1="https://archive.org/download/the-devils-box_202112"
 HOST2="https://archive.org/download/the-devil-box"
-ZIPHOST="https://archive.org/download/thing-box"
-#HOST4=
+#HOST3=
 
 ###  INTRO VIDEO     ###
 omxplayer ~/Devils-Box/intro.mp4
@@ -34,9 +33,7 @@ function main_menu() {
       3 "Hacked Packs" \
       4 "Tool Box" \
       5 "Reboot System" \
-      6 "Show Disk Space" \
-      7 "Zipped Packs"
-      
+      6 "Show Disk Space" \      
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -46,7 +43,6 @@ function main_menu() {
     4) tool_box ;;
     5) system_reboot ;;
     6) show_disk ;;
-    7) zipped
     *) break ;;
     esac
   done
@@ -281,257 +277,6 @@ function amigacd() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amigacd/ -P ~/RetroPie/roms/amigacd -erobots=off
 }
 function arcadia() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
-}
-
-function astrocade() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/astrocade/ -P ~/RetroPie/roms/astrocade -erobots=off
-}
-function atari800() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari800/ -P ~/RetroPie/roms/atari800 -erobots=off
-}
-
-function atari2600() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari2600/ -P ~/RetroPie/roms/atari2600 -erobots=off
-}
-function atari5200() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari5200/ -P ~/RetroPie/roms/atari5200 -erobots=off
-}
-
-function atari7800() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari7800/ -P ~/RetroPie/roms/atari7800 -erobots=off
-}
-function atarilynx() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atarilynx/ -P ~/RetroPie/roms/atarilynx -erobots=off
-}
-
-function atarist() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atarist/ -P ~/RetroPie/roms/atarist -erobots=off
-}
-function c64() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/c64/ -P ~/RetroPie/roms/c64 -erobots=off
-}
-
-function colecovision() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/coleco/ -P ~/RetroPie/roms/coleco -erobots=off
-}
-function daphne() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/daphne/ -P ~/RetroPie/daphne -erobots=off
-}
-function dragon32() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/dragon32/ -P ~/RetroPie/roms/dragon32 -erobots=off
-}
-function dreamcast() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
-}
-function fds() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
-}
-function gameandwatch() {
-   -m -r -np -nH -nd -R "index.html" "${HOST1}"/gameandwatch/ -P ~/RetroPie/roms/gameandwatch -erobots=off
-}
-function gb() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gb/ -P ~/RetroPie/roms/gb -erobots=off
-}
-function gba() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gba/ -P ~/RetroPie/roms/gba -erobots=off
-}
-
-function gbc() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbc/ -P ~/RetroPie/roms/gbc -erobots=off
-}
-function gamegear() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gamegear/ -P ~/RetroPie/roms/gamegear -erobots=off
-}
-
-function genesis() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/genesis/ -P ~/RetroPie/roms/genesis -erobots=off
-}
-function intellivision() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
-}
-function lightgun() {
-  wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/lightgun/ -P ~/RetroPie/roms/lightgun -erobots=off
-}
-function markiii() {
-  wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/markiii/ -P ~/RetroPie/roms/markiii -erobots=off
-}
-function mastersystem() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/mastersystem/ -P ~/RetroPie/roms/mastersystem -erobots=off
-}
-function megadrive() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/megadrive/ -P ~/RetroPie/roms/megadrive -erobots=off
-}
-
-function mugen() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"mugen/ -P ~/RetroPie/roms/wine/mugens -erobots=off
-}
-function n64() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/N64/ -P ~/RetroPie/roms/n64 -erobots=off
-}
-
-function naomi() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/naomi/ -P ~/RetroPie/roms/naomi -erobots=off
-}
-function nds() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nds/ -P ~/RetroPie/roms/nds -erobots=off
-}
-function neogeo() {
-  wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/neogeo/ -P ~/RetroPie/roms/neogeo -erobots=off
-}
-function nes() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nes/ -P ~/RetroPie/roms/nes -erobots=off
-}
-function openbor() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/openbor/ -P ~/RetroPie/roms/openbor -erobots=off
-}
-function oric() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/oric/ -P ~/RetroPie/roms/oric -erobots=off
-}
-function pcengine() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/pce/ -P ~/RetroPie/roms/pce -erobots=off
-}
-function ps1() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/psx/ -P ~/RetroPie/roms/psx -erobots=off
-}
-function sega32x() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sega32x/ -P ~/RetroPie/roms/seg32x -erobots=off
-}
-function segacd() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/segacd/ -P ~/RetroPie/roms/segacd -erobots=off
-}
-function snes() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/snes/ -P ~/RetroPie/roms/snes -erobots=off
-}
-function tg16() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/tg16 -P ~/RetroPie/roms/tg16 -erobots=off
-}
-function wine() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/wine/ -P ~/RetroPie/roms/wine -erobots=off
-}
-function wonderswan() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
-}
-function zmachine() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
-}
-
-###------------------------------###
-### ZIPPED PACKS MENU FUNCTIONS ###
-###------------------------------###
-function zipped() {
-  local choice
-
-  while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU " \
-      --ok-label Download --cancel-label Back \
-      --menu "PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
-      1 "Amiga                             ??GB       ?? GAMES" \
-      2 "AmigaCD                           01GB      090 GAMES" \
-      3 "Arcadia                           ??GB      050 GAMES" \
-      4 "Astrocade                         50MB      650 GAMES" \
-      5 "Atari800                         770MB      650 GAMES" \
-      6 "Atari2600                         ??GB      650 GAMES" \
-      7 "Atari5200                         70MB      080 GAMES" \
-      8 "Atari7800                         ??GB      ??? GAMES" \
-      9 "AtariLynx                         ??GB      ??? GAMES" \
-      10 "AtariST                           ??GB      ??? GAMES" \
-      11 "Commadore64                      3.2GB     3000 GAMES" \
-      12 "Colecovision                     150MB      140 GAMES" \
-      13 "Daphne                            ??GB      ??? GAMES" \
-      14 "Dragon32                          ??GB      ??? GAMES" \
-      15 "Dreamcast                         10GB      010 GAMES" \
-      16 "Famicon                           ??GB      ??? GAMES" \
-      17 "Game and Watch                    ??GB      ??? GAMES" \
-      18 "Gameboy                          1.4GB      800 GAMES" \
-      19 "Gameboy Advance                   05GB     1000 GAMES" \
-      20 "Gameboy Color                    1.4GB      420 GAMES" \
-      21 "Gamegear                         800MB      337 GAMES" \
-      22 "Genesis                          2.5GB      900 GAMES" \
-      23 "Intellivision                     ??GB      ??? GAMES" \
-      24 "Lightgun                          ??GB      ??? GAMES" \
-      25 "MarkIII                           ??GB      ??? GAMES" \
-      26 "Mastersystem                     700MB      300 GAMES" \
-      27 "Megadrive                        586MB      900 GAMES" \
-      28 "Mugen                            9.2GB      009 GAMES" \
-      29 "Nintendo 64                      5.0GB      300 GAMES" \
-      30 "Naomi                             ??GB      ??? GAMES" \
-      31 "Nintendo DS                       21GB      750 GAMES" \
-      32 "NeoGeo                            ??GB      ??? GAMES" \
-      33 "Nintendo Entertainment System    100MB      850 GAMES" \
-      34 "Openbor                           ??GB      ??? GAMES" \
-      35 "Oric                              ??GB      ??? GAMES" \
-      36 "PC Engine                         ??GB      ??? GAMES" \
-      37 "PS1                               13GB       40 GAMES" \
-      38 "Sega32x                           ??GB      ??? GAMES" \
-      39 "SegaCD                            ??GB      ??? GAMES" \
-      40 "SNES                             500MB      500 GAMES" \
-      41 "Turbo Graffix 16                  ??GB      ??? GAMES" \
-      42 "Wine                              ??GB      ??? GAMES" \
-      43 "Wonderswan                        ??GB      ??? GAMES" \
-      44 "ZMachine                          ??GB      ??? GAMES" \
-      2>&1 >/dev/tty)
-
-    case "$choice" in
-    1) amiga-zip ;;
-    2) amigacd-zip ;;
-    3) arcadia-zip ;;
-    4) astrocade-zip ;;
-    5) atari800-zip ;;
-    6) atari2600-zip ;;
-    7) atari5200-zip ;;
-    8) atari7800-zip ;;
-    9) atarilynx-zip ;;
-    10) atarist-zip ;;
-    11) c64-zip ;;
-    12) colecovision-zip ;;
-    13) daphne-zip ;;
-    14) dragon32-zip ;;
-    15) dreamcast-zip ;;
-    16) famicon-zip ;;
-    17) gameandwatch-zip ;;
-    18) gb-zip ;;
-    19) gba-zip ;;
-    20) gbc-zip ;;
-    21) gg-zip ;;
-    22) genesis-zip ;;
-    23) intellivision-zip ;;
-    24) lightgun-zip ;;
-    25) markiii-zip ;;
-    26) mastersystem-zip ;;
-    27) megadrive-zip ;;
-    28) mugen-zip ;;
-    29) n64-zip ;;
-    30) naomi-zip ;;
-    31) nds-zip ;;
-    32) neogeo-zip ;;
-    33) nes-zip ;;
-    34) openbor-zip ;;
-    35) oric-zip ;;
-    36) pc-engine-zip ;;
-    37) ps1-zip ;;
-    38) sega32x-zip ;;
-    39) segacd-zip  ;;
-    40) snes-zip ;;
-    41) tg16-zip ;;
-    42) wine-zip ;;
-    43) wonderswan-zip ;;
-    44) zmachine-zip ;;
-    *) break ;;
-    esac
-  done
-}
-function amiga-zip() {
-cd ~/RetroPie/roms/amiga
-wget -c https://archive.org/download/thing-box/Retro-Devils-AmigaCD.7z -q --show-progress
-7z x -y -aoa /home/pi/test/amigacd32_unified_rompack.7z
-
-}
-
-function amigacd-zip() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amigacd/ -P ~/RetroPie/roms/amigacd -erobots=off
-}
-function arcadia-zip() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
 }
 
