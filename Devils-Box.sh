@@ -723,26 +723,5 @@ function system_reboot() {
   sudo reboot
 }
 
-#-------------------#
-# UPDATES FUNCTION  #
-#-------------------#
-#function system_update() {
-#  if [ ! -d ~/Devils-Box/ ]; then git clone https://github.com/Retro-Devils/Devils-Box; fi
-#  cd ~/Devils-Box
-#  git checkout -f main
-#  git pull --force
-#  if ! cmp ~/Devils-Box/Devils-Box.sh ~/RetroPie/retropiemenu/Devils-Box.sh >/dev/null 2>&1; then
-#    echo "Found a new version and updating"
-#    cp ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
-#    chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
-#    # Now exit this old instance
-#    sudo exec ~/RetroPie/retropiemenu/Devils-Box.sh
-#    exit 
-#  else
-#    echo "Already the latest version."
-#  fi
-#}
-
-# Main
-#system_update
+#Main
 main_menu
