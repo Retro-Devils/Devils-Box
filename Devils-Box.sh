@@ -1,5 +1,4 @@
 #!/bin/bash
-
 export NCURSES_NO_UTF8_ACS=1
 ##-------------------------##
 ##       HOST SITES        ##
@@ -743,6 +742,7 @@ function system_update() {
     echo "Already the latest version."
   fi
 }
+
 # Main
 system_update
 main_menu
