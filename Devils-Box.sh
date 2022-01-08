@@ -738,7 +738,7 @@ function system_update() {
     chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
     # Now exit this old instance
     exec ~/RetroPie/retropiemenu/Devils-Box.sh
-    exit 1
+    exit 
   else
     echo "Already the latest version."
   fi
