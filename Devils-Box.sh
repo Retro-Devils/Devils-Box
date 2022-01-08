@@ -744,5 +744,5 @@ function system_reboot() {
 #}
 
 # Main
-system_update
+#system_update
 main_menu
