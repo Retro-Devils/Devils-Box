@@ -12,7 +12,11 @@ ART_HOST="https://archive.org/download/devils-box-media"
 #--------GAME HOSTS---------#
 HOST1="https://archive.org/download/the-devils-box_202112"
 HOST2="https://archive.org/download/the-devil-box"
-#HOST3=
+HOST3="https://archive.org/download/retro-devils-winegames"
+HOST4=
+HOST5=
+HOST6=
+
 
 ###  INTRO VIDEO     ###
 omxplayer ~/Devils-Box/intro.mp4
