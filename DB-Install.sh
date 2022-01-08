@@ -46,7 +46,7 @@ chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
 #UPDATE DEVILS BOX #
 #------------------#
 function update_db() {
-sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh 
+sudo rm -f ~/RetroPie/retropiemenu/Devils-Box.sh 
 cd ~/Devils-Box
 git pull
 cp ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
