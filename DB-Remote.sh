@@ -1,8 +1,5 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
-#----------------------------------------#
-#-----------HOST SITES-------------------#
-
 ##-------------GAME HOSTS---------------##
 HOST1="https://archive.org/download/the-devils-box_202112"
 HOST2="https://archive.org/download/the-devil-box"
@@ -21,19 +18,17 @@ function main_menu() {
       --ok-label Select --cancel-label Exit-Devils-Box \
       --menu "DEVILS BOX MAIN MENU" 25 50 40 \
       1 "Console Packs" \
-      2 "Hacked Packs" \
-      3 "Tool Box" \
-      4 "Reboot System" \
-      5 "Show Disk Space" \
-      6 "Run Devils Box Installer " \
+      2 "Tool Box" \
+      3 "Reboot System" \
+      4 "Show Disk Space" \
+      5 "Run Devils Box Installer " \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) consoles     ;;
-    2) hacked       ;;
-    3) tool_box     ;;
-    4) system_reboot;;
-    5) show_disk    ;;
+    1) consoles     ;:
+    2) tool_box     ;;
+    3) system_reboot;;
+    4) show_disk    ;;
     ) db_install   ;;
     
     *) break ;;
