@@ -3,13 +3,6 @@ export NCURSES_NO_UTF8_ACS=1
 #----------------------------------------#
 #-----------HOST SITES-------------------#
 
-
-##------------ART HOSTS-----------------##
-ART_HOST="https://archive.org/download/devils-box-media"
-#ART_HOST1=
-#ART_HOST2=
-#ART_HOST4=
-
 ##-------------GAME HOSTS---------------##
 HOST1="https://archive.org/download/the-devils-box_202112"
 HOST2="https://archive.org/download/the-devil-box"
