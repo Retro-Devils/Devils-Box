@@ -36,7 +36,7 @@ function main_menu() {
       3 "Hacked Packs" \
       4 "Tool Box" \
       5 "Reboot System" \
-      6 "Show Disk Space" \      
+      6 "Show Disk Space" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -327,7 +327,7 @@ function fds() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
 }
 function gameandwatch() {
-   -m -r -np -nH -nd -R "index.html" "${HOST1}"/gameandwatch/ -P ~/RetroPie/roms/gameandwatch -erobots=off
+   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gameandwatch/ -P ~/RetroPie/roms/gameandwatch -erobots=off
 }
 function gb() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gb/ -P ~/RetroPie/roms/gb -erobots=off
