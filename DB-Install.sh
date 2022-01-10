@@ -38,6 +38,7 @@ if [ -f "$HOME/RetroPie/retropiemenu/Devils-Box.sh" ]; then sudo rm ~/RetroPie/r
 if [ -d "$HOME/Devils-Box/" ]; then sudo rm -R ~/Devils-Box/; fi
 git clone https://github.com/Retro-Devils/Devils-Box
 cp ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
+cp $HOME/Devils-Box/files/Devils-Box.png -f ~/RetroPie/retropiemenu/icons/
 chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
 if [ ! -s ~/RetroPie/retropiemenu/gamelist.xml ]; then sudo rm -f ~/RetroPie/retropiemenu/gamelist.xml; fi
 if [ ! -f "~/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ~/RetroPie/retropiemenu/gamelist.xml; fi
