@@ -8,9 +8,11 @@ export NCURSES_NO_UTF8_ACS=1
 ART_HOST="https://archive.org/download/devils-box-media"
 #ART_HOST2=
 #ART_HOST3=
+#ART_HOST4=
+
 #--------GAME HOSTS---------#
 HOST1="https://archive.org/download/the-devils-box-alt"
-HOST2="https://archive.org/download/the-devil-box"
+HOST2="https://archive.org/download/the-devils-box_202112"
 HOST3="https://archive.org/download/retro-devils-winegames"
 #HOST4=
 #HOST5=
@@ -31,7 +33,7 @@ function main_menu() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX 2.1 " \
       --ok-label Select --cancel-label Exit-Devils-Box \
       --menu "DEVILS BOX MAIN MENU" 25 50 40 \
-      1 "Artwork Packs" \
+      1 "Artwork Packs WORK IN PROGRESS" \
       2 "Console Packs" \
       3 "Hacked Packs" \
       4 "Tool Box" \
@@ -174,46 +176,47 @@ function consoles() {
   local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU " \
+    choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU 
+    		***** IN FRONT OF SYSTEM MEANS COMING SOON " \
       --ok-label Download --cancel-label Back \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
       1 "Amiga                            300MB      340 GAMES" \
       2 "AmigaCD                           01GB      090 GAMES" \
       3 "Arcade                           8.4GB     2000 GAMES" \
-      4 "Astrocade                         50MB      650 GAMES" \
+      4 "AmstradPC                        700MB     3000 GAMES" \
       5 "Atari800                         770MB      650 GAMES" \
       6 "Atari2600                        2.5MB      600 GAMES" \
       7 "Atari5200                         70MB      080 GAMES" \
       8 "Atari7800                          5MB       54 GAMES" \
       9 "AtariLynx                         10MB       77 GAMES" \
       10 "Atomiswave                       2.5GB       24 GAMES" \
-      11 "Commadore64                      3.2GB     3000 GAMES" \
+      11 "Commadore64                      9.5MB      144 GAMES" \
       12 "Colecovision                     150MB      140 GAMES" \
-      13 "Daphne                            ??GB      ??? GAMES" \
-      14 "Dragon32                          ??GB      ??? GAMES" \
+      13 "****Daphne****                    ??GB      ??? GAMES" \
+      14 "****Dragon32****                  ??GB      ??? GAMES" \
       15 "Dreamcast                         10GB      010 GAMES" \
-      16 "Famicon                           ??GB      ??? GAMES" \
-      17 "Game and Watch                    ??GB      ??? GAMES" \
-      18 "Gameboy                          1.4GB      800 GAMES" \
-      19 "Gameboy Advance                   05GB     1000 GAMES" \
-      20 "Gameboy Color                    1.4GB      420 GAMES" \
-      21 "Gamegear                         800MB      337 GAMES" \
+      16 "Famicon                            4MB       25 GAMES" \
+      17 "Game and Watch                    48MB       53 GAMES" \
+      18 "Gameboy                           57MB      550 GAMES" \
+      19 "Gameboy Advance                  3.8GB     1000 GAMES" \
+      20 "Gameboy Color                    232MB      500 GAMES" \
+      21 "Gamegear                          42MB      250 GAMES" \
       22 "Genesis                          2.5GB      900 GAMES" \
-      23 "Intellivision                     ??GB      ??? GAMES" \
-      24 "Lightgun                          ??GB      ??? GAMES" \
-      25 "MarkIII                           ??GB      ??? GAMES" \
-      26 "Mastersystem                     700MB      300 GAMES" \
-      27 "Megadrive                        586MB      900 GAMES" \
-      28 "Mugen                            9.2GB      009 GAMES" \
+      23 "****Intellivision****             ??GB      ??? GAMES" \
+      24 "****Lightgun****                  ??GB      ??? GAMES" \
+      25 "****MarkIII****                   ??GB      ??? GAMES" \
+      26 "Mastersystem                      35MB      280 GAMES" \
+      27 "Megadrive                        400MB      550 GAMES" \
+      28 "****Mugen****                    9.2GB      009 GAMES" \
       29 "Nintendo 64                      5.0GB      300 GAMES" \
-      30 "Naomi                             ??GB      ??? GAMES" \
-      31 "Nintendo DS                       21GB      750 GAMES" \
-      32 "NeoGeo                            ??GB      ??? GAMES" \
+      30 "Naomi                            1.5GB       15 GAMES" \
+      31 "Nintendo DS                        4GB      171 GAMES" \
+      32 "NeoGeo                           2.3GB      142 GAMES" \
       33 "Nintendo Entertainment System    100MB      850 GAMES" \
-      34 "Openbor                           ??GB      ??? GAMES" \
+      34 "Openbor                         1.84GB       37 GAMES" \
       35 "Oric                              ??GB      ??? GAMES" \
-      36 "PC Engine                         ??GB      ??? GAMES" \
-      37 "PS1                               13GB       40 GAMES" \
+      36 "PS1                                3GB       29 GAMES" \
+      37 "ScummVM                          2.5GB       21 GAMES" \
       38 "Sega32x                           ??GB      ??? GAMES" \
       39 "SegaCD                            ??GB      ??? GAMES" \
       40 "SNES                             500MB      500 GAMES" \
@@ -226,8 +229,8 @@ function consoles() {
     case "$choice" in
     1) amiga ;;
     2) amigacd ;;
-    3) arcadia ;;
-    4) astrocade ;;
+    3) arcade ;;
+    4) amstradpc ;;
     5) atari800 ;;
     6) atari2600 ;;
     7) atari5200 ;;
@@ -279,12 +282,12 @@ function amiga() {
 function amigacd() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amigacd/ -P ~/RetroPie/roms/amigacd -erobots=off
 }
-function arcadia() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
+function arcade() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/arcadia/ -P ~/RetroPie/roms/arcade -erobots=off
 }
 
-function astrocade() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/astrocade/ -P ~/RetroPie/roms/astrocade -erobots=off
+function amstradpc() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/astrocade/ -P ~/RetroPie/roms/amstradpc -erobots=off
 }
 function atari800() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari800/ -P ~/RetroPie/roms/atari800 -erobots=off
