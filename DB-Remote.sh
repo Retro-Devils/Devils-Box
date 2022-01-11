@@ -14,7 +14,7 @@ function main_menu() {
   local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title " REMOTE DEVILS BOX " \
+    choice=$(dialog --backtitle "$BACKTITLE" --title " REMOTE DEVILS BOX V2.2.   1/11/22" \
       --ok-label Select --cancel-label Exit-Devils-Box \
       --menu "DEVILS BOX MAIN MENU" 25 50 40 \
       1 "Console Packs" \
