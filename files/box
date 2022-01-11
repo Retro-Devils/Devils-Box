@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "$(tput setaf 2)
 THE RETRO DEVILS
---DEVILS BOX---
---VERSION=2.2--
+---DEVILS BOX---
+--VERSION-2.2--
 $(tput sgr0)"
 sleep 5 
 
