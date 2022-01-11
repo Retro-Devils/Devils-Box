@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "$(tput setaf 2)
-THE DEVILS 
-WHERE HERE
+----DEVILS BOX--
+--VERSION----2.2
 $(tput sgr0)"
 sleep 5 
 
