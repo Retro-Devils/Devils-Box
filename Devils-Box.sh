@@ -176,8 +176,8 @@ function consoles() {
   local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU 
-    		***** IN FRONT OF SYSTEM MEANS COMING SOON " \
+    choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU
+    ***** IN FRONT OF SYSTEM MEANS COMING SOON " \
       --ok-label Download --cancel-label Back \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
       1 "Amiga                            300MB      340 GAMES" \
