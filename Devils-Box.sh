@@ -9,7 +9,7 @@ ART_HOST="https://archive.org/download/devils-box-media"
 #ART_HOST2=
 #ART_HOST3=
 #--------GAME HOSTS---------#
-HOST1="https://archive.org/download/the-devils-box_202112"
+HOST1="https://archive.org/download/the-devils-box-alt"
 HOST2="https://archive.org/download/the-devil-box"
 HOST3="https://archive.org/download/retro-devils-winegames"
 #HOST4=
