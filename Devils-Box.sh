@@ -703,7 +703,7 @@ function update_db() {
   sleep 1
   cp ~/Devils-Box/files/box -f /usr/local/bin/
   sleep 2
-  sudo chmod 755 /usr/local/bin/box
+  chmod 755 /usr/local/bin/box
   sleep 1
   bash ~/RetroPie/retropiemenu/Devils-Box.sh
   exit 1
