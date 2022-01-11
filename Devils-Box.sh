@@ -33,7 +33,7 @@ function main_menu() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX 2.1 " \
       --ok-label Select --cancel-label Exit-Devils-Box \
       --menu "DEVILS BOX MAIN MENU" 25 50 40 \
-      1 "Artwork Packs *work in progress*" \
+      1 "Artwork Packs" \
       2 "Console Packs" \
       3 "Hacked Packs" \
       4 "Tool Box" \
