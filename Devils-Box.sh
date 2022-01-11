@@ -696,10 +696,12 @@ function remove_db() {
 #UPDATE DEVILS BOX #
 #------------------#
 function update_db() {
+  sudo rm ~/DB.sh
   sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
   cd ~/Devils-Box
   git pull -f
   cp ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
+  cp ~/DB.sh -f ~/
   sleep 1
   bash ~/RetroPie/retropiemenu/Devils-Box.sh
   exit 1
