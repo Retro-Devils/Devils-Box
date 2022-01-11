@@ -701,9 +701,8 @@ function update_db() {
   git pull -f
   cp ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
   sleep 1
-  cp ~/Devils-Box/files/box -f /usr/local/bin/
-  sleep 1
-  chmod 755 /usr/local/bin/box
+  cp ~/Devils-Box/files/box -f /usr/local/bin/ 
+  sudo chmod 755 /usr/local/bin/box
   sleep 1
   bash ~/RetroPie/retropiemenu/Devils-Box.sh
   exit 1
