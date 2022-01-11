@@ -177,12 +177,12 @@ function consoles() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU " \
       --ok-label Download --cancel-label Back \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
-      1 "Amiga                             ??GB       ?? GAMES" \
+      1 "Amiga                            300MB      340 GAMES" \
       2 "AmigaCD                           01GB      090 GAMES" \
-      3 "Arcadia                           ??GB      050 GAMES" \
+      3 "Arcade                           8.4GB     2000 GAMES" \
       4 "Astrocade                         50MB      650 GAMES" \
       5 "Atari800                         770MB      650 GAMES" \
-      6 "Atari2600                         ??GB      650 GAMES" \
+      6 "Atari2600                        2.5MB      600 GAMES" \
       7 "Atari5200                         70MB      080 GAMES" \
       8 "Atari7800                         ??GB      ??? GAMES" \
       9 "AtariLynx                         ??GB      ??? GAMES" \
