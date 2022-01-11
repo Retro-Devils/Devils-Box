@@ -39,8 +39,8 @@ if [ -d "$HOME/Devils-Box/" ]; then sudo rm -R ~/Devils-Box/; fi
 git clone https://github.com/Retro-Devils/Devils-Box
 cp ~/Devils-Box/files/Devils-Box.sh -f ~/RetroPie/retropiemenu/
 cp $HOME/Devils-Box/files/Devils-Box.png -f ~/RetroPie/retropiemenu/icons/
-cp ~/DEvils-Box/files/box -f /usr/local/bin/
-chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
+cp ~/Devils-Box/files/box -f /usr/local/bin/
+chmod 755 /usr/local/bin/boxchmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
 if [ ! -s ~/RetroPie/retropiemenu/gamelist.xml ]; then sudo rm -f ~/RetroPie/retropiemenu/gamelist.xml; fi
 if [ ! -f "~/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ~/RetroPie/retropiemenu/gamelist.xml; fi
 CONTENT1="<game>\n<path>./Devils-Box.sh</path>\n<name>Devils-Box</name>\n<desc>The Retro Devils Tool Box - A fully fuctional script to get even the newbies started up with ease, able to download roms and artwork to their proper places, Mugen and Sega Model 3 emulators, themes and music tools, plus much, much more.</desc>\n<image>./icons/Devils-Box.png</image>\n<releasedate>20220105T173842</releasedate>\n<developer>The Retro Devils</developer>\n<publisher>The Retro Devils</publisher>\n<genre>Devils-Box Script</genre>\n</game>"
@@ -66,6 +66,9 @@ git pull
 cp ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
 cp $HOME/Devils-Box/files/Devils-Box.png -f ~/RetroPie/retropiemenu/icons/
 chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
+sleep 1
+cp ~/Devils-Box/files/box -f /usr/local/bin/
+chmod 755 /usr/local/bin/box
 if [ ! -s ~/RetroPie/retropiemenu/gamelist.xml ]; then sudo rm -f ~/RetroPie/retropiemenu/gamelist.xml; fi
 if [ ! -f "~/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ~/RetroPie/retropiemenu/gamelist.xml; fi
 CONTENT1="<game>\n<path>./Devils-Box.sh</path>\n<name>Devils-Box</name>\n<desc>The Retro Devils Tool Box - A fully fuctional script to get even the newbies started up with ease, able to download roms and artwork to their proper places, Mugen and Sega Model 3 emulators, themes and music tools, plus much, much more.</desc>\n<image>./icons/Devils-Box.png</image>\n<releasedate>20220105T173842</releasedate>\n<developer>The Retro Devils</developer>\n<publisher>The Retro Devils</publisher>\n<genre>Devils-Box Script</genre>\n</game>"
