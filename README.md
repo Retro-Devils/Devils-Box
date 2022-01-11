@@ -6,10 +6,6 @@
 
 Updated January 5 2022
 
-## To Run Remotely 
-
-curl -sSL https://git.io/JSDoz | bash
-
 ## To Install/Update 
 
 curl -sSL https://git.io/JSDGq | bash 
