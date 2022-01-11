@@ -178,7 +178,8 @@ function consoles() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
       --ok-label Download --cancel-label Back \
-      --menu "PRESS A/ENTER TO DOWNLOAD PACK    ***** IN FRONT OF CONSOLE MEANS COMING SOON" 40 75 60 \
+      --menu "PRESS A/ENTER TO DOWNLOAD PACK    
+      ***** IN FRONT OF CONSOLE MEANS COMING SOON" 40 75 60 \
       1 "Amiga                            300MB      340 GAMES" \
       2 "AmigaCD                           01GB      090 GAMES" \
       3 "Arcade                           8.4GB     2000 GAMES" \
@@ -695,7 +696,6 @@ function remove_db() {
 #UPDATE DEVILS BOX #
 #------------------#
 function update_db() {
-  sudo rm ~/DB
   sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
   cd ~/Devils-Box
   git pull -f
