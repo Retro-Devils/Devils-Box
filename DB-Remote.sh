@@ -1,8 +1,8 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
 ##-------------GAME HOSTS---------------##
-HOST1="https://archive.org/download/the-devils-box_202112"
-HOST2="https://archive.org/download/the-devil-box"
+HOST1="https://archive.org/download/the-devils-box-alt
+HOST2="https://archive.org/download/the-devils-box_202112"
 #HOST3=
 #HOST4=
 
