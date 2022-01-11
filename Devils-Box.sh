@@ -184,9 +184,9 @@ function consoles() {
       5 "Atari800                         770MB      650 GAMES" \
       6 "Atari2600                        2.5MB      600 GAMES" \
       7 "Atari5200                         70MB      080 GAMES" \
-      8 "Atari7800                         ??GB      ??? GAMES" \
-      9 "AtariLynx                         ??GB      ??? GAMES" \
-      10 "AtariST                           ??GB      ??? GAMES" \
+      8 "Atari7800                          5MB       54 GAMES" \
+      9 "AtariLynx                         10MB       77 GAMES" \
+      10 "Atomiswave                       2.5GB       24 GAMES" \
       11 "Commadore64                      3.2GB     3000 GAMES" \
       12 "Colecovision                     150MB      140 GAMES" \
       13 "Daphne                            ??GB      ??? GAMES" \
