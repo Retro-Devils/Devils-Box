@@ -701,7 +701,7 @@ function update_db() {
   cd ~/Devils-Box
   git pull -f
   cp ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
-  cp ~/DB -f ~/
+  cp ~/Devils-Box/files/DB -f ~/
   sleep 1
   bash ~/RetroPie/retropiemenu/Devils-Box.sh
   exit 1
