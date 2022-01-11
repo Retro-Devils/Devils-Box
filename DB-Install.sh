@@ -26,7 +26,7 @@ CREATED WHEN?  2021/2022
         case "$choice" in
             1) install_db      ;;
             2) update_db       ;;
-            *)  break ;;
+            *) break           ;;
         esac
     done
 }
@@ -34,24 +34,24 @@ CREATED WHEN?  2021/2022
 #INSTALL DEVILS BOX #
 #---------------------------#
 function install_db() {
-if [ -f "$HOME/RetroPie/retropiemenu/Devils-Box.sh" ]; then sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh; fi
-if [ -d "$HOME/Devils-Box/" ]; then sudo rm -R ~/Devils-Box/; fi
+if [ -f "$HOME/RetroPie/retropiemenu/Devils-Box.sh" ]; then sudo rm $HOME/RetroPie/retropiemenu/Devils-Box.sh; fi
+if [ -d "$HOME/Devils-Box/" ]; then sudo rm -R $HOME/Devils-Box/; fi
 git clone https://github.com/Retro-Devils/Devils-Box
-cp ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
-cp $HOME/Devils-Box/files/Devils-Box.png -f ~/RetroPie/retropiemenu/icons/
-cp ~/Devils-Box/files/box -f /usr/local/bin/
-cp ~/Devils-Box/Devils-Box.sh -f ~/usr/locla/bin/Devils-Box
+cp $HOME/Devils-Box/Devils-Box.sh -f $HOME/RetroPie/retropiemenu/
+cp $HOME/Devils-Box/files/Devils-Box.png -f $HOME/RetroPie/retropiemenu/icons/
+cp $HOME/Devils-Box/files/box -f /usr/local/bin/
+cp $HOME/Devils-Box/Devils-Box.sh -f /usr/locla/bin/Devils-Box
 chmod 755 /usr/local/bin/box
-chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
+chmod 755 $HOME/RetroPie/retropiemenu/Devils-Box.sh
 chmod 755 /usr/local/bin/Devils-Box
-if [ ! -s ~/RetroPie/retropiemenu/gamelist.xml ]; then sudo rm -f ~/RetroPie/retropiemenu/gamelist.xml; fi
-if [ ! -f "~/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ~/RetroPie/retropiemenu/gamelist.xml; fi
+if [ ! -s "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then sudo rm -f $HOME/RetroPie/retropiemenu/gamelist.xml; fi
+if [ ! -f "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml $HOME/RetroPie/retropiemenu/gamelist.xml; fi
 CONTENT1="<game>\n<path>./Devils-Box.sh</path>\n<name>Devils-Box</name>\n<desc>The Retro Devils Tool Box - A fully fuctional script to get even the newbies started up with ease, able to download roms and artwork to their proper places, Mugen and Sega Model 3 emulators, themes and music tools, plus much, much more.</desc>\n<image>./icons/Devils-Box.png</image>\n<releasedate>20220105T173842</releasedate>\n<developer>The Retro Devils</developer>\n<publisher>The Retro Devils</publisher>\n<genre>Devils-Box Script</genre>\n</game>"
 C1=$(echo $CONTENT1 | sed 's/\//\\\//g')
-if grep -q Devils-Box.sh "~/RetroPie/retropiemenu/gamelist.xml"; then echo "gamelist.xml entry confirmed"
+if grep -q Devils-Box.sh "$HOME/RetroPie/retropiemenu/gamelist.xml"; then echo "gamelist.xml entry confirmed"
 else
-	sed "/<\/gameList>/ s/.*/${C1}\n&/" ~/RetroPie/retropiemenu/gamelist.xml > $HOME/temp
-	cat $HOME/temp > ~/RetroPie/retropiemenu/gamelist.xml
+	sed "/<\/gameList>/ s/.*/${C1}\n&/" $HOME/RetroPie/retropiemenu/gamelist.xml > $HOME/temp
+	cat $HOME/temp > $HOME/RetroPie/retropiemenu/gamelist.xml
 	rm -f $HOME/temp
 fi
 echo "Emulationstation Will Now Restart ..."
@@ -63,27 +63,27 @@ sudo openvt -c 1 -s -f emulationstation 2>&1
 #UPDATE DEVILS BOX #
 #------------------#
 function update_db() {
-sudo rm -f ~/RetroPie/retropiemenu/Devils-Box.sh 
-cd ~/Devils-Box
+sudo rm -f $HOME/RetroPie/retropiemenu/Devils-Box.sh 
+cd $HOME/Devils-Box
 git pull
-cp ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
-cp $HOME/Devils-Box/files/Devils-Box.png -f ~/RetroPie/retropiemenu/icons/
-cp ~/Devils-Box/files/box -f /usr/local/bin/
-cp ~/Devils-Box/Devils-Box.sh -f ~/usr/locla/bin/Devils-Box
+cp $HOME/Devils-Box/Devils-Box.sh -f $HOME/RetroPie/retropiemenu/
+cp $HOME/Devils-Box/files/Devils-Box.png -f $HOME/RetroPie/retropiemenu/icons/
+cp $HOME/Devils-Box/files/box -f /usr/local/bin/
+cp $HOME/Devils-Box/Devils-Box.sh -f /usr/locla/bin/Devils-Box
 chmod 755 /usr/local/bin/box
-chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
+chmod 755 $HOME/RetroPie/retropiemenu/Devils-Box.sh
 chmod 755 /usr/local/bin/Devils-Box
 sleep 1
-cp ~/Devils-Box/files/box -f /usr/local/bin/
+cp $HOME/Devils-Box/files/box -f /usr/local/bin/
 chmod 755 /usr/local/bin/box
-if [ ! -s ~/RetroPie/retropiemenu/gamelist.xml ]; then sudo rm -f ~/RetroPie/retropiemenu/gamelist.xml; fi
-if [ ! -f "~/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml ~/RetroPie/retropiemenu/gamelist.xml; fi
+if [ ! -s $HOME/RetroPie/retropiemenu/gamelist.xml ]; then sudo rm -f $HOME/RetroPie/retropiemenu/gamelist.xml; fi
+if [ ! -f "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml $HOME/RetroPie/retropiemenu/gamelist.xml; fi
 CONTENT1="<game>\n<path>./Devils-Box.sh</path>\n<name>Devils-Box</name>\n<desc>The Retro Devils Tool Box - A fully fuctional script to get even the newbies started up with ease, able to download roms and artwork to their proper places, Mugen and Sega Model 3 emulators, themes and music tools, plus much, much more.</desc>\n<image>./icons/Devils-Box.png</image>\n<releasedate>20220105T173842</releasedate>\n<developer>The Retro Devils</developer>\n<publisher>The Retro Devils</publisher>\n<genre>Devils-Box Script</genre>\n</game>"
 C1=$(echo $CONTENT1 | sed 's/\//\\\//g')
-if grep -q Devils-Box.sh "~/RetroPie/retropiemenu/gamelist.xml"; then echo "gamelist.xml entry confirmed"
+if grep -q Devils-Box.sh "$HOME/RetroPie/retropiemenu/gamelist.xml"; then echo "gamelist.xml entry confirmed"
 else
-	sed "/<\/gameList>/ s/.*/${C1}\n&/" ~/RetroPie/retropiemenu/gamelist.xml > $HOME/temp
-	cat $HOME/temp > ~/RetroPie/retropiemenu/gamelist.xml
+	sed "/<\/gameList>/ s/.*/${C1}\n&/" $HOME/RetroPie/retropiemenu/gamelist.xml > $HOME/temp
+	cat $HOME/temp > $HOME/RetroPie/retropiemenu/gamelist.xml
 	rm -f $HOME/temp
 fi
 echo "Emulationstation Will Now Restart ..."
