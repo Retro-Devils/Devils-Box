@@ -69,7 +69,6 @@ cd $HOME/Devils-Box
 git pull
 cp $HOME/Devils-Box/Devils-Box.sh -f $HOME/RetroPie/retropiemenu/
 cp $HOME/Devils-Box/files/Devils-Box.png -f $HOME/RetroPie/retropiemenu/icons/
-sudo cp $HOME/Devils-Box/files/box -f /usr/local/bin/
 sudo cp $HOME/Devils-Box/Devils-Box.sh -f /usr/locla/bin/Devils-Box
 chmod 755 $HOME/RetroPie/retropiemenu/Devils-Box.sh
 sudo chmod 755 /usr/local/bin/Devils-Box
