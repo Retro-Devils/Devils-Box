@@ -4,7 +4,13 @@
 
 "In order to succeed, your desire for success should be greater than your fear of failure."
 
-Updated January 5 2022
+UPDATES MONTHLY OR AS NEEDED 
+
+LAST UPDATE 
+
+Version-----2.2 
+
+Date--------1/10/22
 
 ## To Install/Update 
 
