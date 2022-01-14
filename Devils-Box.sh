@@ -5,7 +5,7 @@ export NCURSES_NO_UTF8_ACS=1
 ##-------------------------##
 
 #--------ART HOSTS----------#
-ART_HOST="https://archive.org/download/devils-box-media"
+ART_HOST="https://archive.org/download/devils-box-media-alt"
 #ART_HOST2=
 #ART_HOST3=
 #ART_HOST4=
