@@ -265,7 +265,7 @@ function consoles() {
     23) genesis ;;
     24) intellivision ;;
     25) lightgun ;;
-    26  mark3 ;;
+    26)  mark3 ;;
     27) mastersystem ;;
     28) megadrive ;;
     29) msx ;;
