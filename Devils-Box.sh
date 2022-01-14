@@ -33,12 +33,12 @@ function main_menu() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX 2.2    1/11/22" \
       --ok-label Select --cancel-label Exit-Devils-Box \
       --menu "DEVILS BOX MAIN MENU" 25 50 40 \
-      1 "Artwork Packs" \
-      2 "Console Packs" \
-      3 "Hacked Packs" \
-      4 "Tool Box" \
-      5 "Reboot System" \
-      6 "Show Disk Space" \
+#      1 "Artwork Packs" \
+      1 "Console Packs" \
+      2 "Hacked Packs" \
+      3 "Tool Box" \
+      4 "Reboot System" \
+      5 "Show Disk Space" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -56,7 +56,7 @@ function main_menu() {
 #-----------------------#
 # ARTWORK MENU FUNCTIONS #
 #-----------------------#
-function artwork() {
+#function artwork() {
   local choice
 
   while true; do
@@ -161,7 +161,7 @@ function artwork() {
   done
 }
 
-function download-art() {
+#function download-art() {
   for type in "$@"; do
     if [ "${type}" != "${1}" ]; then
       wget -m -r -np -nH -nd -R "index.html" ${ART_HOST}/"${1}"/"${type}"/ -P ~/RetroPie/roms/"${1}"/"${type}" -erobots=off
