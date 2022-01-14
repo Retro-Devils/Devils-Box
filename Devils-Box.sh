@@ -179,34 +179,34 @@ function consoles() {
       --menu "PRESS A/ENTER TO DOWNLOAD PACK    
       ***** IN FRONT OF CONSOLE MEANS COMING SOON" 40 75 60 \
       1 "Amiga                            300MB      340 GAMES" \
-      2 "Arcadia                           ??MB       ?? GAMES" \
-      3 "AmigaCD                           01GB      090 GAMES" \
-      4 "Arcade                           8.4GB     2000 GAMES" \
-      5 "AmstradPC                        700MB     3000 GAMES" \
+      2 "Arcadia                          201KB       47 GAMES" \
+      3 "AmigaCD                          461MB      133 GAMES" \
+      4 "Arcade                           8.4GB     2361 GAMES" \
+      5 "AmstradPC                        700MB     3624 GAMES" \
       6 "Atari800                         770MB      650 GAMES" \
-      7 "Atari2600                        2.5MB      600 GAMES" \
+      7 "Atari2600                        2.6MB      615 GAMES" \
       8 "Atari5200                         70MB      080 GAMES" \
-      9 "Atari7800                          5MB       54 GAMES" \
+      9 "Atari7800                          2MB       54 GAMES" \
       10 "AtariLynx                         10MB       77 GAMES" \
       11 "Atomiswave                       2.5GB       24 GAMES" \
       12 "Commadore64                      9.5MB      144 GAMES" \
-      13 "Colecovision                     150MB      140 GAMES" \
-      14 "Dragon32                          ??GB      ??? GAMES" \
-      15 "Dreamcast                         10GB      010 GAMES" \
-      16 "Electron                          ??GB       ?? GAMES" \
-      17 "Famicon                            4MB       25 GAMES" \
-      18 "Game and Watch                    48MB       53 GAMES" \
-      19 "Gameboy                           57MB      550 GAMES" \
-      20 "Gameboy Advance                  3.8GB     1000 GAMES" \
-      21 "Gameboy Color                    232MB      500 GAMES" \
-      22 "Gamegear                          42MB      250 GAMES" \
-      23 "Genesis                          2.5GB      900 GAMES" \
-      24 "Intellivision                     ??GB       ?? GAMES" \
+      13 "Colecovision                     2.7MB      146 GAMES" \
+      14 "Dragon32                         897KB       51 GAMES" \
+      15 "Dreamcast                         10GB       10 GAMES" \
+      16 "Electron                         2.5MB      152 GAMES" \
+      17 "Famicon                           19MB      169 GAMES" \
+      18 "FDS                                2MB       43 GAMES" \
+      19 "Game and Watch                    48MB       53 GAMES" \
+      20 "Gameboy                           42MB      565 GAMES" \
+      21 "Gameboy Advance                  3.4GB     1006 GAMES" \
+      21 "Gameboy Color                    232MB      538 GAMES" \
+      23 "Gamegear                          42MB      249 GAMES" \
+      24 "Intellivision                      1MB       62 GAMES" \
       25 "****Lightgun****                  ??GB       ?? GAMES" \
-      26 "****MarkIII****                   ??GB       ?? GAMES" \
+      26 "****MarkIII****                    6MB       58 GAMES" \
       27 "Mastersystem                      35MB      280 GAMES" \
-      28 "Megadrive                        400MB      550 GAMES" \
-      29 "MSX                             30.5MB      708 GAMES" \
+      28 "Megadrive/Genesis                409MB      561 GAMES" \
+      29 "MSX                               30MB      708 GAMES" \
       30 "MSX 2                           6.24MB       83 GAMES" \
       31 "****Mugen****                    9.2GB      009 GAMES" \
       32 "Neo Geo Pocket Color              21MB       40 GAMES" \
@@ -216,25 +216,27 @@ function consoles() {
       36 "NeoGeo                           2.3GB      142 GAMES" \
       37 "Nintendo Entertainment System    100MB      850 GAMES" \
       38 "Openbor                         1.84GB       37 GAMES" \
-      39 "****Oric****                      ??GB       ?? GAMES" \
-      40 "Pokemini                          ??GB       ?? GAMES" \
+      39 "****Oric****                     5.4MB      136 GAMES" \
+      40 "Pokemini                         5.4MB       44 GAMES" \
       41 "PS1                                3GB       29 GAMES" \
       42 "Sega Saturn                      108GB      303 GAMES" \
       43 "Sega Staurn Japan                3.9GB       18 GAMES" \
       44 "ScummVM                          2.5GB       21 GAMES" \
       45 "Sega32x                           63MB       37 GAMES" \
       46 "SegaCD                            11GB       52 GAMES" \
-      47 "Super Famicon                     ??GB       ?? GAMES" \
+      47 "Super Famicon                    475MB      487 GAMES" \
       48 "SNES                             500MB      500 GAMES" \
       49 "SuperGraffiix                    2.4MB        5 GAMES" \
       50 "Turbo Graffix 16                  20MB       94 GAMES" \
       51 "Vectrex                          201KB       20 GAMES" \
       52 "VideoPAC                         430KB       99 GAMES" \
       53 "Virtual Boy                        8MB       24 GAMES" \
-      54 "***Wine****                       ??GB       ?? GAMES" \
+      54 "***Wine****                       17GB       12 GAMES" \
       55 "Wonderswan Color                 116MB       84 GAMES" \
-      56 "ZMachine                           4MB       30 GAMES" \
-      57 "Zspectrum                         38MB     1111 GAMES" \
+      56 "Sinclair X1                      7.6MB       69 GAMES" \
+      57 "Sharp X68000                     504MB      418 GAMES" \
+      58 "ZMachine                           4MB       30 GAMES" \
+      59 "Zspectrum                         38MB     1111 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -255,12 +257,12 @@ function consoles() {
     15) dreamcast ;;
     16) electron ;;
     17) famicon ;;
-    18) gameandwatch ;;
-    19) gb ;;
-    20) gba ;;
-    21) gbc ;;
-    22) gg ;;
-    23) genesis ;;
+    18 fds ;;
+    19) gameandwatch ;;
+    20) gb ;;
+    21) gba ;;
+    22) gbc ;;
+    23) gg ;;
     24) intellivision ;;
     25) lightgun ;;
     26) mark3 ;;
@@ -293,8 +295,10 @@ function consoles() {
     53) virtual-boy ;;
     54) wine ;;
     55) wonderswan ;;
-    56) zmachine ;;
-    57) zspectrum ;;
+    56) x1 ;;
+    57) x68000 ;;
+    58) zmachine ;;
+    59) zspectrum ;;
     *) break ;;
     esac
   done
@@ -305,42 +309,36 @@ function amiga() {
 function arcadia() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
 }
-
 function amigacd() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amigacd/ -P ~/RetroPie/roms/amigacd -erobots=off
 }
 function arcade() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/arcadia/ -P ~/RetroPie/roms/arcade -erobots=off
 }
-
 function amstradpc() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/astrocade/ -P ~/RetroPie/roms/amstradpc -erobots=off
 }
 function atari800() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari800/ -P ~/RetroPie/roms/atari800 -erobots=off
 }
-
 function atari2600() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari2600/ -P ~/RetroPie/roms/atari2600 -erobots=off
 }
 function atari5200() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/atari5200/ -P ~/RetroPie/roms/atari5200 -erobots=off
 }
-
 function atari7800() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari7800/ -P ~/RetroPie/roms/atari7800 -erobots=off
 }
 function atarilynx() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atarilynx/ -P ~/RetroPie/roms/atarilynx -erobots=off
 }
-
 function atomiswave() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atomiswave/ -P ~/RetroPie/roms/atomiswave -erobots=off
 }
 function c64() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/c64/ -P ~/RetroPie/roms/c64 -erobots=off
 }
-
 function colecovision() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/coleco/ -P ~/RetroPie/roms/coleco -erobots=off
 }
@@ -368,16 +366,11 @@ function gb() {
 function gba() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gba/ -P ~/RetroPie/roms/gba -erobots=off
 }
-
 function gbc() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbc/ -P ~/RetroPie/roms/gbc -erobots=off
 }
 function gamegear() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gamegear/ -P ~/RetroPie/roms/gamegear -erobots=off
-}
-
-function genesis() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/genesis/ -P ~/RetroPie/roms/genesis -erobots=off
 }
 function intellivision() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
@@ -476,6 +469,12 @@ function virtual-boy() {
 function wonderswan() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
 }
+function x1() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/x1/ -P ~/RetroPie/roms/x1  -erobots=off
+}
+function x68000() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/x68000/ -P ~/RetroPie/roms/x68000 -erobots=off
+}
 function zmachine() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
 }
@@ -493,11 +492,12 @@ function hacked() {
     choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED CONSOLES DOWNLOAD MENU " \
       --ok-label Download --cancel-label Back \
       --menu " PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
-      1 "Gameboy Advance Hacks                   04MB    019 GAMES " \
-      2 "Gameboy Hacks                           ??MB     ?? GAMES " \
-      2 "Genesis Hacks                           20MB     ?? GAMES " \
-      3 "Gamegear Hacks                          04MB    019 GAMES " \
-      4 "NES Hacks                               20MB     ?? GAMES " \
+      1 "Gameboy Advance Hacks                  195MB     26 GAMES " \
+      2 "Gameboy Hacks                            4MB     19 GAMES " \
+      3 "Genesis Hacks                          197MB    191 GAMES " \
+      4 "Gamegear Hacks                           1MB      4 GAMES " \
+      5 "NES Hacks                              962KB      6 GAMES " \
+	  6 "SNES Hacks                              40MB      37 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -506,6 +506,7 @@ function hacked() {
     3) genh ;;
     4) ggh ;;
     5) nesh ;;
+	6) snesh ;;
     *) break ;;
     esac
   done
@@ -524,6 +525,9 @@ function ggh() {
 }
 function nesh() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nesh/ -P ~/RetroPie/roms/nesh -erobots=off
+}
+function snesh() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/snesh/ -P ~/RetroPie/roms/snesh -erobots=off
 }
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
