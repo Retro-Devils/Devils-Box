@@ -550,21 +550,20 @@ function emu_tools() {
   local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title " COMMUNITY TOOLS MENU" \
+    choice=$(dialog --backtitle "$BACKTITLE" --title "EMULATOR TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 75 60 \
       1 "Devils Retropie Extras			              Retro Devils" \
       2 "RetroPie Extras                                          Zero Jay" \
       3 "RetroPie Setup Menu				 Retro Pie Offical" \
       4 "Sega Model 3 Installer				      Retro Devils" \
-      
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) rp-extras ;;
     2) devils-ex ;;
     3) rpi-menu ;;
-    4) sM3 ;; 
+    4) sm3 ;; 
     *) break ;;
     esac
   done
