@@ -296,7 +296,7 @@ function consoles() {
     54) wine ;;
     55) wonderswan ;;
     56) zmachine ;;
-    57 zspectrum ;;
+    57) zspectrum ;;
     *) break ;;
     esac
   done
