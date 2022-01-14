@@ -506,14 +506,14 @@ function tool_box() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " TOOL BOX MENU " \
       --ok-label Select --cancel-label Back \
       --menu "SELECT TOOLSET AND PRESS A  " 25 50 40 \
-      1 "Community Tools   " \
+      1 "Audio & Visual Tools   " \
       2 "Emulator Tools    " \
-      3 "Other Tools       " \
+      3 "Hardware Tools       " \
       4 "Devils Box Tools  " \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) community_tools ;;
+    1) audio ;;
     2) emu_tools ;;
     3) other_tools ;;
     4) db_tools ;;
@@ -521,23 +521,50 @@ function tool_box() {
     esac
   done
 }
+#-----------------------------------------#
+#   AUDIO & VISUAL TOOLS MENU FUNCTIONS   #
+#-----------------------------------------#
+function audio() {
+  local choice
+
+  while true; do
+    choice=$(dialog --backtitle "$BACKTITLE" --title " AUDIO & VISUAL TOOLS MENU" \
+      --ok-label Install --cancel-label Back \
+      --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 75 60 \
+      1 "T.A.M.P.O                          		thepitster " \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) sm3   ;;
+    *) break ;;
+    esac
+  done
+}
+function tampo() {
+curl -sSL https://git.io/JDfjg | bash
+}
 ###-----------------------------------###
-###  COMMUNITY TOOLS MENU FUNCTIONS   ###
+###  EMU TOOLS MENU FUNCTIONS   ###
 ###-----------------------------------###
-function community_tools() {
+function emu_tools() {
   local choice
 
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " COMMUNITY TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 75 60 \
-      1 "RetroPie Extras                                      Zero Jay   " \
-      2 "T.A.M.P.O                                            thepitster" \
+      1 "Devils Retropie Extras			              Retro Devils" \
+      2 "RetroPie Extras                                          Zero Jay" \
+      3 "RetroPie Setup Menu				 Retro Pie Offical" \
+      4 "Sega Model 3 Installer				      Retro Devils" \
+      
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) rp-extras ;;
-    2) tampo ;;
+    2) devils-ex ;;
+    3) rpi-menu ;;
+    4) sM3 ;; 
     *) break ;;
     esac
   done
@@ -548,31 +575,14 @@ git clone https://github.com/zerojay/RetroPie-Extra.git
 cd RetroPie-Extra/
 ./install-extras.sh
 }
-
-function tampo() {
-curl -sSL https://git.io/JDfjg | bash
+function devils-ex() {
+curl -sSL https://git.io/J9Z8c | bash
 }
-
-###------------------------------###
-###EMULATOR TOOLS MENU FUNCTIONS ###
-###------------------------------###
-function emu_tools() {
-  local choice
-
-  while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title "EMULATOR TOOLS MENU" \
-      --ok-label Select --cancel-label Back \
-      --menu "SELECT DESIRED SOURCE " 25 50 40 \
-      1 "Commuity Emu Tools  " \
-      2 "Retropie Setup Menu " \
-      2>&1 >/dev/tty)
-
-    case "$choice" in
-    1) community_emu ;;
-    2) rpi_menu ;;
-    *) break ;;
-    esac
-  done
+#----------------------------------#
+#       SM3 EMU FUNCTIONS        #
+#----------------------------------#
+function sm3() {
+curl -sSL https://git.io/JSDOy | bash
 }
 
 #----------------------------------#
@@ -582,58 +592,22 @@ function rpi_menu() {
   sudo ~/RetroPie-Setup/retropie_setup.sh
 }
 
-#----------------------------------#
-#   COMMUNITY EMU MENU FUNCTIONS   #
-#----------------------------------#
-function community_emu() {
+###---------------------------------###
+###   HARDWARE TOOLS MENU FUNCTIONS    ###
+###---------------------------------###
+function hardware_tools() {
   local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title " COMMUNITY EMU TOOLS MENU" \
-      --ok-label Install --cancel-label Back \
-      --menu "SELECT EMU AND PRESS A TO DOWNLOAD/INSTALL " 30 75 60 \
-      1 "Mugen                                  PI 4    Supreme Team " \
-      2 "Sega Model 3                           PI 4    Retro Devils " \
-      2>&1 >/dev/tty)
-
-    case "$choice" in
-    1) mugen ;;
-    2) sm3   ;;
-    *) break ;;
-    esac
-  done
-}
-
-#----------------------------------#
-#       MUGEN EMU FUNCTIONS        #
-#----------------------------------#
-function mugen() {
-curl -sSL https://git.io/Jz9O3 | bash
-}
-
-#----------------------------------#
-#       SM3 EMU FUNCTIONS        #
-#----------------------------------#
-function sm3() {
-curl -sSL https://git.io/JSDOy | bash
-}
-
-###---------------------------------###
-###   OTHER TOOLS MENU FUNCTIONS    ###
-###---------------------------------###
-function other_tools() {
-  local choice
-
-  while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title " OTHER TOOLS MENU " \
+    choice=$(dialog --backtitle "$BACKTITLE" --title " HARDWARE TOOLS MENU " \
       --ok-label Select --cancel-label Back \
       --menu "CHOOSE KIND OF TOOL " 40 75 60 \
-      1 "Hardware Tools " \
+      1 "Cases Tools " \
       2 "Clear Controller Conifg " \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) hardware ;;
+    1) cases ;;
     2) clear_controller ;;
     *) break ;;
     esac
@@ -651,11 +625,11 @@ sudo rm /opt/retropie/configs/all/emulationstation/es_temporaryinput.cfg
 ###---------------------------------###
 ### HARDWARE TOOLS MENU FUNCTIONS   ###
 ###---------------------------------###
-function hardware() {
+function cases() {
   local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title " HARDWARE TOOLS MENU " \
+    choice=$(dialog --backtitle "$BACKTITLE" --title " CASES TOOLS MENU " \
       --ok-label Select --cancel-label Back \
       --menu "SELECT TOOL PRESS TO APPLY/INSTALL " 30 60 60 \
       1 "Argon1 Case Install & Config " \
