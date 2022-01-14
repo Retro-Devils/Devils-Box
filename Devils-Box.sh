@@ -192,7 +192,7 @@ function consoles() {
       12 "Commadore64                      9.5MB      144 GAMES" \
       13 "Colecovision                     2.7MB      146 GAMES" \
       14 "Dragon32                         897KB       51 GAMES" \
-      15 "Dreamcast                        6.5GB        7 GAMES" \
+      15 "Dreamcast                         10GB       10 GAMES" \
       16 "Electron                         2.5MB      152 GAMES" \
       17 "Famicon                           19MB      169 GAMES" \
       18 "FDS                                2MB       43 GAMES" \
