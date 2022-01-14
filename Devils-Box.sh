@@ -206,7 +206,7 @@ function consoles() {
       26 "****MarkIII****                   ??GB      ??? GAMES" \
       27 "Mastersystem                      35MB      280 GAMES" \
       28 "Megadrive                        400MB      550 GAMES" \
-      29 "MSX 				                      ??GB       ?? GAMES" \
+      29 "MSX 				                       ??GB       ?? GAMES" \
       30 "MSX 2 			                      ??GB       ?? GAMES" \
       31 "****Mugen****                    9.2GB      009 GAMES" \
       32 "Neo Geo Pocket Color 		          ??GB       ?? GAMES" \
