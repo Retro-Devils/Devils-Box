@@ -242,7 +242,7 @@ function consoles() {
     case "$choice" in
     1) amiga ;;
     2) arcadia ;;
-    3) amigacd
+    3) amigacd ;;
     4) arcade ;;
     5) amstradpc ;;
     6) atari800 ;;
