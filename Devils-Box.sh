@@ -263,7 +263,7 @@ function consoles() {
     23) genesis ;;
     24) intellivision ;;
     25) lightgun ;;
-    26)  mark3 ;;
+    26) mark3 ;;
     27) mastersystem ;;
     28) megadrive ;;
     29) msx ;;
@@ -353,6 +353,9 @@ function dragon32() {
 function dreamcast() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
 }
+function electron() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/electron/ -P ~/RetroPie/roms/electron -erobots=off
+}
 function fds() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
 }
@@ -395,10 +398,18 @@ function megadrive() {
 function mugen() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"mugen/ -P ~/RetroPie/roms/wine/mugens -erobots=off
 }
+function  msx() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/msx/ -P ~/RetroPie/roms/msx -erobots=off
+}
+function  msx2() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/msx2/ -P ~/RetroPie/roms/msx2 -erobots=off
+}
 function n64() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/n64/ -P ~/RetroPie/roms/n64 -erobots=off
 }
-
+function  ngpc() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/ngpc/ -P ~/RetroPie/roms/ngpc -erobots=off
+}
 function naomi() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/naomi/ -P ~/RetroPie/roms/naomi -erobots=off
 }
@@ -420,6 +431,9 @@ function oric() {
 function pcengine() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/pce/ -P ~/RetroPie/roms/pce -erobots=off
 }
+function  pokemini() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/pokemini/ -P ~/RetroPie/roms/pokemini -erobots=off
+}
 function ps1() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/psx/ -P ~/RetroPie/roms/psx -erobots=off
 }
@@ -429,11 +443,23 @@ function sfc() {
 function sega32x() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sega32x/ -P ~/RetroPie/roms/seg32x -erobots=off
 }
+function  saturn() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/saturn/ -P ~/RetroPie/roms/saturn -erobots=off
+}
+function  saturn-japan() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sturn-japan/ -P ~/RetroPie/roms/saturn-japan -erobots=off
+}
 function segacd() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/segacd/ -P ~/RetroPie/roms/segacd -erobots=off
 }
 function snes() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/snes/ -P ~/RetroPie/roms/snes -erobots=off
+}
+function  scummvm() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/scummvm/ -P ~/RetroPie/roms/scummvm -erobots=off
+}
+function supergrafx() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/supergrafx/ -P ~/RetroPie/roms/supergrafx -erobots=off
 }
 function tg16() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/tg16 -P ~/RetroPie/roms/tg16 -erobots=off
