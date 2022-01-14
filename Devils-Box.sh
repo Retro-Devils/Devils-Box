@@ -179,8 +179,8 @@ function consoles() {
       --menu "PRESS A/ENTER TO DOWNLOAD PACK    
       ***** IN FRONT OF CONSOLE MEANS COMING SOON" 40 75 60 \
       1 "Amiga                            300MB      340 GAMES" \
-      2 "Arcadia                           ??MB       ?? GAMES" \
-      3 "AmigaCD                           01GB      090 GAMES" \
+      2 "Arcadia                          201KB       47 GAMES" \
+      3 "AmigaCD                          461MB      133 GAMES" \
       4 "Arcade                           8.4GB     2000 GAMES" \
       5 "AmstradPC                        700MB     3000 GAMES" \
       6 "Atari800                         770MB      650 GAMES" \
@@ -191,9 +191,9 @@ function consoles() {
       11 "Atomiswave                       2.5GB       24 GAMES" \
       12 "Commadore64                      9.5MB      144 GAMES" \
       13 "Colecovision                     150MB      140 GAMES" \
-      14 "Dragon32                          ??GB      ??? GAMES" \
+      14 "Dragon32                         897KB       50 GAMES" \
       15 "Dreamcast                         10GB      010 GAMES" \
-      16 "Electron                          ??GB       ?? GAMES" \
+      16 "Electron                         2.5MB      152 GAMES" \
       17 "Famicon                            4MB       25 GAMES" \
       18 "Game and Watch                    48MB       53 GAMES" \
       19 "Gameboy                           57MB      550 GAMES" \
@@ -201,9 +201,9 @@ function consoles() {
       21 "Gameboy Color                    232MB      500 GAMES" \
       22 "Gamegear                          42MB      250 GAMES" \
       23 "Genesis                          2.5GB      900 GAMES" \
-      24 "Intellivision                     ??GB       ?? GAMES" \
+      24 "Intellivision                      1MB       62 GAMES" \
       25 "****Lightgun****                  ??GB       ?? GAMES" \
-      26 "****MarkIII****                   ??GB       ?? GAMES" \
+      26 "****MarkIII****                    6MB       58 GAMES" \
       27 "Mastersystem                      35MB      280 GAMES" \
       28 "Megadrive                        400MB      550 GAMES" \
       29 "MSX                             30.5MB      708 GAMES" \
@@ -216,22 +216,22 @@ function consoles() {
       36 "NeoGeo                           2.3GB      142 GAMES" \
       37 "Nintendo Entertainment System    100MB      850 GAMES" \
       38 "Openbor                         1.84GB       37 GAMES" \
-      39 "****Oric****                      ??GB       ?? GAMES" \
-      40 "Pokemini                          ??GB       ?? GAMES" \
+      39 "****Oric****                     5.4MB      136 GAMES" \
+      40 "Pokemini                         5.4MB       44 GAMES" \
       41 "PS1                                3GB       29 GAMES" \
       42 "Sega Saturn                      108GB      303 GAMES" \
       43 "Sega Staurn Japan                3.9GB       18 GAMES" \
       44 "ScummVM                          2.5GB       21 GAMES" \
       45 "Sega32x                           63MB       37 GAMES" \
       46 "SegaCD                            11GB       52 GAMES" \
-      47 "Super Famicon                     ??GB       ?? GAMES" \
+      47 "Super Famicon                    475MB      487 GAMES" \
       48 "SNES                             500MB      500 GAMES" \
       49 "SuperGraffiix                    2.4MB        5 GAMES" \
       50 "Turbo Graffix 16                  20MB       94 GAMES" \
       51 "Vectrex                          201KB       20 GAMES" \
       52 "VideoPAC                         430KB       99 GAMES" \
       53 "Virtual Boy                        8MB       24 GAMES" \
-      54 "***Wine****                       ??GB       ?? GAMES" \
+      54 "***Wine****                       17GB       12 GAMES" \
       55 "Wonderswan Color                 116MB       84 GAMES" \
       56 "ZMachine                           4MB       30 GAMES" \
       57 "Zspectrum                         38MB     1111 GAMES" \
