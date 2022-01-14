@@ -515,7 +515,7 @@ function tool_box() {
     case "$choice" in
     1) audio ;;
     2) emu_tools ;;
-    3) other_tools ;;
+    3) hardware_tools ;;
     4) db_tools ;;
     *) break ;;
     esac
