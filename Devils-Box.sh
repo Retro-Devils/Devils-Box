@@ -553,10 +553,10 @@ function emu_tools() {
     choice=$(dialog --backtitle "$BACKTITLE" --title "EMULATOR TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 75 60 \
-      1 "Devils Retropie Extras			              Retro Devils" \
-      2 "RetroPie Extras                                          Zero Jay" \
+      1 "Devils Retropie Extras			         Retro Devils     " \
+      2 "RetroPie Extras                                 Zero Jay         " \
       3 "RetroPie Setup Menu				 Retro Pie Offical" \
-      4 "Sega Model 3 Installer				      Retro Devils" \
+      4 "Sega Model 3 Installer				 Retro Devils     " \
       2>&1 >/dev/tty)
 
     case "$choice" in
