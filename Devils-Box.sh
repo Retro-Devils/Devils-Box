@@ -41,11 +41,11 @@ function main_menu() {
       2>&1 >/dev/tty)
 
     case "$choice" in
-    2) consoles ;;
-    3) hacked ;;
-    4) tool_box ;;
-    5) system_reboot ;;
-    6) show_disk ;;
+    1) consoles ;;
+    2) hacked ;;
+    3) tool_box ;;
+    4) system_reboot ;;
+    5) show_disk ;;
     *) break ;;
     esac
   done
@@ -206,10 +206,10 @@ function consoles() {
       26 "****MarkIII****                   ??GB      ??? GAMES" \
       27 "Mastersystem                      35MB      280 GAMES" \
       28 "Megadrive                        400MB      550 GAMES" \
-      29 "MSX 				    ??GB       ?? GAMES" \
-      30 "MSX 2 			    ??GB       ?? GAMES" \
+      29 "MSX 				                      ??GB       ?? GAMES" \
+      30 "MSX 2 			                      ??GB       ?? GAMES" \
       31 "****Mugen****                    9.2GB      009 GAMES" \
-      32 "Neo Geo Pocket Color 		    ??GB       ?? GAMES" \
+      32 "Neo Geo Pocket Color 		          ??GB       ?? GAMES" \
       33 "Nintendo 64                      5.0GB      300 GAMES" \
       34 "Naomi                            1.5GB       15 GAMES" \
       35 "Nintendo DS                        4GB      171 GAMES" \
@@ -217,24 +217,24 @@ function consoles() {
       37 "Nintendo Entertainment System    100MB      850 GAMES" \
       38 "Openbor                         1.84GB       37 GAMES" \
       39 "****Oric****                      ??GB      ??? GAMES" \
-      40 "Pokemini		  	    ??GB       ?? GAMES" \
+      40 "Pokemini		                	    ??GB       ?? GAMES" \
       41 "PS1                                3GB       29 GAMES" \
-      42 "Sega Saturn 			    ??GB       ?? GAMES" \
-      43 "Sega Staurn Japan		    ??GB       ?? GAMES" \
+      42 "Sega Saturn 			                ??GB       ?? GAMES" \
+      43 "Sega Staurn Japan		              ??GB       ?? GAMES" \
       44 "ScummVM                          2.5GB       21 GAMES" \
       45 "Sega32x                           ??GB      ??? GAMES" \
       46 "SegaCD                            ??GB      ??? GAMES" \
-      47 "Super Famicon			    ??GB       ?? GAMES" \
+      47 "Super Famicon			                ??GB       ?? GAMES" \
       48 "SNES                             500MB      500 GAMES" \
-      49 "SuperGraffiix			    ??GB       ?? GAMES" \
+      49 "SuperGraffiix			                ??GB       ?? GAMES" \
       50 "Turbo Graffix 16                  ??GB      ??? GAMES" \
-      51 "Vectrex			    ??GB       ?? GAMES" \
-      52 "VideoPAC			    ??GB       ?? GAMES" \
-      53 "Virtual Boy 			    ??GB       ?? GAMES" \
-      54 "Wine                              ??GB      ??? GAMES" \
+      51 "Vectrex			                      ??GB       ?? GAMES" \
+      52 "VideoPAC			                    ??GB       ?? GAMES" \
+      53 "Virtual Boy 			                ??GB       ?? GAMES" \
+      54 "***Wine****                       ??GB      ??? GAMES" \
       55 "Wonderswan Color                  ??GB      ??? GAMES" \
       56 "ZMachine                          ??GB      ??? GAMES" \
-      57 "Zspectrum 			    ??GB       ?? GAMES" \
+      57 "Zspectrum 	               		    ??GB       ?? GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -467,29 +467,34 @@ function hacked() {
     choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED CONSOLES DOWNLOAD MENU " \
       --ok-label Download --cancel-label Back \
       --menu " PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
-      1 "Gameboy Hacks                           04MB    019 GAMES " \
-      2 "Genesis Hacks                           20MB    190 GAMES " \
+      1 "Gameboy Advance Hacks                   04MB    019 GAMES " \
+      2 "Gameboy Hacks                           ??MB     ?? GAMES " \
+      2 "Genesis Hacks                           20MB     ?? GAMES " \
       3 "Gamegear Hacks                          04MB    019 GAMES " \
-      4 "NES Hacks                               20MB    190 GAMES " \
+      4 "NES Hacks                               20MB     ?? GAMES " \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) gbh ;;
-    2) genh ;;
-    3) ggh ;;
-    4) nesh ;;
+    1) gbah ;;
+    2) gbh ;;
+    3) genh ;;
+    4) ggh ;;
+    5) nesh ;;
     *) break ;;
     esac
   done
 }
+function gbah() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbah/ -P ~/RetroPie/roms/gbah -erobots=off
+}
 function gbh() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbh/ -P ~/RetroPie/roms/gbh -erobots=off
 }
-function nesh() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/genh/ -P ~/RetroPie/roms/nesh -erobots=off
+function genh() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/genh/ -P ~/RetroPie/roms/genh -erobots=off
 }
-function gbh() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/ggh/ -P ~/RetroPie/roms/gbh -erobots=off
+function ggh() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/ggh/ -P ~/RetroPie/roms/ggh -erobots=off
 }
 function nesh() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nesh/ -P ~/RetroPie/roms/nesh -erobots=off
