@@ -194,7 +194,7 @@ function consoles() {
       14 "Dragon32                         897KB       50 GAMES" \
       15 "Dreamcast                         10GB      010 GAMES" \
       16 "Electron                         2.5MB      152 GAMES" \
-      17 "Famicon                            4MB       25 GAMES" \
+      17 "Famicon                           19MB      169 GAMES" \
       18 "Game and Watch                    48MB       53 GAMES" \
       19 "Gameboy                           57MB      550 GAMES" \
       20 "Gameboy Advance                  3.8GB     1000 GAMES" \
