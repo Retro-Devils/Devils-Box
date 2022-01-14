@@ -181,102 +181,131 @@ function consoles() {
       --menu "PRESS A/ENTER TO DOWNLOAD PACK    
       ***** IN FRONT OF CONSOLE MEANS COMING SOON" 40 75 60 \
       1 "Amiga                            300MB      340 GAMES" \
-      2 "AmigaCD                           01GB      090 GAMES" \
-      3 "Arcade                           8.4GB     2000 GAMES" \
-      4 "AmstradPC                        700MB     3000 GAMES" \
-      5 "Atari800                         770MB      650 GAMES" \
-      6 "Atari2600                        2.5MB      600 GAMES" \
-      7 "Atari5200                         70MB      080 GAMES" \
-      8 "Atari7800                          5MB       54 GAMES" \
-      9 "AtariLynx                         10MB       77 GAMES" \
-      10 "Atomiswave                       2.5GB       24 GAMES" \
-      11 "Commadore64                      9.5MB      144 GAMES" \
-      12 "Colecovision                     150MB      140 GAMES" \
-      13 "****Daphne****                    ??GB      ??? GAMES" \
-      14 "****Dragon32****                  ??GB      ??? GAMES" \
+      2 "Arcadia                           ??MB       ?? GAMES" \
+      3 "AmigaCD                           01GB      090 GAMES" \
+      4 "Arcade                           8.4GB     2000 GAMES" \
+      5 "AmstradPC                        700MB     3000 GAMES" \
+      6 "Atari800                         770MB      650 GAMES" \
+      7 "Atari2600                        2.5MB      600 GAMES" \
+      8 "Atari5200                         70MB      080 GAMES" \
+      9 "Atari7800                          5MB       54 GAMES" \
+      10 "AtariLynx                         10MB       77 GAMES" \
+      11 "Atomiswave                       2.5GB       24 GAMES" \
+      12 "Commadore64                      9.5MB      144 GAMES" \
+      13 "Colecovision                     150MB      140 GAMES" \
+      14 "Dragon32                          ??GB      ??? GAMES" \
       15 "Dreamcast                         10GB      010 GAMES" \
-      16 "Famicon                            4MB       25 GAMES" \
-      17 "Game and Watch                    48MB       53 GAMES" \
-      18 "Gameboy                           57MB      550 GAMES" \
-      19 "Gameboy Advance                  3.8GB     1000 GAMES" \
-      20 "Gameboy Color                    232MB      500 GAMES" \
-      21 "Gamegear                          42MB      250 GAMES" \
-      22 "Genesis                          2.5GB      900 GAMES" \
-      23 "****Intellivision****             ??GB      ??? GAMES" \
-      24 "****Lightgun****                  ??GB      ??? GAMES" \
-      25 "****MarkIII****                   ??GB      ??? GAMES" \
-      26 "Mastersystem                      35MB      280 GAMES" \
-      27 "Megadrive                        400MB      550 GAMES" \
-      28 "****Mugen****                    9.2GB      009 GAMES" \
-      29 "Nintendo 64                      5.0GB      300 GAMES" \
-      30 "Naomi                            1.5GB       15 GAMES" \
-      31 "Nintendo DS                        4GB      171 GAMES" \
-      32 "NeoGeo                           2.3GB      142 GAMES" \
-      33 "Nintendo Entertainment System    100MB      850 GAMES" \
-      34 "Openbor                         1.84GB       37 GAMES" \
-      35 "Oric                              ??GB      ??? GAMES" \
-      36 "PS1                                3GB       29 GAMES" \
-      37 "ScummVM                          2.5GB       21 GAMES" \
-      38 "Sega32x                           ??GB      ??? GAMES" \
-      39 "SegaCD                            ??GB      ??? GAMES" \
-      40 "SNES                             500MB      500 GAMES" \
-      41 "Turbo Graffix 16                  ??GB      ??? GAMES" \
-      42 "Wine                              ??GB      ??? GAMES" \
-      43 "Wonderswan                        ??GB      ??? GAMES" \
-      44 "ZMachine                          ??GB      ??? GAMES" \
+      16 "Electron                          ??GB       ?? GAMES" \
+      17 "Famicon                            4MB       25 GAMES" \
+      18 "Game and Watch                    48MB       53 GAMES" \
+      19 "Gameboy                           57MB      550 GAMES" \
+      20 "Gameboy Advance                  3.8GB     1000 GAMES" \
+      21 "Gameboy Color                    232MB      500 GAMES" \
+      22 "Gamegear                          42MB      250 GAMES" \
+      23 "Genesis                          2.5GB      900 GAMES" \
+      24 "Intellivision                     ??GB      ??? GAMES" \
+      25 "****Lightgun****                  ??GB      ??? GAMES" \
+      26 "****MarkIII****                   ??GB      ??? GAMES" \
+      27 "Mastersystem                      35MB      280 GAMES" \
+      28 "Megadrive                        400MB      550 GAMES" \
+      29 "MSX 				    ??GB       ?? GAMES" \
+      30 "MSX 2 			    ??GB       ?? GAMES" \
+      31 "****Mugen****                    9.2GB      009 GAMES" \
+      32 "Neo Geo Pocket Color 		    ??GB       ?? GAMES" \
+      33 "Nintendo 64                      5.0GB      300 GAMES" \
+      34 "Naomi                            1.5GB       15 GAMES" \
+      35 "Nintendo DS                        4GB      171 GAMES" \
+      36 "NeoGeo                           2.3GB      142 GAMES" \
+      37 "Nintendo Entertainment System    100MB      850 GAMES" \
+      38 "Openbor                         1.84GB       37 GAMES" \
+      39 "****Oric****                      ??GB      ??? GAMES" \
+      40 "Pokemini		  	    ??GB       ?? GAMES" \
+      41 "PS1                                3GB       29 GAMES" \
+      42 "Sega Saturn 			    ??GB       ?? GAMES" \
+      43 "Sega Staurn Japan		    ??GB       ?? GAMES" \
+      44 "ScummVM                          2.5GB       21 GAMES" \
+      45 "Sega32x                           ??GB      ??? GAMES" \
+      46 "SegaCD                            ??GB      ??? GAMES" \
+      47 "Super Famicon			    ??GB       ?? GAMES" \
+      48 "SNES                             500MB      500 GAMES" \
+      49 "SuperGraffiix			    ??GB       ?? GAMES" \
+      50 "Turbo Graffix 16                  ??GB      ??? GAMES" \
+      51 "Vectrex			    ??GB       ?? GAMES" \
+      52 "VideoPAC			    ??GB       ?? GAMES" \
+      53 "Virtual Boy 			    ??GB       ?? GAMES" \
+      54 "Wine                              ??GB      ??? GAMES" \
+      55 "Wonderswan Color                  ??GB      ??? GAMES" \
+      56 "ZMachine                          ??GB      ??? GAMES" \
+      57 "Zspectrum 			    ??GB       ?? GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) amiga ;;
-    2) amigacd ;;
-    3) arcade ;;
-    4) amstradpc ;;
-    5) atari800 ;;
-    6) atari2600 ;;
-    7) atari5200 ;;
-    8) atari7800 ;;
-    9) atarilynx ;;
-    10) atarist ;;
-    11) c64 ;;
-    12) colecovision ;;
-    13) daphne ;;
+    2) arcadia ;;
+    3) amigacd
+    4) arcade ;;
+    5) amstradpc ;;
+    6) atari800 ;;
+    7) atari2600 ;;
+    8) atari5200 ;;
+    9) atari7800 ;;
+    10) atarilynx ;;
+    11) atomiswave ;;
+    12) c64 ;;
+    13) colecovision ;;
     14) dragon32 ;;
     15) dreamcast ;;
-    16) famicon ;;
-    17) gameandwatch ;;
-    18) gb ;;
-    19) gba ;;
-    20) gbc ;;
-    21) gg ;;
-    22) genesis ;;
-    23) intellivision ;;
-    24) lightgun ;;
-    25) markiii ;;
-    26) mastersystem ;;
-    27) megadrive ;;
-    28) mugen ;;
-    29) n64 ;;
-    30) naomi ;;
-    31) nds ;;
-    32) neogeo ;;
-    33) nes ;;
-    34) openbor ;;
-    35) oric ;;
-    36) pc-engine ;;
-    37) ps1 ;;
-    38) sega32x ;;
-    39) segacd ;;
-    40) snes ;;
-    41) tg16 ;;
-    42) wine ;;
-    43) wonderswan ;;
-    44) zmachine ;;
+    16) electron ;;
+    17) famicon ;;
+    18) gameandwatch ;;
+    19) gb ;;
+    20) gba ;;
+    21) gbc ;;
+    22) gg ;;
+    23) genesis ;;
+    24) intellivision ;;
+    25) lightgun ;;
+    26  mark3 ;;
+    27) mastersystem ;;
+    28) megadrive ;;
+    29) msx ;;
+    30) msx2 ;;
+    31) mugen ;;
+    32) ngpc ;;
+    33) n64 ;;
+    34) naomi ;;
+    35) nds ;;
+    36) neogeo ;;
+    37) nes ;;
+    38) openbor ;;
+    39) oric ;;
+    40) pokemini ;;
+    41) ps1 ;;
+    42) saturn ;;
+    43) saturn-japan ;;
+    44) scummvm ;;
+    45) sega32 ;;
+    46) segacd ;;
+    47) sfs ;;
+    48) snes ;;
+    49) supergrafx ;;
+    50) tg16 ;;
+    51) vectrex ;;
+    52) videopac ;;
+    53) virtual-boy ;;
+    54) wine ;;
+    55) wonderswan ;;
+    56) zmachine ;;
+    57 zspectrum ;;
     *) break ;;
     esac
   done
 }
 function amiga() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amiga/ -P ~/RetroPie/roms/amiga -erobots=off
+}
+function arcadia() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
 }
 
 function amigacd() {
@@ -297,7 +326,7 @@ function atari2600() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari2600/ -P ~/RetroPie/roms/atari2600 -erobots=off
 }
 function atari5200() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari5200/ -P ~/RetroPie/roms/atari5200 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/atari5200/ -P ~/RetroPie/roms/atari5200 -erobots=off
 }
 
 function atari7800() {
@@ -307,8 +336,8 @@ function atarilynx() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atarilynx/ -P ~/RetroPie/roms/atarilynx -erobots=off
 }
 
-function atarist() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atarist/ -P ~/RetroPie/roms/atarist -erobots=off
+function atomiswave() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atomiswave/ -P ~/RetroPie/roms/atomiswave -erobots=off
 }
 function c64() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/c64/ -P ~/RetroPie/roms/c64 -erobots=off
@@ -321,10 +350,10 @@ function daphne() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/daphne/ -P ~/RetroPie/daphne -erobots=off
 }
 function dragon32() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/dragon32/ -P ~/RetroPie/roms/dragon32 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/dragon32/ -P ~/RetroPie/roms/dragon32 -erobots=off
 }
 function dreamcast() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
 }
 function fds() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
@@ -350,7 +379,7 @@ function genesis() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/genesis/ -P ~/RetroPie/roms/genesis -erobots=off
 }
 function intellivision() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
 }
 function lightgun() {
   wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/lightgun/ -P ~/RetroPie/roms/lightgun -erobots=off
@@ -369,7 +398,7 @@ function mugen() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"mugen/ -P ~/RetroPie/roms/wine/mugens -erobots=off
 }
 function n64() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/N64/ -P ~/RetroPie/roms/n64 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/n64/ -P ~/RetroPie/roms/n64 -erobots=off
 }
 
 function naomi() {
@@ -396,6 +425,9 @@ function pcengine() {
 function ps1() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/psx/ -P ~/RetroPie/roms/psx -erobots=off
 }
+function sfc() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sfc/ -P ~/RetroPie/roms/sfc -erobots=off
+}
 function sega32x() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sega32x/ -P ~/RetroPie/roms/seg32x -erobots=off
 }
@@ -408,14 +440,23 @@ function snes() {
 function tg16() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/tg16 -P ~/RetroPie/roms/tg16 -erobots=off
 }
-function wine() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/wine/ -P ~/RetroPie/roms/wine -erobots=off
+function vectrex() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/vectrex/ -P ~/RetroPie/roms/vectrex -erobots=off
+}
+function videopac() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/videopac/ -P ~/RetroPie/roms/videopac -erobots=off
+}
+function virtual-boy() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
 }
 function wonderswan() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
 }
 function zmachine() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
+}
+function zpectrum() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zspectrum/ -P ~/RetroPie/roms/zspectrum -erobots=off
 }
 
 ###------------------------------###
