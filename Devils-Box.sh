@@ -5,7 +5,7 @@ export NCURSES_NO_UTF8_ACS=1
 ##-------------------------##
 
 #--------ART HOSTS----------#
-ART_HOST="https://archive.org/download/devils-box-media"
+ART_HOST="https://archive.org/download/devils-box-media-alt"
 #ART_HOST2=
 #ART_HOST3=
 #ART_HOST4=
@@ -206,10 +206,10 @@ function consoles() {
       26 "****MarkIII****                   ??GB      ??? GAMES" \
       27 "Mastersystem                      35MB      280 GAMES" \
       28 "Megadrive                        400MB      550 GAMES" \
-      29 "MSX 				                       ??GB       ?? GAMES" \
-      30 "MSX 2 			                      ??GB       ?? GAMES" \
+      29 "MSX 				  ??GB       ?? GAMES" \
+      30 "MSX 2 			         ??GB       ?? GAMES" \
       31 "****Mugen****                    9.2GB      009 GAMES" \
-      32 "Neo Geo Pocket Color 		          ??GB       ?? GAMES" \
+      32 "Neo Geo Pocket Color 		  ??GB       ?? GAMES" \
       33 "Nintendo 64                      5.0GB      300 GAMES" \
       34 "Naomi                            1.5GB       15 GAMES" \
       35 "Nintendo DS                        4GB      171 GAMES" \
@@ -217,24 +217,24 @@ function consoles() {
       37 "Nintendo Entertainment System    100MB      850 GAMES" \
       38 "Openbor                         1.84GB       37 GAMES" \
       39 "****Oric****                      ??GB      ??? GAMES" \
-      40 "Pokemini		                	    ??GB       ?? GAMES" \
+      40 "Pokemini		                ??GB       ?? GAMES" \
       41 "PS1                                3GB       29 GAMES" \
-      42 "Sega Saturn 			                ??GB       ?? GAMES" \
-      43 "Sega Staurn Japan		              ??GB       ?? GAMES" \
+      42 "Sega Saturn 			  ??GB       ?? GAMES" \
+      43 "Sega Staurn Japan		         ??GB       ?? GAMES" \
       44 "ScummVM                          2.5GB       21 GAMES" \
       45 "Sega32x                           ??GB      ??? GAMES" \
       46 "SegaCD                            ??GB      ??? GAMES" \
-      47 "Super Famicon			                ??GB       ?? GAMES" \
+      47 "Super Famicon			  ??GB       ?? GAMES" \
       48 "SNES                             500MB      500 GAMES" \
-      49 "SuperGraffiix			                ??GB       ?? GAMES" \
+      49 "SuperGraffiix			  ??GB       ?? GAMES" \
       50 "Turbo Graffix 16                  ??GB      ??? GAMES" \
-      51 "Vectrex			                      ??GB       ?? GAMES" \
-      52 "VideoPAC			                    ??GB       ?? GAMES" \
-      53 "Virtual Boy 			                ??GB       ?? GAMES" \
+      51 "Vectrex			         ??GB       ?? GAMES" \
+      52 "VideoPAC			         ??GB       ?? GAMES" \
+      53 "Virtual Boy 			  ??GB       ?? GAMES" \
       54 "***Wine****                       ??GB      ??? GAMES" \
       55 "Wonderswan Color                  ??GB      ??? GAMES" \
       56 "ZMachine                          ??GB      ??? GAMES" \
-      57 "Zspectrum 	               		    ??GB       ?? GAMES" \
+      57 "Zspectrum 	               	  ??GB       ?? GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
