@@ -201,40 +201,40 @@ function consoles() {
       21 "Gameboy Color                    232MB      500 GAMES" \
       22 "Gamegear                          42MB      250 GAMES" \
       23 "Genesis                          2.5GB      900 GAMES" \
-      24 "Intellivision                     ??GB      ??? GAMES" \
-      25 "****Lightgun****                  ??GB      ??? GAMES" \
-      26 "****MarkIII****                   ??GB      ??? GAMES" \
+      24 "Intellivision                     ??GB       ?? GAMES" \
+      25 "****Lightgun****                  ??GB       ?? GAMES" \
+      26 "****MarkIII****                   ??GB       ?? GAMES" \
       27 "Mastersystem                      35MB      280 GAMES" \
       28 "Megadrive                        400MB      550 GAMES" \
-      29 "MSX 				  ??GB       ?? GAMES" \
-      30 "MSX 2 			         ??GB       ?? GAMES" \
+      29 "MSX                             30.5MB      708 GAMES" \
+      30 "MSX 2                           6.24MB       83 GAMES" \
       31 "****Mugen****                    9.2GB      009 GAMES" \
-      32 "Neo Geo Pocket Color 		  ??GB       ?? GAMES" \
-      33 "Nintendo 64                      5.0GB      300 GAMES" \
+      32 "Neo Geo Pocket Color              21MB       40 GAMES" \
+      33 "Nintendo 64                      5.0GB      338 GAMES" \
       34 "Naomi                            1.5GB       15 GAMES" \
       35 "Nintendo DS                        4GB      171 GAMES" \
       36 "NeoGeo                           2.3GB      142 GAMES" \
       37 "Nintendo Entertainment System    100MB      850 GAMES" \
       38 "Openbor                         1.84GB       37 GAMES" \
-      39 "****Oric****                      ??GB      ??? GAMES" \
-      40 "Pokemini		                ??GB       ?? GAMES" \
+      39 "****Oric****                      ??GB       ?? GAMES" \
+      40 "Pokemini                          ??GB       ?? GAMES" \
       41 "PS1                                3GB       29 GAMES" \
-      42 "Sega Saturn 			  ??GB       ?? GAMES" \
-      43 "Sega Staurn Japan		         ??GB       ?? GAMES" \
+      42 "Sega Saturn                      108GB      303 GAMES" \
+      43 "Sega Staurn Japan                3.9GB       18 GAMES" \
       44 "ScummVM                          2.5GB       21 GAMES" \
-      45 "Sega32x                           ??GB      ??? GAMES" \
-      46 "SegaCD                            ??GB      ??? GAMES" \
-      47 "Super Famicon			  ??GB       ?? GAMES" \
+      45 "Sega32x                           63MB       37 GAMES" \
+      46 "SegaCD                            11GB       52 GAMES" \
+      47 "Super Famicon                     ??GB       ?? GAMES" \
       48 "SNES                             500MB      500 GAMES" \
-      49 "SuperGraffiix			  ??GB       ?? GAMES" \
-      50 "Turbo Graffix 16                  ??GB      ??? GAMES" \
-      51 "Vectrex			         ??GB       ?? GAMES" \
-      52 "VideoPAC			         ??GB       ?? GAMES" \
-      53 "Virtual Boy 			  ??GB       ?? GAMES" \
-      54 "***Wine****                       ??GB      ??? GAMES" \
-      55 "Wonderswan Color                  ??GB      ??? GAMES" \
-      56 "ZMachine                          ??GB      ??? GAMES" \
-      57 "Zspectrum 	               	  ??GB       ?? GAMES" \
+      49 "SuperGraffiix                    2.4MB        5 GAMES" \
+      50 "Turbo Graffix 16                  20MB       94 GAMES" \
+      51 "Vectrex                          201KB       20 GAMES" \
+      52 "VideoPAC                         430KB       99 GAMES" \
+      53 "Virtual Boy                        8MB       24 GAMES" \
+      54 "***Wine****                       ??GB       ?? GAMES" \
+      55 "Wonderswan Color                 116MB       84 GAMES" \
+      56 "ZMachine                           4MB       30 GAMES" \
+      57 "Zspectrum                         38MB     1111 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
