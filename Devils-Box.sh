@@ -192,7 +192,7 @@ function consoles() {
       12 "Commadore64                      9.5MB      144 GAMES" \
       13 "Colecovision                     2.7MB      146 GAMES" \
       14 "Dragon32                         897KB       51 GAMES" \
-      15 "Dreamcast                         10GB       10 GAMES" \
+      15 "Dreamcast                       12.7GB       19 GAMES" \
       16 "Electron                         2.5MB      152 GAMES" \
       17 "Famicon                           19MB      169 GAMES" \
       18 "FDS                                2MB       43 GAMES" \
@@ -231,12 +231,13 @@ function consoles() {
       51 "Vectrex                          201KB       20 GAMES" \
       52 "VideoPAC                         430KB       99 GAMES" \
       53 "Virtual Boy                        8MB       24 GAMES" \
-      54 "***Wine****                       17GB       12 GAMES" \
-      55 "Wonderswan Color                 116MB       84 GAMES" \
-      56 "Sinclair X1                      7.6MB       69 GAMES" \
-      57 "Sharp X68000                     504MB      418 GAMES" \
-      58 "ZMachine                           4MB       30 GAMES" \
-      59 "Zspectrum                         38MB     1111 GAMES" \
+      54 "Dreamcast VMU                      3MB      115 GAMES" \
+      55 "***Wine****                       17GB       12 GAMES" \
+      56 "Wonderswan Color                 116MB       84 GAMES" \
+      57 "Sinclair X1                      7.6MB       69 GAMES" \
+      58 "Sharp X68000                     504MB      418 GAMES" \
+      59 "ZMachine                           4MB       30 GAMES" \
+      60 "Zspectrum                         38MB     1111 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -293,12 +294,13 @@ function consoles() {
     51) vectrex ;;
     52) videopac ;;
     53) virtual-boy ;;
-    54) wine ;;
-    55) wonderswan ;;
-    56) x1 ;;
-    57) x68000 ;;
-    58) zmachine ;;
-    59) zspectrum ;;
+    54) vmu ;;
+    55) wine ;;
+    56) wonderswan ;;
+    57) x1 ;;
+    58) x68000 ;;
+    59) zmachine ;;
+    60) zspectrum ;;
     *) break ;;
     esac
   done
@@ -387,7 +389,6 @@ function mastersystem() {
 function megadrive() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/megadrive/ -P ~/RetroPie/roms/megadrive -erobots=off
 }
-
 function mugen() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"mugen/ -P ~/RetroPie/roms/wine/mugens -erobots=off
 }
@@ -398,7 +399,7 @@ function  msx2() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/msx2/ -P ~/RetroPie/roms/msx2 -erobots=off
 }
 function n64() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/n64/ -P ~/RetroPie/roms/n64 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/n64/ -P ~/RetroPie/roms/n64 -erobots=off
 }
 function  ngpc() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/ngpc/ -P ~/RetroPie/roms/ngpc -erobots=off
@@ -419,7 +420,7 @@ function openbor() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/openbor/ -P ~/RetroPie/roms/openbor -erobots=off
 }
 function oric() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/oric/ -P ~/RetroPie/roms/oric -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/oric/ -P ~/RetroPie/roms/oric -erobots=off
 }
 function pcengine() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/pce/ -P ~/RetroPie/roms/pce -erobots=off
@@ -428,58 +429,61 @@ function  pokemini() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/pokemini/ -P ~/RetroPie/roms/pokemini -erobots=off
 }
 function ps1() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/psx/ -P ~/RetroPie/roms/psx -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/psx/ -P ~/RetroPie/roms/psx -erobots=off
 }
 function sfc() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sfc/ -P ~/RetroPie/roms/sfc -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/sfc/ -P ~/RetroPie/roms/sfc -erobots=off
 }
 function sega32x() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sega32x/ -P ~/RetroPie/roms/seg32x -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/sega32x/ -P ~/RetroPie/roms/seg32x -erobots=off
 }
 function  saturn() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/saturn/ -P ~/RetroPie/roms/saturn -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/saturn/ -P ~/RetroPie/roms/saturn -erobots=off
 }
 function  saturn-japan() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sturn-japan/ -P ~/RetroPie/roms/saturn-japan -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/saturn-japan/ -P ~/RetroPie/roms/saturn-japan -erobots=off
 }
 function segacd() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/segacd/ -P ~/RetroPie/roms/segacd -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/segacd/ -P ~/RetroPie/roms/segacd -erobots=off
 }
 function snes() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/snes/ -P ~/RetroPie/roms/snes -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/snes/ -P ~/RetroPie/roms/snes -erobots=off
 }
 function  scummvm() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/scummvm/ -P ~/RetroPie/roms/scummvm -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/scummvm/ -P ~/RetroPie/roms/scummvm -erobots=off
 }
 function supergrafx() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/supergrafx/ -P ~/RetroPie/roms/supergrafx -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/supergrafx/ -P ~/RetroPie/roms/supergrafx -erobots=off
 }
 function tg16() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/tg16 -P ~/RetroPie/roms/tg16 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/tg16 -P ~/RetroPie/roms/tg16 -erobots=off
 }
 function vectrex() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/vectrex/ -P ~/RetroPie/roms/vectrex -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/vectrex/ -P ~/RetroPie/roms/vectrex -erobots=off
 }
 function videopac() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/videopac/ -P ~/RetroPie/roms/videopac -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/videopac/ -P ~/RetroPie/roms/videopac -erobots=off
 }
 function virtual-boy() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/virtualboy/ -P ~/RetroPie/roms/virtualboy -erobots=off
+}
+function vmu() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/svmu/ -P ~/RetroPie/roms/vmu -erobots=off
 }
 function wonderswan() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
 }
 function x1() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/x1/ -P ~/RetroPie/roms/x1  -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/x1/ -P ~/RetroPie/roms/x1  -erobots=off
 }
 function x68000() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/x68000/ -P ~/RetroPie/roms/x68000 -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/x68000/ -P ~/RetroPie/roms/x68000 -erobots=off
 }
 function zmachine() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
 }
 function zpectrum() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zspectrum/ -P ~/RetroPie/roms/zspectrum -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/zspectrum/ -P ~/RetroPie/roms/zspectrum -erobots=off
 }
 
 ###------------------------------###
