@@ -257,7 +257,7 @@ function consoles() {
     15) dreamcast ;;
     16) electron ;;
     17) famicon ;;
-    18 fds ;;
+    18) fds ;;
     19) gameandwatch ;;
     20) gb ;;
     21) gba ;;
