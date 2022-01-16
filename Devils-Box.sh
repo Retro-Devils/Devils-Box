@@ -761,6 +761,7 @@ if [ $? -eq 0 ]; then
   sudo chmod 755 /usr/local/bin/Devils-Box
   chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
   sleep 1
+  if [ -d "$HOME/RetroPie/retropiemenu/Devils-Box/" ]; then sudo rm -fR $HOME/RetroPie/retropiemenu/Devils-Box/; fi
   bash ~/RetroPie/retropiemenu/Devils-Box.sh
   exit 1
 else
