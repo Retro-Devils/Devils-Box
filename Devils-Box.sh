@@ -747,6 +747,10 @@ function remove_db() {
 #UPDATE DEVILS BOX #
 #------------------#
 function update_db() {
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Updating"
+  sleep 1
   sudo rm ~/RetroPie/retropiemenu/Devils-Box.sh
   cd ~/Devils-Box
   git pull -f
@@ -759,6 +763,10 @@ function update_db() {
   sleep 1
   bash ~/RetroPie/retropiemenu/Devils-Box.sh
   exit 1
+else
+  echo "Offline ... Update Canceled!"
+  sleep 1
+fi
 }
 
 ###---------------------------------###
