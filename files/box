@@ -1,8 +1,27 @@
 #!/bin/bash
-echo "$(tput setaf 2)
-THE RETRO DEVILS
---DEVILS BOX----
---VERSION--2.2--
-$(tput sgr0)"
-sleep 5 
+rst="$(tput sgr0)"
+fgred="${rst}$(tput setaf 1)" # Red
+fggrn="${rst}$(tput setaf 2)" # Green
+fgylw="${rst}$(tput setaf 3)" # Yellow
+bld="$(tput bold)"
+bfgred="${bld}$(tput setaf 1)"
+bfggrn="${bld}$(tput setaf 2)"
+bfgylw="${bld}$(tput setaf 3)"
 
+echo ''${bfgred}'                .    .
+                |\   |\
+             _..;|;__;|;
+           ,`   `;` \`;`-.
+           7;-..     :   )
+      .--._)|   `;==,|,==`
+       `\`@; \_ `<`'${bfgylw}'G'${bfgred}'," '${bfgylw}'G'${bfgred}').
+         `\/-;,(  )  .>. )
+             < ,-;`-.__.;`
+              `\_ `-,__,`
+                 `-..,;,>
+                    `;;;;
+                     `  `'${bfggrn}'
+           THE RETRO DEVILS
+           --DEVILS BOX----
+           --VERSION--2.3--'${rst}''
+sleep 5 
