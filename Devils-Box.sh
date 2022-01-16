@@ -429,7 +429,7 @@ function  pokemini() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/pokemini/ -P ~/RetroPie/roms/pokemini -erobots=off
 }
 function ps1() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/psx/ -P ~/RetroPie/roms/psx -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/psx/ -P ~/RetroPie/roms/psx -erobots=off
 }
 function sfc() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/sfc/ -P ~/RetroPie/roms/sfc -erobots=off
