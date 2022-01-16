@@ -755,10 +755,10 @@ if [ $? -eq 0 ]; then
   cd ~/Devils-Box
   git pull -f
   cp ~/Devils-Box/Devils-Box.sh -f ~/RetroPie/retropiemenu/
-  cp ~/Devils-Box/files/box -f /usr/local/bin/
-  cp ~/Devils-Box/Devils-Box.sh -f /usr/local/bin/Devils-Box
-  chmod 755 /usr/local/bin/box
-  chmod 755 /usr/local/bin/Devils-Box
+  sudo cp ~/Devils-Box/files/box -f /usr/local/bin/
+  sudo cp ~/Devils-Box/Devils-Box.sh -f /usr/local/bin/Devils-Box
+  sudo chmod 755 /usr/local/bin/box
+  sudo chmod 755 /usr/local/bin/Devils-Box
   chmod 755 ~/RetroPie/retropiemenu/Devils-Box.sh
   sleep 1
   bash ~/RetroPie/retropiemenu/Devils-Box.sh
