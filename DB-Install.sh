@@ -34,6 +34,7 @@ CREATED WHEN?  2021/2022
 #INSTALL DEVILS BOX #
 #---------------------------#
 function install_db() {
+if [ -d "$HOME/RetroPie/retropiemenu/Devils-Box/" ]; then sudo rm -fR $HOME/RetroPie/retropiemenu/Devils-Box/; fi
 if [ -f "$HOME/RetroPie/retropiemenu/Devils-Box.sh" ]; then sudo rm $HOME/RetroPie/retropiemenu/Devils-Box.sh; fi
 if [ -d "$HOME/Devils-Box/" ]; then sudo rm -R $HOME/Devils-Box/; fi
 git clone https://github.com/Retro-Devils/Devils-Box
@@ -64,6 +65,7 @@ sudo openvt -c 1 -s -f emulationstation 2>&1
 #UPDATE DEVILS BOX #
 #------------------#
 function update_db() {
+if [ -d "$HOME/RetroPie/retropiemenu/Devils-Box/" ]; then sudo rm -fR $HOME/RetroPie/retropiemenu/Devils-Box/; fi
 sudo rm -f $HOME/RetroPie/retropiemenu/Devils-Box.sh 
 cd $HOME/Devils-Box
 git pull
