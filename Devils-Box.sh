@@ -572,7 +572,7 @@ function audio() {
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) sm3   ;;
+    1) tampo ;;
     *) break ;;
     esac
   done
