@@ -596,7 +596,7 @@ function emu_tools() {
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 75 60 \
       1 "Devils Retropie Extras                          Retro Devils" \
-      2 "RetroPie Extras                                     Zero Jay" \
+      2 "RetroPie Extras                                    Exarkuniv" \
       3 "RetroPie Setup Menu                                Retro Pie" \
       2>&1 >/dev/tty)
 
@@ -610,7 +610,7 @@ function emu_tools() {
 }
 function rp_extras() {
 cd ~
-git clone https://github.com/zerojay/RetroPie-Extra.git
+git clone https://github.com/Exarkuniv/RetroPie-Extra
 cd RetroPie-Extra/
 ./install-extras.sh
 }
