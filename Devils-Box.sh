@@ -568,8 +568,8 @@ function audio() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " AUDIO & VISUAL TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 75 60 \
-      1 "T.A.M.P.O (Theme & Music Plus Overlay)    thepitster " \
-      2 "Emulation Station Themes.                   Retropie " \
+      1 "T.A.M.P.O  (Theme & Music Plus Overlay)        thepitster " \
+      2 "Emulation Station Themes                         Retropie " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -595,17 +595,15 @@ function emu_tools() {
     choice=$(dialog --backtitle "$BACKTITLE" --title "EMULATOR TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 75 60 \
-      1 "Devils Retropie Extras			         Retro Devils" \
+      1 "Devils Retropie Extras                          Retro Devils" \
       2 "RetroPie Extras                                     Zero Jay" \
-      3 "RetroPie Setup Menu				    Retro Pie" \
-      4 "Sega Model 3 Installer				 Retro Devils" \
+      3 "RetroPie Setup Menu                                Retro Pie" \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) rp-extras ;;
-    2) devils-ex ;;
+    1) devils-ex ;;
+    2) rp-extras;;
     3) rpi-menu ;;
-    4) sm3 ;; 
     *) break ;;
     esac
   done
@@ -629,7 +627,7 @@ curl -sSL https://git.io/JSDOy | bash
 #----------------------------------#
 #   RETROPIE SETUP MENU FUNCTION   #
 #----------------------------------#
-function rpi_menu() {
+function rpi-menu() {
   sudo ~/RetroPie-Setup/retropie_setup.sh
 }
 
