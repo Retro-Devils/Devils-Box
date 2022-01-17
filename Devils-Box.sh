@@ -599,7 +599,8 @@ sleep 5
 sudo perl -p -i -e 's/hdmi_force_edid_audio=1/#dtoverlay=lirc-rpi/g' /boot/config.txt
 sudo perl -p -i -e 's/hdmi_force_hotplug=1/#hdmi_force_hotplug=1/g' /boot/config.txt
 sudo perl -p -i -e 's/hdmi_drive=2/#hdmi_drive=2/g' /boot/config.txt
-elseecho "I have scanned the config file and see that the audio fix is NOT in place."
+else
+echo "I have scanned the config file and see that the audio fix is NOT in place."
 sleep 4
 echo "If this fix does not work please run the script again to roll the changes back."
 sleep 10
