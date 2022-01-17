@@ -617,6 +617,7 @@ cd RetroPie-Extra/
 function devils-ex() {
 if [ -d "$HOME/pi/RetroPie-Setup/ext/Devils-Box/" ]; then "up-extras"
 else curl -sSL https://git.io/J9Z8c | bash
+fi 
 }
 #----------------------------------#
 #       SM3 EMU FUNCTIONS        #
