@@ -588,8 +588,8 @@ function es-themes () {
 sudo /home/pi/RetroPie-Setup/retropie_packages.sh retropiemenu launch /home/pi/RetroPie/retropiemenu/esthemes.rp
 }
 function no-audio () {
-sudo grep hdmi_force_edid_audio /boot/config.txt > /dev/null 2>&1if 
-[ $? -eq 0 ] ; then
+sudo grep hdmi_force_edid_audio /boot/config.txt > /dev/null 2>&1
+if [ $? -eq 0 ] ; then
 echo "The Audio changes have already been made. If you are still not getting audio then there must be another issue."
 sleep 4
 echo "For now I will reverse the changes since they did not help you."
