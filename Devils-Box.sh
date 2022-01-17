@@ -623,11 +623,13 @@ function emu_tools() {
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
       1 "Devils Retropie Extras                          Retro Devils" \
       2 "RetroPie Setup Menu                                Retro Pie" \
+      3 "PIKISS                                         Jose Cerrejon" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) devils-ex ;;
     2) rpi-menu ;;
+    3) pikiss
     *) break ;;
     esac
   done
@@ -649,6 +651,11 @@ curl -sSL https://git.io/JSDOy | bash
 #----------------------------------#
 function rpi-menu() {
   sudo ~/RetroPie-Setup/retropie_setup.sh
+}
+function pikiss() {
+if [ -d "~home/pi/piKiss/" ]; then sudo home/pi/piKiss/piKiss.sh;
+else curl -sSL https://git.io/JfAPE | bash 
+fi 
 }
 
 ###---------------------------------###
@@ -727,7 +734,7 @@ function db_tools() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX TOOLS MENU " \
       --ok-label Select --cancel-label Back \
-      --menu "SYSTEM WILL REBOOT WITH REMOVAL OR UPDATE " 30 50 50 \
+      --menu "SELECT AND APPLY TOOL" 30 50 50 \
       1 "About Devils Box    " \
       2 "Help With Devils Box" \
       3 "Remove Devils Box   " \
