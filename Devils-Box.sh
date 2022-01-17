@@ -634,9 +634,7 @@ function emu_tools() {
   done
 }
 function devils-ex() {
-if [ -d "~/RetroPie-Setup/ext/Devils-Box/" ]; then up-extras; 
-else curl -sSL https://git.io/J9Z8c | bash
-fi 
+curl -sSL https://git.io/J9Z8c | bash
 }
 #----------------------------------#
 #       SM3 EMU FUNCTIONS        #
