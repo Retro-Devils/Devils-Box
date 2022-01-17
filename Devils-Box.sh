@@ -629,7 +629,7 @@ function emu_tools() {
     case "$choice" in
     1) devils-ex ;;
     2) rpi-menu ;;
-    3) pikiss
+    3) pikiss ;;
     *) break ;;
     esac
   done
