@@ -537,10 +537,11 @@ function snesh() {
 ###    TOOL BOX MENU FUNCTIONS   ###
 ###------------------------------###
 function tool_box() {
+  while true; do 
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " TOOL BOX MENU " \
       --ok-label Select --cancel-label Back \
-      --menu "SELECT TOOLSET AND PRESS A  "30 50 50 \
+      --menu "SELECT TOOLSET AND PRESS A  " 30 50 50 \
       1 "Audio & Visual Tools   " \
       2 "Emulator Tools    " \
       3 "Hardware Tools       " \
