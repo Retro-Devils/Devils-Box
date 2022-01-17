@@ -622,23 +622,15 @@ function emu_tools() {
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 75 60 \
       1 "Devils Retropie Extras                          Retro Devils" \
-      2 "RetroPie Extras                                    Exarkuniv" \
-      3 "RetroPie Setup Menu                                Retro Pie" \
+      2 "RetroPie Setup Menu                                Retro Pie" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) devils-ex ;;
-    2) rp-extras;;
-    3) rpi-menu ;;
+    2) rpi-menu ;;
     *) break ;;
     esac
   done
-}
-function rp_extras() {
-cd ~
-git clone https://github.com/Exarkuniv/RetroPie-Extra
-cd RetroPie-Extra/
-./install-extras.sh
 }
 function devils-ex() {
 if [ -d "~/RetroPie-Setup/ext/Devils-Box" ]; then up-extras; 
