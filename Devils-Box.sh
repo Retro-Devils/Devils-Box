@@ -542,7 +542,7 @@ function tool_box() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " TOOL BOX MENU " \
       --ok-label Select --cancel-label Back \
-      --menu "SELECT TOOLSET AND PRESS A  " 25 50 40 \
+      --menu "SELECT TOOLSET AND PRESS A  "30 50 50 \
       1 "Audio & Visual Tools   " \
       2 "Emulator Tools    " \
       3 "Hardware Tools       " \
@@ -567,7 +567,7 @@ function audio() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " AUDIO & VISUAL TOOLS MENU" \
       --ok-label Install --cancel-label Back \
-      --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 75 60 \
+      --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 50 50 \
       1 "T.A.M.P.O  (Theme & Music Plus Overlay)        thepitster " \
       2 "Emulation Station Themes                         Retropie " \
       3 "No Audio Fix                                         ANON " \
@@ -620,7 +620,7 @@ function emu_tools() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "EMULATOR TOOLS MENU" \
       --ok-label Install --cancel-label Back \
-      --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 75 60 \
+      --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
       1 "Devils Retropie Extras                          Retro Devils" \
       2 "RetroPie Setup Menu                                Retro Pie" \
       2>&1 >/dev/tty)
@@ -660,7 +660,7 @@ function hardware_tools() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " HARDWARE TOOLS MENU " \
       --ok-label Select --cancel-label Back \
-      --menu "CHOOSE KIND OF TOOL " 40 75 60 \
+      --menu "CHOOSE KIND OF TOOL " 30 75 60 \
       1 "Cases Tools " \
       2 "Clear Controller Conifg " \
       2>&1 >/dev/tty)
@@ -690,7 +690,7 @@ function cases() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " CASES TOOLS MENU " \
       --ok-label Select --cancel-label Back \
-      --menu "SELECT TOOL PRESS TO APPLY/INSTALL " 30 60 60 \
+      --menu "SELECT TOOL PRESS TO APPLY/INSTALL " 30 50 50 \
       1 "Argon1 Case Install & Config " \
       2 "NESPI Case Install         " \
       2 "NESPI Case Uninstall       " \
@@ -727,7 +727,7 @@ function db_tools() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX TOOLS MENU " \
       --ok-label Select --cancel-label Back \
-      --menu "SYSTEM WILL REBOOT WITH REMOVAL OR UPDATE " 30 45 45 \
+      --menu "SYSTEM WILL REBOOT WITH REMOVAL OR UPDATE " 30 50 50 \
       1 "About Devils Box    " \
       2 "Help With Devils Box" \
       3 "Remove Devils Box   " \
