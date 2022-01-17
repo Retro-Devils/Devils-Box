@@ -634,7 +634,7 @@ function emu_tools() {
   done
 }
 function devils-ex() {
-if [ -d "~/RetroPie-Setup/ext/Devils-Box" ]; then up-extras; 
+if [ -d "~/RetroPie-Setup/ext/Devils-Box/"]; then up-extras; 
 else curl -sSL https://git.io/J9Z8c | bash
 fi 
 }
@@ -652,7 +652,7 @@ function rpi-menu() {
   sudo ~/RetroPie-Setup/retropie_setup.sh
 }
 function pikiss() {
-if [ -d "~home/pi/piKiss/" ]; then sudo home/pi/piKiss/piKiss.sh;
+if [ -d "~/piKiss/" ]; then sudo home/pi/piKiss/piKiss.sh;
 else curl -sSL https://git.io/JfAPE | bash 
 fi 
 }
