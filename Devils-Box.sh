@@ -573,12 +573,16 @@ function audio() {
 
     case "$choice" in
     1) tampo ;;
+    2) es-themes ;;
     *) break ;;
     esac
   done
 }
 function tampo() {
 curl -sSL https://git.io/JDfjg | bash
+}
+function es-themes () {
+sudo /home/pi/RetroPie-Setup/retropie_packages.sh retropiemenu launch /home/pi/RetroPie/retropiemenu/esthemes.rp
 }
 ###-----------------------------------###
 ###  EMU TOOLS MENU FUNCTIONS   ###
