@@ -615,8 +615,7 @@ cd RetroPie-Extra/
 ./install-extras.sh
 }
 function devils-ex() {
-if [ -d "$HOME/pi/RetroPie-Setup/ext/Devils-Box" ];
-then up-extras
+if [ -d "~/RetroPie-Setup/ext/Devils-Box" ]; then up-extras; fi 
 exit 1 
 else curl -sSL https://git.io/J9Z8c | bash
 fi 
