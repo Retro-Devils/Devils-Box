@@ -20,7 +20,7 @@ HOST3="https://archive.org/download/retro-devils-winegames"
 
 
 ###  INTRO VIDEO     ###
-omxplayer ~/Devils-Box/intro.mp4
+omxplayer ~/Devils-Box/files/intro.mp4
 
 ###-----------------------###
 ### MAIN MENU FUNCTIONS   ###
