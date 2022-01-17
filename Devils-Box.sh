@@ -538,8 +538,6 @@ function snesh() {
 ###------------------------------###
 function tool_box() {
   local choice
-
-  while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " TOOL BOX MENU " \
       --ok-label Select --cancel-label Back \
       --menu "SELECT TOOLSET AND PRESS A  "30 50 50 \
