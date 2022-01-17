@@ -571,14 +571,12 @@ function audio() {
       1 "T.A.M.P.O  (Theme & Music Plus Overlay)        thepitster " \
       2 "Emulation Station Themes                         Retropie " \
       3 "No Audio Fix                                         ANON " \
-      4 "Music ON/OFF.                                        ANON " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) tampo ;;
     2) es-themes ;;
     3) no-audio ;;
-    4) music-switch
     *) break ;;
     esac
   done
@@ -612,9 +610,7 @@ sudo perl -p -i -e 's/#hdmi_drive=2/hdmi_drive=2/g' /boot/config.txt
 sudo reboot
 fi
 }
-function music-switch () {
-sudo python /home/pi/RetroPie/retropiemenu/konami/utilities/toggle.py 
-}
+
 ###-----------------------------------###
 ###  EMU TOOLS MENU FUNCTIONS   ###
 ###-----------------------------------###
