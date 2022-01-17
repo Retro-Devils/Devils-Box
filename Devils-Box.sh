@@ -568,7 +568,8 @@ function audio() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " AUDIO & VISUAL TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 75 60 \
-      1 "T.A.M.P.O                          		thepitster " \
+      1 "T.A.M.P.O (Theme & Music Plus Overlay)    thepitster " \
+      2 "Emulation Station Themes.                   Retropie " \
       2>&1 >/dev/tty)
 
     case "$choice" in
