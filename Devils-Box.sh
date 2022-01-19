@@ -438,10 +438,10 @@ function sega32x() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/sega32x/ -P ~/RetroPie/roms/seg32x -erobots=off
 }
 function  saturn() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/saturn/ -P ~/RetroPie/roms/saturn -erobots=off
+  wget -m -r -np -nH -nd -R "index.htmindex.html1}" "${HOST1}"/saturn/ -P ~/RetroPie/roms/saturn -erobots=off
 }
 function  saturn-japan() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/saturn-japan/ -P ~/RetroPie/roms/saturn-japan -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/saturn-japan/ -P ~/RetroPie/roms/saturn-japan -erobots=off
 }
 function segacd() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/segacd/ -P ~/RetroPie/roms/segacd -erobots=off
@@ -480,10 +480,10 @@ function x68000() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/x68000/ -P ~/RetroPie/roms/x68000 -erobots=off
 }
 function zmachine() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
 }
 function zpectrum() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/zspectrum/ -P ~/RetroPie/roms/zspectrum -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zspectrum/ -P ~/RetroPie/roms/zspectrum -erobots=off
 }
 
 ###------------------------------###
