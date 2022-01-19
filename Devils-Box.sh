@@ -482,7 +482,7 @@ function x68000() {
 function zmachine() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
 }
-function zpectrum() {
+function zspectrum() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zspectrum/ -P ~/RetroPie/roms/zspectrum -erobots=off
 }
 
