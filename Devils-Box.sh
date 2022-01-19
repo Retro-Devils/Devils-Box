@@ -237,7 +237,7 @@ function consoles() {
       57 "Sinclair X1                      7.6MB       69 GAMES" \
       58 "Sharp X68000                     504MB      418 GAMES" \
       59 "ZMachine                           4MB       30 GAMES" \
-      60 "ZSpectrum                         38MB     1111 GAMES" \
+      60 "ZXSpectrum                         38MB     1111 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -300,7 +300,7 @@ function consoles() {
     57) x1 ;;
     58) x68000 ;;
     59) zmachine ;;
-    60) zspectrum ;;
+    60) zxspectrum ;;
     *) break ;;
     esac
   done
@@ -482,8 +482,8 @@ function x68000() {
 function zmachine() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
 }
-function zspectrum() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zspectrum/ -P ~/RetroPie/roms/zspectrum -erobots=off
+function zxspectrum() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zxspectrum/ -P ~/RetroPie/roms/zxspectrum -erobots=off
 }
 
 ###------------------------------###
