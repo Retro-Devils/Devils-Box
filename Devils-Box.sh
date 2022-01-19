@@ -237,7 +237,7 @@ function consoles() {
       57 "Sinclair X1                      7.6MB       69 GAMES" \
       58 "Sharp X68000                     504MB      418 GAMES" \
       59 "ZMachine                           4MB       30 GAMES" \
-      60 "Zspectrum                         38MB     1111 GAMES" \
+      60 "ZSpectrum                         38MB     1111 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
