@@ -432,13 +432,13 @@ function ps1() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/psx/ -P ~/RetroPie/roms/psx -erobots=off
 }
 function sfc() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/sfc/ -P ~/RetroPie/roms/sfc -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sfc/ -P ~/RetroPie/roms/sfc -erobots=off
 }
 function sega32x() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/sega32x/ -P ~/RetroPie/roms/seg32x -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sega32x/ -P ~/RetroPie/roms/seg32x -erobots=off
 }
 function  saturn() {
-  wget -m -r -np -nH -nd -R "index.htmindex.html1}" "${HOST1}"/saturn/ -P ~/RetroPie/roms/saturn -erobots=off
+  wget -m -r -np -nH -nd -R "index.html}" "${HOST1}"/saturn/ -P ~/RetroPie/roms/saturn -erobots=off
 }
 function  saturn-japan() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/saturn-japan/ -P ~/RetroPie/roms/saturn-japan -erobots=off
