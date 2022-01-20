@@ -1072,6 +1072,12 @@ if [ $? -eq 0 ]; then
   echo "Online ... Zmachine Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
+  exit 1
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
+}
 function zxspectrum() {
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
