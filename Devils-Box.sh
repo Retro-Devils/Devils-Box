@@ -303,6 +303,7 @@ function consoles() {
     60) zxspectrum ;;
     *) break ;;
     esac
+   done
 }
 function amiga() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amiga/ -P ~/RetroPie/roms/amiga -erobots=off
