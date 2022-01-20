@@ -65,8 +65,7 @@ function artwork() {
       --ok-label Download --cancel-label Back \
       --menu "INFO: 
 			[*] MEANS PACK INCLUDES    [ ] MEANS PACK DOESNT INCLUDE  
-			AUTO DOWNLOADS TO CORRECT LOCATIONS
-			***MEANS COMING SOON" 40 75 60 \
+			***MEANS COMING SOON        PRESS A OR ENTER TO DOWNLOAD" 40 75 60 \
       1 "Amiga Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
       2 "***AmigaCD Artwork***    [*]box  [*]cart  [*]snap  [ ]wheel" \
       3 "***Arcadia Artwork***    [*]box  [*]cart  [*]snap  [*]wheel" \
@@ -181,7 +180,7 @@ function consoles() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
       --ok-label Download --cancel-label Back \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK    
-      ***** IN FRONT OF CONSOLE MEANS COMING SOON" 40 75 60 \
+      ****MEANS COMING SOON" 40 75 60 \
       1 "Amiga                            300MB      340 GAMES" \
       2 "Arcadia                          201KB       47 GAMES" \
       3 "AmigaCD                          461MB      133 GAMES" \
