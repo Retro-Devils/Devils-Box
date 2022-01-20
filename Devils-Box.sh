@@ -532,11 +532,6 @@ function nesh() {
 function snesh() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/snesh/ -P ~/RetroPie/roms/snesh -erobots=off
 }
-else
-  echo "Offline ... Please Connect Internet!"
-  sleep 3
-fi
-}
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
 ###------------------------------###
