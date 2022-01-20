@@ -1243,28 +1243,88 @@ local choice
     3) genh ;;
     4) ggh ;;
     5) nesh ;;
-	6) snesh ;;
+    6) snesh ;;
     *) break ;;
     esac
   done
 }
 function gbah() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Game Boy Advance Hacks Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbah/ -P ~/RetroPie/roms/gbah -erobots=off
+  exit 1
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function gbh() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Game Boy Hacks Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbh/ -P ~/RetroPie/roms/gbh -erobots=off
+  exit 1
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function genh() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Genesis Hacks Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/genh/ -P ~/RetroPie/roms/genh -erobots=off
+  exit 1
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function ggh() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... GameGear Hacks Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/ggh/ -P ~/RetroPie/roms/ggh -erobots=off
+  exit 1
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function nesh() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Nintendo Entertainment System Hacks Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nesh/ -P ~/RetroPie/roms/nesh -erobots=off
+  exit 1
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function snesh() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Super Nintendo Hacks Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/snesh/ -P ~/RetroPie/roms/snesh -erobots=off
+  exit 1
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
