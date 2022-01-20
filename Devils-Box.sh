@@ -842,6 +842,7 @@ function argon1() {
 }
 
 function nespi() {
+  clear
   wget -O - "https://raw.githubusercontent.com/crcerror/retroflag-picase/master/install.sh" | sudo bash
 }
 
@@ -903,6 +904,7 @@ function remove_db() {
 #UPDATE DEVILS BOX #
 #------------------#
 function update_db() {
+clear
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
   echo "Online ... Updating"
