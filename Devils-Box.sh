@@ -666,7 +666,7 @@ function tool_box() {
   while true; do 
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " TOOL BOX MENU " \
-      --ok-label Select --cancel-label Back \
+      --ok-label Select --cancel-label Main-Menu \
       --menu "SELECT TOOLSET AND PRESS A  " 30 50 50 \
       1 "Audio & Visual Tools   " \
       2 "Emulator Tools    " \
