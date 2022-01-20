@@ -1007,13 +1007,16 @@ if [ $? -eq 0 ]; then
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
 function zxspectrum() {
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Zxspectrum Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zxspectrum/ -P ~/RetroPie/roms/zxspectrum -erobots=off
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
 fi
 }
-
 #--------------------------------#
 #      WINE SUB MENU FUNCTIONS   #
 #--------------------------------#
