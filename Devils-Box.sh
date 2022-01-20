@@ -471,6 +471,22 @@ function virtual-boy() {
 function vmu() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/svmu/ -P ~/RetroPie/roms/vmu -erobots=off
 }
+function wonderswan() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
+}
+function x1() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/x1/ -P ~/RetroPie/roms/x1  -erobots=off
+}
+function x68000() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/x68000/ -P ~/RetroPie/roms/x68000 -erobots=off
+}
+function zmachine() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
+}
+function zxspectrum() {
+  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zxspectrum/ -P ~/RetroPie/roms/zxspectrum -erobots=off
+}
+
 #--------------------------------#
 #      WINE SUB MENU FUNCTIONS   #
 #--------------------------------#
@@ -596,22 +612,6 @@ echo "
 -Thanks for using have a good day"
 sleep 10
  }
-function wonderswan() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
-}
-function x1() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/x1/ -P ~/RetroPie/roms/x1  -erobots=off
-}
-function x68000() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/x68000/ -P ~/RetroPie/roms/x68000 -erobots=off
-}
-function zmachine() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
-}
-function zxspectrum() {
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zxspectrum/ -P ~/RetroPie/roms/zxspectrum -erobots=off
-}
-
 ###------------------------------###
 ### HACKED PACKS MENU FUNCTIONS  ###			###HACKED PACKS MENU###
 ###------------------------------###
