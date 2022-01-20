@@ -313,7 +313,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Amiga Downloading "
   sleep 3
  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amiga/ -P ~/RetroPie/roms/amiga -erobots=off
- exit 1
 else
   echo "Offline ... Please Connect To Internet!"
   sleep 1
@@ -326,7 +325,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Arcadia Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -339,7 +337,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... AmigaCD Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amigacd/ -P ~/RetroPie/roms/amigacd -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -352,7 +349,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Arcade Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/arcadia/ -P ~/RetroPie/roms/arcade -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -365,7 +361,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... AmstradPC Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/astrocade/ -P ~/RetroPie/roms/amstradpc -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
