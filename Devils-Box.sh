@@ -42,7 +42,7 @@ function main_menu() {
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) artwokr ;;
+    1) artwork ;;
     2) consoles ;;
     3) hacked ;;
     4) tool_box ;;
