@@ -309,8 +309,8 @@ function consoles() {
 function amiga() {
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
- echo "Online ... Beginning Amiga Download "
- sleep 2
+  echo "Online ... Amiga Downloading "
+  sleep 3
  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amiga/ -P ~/RetroPie/roms/amiga -erobots=off
  exit 1
 else
@@ -319,268 +319,695 @@ else
 fi
 }
 function arcadia() {
-  clear
-  echo " Beginning Arcadia Download"
-  sleep 2
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Arcadia Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
 }
 function amigacd() {
-  clear
-  echo " Beginning AmigaCD Download"
-  sleep 2
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... AmigaCD Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amigacd/ -P ~/RetroPie/roms/amigacd -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function arcade() {
-  clear
-  echo " Beginning Amiga Download"
-  sleep 2
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Arcade Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/arcadia/ -P ~/RetroPie/roms/arcade -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function amstradpc() {
-  clear
-  echo " Beginning AmstradPC Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... AmstradPC Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/astrocade/ -P ~/RetroPie/roms/amstradpc -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function atari800() {
-  clear
-  echo " Beginning Atari800 Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Atari800 Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari800/ -P ~/RetroPie/roms/atari800 -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function atari2600() {
-  clear
-  echo " Beginning Atari2600 Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Atari2600 Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari2600/ -P ~/RetroPie/roms/atari2600 -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function atari5200() {
-  clear
-  echo " Beginning Atari5200 Download"
-  sleep 2  
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Atari5200 Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/atari5200/ -P ~/RetroPie/roms/atari5200 -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function atari7800() {
-  clear
-  echo " Beginning Atari7800 Download"
-  sleep 2  
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Atari7800 Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari7800/ -P ~/RetroPie/roms/atari7800 -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function atarilynx() {
-  clear
-  echo " Beginning AtariLynx Download"
-  sleep 2  
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Atari Lynx Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atarilynx/ -P ~/RetroPie/roms/atarilynx -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function atomiswave() {
-  clear
-  echo " Beginning AtomisWave Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... AtomisWave Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atomiswave/ -P ~/RetroPie/roms/atomiswave -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function c64() {
-  clear
-  echo " Beginning Commadore64 Download"
-  sleep 2  
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Commadore64 Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/c64/ -P ~/RetroPie/roms/c64 -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function colecovision() {
-  clear
-  echo " Beginning Colecovision Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Colecovision Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/coleco/ -P ~/RetroPie/roms/coleco -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function daphne() {
-  clear
-  echo " Beginning Daphne Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Daphne Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/daphne/ -P ~/RetroPie/daphne -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function dragon32() {
-  clear
-  echo " Beginning Dragon32 Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Dragon32 Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/dragon32/ -P ~/RetroPie/roms/dragon32 -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function dreamcast() {
-  clear
-  echo " Beginning Dreamcast Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Dreamcast Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function electron() {
-  clear
-  echo " Beginning Electron Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Electron Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/electron/ -P ~/RetroPie/roms/electron -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function fds() {
-  clear
-  echo " Beginning Family Disk System Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Family Disk System Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function gameandwatch() {
-  clear
-  echo " Beginning Game & Watch Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Game & Watch Downloading "
+  sleep 3
    wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gameandwatch/ -P ~/RetroPie/roms/gameandwatch -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function gb() {
-  clear
-  echo " Beginning Gameboy Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Gameboy Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gb/ -P ~/RetroPie/roms/gb -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function gba() {
-  clear
-  echo " Beginning Gameboy Advance Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Gameboy Advance Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gba/ -P ~/RetroPie/roms/gba -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function gbc() {
-  clear
-  echo " Beginning Gameboy Color Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Gameboy Color Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbc/ -P ~/RetroPie/roms/gbc -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function gamegear() {
-  clear
-  echo " Beginning Gamegear Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Gamegear Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gamegear/ -P ~/RetroPie/roms/gamegear -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function intellivision() {
-  clear
-  echo " Beginning Intellivision Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Intellivision Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function lightgun() {
-  clear
-  echo " Beginning Lightgun Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Lightgun MAME Downloading "
+  sleep 3
   wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/lightgun/ -P ~/RetroPie/roms/lightgun -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function markiii() {
-  clear
-  echo " Beginning Markiii Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Markiii Downloading "
+  sleep 3
   wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/markiii/ -P ~/RetroPie/roms/markiii -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function mastersystem() {
-  clear
-  echo " Beginning Mastersystem Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Mastersystem Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/mastersystem/ -P ~/RetroPie/roms/mastersystem -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function megadrive() {
-  clear
-  echo " Beginning Megadrive Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Megadrive Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/megadrive/ -P ~/RetroPie/roms/megadrive -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function mugen() {
-  clear
-  echo " Beginning Mugen Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Mugen Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"mugen/ -P ~/RetroPie/roms/wine/mugens -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function  msx() {
-  clear
-  echo " Beginning MSX Download"
-  sleep 2
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... MSX Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/msx/ -P ~/RetroPie/roms/msx -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function  msx2() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... MSX 2 Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/msx2/ -P ~/RetroPie/roms/msx2 -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function n64() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Nintendo64 (N64) Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/n64/ -P ~/RetroPie/roms/n64 -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function  ngpc() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... NeoGeo Pocket Color (NGPC) Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/ngpc/ -P ~/RetroPie/roms/ngpc -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function naomi() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Naomi Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/naomi/ -P ~/RetroPie/roms/naomi -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function nds() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Nintendo DS (NDS) Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nds/ -P ~/RetroPie/roms/nds -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function neogeo() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... NeoGeo Downloading "
+  sleep 3
   wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/neogeo/ -P ~/RetroPie/roms/neogeo -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function nes() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Nintendo Entertainment System (NES) Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nes/ -P ~/RetroPie/roms/nes -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function openbor() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Openbor Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/openbor/ -P ~/RetroPie/roms/openbor -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function oric() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Oric Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/oric/ -P ~/RetroPie/roms/oric -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function pcengine() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... PC Engine Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/pce/ -P ~/RetroPie/roms/pce -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function  pokemini() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Pokemini Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/pokemini/ -P ~/RetroPie/roms/pokemini -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function ps1() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Playstation 1 Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/psx/ -P ~/RetroPie/roms/psx -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function sfc() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Super Famicon Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sfc/ -P ~/RetroPie/roms/sfc -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function sega32x() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Sega32X Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sega32x/ -P ~/RetroPie/roms/seg32x -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function  saturn() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Saturn Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html}" "${HOST1}"/saturn/ -P ~/RetroPie/roms/saturn -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function  saturn-japan() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Saturn Japan Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/saturn-japan/ -P ~/RetroPie/roms/saturn-japan -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function segacd() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... SegaCD Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/segacd/ -P ~/RetroPie/roms/segacd -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function snes() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... SNES Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/snes/ -P ~/RetroPie/roms/snes -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function  scummvm() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... ScummVM Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/scummvm/ -P ~/RetroPie/roms/scummvm -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function supergrafx() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... SuperGraffix Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/supergrafx/ -P ~/RetroPie/roms/supergrafx -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function tg16() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... TG16 Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/tg16 -P ~/RetroPie/roms/tg16 -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function vectrex() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Vectrex Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/vectrex/ -P ~/RetroPie/roms/vectrex -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function videopac() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... VideoPAC Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/videopac/ -P ~/RetroPie/roms/videopac -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function virtual-boy() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Virtual Boy Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/virtualboy/ -P ~/RetroPie/roms/virtualboy -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function vmu() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... VMU Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/svmu/ -P ~/RetroPie/roms/vmu -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function wonderswan() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Wonderswan Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function x1() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... x1 Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/x1/ -P ~/RetroPie/roms/x1  -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function x68000() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... x68000 Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/x68000/ -P ~/RetroPie/roms/x68000 -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function zmachine() {
+clear
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Zmachine Downloading "
+  sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
-}
 function zxspectrum() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zxspectrum/ -P ~/RetroPie/roms/zxspectrum -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 
 #--------------------------------#
