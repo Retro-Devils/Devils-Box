@@ -65,7 +65,7 @@ function artwork() {
       --ok-label Download --cancel-label Back \
       --menu "INFO: 
 			[*] MEANS PACK INCLUDES    [ ] MEANS PACK DOESNT INCLUDE  
-			***MEANS COMING SOON        PRESS A OR ENTER TO DOWNLOAD" 40 75 60 \
+			***MEANS COMING SOON.........PRESS A OR ENTER TO DOWNLOAD" 40 75 60 \
       1 "Amiga Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
       2 "***AmigaCD Artwork***    [*]box  [*]cart  [*]snap  [ ]wheel" \
       3 "***Arcadia Artwork***    [*]box  [*]cart  [*]snap  [*]wheel" \
