@@ -308,15 +308,13 @@ function consoles() {
 }
 function amiga() {
   clear
-  echo "---------------------
-  Beginning Amiga Download
-  -------------------------"
+  echo " Beginning Amiga Download "
  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amiga/ -P ~/RetroPie/roms/amiga -erobots=off
 }
 function arcadia() {
   clear
-  echo " Beginning Arcadi Download"
+  echo " Beginning Arcadia Download"
   sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
 }
@@ -352,7 +350,7 @@ function atari2600() {
 }
 function atari5200() {
   clear
-  echo " Beginning Atari2600 Download"
+  echo " Beginning Atari5200 Download"
   sleep 2  
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/atari5200/ -P ~/RetroPie/roms/atari5200 -erobots=off
 }
@@ -363,66 +361,129 @@ function atari7800() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari7800/ -P ~/RetroPie/roms/atari7800 -erobots=off
 }
 function atarilynx() {
+  clear
+  echo " Beginning AtariLynx Download"
+  sleep 2  
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atarilynx/ -P ~/RetroPie/roms/atarilynx -erobots=off
 }
 function atomiswave() {
+  clear
+  echo " Beginning AtomisWave Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atomiswave/ -P ~/RetroPie/roms/atomiswave -erobots=off
 }
 function c64() {
+  clear
+  echo " Beginning Commadore64 Download"
+  sleep 2  
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/c64/ -P ~/RetroPie/roms/c64 -erobots=off
 }
 function colecovision() {
+  clear
+  echo " Beginning Colecovision Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/coleco/ -P ~/RetroPie/roms/coleco -erobots=off
 }
 function daphne() {
+  clear
+  echo " Beginning Daphne Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/daphne/ -P ~/RetroPie/daphne -erobots=off
 }
 function dragon32() {
+  clear
+  echo " Beginning Dragon32 Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/dragon32/ -P ~/RetroPie/roms/dragon32 -erobots=off
 }
 function dreamcast() {
+  clear
+  echo " Beginning Dreamcast Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
 }
 function electron() {
+  clear
+  echo " Beginning Electron Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/electron/ -P ~/RetroPie/roms/electron -erobots=off
 }
 function fds() {
+  clear
+  echo " Beginning Family Disk System Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
 }
 function gameandwatch() {
+  clear
+  echo " Beginning Game & Watch Download"
+  sleep 2
    wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gameandwatch/ -P ~/RetroPie/roms/gameandwatch -erobots=off
 }
 function gb() {
+  clear
+  echo " Beginning Gameboy Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gb/ -P ~/RetroPie/roms/gb -erobots=off
 }
 function gba() {
+  clear
+  echo " Beginning Gameboy Advance Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gba/ -P ~/RetroPie/roms/gba -erobots=off
 }
 function gbc() {
+  clear
+  echo " Beginning Gameboy Color Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbc/ -P ~/RetroPie/roms/gbc -erobots=off
 }
 function gamegear() {
+  clear
+  echo " Beginning Gamegear Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gamegear/ -P ~/RetroPie/roms/gamegear -erobots=off
 }
 function intellivision() {
+  clear
+  echo " Beginning Intellivision Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
 }
 function lightgun() {
+  clear
+  echo " Beginning Lightgun Download"
+  sleep 2
   wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/lightgun/ -P ~/RetroPie/roms/lightgun -erobots=off
 }
 function markiii() {
+  clear
+  echo " Beginning Markiii Download"
+  sleep 2
   wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/markiii/ -P ~/RetroPie/roms/markiii -erobots=off
 }
 function mastersystem() {
+  clear
+  echo " Beginning Mastersystem Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/mastersystem/ -P ~/RetroPie/roms/mastersystem -erobots=off
 }
 function megadrive() {
+  clear
+  echo " Beginning Megadrive Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/megadrive/ -P ~/RetroPie/roms/megadrive -erobots=off
 }
 function mugen() {
+  clear
+  echo " Beginning Mugen Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"mugen/ -P ~/RetroPie/roms/wine/mugens -erobots=off
 }
 function  msx() {
+  clear
+  echo " Beginning MSX Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/msx/ -P ~/RetroPie/roms/msx -erobots=off
 }
 function  msx2() {
