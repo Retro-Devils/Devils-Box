@@ -307,6 +307,7 @@ function consoles() {
    done
 }
 function amiga() {
+clear
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
   echo "Online ... Amiga Downloading "
@@ -319,6 +320,7 @@ else
 fi
 }
 function arcadia() {
+clear
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
   echo "Online ... Arcadia Downloading "
@@ -331,6 +333,7 @@ else
 fi
 }
 function amigacd() {
+clear
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
   echo "Online ... AmigaCD Downloading "
@@ -343,6 +346,7 @@ else
 fi
 }
 function arcade() {
+clear
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
   echo "Online ... Arcade Downloading "
