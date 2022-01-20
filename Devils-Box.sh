@@ -309,8 +309,8 @@ function consoles() {
 function amiga() {
   clear
   echo "---------------------
-  Beginning Amiga Download"
-  -------------------------
+  Beginning Amiga Download
+  -------------------------"
  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amiga/ -P ~/RetroPie/roms/amiga -erobots=off
 }
