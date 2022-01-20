@@ -480,19 +480,19 @@ function wine() {
   while true; do
     clear
     sudo apt-get install unzip 
-    choice=$(dialog --backtitle "$BACKTITLE" --title " WINE MENU" \
+    choice=$(dialog --backtitle "$BACKTITLE" --title " WINE SUB MENU" \
       --ok-label Select --cancel-label Back-To-Consoles \
       --menu " ATTENTION THESE ARE ZIPPED PACKS. 
             SIZE IS AFTER UNZIP" 25 50 40 \
       1 "Age Of Empires                    215MB" \
-      2 "Age Of Empires 2                  6.1GB" \
-      3 "Command & Conquer TS              1.3GB" \
+      2 "Age Of Empires 2                  8.2GB" \
+      3 "Command & Conquer TS              1.5GB" \
       4 "Diablo 2                          1.8GB" \
-      5 "Fallout                           535MB" \
-      6 "Fallout 2                         555MB" \
+      5 "Fallout                           570MB" \
+      6 "Fallout 2                         560MB" \
       7 "Fallout Tactics                   1.5GB" \
-      8 "Starcraft                         1.2GB" \
-      9 "Warcraft 3                        1.9GB" \
+      8 "Starcraft                         1.8GB" \
+      9 "Warcraft 3                        2.1GB" \
       10 ".......CLICK HERE FOR WINE HELP......." \
       2>&1 >/dev/tty)
 
