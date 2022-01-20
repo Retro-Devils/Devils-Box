@@ -324,6 +324,10 @@ if [ $? -eq 0 ]; then
   echo "Online ... Arcadia Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
+else
+  echo "Offline ... Download Canceled! Please Connect Internet"
+  sleep 1
+fi
 }
 function amigacd() {
 wget -q --spider http://google.com
