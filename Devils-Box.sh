@@ -232,7 +232,7 @@ function consoles() {
       52 "VideoPAC                         430KB       99 GAMES" \
       53 "Virtual Boy                        8MB       24 GAMES" \
       54 "Dreamcast VMU                      3MB      115 GAMES" \
-      55 "***Wine****                       17GB       12 GAMES" \
+      55 "Wine                          SUB-MENU        9 GAMES" \
       56 "Wonderswan Color                 116MB       84 GAMES" \
       57 "Sinclair X1                      7.6MB       69 GAMES" \
       58 "Sharp X68000                     504MB      418 GAMES" \
@@ -470,6 +470,84 @@ function virtual-boy() {
 function vmu() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/svmu/ -P ~/RetroPie/roms/vmu -erobots=off
 }
+#--------------------------------#
+#      WINE SUB MENU FUNCTIONS   #
+#--------------------------------#
+function wine() {
+sudo apt-get install unzip 
+  local choice
+
+  while true; do
+    choice=$(dialog --backtitle "$BACKTITLE" --title " WINE MENU" \
+      --ok-label Select --cancel-label Back-To-Consoles \
+      --menu "ATTENTION THESE ARE ZIPPED PACKS. 
+              SIZE WILL VARY AFTER UNZIP" 25 50 40 \
+      1 "Age Of Empires                    170MB" \
+      2 "Age Of Empires 2                  6.1GB" \
+      3 "Command & Conquer TS              1.3GB" \
+      4 "Diablo 2                          1.8GB" \
+      5 "Fallout                           535MB" \
+      6 "Fallout 2                         555MB" \
+      7 "Fallout Tactics                   1.5GB" \
+      8 "Starcraft                         1.2GB" \
+      9 "Warcraft 3                        1.9GB" \
+      10 ".......CLICK HERE FOR WINE HELP......." \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) aoe ;;
+    2) aoe2 ;;
+    3) cncts ;;
+    4) diablo 2 ;;
+    5) fallout ;;
+    6) fallout2 ;;
+    7) fallout-tactics ;;
+    8) starcraft ;;
+    9) warcraft3 ;;
+    10) wine-help ;; 
+    *) break ;;
+    esac
+  done
+}
+function aoe() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE.zip -P ~/RetroPie/roms/wine
+unzip -o ~/RetroPie/roms/wine/Retro-Devils_AoE.zip -d ~/RetroPie/roms/wine/games/
+cp ~/RetroPie/roms/wine/games/aoe.sh -f ~/RetroPie/roms/wine/Age-Of-Empires.sh
+chmod 755 ~/RetroPie/roms/wine/Age-Of-Empires.sh
+sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_AoE.zip
+}
+function aoe2() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE2.zip -P ~/RetroPie/roms/wine
+unzip -o ~/RetroPie/roms/wine/Retro-Devils_AoE2.zip -d ~/RetroPie/roms/wine/games/
+cp ~/RetroPie/roms/wine/games/aoe.sh -f ~/RetroPie/roms/wine/Age-Of-Empires-2
+sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_AoE2.zip
+}
+function aoe() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE.zip -P ~/RetroPie/roms/wine
+unzip -o ~/RetroPie/roms/wine/Retro-Devils_AoE.zip -d ~/RetroPie/roms/wine/games/
+cp ~/RetroPie/roms/wine/games/aoe.sh -f ~/RetroPie/roms/wine/Age-Of-Empires
+sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_AoE.zip
+}
+
+function wine-help() {
+clear 
+echo " 
+-------------------------------
+       WINE DOWNLOADER HELP
+-------------------------------
+-You must have wine/box86 installed for this too work 
+
+-Downloads most games to ~/RetroPie/roms/wine/games/.installs
+
+-Games Includes a exe or.sh script to launch from Retropie 
+
+-Games are zipped. Devils Box downloads unzips and does all the work for ya.
+
+-If you move game folder change .sh script accordingly.
+
+-Thanks for using have a good day"
+sleep 10
+ }
 function wonderswan() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
 }
