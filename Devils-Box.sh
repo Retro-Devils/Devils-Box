@@ -481,6 +481,7 @@ function wine() {
   local choice
 
   while true; do
+    clear
     sudo apt-get install unzip 
     choice=$(dialog --backtitle "$BACKTITLE" --title " WINE MENU" \
       --ok-label Select --cancel-label Back-To-Consoles \
