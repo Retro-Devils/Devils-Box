@@ -31,7 +31,7 @@ function main_menu() {
   local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX 2.3    1/19/22" \
+    choice=$(dialog --backtitle "$BACKTITLE" --title " __DEVILS BOX 2.3______1/19/22__" \
       --ok-label Select --cancel-label Exit-Devils-Box \
       --menu "--DEVILS BOX.......................MAIN MENU--" 25 50 40 \
       1 "Artwork Packs" \
