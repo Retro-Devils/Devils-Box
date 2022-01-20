@@ -20,6 +20,7 @@ HOST3="https://archive.org/download/retro-devils-winegames"
 
 
 ###  INTRO VIDEO     ###
+clear
 omxplayer ~/Devils-Box/files/intro.mp4
 
 ###-----------------------###
@@ -476,11 +477,11 @@ function vmu() {
 #--------------------------------#
 #      WINE SUB MENU FUNCTIONS   #
 #--------------------------------#
-sudo apt-get install unzip 
 function wine() {
   local choice
 
   while true; do
+    sudo apt-get install unzip 
     choice=$(dialog --backtitle "$BACKTITLE" --title " WINE MENU" \
       --ok-label Select --cancel-label Back-To-Consoles \
       --menu " ATTENTION THESE ARE ZIPPED PACKS. 
