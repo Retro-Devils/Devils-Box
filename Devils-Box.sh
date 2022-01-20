@@ -33,19 +33,21 @@ function main_menu() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX 2.3    1/19/22" \
       --ok-label Select --cancel-label Exit-Devils-Box \
       --menu "DEVILS BOX MAIN MENU" 25 50 40 \
-      1 "Console Packs" \
-      2 "Hacked Packs" \
-      3 "Tool Box" \
-      4 "Reboot System" \
-      5 "Show Disk Space" \
+      1 "Artwork Packs" \
+      2 "Console Packs" \
+      3 "Hacked Packs" \
+      4 "Tool Box" \
+      5 "Reboot System" \
+      6 "Show Disk Space" \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) consoles ;;
-    2) hacked ;;
-    3) tool_box ;;
-    4) system_reboot ;;
-    5) show_disk ;;
+    1) artwokr ;;
+    2) consoles ;;
+    3) hacked ;;
+    4) tool_box ;;
+    5) system_reboot ;;
+    6) show_disk ;;
     *) break ;;
     esac
   done
