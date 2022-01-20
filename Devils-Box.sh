@@ -307,24 +307,45 @@ function consoles() {
    done
 }
 function amiga() {
+  clear
+  echo " Beginning Amiga Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amiga/ -P ~/RetroPie/roms/amiga -erobots=off
 }
 function arcadia() {
+  clear
+  echo " Beginning Arcadi Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
 }
 function amigacd() {
+  clear
+  echo " Beginning AmigaCD Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amigacd/ -P ~/RetroPie/roms/amigacd -erobots=off
 }
 function arcade() {
+  clear
+  echo " Beginning Amiga Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/arcadia/ -P ~/RetroPie/roms/arcade -erobots=off
 }
 function amstradpc() {
+  clear
+  echo " Beginning AmstradPC Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/astrocade/ -P ~/RetroPie/roms/amstradpc -erobots=off
 }
 function atari800() {
+  clear
+  echo " Beginning Atari800 Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari800/ -P ~/RetroPie/roms/atari800 -erobots=off
 }
 function atari2600() {
+  clear
+  echo " Beginning Atari2600 Download"
+  sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari2600/ -P ~/RetroPie/roms/atari2600 -erobots=off
 }
 function atari5200() {
