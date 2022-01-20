@@ -55,10 +55,6 @@ function main_menu() {
 # ARTWORK MENU FUNCTIONS #
 #-----------------------#
 #function artwork() {
-#wget -q --spider http://google.com
-#if [ $? -eq 0 ]; then
-#  echo "Online ... Loading Menu"
-#  sleep 1
 #  local choice
 #
 # while true; do
@@ -170,20 +166,13 @@ function main_menu() {
 #    fi
 #  done
 #}
-#else
-#  echo "Offline ... Please Connect Internet!"
-#  sleep 3
-#fi
-#}
 #
 ###------------------------------###
 ### CONSOLE PACKS MENU FUNCTIONS ###
 ###------------------------------###
 function consoles() {
-wget -q --spider http://google.com
-if [ $? -eq 0 ]; then
-  echo "Online ... Loading Menu"
-  sleep 1
+
+    while true; do
     local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
       --ok-label Download --cancel-label Back \
@@ -495,20 +484,10 @@ function zmachine() {
 function zxspectrum() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zxspectrum/ -P ~/RetroPie/roms/zxspectrum -erobots=off
 }
-else
-  echo "Offline ... Please Connect Internet!"
-  sleep 3
-fi
-}
-
 ###------------------------------###
 ### HACKED PACKS MENU FUNCTIONS  ###			###HACKED PACKS MENU###
 ###------------------------------###
 function hacked() {
-wget -q --spider http://google.com
-if [ $? -eq 0 ]; then
-  echo "Online ... Loading Menu"
-  sleep 1
 local choice
 
   while true; do
