@@ -308,8 +308,10 @@ function consoles() {
 }
 function amiga() {
   clear
-  echo " Beginning Amiga Download"
-  sleep 2
+  echo "---------------------
+  Beginning Amiga Download"
+  -------------------------
+ sleep 2
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amiga/ -P ~/RetroPie/roms/amiga -erobots=off
 }
 function arcadia() {
@@ -349,9 +351,15 @@ function atari2600() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari2600/ -P ~/RetroPie/roms/atari2600 -erobots=off
 }
 function atari5200() {
+  clear
+  echo " Beginning Atari2600 Download"
+  sleep 2  
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/atari5200/ -P ~/RetroPie/roms/atari5200 -erobots=off
 }
 function atari7800() {
+  clear
+  echo " Beginning Atari7800 Download"
+  sleep 2  
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari7800/ -P ~/RetroPie/roms/atari7800 -erobots=off
 }
 function atarilynx() {
