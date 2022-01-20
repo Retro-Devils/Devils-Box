@@ -64,7 +64,7 @@ function artwork() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " ARTWORK DOWNLOAD MENU " \
       --ok-label Download --cancel-label Main-Menu \
       --menu "[*] MEANS PACK INCLUDES..........[ ] MEANS PACK DOESNT INCLUDE  		
-                  ***MEANS COMING SOON............PRESS A OR ENTER TO DOWNLOAD" 40 75 60 \
+                  --PRESS A/ENTER TO DOWNLOAD.......***MEANS COMING SOON" 40 75 60 \
       1 "Amiga Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
       2 "***AmigaCD Artwork***    [*]box  [*]cart  [*]snap  [ ]wheel" \
       3 "***Arcadia Artwork***    [*]box  [*]cart  [*]snap  [*]wheel" \
@@ -695,7 +695,7 @@ function audio() {
       --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 50 50 \
       1 "T.A.M.P.O  (Theme & Music Plus Overlay)        thepitster " \
       2 "Emulation Station Themes                         Retropie " \
-      3 "No Audio Fix                                         ANON " \
+      3 "No Audio Fix                                    Anonymous " \
       2>&1 >/dev/tty)
 
     case "$choice" in
