@@ -478,9 +478,9 @@ sudo apt-get install unzip
   local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title " WINE MENU" \
+    choice=$(dialog --backtitle "$BACKTITLE" --title " WINE SUB MENU" \
       --ok-label Select --cancel-label Back-To-Consoles \
-      --menu "ATTENTION THESE ARE ZIPPED PACKS. 
+      --menu "  ATTENTION THESE ARE ZIPPED PACKS. 
               SIZE WILL VARY AFTER UNZIP" 25 50 40 \
       1 "Age Of Empires                    170MB" \
       2 "Age Of Empires 2                  6.1GB" \
