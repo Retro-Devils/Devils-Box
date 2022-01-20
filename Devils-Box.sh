@@ -55,6 +55,10 @@ function main_menu() {
 # ARTWORK MENU FUNCTIONS #
 #-----------------------#
 #function artwork() {
+#wget -q --spider http://google.com
+#if [ $? -eq 0 ]; then
+#  echo "Online ... Loading Menu"
+#  sleep 1
 #  local choice
 #
 # while true; do
@@ -166,14 +170,21 @@ function main_menu() {
 #    fi
 #  done
 #}
+#else
+#  echo "Offline ... Please Connect Internet!"
+#  sleep 3
+#fi
+#}
 #
 ###------------------------------###
 ### CONSOLE PACKS MENU FUNCTIONS ###
 ###------------------------------###
 function consoles() {
-  local choice
-
-  while true; do
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Loading Menu"
+  sleep 1
+    local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
       --ok-label Download --cancel-label Back \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK    
@@ -485,12 +496,21 @@ function zmachine() {
 function zxspectrum() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zxspectrum/ -P ~/RetroPie/roms/zxspectrum -erobots=off
 }
+else
+  echo "Offline ... Please Connect Internet!"
+  sleep 3
+fi
+}
 
 ###------------------------------###
 ### HACKED PACKS MENU FUNCTIONS  ###			###HACKED PACKS MENU###
 ###------------------------------###
 function hacked() {
-  local choice
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  echo "Online ... Loading Menu"
+  sleep 1
+local choice
 
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED CONSOLES DOWNLOAD MENU " \
@@ -532,6 +552,11 @@ function nesh() {
 }
 function snesh() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/snesh/ -P ~/RetroPie/roms/snesh -erobots=off
+}
+else
+  echo "Offline ... Please Connect Internet!"
+  sleep 3
+fi
 }
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
@@ -805,6 +830,8 @@ fi
 # SHOW DISK SPACE FUNCTION   #
 #----------------------------#
 function show_disk() {
+  clear 
+  sleep 1
   free -m | awk 'NR==2{printf "Memory Usage: %s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2 }'
   df -h | awk '$NF=="/"{printf "Disk Usage: %d/%dGB(%s)\n", $3,$2,$5}'
   top -bn1 | grep load | awk '{printf "CPU Load: %.2f\n", $(NF-2)}'
