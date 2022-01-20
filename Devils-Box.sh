@@ -62,9 +62,9 @@ function artwork() {
 
  while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " ARTWORK DOWNLOAD MENU " \
-      --ok-label Download --cancel-label Back \
+      --ok-label Download --cancel-label Main-Menu \
       --menu "INFO: 
-			[*] MEANS PACK INCLUDES    [ ] MEANS PACK DOESNT INCLUDE  
+			[*] MEANS PACK INCLUDES......[ ] MEANS PACK DOESNT INCLUDE  
 			***MEANS COMING SOON.........PRESS A OR ENTER TO DOWNLOAD" 40 75 60 \
       1 "Amiga Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
       2 "***AmigaCD Artwork***    [*]box  [*]cart  [*]snap  [ ]wheel" \
@@ -178,7 +178,7 @@ function consoles() {
     while true; do
     local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
-      --ok-label Download --cancel-label Back \
+      --ok-label Download --cancel-label Main-Menu \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK    
       ****MEANS COMING SOON" 40 75 60 \
       1 "Amiga                            300MB      340 GAMES" \
@@ -622,7 +622,7 @@ local choice
 
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED CONSOLES DOWNLOAD MENU " \
-      --ok-label Download --cancel-label Back \
+      --ok-label Download --cancel-label Main-Menu \
       --menu " PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
       1 "Gameboy Advance Hacks                  195MB     26 GAMES " \
       2 "Gameboy Hacks                            4MB     19 GAMES " \
