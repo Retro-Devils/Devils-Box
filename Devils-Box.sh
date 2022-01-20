@@ -878,6 +878,7 @@ function db_tools() {
 #ABOUT DEVILS BOX #
 #---------------------------#
 function help_db() {
+  clear
   cat ~/Devils-Box/files/HELP-DB.txt
   sleep 20
 }
@@ -885,6 +886,7 @@ function help_db() {
 #HELP WITH DEVILS BOX #
 #---------------------------#
 function about_db() {
+  clear
   cat ~/Devils-Box/files/INFO.txt
   sleep 20
 }
