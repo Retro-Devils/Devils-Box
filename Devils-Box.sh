@@ -490,7 +490,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Dragon32 Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/dragon32/ -P ~/RetroPie/roms/dragon32 -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -503,8 +502,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Dreamcast Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
-  exit 1
-
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -517,8 +514,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Electron Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/electron/ -P ~/RetroPie/roms/electron -erobots=off
-  exit 1
-
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -531,8 +526,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Family Disk System Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
-  exit 1
-
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -545,8 +538,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Game & Watch Downloading "
   sleep 3
    wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gameandwatch/ -P ~/RetroPie/roms/gameandwatch -erobots=off
-  exit 1
-
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -559,8 +550,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Gameboy Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gb/ -P ~/RetroPie/roms/gb -erobots=off
-  exit 1
-
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -573,8 +562,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Gameboy Advance Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gba/ -P ~/RetroPie/roms/gba -erobots=off
-  exit 1
-
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -587,8 +574,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Gameboy Color Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbc/ -P ~/RetroPie/roms/gbc -erobots=off
-  exit 1
-
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -601,8 +586,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Gamegear Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gamegear/ -P ~/RetroPie/roms/gamegear -erobots=off
-  exit 1
-
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -615,8 +598,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Intellivision Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
-  exit 1
-
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -629,7 +610,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Lightgun MAME Downloading "
   sleep 3
   wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/lightgun/ -P ~/RetroPie/roms/lightgun -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -642,7 +622,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Markiii Downloading "
   sleep 3
   wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/markiii/ -P ~/RetroPie/roms/markiii -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -655,7 +634,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Mastersystem Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/mastersystem/ -P ~/RetroPie/roms/mastersystem -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -668,7 +646,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Megadrive Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/megadrive/ -P ~/RetroPie/roms/megadrive -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -707,7 +684,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... MSX 2 Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/msx2/ -P ~/RetroPie/roms/msx2 -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -720,7 +696,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Nintendo64 (N64) Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/n64/ -P ~/RetroPie/roms/n64 -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -733,7 +708,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... NeoGeo Pocket Color (NGPC) Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/ngpc/ -P ~/RetroPie/roms/ngpc -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -746,7 +720,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Naomi Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/naomi/ -P ~/RetroPie/roms/naomi -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -759,7 +732,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Nintendo DS (NDS) Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nds/ -P ~/RetroPie/roms/nds -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -772,7 +744,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... NeoGeo Downloading "
   sleep 3
   wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/neogeo/ -P ~/RetroPie/roms/neogeo -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -785,7 +756,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Nintendo Entertainment System (NES) Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nes/ -P ~/RetroPie/roms/nes -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -798,7 +768,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Openbor Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/openbor/ -P ~/RetroPie/roms/openbor -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -811,7 +780,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Oric Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/oric/ -P ~/RetroPie/roms/oric -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -824,7 +792,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... PC Engine Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/pce/ -P ~/RetroPie/roms/pce -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -837,7 +804,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Pokemini Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/pokemini/ -P ~/RetroPie/roms/pokemini -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -850,7 +816,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Playstation 1 Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/psx/ -P ~/RetroPie/roms/psx -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -863,7 +828,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Super Famicon Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sfc/ -P ~/RetroPie/roms/sfc -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -876,7 +840,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Sega32X Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sega32x/ -P ~/RetroPie/roms/seg32x -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -889,7 +852,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Saturn Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html}" "${HOST1}"/saturn/ -P ~/RetroPie/roms/saturn -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -902,7 +864,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Saturn Japan Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/saturn-japan/ -P ~/RetroPie/roms/saturn-japan -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -915,7 +876,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... SegaCD Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/segacd/ -P ~/RetroPie/roms/segacd -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -928,7 +888,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... SNES Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/snes/ -P ~/RetroPie/roms/snes -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -941,7 +900,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... ScummVM Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/scummvm/ -P ~/RetroPie/roms/scummvm -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -954,7 +912,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... SuperGraffix Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/supergrafx/ -P ~/RetroPie/roms/supergrafx -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -967,7 +924,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... TG16 Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/tg16 -P ~/RetroPie/roms/tg16 -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -980,7 +936,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Vectrex Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/vectrex/ -P ~/RetroPie/roms/vectrex -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -993,7 +948,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... VideoPAC Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/videopac/ -P ~/RetroPie/roms/videopac -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -1006,7 +960,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Virtual Boy Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/virtualboy/ -P ~/RetroPie/roms/virtualboy -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -1019,7 +972,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... VMU Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/svmu/ -P ~/RetroPie/roms/vmu -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -1032,7 +984,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Wonderswan Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -1045,7 +996,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... x1 Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/x1/ -P ~/RetroPie/roms/x1  -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -1058,7 +1008,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... x68000 Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/x68000/ -P ~/RetroPie/roms/x68000 -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -1071,7 +1020,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Zmachine Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -1083,7 +1031,6 @@ if [ $? -eq 0 ]; then
   echo "Online ... Zxspectrum Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zxspectrum/ -P ~/RetroPie/roms/zxspectrum -erobots=off
-  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
