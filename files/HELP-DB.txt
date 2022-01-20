@@ -1,9 +1,34 @@
 _____________________DEVILS BOX RETROPIE VARIANT V2.3___________________
 
+
+----------------------------------------------------------
 SYSTEMS DONT SHOW IN RETROPIE WHATS UP?
+----------------------------------------------------------
 
-SOME SYSTEMS MIGHT NOT SHOW 
-YOU WILL HAVE TO MANUALLY EDIT YOUR ES_SYSTEM.CFG FILE 
-LOCATED AT ~/.emulationstation 
-OR COPY THE HOME FROM /etc/emulationstation/es_systems.cfg
+-SOME SYSTEMS MIGHT NOT SHOW 
+   -YOU WILL HAVE TO MANUALLY EDIT YOUR ES_SYSTEM.CFG FILE 
+      LOCATED AT ~/.emulationstation 
+   -OR COPY THE ONE FROM /etc/emulationstation/es_systems.cfg
 
+
+-----------------------------------------------------------
+SYSTEMS STILL DONT SHOW OR FUNCTION. WHATS WRONG?
+-----------------------------------------------------------
+
+-WITH SOME SYSTEMS YOU WILL HAVE TO INSTALL THE EMU AS WELL. RETROPIE SETUP IS EASIEST WAY.
+
+
+------------------------------------------------------------
+WHY DIDNT EXAMPLE CONSOLE WORK HOW TO FIX?
+------------------------------------------------------------
+
+-MORE THAN LIKELY A SMALL SCRIPT ERROR.
+-REPORT US WE WILL DO OUR BEST TO FIX.
+
+
+-------------------------------------------------------------
+I DOWNLOADED N64, BUT IT DOESNT PLAY ON MY PI 3 WHATS UP?
+-------------------------------------------------------------
+
+-THE DOWNLOADER WILL DOWNLOAD ANY SYSTEM YOU SELECT. THAT DOESNT MEAN YOUR PI WILL PLAY IT.
+-DEVILS BOX CAN BE USED ON ANY LINUX RETROPIE SYSTEM. SOME CONSOLES FOR THAT REASON.
