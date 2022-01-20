@@ -1040,41 +1040,42 @@ fi
 #      WINE SUB MENU FUNCTIONS   #
 #--------------------------------#
 function wine() {
-  local choice
-
-  while true; do
-    clear
-    sudo apt-get install unzip 
-    choice=$(dialog --backtitle "$BACKTITLE" --title " WINE SUB MENU" \
-      --ok-label Select --cancel-label Back-To-Consoles \
-      --menu " ATTENTION THESE ARE ZIPPED PACKS. 
-            SIZE IS AFTER UNZIP" 25 50 40 \
-      1 "Age Of Empires                    215MB" \
-      2 "Age Of Empires 2                  8.2GB" \
-      3 "Command & Conquer TS              1.5GB" \
-      4 "Diablo 2                          1.8GB" \
-      5 "Fallout                           570MB" \
-      6 "Fallout 2                         560MB" \
-      7 "Fallout Tactics                   1.5GB" \
-      8 "Starcraft                         1.8GB" \
-      9 "Warcraft 3                        2.1GB" \
-      10 ".......CLICK HERE FOR WINE HELP......." \
-      2>&1 >/dev/tty)
-
-    case "$choice" in
-    1) aoe ;;
-    2) aoe-2 ;;
-    3) cncts ;;
-    4) diablo-2 ;;
-    5) fallout ;;
-    6) fallout-2 ;;
-    7) fallout-tactics ;;
-    8) starcraft ;;
-    9) warcraft-3 ;;
-    10) wine-help ;; 
-    *) break ;;
-    esac
-  done
+dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
+-------------------------------
+       WINE DOWNLOADER HELP
+-------------------------------
+-You must have wine/box86 installed for this too work 
+-Whats WINE? Wine/box86 play old pc games.
+-Downloads most games to ~/RetroPie/roms/wine/games/.installs
+-Games Includes a exe or.sh script to launch from Retropie 
+-Games are zipped. Devils Box downloads unzips and does all the work for ya.
+-If you move game folder change .sh script accordingly.
+-Thanks for using have a good day." 0 0
+dialog --clear --title "Test" --separate-output --checklist "Choose:" 0 0 0 \
+"1" "Age Of Empires                    215MB" off \
+"2" "Age Of Empires 2                  6.1GB" off \
+"3" "Command & Conquer TS              1.3GB" off \
+"4" "Diablo 2                          1.8GB" off \
+"5" "Fallout                           535MB" off \
+"6" "Fallout 2                         555MB" off \
+"7" "Fallout Tactics                   1.5GB" off \
+"8" "Starcraft                         1.2GB" off \
+"9" "Warcraft 3                        1.9GB" off 2>/tmp/results
+while read -r choice  
+do
+        case $choice in
+                1) aoe ;;
+                2) aoe-2 ;;
+                3) cncts  ;;
+                4) diablo-2 ;;
+                5) fallout ;;
+                6) fallout-2 ;;
+                7) fallout-tactics ;;
+                8) starcraft ;;
+                9) warcraft-3 ;;
+                *) ;;
+        esac
+done < /tmp/results
 }
 function aoe() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE.zip -P ~/RetroPie/roms/wine
@@ -1139,28 +1140,6 @@ cp ~/RetroPie/roms/wine/games/warcraft3.sh -f ~/RetroPie/roms/wine/Warcraft-3.sh
 chmod 755 ~/RetroPie/roms/wine/Warcraft-3.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip
 }
-function wine-help() {
-clear 
-echo " 
--------------------------------
-       WINE DOWNLOADER HELP
--------------------------------
-
--You must have wine/box86 installed for this too work 
-
--Whats WINE? Wine/box86 play old pc games.
-
--Downloads most games to ~/RetroPie/roms/wine/games/.installs
-
--Games Includes a exe or.sh script to launch from Retropie 
-
--Games are zipped. Devils Box downloads unzips and does all the work for ya.
-
--If you move game folder change .sh script accordingly.
-
--Thanks for using have a good day"
-sleep 10
- }
 ###------------------------------###
 ### HACKED PACKS MENU FUNCTIONS  ###			###HACKED PACKS MENU###
 ###------------------------------###
