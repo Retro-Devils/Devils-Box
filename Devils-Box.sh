@@ -324,6 +324,7 @@ if [ $? -eq 0 ]; then
   echo "Online ... Arcadia Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
+  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -335,6 +336,7 @@ if [ $? -eq 0 ]; then
   echo "Online ... AmigaCD Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amigacd/ -P ~/RetroPie/roms/amigacd -erobots=off
+  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -346,6 +348,7 @@ if [ $? -eq 0 ]; then
   echo "Online ... Arcade Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/arcadia/ -P ~/RetroPie/roms/arcade -erobots=off
+  exit 1
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -358,6 +361,8 @@ if [ $? -eq 0 ]; then
   echo "Online ... AmstradPC Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/astrocade/ -P ~/RetroPie/roms/amstradpc -erobots=off
+  exit 1
+
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -370,6 +375,8 @@ if [ $? -eq 0 ]; then
   echo "Online ... Atari800 Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari800/ -P ~/RetroPie/roms/atari800 -erobots=off
+  exit 1
+
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -382,6 +389,8 @@ if [ $? -eq 0 ]; then
   echo "Online ... Atari2600 Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari2600/ -P ~/RetroPie/roms/atari2600 -erobots=off
+  exit 1
+
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -394,6 +403,8 @@ if [ $? -eq 0 ]; then
   echo "Online ... Atari5200 Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/atari5200/ -P ~/RetroPie/roms/atari5200 -erobots=off
+  exit 1
+
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -406,6 +417,8 @@ if [ $? -eq 0 ]; then
   echo "Online ... Atari7800 Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari7800/ -P ~/RetroPie/roms/atari7800 -erobots=off
+  exit 1
+
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -418,6 +431,8 @@ if [ $? -eq 0 ]; then
   echo "Online ... Atari Lynx Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atarilynx/ -P ~/RetroPie/roms/atarilynx -erobots=off
+  exit 1
+
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -430,6 +445,8 @@ if [ $? -eq 0 ]; then
   echo "Online ... AtomisWave Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atomiswave/ -P ~/RetroPie/roms/atomiswave -erobots=off
+  exit 1
+
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -442,6 +459,8 @@ if [ $? -eq 0 ]; then
   echo "Online ... Commadore64 Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/c64/ -P ~/RetroPie/roms/c64 -erobots=off
+  exit 1
+
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -454,6 +473,8 @@ if [ $? -eq 0 ]; then
   echo "Online ... Colecovision Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/coleco/ -P ~/RetroPie/roms/coleco -erobots=off
+  exit 1
+
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -466,6 +487,8 @@ if [ $? -eq 0 ]; then
   echo "Online ... Daphne Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/daphne/ -P ~/RetroPie/daphne -erobots=off
+  exit 1
+
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -478,6 +501,8 @@ if [ $? -eq 0 ]; then
   echo "Online ... Dragon32 Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/dragon32/ -P ~/RetroPie/roms/dragon32 -erobots=off
+  exit 1
+
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
@@ -490,6 +515,8 @@ if [ $? -eq 0 ]; then
   echo "Online ... Dreamcast Downloading "
   sleep 3
   wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
+  exit 1
+
 else
   echo "Offline ... Download Canceled! Please Connect Internet"
   sleep 1
