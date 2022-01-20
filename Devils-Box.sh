@@ -156,18 +156,18 @@ function artwork() {
     43) download-art "wonderswan" "boxart" "cartart" "snap" ;;
     44) download-art "zmachine" "boxart" "cartart" "snap" ;;
     *) break ;;
-#    esac
-#  done
-#}
-#
-#function download-art() {
-#  for type in "$@"; do
-#    if [ "${type}" != "${1}" ]; then
-#      wget -m -r -np -nH -nd -R "index.html" ${ART_HOST}/"${1}"/"${type}"/ -P ~/RetroPie/roms/"${1}"/"${type}" -erobots=off
-#    fi
-#  done
-#}
-#
+    esac
+  done
+}
+
+function download-art() {
+  for type in "$@"; do
+    if [ "${type}" != "${1}" ]; then
+      wget -m -r -np -nH -nd -R "index.html" ${ART_HOST}/"${1}"/"${type}"/ -P ~/RetroPie/roms/"${1}"/"${type}" -erobots=off
+    fi
+  done
+}
+
 ###------------------------------###
 ### CONSOLE PACKS MENU FUNCTIONS ###
 ###------------------------------###
@@ -610,6 +610,7 @@ function zmachine() {
 function zxspectrum() {
   wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zxspectrum/ -P ~/RetroPie/roms/zxspectrum -erobots=off
 }
+
 ###------------------------------###
 ### HACKED PACKS MENU FUNCTIONS  ###			###HACKED PACKS MENU###
 ###------------------------------###
