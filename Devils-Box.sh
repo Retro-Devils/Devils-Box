@@ -307,10 +307,16 @@ function consoles() {
    done
 }
 function amiga() {
-  clear
-  echo " Beginning Amiga Download "
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+ echo "Online ... Beginning Amiga Download "
  sleep 2
-  wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amiga/ -P ~/RetroPie/roms/amiga -erobots=off
+ wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amiga/ -P ~/RetroPie/roms/amiga -erobots=off
+ exit 1
+else
+  echo "Offline ... Please Connect To Internet!"
+  sleep 1
+fi
 }
 function arcadia() {
   clear
