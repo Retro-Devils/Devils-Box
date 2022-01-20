@@ -475,7 +475,7 @@ function vmu() {
 #      WINE SUB MENU FUNCTIONS   #
 #--------------------------------#
 sudo apt-get install unzip 
-function main_menu() {
+function wine() {
   local choice
 
   while true; do
