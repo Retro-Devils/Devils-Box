@@ -127,7 +127,7 @@ else
       45 "***TG 16 Artwork***      [*]box  [*]cart  [*]snap  [ ]wheel" \
       46 "Wine Artwork             [*]box  [ ]cart  [ ]snap  [ ]wheel" \
       47 "***Wonderswan Artwork*** [*]box  [*]cart  [*]snap  [ ]wheel" \
-      48 "ZMachine Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
+      48 "zMachine Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
       2&1 >/dev/tty)
 
     case "$choice" in
