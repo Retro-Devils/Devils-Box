@@ -348,8 +348,8 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 -Games are zipped. Devils Box downloads unzips and does all the work for ya.
 -If you move game folder change .sh script accordingly.
 -Thanks for using have a good day." 0 0
-        local choice
-        choice=$(whiptail --clear --title "Test" --separate-output --checklist "Choose:" 0 0 0 \
+
+    whiptail --clear --title "Test" --separate-output --checklist "Choose:" 0 0 0 \
                 "1" "Age Of Empires                    215MB" off \
                 "2" "Age Of Empires 2                  6.1GB" off \
                 "3" "Command & Conquer TS              1.3GB" off \
@@ -359,7 +359,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "7" "Fallout Tactics                   1.5GB" off \
                 "8" "Starcraft                         1.2GB" off \
                 "9" "Warcraft 3                        1.9GB" off \
-                2>&1 >/dev/tty)
+                2>/tmp/results
     while read -r choice  
         do
         case $choice in
@@ -374,7 +374,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 9) warcraft-3 ;;
                 *) ;;
         esac
-        done
+        done < /tmp/results
 fi
 }
 function aoe() {
