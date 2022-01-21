@@ -67,9 +67,7 @@ function main_menu() {
 #-----------------------#
 function artwork() {
 if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
-OFFLINE!!!
-
+dialog  --sleep 1 --title "OFFLINE ERROR !! " --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
   local choice
@@ -189,9 +187,7 @@ function download-art() {
 ###------------------------------###
 function consoles() {
 if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
-OFFLINE!!!
-
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
     while true; do
@@ -512,9 +508,7 @@ wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zxspectrum/ -P ~/RetroPie/roms
 #--------------------------------#
 function wine() {
 if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
-OFFLINE!!!
-
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
 dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
@@ -625,9 +619,7 @@ sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip
 ###------------------------------###
 function hacked() {
 if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
-OFFLINE!!!
-
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
 local choice
@@ -783,9 +775,7 @@ function emu_tools() {
 }
 function devils-ex() {
 if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
-OFFLINE!!!
-
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
 curl -sSL https://git.io/J9Z8c | bash
@@ -796,9 +786,7 @@ fi
 #----------------------------------#
 function sm3() {
 if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
-OFFLINE!!!
-
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
 curl -sSL https://git.io/JSDOy | bash
@@ -813,9 +801,7 @@ function rpi-menu() {
 }
 function pikiss() {
 if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
-OFFLINE!!!
-
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
   if [ -d "~/piKiss/" ]; then sudo home/pi/piKiss/piKiss.sh;
