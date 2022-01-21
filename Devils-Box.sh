@@ -42,9 +42,11 @@ function main_menu() {
     choice=$(dialog --backtitle "$BACKTITLE" --title "|DEVILS BOX 2.3|----|1/19/22|" \
       --ok-label Select --cancel-label Exit-Devils-Box \
       --menu "--DEVILS BOX.......................MAIN MENU--" 25 50 40 \
+      - "-----Downloaders-----" \
       1 "Artwork Packs" \
       2 "Console Packs" \
       3 "Hacked Packs" \
+      + "--------Tools---------" \
       4 "Tool Box" \
       5 "Reboot System" \
       6 "Show Disk Space" \
@@ -57,6 +59,8 @@ function main_menu() {
     4) tool_box ;;
     5) system_reboot ;;
     6) show_disk ;;
+    -) none ;;
+    +) nono ;;
     *) break ;;
     esac
   done
