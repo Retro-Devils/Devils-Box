@@ -117,7 +117,7 @@ else
       39 "SegaCD Artwork           [*]box  [*]cart  [*]snap  [ ]wheel" \
       40 "***SNES Artwork***       [*]box  [*]cart  [*]snap  [ ]wheel" \
       41 "***TG 16 Artwork***      [*]box  [*]cart  [*]snap  [ ]wheel" \
-      42 "***Wine Artwork***       [*]box  [*]cart  [ ]snap  [ ]wheel" \
+      42 "Wine Artwork             [*]box  [*]cart  [ ]snap  [ ]wheel" \
       43 "***Wonderswan Artwork*** [*]box  [*]cart  [*]snap  [ ]wheel" \
       44 "ZMachine Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
       2>&1 >/dev/tty)
