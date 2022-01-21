@@ -61,7 +61,6 @@ function main_menu() {
     esac
   done
 }
-
 #-----------------------#
 # ARTWORK MENU FUNCTIONS #
 #-----------------------#
