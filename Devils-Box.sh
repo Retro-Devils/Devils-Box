@@ -327,6 +327,9 @@ fi
 function download-packs() {
 wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P ~/RetroPie/roms/"${1}" -erobots=off
 }
+function download-packs-alt() {
+wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P ~/RetroPie/roms/"${1}" -erobots=off
+}
 #--------------------------------#
 #      WINE SUB MENU FUNCTIONS   #
 #--------------------------------#
