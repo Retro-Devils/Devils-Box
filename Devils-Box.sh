@@ -1,5 +1,6 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
+BACKTITLE=DEVILS BOX
 ##-------------------------##
 ##       HOST SITES        ##
 ##-------------------------##
@@ -18,10 +19,10 @@ HOST3="https://archive.org/download/retro-devils-winegames"
 #HOST5=
 #HOST6=
 
-
 ###  INTRO VIDEO     ###
 clear
 omxplayer ~/Devils-Box/files/intro.mp4
+###   NET CHECKER    ###
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
   echo "Online ... Downloads Sections Are Availible"
@@ -29,7 +30,6 @@ if [ $? -eq 0 ]; then
 else
   NETCHECK=1
 fi
-
 
 ###-----------------------###
 ### MAIN MENU FUNCTIONS   ###
@@ -349,7 +349,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 -If you move game folder change .sh script accordingly.
 -Thanks for using have a good day." 0 0
 
-    whiptail --clear --title "Test" --separate-output --checklist "Choose:" 0 0 0 \
+    whiptail --clear --title "WINE DOWNLOAD MENU" --separate-output --checklist "Choose:" 0 0 0 \
                 "1" "Age Of Empires                    215MB" off \
                 "2" "Age Of Empires 2                  6.1GB" off \
                 "3" "Command & Conquer TS              1.3GB" off \
