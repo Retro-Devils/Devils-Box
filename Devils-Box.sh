@@ -464,35 +464,18 @@ local choice
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) gbah ;;
-    2) gbh ;;
-    3) genh ;;
-    4) ggh ;;
-    5) nesh ;;
-    6) snesh ;;
+    1) download-packs "gbah" ;;
+    2) download-packs "gbh" ;;
+    3) download-packs "genh" ;;
+    4) download-packs "ggh" ;;
+    5) download-packs "nesh" ;;
+    6) download-packs "snesh" ;;
     *) break ;;
     esac
   done
 fi
 }
-function gbah() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbah/ -P ~/RetroPie/roms/gbah -erobots=off
-}
-function gbh() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbh/ -P ~/RetroPie/roms/gbh -erobots=off
-}
-function genh() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/genh/ -P ~/RetroPie/roms/genh -erobots=off
-}
-function ggh() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/ggh/ -P ~/RetroPie/roms/ggh -erobots=off
-}
-function nesh() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nesh/ -P ~/RetroPie/roms/nesh -erobots=off
-}
-function snesh() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/snesh/ -P ~/RetroPie/roms/snesh -erobots=off
-}
+
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
 ###------------------------------###
