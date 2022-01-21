@@ -117,7 +117,7 @@ else
       39 "SegaCD Artwork           [*]box  [*]cart  [*]snap  [ ]wheel" \
       40 "***SNES Artwork***       [*]box  [*]cart  [*]snap  [ ]wheel" \
       41 "***TG 16 Artwork***      [*]box  [*]cart  [*]snap  [ ]wheel" \
-      42 "***Wine Artwork***       [*]box  [*]cart  [*]snap  [ ]wheel" \
+      42 "***Wine Artwork***       [*]box  [*]cart  [ ]snap  [ ]wheel" \
       43 "***Wonderswan Artwork*** [*]box  [*]cart  [*]snap  [ ]wheel" \
       44 "ZMachine Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
       2>&1 >/dev/tty)
@@ -381,14 +381,18 @@ function aoe() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_AoE.zip -d ~/RetroPie/roms/wine/games/
 cp ~/RetroPie/roms/wine/games/aoe.sh -f ~/RetroPie/roms/wine/Age-Of-Empires.sh
+cp ~/RetroPie/roms/wine/games/aoee.sh -f ~/RetroPie/roms/wine/Age-Of-Empires-Rise-of-Rome.sh
 chmod 755 ~/RetroPie/roms/wine/Age-Of-Empires.sh
+chmod 755 ~/RetroPie/roms/wine/Age-Of-Empires-The-Rise-Of-Rome.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_AoE.zip
 }
 function aoe-2() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE2.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_AoE2.zip -d ~/RetroPie/roms/wine/games/
 cp ~/RetroPie/roms/wine/games/aoe2.sh -f ~/RetroPie/roms/wine/Age-Of-Empires-2.sh
+cp ~/RetroPie/roms/wine/games/aoe2.sh -f ~/RetroPie/roms/wine/Age-Of-Empires-2-The-Conquerors.sh
 chmod 755 ~/RetroPie/roms/wine/Age-Of-Empires-2.sh
+chmod 755 ~/RetroPie/roms/wine/Age-Of-Empires-2-The-Conquerors.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_AoE2.zip
 }
 function cncts() {
@@ -432,6 +436,13 @@ unzip -o ~/RetroPie/roms/wine/Retro-Devils_Starcraft.zip -d ~/RetroPie/roms/wine
 cp ~/RetroPie/roms/wine/games/starcraft.sh -f ~/RetroPie/roms/wine/Starcraft.sh
 chmod 755 ~/RetroPie/roms/wine/Starcraft.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Starcraft.zip
+}
+function warcraft-3() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Warcraft3.zip -P ~/RetroPie/roms/wine
+unzip -o ~/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip -d ~/RetroPie/roms/wine/games/
+cp ~/RetroPie/roms/wine/games/warcraft3.sh -f ~/RetroPie/roms/wine/Warcraft-3.sh
+chmod 755 ~/RetroPie/roms/wine/Warcraft-3.sh
+sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip
 }
 function warcraft-3() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Warcraft3.zip -P ~/RetroPie/roms/wine
@@ -786,7 +797,7 @@ function show_disk() {
   top -bn1 | grep load | awk '{printf "CPU Load: %.2f\n", $(NF-2)}'
   cpu_temp=$(</sys/class/thermal/thermal_zone0/temp)
   cpu_temp=$(($cpu_temp / 1000))
-  echo Temp: $cpu_temp°C
+  echo Temp: $cpu_tempÂ°C
   sleep 8
 }
 
