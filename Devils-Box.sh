@@ -311,7 +311,7 @@ else
     52) download-packs "videopac" ;;
     53) download-packs "virtual-boy" ;;
     54) download-packs "vmu" ;;
-    55) download-packs "wine" ;;
+    55) wine "wine" ;;
     56) download-packs "wonderswan" ;;
     57) download-packs "x1" ;;
     58) download-packs "x68000" ;;
