@@ -258,250 +258,74 @@ else
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) amiga ;;
-    2) arcadia ;;
-    3) amigacd ;;
-    4) arcade ;;
-    5) amstradpc ;;
-    6) atari800 ;;
-    7) atari2600 ;;
-    8) atari5200 ;;
-    9) atari7800 ;;
-    10) atarilynx ;;
-    11) atomiswave ;;
-    12) c64 ;;
-    13) colecovision ;;
-    14) dragon32 ;;
-    15) dreamcast ;;
-    16) electron ;;
-    17) famicon ;;
-    18) fds ;;
-    19) gameandwatch ;;
-    20) gb ;;
-    21) gba ;;
-    22) gbc ;;
-    23) gg ;;
-    24) intellivision ;;
-    25) lightgun ;;
-    26) mark3 ;;
-    27) mastersystem ;;
-    28) megadrive ;;
-    29) msx ;;
-    30) msx2 ;;
-    31) mugen ;;
-    32) ngpc ;;
-    33) n64 ;;
-    34) naomi ;;
-    35) nds ;;
-    36) neogeo ;;
-    37) nes ;;
-    38) openbor ;;
-    39) oric ;;
-    40) pokemini ;;
-    41) ps1 ;;
-    42) saturn ;;
-    43) saturn-japan ;;
-    44) scummvm ;;
-    45) sega32 ;;
-    46) segacd ;;
-    47) sfs ;;
-    48) snes ;;
-    49) supergrafx ;;
-    50) tg16 ;;
-    51) vectrex ;;
-    52) videopac ;;
-    53) virtual-boy ;;
-    54) vmu ;;
-    55) wine ;;
-    56) wonderswan ;;
-    57) x1 ;;
-    58) x68000 ;;
-    59) zmachine ;;
-    60) zxspectrum ;;
+    1) download-packs "amiga" ;;
+    2) download-packs "arcadia" ;;
+    3) download-packs "amigacd" ;;
+    4) download-packs "arcade" ;;
+    5) download-packs "amstradpc" ;;
+    6) download-packs "atari800" ;;
+    7) download-packs "atari2600" ;;
+    8) download-packs "atari5200" ;;
+    9) download-packs "atari7800" ;;
+    10) download-packs "atarilynx" ;;
+    11) download-packs "atomiswave" ;;
+    12) download-packs "c64" ;;
+    13) download-packs "colecovision" ;;
+    14) download-packs "dragon32" ;;
+    15) download-packs "dreamcast" ;;
+    16) download-packs "electron" ;;
+    17) download-packs "famicon" ;;
+    18) download-packs "fds" ;;
+    19) download-packs "gameandwatch" ;;
+    20) download-packs "gb" ;;
+    21) download-packs "gba" ;;
+    22) download-packs "gbc" ;;
+    23) download-packs "gg" ;;
+    24) download-packs "intellivision" ;;
+    25) download-packs "lightgun" ;;
+    26) download-packs "mark3" ;;
+    27) download-packs "mastersystem" ;;
+    28) download-packs "megadrive" ;;
+    29) download-packs "msx" ;;
+    30) download-packs "msx2" ;;
+    31) download-packs "mugen" ;;
+    32) download-packs "ngpc" ;;
+    33) download-packs "n64" ;;
+    34) download-packs "naomi" ;;
+    35) download-packs "nds" ;;
+    36) download-packs "neogeo" ;;
+    37) download-packs "nes" ;;
+    38) download-packs "openbor" ;;
+    39) download-packs "oric" ;;
+    40) download-packs "pokemini" ;;
+    41) download-packs "ps1" ;;
+    42) download-packs "saturn" ;;
+    43) download-packs "saturn-japan" ;;
+    44) download-packs "scummvm" ;;
+    45) download-packs "sega32" ;;
+    46) download-packs "segacd" ;;
+    47) download-packs "sfs" ;;
+    48) download-packs "snes" ;;
+    49) download-packs "supergrafx" ;;
+    50) download-packs "tg16" ;;
+    51) download-packs "vectrex" ;;
+    52) download-packs "videopac" ;;
+    53) download-packs "virtual-boy" ;;
+    54) download-packs "vmu" ;;
+    55) download-packs "wine" ;;
+    56) download-packs "wonderswan" ;;
+    57) download-packs "x1" ;;
+    58) download-packs "x68000" ;;
+    59) download-packs "zmachine" ;;
+    60) download-packs "zxspectrum" ;;
     *) break ;;
     esac
    done
 fi
 }
-function amiga() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amiga/ -P ~/RetroPie/roms/amiga -erobots=off
-}
-function arcadia() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/arcadia/ -P ~/RetroPie/roms/arcadia -erobots=off
-}
-function amigacd() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/amigacd/ -P ~/RetroPie/roms/amigacd -erobots=off
-}
-function arcade() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/arcadia/ -P ~/RetroPie/roms/arcade -erobots=off
-}
-function amstradpc() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/astrocade/ -P ~/RetroPie/roms/amstradpc -erobots=off
-}
-function atari800() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari800/ -P ~/RetroPie/roms/atari800 -erobots=off
-}
-function atari2600() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari2600/ -P ~/RetroPie/roms/atari2600 -erobots=off
-}
-function atari5200() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/atari5200/ -P ~/RetroPie/roms/atari5200 -erobots=off
-}
-function atari7800() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atari7800/ -P ~/RetroPie/roms/atari7800 -erobots=off
-}
-function atarilynx() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atarilynx/ -P ~/RetroPie/roms/atarilynx -erobots=off
-}
-function atomiswave() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/atomiswave/ -P ~/RetroPie/roms/atomiswave -erobots=off
-}
-function c64() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/c64/ -P ~/RetroPie/roms/c64 -erobots=off
-}
-function colecovision() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/coleco/ -P ~/RetroPie/roms/coleco -erobots=off
-}
-function daphne() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/daphne/ -P ~/RetroPie/daphne -erobots=off
-}
-function dragon32() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/dragon32/ -P ~/RetroPie/roms/dragon32 -erobots=off
-}
-function dreamcast() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/dreamcast/ -P ~/RetroPie/roms/dreamcast -erobots=off
-}
-function electron() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/electron/ -P ~/RetroPie/roms/electron -erobots=off
-}
-function fds() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/fds/ -P ~/RetroPie/roms/fds -erobots=off
-}
-function gameandwatch() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gameandwatch/ -P ~/RetroPie/roms/gameandwatch -erobots=off
-}
-function gb() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gb/ -P ~/RetroPie/roms/gb -erobots=off
-}
-function gba() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gba/ -P ~/RetroPie/roms/gba -erobots=off
-}
-function gbc() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gbc/ -P ~/RetroPie/roms/gbc -erobots=off
-}
-function gamegear() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/gamegear/ -P ~/RetroPie/roms/gamegear -erobots=off
-}
-function intellivision() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/intellivision/ -P ~/RetroPie/roms/intellivision -erobots=off
-}
-function lightgun() {
-wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/lightgun/ -P ~/RetroPie/roms/lightgun -erobots=off
-}
-function markiii() {
-wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/markiii/ -P ~/RetroPie/roms/markiii -erobots=off
-}
-function mastersystem() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/mastersystem/ -P ~/RetroPie/roms/mastersystem -erobots=off
-}
-function megadrive() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/megadrive/ -P ~/RetroPie/roms/megadrive -erobots=off
-}
-function mugen() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"mugen/ -P ~/RetroPie/roms/wine/mugens -erobots=off
-}
-function  msx() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/msx/ -P ~/RetroPie/roms/msx -erobots=off
-}
-function  msx2() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/msx2/ -P ~/RetroPie/roms/msx2 -erobots=off
-}
-function n64() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/n64/ -P ~/RetroPie/roms/n64 -erobots=off
-}
-function  ngpc() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/ngpc/ -P ~/RetroPie/roms/ngpc -erobots=off
-}
-function naomi() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/naomi/ -P ~/RetroPie/roms/naomi -erobots=off
-}
-function nds() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nds/ -P ~/RetroPie/roms/nds -erobots=off
-}
-function neogeo() {
-wget  -m -r -np -nH -nd -R "index.html" "${HOST1}"/neogeo/ -P ~/RetroPie/roms/neogeo -erobots=off
-}
-function nes() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/nes/ -P ~/RetroPie/roms/nes -erobots=off
-}
-function openbor() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/openbor/ -P ~/RetroPie/roms/openbor -erobots=off
-}
-function oric() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/oric/ -P ~/RetroPie/roms/oric -erobots=off
-}
-function pcengine() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/pce/ -P ~/RetroPie/roms/pce -erobots=off
-}
-function  pokemini() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/pokemini/ -P ~/RetroPie/roms/pokemini -erobots=off
-}
-function ps1() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/psx/ -P ~/RetroPie/roms/psx -erobots=off
-}
-function sfc() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sfc/ -P ~/RetroPie/roms/sfc -erobots=off
-}
-function sega32x() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/sega32x/ -P ~/RetroPie/roms/seg32x -erobots=off
-}
-function  saturn() {
-wget -m -r -np -nH -nd -R "index.html}" "${HOST1}"/saturn/ -P ~/RetroPie/roms/saturn -erobots=off
-}
-function  saturn-japan() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/saturn-japan/ -P ~/RetroPie/roms/saturn-japan -erobots=off
-}
-function segacd() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/segacd/ -P ~/RetroPie/roms/segacd -erobots=off
-}
-function snes() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/snes/ -P ~/RetroPie/roms/snes -erobots=off
-}
-function  scummvm() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/scummvm/ -P ~/RetroPie/roms/scummvm -erobots=off
-}
-function supergrafx() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/supergrafx/ -P ~/RetroPie/roms/supergrafx -erobots=off
-}
-function tg16() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/tg16 -P ~/RetroPie/roms/tg16 -erobots=off
-}
-function vectrex() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/vectrex/ -P ~/RetroPie/roms/vectrex -erobots=off
-}
-function videopac() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/videopac/ -P ~/RetroPie/roms/videopac -erobots=off
-}
-function virtual-boy() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/virtualboy/ -P ~/RetroPie/roms/virtualboy -erobots=off
-}
-function vmu() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/svmu/ -P ~/RetroPie/roms/vmu -erobots=off
-}
-function wonderswan() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/wonderswan/ -P ~/RetroPie/roms/wonderswan -erobots=off
-}
-function x1() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/x1/ -P ~/RetroPie/roms/x1  -erobots=off
-}
-function x68000() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/x68000/ -P ~/RetroPie/roms/x68000 -erobots=off
-}
-function zmachine() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zmachine/ -P ~/RetroPie/roms/zmachine  -erobots=off
-}
-function zxspectrum() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/zxspectrum/ -P ~/RetroPie/roms/zxspectrum -erobots=off
+
+function download-packs() {
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P ~/RetroPie/roms/"${1}" -erobots=off
 }
 #--------------------------------#
 #      WINE SUB MENU FUNCTIONS   #
