@@ -219,7 +219,7 @@ else
       23 "Gamegear                          42MB      249 GAMES" \
       24 "Intellivision                      1MB       62 GAMES" \
       25 "****Lightgun****                  ??GB       ?? GAMES" \
-      26 "****MarkIII****                    6MB       58 GAMES" \
+      26 "MarkIII                            6MB       58 GAMES" \
       27 "Mastersystem                      35MB      280 GAMES" \
       28 "Megadrive/Genesis                409MB      561 GAMES" \
       29 "MSX                               30MB      708 GAMES" \
@@ -232,7 +232,7 @@ else
       36 "NeoGeo                           2.3GB      142 GAMES" \
       37 "Nintendo Entertainment System    100MB      850 GAMES" \
       38 "Openbor                         1.84GB       37 GAMES" \
-      39 "****Oric****                     5.4MB      136 GAMES" \
+      39 "Oric                             5.4MB      136 GAMES" \
       40 "Pokemini                         5.4MB       44 GAMES" \
       41 "PS1                                3GB       29 GAMES" \
       42 "Sega Saturn                      108GB      303 GAMES" \
