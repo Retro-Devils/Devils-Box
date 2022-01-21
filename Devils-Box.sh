@@ -77,50 +77,51 @@ else
       --menu "[*] MEANS PACK INCLUDES..........[ ] MEANS PACK DOESNT INCLUDE  		
                   --PRESS A/ENTER TO DOWNLOAD.......***MEANS COMING SOON" 40 75 60 \
       1 "Amiga Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
-      2 "***AmigaCD Artwork***    [*]box  [*]cart  [*]snap  [ ]wheel" \
-      3 "***Arcadia Artwork***    [*]box  [*]cart  [*]snap  [*]wheel" \
-      4 "***Astrocade Artwork***  [ ]box  [ ]cart  [*]snap  [ ]wheel" \
+      2 "AmigaCD32 Artwork        [*]box  [*]cart  [*]snap  [ ]wheel" \
+      3 "Arcadia Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
+      4 "Astrocade Artwork        [ ]box  [ ]cart  [*]snap  [ ]wheel" \
       5 "***Atari800 Artwork***   [*]box  [*]cart  [*]snap  [ ]wheel" \
       6 "***Atari2600 Artwork***  [*]box  [*]cart  [*]snap  [*]wheel" \
       7 "***Atari5200 Artwork***  [*]box  [*]cart  [*]snap  [*]wheel" \
       8 "Atari7800 Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
       9 "AtariLynx Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
       10 "***AtariST Artwork***    [*]box  [*]cart  [*]snap  [ ]wheel" \
-      11 "Commadore64 Artwork      [*]box  [*]cart  [*]snap  [*]wheel" \
-      12 "Coleco Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
-      13 "***Daphne Artwork***     [*]box  [*]cart  [*]snap  [ ]wheel" \
-      14 "***Dragon32 Artwork***   [*]box  [*]cart  [*]snap  [ ]wheel" \
-      15 "***Dreamcast Artwork***  [*]box  [*]cart  [*]snap  [ ]wheel" \
-      16 "Famicon Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
-      17 "Game & Watch Artwork     [*]box  [*]cart  [*]snap  [*]wheel" \
-      18 "***Gameboy Artwork***    [*]box  [*]cart  [*]snap  [ ]wheel" \
-      19 "***GBA Artwork***        [*]box  [*]cart  [*]snap  [ ]wheel" \
-      20 "***GBC Artwork***        [*]box  [*]cart  [*]snap  [ ]wheel" \
-      21 "***Gamegear Artwork***   [*]box  [*]cart  [*]snap  [ ]wheel" \
-      22 "***Genesis Artwork***    [*]box  [*]cart  [*]snap  [ ]wheel" \
-      23 "Intellivision Artwork    [*]box  [ ]cart  [ ]snap  [*]wheel" \
-      24 "***Lightgun Artwork***   [*]box  [*]cart  [*]snap  [ ]wheel" \
-      25 "MarkIII Artwork          [*]box  [*]cart  [*]snap  [ ]wheel" \
-      26 "***Mastersystem Artwork**[*]box  [*]cart  [*]snap  [ ]wheel" \
-      27 "***Megadrive Artwork***  [*]box  [*]cart  [*]snap  [ ]wheel" \
-      28 "MSX2 Artwork             [*]box  [*]cart  [*]snap  [ ]wheel" \
-      29 "***N64 Artwork***        [*]box  [*]cart  [*]snap  [ ]wheel" \
-      30 "Naomi Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
-      31 "NDS Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
-      32 "NeoGeo Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
-      33 "***NES Artwork***        [*]box  [ ]cart  [*]snap  [ ]wheel" \
-      34 "Openbor Artwork          [*]box  [ ]cart  [*]snap  [*]wheel" \
-      35 "***Oric Artwork***       [*]box  [*]cart  [*]snap  [ ]wheel" \
-      36 "***PC Engine Artwork***  [*]box  [*]cart  [*]snap  [ ]wheel" \
-      37 "PS1 Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
-      38 "Sega32x Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
-      39 "SegaCD Artwork           [*]box  [*]cart  [*]snap  [ ]wheel" \
-      40 "***SNES Artwork***       [*]box  [*]cart  [*]snap  [ ]wheel" \
-      41 "***TG 16 Artwork***      [*]box  [*]cart  [*]snap  [ ]wheel" \
-      42 "Wine Artwork             [*]box  [*]cart  [ ]snap  [ ]wheel" \
-      43 "***Wonderswan Artwork*** [*]box  [*]cart  [*]snap  [ ]wheel" \
-      44 "ZMachine Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
-      2>&1 >/dev/tty)
+      11 "Atomiswave               [*]box  [*]cart  [*]snap  [*]wheel" \
+      12 "Commadore64 Artwork      [*]box  [*]cart  [*]snap  [*]wheel" \
+      13 "Coleco Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
+      14 "***Daphne Artwork***     [*]box  [*]cart  [*]snap  [ ]wheel" \
+      15 "Dragon32 Artwork         [*]box  [*]cart  [*]snap  [ ]wheel" \
+      16 "Dreamcast Artwork        [*]box  [*]cart  [*]snap  [ ]wheel" \
+      17 "Famicon Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
+      18 "Game & Watch Artwork     [*]box  [*]cart  [*]snap  [*]wheel" \
+      19 "***Gameboy Artwork***    [*]box  [*]cart  [*]snap  [ ]wheel" \
+      20 "***GBA Artwork***        [*]box  [*]cart  [*]snap  [ ]wheel" \
+      21 "***GBC Artwork***        [*]box  [*]cart  [*]snap  [ ]wheel" \
+      22 "***Gamegear Artwork***   [*]box  [*]cart  [*]snap  [ ]wheel" \
+      23 "***Genesis Artwork***    [*]box  [*]cart  [*]snap  [ ]wheel" \
+      24 "Intellivision Artwork    [*]box  [ ]cart  [ ]snap  [*]wheel" \
+      25 "***Lightgun Artwork***   [*]box  [*]cart  [*]snap  [ ]wheel" \
+      26 "MarkIII Artwork          [*]box  [*]cart  [*]snap  [ ]wheel" \
+      27 "***Mastersystem Artwork**[*]box  [*]cart  [*]snap  [ ]wheel" \
+      28 "***Megadrive Artwork***  [*]box  [*]cart  [*]snap  [ ]wheel" \
+      29 "MSX2 Artwork             [*]box  [*]cart  [*]snap  [ ]wheel" \
+      30 "***N64 Artwork***        [*]box  [*]cart  [*]snap  [ ]wheel" \
+      31 "Naomi Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
+      32 "NDS Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
+      33 "NeoGeo Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
+      34 "***NES Artwork***        [*]box  [ ]cart  [*]snap  [ ]wheel" \
+      35 "Openbor Artwork          [*]box  [ ]cart  [*]snap  [*]wheel" \
+      36 "***Oric Artwork***       [*]box  [*]cart  [*]snap  [ ]wheel" \
+      37 "***PC Engine Artwork***  [*]box  [*]cart  [*]snap  [ ]wheel" \
+      38 "PS1 Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
+      39 "Sega32x Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
+      40 "SegaCD Artwork           [*]box  [*]cart  [*]snap  [ ]wheel" \
+      41 "***SNES Artwork***       [*]box  [*]cart  [*]snap  [ ]wheel" \
+      42 "***TG 16 Artwork***      [*]box  [*]cart  [*]snap  [ ]wheel" \
+      43 "Wine Artwork             [*]box  [*]cart  [ ]snap  [ ]wheel" \
+      44 "***Wonderswan Artwork*** [*]box  [*]cart  [*]snap  [ ]wheel" \
+      45 "ZMachine Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
+      2&1 >/dev/tty)
 
     case "$choice" in
     1) download-art "amiga" "boxart" "cartart" "snap" "wheel" ;;
@@ -133,40 +134,41 @@ else
     8) download-art "atari7800" "cartart" "snap" "wheel" ;;
     9) download-art "atarilynx" "boxart" "cartart" "snap" ;;
     10) download-art "atarist" "boxart" "cartart" "snap" ;;
-    11) download-art "c64" "boxart" "cartart" "snap" ;;
-    12) download-art "coleco" "boxart" "cartart" "snap" ;;
-    13) download-art "daphne" "boxart" "cartart" "snap" ;;
-    14) download-art "dragon32" "boxart" "cartart" "snap" ;;
-    15) download-art "dreamcast" "boxart" "cartart" "snap" ;;
-    16) download-art "famicon" "boxart" "cartart" "snap" ;;
-    17) download-art "gameandwatch" "boxart" "cartart" "snap" ;;
-    18) download-art "gb" "boxart" "cartart" "snap" ;;
-    19) download-art "gba" "boxart" "cartart" "snap" ;;
-    20) download-art "gbc" "boxart" "cartart" "snap" ;;
-    21) download-art "gg" "boxart" "cartart" "snap" ;;
-    22) download-art "genesis" "boxart" "cartart" "snap" ;;
-    23) download-art "intellivision" "boxart" "cartart" "snap" ;;
-    24) download-art "lightgun" "boxart" "cartart" "snap" ;;
-    25) download-art "markiii" "boxart" "cartart" "snap" ;;
-    26) download-art "mastersystem" "boxart" "cartart" "snap" ;;
-    27) download-art "megadrive" "boxart" "cartart" "snap" ;;
-    28) download-art "msx2" "boxart" "wheel" "snap" ;;
-    29) download-art "n64" "boxart" "cartart" "snap" ;;
-    30) download-art "naomi" "boxart" "cartart" "snap" ;;
-    31) download-art "nds" "boxart" "cartart" "snap" ;;
-    32) download-art "neogeo" "boxart" "cartart" "snap" ;;
-    33) download-art "nes" "boxart" "cartart" "snap" ;;
-    34) download-art "openbor" "boxart" "cartart" "snap" ;;
-    35) download-art "oric" "boxart" "cartart" "snap" ;;
-    36) download-art "pc-engine" "boxart" "cartart" "snap" ;;
-    37) download-art "ps1" "boxart" "cartart" "snap" ;;
-    38) download-art "sega32x" "boxart" "cartart" "snap" ;;
-    39) download-art "segacd" "boxart" "cartart" "snap" ;;
-    40) download-art "snes" "boxart" "cartart" "snap" ;;
-    41) download-art "tg16" "boxart" "cartart" "snap" ;;
-    42) download-art "wine" "boxart" "cartart" "snap" ;;
-    43) download-art "wonderswan" "boxart" "cartart" "snap" ;;
-    44) download-art "zmachine" "boxart" "cartart" "snap" ;;
+    11) download-art "atomiswave" "boxart" "cartart" "snap" ;;
+    12) download-art "c64" "boxart" "cartart" "snap" ;;
+    13) download-art "coleco" "boxart" "cartart" "snap" ;;
+    14) download-art "daphne" "boxart" "cartart" "snap" ;;
+    15) download-art "dragon32" "boxart" "cartart" "snap" ;;
+    16) download-art "dreamcast" "boxart" "cartart" "snap" ;;
+    17) download-art "famicon" "boxart" "cartart" "snap" ;;
+    18) download-art "gameandwatch" "boxart" "cartart" "snap" ;;
+    19) download-art "gb" "boxart" "cartart" "snap" ;;
+    20) download-art "gba" "boxart" "cartart" "snap" ;;
+    21) download-art "gbc" "boxart" "cartart" "snap" ;;
+    22) download-art "gg" "boxart" "cartart" "snap" ;;
+    23) download-art "genesis" "boxart" "cartart" "snap" ;;
+    24) download-art "intellivision" "boxart" "cartart" "snap" ;;
+    25) download-art "lightgun" "boxart" "cartart" "snap" ;;
+    26) download-art "markiii" "boxart" "cartart" "snap" ;;
+    27) download-art "mastersystem" "boxart" "cartart" "snap" ;;
+    28) download-art "megadrive" "boxart" "cartart" "snap" ;;
+    29) download-art "msx2" "boxart" "wheel" "snap" ;;
+    30) download-art "n64" "boxart" "cartart" "snap" ;;
+    31) download-art "naomi" "boxart" "cartart" "snap" ;;
+    32) download-art "nds" "boxart" "cartart" "snap" ;;
+    33) download-art "neogeo" "boxart" "cartart" "snap" ;;
+    34) download-art "nes" "boxart" "cartart" "snap" ;;
+    35) download-art "openbor" "boxart" "cartart" "snap" ;;
+    36) download-art "oric" "boxart" "cartart" "snap" ;;
+    37) download-art "pc-engine" "boxart" "cartart" "snap" ;;
+    38) download-art "ps1" "boxart" "cartart" "snap" ;;
+    39) download-art "sega32x" "boxart" "cartart" "snap" ;;
+    40) download-art "segacd" "boxart" "cartart" "snap" ;;
+    41) download-art "snes" "boxart" "cartart" "snap" ;;
+    42) download-art "tg16" "boxart" "cartart" "snap" ;;
+    43) download-art "wine" "boxart" "cartart" "snap" ;;
+    44) download-art "wonderswan" "boxart" "cartart" "snap" ;;
+    45) download-art "zmachine" "boxart" "cartart" "snap" ;;
     *) break ;;
     esac
   done
