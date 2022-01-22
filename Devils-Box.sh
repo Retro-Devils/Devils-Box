@@ -270,7 +270,7 @@ else
       26 "MarkIII                            6MB       58 GAMES" \
       27 "Mastersystem                      35MB      280 GAMES" \
       28 "Genesis/Megadrive                409MB      561 GAMES" \
-      29 "Genesis/Megadrive-Japan          409MB      561 GAMES" \
+      29 "Genesis/Megadrive-Japan          149MB      278 GAMES" \
       30 "MSX                               30MB      708 GAMES" \
       31 "MSX 2                           6.24MB       83 GAMES" \
       32 "****Mugen****                    9.2GB      009 GAMES" \
@@ -279,7 +279,7 @@ else
       35 "Nintendo DS                        4GB      171 GAMES" \
       36 "NeoGeo                           2.3GB      142 GAMES" \
       37 "Neo Geo Pocket Color              21MB       40 GAMES" \
-      38 "Nintendo Entertainment System    100MB      850 GAMES" \
+      38 "Nintendo Entertainment System    100MB      869 GAMES" \
       39 "Openbor                         1.84GB       37 GAMES" \
       40 "Oric                             5.4MB      136 GAMES" \
       41 "Pokemini                         5.4MB       44 GAMES" \
@@ -290,8 +290,8 @@ else
       46 "Sega32x                           63MB       37 GAMES" \
       47 "SegaCD                            11GB       52 GAMES" \
       48 "Super Famicon                    475MB      487 GAMES" \
-      49 "SG-1000                          500MB      500 GAMES" \
-      50 "SNES                             500MB      500 GAMES" \
+      49 "SG-1000                            1MB       68 GAMES" \
+      50 "SNES                             508MB      603 GAMES" \
       51 "SuperGraffiix                    2.4MB        5 GAMES" \
       52 "Turbo Graffix 16                  20MB       94 GAMES" \
       53 "Vectrex                          201KB       20 GAMES" \
@@ -300,7 +300,7 @@ else
       56 "Dreamcast VMU                      3MB      115 GAMES" \
       57 "Wine                          SUB-MENU        9 GAMES" \
       58 "Wonderswan Color                 116MB       84 GAMES" \
-      59 "Sinclair X1                      7.6MB       69 GAMES" \
+      59 "Sharp X1                         7.6MB       69 GAMES" \
       60 "Sharp X68000                     504MB      418 GAMES" \
       61 "ZMachine                           4MB       30 GAMES" \
       62 "ZXSpectrum                        38MB     1111 GAMES" \
