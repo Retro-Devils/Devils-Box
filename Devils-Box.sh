@@ -25,7 +25,6 @@ omxplayer ~/Devils-Box/files/intro.mp4
 ###   NET CHECKER    ###
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
-  echo "Online ... Downloads Sections Are Availible"
   NETCHECK=0
 else
   NETCHECK=1
@@ -421,7 +420,9 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 -If you move game folder change .sh script accordingly.
 -Thanks for using have a good day." 0 0
 
-    whiptail --clear --title "WINE DOWNLOAD MENU" --separate-output --checklist "Choose:" 0 0 0 \
+    whiptail --clear --title "WINE DOWNLOAD MENU" --separate-output \
+                --ok-button Download --cancel-button Consoles-Menu \
+                --checklist "Choose:" 0 0 0 \
                 "1" "Age Of Empires                    215MB" off \
                 "2" "Age Of Empires 2                  6.1GB" off \
                 "3" "Command & Conquer TS              1.3GB" off \
@@ -534,8 +535,9 @@ else
 local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED CONSOLES DOWNLOAD MENU " \
-      --ok-label Download --cancel-label Main-Menu \
+    whiptail --clear --backtitle "$BACKTITLE" --title "HACKED CONSOLES DOWNLOAD MENU" --separate-output \
+     --ok-button Download --cancel-button Main-Menu \
+     --checklist "Choose:" 0 0 0 \
       --menu " PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
       1 "Gameboy Advance Hacks                  195MB     26 GAMES " \
       2 "Gameboy Hacks                            4MB     19 GAMES " \
@@ -543,7 +545,7 @@ local choice
       4 "Gamegear Hacks                           1MB      4 GAMES " \
       5 "NES Hacks                              962KB      6 GAMES " \
       6 "SNES Hacks                              40MB      37 GAMES" \
-      2>&1 >/dev/tty)
+      2>/tmp/results
 
     case "$choice" in
     1) download-packs "gbah" ;;
@@ -554,7 +556,7 @@ local choice
     6) download-packs "snesh" ;;
     *) break ;;
     esac
-  done
+  done < /tmp/results
 fi
 }
 
