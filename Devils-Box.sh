@@ -1,6 +1,7 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
-BACKTITLE="DEVILS BOX"
+BACKTITLE="DEVILS BOX V-2.3
+UPDATED 1/22/21"
 ##-------------------------##
 ##       HOST SITES        ##
 ##-------------------------##
@@ -38,9 +39,9 @@ function main_menu() {
   local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title "|DEVILS BOX 2.3|----|1/19/22|" \
+    choice=$(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
       --ok-label Select --cancel-label Exit-Devils-Box \
-      --menu "--DEVILS BOX.......................MAIN MENU--" 25 50 40 \
+      --menu "WELCOME " 25 50 40 \
       - "----Downloaders----" \
       1 "Artwork Packs" \
       2 "Console Packs" \
@@ -535,7 +536,7 @@ else
 local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED CONSOLES DOWNLOAD MENU " \
+    choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED PACKS DOWNLOAD MENU " \
      --ok-button Download --cancel-button Main-Menu \
      --menu " PRESS A/ENTER TO DOWNLOAD PACK" 0 0 0 \
       1 "Gameboy Advance Hacks                  195MB     26 GAMES " \
