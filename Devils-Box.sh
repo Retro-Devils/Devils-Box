@@ -243,10 +243,10 @@ else
       --ok-label Download --cancel-label Main-Menu \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK..........****MEANS COMING SOON" 40 75 60 \
       1 "Amiga                            300MB      340 GAMES" \
-      2 "Arcadia                          201KB       47 GAMES" \
-      3 "AmigaCD                          461MB      133 GAMES" \
+      2 "AmigaCD32                        461MB      133 GAMES" \
+      3 "Amstrad CPC                      614MB     3264 GAMES" \
       4 "Arcade                           8.4GB     2361 GAMES" \
-      5 "AmstradPC                        700MB     3624 GAMES" \
+      5 "Arcadia                          201KB       47 GAMES" \
       6 "Atari800                         770MB      650 GAMES" \
       7 "Atari2600                        2.6MB      615 GAMES" \
       8 "Atari5200                         70MB      080 GAMES" \
@@ -259,65 +259,67 @@ else
       15 "Dreamcast                       12.7GB       19 GAMES" \
       16 "Electron                         2.5MB      152 GAMES" \
       17 "Famicon                           19MB      169 GAMES" \
-      18 "FDS                                2MB       43 GAMES" \
+      18 "Famicom Disk                       2MB       43 GAMES" \
       19 "Game and Watch                    48MB       53 GAMES" \
       20 "Gameboy                           42MB      565 GAMES" \
       21 "Gameboy Advance                  3.4GB     1006 GAMES" \
-      21 "Gameboy Color                    232MB      538 GAMES" \
+      22 "Gameboy Color                    232MB      538 GAMES" \
       23 "Gamegear                          42MB      249 GAMES" \
       24 "Intellivision                      1MB       62 GAMES" \
       25 "****Lightgun****                  ??GB       ?? GAMES" \
       26 "MarkIII                            6MB       58 GAMES" \
       27 "Mastersystem                      35MB      280 GAMES" \
-      28 "Megadrive/Genesis                409MB      561 GAMES" \
-      29 "MSX                               30MB      708 GAMES" \
-      30 "MSX 2                           6.24MB       83 GAMES" \
-      31 "****Mugen****                    9.2GB      009 GAMES" \
-      32 "Neo Geo Pocket Color              21MB       40 GAMES" \
+      28 "Genesis/Megadrive                409MB      561 GAMES" \
+      29 "Genesis/Megadrive-Japan          409MB      561 GAMES" \
+      30 "MSX                               30MB      708 GAMES" \
+      31 "MSX 2                           6.24MB       83 GAMES" \
+      32 "****Mugen****                    9.2GB      009 GAMES" \
       33 "Nintendo 64                      5.0GB      338 GAMES" \
       34 "Naomi                            1.5GB       15 GAMES" \
       35 "Nintendo DS                        4GB      171 GAMES" \
       36 "NeoGeo                           2.3GB      142 GAMES" \
-      37 "Nintendo Entertainment System    100MB      850 GAMES" \
-      38 "Openbor                         1.84GB       37 GAMES" \
-      39 "Oric                             5.4MB      136 GAMES" \
-      40 "Pokemini                         5.4MB       44 GAMES" \
-      41 "PS1                                3GB       29 GAMES" \
-      42 "Sega Saturn                      108GB      303 GAMES" \
-      43 "Sega Staurn Japan                3.9GB       18 GAMES" \
-      44 "ScummVM                          2.5GB       21 GAMES" \
-      45 "Sega32x                           63MB       37 GAMES" \
-      46 "SegaCD                            11GB       52 GAMES" \
-      47 "Super Famicon                    475MB      487 GAMES" \
-      48 "SNES                             500MB      500 GAMES" \
-      49 "SuperGraffiix                    2.4MB        5 GAMES" \
-      50 "Turbo Graffix 16                  20MB       94 GAMES" \
-      51 "Vectrex                          201KB       20 GAMES" \
-      52 "VideoPAC                         430KB       99 GAMES" \
-      53 "Virtual Boy                        8MB       24 GAMES" \
-      54 "Dreamcast VMU                      3MB      115 GAMES" \
-      55 "Wine                          SUB-MENU        9 GAMES" \
-      56 "Wonderswan Color                 116MB       84 GAMES" \
-      57 "Sinclair X1                      7.6MB       69 GAMES" \
-      58 "Sharp X68000                     504MB      418 GAMES" \
-      59 "ZMachine                           4MB       30 GAMES" \
-      60 "ZXSpectrum                        38MB     1111 GAMES" \
+      37 "Neo Geo Pocket Color              21MB       40 GAMES" \
+      38 "Nintendo Entertainment System    100MB      850 GAMES" \
+      39 "Openbor                         1.84GB       37 GAMES" \
+      40 "Oric                             5.4MB      136 GAMES" \
+      41 "Pokemini                         5.4MB       44 GAMES" \
+      42 "PlayStation 1                      3GB       29 GAMES" \
+      43 "Sega Saturn                      108GB      303 GAMES" \
+      44 "Sega Staurn Japan                3.9GB       18 GAMES" \
+      45 "ScummVM                          2.5GB       21 GAMES" \
+      46 "Sega32x                           63MB       37 GAMES" \
+      47 "SegaCD                            11GB       52 GAMES" \
+      48 "Super Famicon                    475MB      487 GAMES" \
+      49 "SG-1000                          500MB      500 GAMES" \
+      50 "SNES                             500MB      500 GAMES" \
+      51 "SuperGraffiix                    2.4MB        5 GAMES" \
+      52 "Turbo Graffix 16                  20MB       94 GAMES" \
+      53 "Vectrex                          201KB       20 GAMES" \
+      54 "VideoPAC                         430KB       99 GAMES" \
+      55 "Virtual Boy                        8MB       24 GAMES" \
+      56 "Dreamcast VMU                      3MB      115 GAMES" \
+      57 "Wine                          SUB-MENU        9 GAMES" \
+      58 "Wonderswan Color                 116MB       84 GAMES" \
+      59 "Sinclair X1                      7.6MB       69 GAMES" \
+      60 "Sharp X68000                     504MB      418 GAMES" \
+      61 "ZMachine                           4MB       30 GAMES" \
+      62 "ZXSpectrum                        38MB     1111 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) download-packs "amiga" ;;
-    2) download-packs "arcadia" ;;
-    3) download-packs "amigacd" ;;
-    4) download-packs "arcade" ;;
-    5) download-packs "amstradpc" ;;
-    6) download-packs "atari800" ;;
+    2) download-packs "amigacd32" ;;
+    3) download-packs "amstradcpc" ;;
+    4) download-packs "arcadia" ;;
+    5) download-packs "arcade" ;;
+    6) download-packs-alt "atari800" ;;
     7) download-packs "atari2600" ;;
-    8) download-packs "atari5200" ;;
+    8) download-packs-alt "atari5200" ;;
     9) download-packs "atari7800" ;;
     10) download-packs "atarilynx" ;;
     11) download-packs "atomiswave" ;;
     12) download-packs "c64" ;;
-    13) download-packs "colecovision" ;;
+    13) download-packs "coleco" ;;
     14) download-packs "dragon32" ;;
     15) download-packs "dreamcast" ;;
     16) download-packs "electron" ;;
@@ -327,44 +329,46 @@ else
     20) download-packs "gb" ;;
     21) download-packs "gba" ;;
     22) download-packs "gbc" ;;
-    23) download-packs "gg" ;;
+    23) download-packs "gamegear" ;;
     24) download-packs "intellivision" ;;
     25) download-packs "lightgun" ;;
-    26) download-packs "mark3" ;;
+    26) download-packs "markiii" ;;
     27) download-packs "mastersystem" ;;
     28) download-packs "megadrive" ;;
-    29) download-packs "msx" ;;
-    30) download-packs "msx2" ;;
-    31) download-packs "mugen" ;;
-    32) download-packs "ngpc" ;;
+    29) download-packs "megadrive-japan" ;;
+    30) download-packs "msx" ;;
+    31) download-packs "msx2" ;;
+    32) download-packs "mugen" ;;
     33) download-packs "n64" ;;
     34) download-packs "naomi" ;;
     35) download-packs "nds" ;;
     36) download-packs "neogeo" ;;
     37) download-packs "nes" ;;
-    38) download-packs "openbor" ;;
-    39) download-packs "oric" ;;
-    40) download-packs "pokemini" ;;
-    41) download-packs "ps1" ;;
-    42) download-packs "saturn" ;;
-    43) download-packs "saturn-japan" ;;
-    44) download-packs "scummvm" ;;
-    45) download-packs "sega32" ;;
-    46) download-packs "segacd" ;;
-    47) download-packs "sfs" ;;
-    48) download-packs "snes" ;;
-    49) download-packs "supergrafx" ;;
-    50) download-packs "tg16" ;;
-    51) download-packs "vectrex" ;;
-    52) download-packs "videopac" ;;
-    53) download-packs "virtual-boy" ;;
-    54) download-packs "vmu" ;;
-    55) wine "wine" ;;
-    56) download-packs "wonderswan" ;;
-    57) download-packs "x1" ;;
-    58) download-packs "x68000" ;;
-    59) download-packs "zmachine" ;;
-    60) download-packs "zxspectrum" ;;
+    38) download-packs "ngpc" ;;
+    39) download-packs "openbor" ;;
+    40) download-packs "oric" ;;
+    41) download-packs "pokemini" ;;
+    42) download-packs "psx" ;;
+    43) download-packs "saturn" ;;
+    44) download-packs "saturn-japan" ;;
+    45) download-packs "scummvm" ;;
+    46) download-packs "sega32" ;;
+    47) download-packs "segacd" ;;
+    48) download-packs "sfc" ;;
+    49) download-packs "sg-1000" ;;
+    50) download-packs "snes" ;;
+    51) download-packs "supergrafx" ;;
+    52) download-packs "tg16" ;;
+    53) download-packs "vectrex" ;;
+    54) download-packs "videopac" ;;
+    55) download-packs "virtualboy" ;;
+    56) download-packs "vmu" ;;
+    57) wine "wine" ;;
+    58) download-packs "wonderswancolor" ;;
+    59) download-packs "x1" ;;
+    60) download-packs "x68000" ;;
+    61) download-packs "zmachine" ;;
+    62) download-packs "zxspectrum" ;;
     *) break ;;
     esac
    done
