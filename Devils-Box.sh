@@ -537,8 +537,7 @@ local choice
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED CONSOLES DOWNLOAD MENU " \
      --ok-button Download --cancel-button Main-Menu \
-     --checklist "Choose:" 0 0 0 \
-      --menu " PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
+     --menu " PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
       1 "Gameboy Advance Hacks                  195MB     26 GAMES " \
       2 "Gameboy Hacks                            4MB     19 GAMES " \
       3 "Genesis Hacks                          197MB    191 GAMES " \
