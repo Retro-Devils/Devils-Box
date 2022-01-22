@@ -314,13 +314,13 @@ else
     3) download-packs "amstradcpc" ;;
     4) download-packs "arcadia" ;;
     5) download-packs "arcade" ;;
-    6) download-packs-alt "arstrocade" ;;
-    7) download-packs-alt "atari800" ;;
+    6) download-packs "arstrocade" ;;
+    7) download-packs "atari800" ;;
     8) download-packs "atari2600" ;;
-    9) download-packs-alt "atari5200" ;;
+    9) download-packs "atari5200" ;;
     10) download-packs "atari7800" ;;
     11) download-packs "atarilynx" ;;
-    12) download-packs-alt "atarist" ;;
+    12) download-packs "atarist" ;;
     13) download-packs "atomiswave" ;;
     14) download-packs "c64" ;;
     15) download-packs "coleco" ;;
