@@ -537,13 +537,13 @@ local choice
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED CONSOLES DOWNLOAD MENU " \
      --ok-button Download --cancel-button Main-Menu \
-     --menu " PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
+     --menu " PRESS A/ENTER TO DOWNLOAD PACK" 0 0 0 \
       1 "Gameboy Advance Hacks                  195MB     26 GAMES " \
       2 "Gameboy Hacks                            4MB     19 GAMES " \
       3 "Genesis Hacks                          197MB    191 GAMES " \
       4 "Gamegear Hacks                           1MB      4 GAMES " \
       5 "NES Hacks                              962KB      6 GAMES " \
-      6 "SNES Hacks                              40MB      37 GAMES" \
+      6 "SNES Hacks                              40MB     37 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -870,7 +870,7 @@ function show_disk() {
   top -bn1 | grep load | awk '{printf "CPU Load: %.2f\n", $(NF-2)}'
   cpu_temp=$(</sys/class/thermal/thermal_zone0/temp)
   cpu_temp=$(($cpu_temp / 1000))
-  echo Temp: $cpu_tempÂ°C
+  echo Temp: $cpu_tempÃ‚Â°C
   sleep 8
 }
 
