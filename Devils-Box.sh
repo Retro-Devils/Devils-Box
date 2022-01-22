@@ -80,6 +80,7 @@ else
       --ok-label Download --cancel-label Main-Menu \
       --menu "[*] MEANS PACK INCLUDES..........[ ] MEANS PACK DOESNT INCLUDE  		
                   --PRESS A/ENTER TO DOWNLOAD.......***MEANS COMING SOON" 40 75 60 \
+      - "-----------------Consoles-Regular-Artwork------------------" \
       1 "Amiga Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
       2 "AmigaCD32 Artwork        [*]box  [*]cart  [*]snap  [ ]wheel" \
       3 "***Amstrad CPC***        [*]box  [*]cart  [*]snap  [*]wheel" \
@@ -146,76 +147,91 @@ else
       64 "Sharp x68000 Artwork     [*]box  [ ]cart  [*]snap  [*]wheel" \
       65 "ZMachine Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
       66 "ZXspectrum Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
+      + "-------------------Consoles-Hacks-Arwork--------------------" \
+      67 "GBA Hacks Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
+      68 "GameBoy Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
+      69 "Genesis Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
+      70 "Gamegear Hacks Artwork   [*]box  [*]cart  [*]snap  [*]wheel" \
+      71 "NES Hacks Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
+      72 "SNES Hacks Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
       2<&1 >/dev/tty)
 
     case "$choice" in
-    1) download-art "amiga" "boxart" "cartart" "snap" "wheel" ;;
-    2) download-art "amigacd32" "media" ;;
-    3) download-art "amstradcpc" "boxart" "cartart" "snap" "wheel" ;;
-    4) download-art "arcadia" "media" ;;
-    5) download-art "arcade" "boxart" "cartart" "snap" "wheel" ;;
-    6) download-art "astrocade" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    7) download-art "atari800" "boxart" "cartart" "snap" ;;
-    8) download-art "atari2600" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    9) download-art "atari5200" "boxart" "cartart" "snap" "wheel" ;;
-    10) download-art "atari7800" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    11) download-art "atarilynx" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    12) download-art "atarist" "boxart" "cartart" "snap" ;;
-    13) download-art "atomiswave" "boxart" "flyer" "snap" "wheel" ;;
-    14) download-art "c64" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    15) download-art "coleco" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    16) download-art "daphne" "boxart" "cartart" "snap" ;;
-    17) download-art "dragon32" "media" ;;
-    18) download-art "dreamcast" "images" "videos" ;;
-    19) download-art "electron" "snap" "wheel" ;;
-    20) download-art "famicon" "media" ;;
-    21) download-art "fds" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    22) download-art "gameandwatch" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    23) download-art "gb" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    24) download-art "gba" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    25) download-art "gbc" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    26) download-art "gamegear" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    27) download-art "genesis" "boxart" "cartart" "snap" ;;
-    28) download-art "intellivision" "boxart" "wheel" ;;
-    29) download-art "lightgun" "boxart" "cartart" "snap" ;;
-    30) download-art "markiii" "boxart" "cartart" "snap" ;;
-    31) download-art "mastersystem" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    32) download-art "megadrive" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    33) download-art "megadrive-japan" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    34) download-art "msx" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    35) download-art "msx2" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    36) download-art "n64" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    37) download-art "naomi" "boxart" "flyer" "snap" "wheel" ;;
-    38) download-art "nds" "boxart" "cartart" "snap" ;;
-    39) download-art "neogeo" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    40) download-art "nes" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    41) download-art "ngpc" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    42) download-art "openbor" "boxart" "snap" "wheel" ;;
-    43) download-art "oric" "media" ;;
-    44) download-art "pokemini" "media" ;;
-    45) download-art "pc-engine" "boxart" "cartart" "snap" ;;
-    46) download-art "psx" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    47) download-art "saturn" "boxart" "images" "videos" "wheel" ;;
-    48) download-art "saturn-japan" "images" "videos" ;;
-    49) download-art "scummvm" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    50) download-art "sega32x" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    51) download-art "segacd" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    52) download-art "sfc" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    53) download-art "sg-1000" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    54) download-art "snes" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    55) download-art "supergrafx" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    56) download-art "tg16" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    57) download-art "vectrex" "boxart" "cartart" "snap" "wheel" ;;
-    58) download-art "videopac" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    59) download-art "virtualboy" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    60) download-art "vmu" "images" ;;
-    61) download-art "wine" "boxart" ;;
-    62) download-art "wonderswancolor" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-    63) download-art "x1" "boxart" "flyer" "snap" "wheel" ;;
-    64) download-art "x68000" "boxart" "snap" "wheel" ;;
-    65) download-art "zmachine" "boxart" "cartart" "snap" ;;
-    66) download-art "zxspectrum" "boxart" "snap" "wheel" ;;
-    *) break ;;
+      1) download-art "amiga" "boxart" "cartart" "snap" "wheel" ;;
+      2) download-art "amigacd32" "media" ;;
+      3) download-art "amstradcpc" "boxart" "cartart" "snap" "wheel" ;;
+      4) download-art "arcadia" "media" ;;
+      5) download-art "arcade" "boxart" "cartart" "snap" "wheel" ;;
+      6) download-art "astrocade" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      7) download-art "atari800" "boxart" "cartart" "snap" ;;
+      8) download-art "atari2600" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      9) download-art "atari5200" "boxart" "cartart" "snap" "wheel" ;;
+      10) download-art "atari7800" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      11) download-art "atarilynx" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      12) download-art "atarist" "boxart" "cartart" "snap" ;;
+      13) download-art "atomiswave" "boxart" "flyer" "snap" "wheel" ;;
+      14) download-art "c64" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      15) download-art "coleco" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      16) download-art "daphne" "boxart" "cartart" "snap" ;;
+      17) download-art "dragon32" "media" ;;
+      18) download-art "dreamcast" "images" "videos" ;;
+      19) download-art "electron" "snap" "wheel" ;;
+      20) download-art "famicon" "media" ;;
+      21) download-art "fds" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      22) download-art "gameandwatch" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      23) download-art "gb" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      24) download-art "gba" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      25) download-art "gbc" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      26) download-art "gamegear" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      27) download-art "genesis" "boxart" "cartart" "snap" ;;
+      28) download-art "intellivision" "boxart" "wheel" ;;
+      29) download-art "lightgun" "boxart" "cartart" "snap" ;;
+      30) download-art "markiii" "boxart" "cartart" "snap" ;;
+      31) download-art "mastersystem" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      32) download-art "megadrive" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      33) download-art "megadrive-japan" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      34) download-art "msx" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      35) download-art "msx2" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      36) download-art "n64" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      37) download-art "naomi" "boxart" "flyer" "snap" "wheel" ;;
+      38) download-art "nds" "boxart" "cartart" "snap" ;;
+      39) download-art "neogeo" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      40) download-art "nes" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      41) download-art "ngpc" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      42) download-art "openbor" "boxart" "snap" "wheel" ;;
+      43) download-art "oric" "media" ;;
+      44) download-art "pokemini" "media" ;;
+      45) download-art "pc-engine" "boxart" "cartart" "snap" ;;
+      46) download-art "psx" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      47) download-art "saturn" "boxart" "images" "videos" "wheel" ;;
+      48) download-art "saturn-japan" "images" "videos" ;;
+      49) download-art "scummvm" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      50) download-art "sega32x" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      51) download-art "segacd" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      52) download-art "sfc" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      53) download-art "sg-1000" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      54) download-art "snes" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      55) download-art "supergrafx" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      56) download-art "tg16" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      57) download-art "vectrex" "boxart" "cartart" "snap" "wheel" ;;
+      58) download-art "videopac" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      59) download-art "virtualboy" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      60) download-art "vmu" "images" ;;
+      61) download-art "wine" "boxart" ;;
+      62) download-art "wonderswancolor" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      63) download-art "x1" "boxart" "flyer" "snap" "wheel" ;;
+      64) download-art "x68000" "boxart" "snap" "wheel" ;;
+      65) download-art "zmachine" "boxart" "cartart" "snap" ;;
+      66) download-art "zxspectrum" "boxart" "snap" "wheel" ;;
+      67) download-art "gbah" "boxart" "cartart" "snap" "wheel" ;;
+      67) download-art "gbh" "boxart" "cartart" "snap" "wheel" ;;
+      68) download-art "genh" "boxart" "cartart" "snap" "wheel" ;;
+      69) download-art "ggh" "boxart" "cartart" "snap" "wheel" ;;
+      70) download-art "nesh" "boxart" "cartart" "snap" "wheel" ;;
+      71) download-art "snesh" "boxart" "cartart" "flyer" "snap" "wheel" ;;
+      -) none  ;;
+      +) nono  ;;
+      *) break ;;
     esac
   done
 fi
