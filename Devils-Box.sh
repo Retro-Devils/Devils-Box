@@ -147,7 +147,7 @@ else
       64 "Sharp x68000 Artwork     [*]box  [ ]cart  [*]snap  [*]wheel" \
       65 "ZMachine Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
       66 "ZXspectrum Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
-      + "-------------------Consoles-Hacks-Arwork--------------------" \
+      + "-------------------Consoles-Hacks-Artwork-------------------" \
       67 "GBA Hacks Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
       68 "GameBoy Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
       69 "Genesis Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
