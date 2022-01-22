@@ -535,7 +535,7 @@ else
 local choice
 
   while true; do
-    whiptail --clear --backtitle "$BACKTITLE" --title "HACKED CONSOLES DOWNLOAD MENU" --separate-output \
+    choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED CONSOLES DOWNLOAD MENU " \
      --ok-button Download --cancel-button Main-Menu \
      --checklist "Choose:" 0 0 0 \
       --menu " PRESS A/ENTER TO DOWNLOAD PACK" 40 75 60 \
@@ -545,7 +545,7 @@ local choice
       4 "Gamegear Hacks                           1MB      4 GAMES " \
       5 "NES Hacks                              962KB      6 GAMES " \
       6 "SNES Hacks                              40MB      37 GAMES" \
-      2>/tmp/results
+      2>&1 >/dev/tty)
 
     case "$choice" in
     1) download-packs "gbah" ;;
@@ -556,7 +556,7 @@ local choice
     6) download-packs "snesh" ;;
     *) break ;;
     esac
-  done < /tmp/results
+  done
 fi
 }
 
