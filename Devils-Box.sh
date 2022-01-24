@@ -273,7 +273,7 @@ else
       14 "Commadore64                      9.5MB      144 GAMES" \
       15 "Colecovision                     2.7MB      146 GAMES" \
       16 "Dragon32                         897KB       51 GAMES" \
-      17 "Dreamcast                       12.7GB       19 GAMES" \
+      17 "Dreamcast                       12.6GB       19 GAMES" \
       18 "Electron                         2.5MB      152 GAMES" \
       19 "Famicon                           19MB      169 GAMES" \
       20 "Famicom Disk                       2MB       43 GAMES" \
