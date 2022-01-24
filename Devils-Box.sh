@@ -473,7 +473,7 @@ sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_AoE2.zip
 function cuphead() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Cuphead.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Cuphead.zip -d ~/RetroPie/roms/wine/
-chmod 755 ~/RetroPie/roms/wine/Cuphead/Cuohead.exe
+chmod 755 ~/RetroPie/roms/wine/Cuphead/Cuphead.exe
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Cuphead.zip
 }
 https://archive.org/download/retro-devils-winegames/Retro-Devils_Cuphead.zip
