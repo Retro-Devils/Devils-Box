@@ -27,7 +27,7 @@ WHAT DOES THIS WORK ON?
 	- Android Variant (Slighly Different)
 		** Download .apk from "archive.org/download/bad-droid" 
 		 * You will see "Devils-Box-V1.zip". 
-		 * Download, unzip, transfer to android device and install. 
+		 * Download, unzip, transfer to android device and install. 		 
 WHY USE THIS ARTWORK INSTEAD OF SCRAPER?
 	- This art is set for these roms. So they will look nice. Scraper works and props to it.
 
@@ -38,11 +38,17 @@ __CREDITS______________________________________________________CREDITS__
 	**example. RetroPie Extras says "Zero Jay" at the far right of that line.
 
 --MISC CREDITS:
--ALL THE RETRO DEVILS                   -RETROPIE----FOR EVERYTHING YOU DO 
+-ALL THE RETRO DEVILS.      - COMMUNITY----INPUT IN GENERAL
 
--CRASH----SCRIPTING KNOWLEDGE & ADVICE  -COMMUNITY----INPUT IN GENERAL
+-RETROPIE----FOR EVERYTHING YOU DO 
 
--BIGED----SCRIPTING KNOWLEDE & ADVICE   -RETROPIE----FOR EVERYTHING THEY DO 
+-CRASH----SCRIPTING KNOWLEDGE & ADVICE  
+
+-BIGED----SCRIPTING KNOWLEDE & ADVICE   
+
+-MONK OF THE FUNK----SCRIPTING KNOWLEDGE & ADVICE 
+
+-SOLARBABY----SCRIPTING KNOWLEDGE & ADVICE
 
 __NOTES_________________________________________________________NOTES__
 -----------------------------------------------------------------------
@@ -52,5 +58,6 @@ ____I FEEL LIKE A SLICE OF BUTTER, ON A BIG OF PILE OF FLAPJACKS_______
 -----------------------------------------------------------------------
 ____WINNERS DONT DO DRUGS OR PIRATE MOVIES? GUESS WE LOSERS____________
 -----------------------------------------------------------------------
+____WHO ARE THE DEVILS? DEFINITELY FROM THE LEAF VILLAGE_______________
 
 
