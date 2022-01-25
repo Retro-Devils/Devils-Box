@@ -25,7 +25,7 @@ PC_HOST="https://archive.org/download/the-devils-box-alt"
 
 ###  INTRO VIDEO     ###
 clear
-omxplayer $HOME/Devils-Box/files/intro.mp4
+omxplayer "$HOME"/Devils-Box/files/intro.mp4
 ###   NET CHECKER    ###
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
@@ -448,86 +448,86 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 fi
 }
 function aoe() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE.zip -P $HOME/RetroPie/roms/wine
-unzip -o $HOME/RetroPie/roms/wine/Retro-Devils_AoE.zip -d $HOME/RetroPie/roms/wine/games/
-mv $HOME/RetroPie/roms/wine/games/aoe.sh -f $HOME/RetroPie/roms/wine/Age-Of-Empires.sh
-mv $HOME/RetroPie/roms/wine/games/aoee.sh -f $HOME/RetroPie/roms/wine/Age-Of-Empires-Rise-of-Rome.sh
-chmod 755 $HOME/RetroPie/roms/wine/Age-Of-Empires.sh
-chmod 755 $HOME/RetroPie/roms/wine/Age-Of-Empires-The-Rise-Of-Rome.sh
-sudo rm -r $HOME/RetroPie/roms/wine/Retro-Devils_AoE.zip
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_AoE.zip -d "$HOME"/RetroPie/roms/wine/games/
+mv "$HOME"/RetroPie/roms/wine/games/aoe.sh -f "$HOME"/RetroPie/roms/wine/Age-Of-Empires.sh
+mv "$HOME"/RetroPie/roms/wine/games/aoee.sh -f "$HOME"/RetroPie/roms/wine/Age-Of-Empires-Rise-of-Rome.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Age-Of-Empires.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Age-Of-Empires-The-Rise-Of-Rome.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_AoE.zip
 }
 function aoe-2() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE2.zip -P $HOME/RetroPie/roms/wine
-unzip -o $HOME/RetroPie/roms/wine/Retro-Devils_AoE2.zip -d $HOME/RetroPie/roms/wine/games/
-mv $HOME/RetroPie/roms/wine/games/aoe2.sh -f $HOME/RetroPie/roms/wine/Age-Of-Empires-2.sh
-mv $HOME/RetroPie/roms/wine/games/aoe2e.sh -f $HOME/RetroPie/roms/wine/Age-Of-Empires-2-The-Conquerors.sh
-chmod 755 $HOME/RetroPie/roms/wine/Age-Of-Empires-2.sh
-chmod 755 $HOME/RetroPie/roms/wine/Age-Of-Empires-2-The-Conquerors.sh
-sudo rm -r $HOME/RetroPie/roms/wine/Retro-Devils_AoE2.zip
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE2.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_AoE2.zip -d "$HOME"/RetroPie/roms/wine/games/
+mv "$HOME"/RetroPie/roms/wine/games/aoe2.sh -f "$HOME"/RetroPie/roms/wine/Age-Of-Empires-2.sh
+mv "$HOME"/RetroPie/roms/wine/games/aoe2e.sh -f "$HOME"/RetroPie/roms/wine/Age-Of-Empires-2-The-Conquerors.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Age-Of-Empires-2.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Age-Of-Empires-2-The-Conquerors.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_AoE2.zip
 }
 function cuphead() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Cuphead.zip -P $HOME/RetroPie/roms/wine
-unzip -o $HOME/RetroPie/roms/wine/Retro-Devils_Cuphead.zip -d $HOME/RetroPie/roms/wine/games/
-mv $HOME/RetroPie/roms/wine/games/cuphead.sh -f $HOME/RetroPie/roms/wine/Cuphead.sh
-chmod 755 $HOME/RetroPie/roms/wine/Cuphead.sh
-chmod 755 $HOME/RetroPie/roms/wine/Cuphead/Cuphead.exe
-sudo rm -r $HOME/RetroPie/roms/wine/Retro-Devils_Cuphead.zip
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Cuphead.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Cuphead.zip -d "$HOME"/RetroPie/roms/wine/games/
+mv "$HOME"/RetroPie/roms/wine/games/cuphead.sh -f "$HOME"/RetroPie/roms/wine/Cuphead.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Cuphead.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Cuphead/Cuphead.exe
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Cuphead.zip
 }
 function cncts() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_CNCTS.zip -P $HOME/RetroPie/roms/wine
-unzip -o $HOME/RetroPie/roms/wine/Retro-Devils_CNCTS.zip -d $HOME/RetroPie/roms/wine/games/
-mv $HOME/RetroPie/roms/wine/games/cncts.sh -f $HOME/RetroPie/roms/wine/Command-&-Conquer-TS.sh
-chmod 755 $HOME/RetroPie/roms/wine/Command-&-Conquer-TS.sh
-sudo rm -r $HOME/RetroPie/roms/wine/Retro-Devils_CNCTS.zip
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_CNCTS.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_CNCTS.zip -d "$HOME"/RetroPie/roms/wine/games/
+mv "$HOME"/RetroPie/roms/wine/games/cncts.sh -f "$HOME"/RetroPie/roms/wine/Command-And-Conquer-TS.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Command-And-Conquer-TS.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_CNCTS.zip
 }
 function diablo-2() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Diablo2.zip -P $HOME/RetroPie/roms/wine
-unzip -o $HOME/RetroPie/roms/wine/Retro-Devils_Diablo2.zip -d $HOME/RetroPie/roms/wine/games/
-mv $HOME/RetroPie/roms/wine/games/diablo2.sh -f $HOME/RetroPie/roms/wine/Diablo-2.sh
-chmod 755 $HOME/RetroPie/roms/wine/Diablo-2.sh
-sudo rm -r $HOME/RetroPie/roms/wine/Retro-Devils_Diablo2.zip
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Diablo2.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Diablo2.zip -d "$HOME"/RetroPie/roms/wine/games/
+mv "$HOME"/RetroPie/roms/wine/games/diablo2.sh -f "$HOME"/RetroPie/roms/wine/Diablo-2.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Diablo-2.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Diablo2.zip
 }
 function fallout() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Fallout.zip -P $HOME/RetroPie/roms/wine
-unzip -o $HOME/RetroPie/roms/wine/Retro-Devils_Fallout.zip -d $HOME/RetroPie/roms/wine/games/
-mv $HOME/RetroPie/roms/wine/games/fallout.sh -f $HOME/RetroPie/roms/wine/Fallout.sh
-chmod 755 $HOME/RetroPie/roms/wine/Fallout.sh
-sudo rm -r $HOME/RetroPie/roms/wine/Retro-Devils_Fallout.zip
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Fallout.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Fallout.zip -d "$HOME"/RetroPie/roms/wine/games/
+mv "$HOME"/RetroPie/roms/wine/games/fallout.sh -f "$HOME"/RetroPie/roms/wine/Fallout.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Fallout.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Fallout.zip
 }
 function fallout-2() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Fallout2.zip -P $HOME/RetroPie/roms/wine
-unzip -o $HOME/RetroPie/roms/wine/Retro-Devils_CNCTS.zip -d $HOME/RetroPie/roms/wine/games/
-mv $HOME/RetroPie/roms/wine/games/fallout2.sh -f $HOME/RetroPie/roms/wine/Fallout-2.sh
-chmod 755 $HOME/RetroPie/roms/wine/Fallout-2.sh
-sudo rm -r $HOME/RetroPie/roms/wine/Retro-Devils_Fallout2.zip
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Fallout2.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_CNCTS.zip -d "$HOME"/RetroPie/roms/wine/games/
+mv "$HOME"/RetroPie/roms/wine/games/fallout2.sh -f "$HOME"/RetroPie/roms/wine/Fallout-2.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Fallout-2.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Fallout2.zip
 }
 function fallout-tactics() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_FalloutTactics.zip -P $HOME/RetroPie/roms/wine
-unzip -o $HOME/RetroPie/roms/wine/Retro-Devils_FalloutTactics.zip -d $HOME/RetroPie/roms/wine/games/
-mv $HOME/RetroPie/roms/wine/games/fallouttactics.sh -f $HOME/RetroPie/roms/wine/Fallout-Tactics.sh
-chmod 755 $HOME/RetroPie/roms/wine/Fallout-Tactics.sh
-sudo rm -r $HOME/RetroPie/roms/wine/Retro-Devils_FalloutTactics.zip
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_FalloutTactics.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_FalloutTactics.zip -d "$HOME"/RetroPie/roms/wine/games/
+mv "$HOME"/RetroPie/roms/wine/games/fallouttactics.sh -f "$HOME"/RetroPie/roms/wine/Fallout-Tactics.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Fallout-Tactics.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_FalloutTactics.zip
 }
 function starcraft() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Starcraft.zip -P $HOME/RetroPie/roms/wine
-unzip -o $HOME/RetroPie/roms/wine/Retro-Devils_Starcraft.zip -d $HOME/RetroPie/roms/wine/games/
-mv $HOME/RetroPie/roms/wine/games/starcraft.sh -f $HOME/RetroPie/roms/wine/Starcraft.sh
-chmod 755 $HOME/RetroPie/roms/wine/Starcraft.sh
-sudo rm -r $HOME/RetroPie/roms/wine/Retro-Devils_Starcraft.zip
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Starcraft.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Starcraft.zip -d "$HOME"/RetroPie/roms/wine/games/
+mv "$HOME"/RetroPie/roms/wine/games/starcraft.sh -f "$HOME"/RetroPie/roms/wine/Starcraft.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Starcraft.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Starcraft.zip
 }
 function warcraft-3() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Warcraft3.zip -P $HOME/RetroPie/roms/wine
-unzip -o $HOME/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip -d $HOME/RetroPie/roms/wine/games/
-mv $HOME/RetroPie/roms/wine/games/warcraft3.sh -f $HOME/RetroPie/roms/wine/Warcraft-3.sh
-chmod 755 $HOME/RetroPie/roms/wine/Warcraft-3.sh
-sudo rm -r $HOME/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Warcraft3.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip -d "$HOME"/RetroPie/roms/wine/games/
+mv "$HOME"/RetroPie/roms/wine/games/warcraft3.sh -f "$HOME"/RetroPie/roms/wine/Warcraft-3.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Warcraft-3.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip
 }
 function warcraft-3() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Warcraft3.zip -P $HOME/RetroPie/roms/wine
-unzip -o $HOME/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip -d $HOME/RetroPie/roms/wine/games/
-mv $HOME/RetroPie/roms/wine/games/warcraft3.sh -f $HOME/RetroPie/roms/wine/Warcraft-3.sh
-chmod 755 $HOME/RetroPie/roms/wine/Warcraft-3.sh
-sudo rm -r $HOME/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Warcraft3.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip -d "$HOME"/RetroPie/roms/wine/games/
+mv "$HOME"/RetroPie/roms/wine/games/warcraft3.sh -f "$HOME"/RetroPie/roms/wine/Warcraft-3.sh
+chmod 755 "$HOME"/RetroPie/roms/wine/Warcraft-3.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip
 }
 ###------------------------------###
 ### HACKED PACKS MENU FUNCTIONS  ###
@@ -1254,7 +1254,7 @@ fi
 #   RETROPIE SETUP MENU FUNCTION   #
 #----------------------------------#
 function rpi-menu() {
-  sudo $HOME/RetroPie-Setup/retropie_setup.sh
+  sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
 }
 function pikiss() {
 if [ $NETCHECK  = 1 ]; then
@@ -1301,7 +1301,7 @@ function hardware_tools() {
 #   CLEAR CONTROLLER FUNCTION     #
 #---------------------------------#
 function clear_controller() {
-sudo rm $HOME/.emulationstation/es_input.cfg
+sudo rm "$HOME"/.emulationstation/es_input.cfg
 sudo rm /opt/retropie/configs/all/emulationstation/es_temporaryinput.cfg
 }
 
@@ -1379,7 +1379,7 @@ function db_tools() {
 #---------------------------#
 function help_db() {
   clear
-  cat $HOME/Devils-Box/files/HELP-DB.txt
+  cat "$HOME"/Devils-Box/files/HELP-DB.txt
   sleep 20
 }
 #--------------------------_#
@@ -1387,15 +1387,15 @@ function help_db() {
 #---------------------------#
 function about_db() {
   clear
-  cat $HOME/Devils-Box/files/INFO.txt
+  cat "$HOME"/Devils-Box/files/INFO.txt
   sleep 20
 }
 #--------------------------_#
 #REMOVE DEVILS BOX #
 #---------------------------#
 function remove_db() {
-  sudo rm $HOME/RetroPie/retropiemenu/Devils-Box.sh
-  sudo rm -R $HOME/Devils-Box
+  sudo rm "$HOME"/RetroPie/retropiemenu/Devils-Box.sh
+  sudo rm -R "$HOME"/Devils-Box
   sudo reboot
 }
 
@@ -1410,18 +1410,18 @@ Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
   echo "Online ... Updating"
   sleep 1
-  sudo rm $HOME/RetroPie/retropiemenu/Devils-Box.sh
-  cd $HOME/Devils-Box
+  sudo rm "$HOME"/RetroPie/retropiemenu/Devils-Box.sh
+  cd "$HOME"/Devils-Box || exit
   git pull -f
-  cp $HOME/Devils-Box/Devils-Box.sh -f $HOME/RetroPie/retropiemenu/
-  sudo cp $HOME/Devils-Box/files/box -f /usr/local/bin/
-  sudo cp $HOME/Devils-Box/Devils-Box.sh -f /usr/local/bin/Devils-Box
+  cp "$HOME"/Devils-Box/Devils-Box.sh -f "$HOME"/RetroPie/retropiemenu/
+  sudo cp "$HOME"/Devils-Box/files/box -f /usr/local/bin/
+  sudo cp "$HOME"/Devils-Box/Devils-Box.sh -f /usr/local/bin/Devils-Box
   sudo chmod 755 /usr/local/bin/box
   sudo chmod 755 /usr/local/bin/Devils-Box
-  chmod 755 $HOME/RetroPie/retropiemenu/Devils-Box.sh
+  chmod 755 "$HOME"/RetroPie/retropiemenu/Devils-Box.sh
   sleep 1
-  if [ -d "$HOME/RetroPie/retropiemenu/Devils-Box/" ]; then sudo rm -fR $HOME/RetroPie/retropiemenu/Devils-Box/; fi
-  bash $HOME/RetroPie/retropiemenu/Devils-Box.sh
+  if [ -d "$HOME/RetroPie/retropiemenu/Devils-Box/" ]; then sudo rm -fR "$HOME"/RetroPie/retropiemenu/Devils-Box/; fi
+  bash "$HOME"/RetroPie/retropiemenu/Devils-Box.sh
   exit 1
 fi
 }
@@ -1439,8 +1439,8 @@ function show_disk() {
   df -h | awk '$NF=="/"{printf "Disk Usage: %d/%dGB(%s)\n", $3,$2,$5}'
   top -bn1 | grep load | awk '{printf "CPU Load: %.2f\n", $(NF-2)}'
   cpu_temp=$(</sys/class/thermal/thermal_zone0/temp)
-  cpu_temp=$(($cpu_temp / 1000))
-  echo Temp: $cpu_tempÃ‚Â°C
+  cpu_temp=$($cpu_temp / 1000)
+  echo Temp: "$cpu_tempÃ"‚Â°C
   sleep 8
 }
 
@@ -1458,7 +1458,7 @@ function download-art() {
   for type in "$@"; do
     if [ "${type}" != "${1}" ]; then
       clear
-      wget -m -r -np -nH -nd -R "index.html" ${ART_HOST}/"${1}"/"${type}"/ -P $HOME/RetroPie/roms/"${1}"/"${type}" -erobots=off
+      wget -m -r -np -nH -nd -R "index.html" ${ART_HOST}/"${1}"/"${type}"/ -P "$HOME"/RetroPie/roms/"${1}"/"${type}" -erobots=off
     fi
   done
 }
@@ -1468,11 +1468,11 @@ function download-art() {
 #------------------#
 function download-packs() {
 clear
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P $HOME/RetroPie/roms/"${1}" -erobots=off
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
 }
 function download-packs-alt() {
 clear
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P $HOME/RetroPie/roms/"${1}" -erobots=off
+wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
 }
 
 #-----------------#
@@ -1482,7 +1482,7 @@ function download-game() {
   for type in "$@"; do
     if [ "${type}" != "${1}" ]; then
       clear
-      wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P $HOME/RetroPie/roms/"${1}" -erobots=off
+      wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
 fi
 done
 }
