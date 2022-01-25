@@ -685,7 +685,7 @@ function dreamcast() {
                 "15" "Shenmue Disc 3            " off \
                 "16" "Sonic Adventure      " off \
                 "17" "Sonic Adventures 2   " off \
-				"18" "Soul Calibur         " off \
+	        "18" "Soul Calibur         " off \
                 "19" "gamelist.xml          " off \
                 2>/tmp/results
     while read -r choice  
@@ -1128,7 +1128,7 @@ function tool_box() {
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " TOOL BOX MENU " \
       --ok-label Select --cancel-label Main-Menu \
-      --menu "SELECT TOOLSET AND PRESS A  " 40 60 60 \
+      --menu "SELECT TOOLSET AND PRESS A  " 20 50 30 \
       1 "Audio & Visual Tools   " \
       2 "Emulator Tools    " \
       3 "Hardware Tools       " \
@@ -1153,10 +1153,10 @@ function audio() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " AUDIO & VISUAL TOOLS MENU" \
       --ok-label Install --cancel-label Back \
-      --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 40 60 60 \
-      1 "T.A.M.P.O  (Theme & Music Plus Overlay)        thepitster " \
-      2 "Emulation Station Themes                         Retropie " \
-      3 "No Audio Fix                                    Anonymous " \
+      --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 70 50 \
+      1 "T.A.M.P.O  (Theme & Music Plus Overlay)--------thepitster " \
+      2 "Emulation Station Themes-------------------------Retropie " \
+      3 "No Audio Fix------------------------------------Anonymous " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1306,7 +1306,7 @@ sudo rm /opt/retropie/configs/all/emulationstation/es_temporaryinput.cfg
 }
 
 ###---------------------------------###
-### HARDWARE TOOLS MENU FUNCTIONS   ###
+###    CASES TOOLS MENU FUNCTIONS   ###
 ###---------------------------------###
 function cases() {
 if [ $NETCHECK  = 1 ]; then
