@@ -84,7 +84,7 @@ else
     choice=$(dialog --backtitle "$BACKTITLE" --title " ARTWORK DOWNLOAD MENU " \
       --ok-label Download --cancel-label Main-Menu \
       --menu "[*] MEANS PACK INCLUDES..........[ ] MEANS PACK DOESNT INCLUDE  		
-                  --PRESS A/ENTER TO DOWNLOAD.......***MEANS COMING SOON" 40 75 60 \
+                  --PRESS A/ENTER TO DOWNLOAD.......***MEANS COMING SOON" 60 75 60 \
       - "-----------------Consoles-Regular-Artwork------------------" \
       1 "Amiga Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
       2 "AmigaCD32 Artwork        [*]box  [*]cart  [*]snap  [ ]wheel" \
@@ -253,7 +253,7 @@ else
     local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
       --ok-label Download --cancel-label Main-Menu \
-      --menu "PRESS A/ENTER TO DOWNLOAD PACK..........****MEANS COMING SOON" 40 75 60 \
+      --menu "PRESS A/ENTER TO DOWNLOAD PACK..........****MEANS COMING SOON" 60 75 60 \
       + "SYSTEM NAME----------------------SIZE------# OF GAMES" \
       1 "Amiga                            300MB      340 GAMES" \
       2 "AmigaCD32                        461MB      133 GAMES" \
@@ -542,7 +542,8 @@ local choice
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED PACKS DOWNLOAD MENU " \
      --ok-button Download --cancel-button Main-Menu \
-     --menu " PRESS A/ENTER TO DOWNLOAD PACK" 0 0 0 \
+     --menu " PRESS A/ENTER TO DOWNLOAD PACK" 50 50 50 \
+      + "SYSTEM NAME---------------------------SIZE-----# OF GAMES " \
       1 "Gameboy Advance Hacks                  195MB     26 GAMES " \
       2 "Gameboy Hacks                            4MB     19 GAMES " \
       3 "Genesis Hacks                          197MB    191 GAMES " \
@@ -552,6 +553,7 @@ local choice
       2>&1 >/dev/tty)
 
     case "$choice" in
+    +) none ;;
     1) download-packs "gbah" ;;
     2) download-packs "gbh" ;;
     3) download-packs "genh" ;;
@@ -578,7 +580,7 @@ local choice
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "PICK & CHOOSE" \
       --ok-label Select --cancel-label Main-Menu \
-      --menu "--PICK SYSTEM & CHOOSE GAME(S)-- " 25 50 40 \
+      --menu "--PICK SYSTEM & CHOOSE GAME(S)-- " 50 50 50 \
       1 "AtomisWave" \
       2 "Dreamcast" \
       3 "GameBoy Advance" \
@@ -1126,7 +1128,7 @@ function tool_box() {
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " TOOL BOX MENU " \
       --ok-label Select --cancel-label Main-Menu \
-      --menu "SELECT TOOLSET AND PRESS A  " 30 50 50 \
+      --menu "SELECT TOOLSET AND PRESS A  " 50 50 50 \
       1 "Audio & Visual Tools   " \
       2 "Emulator Tools    " \
       3 "Hardware Tools       " \
@@ -1151,7 +1153,7 @@ function audio() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " AUDIO & VISUAL TOOLS MENU" \
       --ok-label Install --cancel-label Back \
-      --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 50 50 \
+      --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 50 50 50 \
       1 "T.A.M.P.O  (Theme & Music Plus Overlay)        thepitster " \
       2 "Emulation Station Themes                         Retropie " \
       3 "No Audio Fix                                    Anonymous " \
@@ -1210,7 +1212,7 @@ function emu_tools() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "EMULATOR TOOLS MENU" \
       --ok-label Install --cancel-label Back \
-      --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
+      --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 50 50 50 \
       1 "Devils Retropie Extras                          Retro Devils" \
       2 "RetroPie Setup Menu                                Retro Pie" \
       3 "Mugen Installer                         Supreme/Retro Devils" \
@@ -1432,14 +1434,13 @@ fi
 #----------------------------#
 function show_disk() {
   clear 
-  sleep 1
-  free -m | awk 'NR==2{printf "Memory Usage: %s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2 }'
-  df -h | awk '$NF=="/"{printf "Disk Usage: %d/%dGB(%s)\n", $3,$2,$5}'
-  top -bn1 | grep load | awk '{printf "CPU Load: %.2f\n", $(NF-2)}'
-  cpu_temp=$(</sys/class/thermal/thermal_zone0/temp)
-  cpu_temp=$($cpu_temp / 1000)
-  echo Temp: "$cpu_tempÃ"‚Â°C
-  sleep 8
+free -m | awk 'NR==2{printf "Memory Usage: %s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2 }' 
+df -h | awk '$NF=="/"{printf "Disk Usage: %d/%dGB(%s)\n", $3,$2,$5}'
+top -bn1 | grep load | awk '{printf "CPU Load: %.2f\n", $(NF-2)}'
+cpu_temp=$(< /sys/class/thermal/thermal_zone0/temp)
+ cpu_temp=$(($cpu_temp/1000))
+ echo Temp: $cpu_temp°C
+sleep 8
 }
 
 #-------------------#
