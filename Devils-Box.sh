@@ -455,8 +455,8 @@ fi
 function aoe() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_AoE.zip -d ~/RetroPie/roms/wine/games/
-cp ~/RetroPie/roms/wine/games/aoe.sh -f ~/RetroPie/roms/wine/Age-Of-Empires.sh
-cp ~/RetroPie/roms/wine/games/aoee.sh -f ~/RetroPie/roms/wine/Age-Of-Empires-Rise-of-Rome.sh
+mv ~/RetroPie/roms/wine/games/aoe.sh -f ~/RetroPie/roms/wine/Age-Of-Empires.sh
+mv ~/RetroPie/roms/wine/games/aoee.sh -f ~/RetroPie/roms/wine/Age-Of-Empires-Rise-of-Rome.sh
 chmod 755 ~/RetroPie/roms/wine/Age-Of-Empires.sh
 chmod 755 ~/RetroPie/roms/wine/Age-Of-Empires-The-Rise-Of-Rome.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_AoE.zip
@@ -464,16 +464,16 @@ sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_AoE.zip
 function aoe-2() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE2.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_AoE2.zip -d ~/RetroPie/roms/wine/games/
-cp ~/RetroPie/roms/wine/games/aoe2.sh -f ~/RetroPie/roms/wine/Age-Of-Empires-2.sh
-cp ~/RetroPie/roms/wine/games/aoe2.sh -f ~/RetroPie/roms/wine/Age-Of-Empires-2-The-Conquerors.sh
+mv ~/RetroPie/roms/wine/games/aoe2.sh -f ~/RetroPie/roms/wine/Age-Of-Empires-2.sh
+mv ~/RetroPie/roms/wine/games/aoe2e.sh -f ~/RetroPie/roms/wine/Age-Of-Empires-2-The-Conquerors.sh
 chmod 755 ~/RetroPie/roms/wine/Age-Of-Empires-2.sh
 chmod 755 ~/RetroPie/roms/wine/Age-Of-Empires-2-The-Conquerors.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_AoE2.zip
 }
 function cuphead() {
 wget https://archive.org/download/retro-devils-wine/Retro-Devils_Cuphead.zip -P ~/RetroPie/roms/wine
-unzip -o ~/RetroPie/roms/wine/Retro-Devils_Cuphead.zip -d ~/RetroPie/roms/wine/games/.installs/
-cp ~/RetroPie/roms/wine/games/.installs/cuphead.sh -f ~/RetroPie/roms/wine/Cuphead.sh
+unzip -o ~/RetroPie/roms/wine/Retro-Devils_Cuphead.zip -d ~/RetroPie/roms/wine/games/
+mv ~/RetroPie/roms/wine/games/cuphead.sh -f ~/RetroPie/roms/wine/Cuphead.sh
 chmod 755 ~/RetroPie/roms/wine/Cuphead/Cuphead.exe
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Cuphead.zip
 }
@@ -481,56 +481,56 @@ https://archive.org/download/retro-devils-winegames/Retro-Devils_Cuphead.zip
 function cncts() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_CNCTS.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_CNCTS.zip -d ~/RetroPie/roms/wine/games/
-cp ~/RetroPie/roms/wine/games/cncts.sh -f ~/RetroPie/roms/wine/Command-&-Conquer-TS.sh
+mv ~/RetroPie/roms/wine/games/cncts.sh -f ~/RetroPie/roms/wine/Command-&-Conquer-TS.sh
 chmod 755 ~/RetroPie/roms/wine/Command-&-Conquer-TS.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_CNCTS.zip
 }
 function diablo-2() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Diablo2.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_Diablo2.zip -d ~/RetroPie/roms/wine/games/
-cp ~/RetroPie/roms/wine/games/diablo2.sh -f ~/RetroPie/roms/wine/Diablo-2.sh
+mv ~/RetroPie/roms/wine/games/diablo2.sh -f ~/RetroPie/roms/wine/Diablo-2.sh
 chmod 755 ~/RetroPie/roms/wine/Diablo-2.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Diablo2.zip
 }
 function fallout() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Fallout.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_Fallout.zip -d ~/RetroPie/roms/wine/games/
-cp ~/RetroPie/roms/wine/games/fallout.sh -f ~/RetroPie/roms/wine/Fallout.sh
+mv ~/RetroPie/roms/wine/games/fallout.sh -f ~/RetroPie/roms/wine/Fallout.sh
 chmod 755 ~/RetroPie/roms/wine/Fallout.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Fallout.zip
 }
 function fallout-2() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Fallout2.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_CNCTS.zip -d ~/RetroPie/roms/wine/games/
-cp ~/RetroPie/roms/wine/games/fallout2.sh -f ~/RetroPie/roms/wine/Fallout-2.sh
+mv ~/RetroPie/roms/wine/games/fallout2.sh -f ~/RetroPie/roms/wine/Fallout-2.sh
 chmod 755 ~/RetroPie/roms/wine/Fallout-2.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Fallout2.zip
 }
 function fallout-tactics() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_FalloutTactics.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_FalloutTactics.zip -d ~/RetroPie/roms/wine/games/
-cp ~/RetroPie/roms/wine/games/fallouttactics.sh -f ~/RetroPie/roms/wine/Fallout-Tactics.sh
+mv ~/RetroPie/roms/wine/games/fallouttactics.sh -f ~/RetroPie/roms/wine/Fallout-Tactics.sh
 chmod 755 ~/RetroPie/roms/wine/Fallout-Tactics.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_FalloutTactics.zip
 }
 function starcraft() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Starcraft.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_Starcraft.zip -d ~/RetroPie/roms/wine/games/
-cp ~/RetroPie/roms/wine/games/starcraft.sh -f ~/RetroPie/roms/wine/Starcraft.sh
+mv ~/RetroPie/roms/wine/games/starcraft.sh -f ~/RetroPie/roms/wine/Starcraft.sh
 chmod 755 ~/RetroPie/roms/wine/Starcraft.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Starcraft.zip
 }
 function warcraft-3() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Warcraft3.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip -d ~/RetroPie/roms/wine/games/
-cp ~/RetroPie/roms/wine/games/warcraft3.sh -f ~/RetroPie/roms/wine/Warcraft-3.sh
+mv ~/RetroPie/roms/wine/games/warcraft3.sh -f ~/RetroPie/roms/wine/Warcraft-3.sh
 chmod 755 ~/RetroPie/roms/wine/Warcraft-3.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip
 }
 function warcraft-3() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Warcraft3.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip -d ~/RetroPie/roms/wine/games/
-cp ~/RetroPie/roms/wine/games/warcraft3.sh -f ~/RetroPie/roms/wine/Warcraft-3.sh
+mv ~/RetroPie/roms/wine/games/warcraft3.sh -f ~/RetroPie/roms/wine/Warcraft-3.sh
 chmod 755 ~/RetroPie/roms/wine/Warcraft-3.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip
 }
