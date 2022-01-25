@@ -1,6 +1,6 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
-BACKTITLE="DEVILS BOX----V-2.3----UPDATED 1/22/21"
+BACKTITLE="DEVILS BOX----V-2.3----UPDATED 1/25/21"
 ##-------------------------##
 ##       HOST SITES        ##
 ##-------------------------##
@@ -45,7 +45,7 @@ function main_menu() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
       --ok-label Select --cancel-label Exit-Devils-Box \
-      --menu "WELCOME " 25 50 40 \
+      --menu "WELCOME TO THE OTHERSIDE" 25 50 40 \
       - "----Downloaders----" \
       1 "Artwork Packs" \
       2 "Console Packs" \
@@ -242,7 +242,6 @@ else
   done
 fi
 }
-
 ###------------------------------###
 ### CONSOLE PACKS MENU FUNCTIONS ###
 ###------------------------------###
@@ -256,7 +255,7 @@ else
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
       --ok-label Download --cancel-label Main-Menu \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK..........****MEANS COMING SOON" 40 75 60 \
-      - "SYSTEM NAME----------------------SIZE------# OF GAMES" \
+      + "SYSTEM NAME----------------------SIZE------# OF GAMES" \
       1 "Amiga                            300MB      340 GAMES" \
       2 "AmigaCD32                        461MB      133 GAMES" \
       3 "Amstrad CPC                      614MB     3264 GAMES" \
@@ -321,7 +320,6 @@ else
       62 "Sharp X68000                     504MB      418 GAMES" \
       63 "ZMachine                           4MB       30 GAMES" \
       64 "ZXSpectrum                        38MB     1111 GAMES" \
-      
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -389,8 +387,8 @@ else
     61) download-packs "x68000" ;;
     62) download-packs "zmachine" ;;
     64) download-packs "zxspectrum" ;;  
-     -) none  ;;
-    *) break ;;
+     +) none  ;;
+     *) break ;;
     esac
    done
 fi
@@ -419,7 +417,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
     whiptail --clear --title "WINE DOWNLOAD MENU" --separate-output \
                 --ok-button Download --cancel-button Consoles-Menu \
                 --checklist "Choose:" 0 0 0 \
-                "-" "GAME NAME                     FILE SIZE" off \
+                "+" "GAME NAME                     FILE SIZE" off \
                 "1" "Age Of Empires                    215MB" off \
                 "2" "Age Of Empires 2                  6.1GB" off \
                 "3" "Cuphead.                           11GB" off \
@@ -434,6 +432,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
     while read -r choice  
         do
         case $choice in
+	        +) none ;;
                 1) aoe ;;
                 2) aoe-2 ;;
                 3) cuphead ;;
@@ -444,7 +443,6 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 8) fallout-tactics ;;
                 9) starcraft ;;
                 10) warcraft-3 ;;
-                -) none ;;
                 *) ;;
         esac
         done < /tmp/results
@@ -476,7 +474,6 @@ chmod 755 ~/RetroPie/roms/wine/Cuphead.sh
 chmod 755 ~/RetroPie/roms/wine/Cuphead/Cuphead.exe
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Cuphead.zip
 }
-https://archive.org/download/retro-devils-winegames/Retro-Devils_Cuphead.zip
 function cncts() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_CNCTS.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_CNCTS.zip -d ~/RetroPie/roms/wine/games/
@@ -534,7 +531,7 @@ chmod 755 ~/RetroPie/roms/wine/Warcraft-3.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip
 }
 ###------------------------------###
-### HACKED PACKS MENU FUNCTIONS  ###			###HACKED PACKS MENU###
+### HACKED PACKS MENU FUNCTIONS  ###
 ###------------------------------###
 function hacked() {
 if [ $NETCHECK  = 1 ]; then
@@ -577,7 +574,7 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   local choice
-
+  
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "PICK & CHOOSE" \
       --ok-label Select --cancel-label Main-Menu \
