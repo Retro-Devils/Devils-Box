@@ -572,7 +572,7 @@ fi
 ###          PICK AND CHOOSE            ###
 ###-------------------------------------###
 
-function pick() {
+function pick () {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
@@ -601,6 +601,7 @@ Offline ... Downloads not Availible Please Connect To Internet!" 0 0
     esac
   done
 }
+
 function atomiswave () {
         local choice
     whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
