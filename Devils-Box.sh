@@ -19,6 +19,11 @@ HOST3="https://archive.org/download/retro-devils-winegames"
 #HOST5=
 #HOST6=
 
+#--------PICK & CHOOSE HOST-----#
+
+PC_HOST="https://archive.org/download/the-devils-box-alt"
+
+
 ###  INTRO VIDEO     ###
 clear
 omxplayer ~/Devils-Box/files/intro.mp4
@@ -45,19 +50,21 @@ function main_menu() {
       1 "Artwork Packs" \
       2 "Console Packs" \
       3 "Hacked Packs" \
+      4 "Pick & Choose" \
       + "-------Tools-------" \
-      4 "Tool Box" \
-      5 "Reboot System" \
-      6 "Show Disk Space" \
+      5 "Tool Box" \
+      6 "Reboot System" \
+      7 "Show Disk Space" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) artwork ;;
     2) consoles ;;
     3) hacked ;;
-    4) tool_box ;;
-    5) system_reboot ;;
-    6) show_disk ;;
+    4) pick ;;
+    5) tool_box ;;
+    6) system_reboot ;;
+    7) show_disk ;;
     -) none ;;
     +) nono ;;
     *) break ;;
@@ -236,14 +243,6 @@ else
 fi
 }
 
-function download-art() {
-  for type in "$@"; do
-    if [ "${type}" != "${1}" ]; then
-      wget -m -r -np -nH -nd -R "index.html" ${ART_HOST}/"${1}"/"${type}"/ -P ~/RetroPie/roms/"${1}"/"${type}" -erobots=off
-    fi
-  done
-}
-
 ###------------------------------###
 ### CONSOLE PACKS MENU FUNCTIONS ###
 ###------------------------------###
@@ -257,6 +256,7 @@ else
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
       --ok-label Download --cancel-label Main-Menu \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK..........****MEANS COMING SOON" 40 75 60 \
+      - "SYSTEM NAME----------------------SIZE------# OF GAMES" \
       1 "Amiga                            300MB      340 GAMES" \
       2 "AmigaCD32                        461MB      133 GAMES" \
       3 "Amstrad CPC                      614MB     3264 GAMES" \
@@ -321,6 +321,7 @@ else
       62 "Sharp X68000                     504MB      418 GAMES" \
       63 "ZMachine                           4MB       30 GAMES" \
       64 "ZXSpectrum                        38MB     1111 GAMES" \
+      
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -387,19 +388,14 @@ else
     61) download-packs "x1" ;;
     61) download-packs "x68000" ;;
     62) download-packs "zmachine" ;;
-    64) download-packs "zxspectrum" ;;
+    64) download-packs "zxspectrum" ;;  
+     -) none  ;;
     *) break ;;
     esac
    done
 fi
 }
 
-function download-packs() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P ~/RetroPie/roms/"${1}" -erobots=off
-}
-function download-packs-alt() {
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P ~/RetroPie/roms/"${1}" -erobots=off
-}
 #--------------------------------#
 #      WINE SUB MENU FUNCTIONS   #
 #--------------------------------#
@@ -423,6 +419,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
     whiptail --clear --title "WINE DOWNLOAD MENU" --separate-output \
                 --ok-button Download --cancel-button Consoles-Menu \
                 --checklist "Choose:" 0 0 0 \
+                "-" "GAME NAME                     FILE SIZE" off \
                 "1" "Age Of Empires                    215MB" off \
                 "2" "Age Of Empires 2                  6.1GB" off \
                 "3" "Cuphead.                           11GB" off \
@@ -447,6 +444,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 8) fallout-tactics ;;
                 9) starcraft ;;
                 10) warcraft-3 ;;
+                -) none ;;
                 *) ;;
         esac
         done < /tmp/results
@@ -570,6 +568,557 @@ local choice
 fi
 }
 
+###-------------------------------------###
+###          PICK AND CHOOSE            ###
+###-------------------------------------###
+
+function pick() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+  local choice
+
+  while true; do
+    choice=$(dialog --backtitle "$BACKTITLE" --title "PICK & CHOOSE" \
+      --ok-label Select --cancel-label Main-Menu \
+      --menu "--PICK SYSTEM & CHOOSE GAME(S)-- " 25 50 40 \
+      1 "AtomisWave" \
+      2 "Dreamcast" \
+      3 "GameBoy Advance" \
+      4 "MegaDrive" \
+      5 "NES" \
+      6 "Saturn" \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) atomiswave ;;
+    2) dreamcast ;;
+    3) gba ;;
+    4) megadrive ;;
+    5) nes ;;
+    6) saturn ;;
+    *) break ;;
+    esac
+  done
+}
+function atomiswave () {
+        local choice
+    whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+                "1" "Animal Basket" off \
+                "2" "Demolish Fist" off \
+                "3" "Dirty Pigskin Football" off \
+                "4" "Dolphin Blue" off \
+                "5" "Fist of the North Star (Hokuto No Ken)" off \
+                "6" "Faster Than Speed" off \
+                "7" "gamelist.xml" off \
+                "8" "Guilty Gear Isuka" off \
+                "9" "Guilty Gear X Ver. 1.5" off \
+                "10" "King Of Fighters NeoWave" off \
+                "11" "King Of Fighters NeoWaveJ" off \
+                "12" "King Of Fighters XI" off \
+                "13" "Knights Of Valour" off \
+                "14" "Maximum Speed" off \
+                "15" "Metal Slug 6" off \
+                "16" "Neo-Geo Battle Coliseum" off \
+                "17" "Ranger Mission" off \
+                "18" "Rumble Fish" off \
+                "19" "Rumble Fish 2" off \
+                "20" "Salary Man Kintaro" off \
+                "21" "Samurai Shodown VI" off \
+                "22" "Sushi Bar USA" off \
+                "23" "Victory Furlong Horse Racing" off \
+                "24" "Extrme Hunt 2" off \
+                "25" "Extrme Hunt" off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+           1) download-game "atomiswave" "anmlbskt.zip" ;;
+           2) download-game "atomiswave" "demofist.zip" ;;
+           3) download-game "atomiswave" "dirtypig.zip" ;;
+           4) download-game "atomiswave" "dolphin.zip" ;;
+           5) download-game "atomiswave" "fotns.zip" ;;
+           6) download-game "atomiswave" "ftspeed.zip" ;;
+           7) download-game "atomiswave" "gamelist.xml" ;;
+           8) download-game "atomiswave" "ggisuka.zip" ;;
+           9) download-game "atomiswave" "ggx15.zip" ;;
+           10) download-game "atomiswave" "kofnw.zip" ;; 
+           11) download-game "atomiswave" "kofnwj.zip" ;;
+           12) download-game "atomiswave" "kofxi.zip" ;;
+           13) download-game "atomiswave" "kov7sprt.zip" ;;
+           14) download-game "atomiswave" "maxspeed.zip" ;;
+           15) download-game "atomiswave" "mslug6.zip" ;;
+           16) download-game "atomiswave" "ngbc.zip"  ;;
+           17) download-game "atomiswave" "rangrmsn.zip" ;;
+           18) download-game "atomiswave" "rumblef.zip" ;;
+           19) download-game "atomiswave" "rumblef2.zip" ;;
+           20) download-game "atomiswave" "samsptk.zip" ;;
+           21) download-game "atomiswave" "sprtshot.zip" ;;
+           22) download-game "atomiswave" "sushibar.zip" ;;
+           23) download-game "atomiswave" "vfurlong.zip" ;;
+           24) download-game "atomiswave" "xtrmhnt2.zip" ;;
+           25) download-game "atomiswave" "xtrmhunt.zip" ;;	
+            *) ;;
+        esac
+        done < /tmp/results
+}
+function dreamcast () {
+        local choice
+      whiptail --clear --title "PICK & CHOOSE DREAMCAST" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+                "1" "Capcom VS SNK          " off \
+                "2" "Capcom VS SNK 2        " off \
+                "3" "Confindentl Mission    " off \
+                "4" "Crazy Taxi             " off \
+                "5" "Crazy Taxi 2           " off \
+                "6" "Dead Or Alive 2        " off \
+                "7" "Jet Grind Radio        " off \
+                "8" "Marvel VS Capcom 2       " off \
+                "9" "Power Stone 2            " off \
+                "10" "Psychic Force 2012       " off \
+                "11" "Resident Evil Veronica CD1" off \
+                "12" "Resident Evil Veronica CD2" off \
+                "13" "Shenmue Disc 1            " off \
+                "14" "Shenmue Disc 2            " off \
+                "15" "Shenmue Disc 3            " off \
+                "16" "Sonic Adventure      " off \
+                "17" "Sonic Adventures 2   " off \
+				"18" "Soul Calibur         " off \
+                "19" "gamelist.xml          " off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+            1) download-game "dreamcast" "CapcomvsSNK.cdi" ;;
+            2) download-game "dreamcast" "Capcom vs. SNK 2 - Millionaire Fighting 2001 (Japan).cdi" ;;
+            3) download-game "dreamcast" "Confidential Mission (USA).chd" ;;
+            4) download-game "dreamcast" "Crazy Taxi (USA).chd" ;;
+            5) download-game "dreamcast" "Crazy Taxi 2 (USA).cdi" ;;
+            6) download-game "dreamcast" "Dead or Alive 2 (USA).cdi" ;;
+            7) download-game "dreamcast" "Jet Grind Radio (USA).cdi" ;;
+            8) download-game "dreamcast" "Marvel vs. Capcom 2 (USA).cdi" ;;
+            9) download-game "dreamcast" "Power Stone 2 (USA).cdi" ;;
+            10) download-game "dreamcast" "Psychic Force 2012 (USA).cdi" ;;
+            11) download-game "dreamcast" "Resident Evil Code - Veronica (Disc 1) (USA).cdi" ;;
+            12) download-game "dreamcast" "Resident Evil Code - Veronica (Disc 2) (USA).cdi" ;;
+            13) download-game "dreamcast" "Shenmue (USA) (Disc 1).cdi" ;;
+            14) download-game "dreamcast" "Shenmue (USA) (Disc 2).cdi" ;;
+            15) download-game "dreamcast" "Shenmue (USA) (Disc 3).cdi" ;;
+            16) download-game "dreamcast" "Sonic Adventure (USA).cdi" ;;
+            17) download-game "dreamcast" "Sonic Adventure 2 (USA).cdi" ;;
+            18) download-game "dreamcast" "Soul Calibur (USA).cdi" ;;
+            19) download-game "dreamcast" "gamelist.xml" ;;
+            *)  ;;
+        esac
+        done < /tmp/results
+}
+function gba () {
+          whiptail --clear --title "PICK & CHOOSE GBA" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+                "1" "Astro Boy - Omega Factor" off \
+                "2" "Bomberman Tournament" off \
+                "3" "Broken Sword: Shadow Of the Templars" off \
+                "4" "Boktai - The Sun Is in Your Hand" off \
+                "5" "Castlevania - Aria of Sorrow" off \
+                "6" "Castlevania - Harmony of Dissonance" off \
+                "7" "Drill Dozer" off \
+                "8" "Dragon Ball Z - The Legacy of Goku" off \
+                "9" "Fire Emblem - The Sacred Stones" off \
+                "10" "Fire Emblem" off \
+                "11" "F-Zero - Maximum Velocity" off \
+                "12" "F-Zero - GP Legend" off \
+                "13" "Golden Sun" off \
+                "14" "Gradius Galaxies" off \
+                "15" "Harvest Moon - More Friends of Mineral Town" off \
+                "16" "Harvest Moon - Friends of Mineral Town" off \
+                "17" "Iridion 3D" off \
+                "18" "Iridion II" off \
+                "19"  "Kirby - Nightmare in Dream Land" off \
+                "20" "Kirby & the Amazing Mirror" off \
+                "21" "Legend of Zelda, The - The Minish Cap" off \
+                "22" "Legend of Zelda, The - A Link to the Past & Four Swords" off \
+                "23" "Legend of Spyro, The - The Eternal Night" off \
+                "24" "Lunar Legend" off \
+                "25" "Mario & Luigi - Superstar Saga" off \
+                "26" "Mario Kart - Super Circuit" off \
+                "27" "Mario Party Advance" off \
+                "28" "Mario vs. Donkey Kong" off \
+                "29" "Mega Man Zero" off \
+                "30" "Metroid - Zero Mission" off \
+                "31" "Metal Slug Advance" off \
+                "32" "Ninja Five-0" off \
+                "33" "Nicktoons - Battle for Volcano Island" off \
+                "34" "Pac-Man Collection" off \
+                "35" "Pokemon - Leaf Green Version" off \
+                "36" "Pokemon - Emerald Version" off \
+                "37" "Puyo Pop" off \
+                "38" "R-Type III - The Third Lighting" off \
+                "39" "Rayman - Hoodlum's Revenge" off \
+                "40" "Rayman Advance" off \
+                "41" "SD Gundum Force" off \
+                "42" "Sega Rally Championship" off \
+                "43" "Sonic Advance" off \
+                "44" "Sonic Advance 2" off \
+                "45" "Spider-Man - Mysterio's Menace" off \
+                "46" "Spyro - Attack of the Rhynocs" off \
+                "47" "Super Mario Advance" off \
+                "48" "Teenage Mutant Ninja Turtles" off \
+                "49" "Tony Hawk's Pro Skater 4" off \
+                "50" "Ultimate Card Games" off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+            1) download-game "gba" "Astro Boy - Omega Factor (USA) (En,Ja,Fr,De,Es,It).zip" ;;
+            2) download-game "gba" "Bomberman Tournament(USA, Europe).zip" ;;
+            3) download-game "gba" "Broken Sword - The Shadow of the Templars (USA) (En,Fr,De,Es,It).zip" ;;
+            4) download-game "gba" "Boktai - The Sun Is in Your Hand (USA).zip" ;;
+            5) download-game "gba" "Castlevania - Aria of Sorrow (USA).zip " ;;
+            6) download-game "gba" "Castlevania - Harmony of Dissonance (USA).zip " ;;
+            7) download-game "gba" "Drill Dozer (USA).zip" ;;
+            8) download-game "gba" "Dragon Ball Z - The Legacy of Goku (USA).zip" ;;
+            9) download-game "gba" "Fire Emblem - The Sacred Stones (USA, Australia).zip" ;;
+            10) download-game "gba" "Fire Emblem (USA, Australia).zip" ;;
+            11) download-game "gba" "F-Zero - Maximum Velocity (USA, Europe).zip" ;;
+            12) download-game "gba" "F-Zero - GP Legend (USA).zip" ;;
+            13) download-game "gba" "Golden Sun (USA, Europe).zip" ;;
+            14) download-game "gba" "Gradius Galaxies (USA).zip" ;;
+            15) download-game "gba" "Harvest Moon - More Friends of Mineral Town (USA).zip" ;;
+            16) download-game "gba" "Harvest Moon - Friends of Mineral Town (USA).zip" ;;
+            17) download-game "gba" "Iridion 3D (USA, Europe).zip" ;;
+            18) download-game "gba" "Iridion II (USA).zip" ;;
+            19) download-game "gba" "Kirby - Nightmare in Dream Land (USA).zip.zip" ;;
+            20) download-game "gba" "Kirby & the Amazing Mirror (USA).zip" ;;
+            21) download-game "gba" "Legend of Zelda, The - The Minish Cap (USA).zip" ;;
+            22) download-game "gba" "Legend of Zelda, The - A Link to the Past & Four Swords (USA, Australia).zip" ;;
+            23) download-game "gba" "Legend of Spyro, The - The Eternal Night (USA) (En,Fr).zip" ;;
+            24) download-game "gba" "Lunar Legend (USA).zip" ;;
+            25) download-game "gba" "Mario & Luigi - Superstar Saga (USA, Australia).zip" ;;
+            26) download-game "gba" "Mario Kart - Super Circuit (USA).zip" ;;
+            27) download-game "gba" "Mario Party Advance (USA).zip" ;;
+            28) download-game "gba" "Mario vs. Donkey Kong (USA, Australia).zip" ;;
+            29) download-game "gba" "Mega Man Zero (USA, Europe).zip" ;;
+            30) download-game "gba" "Metroid - Zero Mission (USA).zip" ;;
+            31) download-game "gba" "Metal Slug Advance (USA).zip" ;;
+            32) download-game "gba" "Ninja Five-0 (USA).zip " ;;
+            33) download-game "gba" "Nicktoons - Battle for Volcano Island (USA).zip" ;;
+            34) download-game "gba" "Pac-Man Collection (USA).zip" ;;
+            35) download-game "gba" "Pokemon - Leaf Green Version (USA).zip" ;;
+            36) download-game "gba" "Pokemon - Emerald Version (USA, Europe).zip" ;;
+            37) download-game "gba" "Puyo Pop (USA) (En,Ja).zip" ;;
+            38) download-game "gba" "R-Type III - The Third Lightning (USA).zip" ;;
+            39) download-game "gba" "Rayman - Hoodlum's Revenge (USA) (En,Fr,Es).zip" ;;
+            40) download-game "gba" "Rayman Advance (USA) (En,Fr,De,Es,It).zip" ;;
+            41) download-game "gba" "SD Gundam Force (USA).zip" ;;
+            42) download-game "gba" "Sega Rally Championship (USA).zip" ;;
+            43) download-game "gba" "Sonic Advance (USA) (En,Ja).zip" ;;
+            44) download-game "gba" "Sonic Advance 2 (USA) (En,Ja,Fr,De,Es,It).zip" ;;
+            45) download-game "gba" "Spider-Man - Mysterio's Menace (USA, Europe).zip" ;;
+            46) download-game "gba" "Spyro - Attack of the Rhynocs (USA).zip" ;;
+            47) download-game "gba" "Super Mario Advance (USA, Europe).zip" ;;
+            48) download-game "gba" "Teenage Mutant Ninja Turtles (USA).zip" ;;
+            49) download-game "gba" "Tony Hawk's Pro Skater 4 (USA, Europe).zip" ;;
+            50) download-game "gba" "Ultimate Card Games (USA, Europe).zip" ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
+function megadrive () {
+          whiptail --clear --title "PICK & CHOOSE MEGADRIVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+                "1" "Altered Beast" off \
+                "2" "Castlevania - The New Generation" off \
+                "3" "Comix Zone" off \
+                "4" "Disneys Aladdin" off \
+                "5" "Dr. Robotnik's Mean Bean Machine" off \
+                "6" "Earthworm Jim" off \
+                "7" "Earthworm Jim 2" off \
+                "8" "Ecco the Dolphin" off \
+                "9" "Fantasia" off \
+                "10" "Ghouls'n Ghosts" off \
+                "11" "Golden Axe" off \
+                "12" "Golden Axe II" off \
+                "13" "Gunstar Heroes" off \
+                "14" "Immortal, The" off \
+                "15" "James Bond 007 - The Duel" off \
+                "16" "Justice League Task Force" off \
+                "17" "Krusty's Super Fun House" off \
+                "18" "Madden NFL 96" off \
+                "19" "Madden NFL 95" off \
+                "20" "Micro Machines 2 - Turbo Tournament" off \
+                "21" "Mortal Kombat" off \
+                "22" "Mortal Kombat II" off \
+                "23" "Mutant League Football" off \
+                "24" "Ms. Pac-Man" off \
+                "25" "NBA Jam" off \
+                "26" "Oh Mummy Genesis" off \
+                "27" "OutRun 2019" off \
+                "28" "Pac-Panic" off \
+                "29" "Pac-Mania" off \
+                "30" "Phantasy Star II" off \
+                "31" "Phantasy Star IV" off \
+                "32" "Revolution X" off \
+                "33" "RoboCop VS The Terminator" off \
+                "34" "Shining Force" off \
+                "35" "Shining Force II" off \
+                "36" "Shinobi III - Return of the Ninja Master" off \
+                "37" "Sonic & Knuckles" off \
+                "38" "Strider II" off \
+                "39" "Street Fighter II' - Champion Edition " off \
+                "40" "Vectorman" off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+            1) download-game "megadrive" "Altered Beast (USA, Europe).zip" ;;
+            2) download-game "megadrive" "Castlevania - The New Generation (Europe).zip" ;;
+            3) download-game "megadrive" "Comix Zone (Europe) (En,Fr,De,Es).zip" ;;
+            4) download-game "megadrive" "Aladdin (Europe).zip" ;;
+            5) download-game "megadrive" "Dr. Robotnik's Mean Bean Machine (Europe).zip" ;;
+            6) download-game "megadrive" "Earthworm Jim (Europe).zip" ;;
+            7) download-game "megadrive" "Earthworm Jim 2 (Europe).zip" ;;
+            8) download-game "megadrive" "Ecco the Dolphin (USA, Europe).zip" ;;
+            9) download-game "megadrive" "Fantasia (World).zip" ;;
+            10) download-game "megadrive" "Ghouls'n Ghosts (USA, Europe).zip" ;;
+            11) download-game "megadrive" "Golden Axe (World).zip" ;;
+            12) download-game "megadrive" "Golden Axe II (World).zip" ;;
+            13) download-game "megadrive" "Gunstar Heroes (Europe).zip" ;;
+            14) download-game "megadrive" "Immortal, The (USA, Europe).zip" ;;
+            15) download-game "megadrive" "James Bond 007 - The Duel (Europe) (Rev A).zip" ;;
+            16) download-game "megadrive" "Justice League Task Force (World).zip" ;;
+            17) download-game "megadrive" "Krusty's Super Fun House (USA, Europe).zip" ;;
+            18) download-game "megadrive" "Madden NFL 96 (USA, Europe).zip" ;;
+            19) download-game "megadrive" "Madden NFL 95 (USA, Europe).zip" ;;
+            20) download-game "megadrive" "Micro Machines 2 - Turbo Tournament (Europe) (J-Cart).zip" ;;
+            21) download-game "megadrive" "Mortal Kombat (World) (v1.1).zip" ;;
+            22) download-game "megadrive" "Mortal Kombat II (World).zip" ;;
+            23) download-game "megadrive" "Mutant League Football (USA, Europe).zip" ;;
+            24) download-game "megadrive" "Ms. Pac-Man (USA, Europe).zip " ;;
+            25) download-game "megadrive" "NBA Jam (USA, Europe).zip" ;;
+            26) download-game "megadrive" "Oh Mummy Genesis (World) (Unl).zip" ;;
+            27) download-game "megadrive" "OutRun 2019 (Europe).zip" ;;
+            28) download-game "megadrive" "Pac-Panic (Europe).zip" ;;
+            29) download-game "megadrive" "Pac-Mania (USA, Europe).zip" ;;
+            30) download-game "megadrive" "Phantasy Star II (USA, Europe) (Rev A).zip" ;;
+            31) download-game "megadrive" "Phantasy Star IV (Europe).zip" ;;
+            32) download-game "megadrive" "Revolution X (USA, Europe).zip" ;;
+            33) download-game "megadrive" "RoboCop versus The Terminator (Europe).zip" ;;
+            34) download-game "megadrive" "Shining Force (Europe).zip" ;;
+            35) download-game "megadrive" "Shining Force II (Europe).zip" ;;
+            36) download-game "megadrive" "Shinobi III - Return of the Ninja Master (Europe).zip" ;;
+            37) download-game "megadrive" "Sonic & Knuckles (World).zip" ;;
+            38) download-game "megadrive" "Strider II (Europe).zip" ;;
+            39) download-game "megadrive" "Street Fighter II' - Special Champion Edition (Europe).zip" ;;
+            40) download-game "megadrive" "Vectorman (USA, Europe).zip" ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
+function nes () {
+        local choice
+    whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+                "1" "10-Yard Fight" off \
+                "2" "3-D WorldRunner" off \
+                "3" "Advanced D&D - DragonStrike" off \
+                "4" "Advanced D&D - Heroes of the Lance" off \
+                "5" "Adventure Island 3" off \
+                "6" "Airwolf" off \
+                "7" "Aladdin" off \
+                "8" "Arkanoid" off \
+                "9" "Asterix" off \
+                "10" "Bad News Baseball" off \
+                "11" "Batman - Return of the Joker" off \
+                "12" "Battletoads" off \
+                "13" "Battletoads-Double Dragon" off \
+                "14" "Blues Brothers, The " off \
+                "15" "Bomberman" off \
+                "16" "Bubble Bobble" off \
+                "17" "BurgerTime" off \
+                "18" "Captain Comic - The Adventure" off \
+                "19" "Castlevania" off \
+                "20" "Castlevania III - Dracula's Curse" off \
+                "21" "Cliffhanger" off \
+                "22" "Dig Dug II - Trouble in Paradise" off \
+                "23" "Donkey Kong" off \
+                "24" "Double Dragon" off \
+                "25" "Double Dragon III - The Sacred Stones" off \
+                "26" "Dr. Mario" off \
+                "27" "Duck Hunt" off \
+                "28" "Excitebike" off \
+                "29" "Fire 'n Ice" off \
+                "30" "G.I. Joe - A Real American Hero" off \
+                "31" "Galaga - Demons of Death" off \
+                "32" "Gradius" off \
+                "33" "Ikari Warriors II - Victory Road" off \
+                "34" "Jurassic Park" off \
+                "35" "Karate Kid, The" off \
+                "36" "Kid Icarus" off \
+                "37" "Kirby's Adventure" off \
+                "38" "Legend of Zelda, The" off \
+                "39" "Mario Bros." off \
+                "40" "Mega Man 6" off \
+                "41" "Metroid" off \
+                "42" "Mike Tyson's Punch-Out!!" off \
+                "43" "Ninja Gaiden" off \
+                "44" "Pac-Man" off \
+                "45" "Platoon" off \
+                "46" "Q-bert" off \
+                "47" "Rad Racer" off \
+                "48" "RoboCop" off \
+                "49" "Super Mario Bros." off \
+                "50" "Super Mario Bros. 2" off \
+                "51" "Super Mario Bros. 3" off \
+                "52" "Super Spy Hunter" off \
+                "53" "Teenage Mutant Ninja Turtles" off \
+                "54" "Tetris" off \
+                "55" "Zelda II - The Adventure of Link" off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+            1) download-game "nes" "10-Yard Fight (USA, Europe).zip" ;;
+            2) download-game "nes" "3-D WorldRunner (USA).zip" ;;
+            3) download-game "nes" "Advanced Dungeons & Dragons - DragonStrike (USA).zip" ;;
+            4) download-game "nes" "Advanced Dungeons & Dragons - Heroes of the Lance (USA).zip" ;;
+            5) download-game "nes" "Adventure Island 3 (USA).zip" ;;
+            6) download-game "nes" "Airwolf (USA).zip" ;;
+            7) download-game "nes" "Aladdin (Europe).zip" ;;
+            8) download-game "nes" "Arkanoid (USA).zip" ;;
+            9) download-game "nes" "Asterix (Europe).zip" ;;
+            10) download-game "nes" "Bad News Baseball (USA).zip" ;;
+            11) download-game "nes" "Batman - Return of the Joker (USA).zip" ;;
+            12) download-game "nes" "Battletoads (USA).zip" ;;
+            13) download-game "nes" "Battletoads-Double Dragon (USA).zip" ;;
+            14) download-game "nes" "Blues Brothers, The (USA).zip" ;;
+            15) download-game "nes" "Bubble Bobble (USA).zip" ;;
+            16) download-game "nes" "BurgerTime (USA).zip" ;;
+            17) download-game "nes" "Captain Comic - The Adventure (USA) (Unl).zip" ;;
+            18) download-game "nes" "Castlevania (USA).zip" ;;
+            19) download-game "nes" "Castlevania III - Dracula's Curse (USA).zip" ;;
+            20) download-game "nes" "Cliffhanger (USA).zip" ;;
+            21) download-game "nes" "Dig Dug II - Trouble in Paradise (USA).zip" ;;
+            22) download-game "nes" "Donkey Kong (World) (Rev A).zip" ;;
+            23) download-game "nes" "Double Dragon (USA).zip" ;;
+            24) download-game "nes" "Double Dragon III - The Sacred Stones (USA).zip" ;;
+            25) download-game "nes" "Dr. Mario (Japan, USA).zip" ;;
+            26) download-game "nes" "Duck Hunt (World).zip" ;;
+            27) download-game "nes" "Excitebike (Japan, USA).zip" ;;
+            28) download-game "nes" "Fire 'n Ice (USA).zip" ;;
+            29) download-game "nes" "G.I. Joe - A Real American Hero (USA).zip" ;;
+            30) download-game "nes" "Galaga - Demons of Death (USA).zip" ;;
+            31) download-game "nes" "Gradius (USA).zip" ;;
+            32) download-game "nes" "Ice Climber (USA, Europe).zip" ;;
+            33) download-game "nes" "Ikari Warriors II - Victory Road (USA).zip" ;;
+            34) download-game "nes" "Jurassic Park (USA).zip" ;;
+            35) download-game "nes" "Karate Kid, The (USA).zip" ;;
+            36) download-game "nes" "Kid Icarus (USA, Europe).zip" ;;
+            37) download-game "nes" "Kirby's Adventure (USA).zip" ;;
+            38) download-game "nes" "Legend of Zelda, The (USA).zip" ;;
+            39) download-game "nes" "Mario Bros. (World).zip" ;;
+            40) download-game "nes" "Mega Man 6 (USA).zip" ;;
+            41) download-game "nes" "Metroid (USA).zip" ;;
+            42) download-game "nes" "Mike Tyson's Punch-Out!! (Japan, USA).zip" ;;
+            43) download-game "nes" "Ninja Gaiden (USA).zip" ;;
+            44) download-game "nes" "Pac-Man (USA).zip" ;;
+            45) download-game "nes" "Platoon (USA).zip" ;;
+            46) download-game "nes" "Q-bert (USA).zip" ;;
+            47) download-game "nes" "Rad Racer (USA).zip" ;;
+            48) download-game "nes" "RoboCop (USA).zip" ;;
+            49) download-game "nes" "Super Mario Bros. (World).zip" ;;
+            50) download-game "nes" "Super Mario Bros. 2 (USA) (Rev A).zip" ;;
+            51) download-game "nes" "Super Mario Bros. 3 (USA).zip" ;;
+            52) download-game "nes" "Super Spy Hunter (USA).zip" ;;
+            53) download-game "nes" "Teenage Mutant Ninja Turtles (USA).zip" ;;
+            54) download-game "nes" "Tetris (USA).zip" ;;
+            55) download-game "nes" "Zelda II - The Adventure of Link (USA).zip" ;;
+             *) ;;
+        esac
+        done < /tmp/results
+}
+
+function saturn () {
+          whiptail --clear --title "PICK & CHOOSE SATURN" --separate-output --checklist "Choose:" 0 0 0 \
+                "1" "Albert Odyssey - Legend of Eldean" off \
+                "2" "Area 51" off \
+                "3" "Burning Rangers" off \
+                "4" "Daytona USA" off \
+                "5" "Dead or Alive (Japan)" off \
+                "6" "Die Hard Arcade" off \
+                "7" "DonPachi (Japan)" off \
+                "8" "Dragon Ball Z" off \
+                "9" "Duke Nukem 3D" off \
+                "10" "Dragon Force" off \
+                "11" "Earthworm Jim 2" off \
+                "12" "Fighters Megamix" off \
+                "13" "Galactic Attack" off \
+                "14" "Guardian Heroes" off \
+                "15" "Hi-Octane - The Track Fights Back!" off \
+                "16" "House of the Dead" off \
+                "17" "Impact Racing" off \
+                "18" "King of Fighters '95" off \
+                "19" "Lost World, The - Jurassic Park" off \
+                "20" "Manx TT SuperBike" off \
+                "21" "Marvel Super Heroes" off \
+                "22" "Mortal Kombat II" off \
+                "23" "Megaman X4" off \
+                "24" "Nights Into Dreams..." off \
+                "25" "Panzer Dragoon" off \
+                "26" "Panzer Dragoon II - Zwei" off \
+                "27" "Rayman" off \
+                "28" "Resident Evil" off \
+                "29" "Robotica" off \
+                "30" "Sega Rally Championship" off \
+                "31" "Saturn Bomber Man" off \
+                "32" "Sonic 3D Blast" off \
+                "33" "Street Fighter Alpha - Warrior's Dreams" off \
+                "34" "Street Fighter Alpha 2" off \
+                "35" "Thunder Force V" off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+            1) download-game "saturn" "Albert Odyssey - Legend of Eldean (USA).chd" ;;
+            2) download-game "saturn" "Area 51 (USA).zip" ;;
+            3) download-game "saturn" "Burning Rangers (USA).zip" ;;
+            4) download-game "saturn" "Daytona USA (USA).zip" ;;
+            5) download-game "saturn" "Dead or Alive (Japan).zip" ;;
+            6) download-game "saturn" "Die Hard Arcade (USA).zip.zip" ;;
+            7) download-game "saturn" "DonPachi (Japan).zip" ;;
+            8) download-game "saturn" "Dragon Ball Z - The Legend (Europe).zip" ;;
+            9) download-game "saturn" "Duke Nukem 3D (Europe).zip" ;;
+            10) download-game "saturn" "Dragon Force (USA).zip" ;;      
+            11) download-game "saturn" "Earthworm Jim 2 (USA).zip" ;;
+            12) download-game "saturn" "Fighters Megamix (USA).zip" ;;
+            13) download-game "saturn" "Galactic Attack (USA).chd" ;;
+            14) download-game "saturn" "Guardian Heroes (USA).chd" ;;
+            15) download-game "saturn" "Hi-Octane - The Track Fights Back! (USA).zip" ;;
+            16) download-game "saturn" "House of the Dead, The (USA).zip" ;;
+            17) download-game "saturn" "Impact Racing (USA).zip" ;;
+            18) download-game "saturn" "King of Fighters '95, The (Europe).zip" ;;
+            19) download-game "saturn" "Lost World, The - Jurassic Park (USA).zip" ;;
+            20) download-game "saturn" "Manx TT SuperBike (USA).chd" ;;
+            21) download-game "saturn" "Marvel Super Heroes (USA).zip" ;;
+            22) download-game "saturn" "Mortal Kombat II (USA).zip" ;;
+            23) download-game "saturn" "Megaman X4 (USA).zip" ;;
+            24) download-game "saturn" "Nights Into Dreams... (USA).zip" ;;
+            25) download-game "saturn" "Panzer Dragoon (USA).chd" ;;
+            26) download-game "saturn" "Panzer Dragoon II - Zwei (USA).zip" ;;
+            27) download-game "saturn" "Rayman (USA).zip" ;;
+            28) download-game "saturn" "Resident Evil (USA).zip" ;;
+            29) download-game "saturn" "Robotica (USA).zip" ;;
+            30) download-game "saturn" "Sega Rally Championship (USA).zip" ;;
+            31) download-game "saturn" "Saturn Bomber Man (Europe).chd" ;;
+            32) download-game "saturn" "Sonic 3D Blast (USA).zip" ;;
+            33) download-game "saturn" "Street Fighter Alpha - Warrior's Dreams (USA).zip" ;;
+            34) download-game "saturn" "Street Fighter Alpha 2 (USA).chd" ;;
+            35) download-game "saturn" "Thunder Force V (Japan).zip" ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
+
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
 ###------------------------------###
@@ -593,7 +1142,9 @@ function tool_box() {
     *) break ;;
     esac
   done
-}
+}###-------------------------------------###
+
+
 #-----------------------------------------#
 #   AUDIO & VISUAL TOOLS MENU FUNCTIONS   #
 #-----------------------------------------#
@@ -666,13 +1217,17 @@ function emu_tools() {
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
       1 "Devils Retropie Extras                          Retro Devils" \
       2 "RetroPie Setup Menu                                Retro Pie" \
-      3 "PIKISS                                         Jose Cerrejon" \
+      3 "Mugen Installer                         Supreme/Retro Devils" \
+      4 "PIKISS                                         Jose Cerrejon" \
+      5 "SEGA MODEL 3                                    Retro Devils" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) devils-ex ;;
     2) rpi-menu ;;
-    3) pikiss ;;
+    3) mugen ;;
+    4) pikiss ;;
+    5  sm3 ;;
     *) break ;;
     esac
   done
@@ -713,9 +1268,17 @@ else
   fi
 fi
 }
+function mugen() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+else
+curl -sSL https://git.io/Jz9O3 | bash
+fi
+}
 
 ###---------------------------------###
-###   HARDWARE TOOLS MENU FUNCTIONS    ###
+###   HARDWARE TOOLS MENU FUNCTIONS ###
 ###---------------------------------###
 function hardware_tools() {
   local choice
@@ -890,6 +1453,42 @@ function show_disk() {
 #-------------------#
 function system_reboot() {
   sudo reboot
+}
+
+#------------------#
+# ARTWORK FUNCTION #
+#------------------# 
+function download-art() {
+  for type in "$@"; do
+    if [ "${type}" != "${1}" ]; then
+      clear
+      wget -m -r -np -nH -nd -R "index.html" ${ART_HOST}/"${1}"/"${type}"/ -P ~/RetroPie/roms/"${1}"/"${type}" -erobots=off
+    fi
+  done
+}
+
+#------------------#
+# CONSOLE FUNCTION #
+#------------------#
+function download-packs() {
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P ~/RetroPie/roms/"${1}" -erobots=off
+}
+function download-packs-alt() {
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P ~/RetroPie/roms/"${1}" -erobots=off
+}
+
+#-----------------#
+#  GAME FUNCTION  #
+#----------------#
+function download-game() {
+  for type in "$@"; do
+    if [ "${type}" != "${1}" ]; then
+      clear
+      wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P ~/RetroPie/roms/"${1}" -erobots=off
+fi
+done
 }
 
 # Main
