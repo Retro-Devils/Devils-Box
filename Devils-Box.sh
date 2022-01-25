@@ -471,9 +471,10 @@ chmod 755 ~/RetroPie/roms/wine/Age-Of-Empires-2-The-Conquerors.sh
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_AoE2.zip
 }
 function cuphead() {
-wget https://archive.org/download/retro-devils-wine/Retro-Devils_Cuphead.zip -P ~/RetroPie/roms/wine
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Cuphead.zip -P ~/RetroPie/roms/wine
 unzip -o ~/RetroPie/roms/wine/Retro-Devils_Cuphead.zip -d ~/RetroPie/roms/wine/games/
 mv ~/RetroPie/roms/wine/games/cuphead.sh -f ~/RetroPie/roms/wine/Cuphead.sh
+chmod 755 ~/RetroPie/roms/wine/Cuphead.sh
 chmod 755 ~/RetroPie/roms/wine/Cuphead/Cuphead.exe
 sudo rm -r ~/RetroPie/roms/wine/Retro-Devils_Cuphead.zip
 }
