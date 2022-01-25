@@ -44,7 +44,7 @@ function main_menu() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
       --ok-label Select --cancel-label Exit-Devils-Box \
-      --menu "WELCOME TO THE OTHERSIDE" 25 50 40 \
+      --menu "WELCOME TO THE OTHERSIDE" 20 50 30 \
       - "----Downloaders----" \
       1 "Artwork Packs" \
       2 "Console Packs" \
@@ -84,7 +84,7 @@ else
     choice=$(dialog --backtitle "$BACKTITLE" --title " ARTWORK DOWNLOAD MENU " \
       --ok-label Download --cancel-label Main-Menu \
       --menu "[*] MEANS PACK INCLUDES..........[ ] MEANS PACK DOESNT INCLUDE  		
-                  --PRESS A/ENTER TO DOWNLOAD.......***MEANS COMING SOON" 40 60 60 \
+                  --PRESS A/ENTER TO DOWNLOAD.......***MEANS COMING SOON" 30 70 50 \
       - "-----------------Consoles-Regular-Artwork------------------" \
       1 "Amiga Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
       2 "AmigaCD32 Artwork        [*]box  [*]cart  [*]snap  [ ]wheel" \
@@ -253,7 +253,7 @@ else
     local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
       --ok-label Download --cancel-label Main-Menu \
-      --menu "PRESS A/ENTER TO DOWNLOAD PACK..........****MEANS COMING SOON" 40 60 60 \
+      --menu "PRESS A/ENTER TO DOWNLOAD PACK..........****MEANS COMING SOON" 30 70 50 \
       + "SYSTEM NAME----------------------SIZE------# OF GAMES" \
       1 "Amiga                            300MB      340 GAMES" \
       2 "AmigaCD32                        461MB      133 GAMES" \
@@ -542,7 +542,7 @@ local choice
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED PACKS DOWNLOAD MENU " \
      --ok-button Download --cancel-button Main-Menu \
-     --menu " PRESS A/ENTER TO DOWNLOAD PACK" 40 60 60 \
+     --menu " PRESS A/ENTER TO DOWNLOAD PACK" 30 70 50 \
       + "SYSTEM NAME---------------------------SIZE-----# OF GAMES " \
       1 "Gameboy Advance Hacks                  195MB     26 GAMES " \
       2 "Gameboy Hacks                            4MB     19 GAMES " \
@@ -580,7 +580,7 @@ local choice
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "PICK & CHOOSE" \
       --ok-label Select --cancel-label Main-Menu \
-      --menu "--PICK SYSTEM & CHOOSE GAME(S)-- " 40 60 60 \
+      --menu "--PICK SYSTEM & CHOOSE GAME(S)-- " 20 50 30 \
       1 "AtomisWave" \
       2 "Dreamcast" \
       3 "GameBoy Advance" \
@@ -1212,12 +1212,12 @@ function emu_tools() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "EMULATOR TOOLS MENU" \
       --ok-label Install --cancel-label Back \
-      --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 40 60 60 \
-      1 "Devils Retropie Extras                    Retro Devils" \
-      2 "RetroPie Setup Menu                          Retro Pie" \
-      3 "Mugen Installer                   Supreme/Retro Devils" \
-      4 "PIKISS                                   Jose Cerrejon" \
-      5 "SEGA MODEL 3                              Retro Devils" \
+      --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 70 50 \
+      1 "Devils Retropie Extras------------Retro Devils" \
+      2 "RetroPie Setup Menu------------------Retro Pie" \
+      3 "Mugen Installer-----------Supreme/Retro Devils" \
+      4 "PIKISS---------------------------Jose Cerrejon" \
+      5 "SEGA MODEL 3----------------------Retro Devils" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1284,7 +1284,7 @@ function hardware_tools() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " HARDWARE TOOLS MENU " \
       --ok-label Select --cancel-label Back \
-      --menu "CHOOSE KIND OF TOOL " 40 60 60 \
+      --menu "CHOOSE KIND OF TOOL " 20 50 30 \
       1 "Cases Tools " \
       2 "Clear Controller Conifg " \
       2>&1 >/dev/tty)
@@ -1319,7 +1319,7 @@ else
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " CASES TOOLS MENU " \
       --ok-label Select --cancel-label Back \
-      --menu "SELECT TOOL PRESS TO APPLY/INSTALL " 30 50 50 \
+      --menu "SELECT TOOL PRESS TO APPLY/INSTALL " 20 50 30 \
       1 "Argon1 Case Install & Config " \
       2 "NESPI Case Install         " \
       2 "NESPI Case Uninstall       " \
@@ -1358,7 +1358,7 @@ function db_tools() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX TOOLS MENU " \
       --ok-label Select --cancel-label Back \
-      --menu "SELECT AND APPLY TOOL" 40 50 50 \
+      --menu "SELECT AND APPLY TOOL" 20 50 30 \
       1 "About Devils Box    " \
       2 "Help With Devils Box" \
       3 "Remove Devils Box   " \
