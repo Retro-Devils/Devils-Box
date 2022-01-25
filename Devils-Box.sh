@@ -573,7 +573,7 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
-  local choice
+local choice
   
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "PICK & CHOOSE" \
