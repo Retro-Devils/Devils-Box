@@ -568,7 +568,7 @@ fi
 ###          PICK AND CHOOSE            ###
 ###-------------------------------------###
 
-function pick () {
+function pick() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
@@ -599,7 +599,7 @@ else
   done
 }
 
-function atomiswave () {
+function atomiswave() {
         local choice
     whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
@@ -661,7 +661,7 @@ function atomiswave () {
         esac
         done < /tmp/results
 }
-function dreamcast () {
+function dreamcast() {
         local choice
       whiptail --clear --title "PICK & CHOOSE DREAMCAST" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
@@ -711,7 +711,7 @@ function dreamcast () {
         esac
         done < /tmp/results
 }
-function gba () {
+function gba() {
           whiptail --clear --title "PICK & CHOOSE GBA" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
                 "1" "Astro Boy - Omega Factor" off \
@@ -822,7 +822,7 @@ function gba () {
         esac
         done < /tmp/results
 }
-function megadrive () {
+function megadrive() {
           whiptail --clear --title "PICK & CHOOSE MEGADRIVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
                 "1" "Altered Beast" off \
@@ -913,7 +913,7 @@ function megadrive () {
         esac
         done < /tmp/results
 }
-function nes () {
+function nes() {
         local choice
     whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
@@ -1036,7 +1036,7 @@ function nes () {
         done < /tmp/results
 }
 
-function saturn () {
+function saturn() {
           whiptail --clear --title "PICK & CHOOSE SATURN" --separate-output --checklist "Choose:" 0 0 0 \
                 "1" "Albert Odyssey - Legend of Eldean" off \
                 "2" "Area 51" off \
