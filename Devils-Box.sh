@@ -20,7 +20,6 @@ HOST3="https://archive.org/download/retro-devils-winegames"
 #HOST6=
 
 #--------PICK & CHOOSE HOST-----#
-
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 
 
@@ -573,6 +572,7 @@ function pick () {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+else
   local choice
   
   while true; do
