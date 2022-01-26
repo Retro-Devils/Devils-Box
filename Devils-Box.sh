@@ -1154,10 +1154,10 @@ function audio() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " AUDIO & VISUAL TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 70 50 \
-      + "----------------------Visual Tools------------------------- "
+      + "----------------------Visual Tools------------------------- " \
       1 "Emulation Station Themes---------------------------Retropie " \
       2 "Install Hursty Themes--------------------------------Hursty " \
-      - "-------------------Audio/Mixed Tools----------------------- "
+      - "-------------------Audio/Mixed Tools----------------------- " \
       3 "Install T.A.M.P.O(Theme & Music Plus Overlay)----thepitster " \
       4 "Apply No Audio Fix--------------------------------Anonymous " \
       2>&1 >/dev/tty)
@@ -1289,6 +1289,7 @@ dialog  --sleep 1 --title "Mugen Installer FYI" --msgbox "
 -For this to work you might have to 
 sudo apt-update & sudo apt-upgrade
 
+
 -Thanks for using have a good day." 0 0
 curl -sSL https://git.io/Jz9O3 | bash
 fi
@@ -1370,7 +1371,7 @@ function argon1-conf() {
 clear
 dialog  --sleep 1 --title "Argon1 Config FYI" --msgbox " 
 --------------------ATTENTION-------------------------
--For this to work you have to have Argon1 scripts installed."
+-For this to work you have to have Argon1 scripts installed." 0 0
 bash /usr/bin/argonone-config
 }
 
