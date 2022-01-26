@@ -152,7 +152,7 @@ else
       64 "Sharp x68000 Artwork     [*]box  [ ]cart  [*]snap  [*]wheel" \
       65 "ZMachine Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
       66 "ZXspectrum Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
-      + __________________Consoles-Hacks-Artwork_____________________" \
+      +  "________________Consoles-Hacks-Artwork_____________________" \
       67 "GBA Hacks Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
       68 "GameBoy Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
       69 "Genesis Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
@@ -549,7 +549,7 @@ local choice
       3 "Genesis Hacks                          197MB    191 GAMES " \
       4 "Gamegear Hacks                           1MB      4 GAMES " \
       5 "NES Hacks                              962KB      6 GAMES " \
-      6 "SNES Hacks                              40MB     37 GAMES" \
+      6 "SNES Hacks                               40MB     37 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1158,7 +1158,7 @@ function audio() {
       1 "Emulation Station Themes---------------------------Retropie " \
       2 "Install Hursty Themes--------------------------------Hursty " \
       - "___________________________________________________________ " \
-      - "___________________Audio/Mixed Tools_______________________ " 
+      - "___________________Audio/Mixed Tools_______________________ " \
       3 "Apply No Audio Fix--------------------------------Anonymous " \
       4 "Install T.A.M.P.O--------------------------------thepitster " \
       2>&1 >/dev/tty)
