@@ -580,7 +580,7 @@ local choice
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "PICK & CHOOSE" \
       --ok-label Select --cancel-label Main-Menu \
-      --menu "__PICK SYSTEM & CHOOSE GAME(S)__ " 20 50 30 \
+      --menu "PICK CONSOLE & CHOOSE GAME(S) " 20 50 30 \
       1 "AtomisWave" \
       2 "Dreamcast" \
       3 "GameBoy Advance" \
@@ -1157,7 +1157,6 @@ function audio() {
       + "_____________________Visual Tools__________________________ " \
       1 "Emulation Station Themes---------------------------Retropie " \
       2 "Install Hursty Themes--------------------------------Hursty " \
-      - "___________________________________________________________ " \
       - "___________________Audio/Mixed Tools_______________________ " \
       3 "Apply No Audio Fix--------------------------------Anonymous " \
       4 "Install T.A.M.P.O--------------------------------thepitster " \
