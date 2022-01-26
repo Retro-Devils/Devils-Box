@@ -1322,14 +1322,11 @@ function hardware_tools() {
 #---------------------------------#
 function clear_controller() {
 clear
-read -p "SURE YOU WANNA CLEAR CONFIG? (y/n)?" CONT
-if [ "$CONT" = "y" ]; then
-  echo "Clearing Config Now";
+dialog  --sleep 1 --title "Clear Controller Config" --msgbox " 
+---------------------ATTENTION------------------
+----------YOUR CONTROLLER WILL BE CLEARED-------" 0 0
 sudo rm "$HOME"/.emulationstation/es_input.cfg
 sudo rm /opt/retropie/configs/all/emulationstation/es_temporaryinput.cfg
-else
-  echo "Exiting Now"; none
-fi
 }
 
 function hdd-in() { 
@@ -1466,6 +1463,7 @@ fi
 }
 
 function argon1-in() {
+  clear
   curl https://download.argon40.com/argon1.sh | bash
 }
 
@@ -1592,12 +1590,10 @@ sleep 8
 #-------------------#
 function system_reboot() {
 clear
-read -p "ARE YOU SURE YOU WANNA REBOOT? (y/n)?" CONT
-if [ "$CONT" = "y" ]; then
-  echo "Rebooting Now"; sudo reboot 
-else
-  echo "Exiting Now"; none
-  fi
+dialog --sleep 1 --title "System Rebooting" --msgbox " 
+--------------------ATTENTION-------------------------
+-------------YOUR SYSTEM WILL NOW REBOOT--------------" 0 0
+sudo reboot
 }
 
 #------------------#
