@@ -1271,6 +1271,14 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
+dialog  --sleep 1 --title "Mugen Installer Help" --msgbox " 
+-------------------------------
+       MUGEN INSTALLER HELP
+-------------------------------
+-For this to work you might have to 
+"sudo apt-update" & "sudo apt-upgrade"
+
+-Thanks for using have a good day." 0 0
 curl -sSL https://git.io/Jz9O3 | bash
 fi
 }
