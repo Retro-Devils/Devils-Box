@@ -85,7 +85,7 @@ else
       --ok-label Download --cancel-label Main-Menu \
       --menu "[*] MEANS PACK INCLUDES..........[ ] MEANS PACK DOESNT INCLUDE  		
                   --PRESS A/ENTER TO DOWNLOAD.......***MEANS COMING SOON" 30 70 50 \
-      - "-----------------Consoles-Regular-Artwork------------------" \
+      - "_________________Consoles-Regular-Artwork__________________" \
       1 "Amiga Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
       2 "AmigaCD32 Artwork        [*]box  [*]cart  [*]snap  [ ]wheel" \
       3 "***Amstrad CPC***        [*]box  [*]cart  [*]snap  [*]wheel" \
@@ -152,7 +152,7 @@ else
       64 "Sharp x68000 Artwork     [*]box  [ ]cart  [*]snap  [*]wheel" \
       65 "ZMachine Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
       66 "ZXspectrum Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
-      + "-----------------Consoles-Hacks-Artwork---------------------" \
+      + __________________Consoles-Hacks-Artwork_____________________" \
       67 "GBA Hacks Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
       68 "GameBoy Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
       69 "Genesis Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
@@ -254,7 +254,7 @@ else
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
       --ok-label Download --cancel-label Main-Menu \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK..........****MEANS COMING SOON" 30 70 50 \
-      + "SYSTEM NAME----------------------SIZE------# OF GAMES" \
+      + "__CONSOLE NAME___________________SIZE______# OF GAMES" \
       1 "Amiga                            300MB      340 GAMES" \
       2 "AmigaCD32                        461MB      133 GAMES" \
       3 "Amstrad CPC                      614MB     3264 GAMES" \
@@ -543,7 +543,7 @@ local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED PACKS DOWNLOAD MENU " \
      --ok-button Download --cancel-button Main-Menu \
      --menu " PRESS A/ENTER TO DOWNLOAD PACK" 30 70 50 \
-      + "SYSTEM NAME---------------------------SIZE-----# OF GAMES " \
+      + "__CONSOLE NAME________________________SIZE_____# OF GAMES " \
       1 "Gameboy Advance Hacks                  195MB     26 GAMES " \
       2 "Gameboy Hacks                            4MB     19 GAMES " \
       3 "Genesis Hacks                          197MB    191 GAMES " \
@@ -580,7 +580,7 @@ local choice
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "PICK & CHOOSE" \
       --ok-label Select --cancel-label Main-Menu \
-      --menu "--PICK SYSTEM & CHOOSE GAME(S)-- " 20 50 30 \
+      --menu "__PICK SYSTEM & CHOOSE GAME(S)__ " 20 50 30 \
       1 "AtomisWave" \
       2 "Dreamcast" \
       3 "GameBoy Advance" \
@@ -1154,21 +1154,22 @@ function audio() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " AUDIO & VISUAL TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 70 50 \
-      + "----------------------Visual Tools------------------------- " \
+      + "_____________________Visual Tools__________________________ " \
       1 "Emulation Station Themes---------------------------Retropie " \
       2 "Install Hursty Themes--------------------------------Hursty " \
-      - "-------------------Audio/Mixed Tools----------------------- " \
-      3 "Install T.A.M.P.O(Theme & Music Plus Overlay)----thepitster " \
-      4 "Apply No Audio Fix--------------------------------Anonymous " \
+      - "___________________________________________________________ " \
+      - "___________________Audio/Mixed Tools_______________________ " 
+      3 "Apply No Audio Fix--------------------------------Anonymous " \
+      4 "Install T.A.M.P.O--------------------------------thepitster " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     +) nono ;;
-    1) tampo ;;
+    1) hursty-themes ;;
     2) es-themes ;;
     -) none ;;
-    3) hursty-themes ;;
-    4) no-audio ;;
+    3) no-audio ;;
+    4) tampo ;;
     *) break ;;
     esac
   done
