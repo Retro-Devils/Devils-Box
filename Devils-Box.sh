@@ -1306,7 +1306,7 @@ function hardware_tools() {
       --ok-label Select --cancel-label Back \
       --menu "CHOOSE KIND OF TOOL " 20 50 30 \
       1 "Cases Tools " \
-      2 "Clear Controller Conifg " \
+      2 "Clear Controller Config " \
       3 "Setup Extended HDD " \
       4 "Remove Extended HDD " \
       2>&1 >/dev/tty)
@@ -1325,6 +1325,7 @@ function hardware_tools() {
 #   CLEAR CONTROLLER FUNCTION     #
 #---------------------------------#
 function clear_controller() {
+clear
 read -p "SURE YOU WANNA CLEAR CONFIG? (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
   echo "Clearing Config Now";
