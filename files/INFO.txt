@@ -30,25 +30,19 @@ WHAT DOES THIS WORK ON?
 		 * Download, unzip, transfer to android device and install. 		 
 WHY USE THIS ARTWORK INSTEAD OF SCRAPER?
 	- This art is set for these roms. So they will look nice. Scraper works and props to it.
-
 __CREDITS______________________________________________________CREDITS__
 
 --EMUS AND TOOLS CREDITS:
 	-All emus & tools from commmunity have credits in Devils Box menus.
 	**example. RetroPie Extras says "Zero Jay" at the far right of that line.
-
 --MISC CREDITS:
--ALL THE RETRO DEVILS.      - COMMUNITY----INPUT IN GENERAL
-
--RETROPIE----FOR EVERYTHING THEY DO 
-
--CRASH----SCRIPTING KNOWLEDGE & ADVICE  
-
--BIGED----SCRIPTING KNOWLEDE & ADVICE   
-
--MONK OF THE FUNK----SCRIPTING KNOWLEDGE & ADVICE 
-
--SOLARBABY----SCRIPTING KNOWLEDGE & ADVICE
+-ALL THE RETRO DEVILS--------YOU KNOW WHAT YOU DID      
+-COMMUNITY-------------------INPUT IN GENERAL
+-RETROPIE--------------------FOR EVERYTHING THEY DO 
+-CRASH-----------------------SCRIPTING KNOWLEDGE & ADVICE  
+-BIGED-----------------------SCRIPTING KNOWLEDE & ADVICE   
+-MONK OF THE FUNK------------SCRIPTING KNOWLEDGE & ADVICE 
+-SOLARBABY-------------------SCRIPTING KNOWLEDGE & ADVICE
 
 __NOTES_________________________________________________________NOTES__
 -----------------------------------------------------------------------
