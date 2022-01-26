@@ -16,8 +16,6 @@ HOST1="https://archive.org/download/the-devils-box-alt"
 HOST2="https://archive.org/download/the-devils-box_202112"
 #HOST3=
 #HOST4=
-#HOST5=
-#HOST6=
 
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
@@ -1224,11 +1222,11 @@ function emu_tools() {
     choice=$(dialog --backtitle "$BACKTITLE" --title "EMULATOR TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 70 50 \
-      1 "Devils Retropie Extras------------Retro Devils" \
+      1 "Devils Extras Installer-----------Retro Devils" \
       2 "RetroPie Setup Menu------------------Retro Pie" \
       3 "Mugen Installer-----------Supreme/Retro Devils" \
-      4 "PIKISS---------------------------Jose Cerrejon" \
-      5 "SEGA MODEL 3----------------------Retro Devils" \
+      4 "PIKISS Installer-----------------Jose Cerrejon" \
+      5 "SEGA MODEL 3 Installer------------Retro Devils" \
       2>&1 >/dev/tty)
 
     case "$choice" in
