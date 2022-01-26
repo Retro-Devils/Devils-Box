@@ -1495,7 +1495,7 @@ if [ "$CONT" = "y" ]; then
   echo "Rebooting Now"; sudo reboot 
 else
   echo "Exiting Now"; none
-
+  fi
 }
 
 #------------------#
