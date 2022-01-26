@@ -281,7 +281,7 @@ else
       24 "Gameboy Color                    232MB      538 GAMES" \
       25 "Gamegear                          42MB      249 GAMES" \
       26 "Intellivision                      1MB       62 GAMES" \
-      27 "****Lightgun****                  ??GB       ?? GAMES" \
+      27 "****Lightgun MAME****             ??GB       ?? GAMES" \
       28 "MarkIII                            6MB       58 GAMES" \
       29 "Mastersystem                      35MB      280 GAMES" \
       30 "Genesis/Megadrive                409MB      561 GAMES" \
