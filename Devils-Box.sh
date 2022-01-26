@@ -64,8 +64,8 @@ function main_menu() {
     5) tool_box ;;
     6) system_reboot ;;
     7) show_disk ;;
-    -) none ;;
-    +) nono ;;
+    -) nono ;;
+    +) none ;;
     *) break ;;
     esac
   done
@@ -234,8 +234,8 @@ else
       70) download-art "ggh" "boxart" "cartart" "snap" "wheel" ;;
       71) download-art "nesh" "boxart" "cartart" "snap" "wheel" ;;
       72) download-art "snesh" "boxart" "cartart" "flyer" "snap" "wheel" ;;
-      -) none  ;;
-      +) nono  ;;
+      -) nono  ;;
+      +) none  ;;
       *) break ;;
     esac
   done
@@ -918,7 +918,7 @@ function megadrive() {
 }
 function nes() {
         local choice
-    whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+    whiptail --clear --title "PICK & CHOOSE NES" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
                 "1" "10-Yard Fight" off \
                 "2" "3-D WorldRunner" off \
@@ -1154,15 +1154,21 @@ function audio() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " AUDIO & VISUAL TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 70 50 \
-      1 "T.A.M.P.O  (Theme & Music Plus Overlay)--------thepitster " \
-      2 "Emulation Station Themes-------------------------Retropie " \
-      3 "No Audio Fix------------------------------------Anonymous " \
+      + "----------------------Visual Tools------------------------- "
+      1 "Emulation Station Themes---------------------------Retropie " \
+      2 "Install Hursty Themes--------------------------------Hursty " \
+      - "-------------------Audio/Mixed Tools----------------------- "
+      3 "Install T.A.M.P.O(Theme & Music Plus Overlay)----thepitster " \
+      4 "Apply No Audio Fix--------------------------------Anonymous " \
       2>&1 >/dev/tty)
 
     case "$choice" in
+    +) nono ;;
     1) tampo ;;
     2) es-themes ;;
-    3) no-audio ;;
+    -) none ;;
+    3) hursty-themes ;;
+    4) no-audio ;;
     *) break ;;
     esac
   done
@@ -1178,6 +1184,11 @@ fi
 }
 function es-themes () {
 sudo /home/pi/RetroPie-Setup/retropie_packages.sh retropiemenu launch /home/pi/RetroPie/retropiemenu/esthemes.rp
+}
+function hursty-themes () {
+wget https://raw.githubusercontent.com/RetroHursty69/HurstyThemes/master/install.sh
+chmod +x "install.sh"
+./install.sh
 }
 function no-audio () {
 sudo grep hdmi_force_edid_audio /boot/config.txt > /dev/null 2>&1
@@ -1225,7 +1236,7 @@ function emu_tools() {
     2) rpi-menu ;;
     3) mugen ;;
     4) pikiss ;;
-    5)  sm3 ;;
+    5) sm3 ;;
     *) break ;;
     esac
   done
@@ -1271,12 +1282,12 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
-dialog  --sleep 1 --title "Mugen Installer Help" --msgbox " 
+dialog  --sleep 1 --title "Mugen Installer FYI" --msgbox " 
 -------------------------------
-       MUGEN INSTALLER HELP
+       MUGEN INSTALLER FYI
 -------------------------------
 -For this to work you might have to 
-"sudo apt-update" & "sudo apt-upgrade"
+sudo apt-update & sudo apt-upgrade
 
 -Thanks for using have a good day." 0 0
 curl -sSL https://git.io/Jz9O3 | bash
@@ -1309,8 +1320,14 @@ function hardware_tools() {
 #   CLEAR CONTROLLER FUNCTION     #
 #---------------------------------#
 function clear_controller() {
+read -p "SURE YOU WANNA CLEAR CONFIG? (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Clearing Config Now";
 sudo rm "$HOME"/.emulationstation/es_input.cfg
 sudo rm /opt/retropie/configs/all/emulationstation/es_temporaryinput.cfg
+else
+  echo "Exiting Now"; none
+fi
 }
 
 ###---------------------------------###
@@ -1328,24 +1345,33 @@ else
     choice=$(dialog --backtitle "$BACKTITLE" --title " CASES TOOLS MENU " \
       --ok-label Select --cancel-label Back \
       --menu "SELECT TOOL PRESS TO APPLY/INSTALL " 20 50 30 \
-      1 "Argon1 Case Install & Config " \
-      2 "NESPI Case Install         " \
-      2 "NESPI Case Uninstall       " \
+      1 "Argon1 Case Install          " \
+      2 "Argon1 Configuration         " \
+      2 "NESPI Case Install           " \
+      2 "NESPI Case Uninstall         " \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) argon1 ;;
-    2) nespi ;;
-    3) nespi_u ;;
+    1) argon1-in ;;
+    2) argon1-conf ;;
+    3) nespi ;;
+    4) nespi_u ;;
     *) break ;;
     esac
   done
 fi
 }
 
-function argon1() {
-  curl https://download.argon40.com/argon1.sh | bash &&
-    bash /usr/bin/argonone-config
+function argon1-in() {
+  curl https://download.argon40.com/argon1.sh | bash
+}
+
+function argon1-conf() {
+clear
+dialog  --sleep 1 --title "Argon1 Config FYI" --msgbox " 
+--------------------ATTENTION-------------------------
+-For this to work you have to have Argon1 scripts installed."
+bash /usr/bin/argonone-config
 }
 
 function nespi() {
@@ -1398,13 +1424,20 @@ function about_db() {
   cat "$HOME"/Devils-Box/files/INFO.txt
   sleep 20
 }
-#--------------------------_#
-#REMOVE DEVILS BOX #
+#---------------------------#
+#REMOVE DEVILS BOX          #
 #---------------------------#
 function remove_db() {
+clear
+read -p "SURE YOU WANNA REMOVE DEVILS BOX? (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Removing Now";
   sudo rm "$HOME"/RetroPie/retropiemenu/Devils-Box.sh
   sudo rm -R "$HOME"/Devils-Box
   sudo reboot
+else
+  echo "Exiting Now"; none
+fi
 }
 
 #------------------#
@@ -1455,7 +1488,13 @@ sleep 8
 # REBOOT FUNCTION   #
 #-------------------#
 function system_reboot() {
-  sudo reboot
+clear
+read -p "ARE YOU SURE YOU WANNA REBOOT? (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Rebooting Now"; sudo reboot 
+else
+  echo "Exiting Now"; none
+
 }
 
 #------------------#
@@ -1484,7 +1523,7 @@ wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P "$HOME"/RetroPie/ro
 
 #-----------------#
 #  GAME FUNCTION  #
-#----------------#
+#-----------------#
 function download-game() {
   for type in "$@"; do
     if [ "${type}" != "${1}" ]; then
@@ -1494,5 +1533,4 @@ fi
 done
 }
 
-# Main
 main_menu
