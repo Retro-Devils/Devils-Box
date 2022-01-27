@@ -85,52 +85,52 @@ else
                   --PRESS A/ENTER TO DOWNLOAD.......***MEANS COMING SOON" 30 70 50 \
       - "_________________Consoles-Regular-Artwork__________________" \
       1 "Amiga Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
-      2 "AmigaCD32 Artwork        [*]box  [*]cart  [*]snap  [ ]wheel" \
-      3 "***Amstrad CPC***        [*]box  [*]cart  [*]snap  [*]wheel" \
-      4 "Arcadia Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
-      5 "***Arcade Artwork***     [*]box  [*]cart  [*]snap  [*]wheel" \
-      6 "***Astrocade Artwork***  [ ]box  [ ]cart  [*]snap  [ ]wheel" \
-      7 "***Atari800 Artwork***   [*]box  [*]cart  [*]snap  [ ]wheel" \
-      8 "***Atari2600 Artwork***  [*]box  [*]cart  [*]snap  [*]wheel" \
-      9 "***Atari5200 Artwork***  [*]box  [*]cart  [*]snap  [*]wheel" \
+      2 "AmigaCD32 Artwork        [*]box  [ ]cart  [*]snap  [ ]wheel" \
+      3 "Amstrad CPC              [*]box  [ ]cart  [*]snap  [*]wheel" \
+      4 "Arcadia Artwork          [*]box  [ ]cart  [*]snap  [ ]wheel" \
+      5 "Arcade Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
+      6 "Astrocade Artwork        [*]box  [ ]cart  [*]snap  [ ]wheel" \
+      7 "Atari800 Artwork         [*]box  [ ]cart  [*]snap  [ ]wheel" \
+      8 "Atari2600 Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
+      9 "Atari5200 Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
       10 "Atari7800 Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
       11 "AtariLynx Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
-      12 "***AtariST Artwork***    [*]box  [*]cart  [*]snap  [ ]wheel" \
+      12 "AtariST Artwork          [*]box  [ ]cart  [*]snap  [ ]wheel" \
       13 "Atomiswave               [*]box  [*]cart  [*]snap  [*]wheel" \
       14 "Commadore64 Artwork      [*]box  [*]cart  [*]snap  [*]wheel" \
       15 "Coleco Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
       16 "***Daphne Artwork***     [*]box  [*]cart  [*]snap  [ ]wheel" \
       17 "Dragon32 Artwork         [*]box  [ ]cart  [*]snap  [ ]wheel" \
-      18 "Dreamcast Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
+      18 "Dreamcast Artwork        [*]box  [ ]cart  [*]snap  [ ]wheel" \
       19 "Electron                 [ ]box  [ ]cart  [*]snap  [*]wheel" \
-      20 "Famicon Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
+      20 "Famicon Artwork          [*]box  [ ]cart  [*]snap  [ ]wheel" \
       21 "FDS Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
       22 "Game & Watch Artwork     [*]box  [*]cart  [*]snap  [*]wheel" \
-      23 "***Gameboy Artwork***    [*]box  [*]cart  [*]snap  [*]wheel" \
-      24 "***GBA Artwork***        [*]box  [*]cart  [*]snap  [*]wheel" \
-      25 "***GBC Artwork***        [*]box  [*]cart  [*]snap  [ ]wheel" \
-      26 "***Gamegear Artwork***   [*]box  [*]cart  [*]snap  [ ]wheel" \
+      23 "Gameboy Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
+      24 "GBA Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
+      25 "GBC Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
+      26 "Gamegear Artwork         [*]box  [*]cart  [*]snap  [ ]wheel" \
       27 "***Genesis Artwork***    [*]box  [*]cart  [*]snap  [ ]wheel" \
       28 "Intellivision Artwork    [*]box  [ ]cart  [ ]snap  [*]wheel" \
       29 "***Lightgun Artwork***   [*]box  [*]cart  [*]snap  [ ]wheel" \
       30 "MarkIII Artwork          [*]box  [*]cart  [*]snap  [ ]wheel" \
-      31 "***Mastersystem Artwork**[*]box  [*]cart  [*]snap  [*]wheel" \
+      31 "Mastersystem Artwork     [*]box  [*]cart  [*]snap  [*]wheel" \
       32 "***Megadrive Artwork***  [*]box  [*]cart  [*]snap  [*]wheel" \
-      33 "*Megadrive-Japan Artwork*[*]box  [*]cart  [*]snap  [*]wheel" \
+      33 "Megadrive-Japan Artwork  [*]box  [*]cart  [*]snap  [*]wheel" \
       34 "MSX Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
       35 "MSX2 Artwork             [*]box  [*]cart  [*]snap  [*]wheel" \
-      36 "***N64 Artwork***        [*]box  [*]cart  [*]snap  [*]wheel" \
-      37 "Naomi Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
+      36 "N64 Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
+      37 "Naomi Artwork            [*]box  [ ]cart  [*]snap  [*]wheel" \
       38 "NDS Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
       39 "NeoGeo Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
       40 "***NES Artwork***        [*]box  [ ]cart  [*]snap  [*]wheel" \
       41 "NGPC Artwork             [*]box  [ ]cart  [*]snap  [ ]wheel" \
       42 "Openbor Artwork          [*]box  [ ]cart  [*]snap  [*]wheel" \
       43 "Oric Artwork             [*]box  [ ]cart  [ ]snap  [ ]wheel" \
-      44 "Pokemini Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
+      44 "Pokemini Artwork         [*]box  [ ]cart  [*]snap  [ ]wheel" \
       45 "***PC Engine Artwork***  [*]box  [*]cart  [*]snap  [ ]wheel" \
       46 "PS1 Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
-      47 "***Saturn Artwork***     [*]box  [*]cart  [*]snap  [*]wheel" \
+      47 "Saturn Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
       48 "Saturn-Japan Artwork     [*]box  [*]cart  [*]snap  [*]wheel" \
       49 "Scummvm Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
       50 "Sega32x Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
@@ -1038,7 +1038,8 @@ function nes() {
 }
 
 function saturn() {
-          whiptail --clear --title "PICK & CHOOSE SATURN" --separate-output --checklist "Choose:" 0 0 0 \
+          whiptail --clear --title "PICK & CHOOSE SATURN" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+	        --ok-button Download --cancel-button Back \
                 "1" "Albert Odyssey - Legend of Eldean" off \
                 "2" "Area 51" off \
                 "3" "Burning Rangers" off \
