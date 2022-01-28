@@ -12,7 +12,7 @@ function main_menu() {
             --ok-label Select --cancel-label Exit-Installer \
             --menu "
 DEVILS BOX RETROPIE INSTALLER" 25 40 40 \
-            1 "Install/ Update Devils Box " \
+            1 "Install/Update Devils Box " \
             2 "Devils Box Info   " \
             2>&1 > /dev/tty)
 
