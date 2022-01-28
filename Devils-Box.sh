@@ -51,7 +51,7 @@ function main_menu() {
       + "-------Tools-------" \
       5 "Tool Box" \
       6 "Reboot System" \
-      7 "Show Ssytem Information" \
+      7 "Show System Info" \
       2>&1 >/dev/tty)
 
     case "$choice" in
