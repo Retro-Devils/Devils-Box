@@ -1289,12 +1289,12 @@ dialog  --sleep 1 --title "Mugen Installer FYI" --msgbox "
 -Devils Box will backup your es_systems.cfg
 -For this to work you might have to run
 sudo -y update && sudo -y upgrade" 0 0
-mv /home/pi/.emulationstation/es_systems.cfg -f /home/pi/.emulationstation/es_systems.b4.wine
+mv /home/pi/.emulationstation/es_systems.cfg -f /home/pi/.emulationstation/backups/es_systems.b4.wine
 curl -sSL https://git.io/Jz9O3 | bash
 dialog  --sleep 1 --title "EXIT MESSAGE" --msgbox " 
 ------------------------------POSSIBLE ERRORS & SOLUTIONS-----------------------------
 -Only WINE shows in ES nothing else
-     -Devils Box backed up your es_systems.cfg as es_systems.b4.wine
+     -Devils Box backed up your ..../es_systems.cfg to ..../backups/es_systems.b4.wine
      -Copy wine section from new cfg to your old cfg,  delete new cfg, rename old one. 
 -Mugen doesnt launch  
      -FRIST TRY TO LAUNCH AGAIN. Wine sometimes doesnt launch correctly.
@@ -1313,11 +1313,11 @@ function hardware_tools() {
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " HARDWARE TOOLS MENU " \
       --ok-label Select --cancel-label Back \
-      --menu "CHOOSE KIND OF TOOL " 20 50 30 \
-      1 "Cases Tools " \
+      --menu "SELECT TOOL PRESS TO APPLY/INSTALL" 20 50 30 \
+      1 "Cases Tools Menu        " \
       2 "Clear Controller Config " \
-      3 "Setup Extended HDD " \
-      4 "Remove Extended HDD " \
+      3 "Setup Extended HDD      " \
+      4 "Remove Extended HDD     " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1448,9 +1448,9 @@ fi
 ###---------------------------------###
 function cases() {
 if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 OFFLINE!!!
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+Offline ... Downloads Not Availible Please Connect To Internet!" 0 0
 else
   local choice
 
@@ -1458,11 +1458,11 @@ else
     choice=$(dialog --backtitle "$BACKTITLE" --title " CASES TOOLS MENU " \
       --ok-label Select --cancel-label Back \
       --menu "SELECT TOOL PRESS TO APPLY/INSTALL " 20 50 30 \
-      1 "Argon1 Case Install          " \
-      2 "Argon1 Configuration         " \
-      3 "NESPI Case Install           " \
-      4 "NESPI Case Uninstall         " \
-      5 "Retroflag GPI Install        " \
+      1 "Argon1 Case Install         PI 4" \
+      2 "Argon1 Configuration        PI 4" \
+      3 "NESPI Case Install          PI 4" \
+      4 "NESPI Case Uninstall        PI 4" \
+      5 "Retroflag GPI Install       PI 4" \
       2>&1 >/dev/tty)
 
     case "$choice" in
