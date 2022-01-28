@@ -51,7 +51,7 @@ function main_menu() {
       + "-------Tools-------" \
       5 "Tool Box" \
       6 "Reboot System" \
-      7 "Show Disk Space" \
+      7 "Show Ssytem Information" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -61,7 +61,7 @@ function main_menu() {
     4) pick ;;
     5) tool_box ;;
     6) system_reboot ;;
-    7) show_disk ;;
+    7) show_sysinfo ;;
     -) nono ;;
     +) none ;;
     *) break ;;
