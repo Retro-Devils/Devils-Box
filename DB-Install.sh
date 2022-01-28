@@ -66,7 +66,6 @@ sudo openvt -c 1 -s -f emulationstation 2>&1
 #--------#
 #  INFO  #
 #--------#
-
 function info() {
 dialog  --sleep 1 --title "DEVILS BOX RETROPIE" --msgbox " 
 WHATS THIS?    A DOWNLOADER AND TOOL BOX 
