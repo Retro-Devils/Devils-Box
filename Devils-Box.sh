@@ -415,31 +415,29 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 --ok-button Download --cancel-button Consoles-Menu \
                 --checklist "Choose:" 0 0 0 \
                 "+" "GAME NAME                     FILE SIZE" off \
-                "1" "Age Of Empires                    215MB" off \
-                "2" "Age Of Empires 2                  6.1GB" off \
-                "3" "Cuphead.                           11GB" off \
-                "4" "Command & Conquer TS              1.3GB" off \
-                "5" "Diablo 2                          1.8GB" off \
-                "6" "Fallout                           535MB" off \
-                "7" "Fallout 2                         555MB" off \
-                "8" "Fallout Tactics                   1.5GB" off \
-                "9" "Starcraft                         1.2GB" off \
-                "10" "Warcraft 3                        1.9GB" off \
+                "1" "Age Of Empires 2                  6.1GB" off \
+                "2" "Cuphead (slow speeds)              11GB" off \
+                "3" "Command & Conquer TS              1.3GB" off \
+                "4" "Diablo 2                          1.8GB" off \
+                "5" "Fallout                           535MB" off \
+                "6" "Fallout 2                         555MB" off \
+                "7" "Fallout Tactics                   1.5GB" off \
+                "8" "Starcraft                         1.2GB" off \
+                "9" "Warcraft 3                        1.9GB" off \
                 2>/tmp/results
     while read -r choice  
         do
         case $choice in
 	        +) none ;;
-                1) aoe ;;
-                2) aoe-2 ;;
-                3) cuphead ;;
-                4) cncts  ;;
-                5) diablo-2 ;;
-                6) fallout ;;
-                7) fallout-2 ;;
-                8) fallout-tactics ;;
-                9) starcraft ;;
-                10) warcraft-3 ;;
+                1) aoe-2 ;;
+                2) cuphead ;;
+                3) cncts  ;;
+                4) diablo-2 ;;
+                5) fallout ;;
+                6) fallout-2 ;;
+                7) fallout-tactics ;;
+                8) starcraft ;;
+                9) warcraft-3 ;;
                 *) ;;
         esac
         done < /tmp/results
