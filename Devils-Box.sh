@@ -1155,7 +1155,7 @@ function audio() {
       --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 70 50 \
       + "_____________________Visual Tools__________________________ " \
       1 "Emulation Station Themes---------------------------Retropie " \
-      2 "Install Hursty Themes--------------------------------Hursty " \
+      2 "Hursty's Themes--------------------------------------Hursty " \
       - "___________________Audio/Mixed Tools_______________________ " \
       3 "Apply No Audio Fix--------------------------------Anonymous " \
       4 "Install T.A.M.P.O--------------------------------thepitster " \
@@ -1285,10 +1285,22 @@ dialog  --sleep 1 --title "Mugen Installer FYI" --msgbox "
 -------------------------------
   INSTALLER WARNING & FYI
 -------------------------------
--For this to work you might have to 
-sudo apt-update & sudo apt-upgrade
--This will also overwrite your es_systems.cfg " 0 0
+-This will also overwrite your es_systems.cfg 
+-Devils Box will backup your es_systems.cfg
+-For this to work you might have to run
+sudo -y update && sudo -y upgrade" 0 0
+mv /home/pi/.emulationstation/es_systems.cfg -f /home/pi/.emulationstation/es_systems.b4.wine
 curl -sSL https://git.io/Jz9O3 | bash
+dialog  --sleep 1 --title "EXIT MESSAGE" --msgbox " 
+------------------------------POSSIBLE ERRORS & SOLUTIONS-----------------------------
+-Only WINE shows in ES nothing else
+     -Devils Box backed up your es_systems.cfg as es_systems.b4.wine
+     -Copy wine section from new cfg to your old cfg,  delete new cfg, rename old one. 
+-Mugen doesnt launch  
+     -FRIST TRY TO LAUNCH AGAIN. Wine sometimes doesnt launch correctly.
+     -Wait. Big Mugens/Games can take some time.
+     -Run sudo -y update && sudo -y upgrade
+     -Reinstall. Something might have been missed " 0 0
 fi
 }
 
@@ -1531,15 +1543,10 @@ function about_db() {
 #---------------------------#
 function remove_db() {
 clear
-read -p "SURE YOU WANNA REMOVE DEVILS BOX? (y/n)?" CONT
-if [ "$CONT" = "y" ]; then
   echo "Removing Now";
   sudo rm "$HOME"/RetroPie/retropiemenu/Devils-Box.sh
   sudo rm -R "$HOME"/Devils-Box
   sudo reboot
-else
-  echo "Exiting Now"; none
-fi
 }
 
 #------------------#
