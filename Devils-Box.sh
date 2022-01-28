@@ -1462,7 +1462,7 @@ else
       2 "Argon1 Configuration         " \
       3 "NESPI Case Install           " \
       4 "NESPI Case Uninstall         " \
-      5 "Retroflag GPI Install        " \ 
+      5 "Retroflag GPI Install        " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1502,7 +1502,7 @@ function nespi_u() {
 }
 function retroflag() {
 dialog  --sleep 1 --title "RetroFlag GPI Install" --msgbox " 
--This will install scripts for RetroFlag Cases
+-This will install scripts for RetroFlag Cases.
 -After complete system will reboot." 0 0
 wget -O - "https://raw.githubusercontent.com/ALLRiPPED/retroflag-picase/master/install_gpi.sh" | sudo bash
 }
