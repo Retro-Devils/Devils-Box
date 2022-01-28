@@ -1,6 +1,6 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
-BACKTITLE="DEVILS BOX----V-2.5----UPDATED 1/25/21"
+BACKTITLE="DEVILS BOX----V-3.0----UPDATED 1/28/21"
 ##-------------------------##
 ##       HOST SITES        ##
 ##-------------------------##
