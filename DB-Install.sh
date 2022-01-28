@@ -84,7 +84,7 @@ WHY USE THIS ARTWORK INSTEAD OF SCRAPER?
 __CREDITS__
 --EMUS AND TOOLS CREDITS:
 	-All emus & tools from commmunity have credits in Devils Box menus.
-	  example. RetroPie Extras says "Zero Jay" at the far right of that line.
+	  example. RetroPie Extras says *Zero Jay* at the far right of that line.
 --MISC CREDITS:
 -ALL THE RETRO DEVILS--------YOU KNOW WHAT YOU DID      
 -COMMUNITY-------------------INPUT IN GENERAL
