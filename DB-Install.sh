@@ -11,14 +11,7 @@ function main_menu() {
         choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX 2.5 " \
             --ok-label Select --cancel-label Exit-Installer \
             --menu "
-DEVILS BOX RETROPIE INSTALLER
---------------------------------------
-WHATS THIS?    A DOWNLOADER & TOOL BOX 
---------------------------------------
-CREATED BY?    THE RETRO DEVILS & OTHERS
--------------------------------------- 
-CREATED WHEN?  2021/2022
---------------------------------------" 25 50 40 \
+DEVILS BOX RETROPIE INSTALLER" 25 50 40 \
             1 "Install/ Update Devils Box " \
             2 "Devils Box Info   " \
             2>&1 > /dev/tty)
@@ -67,7 +60,7 @@ sudo openvt -c 1 -s -f emulationstation 2>&1
 #  INFO  #
 #--------#
 function info() {
-dialog  --sleep 1 --title "DEVILS BOX RETROPIE" --msgbox " 
+dialog  --sleep 1 --title "DEVILS BOX INFO" --msgbox " 
 WHATS THIS?    A DOWNLOADER AND TOOL BOX 
 CREATED BY?    THE RETRO DEVILS AND OTHERS 
 CREATED WHEN?  DECEMBER 2021
@@ -79,9 +72,9 @@ WHY EVEN MAKE THIS?
 WHAT DOES THIS WORK ON?
      - This is built for things with RetroPie installed. Mainly PI 4.
      - This will work on any system(s) with Retropie Installed.
-           **The following is needed for Devils Box to work:
-	      *The location:    ~/RetroPie/retropiemenu/ & ~/RetroPie/roms/
-	      *The Commands:    wget and curl
+           --The following is needed for Devils Box to work:
+	      -The location:    ~/RetroPie/retropiemenu/ & ~/RetroPie/roms/
+	      -The Commands:    wget and curl
       - The downloader will work any Retropie Device. That doesnt mean you can play all the consoles listed.
 		**example pi zero wont play N64.
       - Most tools will only work on pi 3 or 4.
@@ -89,18 +82,18 @@ WHY USE THIS ARTWORK INSTEAD OF SCRAPER?
       - This art is set for these roms. So they will look nice. Scraper works and props to it.
       
 __CREDITS__
-
 --EMUS AND TOOLS CREDITS:
 	-All emus & tools from commmunity have credits in Devils Box menus.
-	**example. RetroPie Extras says "Zero Jay" at the far right of that line.
+	  example. RetroPie Extras says "Zero Jay" at the far right of that line.
 --MISC CREDITS:
-*ALL THE RETRO DEVILS--------YOU KNOW WHAT YOU DID      
-*COMMUNITY-------------------INPUT IN GENERAL
-*RETROPIE--------------------FOR EVERYTHING THEY DO 
-*CRASH-----------------------SCRIPTING KNOWLEDGE & ADVICE  
-*BIGED-----------------------SCRIPTING KNOWLEDE & ADVICE   
-*MONK OF THE FUNK------------SCRIPTING KNOWLEDGE & ADVICE 
-*SOLARBABY-------------------SCRIPTING KNOWLEDGE & ADVICE" 0 0
+-ALL THE RETRO DEVILS--------YOU KNOW WHAT YOU DID      
+-COMMUNITY-------------------INPUT IN GENERAL
+-RETROPIE--------------------FOR EVERYTHING THEY DO 
+-CRASH-----------------------SCRIPTING KNOWLEDGE & ADVICE  
+-BIGED-----------------------SCRIPTING KNOWLEDGE & ADVICE
+-MONK OF THE FUNK------------SCRIPTING KNOWLEDGE & ADVICE 
+-SOLARBABY-------------------SCRIPTING KNOWLEDGE & ADVICE" 0 0
+
 }
 
 # Main
