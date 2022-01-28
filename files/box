@@ -8,24 +8,24 @@ bfgred="${bld}$(tput setaf 1)"
 bfggrn="${bld}$(tput setaf 2)"
 bfgylw="${bld}$(tput setaf 3)"
 
-echo ''${bfgylw}' (                       (
- )\ )        )           )\ )              (
-(()/(  (  ( /((         (()/(    (   )  (  )\
- /(_))))\ )\())(   ( ___ /(_))  ))\ /(( )\((_|
-('${fgred}'_'${fgylw}')) /((_|'${fgred}'_'${fgylw}'))(('${bfgylw}')\  )\___('${fgred}'_'${fgylw}'))'${fgred}'_'${fgylw}'  /((_|_))((_)_ )\'${fgred}'
-| _ \'${fgylw}'('${fgred}'_'${fgylw}'))'${fgred}'| |_ '${fgylw}'(('${fgred}'_'${fgylw}')(('${fgred}'_'${fgylw}')   '${fgred}'|   \'${fgylw}'('${fgred}'_'${fgylw}')) '${fgred}'_'${fgylw}')(('${fgred}'_|_)'${fgylw}' (('${fgred}'_'${fgylw}')'${fgred}'
-|   / -_)|  _| `_/ _ \   | |) / -_)\ V /| | (_-<
-|_|_\___| \__|_| \___/   |___/\___| \_/ |_|_/__/
+echo ''${bfgylw}'         (                       (
+         )\ )        )           )\ )              (
+        (()/(  (  ( /((         (()/(    (   )  (  )\
+         /(_))))\ )\())(   ( ___ /(_))  ))\ /(( )\((_|
+        ('${fgred}'_'${fgylw}')) /((_|'${fgred}'_'${fgylw}'))(('${bfgylw}')\  )\___('${fgred}'_'${fgylw}'))'${fgred}'_'${fgylw}'  /((_|_))((_)_ )\'${fgred}'
+        | _ \'${fgylw}'('${fgred}'_'${fgylw}'))'${fgred}'| |_ '${fgylw}'(('${fgred}'_'${fgylw}')(('${fgred}'_'${fgylw}')   '${fgred}'|   \'${fgylw}'('${fgred}'_'${fgylw}')) '${fgred}'_'${fgylw}')(('${fgred}'_|_)'${fgylw}' (('${fgred}'_'${fgylw}')'${fgred}'
+        |   / -_)|  _| `_/ _ \   | |) / -_)\ V /| | (_-<
+        |_|_\___| \__|_| \___/   |___/\___| \_/ |_|_/__/
           .    .
           |\   |\
-       _..;|;__;|;
-     ,`   `;` \`;`-.
-     7;-..     :    )
-.--._)|   `;==,|,==`     '${bfggrn}'THE RETRO DEVILS'${fgred}'
- `\`@; \_ `<`'${bfgylw}'G'${fgred}'," '${bfgylw}'G'${fgred}').     '${bfggrn}'--DEVILS BOX----'${fgred}'
-   `\/-;,(  )  .>. )     '${bfggrn}'--VERSION--3.0--'${fgred}'
-       < ,-;`-.__.;`
-        `\_ `-,__,`
+       _..;|;__;|;     '${bfggrn}'THE RETRO DEVILS'${fgred}'
+     ,`   `;` \`;`-.   '${bfggrn}'---DEVILS BOX---'${fgred}'
+     7;-..     :    )  '${bfggrn}'____   ____________     _______   '${fgred}'
+.--._)|   `;==,|,==`   '${bfggrn}'\   \ /   /\_____  \    \   _  \  '${fgred}'
+ `\`@; \_ `<`'${bfgylw}'G'${fgred}'," '${bfgylw}'G'${fgred}').   '${bfggrn}' \   Y   /   _(__  <    /  /_\  \ '${fgred}'
+   `\/-;,(  )  .>. )   '${bfggrn}'  \     /   /       \   \  \_/   \'${fgred}'
+       < ,-;`-.__.;`   '${bfggrn}'   \___/   /______  / /\ \_____  /'${fgred}'
+        `\_ `-,__,`    '${bfggrn}'                  \/  \/       \/ '${fgred}'
            `-..,;,>
               `;;;;
                `  `
