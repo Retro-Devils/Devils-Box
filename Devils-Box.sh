@@ -518,13 +518,6 @@ mv "$HOME"/RetroPie/roms/wine/games/warcraft3.sh -f "$HOME"/RetroPie/roms/wine/W
 chmod 755 "$HOME"/RetroPie/roms/wine/Warcraft-3.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip
 }
-function warcraft-3() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Warcraft3.zip -P "$HOME"/RetroPie/roms/wine
-unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip -d "$HOME"/RetroPie/roms/wine/games/
-mv "$HOME"/RetroPie/roms/wine/games/warcraft3.sh -f "$HOME"/RetroPie/roms/wine/Warcraft-3.sh
-chmod 755 "$HOME"/RetroPie/roms/wine/Warcraft-3.sh
-sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip
-}
 ###------------------------------###
 ### HACKED PACKS MENU FUNCTIONS  ###
 ###------------------------------###
