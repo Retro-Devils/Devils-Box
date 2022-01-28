@@ -24,12 +24,13 @@ CREATED WHEN?  2021/2022
             2>&1 > /dev/tty)
 
         case "$choice" in
-            1) install_db      ;;
+            1) install_db  ;;
             2) info        ;;
-            *) break           ;;
+            *) break       ;;
         esac
     done
 }
+
 #----------------------------#
 # INSTALL/UPDATE  DEVILS BOX #
 #----------------------------#
@@ -66,7 +67,7 @@ sudo openvt -c 1 -s -f emulationstation 2>&1
 #  INFO  #
 #--------#
 
-function() info {
+function info() {
 dialog  --sleep 1 --title "DEVILS BOX RETROPIE" --msgbox " 
 WHATS THIS?    A DOWNLOADER AND TOOL BOX 
 CREATED BY?    THE RETRO DEVILS AND OTHERS 
