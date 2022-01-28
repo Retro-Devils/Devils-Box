@@ -1460,8 +1460,9 @@ else
       --menu "SELECT TOOL PRESS TO APPLY/INSTALL " 20 50 30 \
       1 "Argon1 Case Install          " \
       2 "Argon1 Configuration         " \
-      2 "NESPI Case Install           " \
-      2 "NESPI Case Uninstall         " \
+      3 "NESPI Case Install           " \
+      4 "NESPI Case Uninstall         " \
+      5 "Retroflag GPI Install        " \ 
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1469,6 +1470,7 @@ else
     2) argon1-conf ;;
     3) nespi ;;
     4) nespi_u ;;
+    5) retroflag ;;
     *) break ;;
     esac
   done
@@ -1483,8 +1485,10 @@ function argon1-in() {
 function argon1-conf() {
 clear
 dialog  --sleep 1 --title "Argon1 Config FYI" --msgbox " 
---------------------ATTENTION-------------------------
--For this to work you have to have Argon1 scripts installed." 0 0
+ATTENTION FOR THIS TO WORK:
+   -You have to have Argon1 scripts installed.
+   -You will need a keyboard" 0 0
+clear 
 bash /usr/bin/argonone-config
 }
 
@@ -1496,7 +1500,12 @@ function nespi() {
 function nespi_u() {
   wget -O - "https://raw.githubusercontent.com/crcerror/retroflag-picase/master/uninstall_all.sh" | sudo bash
 }
-
+function retroflag() {
+dialog  --sleep 1 --title "RetroFlag GPI Install" --msgbox " 
+-This will install scripts for RetroFlag Cases
+-After complete system will reboot." 0 0
+wget -O - "https://raw.githubusercontent.com/ALLRiPPED/retroflag-picase/master/install_gpi.sh" | sudo bash
+}
 ###---------------------------------###
 ###   DEVILS BOX TOOLS FUNCTION     ###
 ###---------------------------------###
