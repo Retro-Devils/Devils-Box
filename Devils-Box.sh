@@ -545,7 +545,7 @@ local choice
       3 "Genesis Hacks                          197MB    191 GAMES " \
       4 "Gamegear Hacks                           1MB      4 GAMES " \
       5 "NES Hacks                              962KB      6 GAMES " \
-      6 "SNES Hacks                               40MB     37 GAMES" \
+      6 "SNES Hacks                              40MB     37 GAMES " \
       2>&1 >/dev/tty)
 
     case "$choice" in
