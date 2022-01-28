@@ -19,20 +19,20 @@ CREATED BY?    THE RETRO DEVILS & OTHERS
 -------------------------------------- 
 CREATED WHEN?  2021/2022
 --------------------------------------" 25 50 40 \
-            1 "Install Devils Box " \
-            2 "Update Devils Box  " \
+            1 "Install/ Update Devils Box " \
+            2 "Devils Box Info   " \
             2>&1 > /dev/tty)
 
         case "$choice" in
             1) install_db      ;;
-            2) update_db       ;;
+            2) info        ;;
             *) break           ;;
         esac
     done
 }
-#---------------------------#
-#INSTALL DEVILS BOX #
-#---------------------------#
+#----------------------------#
+# INSTALL/UPDATE  DEVILS BOX #
+#----------------------------#
 function install_db() {
 if [ -d "$HOME/RetroPie/retropiemenu/Devils-Box/" ]; then sudo rm -fR $HOME/RetroPie/retropiemenu/Devils-Box/; fi
 if [ -f "$HOME/RetroPie/retropiemenu/Devils-Box.sh" ]; then sudo rm $HOME/RetroPie/retropiemenu/Devils-Box.sh; fi
@@ -61,36 +61,46 @@ sleep 1
 killall emulationstation
 sudo openvt -c 1 -s -f emulationstation 2>&1
 }
-#------------------#
-#UPDATE DEVILS BOX #
-#------------------#
-function update_db() {
-if [ -d "$HOME/RetroPie/retropiemenu/Devils-Box/" ]; then sudo rm -fR $HOME/RetroPie/retropiemenu/Devils-Box/; fi
-sudo rm -f $HOME/RetroPie/retropiemenu/Devils-Box.sh 
-cd $HOME/Devils-Box
-git pull
-cp $HOME/Devils-Box/Devils-Box.sh -f $HOME/RetroPie/retropiemenu/
-cp $HOME/Devils-Box/files/Devils-Box.png -f $HOME/RetroPie/retropiemenu/icons/
-sudo cp $HOME/Devils-Box/Devils-Box.sh -f /usr/local/bin/Devils-Box
-chmod 755 $HOME/RetroPie/retropiemenu/Devils-Box.sh
-sudo chmod 755 /usr/local/bin/Devils-Box
-sudo cp $HOME/Devils-Box/files/box -f /usr/local/bin/
-sudo chmod 755 /usr/local/bin/box
-sleep 1
-if [ ! -s $HOME/RetroPie/retropiemenu/gamelist.xml ]; then sudo rm -f $HOME/RetroPie/retropiemenu/gamelist.xml; fi
-if [ ! -f "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml $HOME/RetroPie/retropiemenu/gamelist.xml; fi
-CONTENT1="<game>\n<path>./Devils-Box.sh</path>\n<name>Devils-Box</name>\n<desc>The Retro Devils Tool Box - A fully fuctional script to get even the newbies started up with ease, able to download roms and artwork to their proper places, Mugen and Sega Model 3 emulators, themes and music tools, plus much, much more.</desc>\n<image>./icons/Devils-Box.png</image>\n<releasedate>20220105T173842</releasedate>\n<developer>The Retro Devils</developer>\n<publisher>The Retro Devils</publisher>\n<genre>Devils-Box Script</genre>\n</game>"
-C1=$(echo $CONTENT1 | sed 's/\//\\\//g')
-if grep -q Devils-Box.sh "$HOME/RetroPie/retropiemenu/gamelist.xml"; then echo "gamelist.xml entry confirmed"
-else
-	sed "/<\/gameList>/ s/.*/${C1}\n&/" $HOME/RetroPie/retropiemenu/gamelist.xml > $HOME/temp
-	cat $HOME/temp > $HOME/RetroPie/retropiemenu/gamelist.xml
-	rm -f $HOME/temp
-fi
-echo "Emulationstation Will Now Restart ..."
-sleep 1
-killall emulationstation
-sudo openvt -c 1 -s -f emulationstation 2>&1
+
+#--------#
+#  INFO  #
+#--------#
+
+function() info {
+dialog  --sleep 1 --title "DEVILS BOX RETROPIE" --msgbox " 
+WHATS THIS?    A DOWNLOADER AND TOOL BOX 
+CREATED BY?    THE RETRO DEVILS AND OTHERS 
+CREATED WHEN?  DECEMBER 2021
+
+__FREQUENTLY ASKED QUESTIONS__
+
+WHY EVEN MAKE THIS?
+     - We want everyone to enjoy alL the games. If your getting em anyway, let us make it easy.
+WHAT DOES THIS WORK ON?
+     - This is built for things with RetroPie installed. Mainly PI 4.
+     - This will work on any system(s) with Retropie Installed.
+           **The following is needed for Devils Box to work:
+	      *The location:    ~/RetroPie/retropiemenu/ & ~/RetroPie/roms/
+	      *The Commands:    wget and curl
+      - The downloader will work any Retropie Device. That doesnt mean you can play all the consoles listed.
+		**example pi zero wont play N64.
+      - Most tools will only work on pi 3 or 4.
+WHY USE THIS ARTWORK INSTEAD OF SCRAPER?
+      - This art is set for these roms. So they will look nice. Scraper works and props to it.
+      
+__CREDITS__
+
+--EMUS AND TOOLS CREDITS:
+	-All emus & tools from commmunity have credits in Devils Box menus.
+	**example. RetroPie Extras says "Zero Jay" at the far right of that line.
+--MISC CREDITS:
+*ALL THE RETRO DEVILS--------YOU KNOW WHAT YOU DID      
+*COMMUNITY-------------------INPUT IN GENERAL
+*RETROPIE--------------------FOR EVERYTHING THEY DO 
+*CRASH-----------------------SCRIPTING KNOWLEDGE & ADVICE  
+*BIGED-----------------------SCRIPTING KNOWLEDE & ADVICE   
+*MONK OF THE FUNK------------SCRIPTING KNOWLEDGE & ADVICE 
+*SOLARBABY-------------------SCRIPTING KNOWLEDGE & ADVICE" 0 0
 }
 
 # Main
