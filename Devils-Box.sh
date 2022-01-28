@@ -1584,15 +1584,50 @@ fi
 #----------------------------#
 # SHOW DISK SPACE FUNCTION   #
 #----------------------------#
-function show_disk() {
-  clear 
-free -m | awk 'NR==2{printf "Memory Usage: %s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2 }' 
-df -h | awk '$NF=="/"{printf "Disk Usage: %d/%dGB(%s)\n", $3,$2,$5}'
-top -bn1 | grep load | awk '{printf "CPU Load: %.2f\n", $(NF-2)}'
-cpu_temp=$(< /sys/class/thermal/thermal_zone0/temp)
- cpu_temp=$(($cpu_temp/1000))
- echo Temp: $cpu_temp°C
-sleep 8
+function show_sysinfo() {
+clear
+cpuTempC=""
+cpuTempF=""
+gpuTempC=""
+gpuTempF=""
+if [[ -f "/sys/class/thermal/thermal_zone0/temp" ]]; then cpuTempC=$(($(cat /sys/class/thermal/thermal_zone0/temp)/1000)) && cpuTempF=$((cpuTempC*9/5+32)); fi
+if [[ -f "/opt/vc/bin/vcgencmd" ]]; then
+    if gpuTempC=$(/opt/vc/bin/vcgencmd measure_temp); then
+        gpuTempC=${gpuTempC:5:2}
+        gpuTempF=$((gpuTempC*9/5+32))
+    else
+        gpuTempC=""
+    fi
+fi
+let upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
+let secs=$((${upSeconds}%60))
+let mins=$((${upSeconds}/60%60))
+let hours=$((${upSeconds}/3600%24))
+let days=$((${upSeconds}/86400))
+UPTIME=`printf "%d days, %02dh%02dm%02ds" "$days" "$hours" "$mins" "$secs"`
+
+echo "$(tput setaf 7)
+........OS INFO.......:
+$(tput setaf 2)`uname -srmo`
+`lsb_release -ds`
+`date +"%A, %e %B %Y, %r"`
+Uptime......: ${UPTIME}
+Last Login..: `exec -- last | head -1`
+$(tput setaf 7)......SYSTEM INFO.....:
+$(tput setaf 1)CPU Temperature.......: ${cpuTempC} C/${cpuTempF} F
+GPU Temperature.......: ${gpuTempC} C/${gpuTempF} F
+$(tput setaf 3)CPU Model.............: `lscpu | grep "Model name"`
+CPU Max Speed.........: `lscpu | grep max`
+GPU Version...........: `exec -- /opt/vc/bin/vcgencmd version`
+$(tput setaf 7)			Size     Used     Avail    Used%
+$(tput setaf 3)Boot Partition........: `df -h | grep '/dev/sda1' | awk '{print $2,"     "$3,"     "$4,"     "$5}'`
+Root Partition........: `df -h | grep '/dev/root' | awk '{print $2,"    "$3,"     "$4,"      "$5}'`
+$(tput setaf 6)Memory................: `cat /proc/meminfo | grep MemFree | awk '{printf( "%.2f\n", $2 / 1024 )}'`MB (Free) / `cat /proc/meminfo | grep MemTotal | awk '{printf( "%.2f\n", $2 / 1024 )}'`MB (Total)
+Running Processes.....: `ps ax | wc -l | tr -d " "`
+LAN IP Address........: `ip -4 route get 8.8.8.8 2>/dev/null | awk '{print $(NF-2); exit}'`
+WAN IP Address........: `curl -4 icanhazip.com 2>/dev/null | awk '{print $NF; exit}'`$(tput sgr0)"
+echo
+read -n 1 -s -r -p "Press any key to continue"
 }
 
 #-------------------#
