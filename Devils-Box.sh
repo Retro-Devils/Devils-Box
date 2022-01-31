@@ -380,7 +380,7 @@ else
     56) download-packs "videopac" ;;
     57) download-packs "virtualboy" ;;
     58) download-packs "vmu" ;;
-    59) wine "wine" ;;
+    59) winegames ;;
     60) download-packs "wonderswancolor" ;;
     61) download-packs "x1" ;;
     62) download-packs "x68000" ;;
@@ -396,7 +396,7 @@ fi
 #--------------------------------#
 #      WINE SUB MENU FUNCTIONS   #
 #--------------------------------#
-function wine() {
+function winegames() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
