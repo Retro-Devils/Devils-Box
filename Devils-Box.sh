@@ -1127,7 +1127,7 @@ function game_fixes() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " TOOL BOX MENU " \
       --ok-label Select --cancel-label Main-Menu \
       --menu "SELECT GAME FIX AND PRESS A  " 20 50 30 \
-      1 "Age Of Empires Needs CD For Singler Player Fix" \
+      1 "Age Of Empires No-CD Error Fix" \
       2>&1 >/dev/tty)
 
     case "$choice" in
