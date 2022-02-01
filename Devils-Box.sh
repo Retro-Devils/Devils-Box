@@ -1199,8 +1199,7 @@ function audio() {
 }
 function tampo() {
 if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
-OFFLINE!!!
+dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
 curl -sSL https://git.io/JDfjg | bash
