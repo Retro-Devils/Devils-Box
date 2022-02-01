@@ -425,10 +425,11 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "6" "Fallout                           535MB" off \
                 "7" "Fallout 2                         555MB" off \
                 "8" "Fallout Tactics                   1.5GB" off \
-				"9" "The House Of The Dead             299MB" off \
-				"10" "The House Of The Dead 2           579MB" off \
-                "11" "Starcraft                         1.2GB" off \
-                "12" "Warcraft 3                        1.9GB" off \
+		"9" "The House Of The Dead             299MB" off \
+		"10" "The House Of The Dead 2           579MB" off \
+                "11" "Teenage Muntant Turtles           1.3Gb" off \
+		"12" "Starcraft                         1.2GB" off \
+                "13" "Warcraft 3                        1.9GB" off \
                 2>/tmp/results
     while read -r choice  
         do
@@ -444,8 +445,9 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 8) fallout-tactics ;;
 		9) thotd ;;
 		10) thotd2 ;;
-                11) starcraft ;;
-                12) warcraft-3 ;;
+		11) tmnt
+                12) starcraft ;;
+                13) warcraft-3 ;;
                 *) ;;
         esac
         done < /tmp/results
