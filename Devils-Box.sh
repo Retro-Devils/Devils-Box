@@ -429,7 +429,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 		"10" "The House Of The Dead 2           579MB" off \
                 "11" "Teenage Muntant Ninja Turtles     1.3GB" off \
 		"12" "Starcraft                         1.2GB" off \
-		"13" " Star Wars Battlefront            2.3Gb" off \
+		"13" "Star Wars Battlefront             2.3GB" off \
                 "14" "Warcraft 3                        1.9GB" off \
                 2>/tmp/results
     while read -r choice  
