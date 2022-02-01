@@ -428,9 +428,10 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 		"9" "The House Of The Dead             299MB" off \
 		"10" "The House Of The Dead 2           579MB" off \
                 "11" "Teenage Muntant Ninja Turtles     1.3GB" off \
-		"12" "Starcraft                         1.2GB" off \
-		"13" "Star Wars Battlefront             2.3GB" off \
-                "14" "Warcraft 3                        1.9GB" off \
+		"12" "Spooky Castle                      10MB" off \
+		"13" "Starcraft                         1.2GB" off \
+		"14" "Star Wars Battlefront             2.3GB" off \
+                "15" "Warcraft 3                        1.9GB" off \
                 2>/tmp/results
     while read -r choice  
         do
@@ -447,9 +448,10 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 		9) thotd ;;
 		10) thotd2 ;;
 		11) tmnt ;;
-                12) starcraft ;;
-                13) swbf ;;
-		14) warcraft-3 ;;
+                12) spooky-castle ;;
+		13) starcraft ;;
+                14) swbf ;;
+		15) warcraft-3 ;;
                 *) ;;
         esac
         done < /tmp/results
@@ -529,6 +531,12 @@ wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Starcraft.
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Starcraft.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Starcraft.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Starcraft.zip
+}
+function spooky-castle() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Spooky-Castle.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Spooky-Castle.zip -d "$HOME"/RetroPie/roms/wine/
+chmod 755 "$HOME"/RetroPie/roms/wine/Spooky-Castle.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Spooky-Castle.zip
 }
 function swbf() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_SWBF.zip -P "$HOME"/RetroPie/roms/wine
