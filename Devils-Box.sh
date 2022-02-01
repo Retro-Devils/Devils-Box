@@ -528,6 +528,12 @@ unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Starcraft.zip -d "$HOME"/RetroP
 chmod 755 "$HOME"/RetroPie/roms/wine/Starcraft.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Starcraft.zip
 }
+function swbf() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_SWBF.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_SWBF.zip -d "$HOME"/RetroPie/roms/wine/
+chmod 755 "$HOME"/RetroPie/roms/wine/Star-Wars-Battlefront.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_SWBF.zip
+}
 function warcraft-3() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Warcraft3.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip -d "$HOME"/RetroPie/roms/wine/
