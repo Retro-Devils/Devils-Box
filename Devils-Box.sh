@@ -427,7 +427,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "8" "Fallout Tactics                   1.5GB" off \
 		"9" "The House Of The Dead             299MB" off \
 		"10" "The House Of The Dead 2           579MB" off \
-                "11" "Teenage Muntant Turtles           1.3Gb" off \
+                "11" "Teenage Muntant Ninja Turtles     1.3GB" off \
 		"12" "Starcraft                         1.2GB" off \
                 "13" "Warcraft 3                        1.9GB" off \
                 2>/tmp/results
