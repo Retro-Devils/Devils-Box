@@ -445,7 +445,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 8) fallout-tactics ;;
 		9) thotd ;;
 		10) thotd2 ;;
-		11) tmnt
+		11) tmnt ;;
                 12) starcraft ;;
                 13) warcraft-3 ;;
                 *) ;;
