@@ -442,8 +442,9 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 6) fallout ;;
                 7) fallout-2 ;;
                 8) fallout-tactics ;;
-				9) thotd ;;
-				10) thotd2 ;;
+		9) thotd ;;
+		10) thotd2 ;;
+		
                 11) starcraft ;;
                 12) warcraft-3 ;;
                 *) ;;
@@ -513,6 +514,12 @@ wget https://archive.org/download/retro-devils-winegames/Retro-Devils_THOTD2.zip
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_THOTD2.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/The-House-Of-The-Dead-2.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_THOTD2.zip
+}
+function tmnt() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_TMNT.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_TMNT.zip -d "$HOME"/RetroPie/roms/wine/
+chmod 755 "$HOME"/RetroPie/roms/wine/TMNT.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_TMNT.zip
 }
 function starcraft() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Starcraft.zip -P "$HOME"/RetroPie/roms/wine
