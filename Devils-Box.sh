@@ -619,8 +619,9 @@ local choice
       5 "Nintendo 64" \
       6 "Nintendo DS" \
       7 "NES" \
-      8 "Saturn" \
-      9 "Super Nintendo" \
+      8 "Playstation 1" \
+      9 "Saturn" \
+      10 "Super Nintendo" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -631,8 +632,9 @@ local choice
     5) n64 ;;
     6) nds ;;
     7) nes ;;
-    8) saturn ;;
-    9) snes ;;
+    8) psx ;;
+    9) saturn ;;
+    10) snes ;;
     *) break ;;
     esac
   done
@@ -1279,7 +1281,75 @@ function nes() {
         esac
         done < /tmp/results
 }
-
+function psx() {
+          whiptail --clear --title "PICK & CHOOSE PS1" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+                "1" "Alone in the Dark - One-Eyed Jack's Revenge" off \
+                "2" "Castlevania - Symphony of the Night" off \
+                "3" "Castlevania Chronicles" off \
+                "4" "Cool Boarders 2" off \
+                "5" "Crash Bandicoot" off \
+                "6" "Crash Bandicoot - Warped" off \
+                "7" "Crash Bash" off \
+                "8" "Dead or Alive" off \
+                "9" "Destruction Derby 2" off \
+                "10" "Doom" off \
+                "11" "Dragon Ball GT - Final Bout" off \
+                "12" "Dragon Ball Z - Ultimate Battle 22" off \
+                "13" "Duke Nukem - Time to Kill" off \
+                "14" "FIFA - Road to World Cup 98" off \
+                "15" "Grand Theft Auto 2" off \
+                "16" "Hydro Thunder" off \
+                "17" "JoJo's Bizarre Adventure" off \
+                "18" "Marvel VS Street Fighter" off \
+                "19" "Metal Slug X" off \
+                "20" "NBA Jam Extreme" off \
+                "21" "Oddworld - Abe's Oddysee" off \
+                "22" "Quake II" off \
+                "23" "Rayman" off \
+                "24" "Tekken 3" off \
+                "25" "Tony Hawk's Pro Skater" off \
+                "26" "Tony Hawk's Pro Skater 2" off \
+                "27" "Tony Hawk's Pro Skater 3" off \
+                "28" "Tony Hawk's Pro Skater 4" off \
+                "29" "Twisted Metal" off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+            1) download-game "psx" "Alone in the Dark - One-Eyed Jack's Revenge (USA).pbp" ;;
+            2) download-game "psx" "Castlevania - Symphony of the Night (USA).pbp" ;;
+            3) download-game "psx" "Castlevania Chronicles (USA).pbp" ;;
+            4) download-game "psx" "Cool Boarders 2 (USA).pbp" ;;
+            5) download-game "psx" "Crash Bandicoot (USA).pbp" ;;
+            6) download-game "psx" "Crash Bandicoot - Warped (USA).pbp" ;;
+            7) download-game "psx" "Crash Bash (USA).pbp" ;;
+            8) download-game "psx" "Dead or Alive (USA).pbp" ;;
+            9) download-game "psx" "Destruction Derby 2 (USA).pbp" ;;
+            10) download-game "psx" "Doom (USA).pbp" ;;
+            11) download-game "psx" "Dragon Ball GT - Final Bout (USA).pbp" ;;
+            12) download-game "psx" "Dragon Ball Z - Ultimate Battle 22 (USA).pbp" ;;
+            13) download-game "psx" "Duke Nukem - Time to Kill (USA).pbp" ;;
+            14) download-game "psx" "FIFA - Road to World Cup 98 (USA).pbp" ;;
+            15) download-game "psx" "Grand Theft Auto 2 (USA).pbp" ;;
+            16) download-game "psx" "Hydro Thunder (USA).pbp" ;;
+            17) download-game "psx" "JoJo's Bizarre Adventure (USA).pbp" ;;
+            18) download-game "psx" "Marvel Super Heroes vs. Street Fighter (USA).pbp" ;;
+            19) download-game "psx" "Metal Slug X (USA).pbp" ;;
+            20) download-game "psx" "NBA Jam Extreme (USA).pbp" ;;
+            21) download-game "psx" "Oddworld - Abe's Oddysee (USA).pbp" ;;
+            22) download-game "psx" "Quake II (USA).pbp" ;;
+            23) download-game "psx" "Rayman (USA).pbp" ;;
+            24) download-game "psx" "Tekken 3 (USA).pbp" ;;
+            25) download-game "psx" "Tony Hawk's Pro Skater (USA).pbp" ;;
+            26) download-game "psx" "Tony Hawk's Pro Skater 2 (USA).pbp" ;;
+            27) download-game "psx" "Tony Hawk's Pro Skater 3 (USA).pbp" ;;
+            28) download-game "psx" "Tony Hawk's Pro Skater 4 (USA).pbp" ;;
+            29) download-game "psx" "Twisted Metal (USA).pbp" ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
 function saturn() {
           whiptail --clear --title "PICK & CHOOSE SATURN" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
 	        --ok-button Download --cancel-button Back \
