@@ -464,6 +464,7 @@ wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE.zip -P
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_AoE.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Age-Of-Empires.sh
 chmod 755 "$HOME"/RetroPie/roms/wine/Age-Of-Empires-The-Rise-Of-Rome.sh
+aoe_game_fix
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_AoE.zip
 }
 function aoe-2() {
@@ -550,6 +551,7 @@ function unreal() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_UNREAL.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_UNREAL.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Unreal-Anthology.sh
+unreal_game_fix
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_UNREAL.zip
 }
 function warcraft-3() {
@@ -1253,10 +1255,12 @@ function game_fixes() {
       --ok-label Select --cancel-label Main-Menu \
       --menu "SELECT GAME FIX AND PRESS A  " 20 50 30 \
       1 "Age Of Empires No-CD Error Fix" \
+      2 "Unreal Anthology Game Fix" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) aoe_game_fix ;;
+    2) unreal_game_fix ;;
     *) break ;;
     esac
   done
@@ -1268,7 +1272,14 @@ wine reg import Age-of-Empires-no-cd-error-fix.reg
 sleep 1
 rm -f Age-of-Empires-no-cd-error-fix.reg
 }
+function unreal_game_fix() {
+cd ~/
+wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Unreal-Anthology-fix.reg
+wine reg import Unreal-Anthology-fix.reg
+sleep 1
 
+rm -f Unreal-Anthology-fix.reg
+}
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
 ###------------------------------###
