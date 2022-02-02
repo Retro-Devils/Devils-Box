@@ -1,4 +1,5 @@
-## TAMPO: Theme And Music Plus Overlay v1.05
+## TAMPO 
+## Theme And Music Plus Overlay v1.05
 ## More Information
 This is a script that is similar to Kio Diekin's theme and music script, but mine was made only by me and this is in no way the works he premeries in this video:<br>
 https://www.youtube.com/watch?v=I0nUTGeLT8o<br>
@@ -13,4 +14,6 @@ This is open source and free for anyone to use, just drop me a little credit is 
 The script has a one line install, so no need to clone a repo (it does all that for you).<br>
 Now if you have any sugesstions or addition please fork the repo and hit me up with a pull request.<br>
 
-## CREDITS AND MORE SEE TAMPO GITHUB
+## FOR MORE SEE TAMPO GITHUB
+.
+.
