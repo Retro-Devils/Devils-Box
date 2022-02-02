@@ -2049,7 +2049,7 @@ function db_tools() {
 function help_db() {
   clear
   cat "$HOME"/Devils-Box/files/HELP-DB.txt
-  sleep 20
+read -n 1 -s -r -p "Press any key to Continue"
 }
 #--------------------------_#
 #HELP WITH DEVILS BOX #
@@ -2057,7 +2057,7 @@ function help_db() {
 function about_db() {
   clear
   cat "$HOME"/Devils-Box/files/INFO.txt
-  sleep 20
+read -n 1 -s -r -p "Press any key to Continue"
 }
 #---------------------------#
 #REMOVE DEVILS BOX          #
