@@ -616,8 +616,9 @@ local choice
     2) dreamcast ;;
     3) gba ;;
     4) megadrive ;;
-    5) nes ;;
-    6) saturn ;;
+    5) nds ;;
+    6) nes ;;
+    7) saturn ;;
     *) break ;;
     esac
   done
