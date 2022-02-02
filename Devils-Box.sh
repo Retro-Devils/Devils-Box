@@ -1708,8 +1708,7 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
 Offline ... Not Availible Please Connect To Internet!" 0 0
 else
-wget https://raw.githubusercontent.com/Retro-Devils/imp/main/README.md -P /home/pi/Devils-Box/files/imp
-cat /home/pi/Devils-Box/files/imp/README.md
+cat /home/pi/Devils-Box/files/IMP/README.md
 sleep 5
 fi
 }
@@ -1718,7 +1717,6 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
 Offline ... Not Availible Please Connect To Internet!" 0 0
 else
-wget https://raw.githubusercontent.com/ALLRiPPED/tampo/main/README.md -P /home/pi/Devils-Box/files/tampo
 cat /home/pi/Devils-Box/files/tampo/README.md
 sleep 5
 fi
