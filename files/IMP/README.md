@@ -46,3 +46,6 @@ HTTP Server [Off]
 Startup Settings  
 Music at Startup [Off/On]  
 Delay at Startup [seconds]  
+.
+.
+# MORE INFO SEE IMPS GITHUB ##
