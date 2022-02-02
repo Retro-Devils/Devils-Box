@@ -14,7 +14,7 @@ ART_HOST2="https://github.com/Retro-Devils-Media"
 #--------GAME HOSTS---------#
 HOST1="https://archive.org/download/the-devils-box-alt"
 HOST2="https://archive.org/download/the-devils-box_202112"
-#HOST3=""
+HOST3="https://archive.org/download/devils-bios"
 #HOST4=""
 
 #--------PICK & CHOOSE HOST-----#
@@ -1739,6 +1739,7 @@ function emu_tools() {
       3 "Mugen Installer-----------Supreme/Retro Devils" \
       4 "PIKISS Installer-----------------Jose Cerrejon" \
       5 "SEGA MODEL 3 Installer------------Retro Devils" \
+      6 "BIOS FILES------------------------Retro Devils" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1747,6 +1748,7 @@ function emu_tools() {
     3) mugen ;;
     4) pikiss ;;
     5) sm3 ;;
+    6) download-bios ;;
     *) break ;;
     esac
   done
@@ -1759,6 +1761,8 @@ else
 curl -sSL https://git.io/J9Z8c | bash
 fi
 }
+
+
 #----------------------------------#
 #       SM3 EMU FUNCTIONS        #
 #----------------------------------#
@@ -2175,6 +2179,12 @@ rm -fr "$HOME"/RetroPie/roms/"${1}"/.git
 #------------------#
 # CONSOLE FUNCTION #
 #------------------#
+function download-bios() {
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST3}"/BIOS/ -P "$HOME"/RetroPie/BIOS/ -erobots=off
+rm -f "$HOME"/RetroPie/BIOS/index.html.tmp
+}
+
 function download-packs() {
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
