@@ -48,8 +48,8 @@ function main_menu() {
       2 "Console Packs" \
       3 "Hacked Packs" \
       4 "Pick & Choose" \
-      5 "Game Fixes" \
       + "-------Tools-------" \
+      5 "Game Fixes" \
       6 "Tool Box" \
       7 "Reboot System" \
       8 "Show System Info" \
