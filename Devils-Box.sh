@@ -407,10 +407,10 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 -------------------------------
 -You must have wine/box86 installed for this too work 
 -Whats WINE? Wine/box86 play old pc games.
--Downloads most games to $HOME/RetroPie/roms/wine/games/.installs
--Games Includes a exe or.sh script to launch from Retropie 
+-Downloads games to $HOME/RetroPie/roms/wine/games/.installs
+-Games Includes a .sh script to launch from Retropie 
 -Games are zipped. Devils Box downloads unzips and does all the work for ya.
--If you move game folder change .sh script accordingly.
+-If you move game folder, change .sh script accordingly.
 -Thanks for using have a good day." 0 0
 
     whiptail --clear --title "WINE DOWNLOAD MENU" --separate-output \
@@ -609,7 +609,7 @@ else
 local choice
   
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title "PICK & CHOOSE" \
+    choice=$(dialog --backtitle "$BACKTITLE" --title "PICK & CHOOSE MENU" \
       --ok-label Select --cancel-label Main-Menu \
       --menu "PICK CONSOLE & CHOOSE GAME(S) " 20 50 30 \
       1 "AtomisWave" \
