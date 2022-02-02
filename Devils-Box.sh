@@ -1739,7 +1739,7 @@ function emu_tools() {
       3 "Mugen Installer-----------Supreme/Retro Devils" \
       4 "PIKISS Installer-----------------Jose Cerrejon" \
       5 "SEGA MODEL 3 Installer------------Retro Devils" \
-      6 "BIOS FILES------------------------Retro Devils" \
+      6 "BIOS Files------------------------Retro Devils" \
       2>&1 >/dev/tty)
 
     case "$choice" in
