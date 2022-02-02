@@ -1708,6 +1708,7 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
 Offline ... Not Availible Please Connect To Internet!" 0 0
 else
+clear
 cat /home/pi/Devils-Box/files/IMP/README.md
 sleep 5
 fi
@@ -1717,6 +1718,7 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
 Offline ... Not Availible Please Connect To Internet!" 0 0
 else
+clear
 cat /home/pi/Devils-Box/files/tampo/README.md
 sleep 5
 fi
