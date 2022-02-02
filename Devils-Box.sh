@@ -419,20 +419,22 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "+" "GAME NAME                     FILE SIZE" off \
                 "1" "Age Of Empires                    215MB" off \
                 "2" "Age Of Empires 2                  6.1GB" off \
-                "3" "Cuphead                            11GB" off \
-                "4" "Command & Conquer TS              1.3GB" off \
+                "3" "Command & Conquer TS              1.3GB" off \
+                "4" "Cuphead                            11GB" off \
                 "5" "Diablo 2                          1.8GB" off \
                 "6" "Fallout                           535MB" off \
                 "7" "Fallout 2                         555MB" off \
                 "8" "Fallout Tactics                   1.5GB" off \
-                "9" "The House Of The Dead             299MB" off \
-               "10" "The House Of The Dead 2           579MB" off \
-               "11" "Teenage Muntant Ninja Turtles     1.3GB" off \
-               "12" "Spooky Castle                      10MB" off \
-               "13" "Starcraft                         1.2GB" off \
-               "14" "Star Wars Battlefront             2.3GB" off \
-               "15" "Unreal Anthology                  8.8GB" off \
-               "16" "Warcraft 3                        1.9GB" off \
+                "9" "Hydro Thunder                      66MB" off \
+               "10" "Spooky Castle                      10MB" off \
+               "11" "Starcraft                         1.2GB" off \
+               "12" "Star Wars Battlefront             2.3GB" off \
+               "13" "The House Of The Dead             299MB" off \
+               "14" "The House Of The Dead 2           579MB" off \
+	       "15" "The Settlers                       26MB" off \
+               "16" "Teenage Muntant Ninja Turtles     1.3GB" off \
+               "17" "Unreal Anthology                  8.8GB" off \
+               "18" "Warcraft 3                        1.9GB" off \
                 2>/tmp/results
     while read -r choice  
         do
@@ -440,20 +442,22 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 	        +) none ;;
                1) aoe ;;
                2) aoe-2 ;;
-               3) cuphead ;;
-               4) cncts  ;;
+               3) cncts  ;;
+               4) cuphead ;;
                5) diablo-2 ;;
                6) fallout ;;
                7) fallout-2 ;;
                8) fallout-tactics ;;
-               9) thotd ;;
-              10) thotd2 ;;
-              11) tmnt ;;
-              12) spooky-castle ;;
-              13) starcraft ;;
-              14) swbf ;;
-	      15) unreal ;;
-              16) warcraft-3 ;;
+               9) hydro-thunder ;;
+              10) spooky-castle ;;
+              11) starcraft ;;
+              12) swbf ;;
+              13) thotd ;;
+              14) thotd2 ;;
+	      15) the-settlers ;;
+              16) tmnt ;;
+	      17) unreal ;;
+              18) warcraft-3 ;;
                *) ;;
         esac
         done < /tmp/results
@@ -511,6 +515,36 @@ unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_FalloutTactics.zip -d "$HOME"/R
 chmod 755 "$HOME"/RetroPie/roms/wine/Fallout-Tactics.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_FalloutTactics.zip
 }
+function hydro-thunder() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_HydroThunder.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_HydroThunder.zip -d "$HOME"/RetroPie/roms/wine/
+chmod 755 "$HOME"/RetroPie/roms/wine/Hydro-Thunder.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_HydroThunder.zip
+}
+function spooky-castle() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Spooky-Castle.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Spooky-Castle.zip -d "$HOME"/RetroPie/roms/wine/
+chmod 755 "$HOME"/RetroPie/roms/wine/Spooky-Castle.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Spooky-Castle.zip
+}
+function starcraft() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Starcraft.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Starcraft.zip -d "$HOME"/RetroPie/roms/wine/
+chmod 755 "$HOME"/RetroPie/roms/wine/Starcraft.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Starcraft.zip
+}
+function swbf() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_SWBF.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_SWBF.zip -d "$HOME"/RetroPie/roms/wine/
+chmod 755 "$HOME"/RetroPie/roms/wine/Star-Wars-Battlefront.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_SWBF.zip
+}
+function tmnt() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_TMNT.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_TMNT.zip -d "$HOME"/RetroPie/roms/wine/
+chmod 755 "$HOME"/RetroPie/roms/wine/TMNT.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_TMNT.zip
+}
 function thotd() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_THOTD.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_THOTD.zip -d "$HOME"/RetroPie/roms/wine/
@@ -523,29 +557,11 @@ unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_THOTD2.zip -d "$HOME"/RetroPie/
 chmod 755 "$HOME"/RetroPie/roms/wine/The-House-Of-The-Dead-2.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_THOTD2.zip
 }
-function tmnt() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_TMNT.zip -P "$HOME"/RetroPie/roms/wine
-unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_TMNT.zip -d "$HOME"/RetroPie/roms/wine/
-chmod 755 "$HOME"/RetroPie/roms/wine/TMNT.sh
-sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_TMNT.zip
-}
-function starcraft() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Starcraft.zip -P "$HOME"/RetroPie/roms/wine
-unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Starcraft.zip -d "$HOME"/RetroPie/roms/wine/
-chmod 755 "$HOME"/RetroPie/roms/wine/Starcraft.sh
-sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Starcraft.zip
-}
-function spooky-castle() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Spooky-Castle.zip -P "$HOME"/RetroPie/roms/wine
-unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Spooky-Castle.zip -d "$HOME"/RetroPie/roms/wine/
-chmod 755 "$HOME"/RetroPie/roms/wine/Spooky-Castle.sh
-sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Spooky-Castle.zip
-}
-function swbf() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_SWBF.zip -P "$HOME"/RetroPie/roms/wine
-unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_SWBF.zip -d "$HOME"/RetroPie/roms/wine/
-chmod 755 "$HOME"/RetroPie/roms/wine/Star-Wars-Battlefront.sh
-sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_SWBF.zip
+function the-settlers() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_TheSettlers.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_TheSettlers.zip -d "$HOME"/RetroPie/roms/wine/
+chmod 755 "$HOME"/RetroPie/roms/wine/The-Settlers.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_TheSettlers.zip
 }
 function unreal() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_UNREAL.zip -P "$HOME"/RetroPie/roms/wine
