@@ -425,7 +425,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "6" "Fallout                           535MB" off \
                 "7" "Fallout 2                         555MB" off \
                 "8" "Fallout Tactics                   1.5GB" off \
-		"9" "Hydro Thunder                      66MB" off \
+                "9" "Hydro Thunder                      66MB" off \
                "10" "Spooky Castle                      10MB" off \
                "11" "Starcraft                         1.2GB" off \
                "12" "Star Wars Battlefront             2.3GB" off \
@@ -448,7 +448,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                6) fallout ;;
                7) fallout-2 ;;
                8) fallout-tactics ;;
-	       9) hydro-thunder ;;
+               9) hydro-thunder ;;
               10) spooky-castle ;;
               11) starcraft ;;
               12) swbf ;;
