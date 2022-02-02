@@ -2001,25 +2001,25 @@ let days=$((${upSeconds}/86400))
 UPTIME=`printf "%d days, %02dh%02dm%02ds" "$days" "$hours" "$mins" "$secs"`
 
 echo "$(tput setaf 7)
-........OS INFO.......:
-$(tput setaf 2)`uname -srmo`
-`lsb_release -ds`
-`date +"%A, %e %B %Y, %r"`
-Uptime......: ${UPTIME}
-Last Login..: `exec -- last | head -1`
-$(tput setaf 7)......SYSTEM INFO.....:
-$(tput setaf 1)CPU Temperature.......: ${cpuTempC} C/${cpuTempF} F
-GPU Temperature.......: ${gpuTempC} C/${gpuTempF} F
-$(tput setaf 3)CPU Model.............: `lscpu | grep "Model name"`
-CPU Max Speed.........: `lscpu | grep max`
-GPU Version...........: `exec -- /opt/vc/bin/vcgencmd version`
-$(tput setaf 7)			Size     Used     Avail    Used%
-$(tput setaf 3)Boot Partition........: `df -h | grep '/dev/sda1' | awk '{print $2,"     "$3,"     "$4,"     "$5}'`
-Root Partition........: `df -h | grep '/dev/root' | awk '{print $2,"    "$3,"     "$4,"      "$5}'`
-$(tput setaf 6)Memory................: `cat /proc/meminfo | grep MemFree | awk '{printf( "%.2f\n", $2 / 1024 )}'`MB (Free) / `cat /proc/meminfo | grep MemTotal | awk '{printf( "%.2f\n", $2 / 1024 )}'`MB (Total)
-Running Processes.....: `ps ax | wc -l | tr -d " "`
-LAN IP Address........: `ip -4 route get 8.8.8.8 2>/dev/null | awk '{print $(NF-2); exit}'`
-WAN IP Address........: `curl -4 icanhazip.com 2>/dev/null | awk '{print $NF; exit}'`$(tput sgr0)"
+  ........OS INFO.......:
+  $(tput setaf 2)`uname -srmo`
+  `lsb_release -ds`
+  `date +"%A, %e %B %Y, %r"`
+  Uptime......: ${UPTIME}
+  Last Login..: `exec -- last | head -1`
+  $(tput setaf 7)......SYSTEM INFO.....:
+  $(tput setaf 1)CPU Temperature.......: ${cpuTempC} C/${cpuTempF} F
+  GPU Temperature.......: ${gpuTempC} C/${gpuTempF} F
+  $(tput setaf 3)CPU Model.............: `lscpu | grep "Model name"`
+  CPU Max Speed.........: `lscpu | grep max`
+  GPU Version...........: `exec -- /opt/vc/bin/vcgencmd version`
+  $(tput setaf 7)			Size     Used     Avail    Used%
+  $(tput setaf 3)Boot Partition........: `df -h | grep '/dev/sda1' | awk '{print $2,"     "$3,"     "$4,"     "$5}'`
+  Root Partition........: `df -h | grep '/dev/root' | awk '{print $2,"    "$3,"     "$4,"      "$5}'`
+  $(tput setaf 6)Memory................: `cat /proc/meminfo | grep MemFree | awk '{printf( "%.2f\n", $2 / 1024 )}'`MB (Free) / `cat /proc/meminfo | grep MemTotal | awk '{printf( "%.2f\n", $2 / 1024 )}'`MB (Total)
+  Running Processes.....: `ps ax | wc -l | tr -d " "`
+  LAN IP Address........: `ip -4 route get 8.8.8.8 2>/dev/null | awk '{print $(NF-2); exit}'`
+  WAN IP Address........: `curl -4 icanhazip.com 2>/dev/null | awk '{print $NF; exit}'`$(tput sgr0)"
 echo
 read -n 1 -s -r -p "Press any key to continue"
 }
