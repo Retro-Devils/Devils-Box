@@ -606,8 +606,9 @@ local choice
       2 "Dreamcast" \
       3 "GameBoy Advance" \
       4 "MegaDrive" \
-      5 "NES" \
-      6 "Saturn" \
+      5 "Nintendo DS" \
+      6 "NES" \
+      7 "Saturn" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -933,6 +934,97 @@ function megadrive() {
             38) download-game "megadrive" "Strider II (Europe).zip" ;;
             39) download-game "megadrive" "Street Fighter II' - Special Champion Edition (Europe).zip" ;;
             40) download-game "megadrive" "Vectorman (USA, Europe).zip" ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
+function nds() {
+          whiptail --clear --title "PICK & CHOOSE NINTENDO DS" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+                "1" "Astro Boy - The Video Game" off \
+                "2" "Asphalt - Urban GT 2" off \
+                "3" "Assassin's Creed II" off \
+                "4" "Bomberman 2" off \
+                "5" "Castlevania" off \
+                "6" "Dragon Ball - Origins" off \
+                "7" "Final Fantasy XII - Revenant Wings" off \
+                "8" "LEGO Batman - The Videogame" off \
+                "9" "Mario Kart DS" off \
+                "10" "Mario Party DS" off \
+                "11" "Mega Man Star Force 3 - Red Joker" off \
+                "12" "Need for Speed - Most Wanted" off \
+                "13" "Pokemon - Diamond Version" off \
+                "14" "Puchi Puchi Virus" off \
+                "15" "Shaun the Sheep" off \
+                "16" "Sonic & Sega All-Stars Racing" off \
+                "17" "Sonic Classic Collection" off \
+                "18" "Spider-Man - Edge of Time" off \
+                "19" "Spider-Man - Shattered Dimensions" off \
+                "20" "Spider-Man - Web of Shadows" off \
+                "21" "Spider-Man 2" off \
+                "22" "Spider-Man 3" off \
+                "23" "Star Wars - Battlefront - Elite Squadron" off \
+                "24" "Star Wars - Episode III - Revenge of the Sith" off \
+                "25" "Star Wars - Lethal Alliance" off \
+                "26" "Star Wars - The Force Unleashed" off \
+                "27" "Super Mario 64 DS" off \
+                "28" "Tetris DS" off \
+                "29" "Tetris Party Deluxe" off \
+                "30" "Tony Hawk's Downhill Jam" off \
+                "31" "Tony Hawk's Motion" off \
+                "32" "Transformers - Dark of the Moon - Autobots" off \
+                "33" "Transformers - Dark of the Moon - Decepticons" off \
+                "34" "Underground Pool" off \
+                "35" "Warhammer 40,000 - Squad Command" off \
+                "36" "Wario - Master of Disguise" off \
+                "37" "Wipeout - The Game" off \
+                "38" "X-Men - Destiny" off \
+                "39" "X-Men - The Official Game" off \
+                "40" "Yoshi's Island DS" off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+            1) download-game "nds" "Astro Boy - The Video Game (USA) (En,Fr,De,Es,It).zip" ;;
+            2) download-game "nds" "Asphalt - Urban GT 2 (USA) (En,Fr,Es).zip" ;;
+            3) download-game "nds" "Assassin's Creed II - Discovery (USA) (En,Fr,Es) (NDSi Enhanced) [b].zip" ;;
+            4) download-game "nds" "Bomberman 2 (Europe) (En,Fr,De,Es,It).zip" ;;
+            5) download-game "nds" "Castlevania - Order of Ecclesia (USA) (En,Fr).zip" ;;
+            6) download-game "nds" "Dragon Ball - Origins (USA).zip" ;;
+            7) download-game "nds" "Final Fantasy XII - Revenant Wings (USA).zip" ;;
+            8) download-game "nds" "LEGO Batman - The Videogame (USA) (En,Fr,Es).zip" ;;
+            9) download-game "nds" "Mario Kart DS (USA) (En,Fr,De,Es,It).zip" ;;
+            10) download-game "nds" "Mario Party DS (USA).zip" ;;
+            11) download-game "nds" "Mega Man Star Force 3 - Red Joker (USA).zip" ;;
+            12) download-game "nds" "Need for Speed - Most Wanted (USA).zip" ;;
+            13) download-game "nds" "Pokemon - Diamond Version (USA) (Rev 5).zip" ;;
+            14) download-game "nds" "Puchi Puchi Virus (USA).zip" ;;
+            15) download-game "nds" "Shaun the Sheep (USA) (En,Ja,Fr,De,Es,It) [b].zip" ;;
+            16) download-game "nds" "Sonic & Sega All-Stars Racing (USA) (En,Fr,Es).zip" ;;
+            17) download-game "nds" "Sonic Classic Collection (USA) (En,Fr,Es) (NDSi Enhanced) [b].zip" ;;
+            18) download-game "nds" "Spider-Man - Edge of Time (USA) (En,Fr).zip" ;;
+            19) download-game "nds" "Spider-Man - Shattered Dimensions (USA) (En,Fr).zip" ;;
+            20) download-game "nds" "Spider-Man - Web of Shadows (USA) (En,Fr) [b].zip" ;;
+            21) download-game "nds" "Spider-Man 2 (USA).zip" ;;
+            22) download-game "nds" "Spider-Man 3 (USA).zip" ;;
+            23) download-game "nds" "Star Wars - Battlefront - Elite Squadron (USA) (En,Fr) [b].zip" ;;
+            24) download-game "nds" "Star Wars - Episode III - Revenge of the Sith (USA) (En,Fr,De,Es,It,Nl).zip" ;;
+            25) download-game "nds" "Star Wars - Lethal Alliance (USA) (En,Fr,De,Es,It).zip" ;;
+            26) download-game "nds" "Star Wars - The Force Unleashed (USA) (En,Fr,De,Es,It).zip" ;;
+            27) download-game "nds" "Super Mario 64 DS (USA).zip" ;;
+            28) download-game "nds" "Tetris DS (USA).zip" ;;
+            29) download-game "nds" "Tetris Party Deluxe (USA) (En,Fr,Es).zip" ;;
+            30) download-game "nds" "Tony Hawk's Downhill Jam (USA).zip" ;;
+            31) download-game "nds" "Tony Hawk's Motion (USA).zip " ;;
+            32) download-game "nds" "Transformers - Dark of the Moon - Autobots (USA) (En,Fr).zip" ;;
+            33) download-game "nds" "Transformers - Dark of the Moon - Decepticons (USA) (En,Fr).zip" ;;
+            34) download-game "nds" "Underground Pool (USA).zip" ;;
+            35) download-game "nds" "Warhammer 40,000 - Squad Command (USA) (En,Fr).zip" ;;
+            36) download-game "nds" "Wario - Master of Disguise (USA).zip" ;;
+            37) download-game "nds" "Wipeout - The Game (USA).zip" ;;
+            38) download-game "nds" "X-Men - Destiny (USA).zip" ;;
+            39) download-game "nds" "X-Men - The Official Game (USA).zip" ;;
+            40) download-game "nds" "Yoshi's Island DS (USA).zip" ;;
             *) ;;
         esac
         done < /tmp/results
