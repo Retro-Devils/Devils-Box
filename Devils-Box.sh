@@ -1631,8 +1631,11 @@ function audio() {
       2 "Hursty's Themes--------------------------------------Hursty " \
       - "___________________Audio/Mixed Tools_______________________ " \
       3 "Apply No Audio Fix--------------------------------Anonymous " \
-      4 "Install I.M.P-----------------------------------------BigED " \
+      4 "Install I.M.P-----------------------------------RapiEdwin08 " \
       5 "Install T.A.M.P.O--------------------------------thepitster " \
+      - "_____________________ Information__________________________ " \
+      6 "I.M.P-------------Integrated Music Player------------------ " \
+      7 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1643,6 +1646,8 @@ function audio() {
     3) no-audio ;;
     4) imp ;;
     5) tampo ;;
+    6) imp-info ;;
+    7) tampo-info ;;
     *) break ;;
     esac
   done
@@ -1650,7 +1655,7 @@ function audio() {
 function tampo() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+Offline ... Not Availible Please Connect To Internet!" 0 0
 else
 clear
 curl -sSL https://git.io/JDfjg | bash
@@ -1690,7 +1695,7 @@ fi
 function imp() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+Offline ... Not Availible Please Connect To Internet!" 0 0
 else
 cd ~
 git clone https://github.com/RapidEdwin08/imp.git
@@ -1698,6 +1703,25 @@ sudo chmod 755 ~/imp/imp_setup.sh
 cd ~/imp && ./imp_setup.sh
 fi
 }
+function imp-info() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
+Offline ... Not Availible Please Connect To Internet!" 0 0
+else
+wget https://raw.githubusercontent.com/Retro-Devils/imp/main/README.md -P /home/pi/Devils-Box/files/imp
+cat /home/pi/Devils-Box/files/imp/README.md
+fi
+}
+function tampo-info() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
+Offline ... Not Availible Please Connect To Internet!" 0 0
+else
+wget https://raw.githubusercontent.com/ALLRiPPED/tampo/main/README.md -P /home/pi/Devils-Box/files/tampo
+cat /home/pi/Devils-Box/files/tampo/README.md
+fi
+}
+
 ###-----------------------------------###
 ###  EMU TOOLS MENU FUNCTIONS   ###
 ###-----------------------------------###
