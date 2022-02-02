@@ -1494,7 +1494,7 @@ function game_fixes() {
 }
 function aoe_game_fix() {
 cd ~/
-wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Age-of-Empires-no-cd-error-fix.reg
+$(tput setaf 1)wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Age-of-Empires-no-cd-error-fix.reg
 wine reg import Age-of-Empires-no-cd-error-fix.reg
 sleep 1
 rm -f Age-of-Empires-no-cd-error-fix.reg
@@ -1643,6 +1643,7 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
+clear
 curl -sSL https://git.io/JSDOy | bash
 fi
 }
@@ -1885,6 +1886,7 @@ function nespi() {
 }
 
 function nespi_u() {
+  clear
   wget -O - "https://raw.githubusercontent.com/crcerror/retroflag-picase/master/uninstall_all.sh" | sudo bash
 }
 function retroflag() {
@@ -1954,6 +1956,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 OFFLINE!!!
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
+  clear
   echo "Online ... Updating"
   sleep 1
   sudo rm "$HOME"/RetroPie/retropiemenu/Devils-Box.sh
@@ -2039,6 +2042,7 @@ sudo reboot
 # ARTWORK FUNCTION #
 #------------------# 
 function download-art() {
+clear
 cd "$HOME/RetroPie/roms/"${1}"/"
 git init
 git remote add origin "${ART_HOST2}/${1}.git"
