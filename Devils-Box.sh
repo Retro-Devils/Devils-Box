@@ -609,6 +609,7 @@ local choice
       5 "Nintendo DS" \
       6 "NES" \
       7 "Saturn" \
+      8 "Super Nintendo" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -619,6 +620,7 @@ local choice
     5) nds ;;
     6) nes ;;
     7) saturn ;;
+    8) snes ;;
     *) break ;;
     esac
   done
@@ -1234,7 +1236,117 @@ function saturn() {
         esac
         done < /tmp/results
 }
-
+function snes() {
+          whiptail --clear --title "PICK & CHOOSE SNES" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+                "1" "Adventures of Batman & Robin, The" off \
+                "2" "Adventures of Kid Kleets, The" off \
+                "3" "Aero the Acro-Bat" off \
+                "4" "Alien 3" off \
+                "5" "Alien vs. Predator" off \
+                "6" "Asterix & Obelix" off \
+                "7" "Batman Forever" off \
+                "8" "Battletoads & Double Dragon - The Ultimate Team" off \
+                "9" "Battletoads in Battlemaniacs" off \
+                "10" "Biker Mice from Mars" off \
+                "11" "Blackhawk" ;;
+                "12" "Brawl Brothers - Rival Turf! 2" off \
+                "13" "Captain America and the Avengers (Europe).zip" off \
+                "14" "Castlevania - Vampire's Kiss" off \
+                "15" "Corn Buster" off \
+                "16" "Donkey Kong Country" off \
+                "17" "Donkey Kong Country 2 - Diddy's Kong Quest" off \
+                "18" "Donkey Kong Country 3 - Dixie Kong's Double Trouble!" off \
+                "19" "Doom" off \
+                "10" "Double Dragon V - The Shadow Falls" off \
+                "21" "Dragon - The Bruce Lee Story" off \
+                "22" "Dungeon Master" off \
+                "23" "Earthworm Jim" off \
+                "24" "Earthworm Jim 2" off \
+                "25" "Final Fight" off \
+                "26" "Flashback - The Quest for Identity" off \
+                "27" "Harvest Moon" off \
+                "28" "Hyper V-Ball" off \
+                "29" "James Bond Jr." off \
+                "30" "Judge Dredd" off \
+                "31" "Kirby's Dream Course" off \
+                "32" "Kirby's Ghost Trap" off \
+                "33" "Legend of Zelda -A Link to the Past" off \
+                "34" "Lemmings" off \
+                "35" "Mario Is Missing!" off \
+                "36" "Mega Man 7" off \
+                "37" "Mega Man X3" off \
+                "38" "Micro Machines" off \
+                "39" "Mortal Kombat II" off \
+                "40" "Mortal Kombat III" off \
+                "41" "Ms. Pac-Man" off \
+                "42" "Pac-Attack" off \
+                "43" "Pitfall - The Mayan Adventure" off \
+                "44" "R-Type III - The Third Lightning" off \
+                "45" "Secret of Evermore" off \
+                "46" "Spider-Man & Venom - Maximum Carnage" off \
+                "47" "Super Bomberman" off \
+                "48" "Super Mario World" off \
+                "49" "Super Mario World 2 - Yoshi's Island" off \
+                "50" "Tetris Attack" off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+            1) download-game "snes" "Adventures of Batman & Robin, The (Europe).zip" ;;
+            2) download-game "snes" "Adventures of Kid Kleets, The (USA) (En,Fr,Es).zip" ;;
+            3) download-game "snes" "Aero the Acro-Bat (Europe).zip" ;;
+            4) download-game "snes" "Alien 3 (Europe).zip" ;;
+            5) download-game "snes" "Alien vs. Predator (Europe).zip" ;;
+            6) download-game "snes" "Asterix & Obelix (Europe) (En,Fr,De,Es).zip" ;;
+            7) download-game "snes" "Batman Forever (Europe).zip" ;;
+            8) download-game "snes" "Battletoads & Double Dragon - The Ultimate Team (Europe).zip" ;;
+            9) download-game "snes" "Battletoads in Battlemaniacs (Europe).zip" ;;
+            10) download-game "snes" "Biker Mice from Mars (Europe).zip" ;;
+            11) download-game "snes" "Blackhawk (Europe) (En,Fr,De).zip" ;;
+            12) download-game "snes" "Brawl Brothers - Rival Turf! 2 (Europe).zip" ;;
+            13) download-game "snes" "Captain America and the Avengers (Europe).zip" ;;
+            14) download-game "snes" "Castlevania - Vampire's Kiss (Europe).zip" ;;
+            15) download-game "snes" "Corn Buster (Europe) (Proto).zip" ;;
+            16) download-game "snes" "Donkey Kong Country (Europe) (En,Fr,De) (Rev 1).zip" ;;
+            17) download-game "snes" "Donkey Kong Country 2 - Diddy's Kong Quest (Europe) (En,Fr) (Rev 1).zip" ;;
+            18) download-game "snes" "Donkey Kong Country 3 - Dixie Kong's Double Trouble! (Europe) (En,Fr,De).zip" ;;
+            19) download-game "snes" "Doom (Europe).zip" ;;
+            20) download-game "snes" "Double Dragon V - The Shadow Falls (Europe).zip" ;;
+            21) download-game "snes" "Dragon - The Bruce Lee Story (Europe).zip" ;;
+            22) download-game "snes" "Dungeon Master (Europe).zip" ;;
+            23) download-game "snes" "Earthworm Jim (Europe).zip" ;;
+            24) download-game "snes" "Earthworm Jim 2 (Europe).zip" ;;
+            25) download-game "snes" "Final Fight (Europe).zip" ;;
+            26) download-game "snes" "Flashback - The Quest for Identity (USA) (En,Fr,De).zip" ;;
+            27) download-game "snes" "Harvest Moon (Europe).zip" ;;
+            28) download-game "snes" "Hyper V-Ball (Europe).zip" ;;
+            29) download-game "snes" "James Bond Jr. (Europe).zip" ;;
+            30) download-game "snes" "Judge Dredd (Europe).zip" ;;
+            31) download-game "snes" "Kirby's Dream Course (Europe).zip" ;;
+            32) download-game "snes" "Kirby's Ghost Trap (Europe).zip" ;;
+            33) download-game "snes" "Legend of Zelda, The - A Link to the Past (Europe).zip" ;;
+            34) download-game "snes" "Lemmings (Europe).zip" ;;
+            35) download-game "snes" "Mario Is Missing! (Europe).zip" ;;
+            36) download-game "snes" "Mega Man 7 (Europe).zip " ;;
+            37) download-game "snes" "Mega Man X3 (Europe).zip" ;;
+            38) download-game "snes" "Micro Machines (Europe).zip" ;;
+            39) download-game "snes" "Mortal Kombat II (Europe).zip" ;;
+            40) download-game "snes" "Mortal Kombat 3 (Europe).zip" ;;
+            41) download-game "snes" "Ms. Pac-Man (Europe).zip" ;;
+            42) download-game "snes" "Pac-Attack (Europe).zip" ;;
+            43) download-game "snes" "Pitfall - The Mayan Adventure (Europe).zip" ;;
+            44) download-game "snes" "R-Type III - The Third Lightning (Europe).zip" ;;
+            45) download-game "snes" "Secret of Evermore (Europe).zip" ;;
+            46) download-game "snes" "Spider-Man & Venom - Maximum Carnage (Europe).zip" ;;
+            47) download-game "snes" "Super Bomberman (Europe).zip" ;;
+            48) download-game "snes" "Super Mario World (Europe) (Rev 1).zip" ;;
+            49) download-game "snes" "Super Mario World 2 - Yoshi's Island (Europe) (En,Fr,De).zip" ;;
+            50) download-game "snes" "Tetris Attack (Europe) (En,Ja).zip" ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
 #----------------------------------#
 #   TOOL BOX GAME FIXES FUNCTIONS  #
 #----------------------------------#
