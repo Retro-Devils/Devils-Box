@@ -431,7 +431,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                "12" "Star Wars Battlefront             2.3GB" off \
                "13" "The House Of The Dead             299MB" off \
                "14" "The House Of The Dead 2           579MB" off \
-	       "15" "The Settlers                       26MB" off \
+               "15" "The Settlers                       26MB" off \
                "16" "Teenage Muntant Ninja Turtles     1.3GB" off \
                "17" "Unreal Anthology                  8.8GB" off \
                "18" "Warcraft 3                        1.9GB" off \
@@ -454,9 +454,9 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
               12) swbf ;;
               13) thotd ;;
               14) thotd2 ;;
-	      15) the-settlers ;;
+              15) the-settlers ;;
               16) tmnt ;;
-	      17) unreal ;;
+              17) unreal ;;
               18) warcraft-3 ;;
                *) ;;
         esac
