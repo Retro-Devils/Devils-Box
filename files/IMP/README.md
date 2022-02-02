@@ -46,22 +46,3 @@ HTTP Server [Off]
 Startup Settings  
 Music at Startup [Off/On]  
 Delay at Startup [seconds]  
-
-## IMPORTANT
-
-LITE MODE:  
-[IMP] Writes to File for it's Features, such as forming Playlists when Starting Music, Recall Last Track/Position, Previous Track  
-[IMP] Constantly Writes the mpg123 output to a Log File to obtain Info needed for these Features  
-Constantly writing to a File while Playing Music may NOT be Ideal Depending on the OS Storage type (SD Card)  
-[IMP] 0ffers a LITE Mode for this reason, which Writes the mpg123 output to RAM Disk [tmpfs] instead for less features  
-It is RECOMMENDED to use LITE MODE if you are using an SD Card, or Enable [Overlay File System] after setting your BGM Playlist  
-
-INFINITE MODE:  
-[IMP] 0ffers an INFINITE Repeat Mode which is implemented by a scripted Infinite L00P of mpg123  
-For this reason, it is RECOMMENDED [IMP] always have MUSIC AVAILABLE to Play when using INFINITE Mode  
-If you see the [HIGH TEMP ICON] at any point while attempting to Start Music - STOP [IMP]!  
-[IMP] will perform various Error checks Automatically to prevent an Infinite [Error] L00P  
-However, Should you need to STOP [IMP], Use [STOP] from [retropiemenu] OR manually bash the Stop Script:  
-```bash
-bash /opt/retropie/configs/imp/stop.sh
-```
