@@ -369,7 +369,7 @@ else
     45) download-packs "saturn" ;;
     46) download-packs "saturn-japan" ;;
     47) download-packs "scummvm" ;;
-    48) download-packs "sega32" ;;
+    48) download-packs "sega32x" ;;
     49) download-packs "segacd" ;;
     50) download-packs "sfc" ;;
     51) download-packs "sg-1000" ;;
@@ -379,7 +379,7 @@ else
     55) download-packs "vectrex" ;;
     56) download-packs "videopac" ;;
     57) download-packs "virtualboy" ;;
-    58) download-packs "vmu" ;;
+    58) download-packs "svmu" ;;
     59) winegames ;;
     60) download-packs "wonderswancolor" ;;
     61) download-packs "x1" ;;
