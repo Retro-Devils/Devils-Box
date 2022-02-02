@@ -14,6 +14,15 @@ This is open source and free for anyone to use, just drop me a little credit is 
 The script has a one line install, so no need to clone a repo (it does all that for you).<br>
 Now if you have any sugesstions or addition please fork the repo and hit me up with a pull request.<br>
 
+## Future Plans
+Not Done Add more Holiday based themes.
+Not Done Adding other themes of the like with the full shabang; splash, videoloading, music, etc.
+Not Done Adding the ability to the control script to change overlay and text colors.
+Not Done Adding the ability to the control script to change the size of the overlay.
+.
+.
 # FOR MORE SEE TAMPO GITHUB
+.
+https://github.com/ALLRiPPED/tampo
 .
 .
