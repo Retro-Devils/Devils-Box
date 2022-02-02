@@ -431,7 +431,8 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 		"12" "Spooky Castle                      10MB" off \
 		"13" "Starcraft                         1.2GB" off \
 		"14" "Star Wars Battlefront             2.3GB" off \
-                "15" "Warcraft 3                        1.9GB" off \
+		"15" "Unreal Anthology                  8.8GB" off \
+                "16" "Warcraft 3                        1.9GB" off \
                 2>/tmp/results
     while read -r choice  
         do
@@ -451,7 +452,8 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 12) spooky-castle ;;
 		13) starcraft ;;
                 14) swbf ;;
-		15) warcraft-3 ;;
+		15) unreal ;;
+		16) warcraft-3 ;;
                 *) ;;
         esac
         done < /tmp/results
@@ -543,6 +545,12 @@ wget https://archive.org/download/retro-devils-winegames/Retro-Devils_SWBF.zip -
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_SWBF.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Star-Wars-Battlefront.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_SWBF.zip
+}
+function unreal() {
+wget https://archive.org/download/retro-devils-winegames/Retro-Devils_UNREAL.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_UNREAL.zip -d "$HOME"/RetroPie/roms/wine/
+chmod 755 "$HOME"/RetroPie/roms/wine/Unreal-Anthology.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_UNREAL.zip
 }
 function warcraft-3() {
 wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Warcraft3.zip -P "$HOME"/RetroPie/roms/wine
