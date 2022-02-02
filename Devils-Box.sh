@@ -419,7 +419,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "+" "GAME NAME                     FILE SIZE" off \
                 "1" "Age Of Empires                    215MB" off \
                 "2" "Age Of Empires 2                  6.1GB" off \
-                "3" "Cuphead.                           11GB" off \
+                "3" "Cuphead                            11GB" off \
                 "4" "Command & Conquer TS              1.3GB" off \
                 "5" "Diablo 2                          1.8GB" off \
                 "6" "Fallout                           535MB" off \
@@ -452,8 +452,8 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
               12) spooky-castle ;;
               13) starcraft ;;
               14) swbf ;;
-		15) unreal ;;
-		16) warcraft-3 ;;
+	      15) unreal ;;
+              16) warcraft-3 ;;
                *) ;;
         esac
         done < /tmp/results
