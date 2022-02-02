@@ -1631,7 +1631,8 @@ function audio() {
       2 "Hursty's Themes--------------------------------------Hursty " \
       - "___________________Audio/Mixed Tools_______________________ " \
       3 "Apply No Audio Fix--------------------------------Anonymous " \
-      4 "Install T.A.M.P.O--------------------------------thepitster " \
+      4 "Install I.M.P-----------------------------------------BigED " \
+      5 "Install T.A.M.P.O--------------------------------thepitster " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1640,7 +1641,8 @@ function audio() {
     2) es-themes ;;
     -) none ;;
     3) no-audio ;;
-    4) tampo ;;
+    4) imp ;;
+    5) tampo ;;
     *) break ;;
     esac
   done
@@ -1650,6 +1652,7 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
+clear
 curl -sSL https://git.io/JDfjg | bash
 fi
 }
@@ -1684,7 +1687,17 @@ sudo perl -p -i -e 's/#hdmi_drive=2/hdmi_drive=2/g' /boot/config.txt
 sudo reboot
 fi
 }
-
+function imp() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+else
+cd ~
+git clone https://github.com/RapidEdwin08/imp.git
+sudo chmod 755 ~/imp/imp_setup.sh
+cd ~/imp && ./imp_setup.sh
+fi
+}
 ###-----------------------------------###
 ###  EMU TOOLS MENU FUNCTIONS   ###
 ###-----------------------------------###
