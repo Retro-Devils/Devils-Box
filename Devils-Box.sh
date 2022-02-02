@@ -1494,7 +1494,7 @@ function game_fixes() {
 }
 function aoe_game_fix() {
 cd ~/
-$(tput setaf 1)wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Age-of-Empires-no-cd-error-fix.reg
+wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Age-of-Empires-no-cd-error-fix.reg
 wine reg import Age-of-Empires-no-cd-error-fix.reg
 sleep 1
 rm -f Age-of-Empires-no-cd-error-fix.reg
