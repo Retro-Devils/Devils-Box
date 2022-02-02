@@ -1249,7 +1249,7 @@ function snes() {
                 "8" "Battletoads & Double Dragon - The Ultimate Team" off \
                 "9" "Battletoads in Battlemaniacs" off \
                 "10" "Biker Mice from Mars" off \
-                "11" "Blackhawk" ;;
+                "11" "Blackhawk" off \
                 "12" "Brawl Brothers - Rival Turf! 2" off \
                 "13" "Captain America and the Avengers (Europe).zip" off \
                 "14" "Castlevania - Vampire's Kiss" off \
