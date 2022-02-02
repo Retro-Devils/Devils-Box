@@ -84,7 +84,7 @@ else
     choice=$(dialog --backtitle "$BACKTITLE" --title " ARTWORK DOWNLOAD MENU " \
       --ok-label Download --cancel-label Main-Menu \
       --menu "[*] MEANS PACK INCLUDES..........[ ] MEANS PACK DOESNT INCLUDE  		
-                  --PRESS A/ENTER TO DOWNLOAD.......***MEANS COMING SOON" 30 70 50 \
+                  -PRESS A/ENTER TO DOWNLOAD.......***MEANS COMING SOON" 30 70 50 \
       - "_________________Consoles-Regular-Artwork__________________" \
       1 "Amiga Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
       2 "AmigaCD32 Artwork        [*]box  [ ]cart  [*]snap  [ ]wheel" \
@@ -1478,7 +1478,7 @@ function snes() {
 function game_fixes() {
   while true; do 
   local choice
-    choice=$(dialog --backtitle "$BACKTITLE" --title " TOOL BOX MENU " \
+    choice=$(dialog --backtitle "$BACKTITLE" --title " GAME FIXES MENU " \
       --ok-label Select --cancel-label Main-Menu \
       --menu "SELECT GAME FIX AND PRESS A  " 20 50 30 \
       1 "Age Of Empires No-CD Error Fix" \
@@ -1504,7 +1504,6 @@ cd ~/
 wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Unreal-Anthology-fix.reg
 wine reg import Unreal-Anthology-fix.reg
 sleep 1
-
 rm -f Unreal-Anthology-fix.reg
 }
 ###------------------------------###
@@ -1723,9 +1722,8 @@ function hardware_tools() {
 #---------------------------------#
 function clear_controller() {
 clear
-dialog  --sleep 1 --title "Clear Controller Config" --msgbox " 
----------------------ATTENTION------------------
-----------YOUR CONTROLLER WILL BE CLEARED-------" 0 0
+echo "This Wil Clear You ES Controller Mappings"
+read -n 1 -s -r -p "Press any key to Continue"
 sudo rm "$HOME"/.emulationstation/es_input.cfg
 sudo rm /opt/retropie/configs/all/emulationstation/es_temporaryinput.cfg
 }
@@ -2032,9 +2030,7 @@ read -n 1 -s -r -p "Press any key to continue"
 #-------------------#
 function system_reboot() {
 clear
-dialog --sleep 1 --title "System Rebooting" --msgbox " 
---------------------ATTENTION-------------------------
--------------YOUR SYSTEM WILL NOW REBOOT--------------" 0 0
+read -n 1 -s -r -p "Press any key to Reboot"
 sudo reboot
 }
 
