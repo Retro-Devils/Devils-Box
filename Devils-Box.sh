@@ -48,7 +48,7 @@ function main_menu() {
       2 "Console Packs" \
       3 "Hacked Packs" \
       4 "Pick & Choose" \
-	  5 "Game Fixes" \
+      5 "Game Fixes" \
       + "-------Tools-------" \
       6 "Tool Box" \
       7 "Reboot System" \
@@ -60,7 +60,7 @@ function main_menu() {
     2) consoles ;;
     3) hacked ;;
     4) pick ;;
-	5) game_fixes ;;
+    5) game_fixes ;;
     6) tool_box ;;
     7) system_reboot ;;
     8) show_sysinfo ;;
@@ -425,36 +425,36 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "6" "Fallout                           535MB" off \
                 "7" "Fallout 2                         555MB" off \
                 "8" "Fallout Tactics                   1.5GB" off \
-		"9" "The House Of The Dead             299MB" off \
-		"10" "The House Of The Dead 2           579MB" off \
-                "11" "Teenage Muntant Ninja Turtles     1.3GB" off \
-		"12" "Spooky Castle                      10MB" off \
-		"13" "Starcraft                         1.2GB" off \
-		"14" "Star Wars Battlefront             2.3GB" off \
-		"15" "Unreal Anthology                  8.8GB" off \
-                "16" "Warcraft 3                        1.9GB" off \
+                "9" "The House Of The Dead             299MB" off \
+               "10" "The House Of The Dead 2           579MB" off \
+               "11" "Teenage Muntant Ninja Turtles     1.3GB" off \
+               "12" "Spooky Castle                      10MB" off \
+               "13" "Starcraft                         1.2GB" off \
+               "14" "Star Wars Battlefront             2.3GB" off \
+               "15" "Unreal Anthology                  8.8GB" off \
+               "16" "Warcraft 3                        1.9GB" off \
                 2>/tmp/results
     while read -r choice  
         do
         case $choice in
 	        +) none ;;
-                1) aoe ;;
-                2) aoe-2 ;;
-                3) cuphead ;;
-                4) cncts  ;;
-                5) diablo-2 ;;
-                6) fallout ;;
-                7) fallout-2 ;;
-                8) fallout-tactics ;;
-		9) thotd ;;
-		10) thotd2 ;;
-		11) tmnt ;;
-                12) spooky-castle ;;
-		13) starcraft ;;
-                14) swbf ;;
+               1) aoe ;;
+               2) aoe-2 ;;
+               3) cuphead ;;
+               4) cncts  ;;
+               5) diablo-2 ;;
+               6) fallout ;;
+               7) fallout-2 ;;
+               8) fallout-tactics ;;
+               9) thotd ;;
+              10) thotd2 ;;
+              11) tmnt ;;
+              12) spooky-castle ;;
+              13) starcraft ;;
+              14) swbf ;;
 		15) unreal ;;
 		16) warcraft-3 ;;
-                *) ;;
+               *) ;;
         esac
         done < /tmp/results
 fi
@@ -720,7 +720,7 @@ function dreamcast() {
                 "15" "Shenmue Disc 3            " off \
                 "16" "Sonic Adventure      " off \
                 "17" "Sonic Adventures 2   " off \
-	        "18" "Soul Calibur         " off \
+                "18" "Soul Calibur         " off \
                 "19" "gamelist.xml          " off \
                 2>/tmp/results
     while read -r choice  
