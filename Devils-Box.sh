@@ -15,7 +15,7 @@ ART_HOST2="https://github.com/Retro-Devils-Media"
 HOST1="https://archive.org/download/the-devils-box-alt"
 HOST2="https://archive.org/download/the-devils-box_202112"
 HOST3="https://archive.org/download/devils-bios"
-#HOST4=""
+HOST4="https://archive.org/download/retro-devils-winegames"
 
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
@@ -432,9 +432,10 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                "13" "The House Of The Dead             299MB" off \
                "14" "The House Of The Dead 2           579MB" off \
                "15" "The Settlers                       26MB" off \
-               "16" "Teenage Muntant Ninja Turtles     1.3GB" off \
-               "17" "Unreal Anthology                  8.8GB" off \
-               "18" "Warcraft 3                        1.9GB" off \
+               "16" "The Simpsons Hit & Run            1.8GB" off \
+               "17" "Teenage Muntant Ninja Turtles     1.3GB" off \
+               "18" "Unreal Anthology                  8.8GB" off \
+               "19" "Warcraft 3                        1.9GB" off \
                 2>/tmp/results
     while read -r choice  
         do
@@ -455,16 +456,17 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
               13) thotd ;;
               14) thotd2 ;;
               15) the-settlers ;;
-              16) tmnt ;;
-              17) unreal ;;
-              18) warcraft-3 ;;
+              16) the-simpsons-hnr ;;
+              17) tmnt ;;
+              18) unreal ;;
+              19) warcraft-3 ;;
                *) ;;
         esac
         done < /tmp/results
 fi
 }
 function aoe() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_AoE.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_AoE.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Age-Of-Empires.sh
 chmod 755 "$HOME"/RetroPie/roms/wine/Age-Of-Empires-The-Rise-Of-Rome.sh
@@ -472,106 +474,112 @@ aoe_game_fix
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_AoE.zip
 }
 function aoe-2() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_AoE2.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_AoE2.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_AoE2.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Age-Of-Empires-2.sh
 chmod 755 "$HOME"/RetroPie/roms/wine/Age-Of-Empires-2-The-Conquerors.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_AoE2.zip
 }
 function cuphead() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Cuphead.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_Cuphead.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Cuphead.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Cuphead.sh
 chmod 755 "$HOME"/RetroPie/roms/wine/Cuphead/Cuphead.exe
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Cuphead.zip
 }
 function cncts() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_CNCTS.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_CNCTS.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_CNCTS.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Command-And-Conquer-TS.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_CNCTS.zip
 }
 function diablo-2() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Diablo2.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_Diablo2.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Diablo2.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Diablo-2.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Diablo2.zip
 }
 function fallout() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Fallout.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_Fallout.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Fallout.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Fallout.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Fallout.zip
 }
 function fallout-2() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Fallout2.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_Fallout2.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_CNCTS.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Fallout-2.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Fallout2.zip
 }
 function fallout-tactics() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_FalloutTactics.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_FalloutTactics.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_FalloutTactics.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Fallout-Tactics.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_FalloutTactics.zip
 }
 function hydro-thunder() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_HydroThunder.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_HydroThunder.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_HydroThunder.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Hydro-Thunder.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_HydroThunder.zip
 }
 function spooky-castle() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Spooky-Castle.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_Spooky-Castle.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Spooky-Castle.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Spooky-Castle.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Spooky-Castle.zip
 }
 function starcraft() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Starcraft.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_Starcraft.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Starcraft.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Starcraft.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Starcraft.zip
 }
 function swbf() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_SWBF.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_SWBF.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_SWBF.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Star-Wars-Battlefront.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_SWBF.zip
 }
 function tmnt() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_TMNT.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_TMNT.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_TMNT.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/TMNT.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_TMNT.zip
 }
 function thotd() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_THOTD.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_THOTD.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_THOTD.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/The-House-Of-The-Dead.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_THOTD.zip
 }
 function thotd2() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_THOTD2.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_THOTD2.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_THOTD2.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/The-House-Of-The-Dead-2.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_THOTD2.zip
 }
 function the-settlers() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_TheSettlers.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_TheSettlers.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_TheSettlers.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/The-Settlers.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_TheSettlers.zip
 }
+function the-simpsons-hnr() {
+wget "${HOST4}"/Retro-Devils_TheSimpsonsHitandRun.zip -P "$HOME"/RetroPie/roms/wine
+unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_TheSimpsonsHitandRun.zip -d "$HOME"/RetroPie/roms/wine/
+chmod 755 "$HOME"/RetroPie/roms/wine/The-Devils_TheSimpsonsHitandRun.sh
+sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_TheSimpsonsHitandRun.zip
+}
 function unreal() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_UNREAL.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_UNREAL.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_UNREAL.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Unreal-Anthology.sh
 unreal_game_fix
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_UNREAL.zip
 }
 function warcraft-3() {
-wget https://archive.org/download/retro-devils-winegames/Retro-Devils_Warcraft3.zip -P "$HOME"/RetroPie/roms/wine
+wget "${HOST4}"/Retro-Devils_Warcraft3.zip -P "$HOME"/RetroPie/roms/wine
 unzip -o "$HOME"/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip -d "$HOME"/RetroPie/roms/wine/
 chmod 755 "$HOME"/RetroPie/roms/wine/Warcraft-3.sh
 sudo rm -r "$HOME"/RetroPie/roms/wine/Retro-Devils_Warcraft3.zip
