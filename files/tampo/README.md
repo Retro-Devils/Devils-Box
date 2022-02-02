@@ -14,6 +14,6 @@ This is open source and free for anyone to use, just drop me a little credit is 
 The script has a one line install, so no need to clone a repo (it does all that for you).<br>
 Now if you have any sugesstions or addition please fork the repo and hit me up with a pull request.<br>
 
-## FOR MORE SEE TAMPO GITHUB
+# FOR MORE SEE TAMPO GITHUB
 .
 .
