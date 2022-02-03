@@ -501,14 +501,16 @@ local choice
     4) download-packs "ggh" ;;
     5) download-packs "nesh" ;;
     6) download-packs "snesh" ;;
-    7) hacks-configs ;;
+    -) nono ;;
+    7) hacks-config ;;
     -) none ;;
     *) break ;;
     esac
   done
 fi
 }
-function hacks-configs() {
+
+function hacks-config() {
 cp /opt/retropie/configs/gba -r /opt/retropie/configs/gbah
 cp /opt/retropie/configs/gb -r /opt/retropie/configs/gbh
 cp /opt/retropie/configs/gen -r /opt/retropie/configs/genh
