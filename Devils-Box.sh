@@ -444,7 +444,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "8" "Fallout Tactics                   1.5GB" off \
                 "9" "Harry Potter Prisoner of Azkaban  1.5GB" off \
                "10" "Hydro Thunder                      66MB" off \
-               "11" "Silent Hill2 Director's Cut       2.3GB" off \
+               "11" "Silent Hill 2 Director's Cut       2.3GB" off \
                "12" "Silent Hill 3                     4.8GB" off \
                "13" "Silent Hill 4 The Room            3.4GB" off \
                "14" "Spooky Castle                      10MB" off \
