@@ -2020,22 +2020,17 @@ else
 fi
 }
 
+
+#------DIABLOS ARCADE FUNCTIONS----#
+
 function update_da() {
-if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
-OFFLINE!!!
-Offline ... Not Availible Please Connect To Internet!" 0 0
-else
-  clear
+clear
 curl -sSL https://bit.ly/3IIDRA5 | bash 
 fi
 }
 function version_da() {
-dialog  --sleep 1 --title "Version Checker" --msgbox " 
-If this does not work, you are on V1.0
-Please update for newest stuff" 0 0
+clear
 da-version
-fi
 }
 ###---------------------------------###
 ###   MISC DEVILS BOX FUNCTIONS     ###
