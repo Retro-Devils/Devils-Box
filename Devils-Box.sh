@@ -53,6 +53,7 @@ function main_menu() {
       + "-------Tools-------" \
       5 "Game Fixes" \
       6 "Tool Box" \
+      - "-------------------" \
       7 "Reboot System" \
       8 "Show System Info" \
       2>&1 >/dev/tty)
