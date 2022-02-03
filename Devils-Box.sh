@@ -1943,7 +1943,6 @@ function db_tools() {
 #----DIABLOS ARCADE TOOLS---#
 function da_tools() {
   local choice
-
   while true; do
 dialog  --sleep 1 --title "DIABLOS ARCADE TOOLS" --msgbox " 
 ----------------ATTENTION----------------
@@ -1981,6 +1980,7 @@ function about_db() {
   cat "$HOME"/Devils-Box/files/INFO.txt
 read -n 1 -s -r -p "Press any key to Continue"
 }
+
 #---------------------------#
 #REMOVE DEVILS BOX          #
 #---------------------------#
@@ -2026,7 +2026,6 @@ fi
 function update_da() {
 clear
 curl -sSL https://bit.ly/3IIDRA5 | bash 
-fi
 }
 function version_da() {
 clear
