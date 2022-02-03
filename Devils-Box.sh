@@ -557,7 +557,7 @@ else
         do
         case $choice in
 	       +) none ;;
-               1) download-mugens "Retro-Devils_OG-Mugen.zip"
+               1) download-mugens "Retro-Devils_OG-Mugen.zip" ;;
 	       *) ;;
         esac
         done < /tmp/results
