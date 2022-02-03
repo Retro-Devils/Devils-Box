@@ -490,7 +490,7 @@ local choice
       5 "NES Hacks                              962KB      6 GAMES " \
       6 "SNES Hacks                              40MB     37 GAMES " \
       + "--------------------------------------------------------- " \
-      7 "Update/Apply Hacks Configs                                " \ 
+      7 "Update/Apply Hacks Configs                      6 Configs " \ 
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -515,6 +515,7 @@ cp /opt/retropie/configs/gen -r /opt/retropie/configs/genh
 cp /opt/retropie/configs/gamegear -r /opt/retropie/configs/ggh
 cp /opt/retropie/configs/nes -r /opt/retropie/configs/nesh
 cp /opt/retropie/configs/snes -r /opt/retropie/configs/snesh
+
 }
 
 
