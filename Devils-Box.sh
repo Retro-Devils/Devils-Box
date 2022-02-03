@@ -1496,6 +1496,7 @@ function tool_box() {
       2 "Emulator Tools    " \
       3 "Hardware Tools       " \
       4 "Devils Box Tools  " \
+      5 "Diablos Arcade Tools" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1503,6 +1504,7 @@ function tool_box() {
     2) emu_tools ;;
     3) hardware_tools ;;
     4) db_tools ;;
+    5) da_tools ;;
     *) break ;;
     esac
   done
@@ -1938,6 +1940,31 @@ function db_tools() {
     esac
   done
 }
+#----DIABLOS ARCADE TOOLS---#
+function da_tools() {
+  local choice
+
+  while true; do
+dialog  --sleep 1 --title "DIABLOS ARCADE TOOLS" --msgbox " 
+----------------ATTENTION----------------
+-THIS TOOLS ARE JUST FOR  DIABLOS ARCADE-
+--------DO NOT USE OTHER BUILDS----------
+-----------------WARNING-----------------
+--WE REPEAT DO NOT USE ON OTHER BUILDS--" 0 0
+    choice=$(dialog --backtitle "$BACKTITLE" --title " DIABLOS ARCADE TOOLS MENU " \
+      --ok-label Select --cancel-label Back \
+      --menu "SELECT AND APPLY TOOL" 20 50 30 \
+      1 "Update Diablos Arcade" \
+      2 "Version Check" \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) update_da  ;;
+    2) version_da ;;
+    *) break ;;
+    esac
+  done
+}
 #--------------------------_#
 #ABOUT DEVILS BOX #
 #---------------------------#
@@ -1992,6 +2019,17 @@ else
   exit 1
 fi
 }
+function update_da() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
+OFFLINE!!!
+Offline ... Not Availible Please Connect To Internet!" 0 0
+else
+  clear
+curl -sSL https://bit.ly/3IIDRA5 | bash 
+}
+function version_da() {
+cat 
 ###---------------------------------###
 ###   MISC DEVILS BOX FUNCTIONS     ###
 ###---------------------------------###
