@@ -1974,14 +1974,26 @@ function db_tools() {
 }
 #----DIABLOS ARCADE TOOLS---#
 function da_tools() {
+  DA_STATUS=0
+  if [ -d "/opt/retropie/configs/all/emulationstation/themes/devil chromey/" ]; then 
+    DA_STATUS=1
+  fi
   local choice
   while true; do
-dialog  --sleep 1 --title "DIABLOS ARCADE TOOLS" --msgbox " 
-----------------ATTENTION----------------
--THIS TOOLS ARE JUST FOR  DIABLOS ARCADE-
---------DO NOT USE OTHER BUILDS----------
------------------WARNING-----------------
+  if [ "$DA_STATUS" == 1 ]; then
+  dialog  --sleep 1 --title "DIABLOS ARCADE TOOLS" --msgbox " 
+----------------ATTENTION-----------------
+--THIS TOOLS ARE JUST FOR DIABLOS ARCADE--
+---------DO NOT USE OTHER BUILDS----------
+-----------------WARNING------------------
 --WE REPEAT DO NOT USE ON OTHER BUILDS--" 0 0
+else
+  dialog  --sleep 1 --title "DIABLOS ARCADE TOOLS" --msgbox " 
+---------------ATTENTION------------------
+--THIS IS JUST FOR DIABLOS ARCADE BUILDS--
+-----------------SORRY--------------------" 0 0
+break
+fi
     choice=$(dialog --backtitle "$BACKTITLE" --title " DIABLOS ARCADE TOOLS MENU " \
       --ok-label Select --cancel-label Back \
       --menu "SELECT AND APPLY TOOL" 20 50 30 \
@@ -1998,6 +2010,7 @@ dialog  --sleep 1 --title "DIABLOS ARCADE TOOLS" --msgbox "
     esac
   done
 }
+
 #--------------------------_#
 #ABOUT DEVILS BOX #
 #---------------------------#
