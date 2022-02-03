@@ -490,7 +490,7 @@ local choice
       5 "NES Hacks                              962KB      6 GAMES " \
       6 "SNES Hacks                              40MB     37 GAMES " \
       + "--------------------------------------------------------- " \
-      7 "Update/Apply Hacks Configs                      6 Configs " \ 
+      7 "Update/Apply Hacks Configs                      6 Configs " \
       2>&1 >/dev/tty)
 
     case "$choice" in
