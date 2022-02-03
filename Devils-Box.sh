@@ -444,7 +444,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "8" "Fallout Tactics                   1.5GB" off \
                 "9" "Harry Potter Prisoner of Azkaban  1.5GB" off \
                "10" "Hydro Thunder                      66MB" off \
-               "11" "Silent Hill 2 Director's Cut       2.3GB" off \
+               "11" "Silent Hill 2 Director's Cut      2.3GB" off \
                "12" "Silent Hill 3                     4.8GB" off \
                "13" "Silent Hill 4 The Room            3.4GB" off \
                "14" "Spooky Castle                      10MB" off \
@@ -474,7 +474,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
               10) download-winegames "Retro-Devils_HydroThunder.zip" ;;
               11) download-winegames "Retro-Devils_SilentHill2DC.zip" ;;
               12) download-winegames "Retro-Devils_SilentHill3.zip" ;;
-              13) download-winegames "Retro-Devils_SilentHill4TR.zip" ;;
+              13) download-winegames "Retro-Devils_SilentHill4TR.zip"; sh4_game_fix ;;
               14) download-winegames "Retro-Devils_Spooky-Castle.zip" ;;
               15) download-winegames "Retro-Devils_Starcraft.zip" ;;
               16) download-winegames "Retro-Devils_SWBF.zip" ;;
@@ -1518,6 +1518,13 @@ wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Unrea
 wine reg import Unreal-Anthology-fix.reg
 sleep 1
 rm -f Unreal-Anthology-fix.reg
+}
+function sh4_game_fix() {
+cd ~/
+wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Silent-Hill-4-The-Room-Fix.reg
+wine reg import Silent-Hill-4-The-Room-Fix.reg
+sleep 1
+rm -f Silent-Hill-4-The-Room-Fix.reg
 }
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
