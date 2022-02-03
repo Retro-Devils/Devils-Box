@@ -1,6 +1,11 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
 BACKTITLE="DEVILS BOX----V-3.0----UPDATED 2/2/22"
+#-----------COLORS----------#
+rst="$(tput sgr0)"
+fgred="${rst}$(tput setaf 1)" # Red
+bld="$(tput bold)"
+bfgred="${bld}$(tput setaf 1)"
 ##-------------------------##
 ##       HOST SITES        ##
 ##-------------------------##
@@ -1771,7 +1776,7 @@ function hardware_tools() {
 #---------------------------------#
 function clear_controller() {
 clear
-echo "This Wil Clear You ES Controller Mappings"
+echo ${rst}$(tput setaf 1) "This Wil Clear You ES Controller Mappings"
 read -n 1 -s -r -p "Press any key to Continue"
 sudo rm "$HOME"/.emulationstation/es_input.cfg
 sudo rm /opt/retropie/configs/all/emulationstation/es_temporaryinput.cfg
@@ -1783,11 +1788,11 @@ mkdir /home/pi/addonusb > /dev/null 2>&1
 mkdir /home/pi/.work > /dev/null 2>&1
 testdrive=`df |grep media |awk '{print $1 }'|wc -l`
 if [ $testdrive -eq 0 ] ; then
-echo "No External drive detected. Exiting."
+echo ${rst}$(tput setaf 1) "No External drive detected. Exiting."
 sleep 5
 exit
 else
-echo "External Drive detected. Performing checks for NTFS filesystem and piroms directory."
+echo ${rst}$(tput setaf 1) "External Drive detected. Performing checks for NTFS filesystem and piroms directory."
 sleep 5
 fi
 
@@ -1818,8 +1823,8 @@ usb_mount=`df -T |grep $usb_dir |awk '{print $1 }'`
 usb_filesystem=`sudo blkid |grep -w "$usb_mount"|grep -Po 'TYPE="\K.*?(?=")'`
 usb_uuid=`ls -l /dev/disk/by-uuid/|grep $usb_designation|awk '{print $9 }'`
 if [ "$usb_filesystem" != "ntfs" ] ; then
-echo "This external drive is not correctly formatted. It must be formatted using the NTFS filesystem. Please reformat it to NTFS."
-echo "Fat vfat exfat filesystems are not supported in linux"
+echo ${rst}$(tput setaf 1) "This external drive is not correctly formatted. It must be formatted using the NTFS filesystem. Please reformat it to NTFS."
+echo ${rst}$(tput setaf 1) "Fat vfat exfat filesystems are not supported in linux"
 sleep 10; exit
 else echo "External drive checks out. Correctly formatted to NTFS"
 sleep 5
@@ -2015,7 +2020,7 @@ read -n 1 -s -r -p "Press any key to Continue"
 #---------------------------#
 function remove_db() {
 clear
-  echo "Removing Now";
+  echo ${rst}$(tput setaf 1) "Removing Now";
   sudo rm "$HOME"/RetroPie/retropiemenu/Devils-Box.sh
   sudo rm -R "$HOME"/Devils-Box
   sudo reboot
@@ -2031,7 +2036,7 @@ OFFLINE!!!
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
   clear
-  echo "Online ... Updating"
+  echo ${rst}$(tput setaf 1) "Online ... Updating"
   sleep 1
   sudo rm "$HOME"/RetroPie/retropiemenu/Devils-Box.sh
   cd "$HOME"/Devils-Box || exit
