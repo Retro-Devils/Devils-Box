@@ -2035,7 +2035,6 @@ This does not work you are on V1.0
 Please update for newest awesomness" 0 0
 clear
 da-version
-read -n 1 -s -r -p "Press any key to Continue"
 }
 ###---------------------------------###
 ###   MISC DEVILS BOX FUNCTIONS     ###
