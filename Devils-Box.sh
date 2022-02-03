@@ -42,24 +42,33 @@ function main_menu() {
   local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
+  DB_STATUS=0
+  if [ -f /usr/local/bin/box ] && [ -f /usr/local/bin/Devils-Box ]; then 
+    DB_STATUS=1
+  fi
+    choice=(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
       --ok-label Select --cancel-label Exit-Devils-Box \
-      --menu "WELCOME TO THE OTHERSIDE" 20 50 30 \
-      - "----Downloaders----" \
-      1 "Artwork Packs" \
-      2 "Console Packs" \
-      3 "Hacked Packs" \
-      4 "Pick & Choose" \
-      + "-------Tools-------" \
-      5 "Game Fixes" \
-      6 "Tool Box" \
-      - "-------------------" \
-      7 "Reboot System" \
-      8 "Show System Info" \
-      2>&1 >/dev/tty)
-
-    case "$choice" in
-    1) artwork ;;
+      --menu "WELCOME TO THE OTHERSIDE" 20 50 30 )
+    if [ "$DB_STATUS" == 1 ]; then
+      options=( \
+      - "----Downloaders----"
+      1 "Artwork Packs"
+      2 "Console Packs"
+      3 "Hacked Packs"
+      4 "Pick & Choose"
+      + "-------Tools-------"
+      5 "Game Fixes"
+      6 "Tool Box"
+      - "-------------------"
+      7 "Reboot System"
+      8 "Show System Info")
+    else
+      options=( \
+      1 "Install Devils-Box")
+    fi
+    choice=$("${choice[@]}" "${options[@]}" 2>&1 >/dev/tty)
+    case $choice in
+    1) if [ "$DB_STATUS" == 1 ]; then artwork; else curl -sSL https://git.io/JSDGq | bash; fi; ;;
     2) consoles ;;
     3) hacked ;;
     4) pick ;;
@@ -509,13 +518,12 @@ fi
 }
 
 function hacks-config() {
-cp /opt/retropie/configs/gba -r /opt/retropie/configs/gbah
-cp /opt/retropie/configs/gb -r /opt/retropie/configs/gbh
-cp /opt/retropie/configs/gen -r /opt/retropie/configs/genh
-cp /opt/retropie/configs/gamegear -r /opt/retropie/configs/ggh
-cp /opt/retropie/configs/nes -r /opt/retropie/configs/nesh
-cp /opt/retropie/configs/snes -r /opt/retropie/configs/snesh
-
+cp -r /opt/retropie/configs/gba /opt/retropie/configs/gbah
+cp -r /opt/retropie/configs/gb /opt/retropie/configs/gbh
+cp -r /opt/retropie/configs/gen /opt/retropie/configs/genh
+cp -r /opt/retropie/configs/gamegear /opt/retropie/configs/ggh
+cp -r /opt/retropie/configs/nes -r /opt/retropie/configs/nesh
+cp -r /opt/retropie/configs/snes /opt/retropie/configs/snesh
 }
 
 
