@@ -489,6 +489,8 @@ local choice
       4 "Gamegear Hacks                           1MB      4 GAMES " \
       5 "NES Hacks                              962KB      6 GAMES " \
       6 "SNES Hacks                              40MB     37 GAMES " \
+      - "--------------------------------------------------------- " \
+      7 "Update/Apply Hacks Configs                                " \ 
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -499,11 +501,22 @@ local choice
     4) download-packs "ggh" ;;
     5) download-packs "nesh" ;;
     6) download-packs "snesh" ;;
+    7) hacks-configs ;;
+    -) none
     *) break ;;
     esac
   done
 fi
 }
+function hacks-configs() {
+cp /opt/retropie/configs/gba -r /opt/retropie/configs/gbah
+cp /opt/retropie/configs/gb -r /opt/retropie/configs/gbh
+cp /opt/retropie/configs/gen -r /opt/retropie/configs/genh
+cp /opt/retropie/configs/gamegear -r /opt/retropie/configs/ggh
+cp /opt/retropie/configs/nes -r /opt/retropie/configs/nesh
+cp /opt/retropie/configs/snes -r /opt/retropie/configs/snesh
+}
+
 
 ###-------------------------------------###
 ###          PICK AND CHOOSE            ###
