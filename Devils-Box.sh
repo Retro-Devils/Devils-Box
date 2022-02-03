@@ -1496,7 +1496,7 @@ function tool_box() {
       2 "Emulator Tools    " \
       3 "Hardware Tools       " \
       4 "Devils Box Tools  " \
-      5 "Diablos Arcade Tools" \
+      5 "Diablos Arcade Tools " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -2019,6 +2019,7 @@ else
   exit 1
 fi
 }
+
 function update_da() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
@@ -2027,12 +2028,14 @@ Offline ... Not Availible Please Connect To Internet!" 0 0
 else
   clear
 curl -sSL https://bit.ly/3IIDRA5 | bash 
+fi
 }
 function version_da() {
 dialog  --sleep 1 --title "Version Checker" --msgbox " 
 If this does not work, you are on V1.0
 Please update for newest stuff" 0 0
 da-version
+fi
 }
 ###---------------------------------###
 ###   MISC DEVILS BOX FUNCTIONS     ###
