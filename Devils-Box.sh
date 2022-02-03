@@ -525,9 +525,9 @@ fi
 function hacks-config() {
 cp -r /opt/retropie/configs/gba /opt/retropie/configs/gbah
 cp -r /opt/retropie/configs/gb /opt/retropie/configs/gbh
-cp -r /opt/retropie/configs/gen /opt/retropie/configs/genh
+cp -r /opt/retropie/configs/megadrive /opt/retropie/configs/genh
 cp -r /opt/retropie/configs/gamegear /opt/retropie/configs/ggh
-cp -r /opt/retropie/configs/nes -r /opt/retropie/configs/nesh
+cp -r /opt/retropie/configs/nes /opt/retropie/configs/nesh
 cp -r /opt/retropie/configs/snes /opt/retropie/configs/snesh
 }
 
