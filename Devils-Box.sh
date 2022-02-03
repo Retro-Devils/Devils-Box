@@ -2029,7 +2029,11 @@ else
 curl -sSL https://bit.ly/3IIDRA5 | bash 
 }
 function version_da() {
-cat 
+dialog  --sleep 1 --title "Version Checker" --msgbox " 
+If this does not work, you are on V1.0
+Please update for newest stuff" 0 0
+da-version
+}
 ###---------------------------------###
 ###   MISC DEVILS BOX FUNCTIONS     ###
 ###---------------------------------###
