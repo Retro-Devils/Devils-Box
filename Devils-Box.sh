@@ -305,7 +305,7 @@ else
       31 "Genesis/Megadrive-Japan          149MB      278 GAMES" \
       32 "MSX                               30MB      708 GAMES" \
       33 "MSX 2                           6.24MB       83 GAMES" \
-      34 "****Mugen****                    9.2GB      009 GAMES" \
+      34 "Mugens                        SUB-MENU       01 GAMES" \
       35 "Nintendo 64                      5.0GB      338 GAMES" \
       36 "Naomi                            1.5GB       15 GAMES" \
       37 "Nintendo DS                        4GB      171 GAMES" \
@@ -330,7 +330,7 @@ else
       56 "VideoPAC                         430KB       99 GAMES" \
       57 "Virtual Boy                        8MB       24 GAMES" \
       58 "Dreamcast VMU                      3MB      115 GAMES" \
-      59 "Wine                          SUB-MENU        9 GAMES" \
+      59 "Wine                          SUB-MENU       23 GAMES" \
       60 "Wonderswan Color                 116MB       84 GAMES" \
       61 "Sharp X1                         7.6MB       69 GAMES" \
       62 "Sharp X68000                     504MB      418 GAMES" \
@@ -372,7 +372,7 @@ else
     31) download-packs "megadrive-japan" ;;
     32) download-packs "msx" ;;
     33) download-packs "msx2" ;;
-    34) download-packs "mugen" ;;
+    34) mugens ;;
     35) download-packs "n64" ;;
     36) download-packs "naomi" ;;
     37) download-packs "nds" ;;
@@ -539,7 +539,30 @@ cp -r /opt/retropie/configs/nes /opt/retropie/configs/nesh
 cp -r /opt/retropie/configs/snes /opt/retropie/configs/snesh
 }
 
-
+#--------------------------------#
+#            MUGEN MENU          #
+#--------------------------------#
+function mugens() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+else
+ whiptail --clear --title "MUGEN DOWNLOAD MENU" --separate-output \
+                --ok-button Download --cancel-button Consoles-Menu \
+                --checklist "Choose:" 0 0 0 \
+                "+" "MUGEN NAME                     FILE SIZE" off \
+                "1" "Original MUGEN                      8 MB" off \
+		 2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+	       +) none ;;
+               1) download-mugens "Retro-Devils_OG-Mugen.zip"
+	       *) ;;
+        esac
+        done < /tmp/results
+fi
+}
 ###-------------------------------------###
 ###          PICK AND CHOOSE            ###
 ###-------------------------------------###
@@ -2261,4 +2284,14 @@ function download-winegames() {
   sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
 }
 
+#-----------------#
+#  MUGEN FUNCTION  #
+#-----------------#
+function download-mugens() {
+  clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/wine -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/wine/"${1}" -d "$HOME"/RetroPie/roms/wine/MUGENS
+  chmod 755 "$HOME"/RetroPie/roms/wine/*.sh
+  sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
+}
 main_menu
