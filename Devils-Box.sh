@@ -1495,6 +1495,7 @@ function tool_box() {
       1 "Audio & Visual Tools   " \
       2 "Emulator Tools    " \
       3 "Hardware Tools       " \
+      - "---------------------" \
       4 "Devils Box Tools  " \
       - "---------------------" \
       5 "Diablos Arcade Tools " \
