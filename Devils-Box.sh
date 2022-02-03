@@ -1955,14 +1955,14 @@ dialog  --sleep 1 --title "DIABLOS ARCADE TOOLS" --msgbox "
     choice=$(dialog --backtitle "$BACKTITLE" --title " DIABLOS ARCADE TOOLS MENU " \
       --ok-label Select --cancel-label Back \
       --menu "SELECT AND APPLY TOOL" 20 50 30 \
-      1 "Update V1.0 - V1.1" \
-      2 "V1.0 -1.1 Changelog " \
-      3 "Version Check" \
+      1 "Changes V1.0 - V1.1" \
+      2 "Update  V1.0 - V1.1" \
+      3 "Version Checker" \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) update_v1  ;;
-    2) change_v1 ;;
+    1) change_v1 ;;
+    2) update_v1  ;;
     3) version_da ;;
     *) break ;;
     esac
