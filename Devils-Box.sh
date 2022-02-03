@@ -1702,6 +1702,7 @@ dialog  --sleep 1 --title "Mugen Installer FYI" --msgbox "
 -Devils Box will backup your es_systems.cfg
 -For this to work you might have to run
 sudo -y update && sudo -y upgrade" 0 0
+mkdir home/pi/.emulationstation/backups/
 mv /home/pi/.emulationstation/es_systems.cfg -f /home/pi/.emulationstation/backups/es_systems.b4.wine
 curl -sSL https://git.io/Jz9O3 | bash
 dialog  --sleep 1 --title "EXIT MESSAGE" --msgbox " 
