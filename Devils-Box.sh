@@ -1495,9 +1495,8 @@ function tool_box() {
       1 "Audio & Visual Tools   " \
       2 "Emulator Tools    " \
       3 "Hardware Tools       " \
-      - "_______________________" \
       4 "Devils Box Tools  " \
-      - "_______________________" \
+      - "---------------------" \
       5 "Diablos Arcade Tools " \
       2>&1 >/dev/tty)
 
