@@ -489,7 +489,7 @@ local choice
       4 "Gamegear Hacks                           1MB      4 GAMES " \
       5 "NES Hacks                              962KB      6 GAMES " \
       6 "SNES Hacks                              40MB     37 GAMES " \
-      - "--------------------------------------------------------- " \
+      + "--------------------------------------------------------- " \
       7 "Update/Apply Hacks Configs                                " \ 
       2>&1 >/dev/tty)
 
@@ -501,9 +501,7 @@ local choice
     4) download-packs "ggh" ;;
     5) download-packs "nesh" ;;
     6) download-packs "snesh" ;;
-    -) nono ;;
     7) hacks-config ;;
-    -) none ;;
     *) break ;;
     esac
   done
