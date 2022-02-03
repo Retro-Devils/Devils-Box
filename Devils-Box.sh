@@ -2031,7 +2031,11 @@ curl -sSL https://bit.ly/3IIDRA5 | bash
 }
 function version_da() {
 clear
+dialog  --sleep 1 --title "DIABLOS ARCADE VERSION" --msgbox " 
+This does not work you are on V1.0
+Please update for newest awesomness" 0 0
 da-version
+read -n 1 -s -r -p "Press any key to Continue"
 }
 ###---------------------------------###
 ###   MISC DEVILS BOX FUNCTIONS     ###
