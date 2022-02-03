@@ -502,7 +502,7 @@ local choice
     5) download-packs "nesh" ;;
     6) download-packs "snesh" ;;
     7) hacks-configs ;;
-    -) none
+    -) none ;;
     *) break ;;
     esac
   done
