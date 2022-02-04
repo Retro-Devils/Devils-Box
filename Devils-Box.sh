@@ -1656,8 +1656,8 @@ function devil-themes() {
 }
 function devil-chromey() {
 wget https://archive.org/download/devils-themes/devil-chromey.zip -P ${HOME}/
-unzip -o ${HOME}/devil-chrmoey.zip -d /home/pi/.emulationstation/themes/
-sudo rm -R ${HOME}/devil-chromey.zip
+unzip -o "$HOME"/devil-chrmoey.zip -d /home/pi/.emulationstation/themes/
+sudo rm -R "$HOME"/devil-chromey.zip
 }
 function no-audio () {
 sudo grep hdmi_force_edid_audio /boot/config.txt > /dev/null 2>&1
