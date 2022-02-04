@@ -433,31 +433,31 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
     whiptail --clear --title "WINE DOWNLOAD MENU" --separate-output \
                 --ok-button Download --cancel-button Consoles-Menu \
                 --checklist "Choose:" 0 0 0 \
-                "+" "GAME NAME                     FILE SIZE" off \
-                "1" "Age Of Empires                    215MB" off \
-                "2" "Age Of Empires 2                  6.1GB" off \
-                "3" "Angry Birds Seasons               180MB" off \
-		"4" "Command & Conquer TS              1.3GB" off \
-                "5" "Cuphead                            11GB" off \
-                "6" "Diablo 2                          1.8GB" off \
-                "7" "Fallout                           535MB" off \
-                "8" "Fallout 2                         555MB" off \
-                "9" "Fallout Tactics                   1.5GB" off \
-               "10" "Harry Potter Prisoner of Azkaban  1.5GB" off \
-               "11" "Hydro Thunder                      66MB" off \
-               "12" "Silent Hill 2 Director's Cut      2.3GB" off \
-               "13" "Silent Hill 3                     4.8GB" off \
-               "14" "Silent Hill 4 The Room            3.4GB" off \
-               "15" "Spooky Castle                      10MB" off \
-               "16" "Starcraft                         1.2GB" off \
-               "17" "Star Wars Battlefront             2.3GB" off \
-               "18" "Teenage Muntant Ninja Turtles     1.3GB" off \
-               "19" "The House Of The Dead             299MB" off \
-               "20" "The House Of The Dead 2           579MB" off \
-               "21" "The Settlers                       26MB" off \
-               "22" "The Simpsons Hit & Run            1.8GB" off \
-               "23" "Unreal Anthology                  8.8GB" off \
-               "24" "Warcraft 3                        1.9GB" off \
+                "+" "GAME NAME                       FILE SIZE" off \
+                "1" "Age Of Empires                      215MB" off \
+                "2" "Age Of Empires 2                    6.1GB" off \
+                "3" "Angry Birds Seasons                 180MB" off \
+		"4" "Command & Conquer TS                1.3GB" off \
+                "5" "Cuphead                              11GB" off \
+                "6" "Diablo 2                            1.8GB" off \
+                "7" "Fallout                             535MB" off \
+                "8" "Fallout 2                           555MB" off \
+                "9" "Fallout Tactics                     1.5GB" off \
+               "10" "Harry Potter Prisoner of Azkaban    1.5GB" off \
+               "11" "Hydro Thunder                        66MB" off \
+               "12" "Silent Hill 2 Director's Cut        2.3GB" off \
+               "13" "Silent Hill 3                       4.8GB" off \
+               "14" "Silent Hill 4 The Room              3.4GB" off \
+               "15" "Spooky Castle                        10MB" off \
+               "16" "Starcraft                           1.2GB" off \
+               "17" "Star Wars Battlefront               2.3GB" off \
+               "18" "Teenage Muntant Ninja Turtles       1.3GB" off \
+               "19" "The House Of The Dead               299MB" off \
+               "20" "The House Of The Dead 2             579MB" off \
+               "21" "The Settlers                         26MB" off \
+               "22" "The Simpsons Hit & Run              1.8GB" off \
+               "23" "Unreal Anthology                    8.8GB" off \
+               "24" "Warcraft 3                          1.9GB" off \
                 2>/tmp/results
     while read -r choice  
         do
