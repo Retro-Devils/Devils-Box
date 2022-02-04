@@ -554,12 +554,14 @@ else
                 --checklist "Choose:" 0 0 0 \
                 "+" "MUGEN NAME                     FILE SIZE" off \
                 "1" "Original MUGEN                      8 MB" off \
+		"2" "Ultimste Sonic                    200 MB" off \
 		 2>/tmp/results
     while read -r choice  
         do
         case $choice in
 	       +) none ;;
                1) download-mugens "Retro-Devils_OG-Mugen.zip" ;;
+	       2) download-mugens "Retro-Devils_Ultimate-Sonic-Mugen.zip" ;;
 	       *) ;;
         esac
         done < /tmp/results
