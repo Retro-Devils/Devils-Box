@@ -1,3 +1,10 @@
+rst="$(tput sgr0)"
+fgred="${rst}$(tput setaf 1)" # Red
+bld="$(tput bold)"
+bfgred="${bld}$(tput setaf 1)"
+
+
+{bld}$(tput setaf 1)
 ## TAMPO 
 ## Theme And Music Plus Overlay v1.05
 ## More Information
