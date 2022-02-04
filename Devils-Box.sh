@@ -1639,7 +1639,7 @@ chmod +x "install.sh"
 }
 
 #----DEVILS THEMES MENU--------#
-function devils-themes() {
+function devil-themes() {
   while true; do 
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS THEMES MENU " \
