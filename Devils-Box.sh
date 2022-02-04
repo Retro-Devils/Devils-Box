@@ -305,7 +305,7 @@ else
       31 "Genesis/Megadrive-Japan          149MB      278 GAMES" \
       32 "MSX                               30MB      708 GAMES" \
       33 "MSX 2                           6.24MB       83 GAMES" \
-      34 "Mugens                        SUB-MENU       01 GAMES" \
+      34 "Mugens                        SUB-MENU       02 GAMES" \
       35 "Nintendo 64                      5.0GB      338 GAMES" \
       36 "Naomi                            1.5GB       15 GAMES" \
       37 "Nintendo DS                        4GB      171 GAMES" \
@@ -554,7 +554,7 @@ else
                 --checklist "Choose:" 0 0 0 \
                 "+" "MUGEN NAME                     FILE SIZE" off \
                 "1" "Original MUGEN                      8 MB" off \
-		"2" "Ultimste Sonic                    200 MB" off \
+		"2" "Ultimate Sonic                    200 MB" off \
 		 2>/tmp/results
     while read -r choice  
         do
