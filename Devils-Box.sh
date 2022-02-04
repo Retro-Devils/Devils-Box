@@ -1,6 +1,9 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
-BACKTITLE="My name is... Shake-Zula. The mic-rula, The old schoolah, Ya wanna trip? I'll bring it to ya"
+BACKTITLE="HI!! \
+MY NAME IS....WHAT?  MY NAME IS...WHO?  MY NAME...IS CHICKA CHICKA SLIM SHADY \
+My name is... Shake-Zula. The mic-rula, The old schoolah, Ya wanna trip? I'll bring it to ya \
+Hello. My name is Inigo Montoya. You killed my father. Prepare to die."
 #-----------COLORS----------#
 rst="$(tput sgr0)"
 fgred="${rst}$(tput setaf 1)" # Red
