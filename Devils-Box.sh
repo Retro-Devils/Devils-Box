@@ -397,7 +397,7 @@ else
     58) download-packs "wonderswancolor" ;;
     59) download-packs "x1" ;;
     60) download-packs "x68000" ;;
-    63) download-packs "zmachine" ;;
+    61) download-packs "zmachine" ;;
     62) download-packs "zxspectrum" ;;  
      +) none  ;;
      *) break ;;
