@@ -436,7 +436,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "+" "GAME NAME                     FILE SIZE" off \
                 "1" "Age Of Empires                    215MB" off \
                 "2" "Age Of Empires 2                  6.1GB" off \
-                "3" "AngryBirds Seasons                180MB" off \
+                "3" "Angry Birds Seasons               180MB" off \
 		"4" "Command & Conquer TS              1.3GB" off \
                 "5" "Cuphead                            11GB" off \
                 "6" "Diablo 2                          1.8GB" off \
