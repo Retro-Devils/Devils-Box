@@ -1595,25 +1595,27 @@ function audio() {
       + "_____________________Visual Tools__________________________ " \
       1 "Emulation Station Themes---------------------------Retropie " \
       2 "Hursty's Themes--------------------------------------Hursty " \
+      3 "Devils Themes and Artwork----------------------Retro Devils " \
       - "___________________Audio/Mixed Tools_______________________ " \
-      3 "Apply No Audio Fix--------------------------------Anonymous " \
-      4 "Install I.M.P-----------------------------------RapiEdwin08 " \
-      5 "Install T.A.M.P.O--------------------------------thepitster " \
+      4 "Apply No Audio Fix--------------------------------Anonymous " \
+      5 "Install I.M.P-----------------------------------RapiEdwin08 " \
+      6 "Install T.A.M.P.O--------------------------------thepitster " \
       - "_____________________ Information__________________________ " \
-      6 "I.M.P-------------Integrated Music Player------------------ " \
-      7 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
+      7 "I.M.P-------------Integrated Music Player------------------ " \
+      8 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     +) nono ;;
     1) hursty-themes ;;
     2) es-themes ;;
+    3) devil-themes ;;
     -) none ;;
-    3) no-audio ;;
-    4) imp ;;
-    5) tampo ;;
-    6) imp-info ;;
-    7) tampo-info ;;
+    4) no-audio ;;
+    5) imp ;;
+    6) tampo ;;
+    7) imp-info ;;
+    8) tampo-info ;;
     *) break ;;
     esac
   done
@@ -1634,6 +1636,27 @@ function hursty-themes () {
 wget https://raw.githubusercontent.com/RetroHursty69/HurstyThemes/master/install.sh
 chmod +x "install.sh"
 ./install.sh
+}
+
+#----DEVILS THEMES MENU--------#
+function devils-themes() {
+  while true; do 
+  local choice
+    choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS THEMES MENU " \
+      --ok-label Select --cancel-label Main-Menu \
+      --menu "SELECT THEME AND PRESS A  " 20 50 30 \
+      1 "Devil Chromey   " \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) devil-chromey ;;
+    *) break ;;
+    esac
+  done
+}
+function devil-chromey() {
+wget -P ${HOME}/pi/
+unzip -o ${HOME}/pi/devil-chrmoey.zip -d /home/pi/.emulationstation/themes/
 }
 function no-audio () {
 sudo grep hdmi_force_edid_audio /boot/config.txt > /dev/null 2>&1
