@@ -1,6 +1,8 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
-BACKTITLE="DEVILS BOX----V-3.0----UPDATED 2/2/22"
+BACKTITLE="DEVILS BOX--V-3.0----UPDATED 2/2/22
+Hello. My name is Inigo Montoya. You killed my father. Prepare to die.
+My name is... Shake-Zula. The mic-rula, The old schoolah, Ya wanna trip? I'll bring it to ya"
 #-----------COLORS----------#
 rst="$(tput sgr0)"
 fgred="${rst}$(tput setaf 1)" # Red
