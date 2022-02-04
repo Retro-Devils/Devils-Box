@@ -1656,7 +1656,7 @@ function devil-themes() {
 }
 function devil-chromey() {
 wget https://archive.org/download/devils-themes/devil-chromey.zip -P ${HOME}/
-unzip -o "$HOME"/devil-chrmoey.zip -d /home/pi/.emulationstation/themes/
+unzip -o "$HOME"/devil-chromey.zip -d /home/pi/.emulationstation/themes/
 sudo rm -R "$HOME"/devil-chromey.zip
 }
 function no-audio () {
