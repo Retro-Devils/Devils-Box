@@ -1,8 +1,6 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
-BACKTITLE="DEVILS BOX--V-3.0----UPDATED 2/2/22
-Hello. My name is Inigo Montoya. You killed my father. Prepare to die.
-My name is... Shake-Zula. The mic-rula, The old schoolah, Ya wanna trip? I'll bring it to ya"
+BACKTITLE="My name is... Shake-Zula. The mic-rula, The old schoolah, Ya wanna trip? I'll bring it to ya"
 #-----------COLORS----------#
 rst="$(tput sgr0)"
 fgred="${rst}$(tput setaf 1)" # Red
@@ -55,7 +53,7 @@ function main_menu() {
   fi
     choice=(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
       --ok-label Select --cancel-label Exit-Devils-Box \
-      --menu "WELCOME TO THE OTHERSIDE" 20 50 30 )
+      --menu "DEVILS BOX V3.01----UPDATED 2/3/22" 20 50 30 )
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
       - "----Downloaders----"
