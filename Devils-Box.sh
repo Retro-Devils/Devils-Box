@@ -330,7 +330,7 @@ else
       56 "VideoPAC                         430KB       99 GAMES" \
       57 "Virtual Boy                        8MB       24 GAMES" \
       58 "Dreamcast VMU                      3MB      115 GAMES" \
-      59 "Wine                          SUB-MENU       23 GAMES" \
+      59 "Wine                          SUB-MENU       24 GAMES" \
       60 "Wonderswan Color                 116MB       84 GAMES" \
       61 "Sharp X1                         7.6MB       69 GAMES" \
       62 "Sharp X68000                     504MB      418 GAMES" \
@@ -437,7 +437,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "1" "Age Of Empires                      215MB" off \
                 "2" "Age Of Empires 2                    6.1GB" off \
                 "3" "Angry Birds Seasons                 180MB" off \
-		"4" "Command & Conquer TS                1.3GB" off \
+                "4" "Command & Conquer TS                1.3GB" off \
                 "5" "Cuphead                              11GB" off \
                 "6" "Diablo 2                            1.8GB" off \
                 "7" "Fallout                             535MB" off \
