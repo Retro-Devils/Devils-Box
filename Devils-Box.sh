@@ -1655,7 +1655,7 @@ function devil-themes() {
   done
 }
 function devil-chromey() {
-wget https://archive.org/download/devils-themes/devil-chromey.zip -P ${HOME}/pi/
+wget https://archive.org/download/devils-themes/devil-chromey.zip -P ${HOME}/
 unzip -o ${HOME}/pi/devil-chrmoey.zip -d /home/pi/.emulationstation/themes/
 }
 function no-audio () {
