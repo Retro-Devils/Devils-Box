@@ -1772,15 +1772,15 @@ fi
 function rpi-menu() {
   sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
 }
-function pikiss() {
-if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-else
-  if [ -d "$HOME/piKiss/" ]; then home/pi/piKiss/piKiss.sh;
-  else curl -sSL https://git.io/JfAPE | bash 
-fi
-}
+#function pikiss() {
+#if [ $NETCHECK  = 1 ]; then
+#dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+#Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+#else
+#  if [ -d "$HOME/piKiss/" ]; then home/pi/piKiss/piKiss.sh;
+#  else curl -sSL https://git.io/JfAPE | bash 
+#fi
+#}
 function mugen() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
