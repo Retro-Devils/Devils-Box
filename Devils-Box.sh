@@ -447,7 +447,7 @@ fi
 function hacks-config() {
 clear
 sleep 2 
-echo ${bld}$(tput setaf 1) "Copying Your/Default Configs"
+echo ${bld}$(tput setaf 1)"Copying Your/Default Configs"
 sleep 2
 cp -r /opt/retropie/configs/gba /opt/retropie/configs/gbah
 cp -r /opt/retropie/configs/gb /opt/retropie/configs/gbh
@@ -2153,24 +2153,24 @@ mkdir /home/pi/.emulationstation/backups
 mv /home/pi/.emulationstation/es_systems.cfg -f /home/pi/.emulationstation/backups/es_systems.backup
 sleep 1
 wget https://archive.org/download/devils-updates/es_systems.cfg -P /home/pi/.emulationstation/
-echo "----Getting Artwork----"
+echo ${bld}$(tput setaf 1)"----Getting Artwork----"
 sleep 2
 wget https://archive.org/download/devils-updates/simpbowl.mp4 -P /home/pi/RetroPie/roms/arcade/snap/
-echo "----Removing Games-----"
+echo ${bld}$(tput setaf 1)"----Removing Games-----"
 sleep 2
 sudo rm /home/pi/RetroPie/roms/arcade/tekken.zip
 sudo rm /home/pi/RetroPie/roms/arcade/tekken2.zip
 sudo rm /home/pi/RetroPie/roms/arcade/tekken3.zip
 sleep 2 
-echo "---Adding Devils Track 2---"
+echo ${bld}$(tput setaf 1)"---Adding Devils Track 2---"
 sleep 2
 wget "https://archive.org/download/devils-updates/Music/NEFFEX - Rollin' With The Devil.mp3" -P "/home/pi/bgm/NEFFEX - Rollin' With The Devil.mp3"
-echo "---Replacing Wine Logo---"
+echo ${bld}$(tput setaf 1)"---Replacing Wine Logo---"
 wget https://github.com/ALLRiPPED/es-theme-devil-chromey/raw/main/wine/_inc/system.png && mv -f system.png "/opt/retropie/configs/all/emulationstation/themes/devil chromey/wine/_inc"
 wget https://github.com/ALLRiPPED/es-theme-devil-chromey/raw/main/mugen/_inc/system.png && mv -f system.png "/opt/retropie/configs/all/emulationstation/themes/devil chromey/mugen/_inc"
 wget https://github.com/ALLRiPPED/es-theme-devil-chromey/raw/main/mugens/_inc/system.png && mv -f system.png "/opt/retropie/configs/all/emulationstation/themes/devil chromey/mugens/_inc"
 sleep 2 
-echo "----Updating Devils Box----"
+echo ${bld}$(tput setaf 1)"----Updating Devils Box----"
 sleep 2
 sudo rm /home/pi/RetroPie/retropiemenu/Devils-Box.sh
 cd /home/pi/Devils-Box
@@ -2182,7 +2182,7 @@ sudo chmod 755 /usr/local/bin/box
 sudo chmod 755 /usr/local/bin/Devils-Box
 chmod 755 /home/pi/RetroPie/retropiemenu/Devils-Box.sh
 sleep 2
-echo "Updating & Upgrading"
+echo ${bld}$(tput setaf 1)"Updating & Upgrading"
 sudo apt -y update 
 sudo apt -y upgrade 
 }
@@ -2350,10 +2350,23 @@ function download-mugens() {
 if [ ! -d "$HOME/RetroPie/roms/wine" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
 else
   clear
-  wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/wine -erobots=off
-  unzip -o "$HOME"/RetroPie/roms/wine/"${1}" -d "$HOME"/RetroPie/roms/wine/MUGENS
-  chmod 755 "$HOME"/RetroPie/roms/wine/*.sh
-  sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
+  wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/mugens -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/mugens/"${1}" -d "$HOME"/RetroPie/roms/mugens
+  chmod 755 "$HOME"/RetroPie/roms/mugens/*.sh
+  sudo rm -r "$HOME"/RetroPie/roms/mugens/"${1}"
+  dialog  --sleep 1 --title "DIABLOS ARCADE TOOLS" --msgbox " 
+----------------ATTENTION-----------------
+-----THIS DOWNLOADS TO ....roms/mugens----
+---------IF MUGEN DOES NOT SHOW-----------
+-open pixel desktop
+-go to home/pi/.emulationstation/es_systems
+-open with test editor
+-copy and  paste wine system  
+On pasted wine system
+-change "wine" to "mugen"
+-change paths to .../roms/mugens
+-save & exit 
+-Reboot system " 0 0
 fi
 }
 
