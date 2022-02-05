@@ -1777,7 +1777,7 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
-  if [ -d "$HOME/piKiss/" ]; then "$HOME"/piKiss/piKiss.sh & "$HOME"/piKiss/piKiss.sh ;
+  if [ -d "$HOME/piKiss/" ]; then "$HOME"/piKiss/piKiss.sh & "$HOME"/piKiss/piKiss.sh;
   else curl -sSL https://git.io/JfAPE | bash 
   fiDE
 fi
