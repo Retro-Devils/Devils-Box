@@ -1420,6 +1420,19 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
+  dialog  --sleep 1 --title "MUGEN EXIT HELP" --msgbox " 
+----------------ATTENTION-----------------
+-----THIS DOWNLOADS TO ....roms/mugens----
+---------IF MUGEN DOES NOT SHOW-----------
+-open pixel desktop
+-go to home/pi/.emulationstation/es_systems.cfg
+-open with text editor
+-copy and  paste wine system  
+On pasted wine system
+-change "wine" to "mugen"
+-change paths to .../roms/mugens
+-save & exit 
+-Reboot system " 0 0
  whiptail --clear --title "MUGEN DOWNLOAD MENU" --separate-output \
                 --ok-button Download --cancel-button Consoles-Menu \
                 --checklist "Choose:" 0 0 0 \
@@ -2354,19 +2367,6 @@ else
   unzip -o "$HOME"/RetroPie/roms/mugens/"${1}" -d "$HOME"/RetroPie/roms/mugens
   chmod 755 "$HOME"/RetroPie/roms/mugens/*.sh
   sudo rm -r "$HOME"/RetroPie/roms/mugens/"${1}"
-  dialog  --sleep 1 --title "MUGEN EXIT HELP" --msgbox " 
-----------------ATTENTION-----------------
------THIS DOWNLOADS TO ....roms/mugens----
----------IF MUGEN DOES NOT SHOW-----------
--open pixel desktop
--go to home/pi/.emulationstation/es_systems.cfg
--open with text editor
--copy and  paste wine system  
-On pasted wine system
--change "wine" to "mugen"
--change paths to .../roms/mugens
--save & exit 
--Reboot system " 0 0
 fi
 }
 
