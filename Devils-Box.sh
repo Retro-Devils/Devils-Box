@@ -445,8 +445,9 @@ fi
 }
 
 function hacks-config() {
+clear
 sleep 2 
-echo "Copying Your/Default Configs"
+echo ${bld}$(tput setaf 1) "Copying Your/Default Configs"
 sleep 2
 cp -r /opt/retropie/configs/gba /opt/retropie/configs/gbah
 cp -r /opt/retropie/configs/gb /opt/retropie/configs/gbh
