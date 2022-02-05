@@ -2354,13 +2354,13 @@ else
   unzip -o "$HOME"/RetroPie/roms/mugens/"${1}" -d "$HOME"/RetroPie/roms/mugens
   chmod 755 "$HOME"/RetroPie/roms/mugens/*.sh
   sudo rm -r "$HOME"/RetroPie/roms/mugens/"${1}"
-  dialog  --sleep 1 --title "DIABLOS ARCADE TOOLS" --msgbox " 
+  dialog  --sleep 1 --title "MUGEN EXIT HELP" --msgbox " 
 ----------------ATTENTION-----------------
 -----THIS DOWNLOADS TO ....roms/mugens----
 ---------IF MUGEN DOES NOT SHOW-----------
 -open pixel desktop
--go to home/pi/.emulationstation/es_systems
--open with test editor
+-go to home/pi/.emulationstation/es_systems.cfg
+-open with text editor
 -copy and  paste wine system  
 On pasted wine system
 -change "wine" to "mugen"
