@@ -404,88 +404,6 @@ else
 fi
 }
 
-#--------------------------------#
-#      WINE SUB MENU FUNCTIONS   #
-#--------------------------------#
-function winegames() {
-if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-else
-dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
--------------------------------
-       WINE DOWNLOADER HELP
--------------------------------
--You must have wine/box86 installed for this too work 
--Whats WINE? Wine/box86 play old pc games.
--Downloads games to $HOME/RetroPie/roms/wine/games/.installs
--Games Includes a .sh script to launch from Retropie 
--Games are zipped. Devils Box downloads unzips and does all the work for ya.
--If you move game folder, change .sh script accordingly.
--Thanks for using have a good day." 0 0
-
-    whiptail --clear --title "WINE DOWNLOAD MENU" --separate-output \
-                --ok-button Download --cancel-button Consoles-Menu \
-                --checklist "Choose:" 0 0 0 \
-                "+" "GAME NAME                       FILE SIZE" off \
-                "1" "Age Of Empires                      215MB" off \
-                "2" "Age Of Empires 2                    6.1GB" off \
-                "3" "Angry Birds Seasons                 180MB" off \
-                "4" "Command & Conquer TS                1.3GB" off \
-                "5" "Cuphead                              11GB" off \
-                "6" "Diablo 2                            1.8GB" off \
-                "7" "Fallout                             535MB" off \
-                "8" "Fallout 2                           555MB" off \
-                "9" "Fallout Tactics                     1.5GB" off \
-               "10" "Harry Potter Prisoner of Azkaban    1.5GB" off \
-               "11" "Hydro Thunder                        66MB" off \
-               "12" "Silent Hill 2 Director's Cut        2.3GB" off \
-               "13" "Silent Hill 3                       4.8GB" off \
-               "14" "Silent Hill 4 The Room              3.4GB" off \
-               "15" "Spooky Castle                        10MB" off \
-               "16" "Starcraft                           1.2GB" off \
-               "17" "Star Wars Battlefront               2.3GB" off \
-               "18" "Teenage Muntant Ninja Turtles       1.3GB" off \
-               "19" "The House Of The Dead               299MB" off \
-               "20" "The House Of The Dead 2             579MB" off \
-               "21" "The Settlers                         26MB" off \
-               "22" "The Simpsons Hit & Run              1.8GB" off \
-               "23" "Unreal Anthology                    8.8GB" off \
-               "24" "Warcraft 3                          1.9GB" off \
-                2>/tmp/results
-    while read -r choice  
-        do
-        case $choice in
-	       +) none ;;
-               1) download-winegames "Retro-Devils_AoE.zip"; aoe_game_fix ;;
-               2) download-winegames "Retro-Devils_AoE2.zip" ;;
-               3) download-winegames "Retro-Devils_AngryBirdsSeasons.zip" ;;
-               4) download-winegames "Retro-Devils_CNCTS.zip" ;;
-               5) download-winegames "Retro-Devils_Cuphead.zip" ;;
-               6) download-winegames "Retro-Devils_Diablo2.zip" ;;
-               7) download-winegames "Retro-Devils_Fallout.zip" ;;
-               8) download-winegames "Retro-Devils_Fallout2.zip" ;;
-               9) download-winegames "Retro-Devils_FalloutTactics.zip" ;;
-              10) download-winegames "Retro-Devils_HPPOA.zip" ;;
-              11) download-winegames "Retro-Devils_HydroThunder.zip" ;;
-              12) download-winegames "Retro-Devils_SilentHill2DC.zip" ;;
-              13) download-winegames "Retro-Devils_SilentHill3.zip" ;;
-              14) download-winegames "Retro-Devils_SilentHill4TR.zip"; sh4_game_fix ;;
-              15) download-winegames "Retro-Devils_Spooky-Castle.zip" ;;
-              16) download-winegames "Retro-Devils_Starcraft.zip" ;;
-              17) download-winegames "Retro-Devils_SWBF.zip" ;;
-              18) download-winegames "Retro-Devils_TMNT.zip" ;;
-              19) download-winegames "Retro-Devils_THOTD.zip" ;;
-              20) download-winegames "Retro-Devils_THOTD2.zip" ;;
-              21) download-winegames "Retro-Devils_TheSettlers.zip" ;;
-              22) download-winegames "Retro-Devils_TheSimpsonsHitandRun.zip" ;;
-              23) download-winegames "Retro-Devils_UNREAL.zip"; unreal_game_fix ;;
-              24) download-winegames "Retro-Devils_Warcraft3.zip"-3 ;;
-               *) ;;
-        esac
-        done < /tmp/results
-fi
-}
 ###------------------------------###
 ### HACKED PACKS MENU FUNCTIONS  ###
 ###------------------------------###
@@ -535,32 +453,6 @@ cp -r /opt/retropie/configs/nes /opt/retropie/configs/nesh
 cp -r /opt/retropie/configs/snes /opt/retropie/configs/snesh
 }
 
-#--------------------------------#
-#            MUGEN MENU          #
-#--------------------------------#
-function mugens() {
-if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-else
- whiptail --clear --title "MUGEN DOWNLOAD MENU" --separate-output \
-                --ok-button Download --cancel-button Consoles-Menu \
-                --checklist "Choose:" 0 0 0 \
-                "+" "MUGEN NAME                     FILE SIZE" off \
-                "1" "Original MUGEN                      8 MB" off \
-		"2" "Ultimate Sonic                    200 MB" off \
-		 2>/tmp/results
-    while read -r choice  
-        do
-        case $choice in
-	       +) none ;;
-               1) download-mugens "Retro-Devils_OG-Mugen.zip" ;;
-	       2) download-mugens "Retro-Devils_Ultimate-Sonic-Mugen.zip" ;;
-	       *) ;;
-        esac
-        done < /tmp/results
-fi
-}
 ###-------------------------------------###
 ###          PICK AND CHOOSE            ###
 ###-------------------------------------###
@@ -1510,6 +1402,110 @@ function snes() {
         esac
         done < /tmp/results
 }
+function mugens() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+else
+ whiptail --clear --title "MUGEN DOWNLOAD MENU" --separate-output \
+                --ok-button Download --cancel-button Consoles-Menu \
+                --checklist "Choose:" 0 0 0 \
+                "+" "MUGEN NAME                     FILE SIZE" off \
+                "1" "Original MUGEN                      8 MB" off \
+		"2" "Ultimate Sonic                    200 MB" off \
+		 2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+	       +) none ;;
+               1) download-mugens "Retro-Devils_OG-Mugen.zip" ;;
+	       2) download-mugens "Retro-Devils_Ultimate-Sonic-Mugen.zip" ;;
+	       *) ;;
+        esac
+        done < /tmp/results
+fi
+}
+function winegames() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+else
+dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
+
+-------------------------------
+       WINE DOWNLOADER HELP
+-------------------------------
+-You must have wine/box86 installed for this too work 
+-Whats WINE? Wine/box86 play old pc games.
+-Downloads games to $HOME/RetroPie/roms/wine/games/.installs
+-Games Includes a .sh script to launch from Retropie 
+-Games are zipped. Devils Box downloads unzips and does all the work for ya.
+-If you move game folder, change .sh script accordingly.
+-Thanks for using have a good day." 0 0
+
+    whiptail --clear --title "WINE DOWNLOAD MENU" --separate-output \
+                --ok-button Download --cancel-button Consoles-Menu \
+                --checklist "Choose:" 0 0 0 \
+                "+" "GAME NAME                       FILE SIZE" off \
+                "1" "Age Of Empires                      215MB" off \
+                "2" "Age Of Empires 2                    6.1GB" off \
+                "3" "Angry Birds Seasons                 180MB" off \
+                "4" "Command & Conquer TS                1.3GB" off \
+                "5" "Cuphead                              11GB" off \
+                "6" "Diablo 2                            1.8GB" off \
+                "7" "Fallout                             535MB" off \
+                "8" "Fallout 2                           555MB" off \
+                "9" "Fallout Tactics                     1.5GB" off \
+               "10" "Harry Potter Prisoner of Azkaban    1.5GB" off \
+               "11" "Hydro Thunder                        66MB" off \
+               "12" "Silent Hill 2 Director's Cut        2.3GB" off \
+               "13" "Silent Hill 3                       4.8GB" off \
+               "14" "Silent Hill 4 The Room              3.4GB" off \
+               "15" "Spooky Castle                        10MB" off \
+               "16" "Starcraft                           1.2GB" off \
+               "17" "Star Wars Battlefront               2.3GB" off \
+               "18" "Teenage Muntant Ninja Turtles       1.3GB" off \
+               "19" "The House Of The Dead               299MB" off \
+               "20" "The House Of The Dead 2             579MB" off \
+               "21" "The Settlers                         26MB" off \
+               "22" "The Simpsons Hit & Run              1.8GB" off \
+               "23" "Unreal Anthology                    8.8GB" off \
+               "24" "Warcraft 3                          1.9GB" off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+	       +) none ;;
+               1) download-winegames "Retro-Devils_AoE.zip"; aoe_game_fix ;;
+               2) download-winegames "Retro-Devils_AoE2.zip" ;;
+               3) download-winegames "Retro-Devils_AngryBirdsSeasons.zip" ;;
+               4) download-winegames "Retro-Devils_CNCTS.zip" ;;
+               5) download-winegames "Retro-Devils_Cuphead.zip" ;;
+               6) download-winegames "Retro-Devils_Diablo2.zip" ;;
+               7) download-winegames "Retro-Devils_Fallout.zip" ;;
+               8) download-winegames "Retro-Devils_Fallout2.zip" ;;
+               9) download-winegames "Retro-Devils_FalloutTactics.zip" ;;
+              10) download-winegames "Retro-Devils_HPPOA.zip" ;;
+              11) download-winegames "Retro-Devils_HydroThunder.zip" ;;
+              12) download-winegames "Retro-Devils_SilentHill2DC.zip" ;;
+              13) download-winegames "Retro-Devils_SilentHill3.zip" ;;
+              14) download-winegames "Retro-Devils_SilentHill4TR.zip"; sh4_game_fix ;;
+              15) download-winegames "Retro-Devils_Spooky-Castle.zip" ;;
+              16) download-winegames "Retro-Devils_Starcraft.zip" ;;
+              17) download-winegames "Retro-Devils_SWBF.zip" ;;
+              18) download-winegames "Retro-Devils_TMNT.zip" ;;
+              19) download-winegames "Retro-Devils_THOTD.zip" ;;
+              20) download-winegames "Retro-Devils_THOTD2.zip" ;;
+              21) download-winegames "Retro-Devils_TheSettlers.zip" ;;
+              22) download-winegames "Retro-Devils_TheSimpsonsHitandRun.zip" ;;
+              23) download-winegames "Retro-Devils_UNREAL.zip"; unreal_game_fix ;;
+              24) download-winegames "Retro-Devils_Warcraft3.zip"-3 ;;
+               *) ;;
+        esac
+        done < /tmp/results
+fi
+}
+
 #----------------------------------#
 #   TOOL BOX GAME FIXES FUNCTIONS  #
 #----------------------------------#
@@ -2259,6 +2255,7 @@ sudo reboot
 # ARTWORK FUNCTION #
 #------------------# 
 function download-art() {
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
 clear
 cd "$HOME/RetroPie/roms/"${1}"/"
 git init
@@ -2266,6 +2263,7 @@ git remote add origin "${ART_HOST2}/${1}.git"
 git fetch
 git pull origin main
 rm -fr "$HOME"/RetroPie/roms/"${1}"/.git
+fi
 }
 
 #------------------#
@@ -2277,14 +2275,18 @@ wget -m -r -np -nH -nd -R "index.html" "${HOST3}"/BIOS/ -P "$HOME"/RetroPie/BIOS
 rm -f "$HOME"/RetroPie/BIOS/index.html.tmp
 }
 function download-packs() {
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
 rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+fi
 }
 function download-packs-alt() {
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
 rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+fi
 }
 
 #-----------------#
@@ -2293,9 +2295,11 @@ rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
 function download-game() {
   for type in "$@"; do
     if [ "${type}" != "${1}" ]; then
+      if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
       clear
       wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
       rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+fi
 fi
 done
 }
@@ -2304,21 +2308,26 @@ done
 #  WINE FUNCTION  #
 #-----------------#
 function download-winegames() {
-  clear
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40; else
+clear
   wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/wine -erobots=off
   unzip -o "$HOME"/RetroPie/roms/wine/"${1}" -d "$HOME"/RetroPie/roms/wine/
   chmod 755 "$HOME"/RetroPie/roms/wine/*.sh
   sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
+fi
 }
 
 #-----------------#
 #  MUGEN FUNCTION  #
 #-----------------#
 function download-mugens() {
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40; else
   clear
   wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/wine -erobots=off
   unzip -o "$HOME"/RetroPie/roms/wine/"${1}" -d "$HOME"/RetroPie/roms/wine/MUGENS
   chmod 755 "$HOME"/RetroPie/roms/wine/*.sh
   sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
+fi
 }
+
 main_menu
