@@ -2256,6 +2256,7 @@ sudo reboot
 #------------------# 
 function download-art() {
 if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
+else
 clear
 cd "$HOME/RetroPie/roms/"${1}"/"
 git init
@@ -2283,6 +2284,7 @@ fi
 }
 function download-packs-alt() {
 if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
+else 
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
 rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
@@ -2296,6 +2298,7 @@ function download-game() {
   for type in "$@"; do
     if [ "${type}" != "${1}" ]; then
       if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
+      else
       clear
       wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
       rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
@@ -2309,6 +2312,7 @@ done
 #-----------------#
 function download-winegames() {
 if [ ! -d "$HOME/RetroPie/roms/roms/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40; else
+else
 clear
   wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/wine -erobots=off
   unzip -o "$HOME"/RetroPie/roms/wine/"${1}" -d "$HOME"/RetroPie/roms/wine/
@@ -2322,6 +2326,7 @@ fi
 #-----------------#
 function download-mugens() {
 if [ ! -d "$HOME/RetroPie/roms/wine/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40; else
+  else 
   clear
   wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/wine -erobots=off
   unzip -o "$HOME"/RetroPie/roms/wine/"${1}" -d "$HOME"/RetroPie/roms/wine/MUGENS
