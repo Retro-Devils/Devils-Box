@@ -426,17 +426,17 @@ local choice
       5 "NES Hacks                              962KB      6 GAMES " \
       6 "SNES Hacks                              40MB     37 GAMES " \
       + "--------------------------------------------------------- " \
-      7 "Update/Apply Hacks Configs                      6 Configs " \
+      7 "Apply/Update Hacks Configs                      6 Configs " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     +) none ;;
-    1) download-packs "gbah" ;;
-    2) download-packs "gbh" ;;
-    3) download-packs "genh" ;;
-    4) download-packs "ggh" ;;
-    5) download-packs "nesh" ;;
-    6) download-packs "snesh" ;;
+    1) download-hacks "gbah" ;;
+    2) download-hacks "gbh" ;;
+    3) download-hacks "genh" ;;
+    4) download-hacks "ggh" ;;
+    5) download-hacks "nesh" ;;
+    6) download-hacks "snesh" ;;
     7) hacks-config ;;
     *) break ;;
     esac
@@ -445,12 +445,24 @@ fi
 }
 
 function hacks-config() {
+sleep 2 
+echo "Copying Your/Default Configs"
+sleep 2
 cp -r /opt/retropie/configs/gba /opt/retropie/configs/gbah
 cp -r /opt/retropie/configs/gb /opt/retropie/configs/gbh
 cp -r /opt/retropie/configs/megadrive /opt/retropie/configs/genh
 cp -r /opt/retropie/configs/gamegear /opt/retropie/configs/ggh
 cp -r /opt/retropie/configs/nes /opt/retropie/configs/nesh
 cp -r /opt/retropie/configs/snes /opt/retropie/configs/snesh
+sleep 2
+echo "Making Directories For Hacks"
+sleep 2
+mkdir "$HOME"/RetroPie/roms/gbah
+mkdir "$HOME"/RetroPie/roms/gb
+mkdir "$HOME"/RetroPie/roms/genh
+mkdir "$HOME"/RetroPie/roms/ggh
+mkdir "$HOME"/RetroPie/roms/nesh
+mkdir "$HOME"/RetroPie/roms/snesh
 }
 
 ###-------------------------------------###
@@ -2290,8 +2302,17 @@ wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P "$HOME"/RetroPie/ro
 rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
 fi
 }
-
 #-----------------#
+#  HACKS FUNCTION #
+#-----------------#
+function download-hacks() {
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Apply Hacks Config" 6 40;
+else
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
+rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+fi
+}
 #  GAME FUNCTION  #
 #-----------------#
 function download-game() {
