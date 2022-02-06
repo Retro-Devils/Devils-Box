@@ -1546,7 +1546,7 @@ function game_fixes() {
       --menu "SELECT TOOL OR FIX AND PRESS A  " 20 50 30 \
       + "--------WINE GAME FIXES-------" \
       1 "Age Of Empires No-CD Error Fix" \
-      2 "C&C Generals + Zero Hour Fix" \ 
+      2 "C&C Generals + Zero Hour Fix" \
       3 "Silent Hill 4 Fix" \
       4 "Unreal Anthology Fix     " \
       + "----------GAME TOOLS----------" \
@@ -1556,8 +1556,8 @@ function game_fixes() {
     case "$choice" in
     +) none ;;
     1) aoe_game_fix ;;
-    2) cncgen_game_fix
-    2) sh4_game_fix ;;
+    2) cncgen_game_fix ;;
+    3) sh4_game_fix ;;
     4) unreal_game_fix ;;
     5) download_qjoy ;;
     *) break ;;
