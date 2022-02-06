@@ -1617,6 +1617,7 @@ THIS DOWNLOADS  PREMADE LAYOUTS" 0 0
             *) break      ;;
         esac
     done
+fi 
 }
 #-----------------------#
 #      QJ FUNCTIONS     #
