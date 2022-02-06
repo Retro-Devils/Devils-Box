@@ -1590,7 +1590,7 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
-  dialog  --sleep 1 --title "Mapped Games" --msgbox "
+  dialog  --sleep 1 --title "QJOYPAD INFO" --msgbox "
 ---------------ATTENTION-----------
 QJOYPAD MAPS KEYBOARD TO CONTROLLER
 QJOYPAD IS USED FRO WINE/MUGEN
