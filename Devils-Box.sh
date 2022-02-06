@@ -2161,19 +2161,23 @@ fi
 function update_v1() {
 clear
 sudo rm -R /usr/local/bin/da-version
-sudo wget https://raw.githubusercontent.com/Retro-Devils/Devils-Pi/main/Diablos-Arcade/files/da-version -P /usr/local/bin/
+sudo wget https://github.com/ALLRiPPED/Devils-Pi/raw/main/Diablos-Arcade/files/da-version -P /usr/local/bin/
 sudo chmod 755 /usr/local/bin/da-version
+echo ${bid}$(tput setaf 1)"---Adding Bash Welcome Tweak---")
+cp -f $HOME/.bashrc $HOME/.bashrc-backup
+wget https://github.com/ALLRiPPED/Devils-Pi/raw/main/Diablos-Arcade/files/da.bashrc -P $HOME/.bashrc
+sleep 2
 clear
-echo ${bld}$(tput setaf 1) "----Backing Up & Getting New ES-Systems----"
+echo ${bld}$(tput setaf 1) "---Backing Up & Getting New ES-Systems---"
 sleep 2
 mkdir /home/pi/.emulationstation/backups
 mv /home/pi/.emulationstation/es_systems.cfg -f /home/pi/.emulationstation/backups/es_systems.backup
 sleep 1
 wget https://archive.org/download/devils-updates/es_systems.cfg -P /home/pi/.emulationstation/
-echo ${bld}$(tput setaf 1)"----Getting Artwork----"
+echo ${bld}$(tput setaf 1)"---Getting Artwork---"
 sleep 2
 wget https://archive.org/download/devils-updates/simpbowl.mp4 -P /home/pi/RetroPie/roms/arcade/snap/
-echo ${bld}$(tput setaf 1)"----Removing Games-----"
+echo ${bld}$(tput setaf 1)"---Removing Games----"
 sleep 2
 sudo rm /home/pi/RetroPie/roms/arcade/tekken.zip
 sudo rm /home/pi/RetroPie/roms/arcade/tekken2.zip
@@ -2187,7 +2191,7 @@ wget https://github.com/ALLRiPPED/es-theme-devil-chromey/raw/main/wine/_inc/syst
 wget https://github.com/ALLRiPPED/es-theme-devil-chromey/raw/main/mugen/_inc/system.png && mv -f system.png "/opt/retropie/configs/all/emulationstation/themes/devil chromey/mugen/_inc"
 wget https://github.com/ALLRiPPED/es-theme-devil-chromey/raw/main/mugens/_inc/system.png && mv -f system.png "/opt/retropie/configs/all/emulationstation/themes/devil chromey/mugens/_inc"
 sleep 2 
-echo ${bld}$(tput setaf 1)"----Updating Devils Box----"
+echo ${bld}$(tput setaf 1)"---Updating Devils Box---"
 sleep 2
 sudo rm /home/pi/RetroPie/retropiemenu/Devils-Box.sh
 cd /home/pi/Devils-Box
