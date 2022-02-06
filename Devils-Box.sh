@@ -1585,7 +1585,7 @@ rm -f Silent-Hill-4-The-Room-Fix.reg
 #-------------------#
 #    GAME TOOLS     #
 #-------------------#
-function download-qjoy() {
+function download_qjoy() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
