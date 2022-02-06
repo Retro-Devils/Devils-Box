@@ -1593,7 +1593,7 @@ Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   dialog  --sleep 1 --title "QJOYPAD INFO" --msgbox "
 ---------------ATTENTION-----------
 QJOYPAD MAPS KEYBOARD TO CONTROLLER
-QJOYPAD IS USED FRO WINE/MUGEN
+QJOYPAD IS USED FOR WINE/MUGEN
 THIS DOWNLOADS  PREMADE LAYOUTS
 WILL OVERWRITE LAYOUTS WITH SAME NAME" 0 0
     local choice
@@ -1623,19 +1623,16 @@ fi
 #-----------------------#
 #      QJ FUNCTIONS     #
 #-----------------------#
-function qj_arcade() {
-clear 
+function qj_arcade() { 
 wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/devils-updates/qjoy-arcade.zip -P "$HOME"/.qjoypad3 -erobots=off
 unzip -o "$HOME"/.qjoypad3/qjoy-arcade.zip -d "$HOME"/.qjoypad3
-sudo rm -R $HOME"/.qjoypad3/qjoy-arcade.zip
-
+sudo rm -R "$HOME"/.qjoypad3/qjoy-ps3.zip
 }
 
 function qj_ps3() {
-clear 
 wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/devils-updates/qjoy-ps3.zip -P "$HOME"/.qjoypad3 -erobots=off
 unzip -o "$HOME"/.qjoypad3/qjoy-ps3.zip -d "$HOME"/.qjoypad3/
-sudo rm -R $HOME"/.qjoypad3/qjoy-ps3.zip
+sudo rm -R "$HOME"/.qjoypad3/qjoy-ps3.zip
 }
 
 #-------------------------#
