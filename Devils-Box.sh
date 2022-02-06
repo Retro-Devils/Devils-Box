@@ -1623,26 +1623,13 @@ fi
 #      QJ FUNCTIONS     #
 #-----------------------#
 function qj_arcade() {
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-ps3/Baldurs_Gate.lyt -P "$HOME"/.qjoypad3
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-ps3/Spooky_Castle.lyt -P "$HOME"/.qjoypad3
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-ps3/mugen.lyt -P "$HOME"/.qjoypad3
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-ps3/skifree.lyt -P "$HOME"/.qjoypad3
+wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/devils-updates/qjoy-arcade.zip -P "$HOME"/.qjoypad3 -erobots=off
+unzip -o "$HOME"/.qjoypad3/qjoy-arcade.zip" -d "$HOME"/.qjoypad3
 }
 function qj_ps3() {
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Angry-Birds.lyt -P "$HOME"/.qjoypad3
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Baldurs-Gate.lyt -P "$HOME"/.qjoypad3
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Cuphead.lyt -P "$HOME"/.qjoypad3
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Hydro-Thunder.lyt -P "$HOME"/.qjoypad3
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Simpsons-Hit-%26-Run.lyt -P "$HOME"/.qjoypad3
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Skifree.lyt -P "$HOME"/.qjoypad3
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Spooky-Castle.lyt -P "$HOME"/.qjoypad3
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Sugar-Rush.lyt -P "$HOME"/.qjoypad3
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/TMNT.lyt -P "$HOME"/.qjoypad3
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Terrordome.lyt -P "$HOME"/.qjoypad3
-wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/mugen.lyt -P "$HOME"/.qjoypad3
+wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/devils-updates/qjoy-ps3.zip -P "$HOME"/.qjoypad3 -erobots=off
+unzip -o "$HOME"/.qjoypad3/qjoy-ps3.zip" -d "$HOME"/.qjoypad3
 }
-
-##wget  -P "$HOME"/.qjoypad3##
 #-------------------------#
 #    Q INFO FUNCTIONS     #
 #-------------------------#
