@@ -2163,9 +2163,10 @@ clear
 sudo rm -R /usr/local/bin/da-version
 sudo wget https://github.com/ALLRiPPED/Devils-Pi/raw/main/Diablos-Arcade/files/da-version -P /usr/local/bin/
 sudo chmod 755 /usr/local/bin/da-version
-echo ${bid}$(tput setaf 1)"---Adding Bash Welcome Tweak---")
-cp -f $HOME/.bashrc $HOME/.bashrc-backup
-wget https://github.com/ALLRiPPED/Devils-Pi/raw/main/Diablos-Arcade/files/da.bashrc -P $HOME/.bashrc
+echo ${bid}$(tput setaf 1)"---Adding Bash Welcome Tweak---"
+mv -f $HOME/.bashrc $HOME/.bashrc-backup
+wget https://github.com/ALLRiPPED/Devils-Pi/raw/main/Diablos-Arcade/files/da.bashrc -P $HOME/
+mv -f $HOME/da.bashrc $HOME/.bashrc
 sleep 2
 clear
 echo ${bld}$(tput setaf 1) "---Backing Up & Getting New ES-Systems---"
