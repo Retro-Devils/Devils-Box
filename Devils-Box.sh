@@ -1434,7 +1434,7 @@ On pasted wine system
 -save & exit 
 -Reboot system " 0 0
  whiptail --clear --title "MUGEN DOWNLOAD MENU" --separate-output \
-                --ok-button Download --cancel-button Consoles-Menu \
+                --ok-button Download --cancel-button Back \
                 --checklist "Choose:" 0 0 0 \
                 "+" "MUGEN NAME                     FILE SIZE" off \
                 "1" "Original MUGEN                      8 MB" off \
@@ -1470,7 +1470,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 -Thanks for using have a good day." 0 0
 
     whiptail --clear --title "WINE DOWNLOAD MENU" --separate-output \
-                --ok-button Download --cancel-button Consoles-Menu \
+                --ok-button Download --cancel-button Back \
                 --checklist "Choose:" 0 0 0 \
                 "+" "GAME NAME                       FILE SIZE" off \
                 "1" "Age Of Empires                      215MB" off \
@@ -1594,7 +1594,8 @@ Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 ---------------ATTENTION-----------
 QJOYPAD MAPS KEYBOARD TO CONTROLLER
 QJOYPAD IS USED FRO WINE/MUGEN
-THIS DOWNLOADS  PREMADE LAYOUTS" 0 0
+THIS DOWNLOADS  PREMADE LAYOUTS
+WILL OVERWRITE LAYOUTS WITH SAME NAME" 0 0
     local choice
 
     while true; do
