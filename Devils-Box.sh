@@ -1589,13 +1589,13 @@ function download-qjoy() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-    local choice
   else
   dialog  --sleep 1 --title "Mapped Games" --msgbox "
 ---------------ATTENTION-----------
 QJOYPAD MAPS KEYBOARD TO CONTROLLER
 QJOYPAD IS USED FRO WINE/MUGEN
 THIS DOWNLOADS  PREMADE LAYOUTS" 0 0
+    local choice
 
     while true; do
         choice=$(dialog --backtitle "$BACKTITLE" --title " QJOY DOWNLOADER " \
