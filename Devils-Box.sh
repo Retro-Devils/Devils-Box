@@ -1507,7 +1507,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                2) download-winegames "Retro-Devils_AoE2.zip" ;;
                3) download-winegames "Retro-Devils_AngryBirdsSeasons.zip" ;;
                4) download-winegames "Retro-Devils_CNCTS.zip" ;;
-               5) download-winegames "Retro-Devils_CNCGENS-ZR.zip"; cncgen_game_fix ;;
+               5) download-winegames "Retro-Devils_CNCGENS-ZH.zip"; cncgen_game_fix ;;
                6) download-winegames "Retro-Devils_Cuphead.zip" ;;
                7) download-winegames "Retro-Devils_Diablo2.zip" ;;
                8) download-winegames "Retro-Devils_Fallout.zip" ;;
@@ -1546,7 +1546,7 @@ function game_fixes() {
       --menu "SELECT TOOL OR FIX AND PRESS A  " 20 50 30 \
       + "--------WINE GAME FIXES-------" \
       1 "Age Of Empires No-CD Error Fix" \
-      2 "C&C Generals + Zero Hour Fix" \ 
+      2 "C&C Generals + Zero Hour Fix" \
       3 "Silent Hill 4 Fix" \
       4 "Unreal Anthology Fix     " \
       + "----------GAME TOOLS----------" \
@@ -1556,8 +1556,8 @@ function game_fixes() {
     case "$choice" in
     +) none ;;
     1) aoe_game_fix ;;
-    2) cncgen_game_fix
-    2) sh4_game_fix ;;
+    2) cncgen_game_fix ;;
+    3) sh4_game_fix ;;
     4) unreal_game_fix ;;
     5) download_qjoy ;;
     *) break ;;
