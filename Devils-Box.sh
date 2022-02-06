@@ -1507,7 +1507,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                2) download-winegames "Retro-Devils_AoE2.zip" ;;
                3) download-winegames "Retro-Devils_AngryBirdsSeasons.zip" ;;
                4) download-winegames "Retro-Devils_CNCTS.zip" ;;
-               5) download-winegames "Retro-Devils_CNCGENS-ZR.zip"; cncgen_game_fix ;;
+               5) download-winegames "Retro-Devils_CNCGENS-ZH.zip"; cncgen_game_fix ;;
                6) download-winegames "Retro-Devils_Cuphead.zip" ;;
                7) download-winegames "Retro-Devils_Diablo2.zip" ;;
                8) download-winegames "Retro-Devils_Fallout.zip" ;;
