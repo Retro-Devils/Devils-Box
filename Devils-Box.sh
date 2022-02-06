@@ -62,8 +62,8 @@ function main_menu() {
       3 "Hacked Packs"
       4 "Pick & Choose"
       + "-------Tools-------"
-      5 "Game Fixes"
-      6 "Tool Box"
+      5 "Game Tools/Fixes"
+      6 "Tool Box  "
       - "-------------------"
       7 "Reboot System"
       8 "Show System Info")
@@ -1536,22 +1536,31 @@ fi
 #   TOOL BOX GAME FIXES FUNCTIONS  #
 #----------------------------------#
 function game_fixes() {
-  while true; do 
   local choice
-    choice=$(dialog --backtitle "$BACKTITLE" --title " GAME FIXES MENU " \
+
+  while true; do 
+  choice=$(dialog --backtitle "$BACKTITLE" --title " GAME TOOLS/FIXES MENU " \
       --ok-label Select --cancel-label Main-Menu \
-      --menu "SELECT GAME FIX AND PRESS A  " 20 50 30 \
+      --menu "SELECT TOOL OR FIX AND PRESS A  " 20 50 30 \
+      + "--------WINE GAME FIXES-------" \ 
       1 "Age Of Empires No-CD Error Fix" \
-      2 "Unreal Anthology Game Fix" \
+      2 "Unreal Anthology Game Fix     " \
+      + "----------GAME TOOLS----------" \
+      3 "Qjoy Layout Downloader        " \
       2>&1 >/dev/tty)
 
     case "$choice" in
+    +) none ;;
     1) aoe_game_fix ;;
     2) unreal_game_fix ;;
+    3) download_qjoy ;;
     *) break ;;
     esac
   done
 }
+#----------------------#
+#   WINE GAME FIXES    #
+#----------------------#
 function aoe_game_fix() {
 cd ~/
 wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Age-of-Empires-no-cd-error-fix.reg
@@ -1572,6 +1581,92 @@ wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Silen
 wine reg import Silent-Hill-4-The-Room-Fix.reg
 sleep 1
 rm -f Silent-Hill-4-The-Room-Fix.reg
+}
+#-------------------#
+#    GAME TOOLS     #
+#-------------------#
+function download-qjoy() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+    local choice
+  else
+  dialog  --sleep 1 --title "Mapped Games" --msgbox "
+---------------ATTENTION-----------
+QJOYPAD MAPS KEYBOARD TO CONTROLLER
+QJOYPAD IS USED FRO WINE/MUGEN
+THIS DOWNLOADS  PREMADE LAYOUTS" 0 0
+
+    while true; do
+        choice=$(dialog --backtitle "$BACKTITLE" --title " QJOY DOWNLOADER " \
+            --ok-label Select --cancel-label Back \
+            --menu "Select Type Of Controller" 30 50 40 \
+            1 "Arcade Controller       11 Layouts" \
+            2 "PS3 Controller           4 Layouts" \
+            + "---------------Info---------------" \
+            3 "----Arcade Mapped Games List------" \
+            4 "----PS3 Mapped Games List---------" \
+            2>&1 > /dev/tty)
+
+        case "$choice" in
+            1) qj_arcade  ;;
+            2) qj_ps3     ;;
+            +) none       ;;
+            3) qarcade_info ;;
+            4) qps3_info    ;;
+            *) break      ;;
+        esac
+    done
+}
+#-----------------------#
+#      QJ FUNCTIONS     #
+#-----------------------#
+function qj_arcade() {
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-ps3/Baldurs_Gate.lyt -P "$HOME"/.qjoypad3
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-ps3/Spooky_Castle.lyt -P "$HOME"/.qjoypad3
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-ps3/mugen.lyt -P "$HOME"/.qjoypad3
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-ps3/skifree.lyt -P "$HOME"/.qjoypad3
+}
+function qj_ps3() {
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Angry-Birds.lyt -P "$HOME"/.qjoypad3
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Baldurs-Gate.lyt -P "$HOME"/.qjoypad3
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Cuphead.lyt -P "$HOME"/.qjoypad3
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Hydro-Thunder.lyt -P "$HOME"/.qjoypad3
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Simpsons-Hit-%26-Run.lyt -P "$HOME"/.qjoypad3
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Skifree.lyt -P "$HOME"/.qjoypad3
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Spooky-Castle.lyt -P "$HOME"/.qjoypad3
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Sugar-Rush.lyt -P "$HOME"/.qjoypad3
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/TMNT.lyt -P "$HOME"/.qjoypad3
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/Terrordome.lyt -P "$HOME"/.qjoypad3
+wget https://github.com/Retro-Devils/Mugen-Pi-4/blob/main/qjoy-layouts/qjoy-arcade/mugen.lyt -P "$HOME"/.qjoypad3
+}
+
+##wget  -P "$HOME"/.qjoypad3##
+#-------------------------#
+#    Q INFO FUNCTIONS     #
+#-------------------------#
+function qarcade_info() {
+dialog  --sleep 1 --title "Mapped Games" --msgbox "
+ARCADE MAPPED GAMES
+-Angry Birds Seasons
+-Baldurs Gate
+-Cuphead
+-Hydro Thunder
+-Mugen
+-Simpsons Hit & Run
+-Skifree
+-Spooky Castle
+-Sugar Rush
+-TMNT
+-Terrordome" 0 0
+}
+function qps3_info() {
+dialog  --sleep 1 --title "Mapped Games" --msgbox "
+PS3 MAPPED GAMES
+-Baldurs Gate
+-Spooky Castle
+-Mugen
+-Skifree" 0 0
 }
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
