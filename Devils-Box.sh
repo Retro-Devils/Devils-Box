@@ -1542,7 +1542,7 @@ function game_fixes() {
   choice=$(dialog --backtitle "$BACKTITLE" --title " GAME TOOLS/FIXES MENU " \
       --ok-label Select --cancel-label Main-Menu \
       --menu "SELECT TOOL OR FIX AND PRESS A  " 20 50 30 \
-      + "--------WINE GAME FIXES-------" \ 
+      + "--------WINE GAME FIXES-------" \
       1 "Age Of Empires No-CD Error Fix" \
       2 "Unreal Anthology Game Fix     " \
       + "----------GAME TOOLS----------" \
