@@ -1623,13 +1623,17 @@ fi
 #      QJ FUNCTIONS     #
 #-----------------------#
 function qj_arcade() {
+clear 
 wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/devils-updates/qjoy-arcade.zip -P "$HOME"/.qjoypad3 -erobots=off
 unzip -o "$HOME"/.qjoypad3/qjoy-arcade.zip" -d "$HOME"/.qjoypad3
 }
+
 function qj_ps3() {
-wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/devils-updates/qjoy-ps3.zip -P "$HOME"/.qjoypad3 -erobots=off
-unzip -o "$HOME"/.qjoypad3/qjoy-ps3.zip" -d "$HOME"/.qjoypad3
+clear 
+wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/devils-updates/qjoy-arcade.zip -P "$HOME"/.qjoypad3 -erobots=off
+unzip -o "$HOME"/.qjoypad3/qjoy-arcade.zip" -d "$HOME"/.qjoypad3
 }
+
 #-------------------------#
 #    Q INFO FUNCTIONS     #
 #-------------------------#
