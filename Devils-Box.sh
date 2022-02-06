@@ -20,7 +20,7 @@ ART_HOST2="https://github.com/Retro-Devils-Media"
 HOST1="https://archive.org/download/the-devils-box-alt"
 HOST2="https://archive.org/download/the-devils-box_202112"
 HOST3="https://archive.org/download/devils-bios"
-HOST4="https://archive.org/download/retro-devils-winegames"
+HOST4="https://archive.org/download/devils-wine"
 #HOST5=""
 #HOST6=""
 
@@ -1613,7 +1613,7 @@ THIS DOWNLOADS  PREMADE LAYOUTS" 0 0
             2) qj_ps3     ;;
             +) none       ;;
             3) qarcade_info ;;
-            4) qps3_info    ;;
+            4) qps3-info    ;;
             *) break      ;;
         esac
     done
@@ -1626,12 +1626,14 @@ function qj_arcade() {
 clear 
 wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/devils-updates/qjoy-arcade.zip -P "$HOME"/.qjoypad3 -erobots=off
 unzip -o "$HOME"/.qjoypad3/qjoy-arcade.zip" -d "$HOME"/.qjoypad3
+sudo rm -R $HOME"/.qjoypad3/qjoy-arcade.zip
 }
 
-function qj_ps3() {
+function qj-ps3() {
 clear 
 wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/devils-updates/qjoy-arcade.zip -P "$HOME"/.qjoypad3 -erobots=off
-unzip -o "$HOME"/.qjoypad3/qjoy-arcade.zip" -d "$HOME"/.qjoypad3
+unzip -o "$HOME"/.qjoypad3/qjoy-ps3.zip" -d "$HOME"/.qjoypad3
+sudo rm -R $HOME"/.qjoypad3/qjoy-ps3.zip
 }
 
 #-------------------------#
