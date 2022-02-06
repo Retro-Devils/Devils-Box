@@ -1472,31 +1472,32 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
     whiptail --clear --title "WINE DOWNLOAD MENU" --separate-output \
                 --ok-button Download --cancel-button Back \
                 --checklist "Choose:" 0 0 0 \
-                "+" "GAME NAME                       FILE SIZE" off \
-                "1" "Age Of Empires                      215MB" off \
-                "2" "Age Of Empires 2                    6.1GB" off \
-                "3" "Angry Birds Seasons                 180MB" off \
-                "4" "Command & Conquer TS                1.3GB" off \
-                "5" "Cuphead                              11GB" off \
-                "6" "Diablo 2                            1.8GB" off \
-                "7" "Fallout                             535MB" off \
-                "8" "Fallout 2                           555MB" off \
-                "9" "Fallout Tactics                     1.5GB" off \
-               "10" "Harry Potter Prisoner of Azkaban    1.5GB" off \
-               "11" "Hydro Thunder                        66MB" off \
-               "12" "Silent Hill 2 Director's Cut        2.3GB" off \
-               "13" "Silent Hill 3                       4.8GB" off \
-               "14" "Silent Hill 4 The Room              3.4GB" off \
-               "15" "Spooky Castle                        10MB" off \
-               "16" "Starcraft                           1.2GB" off \
-               "17" "Star Wars Battlefront               2.3GB" off \
-               "18" "Teenage Muntant Ninja Turtles       1.3GB" off \
-               "19" "The House Of The Dead               299MB" off \
-               "20" "The House Of The Dead 2             579MB" off \
-               "21" "The Settlers                         26MB" off \
-               "22" "The Simpsons Hit & Run              1.8GB" off \
-               "23" "Unreal Anthology                    8.8GB" off \
-               "24" "Warcraft 3                          1.9GB" off \
+                "+" "GAME NAME                          FILE SIZE" off \
+                "1" "Age Of Empires                         215MB" off \
+                "2" "Age Of Empires 2                       6.1GB" off \
+                "3" "Angry Birds Seasons                    180MB" off \
+                "4" "Command & Conquer TS                   1.3GB" off \
+                "5" "Command & Conquer Generals+Zero Hour   2.7GB" off \
+                "6" "Cuphead                                 11GB" off \
+                "7" "Diablo 2                               1.8GB" off \
+                "8" "Fallout                                535MB" off \
+                "9" "Fallout 2                              555MB" off \
+               "10" "Fallout Tactics                        1.5GB" off \
+               "11" "Harry Potter Prisoner of Azkaban       1.5GB" off \
+               "12" "Hydro Thunder                           66MB" off \
+               "13" "Silent Hill 2 Director's Cut           2.3GB" off \
+               "14" "Silent Hill 3                          4.8GB" off \
+               "15" "Silent Hill 4 The Room                 3.4GB" off \
+               "16" "Spooky Castle                           10MB" off \
+               "17" "Starcraft                              1.2GB" off \
+               "18" "Star Wars Battlefront                  2.3GB" off \
+               "19" "Teenage Muntant Ninja Turtles          1.3GB" off \
+               "20" "The House Of The Dead                  299MB" off \
+               "21" "The House Of The Dead 2                579MB" off \
+               "22" "The Settlers                            26MB" off \
+               "23" "The Simpsons Hit & Run                 1.8GB" off \
+               "24" "Unreal Anthology                       8.8GB" off \
+               "25" "Warcraft 3                             1.9GB" off \
                 2>/tmp/results
     while read -r choice  
         do
@@ -1506,26 +1507,27 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                2) download-winegames "Retro-Devils_AoE2.zip" ;;
                3) download-winegames "Retro-Devils_AngryBirdsSeasons.zip" ;;
                4) download-winegames "Retro-Devils_CNCTS.zip" ;;
-               5) download-winegames "Retro-Devils_Cuphead.zip" ;;
-               6) download-winegames "Retro-Devils_Diablo2.zip" ;;
-               7) download-winegames "Retro-Devils_Fallout.zip" ;;
-               8) download-winegames "Retro-Devils_Fallout2.zip" ;;
-               9) download-winegames "Retro-Devils_FalloutTactics.zip" ;;
-              10) download-winegames "Retro-Devils_HPPOA.zip" ;;
-              11) download-winegames "Retro-Devils_HydroThunder.zip" ;;
-              12) download-winegames "Retro-Devils_SilentHill2DC.zip" ;;
-              13) download-winegames "Retro-Devils_SilentHill3.zip" ;;
-              14) download-winegames "Retro-Devils_SilentHill4TR.zip"; sh4_game_fix ;;
-              15) download-winegames "Retro-Devils_Spooky-Castle.zip" ;;
-              16) download-winegames "Retro-Devils_Starcraft.zip" ;;
-              17) download-winegames "Retro-Devils_SWBF.zip" ;;
-              18) download-winegames "Retro-Devils_TMNT.zip" ;;
-              19) download-winegames "Retro-Devils_THOTD.zip" ;;
-              20) download-winegames "Retro-Devils_THOTD2.zip" ;;
-              21) download-winegames "Retro-Devils_TheSettlers.zip" ;;
-              22) download-winegames "Retro-Devils_TheSimpsonsHitandRun.zip" ;;
-              23) download-winegames "Retro-Devils_UNREAL.zip"; unreal_game_fix ;;
-              24) download-winegames "Retro-Devils_Warcraft3.zip"-3 ;;
+               5) download-winegames "Retro-Devils_CNCGENS-ZR.zip"; cncgen_game_fix ;;
+               6) download-winegames "Retro-Devils_Cuphead.zip" ;;
+               7) download-winegames "Retro-Devils_Diablo2.zip" ;;
+               8) download-winegames "Retro-Devils_Fallout.zip" ;;
+               9) download-winegames "Retro-Devils_Fallout2.zip" ;;
+              10) download-winegames "Retro-Devils_FalloutTactics.zip" ;;
+              11) download-winegames "Retro-Devils_HPPOA.zip" ;;
+              12) download-winegames "Retro-Devils_HydroThunder.zip" ;;
+              13) download-winegames "Retro-Devils_SilentHill2DC.zip" ;;
+              14) download-winegames "Retro-Devils_SilentHill3.zip" ;;
+              15) download-winegames "Retro-Devils_SilentHill4TR.zip"; sh4_game_fix ;;
+              16) download-winegames "Retro-Devils_Spooky-Castle.zip" ;;
+              17) download-winegames "Retro-Devils_Starcraft.zip" ;;
+              18) download-winegames "Retro-Devils_SWBF.zip" ;;
+              19) download-winegames "Retro-Devils_TMNT.zip" ;;
+              20) download-winegames "Retro-Devils_THOTD.zip" ;;
+              21) download-winegames "Retro-Devils_THOTD2.zip" ;;
+              22) download-winegames "Retro-Devils_TheSettlers.zip" ;;
+              23) download-winegames "Retro-Devils_TheSimpsonsHitandRun.zip" ;;
+              24) download-winegames "Retro-Devils_UNREAL.zip"; unreal_game_fix ;;
+              25) download-winegames "Retro-Devils_Warcraft3.zip"-3 ;;
                *) ;;
         esac
         done < /tmp/results
@@ -1544,16 +1546,20 @@ function game_fixes() {
       --menu "SELECT TOOL OR FIX AND PRESS A  " 20 50 30 \
       + "--------WINE GAME FIXES-------" \
       1 "Age Of Empires No-CD Error Fix" \
-      2 "Unreal Anthology Game Fix     " \
+      2 "C&C Generals + Zero Hour Fix" \ 
+      3 "Silent Hill 4 Fix" \
+      4 "Unreal Anthology Fix     " \
       + "----------GAME TOOLS----------" \
-      3 "Qjoy Layout Downloader        " \
+      5 "Qjoy Layout Downloader        " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     +) none ;;
     1) aoe_game_fix ;;
-    2) unreal_game_fix ;;
-    3) download_qjoy ;;
+    2) cncgen_game_fix
+    2) sh4_game_fix ;;
+    4) unreal_game_fix ;;
+    5) download_qjoy ;;
     *) break ;;
     esac
   done
@@ -1568,12 +1574,12 @@ wine reg import Age-of-Empires-no-cd-error-fix.reg
 sleep 1
 rm -f Age-of-Empires-no-cd-error-fix.reg
 }
-function unreal_game_fix() {
+function cncgen_game_fix() {
 cd ~/
-wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Unreal-Anthology-fix.reg
-wine reg import Unreal-Anthology-fix.reg
+wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Command-And-Conquer-fix.reg
+wine reg import Command-And-Conquer-fix.reg
 sleep 1
-rm -f Unreal-Anthology-fix.reg
+rm -f Command-And-Conquer-fix.reg
 }
 function sh4_game_fix() {
 cd ~/
@@ -1581,6 +1587,13 @@ wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Silen
 wine reg import Silent-Hill-4-The-Room-Fix.reg
 sleep 1
 rm -f Silent-Hill-4-The-Room-Fix.reg
+}
+function unreal_game_fix() {
+cd ~/
+wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/Unreal-Anthology-fix.reg
+wine reg import Unreal-Anthology-fix.reg
+sleep 1
+rm -f Unreal-Anthology-fix.reg
 }
 #-------------------#
 #    GAME TOOLS     #
