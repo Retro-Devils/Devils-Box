@@ -314,7 +314,7 @@ else
       42 "Pokemini                         5.4MB       44 GAMES" \
       43 "PlayStation 1                      3GB       29 GAMES" \
       44 "Sega Saturn                      108GB      303 GAMES" \
-      45 "Sega Staurn Japan                3.9GB       18 GAMES" \
+      45 "Sega Saturn Japan                3.9GB       18 GAMES" \
       46 "ScummVM                          2.5GB       21 GAMES" \
       47 "Sega32x                           63MB       37 GAMES" \
       48 "SegaCD                            11GB       52 GAMES" \
