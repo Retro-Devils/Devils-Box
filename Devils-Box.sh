@@ -340,7 +340,7 @@ else
     3) download-packs "amstradcpc" ;;
     4) download-packs "arcade" ;;
     5) download-packs "arcadia" ;;
-    6) download-packs "arstrocade" ;;
+    6) download-packs "astrocade" ;;
     7) download-packs "atari800" ;;
     8) download-packs "atari2600" ;;
     9) download-packs "atari5200" ;;
@@ -1792,15 +1792,19 @@ fi
 function rpi-menu() {
   sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
 }
-#function pikiss() {
-#if [ $NETCHECK  = 1 ]; then
-#dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
-#Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-#else
-#  if [ -d "$HOME/piKiss/" ]; then home/pi/piKiss/piKiss.sh;
-#  else curl -sSL https://git.io/JfAPE | bash 
-#fi
-#}
+function pikiss() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox "
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+else
+  if [ -d "$HOME/piKiss/" ]; then bash $HOME/piKiss/piKiss.sh;
+  else
+    cd $HOME/
+    curl -sSL https://git.io/JfAPE | bash
+    bash $HOME/piKiss/piKiss.sh
+  fi
+fi
+}
 function mugen() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
