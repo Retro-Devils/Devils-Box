@@ -2384,7 +2384,7 @@ clear
 #------------------#
 function update_db() {
 if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
+dialog  --sleep 1 --title "UPDATE DEVILS BOX" --msgbox " 
 OFFLINE!!!
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
