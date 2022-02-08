@@ -1490,13 +1490,14 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                "15" "Spooky Castle                           10MB" off \
                "16" "Starcraft                              1.2GB" off \
                "17" "Star Wars Battlefront                  2.3GB" off \
-               "18" "Teenage Muntant Ninja Turtles          1.3GB" off \
-               "19" "The House Of The Dead                  299MB" off \
-               "20" "The House Of The Dead 2                579MB" off \
-               "21" "The Settlers                            26MB" off \
-               "22" "The Simpsons Hit & Run                 1.8GB" off \
-               "23" "Unreal Anthology                       8.8GB" off \
-               "24" "Warcraft 3                             1.9GB" off \
+               "18" "Street of Rage Remake v5.2             605MB" off \
+               "19" "Teenage Muntant Ninja Turtles          1.3GB" off \
+               "20" "The House Of The Dead                  299MB" off \
+               "21" "The House Of The Dead 2                579MB" off \
+               "22" "The Settlers                            26MB" off \
+               "23" "The Simpsons Hit & Run                 1.8GB" off \
+               "24" "Unreal Anthology                       8.8GB" off \
+               "25" "Warcraft 3                             1.9GB" off \
                 2>/tmp/results
     while read -r choice  
         do
@@ -1509,8 +1510,8 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                5) download-winegames "Retro-Devils_Cuphead.zip" ;;
                6) download-winegames "Retro-Devils_Diablo2.zip" ;;
                7) download-winegames "Retro-Devils_Fallout.zip" ;;
-              8) download-winegames "Retro-Devils_Fallout2.zip" ;;
-              9) download-winegames "Retro-Devils_FalloutTactics.zip" ;;
+               8) download-winegames "Retro-Devils_Fallout2.zip" ;;
+               9) download-winegames "Retro-Devils_FalloutTactics.zip" ;;
               10) download-winegames "Retro-Devils_HPPOA.zip" ;;
               11) download-winegames "Retro-Devils_HydroThunder.zip" ;;
               12) download-winegames "Retro-Devils_SilentHill2DC.zip" ;;
@@ -1519,13 +1520,14 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
               15) download-winegames "Retro-Devils_Spooky-Castle.zip" ;;
               16) download-winegames "Retro-Devils_Starcraft.zip" ;;
               17) download-winegames "Retro-Devils_SWBF.zip" ;;
-              18) download-winegames "Retro-Devils_TMNT.zip" ;;
-              19) download-winegames "Retro-Devils_THOTD.zip" ;;
-              20) download-winegames "Retro-Devils_THOTD2.zip" ;;
-              21) download-winegames "Retro-Devils_TheSettlers.zip" ;;
-              22) download-winegames "Retro-Devils_TheSimpsonsHitandRun.zip" ;;
-              23) download-winegames "Retro-Devils_UNREAL.zip"; unreal_game_fix ;;
-              24) download-winegames "Retro-Devils_Warcraft3.zip"-3 ;;
+	      18) download-winegames "Retro-Devils_Strees-of-Rage-Remake.zip" ;;
+	      19) download-winegames "Retro-Devils_TMNT.zip" ;;
+              20) download-winegames "Retro-Devils_THOTD.zip" ;;
+              21) download-winegames "Retro-Devils_THOTD2.zip" ;;
+              22) download-winegames "Retro-Devils_TheSettlers.zip" ;;
+              23) download-winegames "Retro-Devils_TheSimpsonsHitandRun.zip" ;;
+              24) download-winegames "Retro-Devils_UNREAL.zip"; unreal_game_fix ;;
+              25) download-winegames "Retro-Devils_Warcraft3.zip"-3 ;;
                *) ;;
         esac
         done < /tmp/results
