@@ -21,7 +21,7 @@ HOST1="https://archive.org/download/the-devils-box-alt"
 HOST2="https://archive.org/download/the-devils-box_202112"
 HOST3="https://archive.org/download/devils-bios"
 HOST4="https://archive.org/download/devils-wine"
-#HOST5=""
+HOST5="https://archive.org/download/devils-dos"
 #HOST6=""
 
 #--------PICK & CHOOSE HOST-----#
@@ -1451,6 +1451,154 @@ On pasted wine system
         done < /tmp/results
 fi
 }
+pcgames() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+else
+dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
+
+-------------------------------
+       WINE DOWNLOADER HELP
+-------------------------------
+-You must have wine/box86 installed for this too work 
+-Whats WINE? Wine/box86 play old pc games.
+-Downloads games to $HOME/RetroPie/roms/wine/games/.installs
+-Games Includes a .sh script to launch from Retropie 
+-Games are zipped. Devils Box downloads unzips and does all the work for ya.
+-If you move game folder, change .sh script accordingly.
+-Thanks for using have a good day." 0 0
+
+    whiptail --clear --title "WINE DOWNLOAD MENU" --separate-output \
+                --ok-button Download --cancel-button Back \
+                --checklist "Choose:" 0 0 0 \
+                "+" "GAME NAME                           FILE SIZE" off \
+                "1" "Alleycat                                54KMB" off \
+                "2" "Batman                                   16MB" off \
+                "3" "Batman Returns                          180MB" off \
+                "4" "Challenge of the Ancient Empires        666kB" off \
+                "5" "Command & Conquer                       1.5GB" off \
+                "6" "Command & Conquer Red Alert             2.1GB" off \
+                "7" "Doom 1                                  7.4MB" off \
+                "8" "Doom 1 - RogueLike                        3MB" off \
+                "9" "Doom 2                                   15MB" off \
+               "10" "Dragon's Lair                           4.3MB" off \
+               "11" "Dragon's Lair 2                           4MB" off \
+               "12" "Dragon's Lair 3                           4MB" off \
+               "13" "Duke Nukem 2                            3.4MB" off \
+               "14" "Duke Nukem 3D                            12MB" off \
+               "15" "Dune 1                                  1.8MB" off \
+               "16" "Dune 2                                  7.2MB" off \
+               "17" "Dynablaster I                           810KB" off \
+               "18" "Fable                                   124MB" off \
+               "19" "Grand Theft Auto                        109MB" off \
+               "20" "Hexxagon II                             649KB" off \
+               "21" "Indy Car                                616KB" off \
+               "22" "Ironman                                 540KB" off \
+               "23" "Lemmings                                440KB" off \
+               "24" "Locomotion                              753KB" off \
+               "25" "Mech Warrior                            1.2MB" off \
+               "26" "Micro Machines 2                       11.2MB" off \
+               "27" "Mortal Kombat                          18.5MB" off \
+               "28" "Mortal Kombat 2                        18.9MB" off \
+               "29" "OpenBOR                                59.8MB" off \
+               "30" "Prehistorik                             785KB" off \
+               "31" "Prehistorik 2                             1MB" off \
+               "32" "Rampage                                 194KB" off \
+               "33" "Scorched Earth                          1.5MB" off \
+               "34" "SimCity 2000 SE                          18MB" off \
+               "35" "Snake 2                                  40KB" off \
+               "36" "Star Trek Rites                          40MB" off \
+               "37" "Star Wars Dark Forces                    67MB" off \
+               "38" "Star Wars X Wing                         12MB" off \
+               "39" "Street Rod 1                            689KB" off \
+               "40" "Street Rod 2                            1.2MB" off \
+               "41" "Super Solvers - Midnight Rescue         630KB" off \
+               "42" "Super Solvers - Treasure Mountain       651KB" off \
+               "43" "Super-Solvers - Outnumbered             564KB" off \
+               "44" "Terep 1                                 149KB" off \
+               "45" "Test Drive 1                            288KB" off \
+               "46" "The Incredible Machine                  716KB" off \
+               "47" "The Incredible Machine 2                4.9MB" off \
+               "48" "The Lost Vikings                        1.6MB" off \
+               "49" "The Oregon Trail 2                      635KB" off \
+               "50" "The Oregon Trail 3                      3.8MB" off \
+               "51" "The Settlers                           35.8MB" off \
+               "52" "the Settlers 2                          642MB" off \
+               "53" "Tie Fighter                              13MB" off \
+               "54" "Volfied                                 717KB" off \
+               "55" "WarCraft - Orcs and Humans              7.6MB" off \
+               "56" "Warcraft 2                               45MB" off \
+               "57" "Where in the World Is Carmen San Diego  479KB" off \
+               "58" "Wolfeinstein 3D                         2.4MB" off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+	       +) none ;;
+               1) download-pcgames "Retro-Devils_Alleycat.zip";;
+               2) download-pcgames "Retro-Devils_Batman.zip" ;;
+               3) download-pcgames "Retro-Devils_Batman-Returns.zip" ;;
+               4) download-pcgames "Retro-Devils_challenge-of-the-ancient-empires.zip" ;;
+               5) download-pcgames "Retro-Devils_Command-And-Conquer.zip";;
+               6) download-pcgames "Retro-Devils_Command-And-Conquer-Red-Alert.zip" ;;
+               7) download-pcgames "Retro-Devils_Doom-1.zip" ;;
+               8) download-pcgames "Retro-Devils_Doom-1-RogueLike.zip" ;;
+               9) download-pcgames "Retro-Devils_Doom-2.zip" ;;
+              10) download-pcgames "Retro-Devils_Dragons-Lair.zip" ;;
+              11) download-pcgames "Retro-Devils_Dragons-Lair-2.zip" ;;
+              12) download-pcgames "Retro-Devils_Dragons-Lair-3.zip" ;;
+              13) download-pcgames "Retro-Devils_Duke-Nukem-2.zip" ;;
+              14) download-pcgames "Retro-Devils_Duke-Nukem-3D.zip" ;;
+              15) download-pcgames "Retro-Devils_Dune-1";;
+              16) download-pcgames "Retro-Devils_Dune-2.zip" ;;
+              17) download-pcgames "Retro-Devils_Dnyablaster I.zip" ;;
+              18) download-pcgames "Retro-Devils_Fable.zip" ;;
+	      19) download-pcgames "Retro-Devils_GTA" ;;
+              20) download-pcgames "Retro-Devils_Hexxagon-II.zip" ;;
+              21) download-pcgames "Retro-Devils_Indy-Car.zip" ;;
+              22) download-pcgames "Retro-Devils_Ironman.zip" ;;
+              23) download-pcgames "Retro-Devils_Lemmings.zip" ;;
+              24) download-pcgames "Retro-Devils_Locomotion.zip";;
+              25) download-pcgames "Retro-Devils_Mechwarrior.zip"-3 ;;
+              26) download-pcgames "Retro-Devils_Micro-Machines-2.zip";;
+              27) download-pcgames "Retro-Devils_MortalKombat.zip" ;;
+              28) download-pcgames "Retro-Devils_MortalKombat-2.zip" ;;
+              29) download-pcgames "Retro-Devils_OPENBOR.zip";;
+              30) download-pcgames "Retro-Devils_Prehistorik.zip" ;;
+              31) download-pcgames "Retro-Devils_Prehistorik-2.zip" ;;
+              32) download-pcgames "Retro-Devils_Rampage.zip" ;;
+              33) download-pcgames "Retro-Devils_Scorched-Earth.zip" ;;
+              34) download-pcgames "Retro-Devils_SimCity 2000 SE.zip" ;;
+              35) download-pcgames "Retro-Devils_Snake 2.zip" ;;
+              36) download-pcgames "Retro-Devils_startrek.zip" ;;
+              37) download-pcgames "Retro-Devils_Star-Wars-Dark-Forces.zip" ;;
+              38) download-pcgames "Retro-Devils_Star-Wars-X-Wing.zip.zip" ;;
+              39) download-pcgames "Retro-Devils_Street-Rod.zip" ;;
+              40) download-pcgames "Retro-Devils_Street-Rod-2.zip" ;;
+              41) download-pcgames "Retro-Devils_Super-Solvers-Midnight-Rescue.zip" ;;
+              42) download-pcgames "Retro-Devils_Super-Solvers-Outnumbered.zip" ;;
+              43) download-pcgames "Retro-Devils_Super-Solvers-Treasure--Mountain.zip" ;;
+	      44) download-pcgames "Retro-Devils_Terep-1.zip" ;;
+	      45) download-pcgames "Retro-Devils_Test-Drive-1.zip" ;;
+              46) download-pcgames "Retro-Devils_The-Incredible-Machine.zip" ;;
+              47) download-pcgames "Retro-Devils_The-Incredible-Machine-2.zip" ;;
+              48) download-pcgames "Retro-Devils_The-Lost-Vikings.zip" ;;
+              49) download-pcgames "Retro-Devils_The-Oregan-Trail-2.zip" ;;
+              50) download-pcgames "Retro-Devils_The-Oregan-Trail-3.zip" ;;
+	      51) download-pcgames "Retro-Devils_TheSettlers.zip";;
+	      52) download-pcgames "Retro-Devils_TheSettlers-2.zip";;
+              53) download-pcgames "Retro-Devils_Tiefighter.zip" ;;
+	      54) download-pcgames "Retro-Devils_Volfied.zip" ;;
+	      55) download-pcgames "Retro-Devils_WarCraft-Orcs-and-Humans.zip" ;;
+              56) download-pcgames "Retro-Devils_WarCraft-2.zip" ;;
+              57) download-pcgames "Retro-Devils_Where-in-the-World-Is-Carmen-San-Diego.zip" ;;
+              58) download-pcgames "Retro-Devils_Wolfeinstein-3D" ;;
+               *) ;;
+        esac
+        done < /tmp/results
+fi
+}
 function winegames() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
@@ -2465,6 +2613,15 @@ clear
   unzip -o "$HOME"/RetroPie/roms/wine/"${1}" -d "$HOME"/RetroPie/roms/wine/
   chmod 755 "$HOME"/RetroPie/roms/wine/*.sh
   sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
+fi
+}
+function download-pcgames() {
+if [ ! -d "$HOME/RetroPie/roms/pc/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST5}/"${1}" -P "$HOME"/RetroPie/roms/pc -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/pc/"${1}" -d "$HOME"/RetroPie/roms/pc/
+  sudo rm -r "$HOME"/RetroPie/roms/pc/"${1}"
 fi
 }
 
