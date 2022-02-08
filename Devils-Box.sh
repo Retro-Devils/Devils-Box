@@ -1461,7 +1461,7 @@ else
 dialog  --sleep 1 --title "Wine Downloader Help" --msgbox " 
 
 -------------------------------
-       WINE DOWNLOADER HELP
+    PC/DOS DOWNLOADER HELP
 -------------------------------
 -You must have DosBox installed for this too work 
 -lr-dosbox-pure is recommended to play all games.
