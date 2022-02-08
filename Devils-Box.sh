@@ -1588,7 +1588,7 @@ dialog  --sleep 1 --title "PC/DOS Downloader Help" --msgbox "
               49) download-pcgames "Retro-Devils_The-Oregan-Trail-2.zip" ;;
               50) download-pcgames "Retro-Devils_The-Oregan-Trail-3.zip" ;;
 	      51) download-pcgames "Retro-Devils_TheSettlers.zip";;
-	      52) download-pcgames "Retro-Devils_TheSettlers-2.zip";;
+	      52) download-pcgames "Retro-Devils_TheSettlers2.zip";;
               53) download-pcgames "Retro-Devils_Tiefighter.zip" ;;
 	      54) download-pcgames "Retro-Devils_Volfied.zip" ;;
 	      55) download-pcgames "Retro-Devils_WarCraft-Orcs-and-Humans.zip" ;;
