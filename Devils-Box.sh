@@ -492,7 +492,8 @@ local choice
       9 "Playstation 1" \
       10 "Saturn" \
       11 "Super Nintendo" \
-      12 "Wine" \
+      12 "PC DOS Games" \
+      13 "Wine" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -507,7 +508,8 @@ local choice
     9) psx ;;
     10) saturn ;;
     11) snes ;;
-    12) winegames ;;
+    12) pcgames ;;
+    13) winegames ;;
     *) break ;;
     esac
   done
@@ -1461,15 +1463,14 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 -------------------------------
        WINE DOWNLOADER HELP
 -------------------------------
--You must have wine/box86 installed for this too work 
--Whats WINE? Wine/box86 play old pc games.
--Downloads games to $HOME/RetroPie/roms/wine/games/.installs
--Games Includes a .sh script to launch from Retropie 
+-You must have DosBox installed for this too work 
+-lr-dosbox-pure is recommended to play all games.
+-Downloads games to $HOME/RetroPie/roms/pc
+-Games Includes a run.bat batch to launch from Retropie 
 -Games are zipped. Devils Box downloads unzips and does all the work for ya.
--If you move game folder, change .sh script accordingly.
 -Thanks for using have a good day." 0 0
 
-    whiptail --clear --title "WINE DOWNLOAD MENU" --separate-output \
+    whiptail --clear --title "PC/DOS DOWNLOAD MENU" --separate-output \
                 --ok-button Download --cancel-button Back \
                 --checklist "Choose:" 0 0 0 \
                 "+" "GAME NAME                           FILE SIZE" off \
