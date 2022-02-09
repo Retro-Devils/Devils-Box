@@ -31,6 +31,7 @@ function install_db() {
 if [ -d "$HOME/RetroPie/retropiemenu/Devils-Box/" ]; then sudo rm -fR $HOME/RetroPie/retropiemenu/Devils-Box/; fi
 if [ -f "$HOME/RetroPie/retropiemenu/Devils-Box.sh" ]; then sudo rm $HOME/RetroPie/retropiemenu/Devils-Box.sh; fi
 if [ -d "$HOME/Devils-Box/" ]; then sudo rm -R $HOME/Devils-Box/; fi
+cd $HOME
 git clone https://github.com/Retro-Devils/Devils-Box
 cp $HOME/Devils-Box/Devils-Box.sh -f $HOME/RetroPie/retropiemenu/
 cp $HOME/Devils-Box/files/Devils-Box.png -f $HOME/RetroPie/retropiemenu/icons/
