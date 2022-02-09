@@ -1709,6 +1709,7 @@ function game_fixes() {
       5 "Unreal Anthology Fix" \
       + "----------GAME TOOLS----------" \
       6 "Qjoy Layout Downloader" \
+      7 "Retro Scrapey" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1719,6 +1720,7 @@ function game_fixes() {
     4) game_fix "Silent-Hill-4-The-Room-Fix.reg" ;;
     5) game_fix "Unreal-Anthology-fix.reg" ;;
     6) download_qjoy ;;
+    7) retro_scrapey ;;
     *) break ;;
     esac
   done
@@ -1814,6 +1816,12 @@ PS3 MAPPED GAMES
 -Spooky Castle
 -Mugen
 -Skifree" 0 0
+}
+#----------------------------------#
+#       RETRO SCRAPEY FUNCTIONS    #
+#----------------------------------#
+function retro_scrapey() {
+bash "$HOME"/Devils-Box/Retro-Scrapey.sh
 }
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
@@ -2571,6 +2579,9 @@ else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
 rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+echo ${bld}$(tput setaf 1)"-----SCRAPING NEW MEDIA NOW------"
+sleep 5
+/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
 fi
 }
 #-----------------#
