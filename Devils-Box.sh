@@ -1821,7 +1821,7 @@ PS3 MAPPED GAMES
 #       RETRO SCRAPEY FUNCTIONS    #
 #----------------------------------#
 function retro_scrapey() {
-bash "$HOME"/Devils-Box/Retro-Scrapey.sh
+bash "$HOME"/Devils-Box/scripts/Retro-Scrapey.sh
 }
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
