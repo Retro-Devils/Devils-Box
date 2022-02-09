@@ -2540,9 +2540,12 @@ git remote add origin "${ART_HOST2}/${1}.git"
 git fetch
 git pull origin main
 rm -fr "$HOME"/RetroPie/roms/"${1}"/.git
+echo ${bld}$(tput setaf 1)"-----SCRAPING NEW MEDIA NOW------"
+sleep 5
+cd "$HOME"/RetroPie/roms/"${1}"
+/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
 fi
 }
-
 #------------------#
 # CONSOLE FUNCTION #
 #------------------#
