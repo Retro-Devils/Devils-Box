@@ -1709,7 +1709,6 @@ function game_fixes() {
       5 "Unreal Anthology Fix" \
       + "----------GAME TOOLS----------" \
       6 "Qjoy Layout Downloader" \
-      7 "Retro Scrapey" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1720,7 +1719,6 @@ function game_fixes() {
     4) game_fix "Silent-Hill-4-The-Room-Fix.reg" ;;
     5) game_fix "Unreal-Anthology-fix.reg" ;;
     6) download_qjoy ;;
-    7) retro_scrapey ;;
     *) break ;;
     esac
   done
@@ -1866,13 +1864,14 @@ function audio() {
       1 "Emulation Station Themes---------------------------Retropie " \
       2 "Hursty's Themes--------------------------------------Hursty " \
       3 "Devils Themes and Artwork----------------------Retro Devils " \
+      4 "Retro Scrapey----------------------------------Retro Devils " \
       - "___________________Audio/Mixed Tools_______________________ " \
-      4 "Apply No Audio Fix--------------------------------Anonymous " \
-      5 "Install I.M.P-----------------------------------RapiEdwin08 " \
-      6 "Install T.A.M.P.O--------------------------------thepitster " \
+      5 "Apply No Audio Fix--------------------------------Anonymous " \
+      6 "Install I.M.P-----------------------------------RapiEdwin08 " \
+      7 "Install T.A.M.P.O--------------------------------thepitster " \
       - "_____________________ Information__________________________ " \
-      7 "I.M.P-------------Integrated Music Player------------------ " \
-      8 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
+      8 "I.M.P-------------Integrated Music Player------------------ " \
+      9 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1880,12 +1879,13 @@ function audio() {
     1) hursty-themes ;;
     2) es-themes ;;
     3) devil-themes ;;
+    4) retro_scrapey ;;
     -) none ;;
-    4) no-audio ;;
-    5) imp ;;
-    6) tampo ;;
-    7) imp-info ;;
-    8) tampo-info ;;
+    5) no-audio ;;
+    6) imp ;;
+    7) tampo ;;
+    8) imp-info ;;
+    9) tampo-info ;;
     *) break ;;
     esac
   done
