@@ -1871,7 +1871,7 @@ function audio() {
 
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title " AUDIO & VISUAL TOOLS MENU" \
-      --ok-label Install --cancel-label Back \
+      --ok-label Select --cancel-label Back \
       --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 70 50 \
       + "_____________________Visual Tools__________________________ " \
       1 "Emulation Station Themes---------------------------Retropie " \
