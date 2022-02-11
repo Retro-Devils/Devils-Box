@@ -1827,6 +1827,7 @@ bash "$HOME"/Devils-Box/scripts/Retro-Scrapey.sh
 }
 #     FE-SWITCHEROO  FUNCTION      #
 function fe_switch() {
+sudo cp /home/pi/Devils-Box/scripts/FE-Switcheroo.sh -f /usr/local/bin/switcheroo
 bash "$HOME"/Devils-Box/scripts/FE-Switcheroo.sh
 }
 #     PEGASUS HELPER FUNCTION      #
