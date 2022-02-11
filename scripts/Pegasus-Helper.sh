@@ -173,6 +173,7 @@ function convert() {
 echo "Please type theme name and press Enter"
 read theme
 cd "/home/pi/.emulationstation/themes/$theme"
+chmod 755 "$HOME"/Devils-Box/files/pegasusfe/pegasus-converter/convert.py
 "$HOME"/Devils-Box/files/pegasusfe/pegasus-converter/convert.py ..
 read -n 1 -s -r -p "Above Is Converting Results-----Press any key to Continue"
 }
