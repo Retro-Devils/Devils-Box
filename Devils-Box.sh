@@ -1627,32 +1627,35 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "+" "GAME NAME                          FILE SIZE" off \
                 "1" "Age Of Empires                         215MB" off \
                 "2" "Age Of Empires 2                       6.1GB" off \
-                "3" "Angry Birds Seasons                    180MB" off \
-                "4" "Command & Conquer Generals+Zero Hour   2.7GB" off \
-                "5" "Cuphead                                 11GB" off \
-                "6" "Diablo 2                               1.8GB" off \
-                "7" "Fallout                                535MB" off \
-                "8" "Fallout 2                              555MB" off \
-                "9" "Fallout Tactics                        1.5GB" off \
-               "10" "Harry Potter Prisoner of Azkaban       1.5GB" off \
-               "11" "Heroes Of might And Magic 2 Gold       738MB" off \
-               "12" "Heroes Of might And Magic 3            426MB" off \
-               "13" "Heroes Of might And Magic 4              1GB" off \
-               "14" "Hydro Thunder                           66MB" off \
-               "15" "Silent Hill 2 Director's Cut           2.3GB" off \
-               "16" "Silent Hill 3                          4.8GB" off \
-               "17" "Silent Hill 4 The Room                 3.4GB" off \
-               "18" "Spooky Castle                           10MB" off \
-               "19" "Starcraft                              1.2GB" off \
-               "20" "Star Wars Battlefront                  2.3GB" off \
-               "21" "Street of Rage Remake v5.2             605MB" off \
-               "22" "Teenage Muntant Ninja Turtles          1.3GB" off \
-               "23" "The House Of The Dead                  299MB" off \
-               "24" "The House Of The Dead 2                579MB" off \
-               "25" "The Settlers                            26MB" off \
-               "26" "The Simpsons Hit & Run                 1.8GB" off \
-               "27" "Unreal Anthology                       8.8GB" off \
-               "28" "Warcraft 3                             1.9GB" off \
+                "3" "Angry Birds                              91MB" off \
+                "4" "Angry Birds Seasons                    180MB" off \
+                "5" "Angry Birds Star Wars 2                110MB" off \
+                "6" "Command & Conquer Generals+Zero Hour   2.7GB" off \
+                "7" "Cuphead                                 11GB" off \
+                "8" "Delta Force Xtreme                     843MB" off \
+                "9" "Diablo 2                               1.8GB" off \
+               "10" "Fallout                                535MB" off \
+               "11" "Fallout 2                              555MB" off \
+               "12" "Fallout Tactics                        1.5GB" off \
+               "13" "Harry Potter Prisoner of Azkaban       1.5GB" off \
+               "14" "Heroes Of might And Magic 2 Gold       738MB" off \
+               "15" "Heroes Of might And Magic 3            426MB" off \
+               "16" "Heroes Of might And Magic 4              1GB" off \
+               "17" "Hydro Thunder                           66MB" off \
+               "18" "Silent Hill 2 Director's Cut           2.3GB" off \
+               "19" "Silent Hill 3                          4.8GB" off \
+               "20" "Silent Hill 4 The Room                 3.4GB" off \
+               "21" "Spooky Castle                           10MB" off \
+               "22" "Starcraft                              1.2GB" off \
+               "23" "Star Wars Battlefront                  2.3GB" off \
+               "24" "Street of Rage Remake v5.2             605MB" off \
+               "25" "Teenage Muntant Ninja Turtles          1.3GB" off \
+               "26" "The House Of The Dead                  299MB" off \
+               "27" "The House Of The Dead 2                579MB" off \
+               "28" "The Settlers                            26MB" off \
+               "29" "The Simpsons Hit & Run                 1.8GB" off \
+               "30" "Unreal Anthology                       8.8GB" off \
+               "31" "Warcraft 3                             1.9GB" off \
                 2>/tmp/results
     while read -r choice  
         do
@@ -1660,32 +1663,35 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 	       +) none ;;
                1) download-winegames "Retro-Devils_AoE.zip"; game_fix "Age-of-Empires-no-cd-error-fix.reg" ;;
                2) download-winegames "Retro-Devils_AoE2.zip" ;;
-               3) download-winegames "Retro-Devils_AngryBirdsSeasons.zip" ;;
-               4) download-winegames "Retro-Devils_CNCGENS-ZH.zip"; game_fix "Command-And-Conquer-fix.reg" ;;
-               5) download-winegames "Retro-Devils_Cuphead.zip" ;;
-               6) download-winegames "Retro-Devils_Diablo2.zip" ;;
-               7) download-winegames "Retro-Devils_Fallout.zip" ;;
-               8) download-winegames "Retro-Devils_Fallout2.zip" ;;
-               9) download-winegames "Retro-Devils_FalloutTactics.zip" ;;
-              10) download-winegames "Retro-Devils_HPPOA.zip" ;;
-              11) download-winegames "Retro-Devils_Heroes2Gold.zip" game_fix "Heroes-of-Might-and-Magic-fix.reg" ;;
-              12) download-winegames "Retro-Devils_Heroes3.zip" game_fix "Heroes-of-Might-and-Magic-fix.reg" ;;
-              13) download-winegames "Retro-Devils_Heroes4.zip" game_fix "Heroes-of-Might-and-Magic-fix.reg" ;;
-              14) download-winegames "Retro-Devils_HydroThunder.zip" ;;
-              15) download-winegames "Retro-Devils_SilentHill2DC.zip" ;;
-              16) download-winegames "Retro-Devils_SilentHill3.zip" ;;
-              17) download-winegames "Retro-Devils_SilentHill4TR.zip"; game_fix "Silent-Hill-4-The-Room-Fix.reg" ;;
-              18) download-winegames "Retro-Devils_Spooky-Castle.zip" ;;
-              19) download-winegames "Retro-Devils_Starcraft.zip" ;;
-              20) download-winegames "Retro-Devils_SWBF.zip" ;;
-              21) download-winegames "Retro-Devils_Strees-of-Rage-Remake.zip" ;;
-              22) download-winegames "Retro-Devils_TMNT.zip" ;;
-              23) download-winegames "Retro-Devils_THOTD.zip" ;;
-              24) download-winegames "Retro-Devils_THOTD2.zip" ;;
-              25) download-winegames "Retro-Devils_TheSettlers.zip" ;;
-              26) download-winegames "Retro-Devils_TheSimpsonsHitandRun.zip" ;;
-              27) download-winegames "Retro-Devils_UNREAL.zip"; game_fix "Unreal-Anthology-fix.reg" ;;
-              28) download-winegames "Retro-Devils_Warcraft3.zip"-3 ;;
+               3) download-winegames "Retro-Devils_AngryBirds.zip" ;;
+               4) download-winegames "Retro-Devils_AngryBirdsSeasons.zip" ;;
+               5) download-winegames "Retro-Devils_AngryBirdsStarWars2.zip" ;;
+               6) download-winegames "Retro-Devils_CNCGENS-ZH.zip"; game_fix "Command-And-Conquer-fix.reg" ;;
+               7) download-winegames "Retro-Devils_Cuphead.zip" ;;
+               8) download-winegames "Retro-Devils_DeltaForceXtreme.zip" ;;
+               9) download-winegames "Retro-Devils_Diablo2.zip" ;;
+              10) download-winegames "Retro-Devils_Fallout.zip" ;;
+              11) download-winegames "Retro-Devils_Fallout2.zip" ;;
+              12) download-winegames "Retro-Devils_FalloutTactics.zip" ;;
+              13) download-winegames "Retro-Devils_HPPOA.zip" ;;
+              14) download-winegames "Retro-Devils_Heroes2Gold.zip" game_fix "Heroes-of-Might-and-Magic-fix.reg" ;;
+              15) download-winegames "Retro-Devils_Heroes3.zip" game_fix "Heroes-of-Might-and-Magic-fix.reg" ;;
+              16) download-winegames "Retro-Devils_Heroes4.zip" game_fix "Heroes-of-Might-and-Magic-fix.reg" ;;
+              17) download-winegames "Retro-Devils_HydroThunder.zip" ;;
+              18) download-winegames "Retro-Devils_SilentHill2DC.zip" ;;
+              19) download-winegames "Retro-Devils_SilentHill3.zip" ;;
+              20) download-winegames "Retro-Devils_SilentHill4TR.zip"; game_fix "Silent-Hill-4-The-Room-Fix.reg" ;;
+              21) download-winegames "Retro-Devils_Spooky-Castle.zip" ;;
+              22) download-winegames "Retro-Devils_Starcraft.zip" ;;
+              23) download-winegames "Retro-Devils_SWBF.zip" ;;
+              24) download-winegames "Retro-Devils_Strees-of-Rage-Remake.zip" ;;
+              25) download-winegames "Retro-Devils_TMNT.zip" ;;
+              26) download-winegames "Retro-Devils_THOTD.zip" ;;
+              27) download-winegames "Retro-Devils_THOTD2.zip" ;;
+              28) download-winegames "Retro-Devils_TheSettlers.zip" ;;
+              29) download-winegames "Retro-Devils_TheSimpsonsHitandRun.zip" ;;
+              30) download-winegames "Retro-Devils_UNREAL.zip"; game_fix "Unreal-Anthology-fix.reg" ;;
+              31) download-winegames "Retro-Devils_Warcraft3.zip"-3 ;;
                *) ;;
         esac
         done < /tmp/results
