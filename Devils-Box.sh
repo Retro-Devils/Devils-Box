@@ -1815,11 +1815,13 @@ PS3 MAPPED GAMES
 -Mugen
 -Skifree" 0 0
 }
-#----------------------------------#
 #       RETRO SCRAPEY FUNCTIONS    #
-#----------------------------------#
 function retro_scrapey() {
 bash "$HOME"/Devils-Box/scripts/Retro-Scrapey.sh
+}
+#           FE-SWITCHEROO          #
+function fe_switch() {
+bash "$HOME"/Devils-Box/scripts/FE-Switcheroo.sh
 }
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
@@ -1865,13 +1867,14 @@ function audio() {
       2 "Hursty's Themes--------------------------------------Hursty " \
       3 "Devils Themes and Artwork----------------------Retro Devils " \
       4 "Retro Scrapey----------------------------------Retro Devils " \
+      5 "Frontend Switcheroo----------------------------Retro Devils " \
       - "___________________Audio/Mixed Tools_______________________ " \
-      5 "Apply No Audio Fix--------------------------------Anonymous " \
-      6 "Install I.M.P-----------------------------------RapiEdwin08 " \
-      7 "Install T.A.M.P.O--------------------------------thepitster " \
+      6 "Apply No Audio Fix--------------------------------Anonymous " \
+      7 "Install I.M.P-----------------------------------RapiEdwin08 " \
+      8 "Install T.A.M.P.O--------------------------------thepitster " \
       - "_____________________ Information__________________________ " \
-      8 "I.M.P-------------Integrated Music Player------------------ " \
-      9 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
+      9 "I.M.P-------------Integrated Music Player------------------ " \
+      10 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1880,12 +1883,13 @@ function audio() {
     2) es-themes ;;
     3) devil-themes ;;
     4) retro_scrapey ;;
+    5) fe_switch ;;
     -) none ;;
-    5) no-audio ;;
-    6) imp ;;
-    7) tampo ;;
-    8) imp-info ;;
-    9) tampo-info ;;
+    6) no-audio ;;
+    7) imp ;;
+    8) tampo ;;
+    9) imp-info ;;
+    10) tampo-info ;;
     *) break ;;
     esac
   done
