@@ -22,7 +22,7 @@ local choice
 
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "PEGASUS HELPER " \
-     --ok-button Select --cancel-button Exit \
+     --ok-button Select --cancel-button Back \
      --menu "Version 0.9" 15 30 30 \
       1 "Theme Installer Menu" \
       2 "Help With Pegasus" \
@@ -44,7 +44,7 @@ local choice
 
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "PEGASUS HELPER PI4" \
-     --ok-button Select --cancel-button Exit \
+     --ok-button Select --cancel-button Back \
      --menu "Theme Installer Menu" 20 40 40 \
       1 "ES2---------------Nils Boneberger" \
       2 "Flixnet------------Mátyás Mustoha" \
@@ -90,7 +90,7 @@ local choice
 
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "PEGASUS HELPER PI4" \
-     --ok-button Select --cancel-button Exit \
+     --ok-button Select --cancel-button Back \
      --menu "Help Menu" 20 40 40 \
       1 "Offical " \
       2 "Unoffical " \
