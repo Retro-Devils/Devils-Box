@@ -53,7 +53,7 @@ function main_menu() {
   fi
     choice=(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
       --ok-label Select --cancel-label Exit-Devils-Box \
-      --menu "DEVILS BOX V3.01----------------UPDATED 2/9/22" 20 50 30 )
+      --menu "DEVILS BOX V3.01----------------UPDATED 2/10/22" 20 50 30 )
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
       - "----Downloaders----"
@@ -1819,9 +1819,13 @@ PS3 MAPPED GAMES
 function retro_scrapey() {
 bash "$HOME"/Devils-Box/scripts/Retro-Scrapey.sh
 }
-#           FE-SWITCHEROO          #
+#     FE-SWITCHEROO  FUNCTION      #
 function fe_switch() {
 bash "$HOME"/Devils-Box/scripts/FE-Switcheroo.sh
+}
+#     PEGASUS HELPER FUNCTION      #
+function pegasus_help() {
+bash "$HOME"/Devils-Box/scripts/Pegasus-Helper.sh
 }
 ###------------------------------###
 ###    TOOL BOX MENU FUNCTIONS   ###
@@ -1868,13 +1872,14 @@ function audio() {
       3 "Devils Themes and Artwork----------------------Retro Devils " \
       4 "Retro Scrapey----------------------------------Retro Devils " \
       5 "Frontend Switcheroo----------------------------Retro Devils " \
+      6 "Pegasus FE Helper------------------------------Retro Devils " \
       - "___________________Audio/Mixed Tools_______________________ " \
-      6 "Apply No Audio Fix--------------------------------Anonymous " \
-      7 "Install I.M.P-----------------------------------RapiEdwin08 " \
-      8 "Install T.A.M.P.O--------------------------------thepitster " \
+      7 "Apply No Audio Fix--------------------------------Anonymous " \
+      8 "Install I.M.P-----------------------------------RapiEdwin08 " \
+      9 "Install T.A.M.P.O--------------------------------thepitster " \
       - "_____________________ Information__________________________ " \
-      9 "I.M.P-------------Integrated Music Player------------------ " \
-      10 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
+      10 "I.M.P-------------Integrated Music Player------------------ " \
+      11 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -1884,12 +1889,13 @@ function audio() {
     3) devil-themes ;;
     4) retro_scrapey ;;
     5) fe_switch ;;
+    6) pegasus_help ;;
     -) none ;;
-    6) no-audio ;;
-    7) imp ;;
-    8) tampo ;;
-    9) imp-info ;;
-    10) tampo-info ;;
+    7) no-audio ;;
+    8) imp ;;
+    9) tampo ;;
+    10) imp-info ;;
+    11) tampo-info ;;
     *) break ;;
     esac
   done
