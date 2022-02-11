@@ -27,16 +27,12 @@ local choice
       1 "Theme Installer Menu" \
       2 "Theme Converter Menu" \
       3 "Help With Pegasus" \
-      + "----------------------------" \
-      4 "Update This Helper" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) theme_menu ;;
     2) convert_theme ;;
     3) help       ;;
-    +) none ;;
-    4) update     ;;
     *) break ;;
     esac
   done
