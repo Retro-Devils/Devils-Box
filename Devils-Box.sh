@@ -69,7 +69,7 @@ function main_menu() {
       - "--Fast System Tools--"
       7 "Reboot System"
       8 "Show System Info"
-      9 "Expand System Memory"
+      9 "Expand System Memory")
     else
       options=( \
       1 "Install Devils-Box")
