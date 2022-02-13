@@ -2453,7 +2453,7 @@ sudo rm /home/pi/RetroPie/roms/arcade/tekken3.zip
 sleep 2 
 echo ${bld}$(tput setaf 1)"---Adding Devils Track 2---"
 sleep 2
-wget "https://archive.org/download/devils-updates/Music/NEFFEX - Rollin' With The Devil.mp3" -P "/home/pi/bgm/NEFFEX - Rollin' With The Devil.mp3"
+wget "https://archive.org/download/devils-updates/Music/NEFFEX - Rollin' With The Devil.mp3" -P "/home/pi/bgm/"
 echo ${bld}$(tput setaf 1)"---Replacing Wine Logo---"
 wget https://github.com/ALLRiPPED/es-theme-devil-chromey/raw/main/wine/_inc/system.png && mv -f system.png "/opt/retropie/configs/all/emulationstation/themes/devil chromey/wine/_inc"
 wget https://github.com/ALLRiPPED/es-theme-devil-chromey/raw/main/mugen/_inc/system.png && mv -f system.png "/opt/retropie/configs/all/emulationstation/themes/devil chromey/mugen/_inc"
