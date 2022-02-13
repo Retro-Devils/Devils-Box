@@ -38,6 +38,8 @@ if [ $? -eq 0 ]; then
 else
   NETCHECK=1
 fi
+#--REQUIRED FOR FUTURE UPDATES--#
+if ! command -v pv &> /dev/null; then sudo apt -y install pv; fi
 
 ###-----------------------###
 ### MAIN MENU FUNCTIONS   ###
@@ -53,7 +55,7 @@ function main_menu() {
   fi
     choice=(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
       --ok-label Select --cancel-label Exit-Devils-Box \
-      --menu "DEVILS BOX V3.01--------------UPDATED 2/10/22" 20 50 30 )
+      --menu "DEVILS BOX V3.01--------------UPDATED 2/13/22" 20 50 30 )
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
       - "----Downloaders----"
