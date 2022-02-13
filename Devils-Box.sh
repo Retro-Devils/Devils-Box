@@ -372,8 +372,8 @@ else
     35) download-packs "naomi" ;;
     36) download-packs "nds" ;;
     37) download-packs "neogeo" ;;
-    38) download-packs "nes" ;;
-    39) download-packs "ngpc" ;;
+    38) download-packs "ngpc" ;;
+    39) download-packs "nes" ;;
     40) download-packs "openbor" ;;
     41) download-packs "oric" ;;
     42) download-packs "pokemini" ;;
