@@ -62,25 +62,25 @@ local choice
 function es2() {
 sudo wget https://archive.org/download/devils-themes/Pegasus-Themes/Pegasus_es2.zip -P /opt/retropie/configs/all/pegasus-fe/
 sudo unzip -o /opt/retropie/configs/all/pegasus-fe/Pegasus_es2.zip -d /opt/retropie/configs/all/pegasus-fe/themes/ &&
-sudo rm -R /opt/retropie/configs/all/pegasus-fe/themes/Pegasus_es2.zip
+sudo rm -R /opt/retropie/configs/all/pegasus-fe/Pegasus_es2.zip
 sudo chmod 755 /opt/retropie/configs/all/pegasus-fe/themes/es2
 }
 function skyline() {
 sudo wget https://archive.org/download/devils-themes/Pegasus-Themes/Pegasus_skylineOS.zip -P /opt/retropie/configs/all/pegasus-fe/
 sudo unzip -o /opt/retropie/configs/all/pegasus-fe/Pegasus_skylineOS.zip -d /opt/retropie/configs/all/pegasus-fe/themes/ &&
-sudo rm -R /opt/retropie/configs/all/pegasus-fe/themes/Pegasus_skylineOS.zip
+sudo rm -R /opt/retropie/configs/all/pegasus-fe/Pegasus_skylineOS.zip
 sudo chmod 755 /opt/retropie/configs/all/pegasus-fe/themes/skylineOS
 }
 function neo_dark() {
 sudo wget https://archive.org/download/devils-themes/Pegasus-Themes/Pegasus_neoretro-dark.zip -P /opt/retropie/configs/all/pegasus-fe/
 sudo unzip -o /opt/retropie/configs/all/pegasus-fe/Pegasus_neoretro-dark.zip -d /opt/retropie/configs/all/pegasus-fe/themes/ &&
-sudo rm -R /opt/retropie/configs/all/pegasus-fe/themes/Pegasus_neoretro-dark.zip
+sudo rm -R /opt/retropie/configs/all/pegasus-fe/Pegasus_neoretro-dark.zip
 sudo chmod 755 /opt/retropie/configs/all/pegasus-fe/themes/neoretro-dark
 }
 function flixnet() {
 sudo wget https://archive.org/download/devils-themes/Pegasus-Themes/Pegasus_flixnet.zip -P /opt/retropie/configs/all/pegasus-fe/
 sudo unzip -o /opt/retropie/configs/all/pegasus-fe/Pegasus_flixnet.zip -d /opt/retropie/configs/all/pegasus-fe/themes/ &&
-sudo rm -R /opt/retropie/configs/all/pegasus-fe/themes/Pegasus_flixnet.zip
+sudo rm -R /opt/retropie/configs/all/pegasus-fe/Pegasus_flixnet.zip
 sudo chmod 755 /opt/retropie/configs/all/pegasus-fe/themes/flixnet
 }
 function help() {
