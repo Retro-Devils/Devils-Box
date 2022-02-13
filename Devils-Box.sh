@@ -58,17 +58,18 @@ function main_menu() {
       --menu "DEVILS BOX V3.01--------------UPDATED 2/13/22" 20 50 30 )
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
-      - "----Downloaders----"
+      - "-----Downloaders-----"
       1 "Artwork Packs"
       2 "Console Packs"
       3 "Hacked Packs"
       4 "Pick & Choose"
-      + "-------Tools-------"
+      + "--------Tools--------"
       5 "Game Tools/Fixes"
       6 "Tool Box  "
-      - "-------------------"
+      - "--Fast System Tools--"
       7 "Reboot System"
-      8 "Show System Info")
+      8 "Show System Info"
+      9 " Expand Memory"
     else
       options=( \
       1 "Install Devils-Box")
@@ -83,6 +84,7 @@ function main_menu() {
     6) tool_box ;;
     7) system_reboot ;;
     8) show_sysinfo ;;
+    9) expand_mem ;;
     -) nono ;;
     +) none ;;
     *) break ;;
@@ -2555,6 +2557,15 @@ read -n 1 -s -r -p "Press any key to Reboot"
 sudo reboot
 }
 
+#------------------#
+#  EXPAND MEM.     #
+#------------------#
+function expand_mem() {
+echo "This will Expand Memory and Reboot"
+read -n 1 -s -r -p "Press any key to Continue"
+sudo raspi-config --expand-rootfs 
+sudo reboot
+}
 #------------------#
 # ARTWORK FUNCTION #
 #------------------# 
