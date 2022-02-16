@@ -58,15 +58,15 @@ function main_menu() {
       --menu "DEVILS BOX V3.05--------------UPDATED 2/16/22" 20 50 30 )
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
-      - "-----Downloaders-----"
+      - "<---->Downloaders<---->"
       1 "Artwork Packs"
       2 "Console Packs"
       3 "Hacked Packs"
       4 "Pick & Choose"
-      + "--------Tools--------"
+      + "<------->Tools<------->"
       5 "Devils Tool Box"
       6 "Community Tool Box"
-      - "---------------------"
+      - "<--------------------->"
       7 "Reboot System"
       8 "Show System Info"
       9 "Expand System Memory")
@@ -100,7 +100,7 @@ dialog  --sleep 1 --title "OFFLINE ERROR !! " --msgbox "
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
 dialog  --sleep 1 --title "ARTWORK PACKS INFO" --msgbox " 
--------------WELCOME---------------
+<-------------WELCOME--------------->
 WHATS THIS DO?
 -DOWNLOADS ARTWORK PACKS
 -TRYS TO SCRAPE AFTERWARDS 
@@ -118,7 +118,7 @@ UNLIKELY. PLEASE USE SCRAPPER" 0 0
       --ok-label Download --cancel-label Main-Menu \
       --menu "[*] MEANS PACK INCLUDES..........[ ] MEANS PACK DOESNT INCLUDE  		
                   -PRESS A/ENTER TO DOWNLOAD.......***MEANS COMING SOON" 30 70 50 \
-      - "_________________Consoles-Regular-Artwork__________________" \
+      - "<----------------Consoles-Regular-Artwork----------------->" \
       1 "Amiga Artwork            [*]box  [*]cart  [*]snap  [*]wheel" \
       2 "AmigaCD32 Artwork        [*]box  [ ]cart  [*]snap  [ ]wheel" \
       3 "Amstrad CPC              [*]box  [ ]cart  [*]snap  [*]wheel" \
@@ -184,7 +184,7 @@ UNLIKELY. PLEASE USE SCRAPPER" 0 0
       63 "Sharp x68000 Artwork     [*]box  [ ]cart  [*]snap  [*]wheel" \
       64 "ZMachine Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
       65 "ZXspectrum Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
-      +  "________________Consoles-Hacks-Artwork_____________________" \
+      +  "<---------------Consoles-Hacks-Artwork-------------------->" \
       66 "GBA Hacks Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
       67 "GameBoy Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
       69 "Genesis Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
@@ -281,7 +281,7 @@ dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox "
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
 dialog  --sleep 1 --title "CONSOLE PACKS INFO" --msgbox " 
--------------WELCOME---------------
+<-------------WELCOME--------------->
 
 WHATS THIS DO?
 -DOWNLOADS GAME PACKS TO CORRECT FOLDERS
@@ -302,7 +302,7 @@ BUT THEY WONT SCRAPE" 0 0
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
       --ok-label Download --cancel-label Main-Menu \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK..........****MEANS COMING SOON" 30 70 50 \
-      + "__CONSOLE NAME___________________SIZE______# OF GAMES" \
+      + "<->CONSOLE NAME<---------------->SIZE<----># OF GAMES" \
       1 "Amiga                            300MB      340 GAMES" \
       2 "AmigaCD32                        461MB      133 GAMES" \
       3 "Amstrad CPC                      614MB     3264 GAMES" \
@@ -446,7 +446,7 @@ dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox "
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
 dialog  --sleep 1 --title "HACKS PACKS INFO" --msgbox " 
--------------WELCOME---------------
+<-------------WELCOME--------------->
 
 WHATS THIS DO?
 -DOWNLOADS GAME PACKS TO CORRECT FOLDERS
@@ -468,7 +468,7 @@ local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED PACKS DOWNLOAD MENU " \
      --ok-button Download --cancel-button Main-Menu \
      --menu " PRESS A/ENTER TO DOWNLOAD PACK" 30 70 50 \
-      + "__CONSOLE NAME________________________SIZE_____# OF GAMES " \
+      + "<->CONSOLE NAME<--------------------->SIZE<---># OF GAMES " \
       1 "Gameboy Advance Hacks                  195MB     26 GAMES " \
       2 "Gameboy Hacks                            4MB     19 GAMES " \
       3 "Genesis Hacks                          197MB    191 GAMES " \
@@ -526,7 +526,7 @@ dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox "
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
 dialog  --sleep 1 --title "PICK & CHOOSE INFO" --msgbox " 
--------------WELCOME---------------
+<-------------WELCOME--------------->
 
 WHATS THIS DO?
 -DOWNLOADS GAMES YOU SELECT
@@ -1930,14 +1930,14 @@ function comm_audio() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " AUDIO & VISUAL TOOLS MENU" \
       --ok-label Select --cancel-label Back \
       --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 70 50 \
-      + "_____________________Visual Tools__________________________ " \
+      + "<------------------->Visual Tools<------------------------> " \
       1 "Emulation Station Themes---------------------------Retropie " \
       2 "Hursty's Themes--------------------------------------Hursty " \
-      - "___________________Audio/Mixed Tools_______________________ " \
+      - "<----------------->Audio/Mixed Tools<---------------------> " \
       3 "Apply No Audio Fix--------------------------------Anonymous " \
       4 "Install I.M.P-----------------------------------RapiEdwin08 " \
       5 "Install T.A.M.P.O--------------------------------thepitster " \
-      - "_____________________ Information__________________________ " \
+      - "<-------------------->Information<------------------------> " \
       6 "I.M.P-------------Integrated Music Player------------------ " \
       7 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
       2>&1 >/dev/tty)
@@ -2352,12 +2352,12 @@ function devils_visual_tools() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS VISUAL TOOLS MENU" \
       --ok-label Select --cancel-label Back \
       --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 50 50 \
-      + "_______Visual Tools_______ " \
+      + "<--->Visual Tools<---------> " \
       1 "Devils Themes and Artwork " \
-      + "______Frontend Tools______ " \
+      + "<--->Frontend Tools<-------> " \
       2 "Frontend Switcheroo " \
       3 "Pegasus FE Helper " \
-      + "_____Experimental Tools___ " \
+      + "<--->Experimental Tools<---> " \
       4 "Retro Scrapey " \
       2>&1 >/dev/tty)
 
