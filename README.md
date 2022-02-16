@@ -4,6 +4,8 @@
 
 "In order to succeed, your desire for success should be greater than your fear of failure."
 
+"F*** B***** GET MONEY"
+
 
 ## UPDATES MONTHLY OR AS NEEDED 
 
