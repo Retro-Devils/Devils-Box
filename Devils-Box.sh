@@ -2407,14 +2407,16 @@ function devils_emu_tools() {
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
       1 "Devils Extras Installer" \
-      2 "SEGA MODEL 3 Installer" \
-      3 "BIOS Installer" \
+      2 "BIOS Installer" \
+      3 "Game Fixes & Tools" \
+      3 "SEGA Model 3 Installer" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) devils-ex ;;
-    2) sm3 ;;
-    3) download-bios ;;
+    2) download-bios ;;
+    3) game_fixes ;;    
+    4) sm3 ;;
     *) break ;;
     esac
   done
