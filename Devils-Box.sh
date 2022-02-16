@@ -55,7 +55,7 @@ function main_menu() {
   fi
     choice=(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
       --ok-label Select --cancel-label Exit-Devils-Box \
-      --menu "DEVILS BOX V3.01--------------UPDATED 2/13/22" 20 50 30 )
+      --menu "DEVILS BOX V3.05--------------UPDATED 2/16/22" 20 50 30 )
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
       - "-----Downloaders-----"
@@ -64,9 +64,9 @@ function main_menu() {
       3 "Hacked Packs"
       4 "Pick & Choose"
       + "--------Tools--------"
-      5 "Game Tools/Fixes"
-      6 "Tool Box  "
-      - "--Fast System Tools--"
+      5 "Devils Tool Box"
+      6 "Community Tool Box"
+      - "---------------------"
       7 "Reboot System"
       8 "Show System Info"
       9 "Expand System Memory")
@@ -80,8 +80,8 @@ function main_menu() {
     2) consoles ;;
     3) hacked ;;
     4) pick ;;
-    5) game_fixes ;;
-    6) tool_box ;;
+    5) devils_tools ;;
+    6) community_tools ;;
     7) system_reboot ;;
     8) show_sysinfo ;;
     9) expand_mem ;;
@@ -99,6 +99,18 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR !! " --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
+dialog  --sleep 1 --title "ARTWORK PACKS INFO" --msgbox " 
+-------------WELCOME---------------
+WHATS THIS DO?
+-DOWNLOADS ARTWORK PACKS
+-TRYS TO SCRAPE AFTERWARDS 
+
+F.A.Q
+WHAT GAMES IS THIS ART FOR?
+THE CONSOLES/GAMES IN DEVILS BOX 
+
+WILL THIS WORK WITH MY GAMES?
+UNLIKELY. PLEASE USE SCRAPPER" 0 0
   local choice
 
  while true; do
@@ -268,6 +280,23 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
+dialog  --sleep 1 --title "CONSOLE PACKS INFO" --msgbox " 
+-------------WELCOME---------------
+
+WHATS THIS DO?
+-DOWNLOADS GAME PACKS TO CORRECT FOLDERS
+-TRYS TO SCRAPE AFTERWARDS 
+
+F.A.Q
+WILL THIS OVERWRITE MY GAMES?
+NOPE 
+ 
+CAN I STOP MIDWAY THRU?
+SURE PRESS CONTROL+C
+
+WILL IT KEEP MY PROGRESS?
+YES. GAMES WILL BE THIER 
+BUT THEY WONT SCRAPE" 0 0
     while true; do
     local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
@@ -416,6 +445,23 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
+dialog  --sleep 1 --title "HACKS PACKS INFO" --msgbox " 
+-------------WELCOME---------------
+
+WHATS THIS DO?
+-DOWNLOADS GAME PACKS TO CORRECT FOLDERS
+-TRYS TO SCRAPE AFTERWARDS 
+
+F.A.Q
+WILL THIS OVERWRITE MY GAMES?
+NOPE 
+ 
+CAN I STOP MIDWAY THRU?
+SURE PRESS CONTROL+C
+
+WILL IT KEEP MY PROGRESS?
+YES. GAMES WILL BE THIER 
+BUT THEY WONT SCRAPE" 0 0
 local choice
 
   while true; do
@@ -479,6 +525,16 @@ if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
+dialog  --sleep 1 --title "PICK & CHOOSE INFO" --msgbox " 
+-------------WELCOME---------------
+
+WHATS THIS DO?
+-DOWNLOADS GAMES YOU SELECT
+
+HOW TO USE?
+-PICK A SYSTEM
+-CHOOSE YOUR GAME(S) 
+-CLICK DOWNLOAD" 0 0
 local choice
   
   while true; do
@@ -493,10 +549,10 @@ local choice
       6 "Nintendo 64" \
       7 "Nintendo DS" \
       8 "NES" \
-      9 "Playstation 1" \
-      10 "Saturn" \
-      11 "Super Nintendo" \
-      12 "PC DOS Games" \
+      9 "PC DOS Games" \
+      10 "Playstation 1" \
+      11 "Saturn" \
+      12 "Super Nintendo" \
       13 "Wine" \
       2>&1 >/dev/tty)
 
@@ -509,10 +565,10 @@ local choice
     6) n64 ;;
     7) nds ;;
     8) nes ;;
-    9) psx ;;
-    10) saturn ;;
-    11) snes ;;
-    12) pcgames ;;
+    9) pcgames ;;
+    10) psx ;;
+    11) saturn ;;
+    12) snes ;;
     13) winegames ;;
     *) break ;;
     esac
@@ -1838,39 +1894,36 @@ bash "$HOME"/Devils-Box/scripts/FE-Switcheroo.sh
 function pegasus_help() {
 bash "$HOME"/Devils-Box/scripts/Pegasus-Helper.sh
 }
-###------------------------------###
-###    TOOL BOX MENU FUNCTIONS   ###
-###------------------------------###
-function tool_box() {
+###---------------------------------------###
+###   COMMUNITY TOOL BOX MENU FUNCTIONS   ###
+###---------------------------------------###
+function community_tools() {
   while true; do 
+dialog  --sleep 1 --title "COMMUNITY TOOLBOX" --msgbox " 
+---------------WELCOME------------------
+TOOLS HERE MADE & MAINTANED BY COMMUNITY 
+WE WILL DO OUR BEST TO KEEP UP TO DATE" 0 0
   local choice
-    choice=$(dialog --backtitle "$BACKTITLE" --title " TOOL BOX MENU " \
+    choice=$(dialog --backtitle "$BACKTITLE" --title " COMMUNITY TOOL BOX MENU " \
       --ok-label Select --cancel-label Main-Menu \
       --menu "SELECT TOOLSET AND PRESS A  " 20 50 30 \
-      1 "Audio & Visual Tools   " \
-      2 "Emulator Tools    " \
-      3 "Hardware Tools       " \
-      - "---------------------" \
-      4 "Devils Box Tools  " \
-      - "---------------------" \
-      5 "Diablos Arcade Tools " \
+      1 "Community Audio & Visual Tools   " \
+      2 "Community Emulator Tools    " \
+      3 "Community Hardware Tools       " \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) audio ;;
-    2) emu_tools ;;
-    3) hardware_tools ;;
-    -) none ;;
-    4) db_tools ;;
-    5) da_tools ;;
+    1) comm_audio ;;
+    2) comm_emu_tools ;;
+    3) comm_hardware_tools ;;
     *) break ;;
     esac
   done
 }
-#-----------------------------------------#
-#   AUDIO & VISUAL TOOLS MENU FUNCTIONS   #
-#-----------------------------------------#
-function audio() {
+#---------------------------------------------#
+#  COMMUNITY AUDIO & VISUAL TOOLS FUNCTIONS   #
+#---------------------------------------------#
+function comm_audio() {
   local choice
 
   while true; do
@@ -1880,33 +1933,25 @@ function audio() {
       + "_____________________Visual Tools__________________________ " \
       1 "Emulation Station Themes---------------------------Retropie " \
       2 "Hursty's Themes--------------------------------------Hursty " \
-      3 "Devils Themes and Artwork----------------------Retro Devils " \
-      4 "Retro Scrapey----------------------------------Retro Devils " \
-      5 "Frontend Switcheroo----------------------------Retro Devils " \
-      6 "Pegasus FE Helper------------------------------Retro Devils " \
       - "___________________Audio/Mixed Tools_______________________ " \
-      7 "Apply No Audio Fix--------------------------------Anonymous " \
-      8 "Install I.M.P-----------------------------------RapiEdwin08 " \
-      9 "Install T.A.M.P.O--------------------------------thepitster " \
+      3 "Apply No Audio Fix--------------------------------Anonymous " \
+      4 "Install I.M.P-----------------------------------RapiEdwin08 " \
+      5 "Install T.A.M.P.O--------------------------------thepitster " \
       - "_____________________ Information__________________________ " \
-      10 "I.M.P-------------Integrated Music Player------------------ " \
-      11 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
+      6 "I.M.P-------------Integrated Music Player------------------ " \
+      7 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     +) nono ;;
-    1) hursty-themes ;;
-    2) es-themes ;;
-    3) devil-themes ;;
-    4) retro_scrapey ;;
-    5) fe_switch ;;
-    6) pegasus_help ;;
+    1) es-themes ;;
+    2) hursty-themes ;;
     -) none ;;
-    7) no-audio ;;
-    8) imp ;;
-    9) tampo ;;
-    10) imp-info ;;
-    11) tampo-info ;;
+    3) no-audio ;;
+    4) imp ;;
+    5) tampo ;;
+    6) imp-info ;;
+    7) tampo-info ;;
     *) break ;;
     esac
   done
@@ -1927,28 +1972,6 @@ function hursty-themes () {
 wget https://raw.githubusercontent.com/RetroHursty69/HurstyThemes/master/install.sh
 chmod +x "install.sh"
 ./install.sh
-}
-
-#----DEVILS THEMES MENU--------#
-function devil-themes() {
-  while true; do 
-  local choice
-    choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS THEMES MENU " \
-      --ok-label Select --cancel-label Main-Menu \
-      --menu "SELECT THEME AND PRESS A  " 20 50 30 \
-      1 "Devil Chromey   " \
-      2>&1 >/dev/tty)
-
-    case "$choice" in
-    1) devil-chromey ;;
-    *) break ;;
-    esac
-  done
-}
-function devil-chromey() {
-wget https://archive.org/download/devils-themes/devil-chromey.zip -P ${HOME}/
-unzip -o "$HOME"/devil-chromey.zip -d /home/pi/.emulationstation/themes/
-sudo rm -R "$HOME"/devil-chromey.zip
 }
 function no-audio () {
 sudo grep hdmi_force_edid_audio /boot/config.txt > /dev/null 2>&1
@@ -2004,57 +2027,28 @@ cat /home/pi/Devils-Box/files/tampo/README.md
 read -n 1 -s -r -p "Press any key to Continue"
 fi
 }
-
-###-----------------------------------###
-###  EMU TOOLS MENU FUNCTIONS   ###
-###-----------------------------------###
-function emu_tools() {
+###---------------------------------------###
+###  COMMUNITY EMU TOOLS MENU FUNCTIONS   ###
+###---------------------------------------###
+function comm_emu_tools() {
   local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title "EMULATOR TOOLS MENU" \
+    choice=$(dialog --backtitle "$BACKTITLE" --title "COMMUNITY EMU TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 70 50 \
-      1 "Devils Extras Installer-----------Retro Devils" \
-      2 "RetroPie Setup Menu------------------Retro Pie" \
-      3 "Mugen Installer-----------Supreme/Retro Devils" \
-      4 "PIKISS Installer-----------------Jose Cerrejon" \
-      5 "SEGA MODEL 3 Installer------------Retro Devils" \
-      6 "BIOS Files------------------------Retro Devils" \
+      1 "RetroPie Setup Menu------------------Retro Pie" \
+      2 "Mugen Installer-----------Supreme/Retro Devils" \
+      3 "PIKISS Installer-----------------Jose Cerrejon" \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) devils-ex ;;
-    2) rpi-menu ;;
-    3) mugen ;;
-    4) pikiss ;;
-    5) sm3 ;;
-    6) download-bios ;;
+    1) rpi-menu ;;
+    2) mugen ;;
+    3) pikiss ;;
     *) break ;;
     esac
   done
-}
-function devils-ex() {
-if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-else
-curl -sSL https://git.io/J9Z8c | bash
-fi
-}
-
-
-#----------------------------------#
-#       SM3 EMU FUNCTIONS        #
-#----------------------------------#
-function sm3() {
-if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-else
-clear
-curl -sSL https://git.io/JSDOy | bash
-fi
 }
 
 #----------------------------------#
@@ -2063,6 +2057,9 @@ fi
 function rpi-menu() {
   sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
 }
+#-----------#
+#   PIKISS  #
+#-----------#
 function pikiss() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox "
@@ -2076,6 +2073,9 @@ else
   fi
 fi
 }
+#---------------#
+#     MUGEN     #
+#---------------#
 function mugen() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
@@ -2108,7 +2108,7 @@ fi
 ###---------------------------------###
 ###   HARDWARE TOOLS MENU FUNCTIONS ###
 ###---------------------------------###
-function hardware_tools() {
+function comm_hardware_tools() {
   local choice
 
   while true; do
@@ -2142,6 +2142,9 @@ sudo rm "$HOME"/.emulationstation/es_input.cfg
 sudo rm /opt/retropie/configs/all/emulationstation/es_temporaryinput.cfg
 }
 
+#--------#
+# HDD IN #
+#--------#
 function hdd-in() { 
 clear
 mkdir /home/pi/addonusb > /dev/null 2>&1
@@ -2226,6 +2229,9 @@ sleep 10
 sudo halt
 fi
 }
+#---------#
+# HDD OUT #
+#---------#
 function hdd-out() {
 clear
 if [ ! -d /home/pi/RetroPie/localroms ]; then
@@ -2307,6 +2313,134 @@ dialog  --sleep 1 --title "RetroFlag GPI Install" --msgbox "
 -After complete system will reboot." 0 0
 wget -O - "https://raw.githubusercontent.com/ALLRiPPED/retroflag-picase/master/install_gpi.sh" | sudo bash
 }
+###------------------------------------###
+###   DEVILS TOOL BOX MENU FUNCTIONS   ###
+###------------------------------------###
+function devils_tools() {
+  while true; do
+dialog  --sleep 1 --title "DEVILS TOOLBOX" --msgbox " 
+---------------WELCOME------------------
+TOOLS HERE ARE MADE BY THE RETRO DEVILS " 0 0
+  local choice
+    choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS TOOL BOX MENU " \
+      --ok-label Select --cancel-label Main-Menu \
+      --menu "SELECT TOOLSET AND PRESS A  " 20 50 30 \
+      1 "Devils Emulator Tools " \
+      2 "Devils Visual Tools " \
+      - "----------------------" \
+      3 "Devils Box Tools " \
+      4 "Diablos Arcade Tools " \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) devils_emu_tools ;;
+    2) devils_visual_tools ;;
+    -) none ;;
+    3) db_tools ;;
+    4) da_tools ;;
+    *) break ;;
+    esac
+  done
+}
+#------------------------------------------#
+#  DEVILS AUDIO & VISUAL TOOLS FUNCTIONS   #
+#------------------------------------------#
+function devils_visual_tools() {
+  local choice
+
+  while true; do
+    choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS VISUAL TOOLS MENU" \
+      --ok-label Select --cancel-label Back \
+      --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 50 50 \
+      + "_______Visual Tools_______ " \
+      1 "Devils Themes and Artwork " \
+      + "______Frontend Tools______ " \
+      2 "Frontend Switcheroo " \
+      3 "Pegasus FE Helper " \
+      + "_____Experimental Tools___ " \
+      4 "Retro Scrapey " \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    +) none ;;
+    1) devil-themes ;;
+    +) none ;;
+    2) fe_switch ;;
+    3) pegasus_help ;;
+    +) none ;;
+    4) retro_scrapey ;;
+    *) break ;;
+    esac
+  done
+}
+
+#----DEVILS THEMES MENU--------#
+function devil-themes() {
+  while true; do 
+  local choice
+    choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS THEMES MENU " \
+      --ok-label Select --cancel-label Main-Menu \
+      --menu "SELECT THEME AND PRESS A  " 20 50 30 \
+      1 "Devil Chromey   " \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) devil-chromey ;;
+    *) break ;;
+    esac
+  done
+}
+function devil-chromey() {
+wget https://archive.org/download/devils-themes/devil-chromey.zip -P ${HOME}/
+unzip -o "$HOME"/devil-chromey.zip -d /home/pi/.emulationstation/themes/
+sudo rm -R "$HOME"/devil-chromey.zip
+}
+
+###------------------------------------###
+###  DEVILS EMU TOOLS MENU FUNCTIONS   ###
+###------------------------------------###
+function devils_emu_tools() {
+  local choice
+
+  while true; do
+    choice=$(dialog --backtitle "$BACKTITLE" --title "COMMUNITY EMU TOOLS MENU" \
+      --ok-label Install --cancel-label Back \
+      --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
+      1 "Devils Extras Installer" \
+      2 "SEGA MODEL 3 Installer" \
+      3 "BIOS Installer" \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) devils-ex ;;
+    2) sm3 ;;
+    3) download-bios ;;
+    *) break ;;
+    esac
+  done
+}
+function devils-ex() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+else
+curl -sSL https://git.io/J9Z8c | bash
+fi
+}
+
+#----------------------------------#
+#       SM3 EMU FUNCTIONS        #
+#----------------------------------#
+function sm3() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+else
+clear
+curl -sSL https://git.io/JSDOy | bash
+fi
+}
+
 ###---------------------------------###
 ###   DEVILS BOX TOOLS FUNCTION     ###
 ###---------------------------------###
@@ -2495,9 +2629,6 @@ Please update for newest awesomness" 0 0
 clear
 da-version
 }
-###---------------------------------###
-###   MISC DEVILS BOX FUNCTIONS     ###
-###---------------------------------###
 
 #----------------------------#
 # SHOW DISK SPACE FUNCTION   #
