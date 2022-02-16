@@ -64,8 +64,8 @@ function main_menu() {
       3 "Hacked Packs"
       4 "Pick & Choose"
       + "<------->Tools<------->"
+      6 "Community Tool Box"      
       5 "Devils Tool Box"
-      6 "Community Tool Box"
       - "<--------------------->"
       7 "Reboot System"
       8 "Show System Info"
@@ -80,8 +80,8 @@ function main_menu() {
     2) consoles ;;
     3) hacked ;;
     4) pick ;;
-    5) devils_tools ;;
-    6) community_tools ;;
+    5) community_tools ;;
+    6) devils_tools ;;
     7) system_reboot ;;
     8) show_sysinfo ;;
     9) expand_mem ;;
