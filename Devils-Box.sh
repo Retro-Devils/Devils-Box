@@ -346,25 +346,26 @@ BUT THEY WONT SCRAPE" 0 0
       41 "Oric                             5.4MB      136 GAMES" \
       42 "Pokemini                         5.4MB       44 GAMES" \
       43 "PlayStation 1                      3GB       29 GAMES" \
-      44 "Sega Saturn                      108GB      303 GAMES" \
-      45 "Sega Saturn Japan                3.9GB       18 GAMES" \
-      46 "ScummVM                          2.5GB       21 GAMES" \
-      47 "Sega32x                           63MB       37 GAMES" \
-      48 "SegaCD                            11GB       52 GAMES" \
-      49 "Super Famicon                    475MB      487 GAMES" \
-      50 "SG-1000                            1MB       68 GAMES" \
-      51 "SNES                             508MB      603 GAMES" \
-      52 "SuperGraffiix                    2.4MB        5 GAMES" \
-      53 "Turbo Graffix 16                  20MB       94 GAMES" \
-      54 "Vectrex                          201KB       20 GAMES" \
-      55 "VideoPAC                         430KB       99 GAMES" \
-      56 "Virtual Boy                        8MB       24 GAMES" \
-      57 "Dreamcast VMU                      3MB      115 GAMES" \
-      58 "Wonderswan Color                 116MB       84 GAMES" \
-      59 "Sharp X1                         7.6MB       69 GAMES" \
-      60 "Sharp X68000                     504MB      418 GAMES" \
-      61 "ZMachine                           4MB       30 GAMES" \
-      62 "ZXSpectrum                        38MB     1111 GAMES" \
+      44 "PSP                              ???GB      600 GAMES" \
+      45 "Sega Saturn                      108GB      303 GAMES" \
+      46 "Sega Saturn Japan                3.9GB       18 GAMES" \
+      47 "ScummVM                          2.5GB       21 GAMES" \
+      48 "Sega32x                           63MB       37 GAMES" \
+      49 "SegaCD                            11GB       52 GAMES" \
+      50 "Super Famicon                    475MB      487 GAMES" \
+      51 "SG-1000                            1MB       68 GAMES" \
+      52 "SNES                             508MB      603 GAMES" \
+      53 "SuperGraffiix                    2.4MB        5 GAMES" \
+      54 "Turbo Graffix 16                  20MB       94 GAMES" \
+      55 "Vectrex                          201KB       20 GAMES" \
+      56 "VideoPAC                         430KB       99 GAMES" \
+      57 "Virtual Boy                        8MB       24 GAMES" \
+      58 "Dreamcast VMU                      3MB      115 GAMES" \
+      59 "Wonderswan Color                 116MB       84 GAMES" \
+      60 "Sharp X1                         7.6MB       69 GAMES" \
+      61 "Sharp X68000                     504MB      418 GAMES" \
+      62 "ZMachine                           4MB       30 GAMES" \
+      63 "ZXSpectrum                        38MB     1111 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -411,25 +412,26 @@ BUT THEY WONT SCRAPE" 0 0
     41) download-packs "oric" ;;
     42) download-packs "pokemini" ;;
     43) download-packs "psx" ;;
-    44) download-packs "saturn" ;;
-    45) download-packs "saturn-japan" ;;
-    46) download-packs "scummvm" ;;
-    47) download-packs "sega32x" ;;
-    48) download-packs "segacd" ;;
-    40) download-packs "sfc" ;;
-    50) download-packs "sg-1000" ;;
-    51) download-packs "snes" ;;
-    52) download-packs "supergrafx" ;;
-    53) download-packs "tg16" ;;
-    54) download-packs "vectrex" ;;
-    55) download-packs "videopac" ;;
-    56) download-packs "virtualboy" ;;
-    57) download-packs "svmu" ;;
-    58) download-packs "wonderswancolor" ;;
-    59) download-packs "x1" ;;
-    60) download-packs "x68000" ;;
-    61) download-packs "zmachine" ;;
-    62) download-packs "zxspectrum" ;;  
+    44) psp-pack ;;
+    45) download-packs "saturn" ;;
+    46) download-packs "saturn-japan" ;;
+    47) download-packs "scummvm" ;;
+    48) download-packs "sega32x" ;;
+    49) download-packs "segacd" ;;
+    50) download-packs "sfc" ;;
+    51) download-packs "sg-1000" ;;
+    52) download-packs "snes" ;;
+    53) download-packs "supergrafx" ;;
+    54) download-packs "tg16" ;;
+    55) download-packs "vectrex" ;;
+    56) download-packs "videopac" ;;
+    57) download-packs "virtualboy" ;;
+    58) download-packs "svmu" ;;
+    59) download-packs "wonderswancolor" ;;
+    60) download-packs "x1" ;;
+    61) download-packs "x68000" ;;
+    62) download-packs "zmachine" ;;
+    63) download-packs "zxspectrum" ;;  
      +) none  ;;
      *) break ;;
     esac
@@ -1281,6 +1283,21 @@ function psx() {
             27) download-game "psx" "Tony Hawk's Pro Skater 3 (USA).pbp" ;;
             28) download-game "psx" "Tony Hawk's Pro Skater 4 (USA).pbp" ;;
             29) download-game "psx" "Twisted Metal (USA).pbp" ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
+function psp() {
+          whiptail --clear --title "PICK & CHOOSE PSP" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+            "1" "Aliens vs Predator - Requiem" off \
+            "2" "Ape Escape - On the Loose" off \
+            2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+            1) download-psp "Aliens vs Predator - Requiem (US).iso" ;;
+            2) download-psp "Ape Escape - On the Loose (US).iso" ;;
             *) ;;
         esac
         done < /tmp/results
@@ -2797,7 +2814,28 @@ clear
   sudo rm -r "$HOME"/RetroPie/roms/pc/"${1}"
 fi
 }
-
+#----------------------#
+#  PSP GAMES FUNCTIONS  #
+#----------------------#
+function download-psp() {
+if [ ! -d "$HOME/RetroPie/roms/pc/" ]; then dialog  --sleep 1 --title "PSP FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST6}/"${1}" -P "$HOME"/RetroPie/roms/psp -erobots=off
+fi
+}
+function psp-pack() {
+if [ ! -d "$HOME"/RetroPie/roms/psp/ ]; then dialog  --sleep 1 --title "PSP FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+else
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST6}"/ -P "$HOME"/RetroPie/roms/psp -erobots=off
+rm -f "$HOME"/RetroPie/roms/psp/index.html.tmp
+echo ${bld}$(tput setaf 1)"-----SCRAPING NEW GAMES INFO NOW------"
+sleep 5
+cd "$HOME/RetroPie/roms/psp/"
+/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
+fi
+}
 #-----------------#
 #  MUGEN FUNCTION  #
 #-----------------#
