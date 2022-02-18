@@ -1342,7 +1342,7 @@ function psp() {
             "48" "Monster Hunter Freedom" off \
             "49" "NBA 08 (US)" off \
             "50" "NHL 07 (US).iso" off \
-            2>/tmp/results
+                2>/tmp/results
     while read -r choice  
         do
         case $choice in
