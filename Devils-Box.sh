@@ -1356,12 +1356,12 @@ function psp() {
             10) download-psp "Cabela Dangerous Hunts - Ultimate Challenge (US).iso" ;;
             11) download-psp "Capcom Classics Collection Reloaded (US).iso" ;;
             22) download-psp "Castlevania - The Dracula X Chronicles (US).iso" ;;
-            13) download-psp "Cladun - This is an RPG! (US).iso ;;
+            13) download-psp "Cladun - This is an RPG! (US).iso" ;;
             14) download-psp "Crystal Defenders (US).iso" ;;
             15) download-psp "Dantes Inferno (US).iso" ;;
             16) download-psp "Daxter (US).iso" ;;
             17) download-psp "Dead Head Fred (US).iso" ;;
-            18) download-psp "Death Jr. 2 - Root of Evil (US).iso " ;;
+            18) download-psp "Death Jr. 2 - Root of Evil (US).iso" ;;
             19) download-psp "Dragon Ball Z - Shin Budokai (US).iso" ;;
             20) download-psp "Dragon Ball Z - Tenkaichi Tag Team (USA) (En,Fr,Es).iso" ;;
             21) download-psp "Dungeon Explorer - Warriors of Ancient Arts (US).iso" ;;
