@@ -22,7 +22,7 @@ HOST2="https://archive.org/download/the-devils-box_202112"
 HOST3="https://archive.org/download/devils-bios"
 HOST4="https://archive.org/download/devils-wine"
 HOST5="https://archive.org/download/devils-dos"
-#HOST6=""
+HOST6="https://archive.org/download/PSP_US_Arquivista"
 
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
