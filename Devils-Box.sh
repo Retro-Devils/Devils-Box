@@ -1351,7 +1351,7 @@ function psp() {
             5) download-psp "BlazBlue - Calamity Trigger (US).iso" ;;
             6) download-psp "Blazing Souls Accelate (US).iso" ;;
             7) download-psp "Bomberman Land (US).iso" ;;
-            8) download-psp "Brave Story - New Traveler (US).iso ;;
+            8) download-psp "Brave Story - New Traveler (US).iso" ;;
             9) download-psp "Burnout Legends (US).iso" ;;
             10) download-psp "Cabela Dangerous Hunts - Ultimate Challenge (US).iso" ;;
             11) download-psp "Capcom Classics Collection Reloaded (US).iso" ;;
