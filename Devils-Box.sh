@@ -1292,7 +1292,7 @@ function psx() {
 }
 function psp() {
         local choice
-          whiptail --clear --title "PICK & CHOOSE PSP" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+    whiptail --clear --title "PICK & CHOOSE PSP" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
             "1" "Aliens vs Predator - Requiem" off \
             "2" "Ape Escape - On the Loose" off \
@@ -1344,7 +1344,7 @@ function psp() {
             "48" "Monster Hunter Freedom" off \
             "49" "NBA 08 (US)" off \
             "50" "NHL 07 (US).iso" off \
-                2>/tmp/results
+            2>/tmp/results
     while read -r choice  
         do
         case $choice in
@@ -1359,7 +1359,7 @@ function psp() {
             9) download-psp "Burnout Legends (US).iso" ;;
             10) download-psp "Cabela Dangerous Hunts - Ultimate Challenge (US).iso" ;;
             11) download-psp "Capcom Classics Collection Reloaded (US).iso" ;;
-            22) download-psp "Castlevania - The Dracula X Chronicles (US).iso" ;;
+            12) download-psp "Castlevania - The Dracula X Chronicles (US).iso" ;;
             13) download-psp "Cladun - This is an RPG! (US).iso" ;;
             14) download-psp "Crystal Defenders (US).iso" ;;
             15) download-psp "Dantes Inferno (US).iso" ;;
