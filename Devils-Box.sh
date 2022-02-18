@@ -1292,12 +1292,108 @@ function psp() {
       --ok-button Download --cancel-button Back \
             "1" "Aliens vs Predator - Requiem" off \
             "2" "Ape Escape - On the Loose" off \
+            "3" "Assassins Creed - Bloodlines" off \
+            "4" "Astro Boy - The Video Game" off \
+            "5" "BlazBlue - Calamity Trigger" off \
+            "6" "Blazing Souls Accelate" off \
+            "7" "Bomberman Land" off \
+            "8" "Brave Story - New Traveler" off \
+            "9" "Burnout Legends" off \
+            "10" "Cabela Dangerous Hunts - Ultimate Challenge" off \
+            "11" "Capcom Classics Collection Reloaded" off \
+            "12" "Castlevania - The Dracula X Chronicles" off \
+            "13" "Cladun - This is an RPG!" off \
+            "14" "Crystal Defenders" off \
+            "15" "Dantes Inferno" off \
+            "16" "Daxter" off \
+            "17" "Dead Head Fred" off \
+            "18" "Death Jr. 2 - Root of Evil" off \
+            "19" "Dragon Ball Z - Shin Budokai" off \
+            "20" "Dragon Ball Z - Tenkaichi Tag Team" off \
+            "21" "Dungeon Explorer - Warriors of Ancient Arts" off \
+            "22" "Dungeon Maker - Hunting Ground" off \
+            "23" "Dynasty Warriors" off \
+            "24" "EA Replay" off \
+            "25" "FIFA Soccer 10" off \
+            "26" "Family Guy - Video Game!" off \
+            "27" "Frogger - Helmet Chaos" off \
+            "28" "G.I. Joe - The Rise of Cobra" off \
+            "29" "Ghost in the Shell - Stand Alone Complex" off \
+            "30" "Gradius Collection" off \
+            "31" "Gran Turismo" off \
+            "32" "Grand Theft Auto - Chinatown Wars" off \
+            "33" "Grand Theft Auto - Liberty City Stories" off \
+            "34" "Guilty Gear Judgment" off \
+            "35" "Guilty Gear XX Accent Core Plus" off \
+            "36" "Half-Minute Hero" off \
+            "37" "Hard Rock Casino (US).iso" off \
+            "38" "Harvest Moon - Hero of Leaf Valley" off \
+            "39" "Invizimals (US).iso" off \
+            "40" "Jak and Daxter - The Lost Frontier" off \s
+            "41" "Justice League Heroes" off \
+            "42" "LEGO Star Wars 2 - The Original Trilogy" off \
+            "43" "Legend of the Dragon (US).iso" off \
+            "44" "Lumines - Puzzle Fusion" off \
+            "45" "Marvel - Ultimate Alliance 2" off \
+            "46" "Metal Gear Ac!d 2" off \
+            "47" "Metal Gear Solid - Portable Ops" off \
+            "48" "Monster Hunter Freedom" off \
+            "49" "NBA 08 (US)" off \
+            "50" "NHL 07 (US).iso" off \
             2>/tmp/results
     while read -r choice  
         do
         case $choice in
             1) download-psp "Aliens vs Predator - Requiem (US).iso" ;;
             2) download-psp "Ape Escape - On the Loose (US).iso" ;;
+            3) download-psp "Assassins Creed - Bloodlines (US).iso" ;;
+            4) download-psp "Astro Boy - The Video Game (US).iso" ;;
+            5) download-psp "BlazBlue - Calamity Trigger (US).iso" ;;
+            6) download-psp "Blazing Souls Accelate (US).iso" ;;
+            7) download-psp "Bomberman Land (US).iso" ;;
+            8) download-psp "Brave Story - New Traveler (US).iso ;;
+            9) download-psp "Burnout Legends (US).iso" ;;
+            10) download-psp "Cabela Dangerous Hunts - Ultimate Challenge (US).iso" ;;
+            11) download-psp "Capcom Classics Collection Reloaded (US).iso" ;;
+            22) download-psp "Castlevania - The Dracula X Chronicles (US).iso" ;;
+            13) download-psp "Cladun - This is an RPG! (US).iso ;;
+            14) download-psp "Crystal Defenders (US).iso" ;;
+            15) download-psp "Dantes Inferno (US).iso" ;;
+            16) download-psp "Daxter (US).iso" ;;
+            17) download-psp "Dead Head Fred (US).iso" ;;
+            18) download-psp "Death Jr. 2 - Root of Evil (US).iso " ;;
+            19) download-psp "Dragon Ball Z - Shin Budokai (US).iso" ;;
+            20) download-psp "Dragon Ball Z - Tenkaichi Tag Team (USA) (En,Fr,Es).iso" ;;
+            21) download-psp "Dungeon Explorer - Warriors of Ancient Arts (US).iso" ;;
+            22) download-psp "Dungeon Maker - Hunting Ground (US).iso" ;;
+            23) download-psp "Dynasty Warriors (US).iso" ;;
+            24) download-psp "EA Replay (US).iso" ;;
+            25) download-psp "FIFA Soccer 10 (US).iso" ;;
+            26) download-psp "Family Guy - Video Game! (US).iso" ;;
+            27) download-psp "Frogger - Helmet Chaos (US).iso" ;;
+            28) download-psp "G.I. Joe - The Rise of Cobra (US).iso" ;;
+            29) download-psp "Ghost in the Shell - Stand Alone Complex (US).iso" ;;
+            30) download-psp "Gradius Collection (US).iso" ;;
+            31) download-psp "Gran Turismo (US).iso" ;;
+            32) download-psp "Grand Theft Auto - Chinatown Wars (US).iso" ;;
+            33) download-psp "Grand Theft Auto - Liberty City Stories (US).iso" ;;
+            34) download-psp "Guilty Gear Judgment (US).iso" ;;
+            35) download-psp "Guilty Gear XX Accent Core Plus (US).iso" ;;
+            36) download-psp "Half-Minute Hero (US).iso" ;;
+            37) download-psp "Hard Rock Casino (US).iso" ;;
+            38) download-psp "Harvest Moon - Hero of Leaf Valley (US).iso" ;;
+            39) download-psp "Invizimals (US).iso" ;;
+            40) download-psp "Jak and Daxter - The Lost Frontier (US).iso" ;;
+            41) download-psp "Justice League Heroes (US).iso" ;;
+            42) download-psp "LEGO Star Wars 2 - The Original Trilogy (US).iso" ;;
+            43) download-psp "Legend of the Dragon (US).iso" ;;
+            44) download-psp "Lumines - Puzzle Fusion (US).iso" ;;
+            45) download-psp "Marvel - Ultimate Alliance 2 (US).iso" ;;
+            46) download-psp "Metal Gear Ac!d 2 (US).iso" ;;
+            47) download-psp "Metal Gear Solid - Portable Ops (US).iso" ;;
+            48) download-psp "Monster Hunter Freedom (US).iso" ;;
+            49) download-psp "NBA 08 (US).iso" ;;
+            50) download-psp "NHL 07 (US).iso" ;;
             *) ;;
         esac
         done < /tmp/results
