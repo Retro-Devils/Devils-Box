@@ -1333,7 +1333,7 @@ function psp() {
             "37" "Hard Rock Casino (US).iso" off \
             "38" "Harvest Moon - Hero of Leaf Valley" off \
             "39" "Invizimals (US).iso" off \
-            "40" "Jak and Daxter - The Lost Frontier" off \s
+            "40" "Jak and Daxter - The Lost Frontier" off \
             "41" "Justice League Heroes" off \
             "42" "LEGO Star Wars 2 - The Original Trilogy" off \
             "43" "Legend of the Dragon (US).iso" off \
