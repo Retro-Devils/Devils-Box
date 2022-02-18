@@ -1221,6 +1221,7 @@ function nes() {
         done < /tmp/results
 }
 function psx() {
+        local choice
           whiptail --clear --title "PICK & CHOOSE PS1" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
                 "1" "Alone in the Dark - One-Eyed Jack's Revenge" off \
@@ -1290,6 +1291,7 @@ function psx() {
         done < /tmp/results
 }
 function psp() {
+        local choice
           whiptail --clear --title "PICK & CHOOSE PSP" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
             "1" "Aliens vs Predator - Requiem" off \
