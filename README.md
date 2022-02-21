@@ -4,7 +4,7 @@
 
 "In order to succeed, your desire for success should be greater than your fear of failure."
 
-"I fell like a slice of butter, on a big oh pile of flapjacks. "
+"I feel like a slice of butter, on a big oh pile of flapjacks. "
 
 "Madness? No......this is SPARTA!!!!"
 
@@ -16,13 +16,20 @@
     
     ~ Grabs 'things and stuff'  from web to Pi. 
     
+    ~ Community made installers.
+
     ~ Custom made installers for Pi 4.
     
     ~ Easy access to RetroPie Tools.
     
-    ~ Community made installers.
+    ~ Community Tools
     
-    ~ 
+    ~ Custom Themes 
+    
+    ~ Easy access to Hurstys Themes
+    
+    ~ Community Themes
+    
 ## UPDATES MONTHLY OR AS NEEDED 
 
 LAST UPDATE 
