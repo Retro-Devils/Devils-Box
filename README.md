@@ -4,7 +4,25 @@
 
 "In order to succeed, your desire for success should be greater than your fear of failure."
 
+"I fell like a slice of butter, on a big oh pile of flapjacks. "
 
+"Madness? No......this is SPARTA!!!!"
+
+## Whats This? 
+
+- A Toolbox and more built for RetroPie. 
+
+- Functions
+    
+    ~ Grabs 'things and stuff'  from web to Pi. 
+    
+    ~ Custom made installers for Pi 4.
+    
+    ~ Easy access to RetroPie Tools.
+    
+    ~ Community made installers.
+    
+    ~ 
 ## UPDATES MONTHLY OR AS NEEDED 
 
 LAST UPDATE 
