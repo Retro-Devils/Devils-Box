@@ -1631,7 +1631,6 @@ On pasted wine system
 	       3) download-mugens "Retro-Devils_Sonic-Freedom-Fighters-Mugen.zip" ;;
 	       4) download-mugens "Retro-Devils_Spiderman-WoF-Mugen.zip" ;;
 	       5) download-mugens "Retro-Devils_Ultimate-Sonic-Mugen.zip" ;;
-	       3)
 	       *) ;;
         esac
         done < /tmp/results
