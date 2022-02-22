@@ -1616,15 +1616,22 @@ On pasted wine system
                 --ok-button Download --cancel-button Back \
                 --checklist "Choose:" 0 0 0 \
                 "+" "MUGEN NAME                     FILE SIZE" off \
-                "1" "Original MUGEN                      8 MB" off \
-		"2" "Ultimate Sonic                    200 MB" off \
+		"1" "Famicon Fighters                  100 MB" off \
+                "2" "Original MUGEN                      8 MB" off \
+		"3" "Sonic Freedom Fighter              15 MB" off \
+		"4" "SpiderMan Web Of Freedom          2.3 GB" off \
+		"5" "Ultimate Sonic                    200 MB" off \
 		 2>/tmp/results
     while read -r choice  
         do
         case $choice in
 	       +) none ;;
-               1) download-mugens "Retro-Devils_OG-Mugen.zip" ;;
-	       2) download-mugens "Retro-Devils_Ultimate-Sonic-Mugen.zip" ;;
+	       1) download-mugens "Retro-Devils_Famicon-Fighters-Mugen.zip" ;;
+               2) download-mugens "Retro-Devils_OG-Mugen.zip" ;;
+	       3) download-mugens "Retro-Devils_Sonic-Freedom-Fighters-Mugen.zip" ;;
+	       4) download-mugens "Retro-Devils_Spiderman-WoF-Mugen.zip" ;;
+	       5) download-mugens "Retro-Devils_Ultimate-Sonic-Mugen.zip" ;;
+	       3)
 	       *) ;;
         esac
         done < /tmp/results
