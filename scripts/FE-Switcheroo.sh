@@ -25,15 +25,17 @@ function fe_menu() {
         choice=$(dialog --backtitle "Front End Switcheroo Currently using $fe" --title " FRONT END MENU " \
             --ok-label OK --cancel-label Back \
             --menu "Which Frontend would you like to Switch to?" 25 75 20 \
-            1 "Switch Frontend To Emu Station" \
-            2 "Switch Frontend To Attract Mode" \
-            3 "Switch Frontend To Pegasus FE" \
+	    1 "Switch Frontend To Attract Mode" \
+            2 "Switch Frontend To Raspi Desktop" \
+            3 "Switch Frontend To Emu Station" \
+            4 "Switch Frontend To Pegasus FE" \
             2>&1 > /dev/tty)
 
         case "$choice" in
-            1) ES_FE ;;
-            2) AT_FE ;;
-            3) PE_FE ;;
+            1) AT_FE ;;
+            2) DE_FE ;;
+            3) ES_FE ;;
+            4) PE_FE ;;
             *)  break ;;
         esac
     done
