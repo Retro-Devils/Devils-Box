@@ -1771,8 +1771,8 @@ dialog  --sleep 1 --title "PC/DOS Downloader Help" --msgbox "
               46) download-pcgames "Retro-Devils_The-Incredible-Machine.zip" ;;
               47) download-pcgames "Retro-Devils_The-Incredible-Machine-2.zip" ;;
               48) download-pcgames "Retro-Devils_The-Lost-Vikings.zip" ;;
-              49) download-pcgames "Retro-Devils_The-Oregan-Trail-2.zip" ;;
-              50) download-pcgames "Retro-Devils_The-Oregan-Trail-3.zip" ;;
+              49) download-pcgames "Retro-Devils_The-Oregon-Trail-2.zip" ;;
+              50) download-pcgames "Retro-Devils_The-Oregon-Trail-3.zip" ;;
               51) download-pcgames "Retro-Devils_TheSettlers.zip";;
               52) download-pcgames "Retro-Devils_TheSettlers2.zip";;
               53) download-pcgames "Retro-Devils_Tiefighter.zip" ;;
