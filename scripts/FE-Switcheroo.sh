@@ -46,19 +46,19 @@ if grep -q 'emulationstation \#auto' "$AUTOSTART"; then
     echo "Attract Mode Set"
     sleep 2
     pgrep -f emulationstation|xargs sudo kill -9 > /dev/null 2>&1 &
-    sudo openvt -c 1 -s -f attract 2>&1
+    attract 2>&1
 elif grep -q 'pegasus-fe \#auto' "$AUTOSTART"; then
     sudo sed -i 's/pegasus-fe \#auto/attract \#auto/g' $AUTOSTART
     echo "Attract Mode Set"
     sleep 2
     pgrep -f pegasus-fe|xargs sudo kill -9 > /dev/null 2>&1 &
-    sudo openvt -c 1 -s -f attract 2>&1
+    attract 2>&1
 elif grep -q 'startx \#auto' "$AUTOSTART"; then
-    sudo sed -i 's/pegasus-fe \#auto/attract \#auto/g' $AUTOSTART
+    sudo sed -i 's/startx \#auto/attract \#auto/g' $AUTOSTART
     echo "Attract Mode Set"
     sleep 2
-    pgrep -f pegasus-fe|xargs sudo kill -9 > /dev/null 2>&1 &
-    sudo openvt -c 1 -s -f emulationstation 2>&1
+    pgrep -f startx|xargs sudo kill -9 > /dev/null 2>&1 &
+    attract 2>&1
 elif grep -q 'attract \#auto' "$AUTOSTART"; then
     echo "Attract Mode Already Set"
     sleep 2
@@ -80,10 +80,10 @@ elif grep -q 'pegasus-fe \#auto' "$AUTOSTART"; then
     sudo openvt -c 1 -s -f startx 2>&1
 elif grep -q 'emulationstation \#auto' "$AUTOSTART"; then
     sudo sed -i 's/emulationstation \#auto/startx \#auto/g' $AUTOSTART
-    echo "Attract Mode Set"
+    echo "Desktop Mode Set"
     sleep 2
-    pgrep -f pegasus-fe|xargs sudo kill -9 > /dev/null 2>&1 &
-    attract 2>&1
+    pgrep -f emulationstation|xargs sudo kill -9 > /dev/null 2>&1 &
+    sudo openvt -c 1 -s -f startx 2>&1
 elif grep -q 'startx \#auto' "$AUTOSTART"; then
     echo "Desktop Mode Already Set"
     sleep 2
@@ -104,10 +104,10 @@ elif grep -q 'pegasus-fe \#auto' "$AUTOSTART"; then
     pgrep -f pegasus-fe|xargs sudo kill -9 > /dev/null 2>&1 &
     sudo openvt -c 1 -s -f emulationstation 2>&1
 elif grep -q 'startx \#auto' "$AUTOSTART"; then
-    sudo sed -i 's/pegasus-fe \#auto/emulationstation \#auto/g' $AUTOSTART
+    sudo sed -i 's/startx \#auto/emulationstation \#auto/g' $AUTOSTART
     echo "EmulationStation Mode Set"
     sleep 2
-    pgrep -f pegasus-fe|xargs sudo kill -9 > /dev/null 2>&1 &
+    pgrep -f startx|xargs sudo kill -9 > /dev/null 2>&1 &
     sudo openvt -c 1 -s -f emulationstation 2>&1
 elif grep -q 'emulationstation \#auto' "$AUTOSTART"; then
     echo "EmulationStation Mode Already Set"
@@ -147,6 +147,8 @@ elif grep -q 'attract \#auto' "$AUTOSTART"; then
 	fe="Attract Mode"
 elif grep -q 'pegasus-fe \#auto' "$AUTOSTART"; then
 	fe="Pegasus Mode"
+elif grep -q 'startx \#auto' "$AUTOSTART"; then
+	fe="Desktop Mode"
 fi
 }
 
