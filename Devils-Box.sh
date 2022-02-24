@@ -2532,7 +2532,7 @@ function devils_emu_tools() {
       1 "Devils Extras Installer" \
       2 "BIOS Installer" \
       3 "Game Fixes & Tools" \
-      3 "SEGA Model 3 Installer" \
+      4 "SEGA Model 3 Installer" \
       2>&1 >/dev/tty)
 
     case "$choice" in
