@@ -30,7 +30,7 @@ PC_HOST="https://archive.org/download/the-devils-box-alt"
 
 ###  INTRO VIDEO     ###
 clear
-omxplayer "$HOME"/Devils-Box/files/intro.mp4
+omxplayer "$HOME"/Devils-Box/files/intro.mp4  > /dev/null 2>&1
 ###   NET CHECKER    ###
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
