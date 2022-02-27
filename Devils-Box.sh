@@ -16,13 +16,16 @@ ART_HOST2="https://github.com/Retro-Devils-Media"
 #ART_HOST3=""
 #ART_HOST4=""
 
-#--------GAME HOSTS---------#
+#-----------------DEVILS-GAME HOSTS---------------------#
 HOST1="https://archive.org/download/the-devils-box-alt"
 HOST2="https://archive.org/download/the-devils-box_202112"
 HOST3="https://archive.org/download/devils-bios"
 HOST4="https://archive.org/download/devils-wine"
 HOST5="https://archive.org/download/devils-dos"
+
+#---------------NON-DEVILS-HOSTS-----------------------#
 HOST6="https://archive.org/download/PSP_US_Arquivista"
+HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
 
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
@@ -355,17 +358,18 @@ BUT THEY WONT SCRAPE" 0 0
       50 "Super Famicon                    475MB      487 GAMES" \
       51 "SG-1000                            1MB       68 GAMES" \
       52 "SNES                             508MB      603 GAMES" \
-      53 "SuperGraffiix                    2.4MB        5 GAMES" \
-      54 "Turbo Graffix 16                  20MB       94 GAMES" \
-      55 "Vectrex                          201KB       20 GAMES" \
-      56 "VideoPAC                         430KB       99 GAMES" \
-      57 "Virtual Boy                        8MB       24 GAMES" \
-      58 "Dreamcast VMU                      3MB      115 GAMES" \
-      59 "Wonderswan Color                 116MB       84 GAMES" \
-      60 "Sharp X1                         7.6MB       69 GAMES" \
-      61 "Sharp X68000                     504MB      418 GAMES" \
-      62 "ZMachine                           4MB       30 GAMES" \
-      63 "ZXSpectrum                        38MB     1111 GAMES" \
+      53 "SNES MSU1                         ??MB       ?? GAMES" \
+      54 "SuperGraffiix                    2.4MB        5 GAMES" \
+      55 "Turbo Graffix 16                  20MB       94 GAMES" \
+      56 "Vectrex                          201KB       20 GAMES" \
+      57 "VideoPAC                         430KB       99 GAMES" \
+      58 "Virtual Boy                        8MB       24 GAMES" \
+      59 "Dreamcast VMU                      3MB      115 GAMES" \
+      60 "Wonderswan Color                 116MB       84 GAMES" \
+      61 "Sharp X1                         7.6MB       69 GAMES" \
+      62 "Sharp X68000                     504MB      418 GAMES" \
+      63 "ZMachine                           4MB       30 GAMES" \
+      64 "ZXSpectrum                        38MB     1111 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -421,17 +425,18 @@ BUT THEY WONT SCRAPE" 0 0
     50) download-packs "sfc" ;;
     51) download-packs "sg-1000" ;;
     52) download-packs "snes" ;;
-    53) download-packs "supergrafx" ;;
-    54) download-packs "tg16" ;;
-    55) download-packs "vectrex" ;;
-    56) download-packs "videopac" ;;
-    57) download-packs "virtualboy" ;;
-    58) download-packs "svmu" ;;
-    59) download-packs "wonderswancolor" ;;
-    60) download-packs "x1" ;;
-    61) download-packs "x68000" ;;
-    62) download-packs "zmachine" ;;
-    63) download-packs "zxspectrum" ;;  
+    53) msu1-pack ;;
+    54) download-packs "supergrafx" ;;
+    55) download-packs "tg16" ;;
+    56) download-packs "vectrex" ;;
+    57) download-packs "videopac" ;;
+    58) download-packs "virtualboy" ;;
+    59) download-packs "svmu" ;;
+    60) download-packs "wonderswancolor" ;;
+    61) download-packs "x1" ;;
+    62) download-packs "x68000" ;;
+    63) download-packs "zmachine" ;;
+    64) download-packs "zxspectrum" ;;  
      +) none  ;;
      *) break ;;
     esac
@@ -2939,6 +2944,28 @@ rm -f "$HOME"/RetroPie/roms/psp/index.html.tmp
 echo ${bld}$(tput setaf 1)"-----SCRAPING NEW GAMES INFO NOW------"
 sleep 5
 cd "$HOME/RetroPie/roms/psp/"
+/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
+fi
+}
+#--------------------------#
+#   MSU-1 GAMES FUNCTIONS  #
+#--------------------------#
+function download-msu1() {
+if [ ! -d "$HOME/RetroPie/roms/snesmsu1/" ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "Please Run MSU1 SETUP First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST7}/"${1}" -P "$HOME"/RetroPie/roms/snesmsu1 -erobots=off
+fi
+}
+function msu1-pack() {
+if [ ! -d "$HOME"/RetroPie/roms/msu1/ ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "Please Run MSU1 SETUP First" 6 40;
+else
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST7}"/ -P "$HOME"/RetroPie/roms/snesmsu1 -erobots=off
+rm -f "$HOME"/RetroPie/roms/snesmsu1/index.html.tmp
+echo ${bld}$(tput setaf 1)"-----SCRAPING NEW GAMES INFO NOW------"
+sleep 5
+cd "$HOME/RetroPie/roms/snesmsu1/"
 /opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
 fi
 }
