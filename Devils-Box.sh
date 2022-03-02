@@ -2951,7 +2951,9 @@ fi
 #   MSU-1 GAMES FUNCTIONS  #
 #--------------------------#
 function download-msu1() {
-if [ ! -d "$HOME/RetroPie/roms/snesmsu1/" ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "Please Run MSU1 SETUP First" 6 40;
+if [ ! -d "$HOME"/RetroPie/roms/snesmsu1/ ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "RUNNING MSU1 SETUP NOW" 6 40;
+chmod 755 "$HOME"/Devils-Box/scripts/MSU1-Setup.sh
+"$HOME"/Devils-Box/scripts/MSU1-Setup.sh
 else
 clear
   wget -m -r -np -nH -nd -R "index.html" ${HOST7}/"${1}" -P "$HOME"/RetroPie/roms/snesmsu1 -erobots=off
@@ -2959,7 +2961,8 @@ fi
 }
 function msu1-pack() {
 if [ ! -d "$HOME"/RetroPie/roms/snesmsu1/ ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "RUNNING MSU1 SETUP NOW" 6 40;
-/home/pi/Devils-Box/scripts/MSU1-SETUP.sh
+chmod 755 "$HOME"/Devils-Box/scripts/MSU1-Setup.sh
+"$HOME"/Devils-Box/scripts/MSU1-Setup.sh
 else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST7}"/ -P "$HOME"/RetroPie/roms/snesmsu1 -erobots=off
