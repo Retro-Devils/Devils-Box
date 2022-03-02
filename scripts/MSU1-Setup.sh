@@ -18,7 +18,7 @@ echo "<----Snes9X Installed Begining Setup Now---->"
 sleep 2
 mkdir "$HOME"/RetroPie/roms/snesmsu1
 sudo cp -r /opt/retropie/configs/snes -d /opt/retropie/configs/snesmsu1
-wget 
+wget https://archive.org/download/DB-EMUS/RetroArch/SNES-MSU1/emulators.cfg -P /opt/retropie/configs/snesmsu1/ 
 dialog  --sleep 1 --title "MSU1 SETUP COMPLETE" --msgbox " 
 <-------------ATTENTION------------------ATTENTION ----------------ATTENTION-------------ATTENTION-------------->
 For this to work you need to edit es system comfig
