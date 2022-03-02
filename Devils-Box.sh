@@ -2958,7 +2958,8 @@ clear
 fi
 }
 function msu1-pack() {
-if [ ! -d "$HOME"/RetroPie/roms/snesmsu1/ ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "Please Run MSU1 SETUP First" 6 40;
+if [ ! -d "$HOME"/RetroPie/roms/snesmsu1/ ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "RUNNING MSU1 SETUP NOW" 6 40;
+/home/pi/Devils-Box/scripts/MSU1-SETUP.sh
 else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST7}"/ -P "$HOME"/RetroPie/roms/snesmsu1 -erobots=off
