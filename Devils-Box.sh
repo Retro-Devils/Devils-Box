@@ -172,9 +172,9 @@ UNLIKELY. PLEASE USE SCRAPPER" 0 0
       48 "Scummvm Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
       49 "Sega32x Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
       50 "SegaCD Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
-      51 "SNES Artwork             [*]box  [*]cart  [*]snap  [ ]wheel" \
-      52 "Super Famicon Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
-      53 "SG-1000 Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
+      51 "Super Famicon Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
+      52 "SG-1000 Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
+      53 "SNES Artwork             [*]box  [*]cart  [*]snap  [ ]wheel" \
       54 "SuperGrafx Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
       55 "TurboGrafx 16 Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
       56 "Vectrex Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
