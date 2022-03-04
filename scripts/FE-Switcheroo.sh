@@ -300,8 +300,8 @@ function peg-convert_theme() {
             2>&1 > /dev/tty)
 
         case "$choice" in
-            1) list-themes ;;
-            2) convert     ;;
+            1) peg-list-themes ;;
+            2) peg-convert     ;;
             *) break       ;;
         esac
     done
