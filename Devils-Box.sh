@@ -2018,10 +2018,6 @@ function fe_switch() {
 sudo cp /home/pi/Devils-Box/scripts/FE-Switcheroo.sh -f /usr/local/bin/switcheroo
 bash "$HOME"/Devils-Box/scripts/FE-Switcheroo.sh
 }
-#     PEGASUS HELPER FUNCTION      #
-function pegasus_help() {
-bash "$HOME"/Devils-Box/scripts/Pegasus-Helper.sh
-}
 ###---------------------------------------###
 ###   COMMUNITY TOOL BOX MENU FUNCTIONS   ###
 ###---------------------------------------###
@@ -2484,9 +2480,8 @@ function devils_visual_tools() {
       1 "Devils Themes and Artwork " \
       + "<--->Frontend Tools<-------> " \
       2 "Frontend Switcheroo " \
-      3 "Pegasus FE Helper " \
       + "<--->Experimental Tools<---> " \
-      4 "Retro Scrapey " \
+      3 "Retro Scrapey " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -2494,9 +2489,8 @@ function devils_visual_tools() {
     1) devil-themes ;;
     +) none ;;
     2) fe_switch ;;
-    3) pegasus_help ;;
     +) none ;;
-    4) retro_scrapey ;;
+    3) retro_scrapey ;;
     *) break ;;
     esac
   done
