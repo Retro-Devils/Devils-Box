@@ -34,7 +34,7 @@ if [ -d "$HOME/Devils-Box/" ]; then sudo rm -R $HOME/Devils-Box/; fi
 cd $HOME
 git clone https://github.com/Retro-Devils/Devils-Box
 cp $HOME/Devils-Box/Devils-Box.sh -f $HOME/RetroPie/retropiemenu/
-cp $HOME/Devils-Box/files/Devils-Box.png -f $HOME/RetroPie/retropiemenu/icons/
+cp $HOME/Devils-Box/files/images/Devils-Box.png -f $HOME/RetroPie/retropiemenu/icons/
 sudo cp $HOME/Devils-Box/files/box -f /usr/local/bin/
 sudo cp $HOME/Devils-Box/Devils-Box.sh -f /usr/local/bin/Devils-Box
 sudo chmod 755 /usr/local/bin/box
