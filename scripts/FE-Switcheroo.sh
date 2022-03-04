@@ -188,7 +188,7 @@ local choice
 
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "PEGASUS HELPER PI4" \
-     --ok-button Select --cancel-button Exit \
+     --ok-button Install --cancel-button Back \
      --menu "Theme Installer Menu" 20 40 40 \
       1 "ES2---------------Nils Boneberger" \
       2 "Flixnet------------Mátyás Mustoha" \
@@ -246,7 +246,7 @@ local choice
 
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "PEGASUS HELPER PI4" \
-     --ok-button Select --cancel-button Exit \
+     --ok-button Select --cancel-button Back \
      --menu "Help Menu" 20 40 40 \
       1 "Offical " \
       2 "Unoffical " \
