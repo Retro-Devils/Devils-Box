@@ -33,7 +33,7 @@ PC_HOST="https://archive.org/download/the-devils-box-alt"
 
 ###  INTRO VIDEO     ###
 clear
-omxplayer "$HOME"/Devils-Box/files/intro.mp4  > /dev/null 2>&1
+omxplayer "$HOME"/Devils-Box/files/videos/intro.mp4  > /dev/null 2>&1
 ###   NET CHECKER    ###
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
@@ -2633,7 +2633,7 @@ fi
 #---------------------------#
 function help_db() {
   clear
-  cat "$HOME"/Devils-Box/files/HELP-DB.txt
+  cat "$HOME"/Devils-Box/files/db-files/HELP-DB.txt
 read -n 1 -s -r -p "Press any key to Continue"
 }
 #--------------------------_#
@@ -2641,7 +2641,7 @@ read -n 1 -s -r -p "Press any key to Continue"
 #---------------------------#
 function about_db() {
   clear
-  cat "$HOME"/Devils-Box/files/INFO.txt
+  cat "$HOME"/Devils-Box/files/db-files/INFO.txt
 read -n 1 -s -r -p "Press any key to Continue"
 }
 
