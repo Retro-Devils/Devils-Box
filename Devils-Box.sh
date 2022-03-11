@@ -2059,7 +2059,7 @@ function comm_audio() {
       2 "Hursty's Themes--------------------------------------Hursty " \
       - "<----------------->Audio/Mixed Tools<---------------------> " \
       3 "Apply No Audio Fix--------------------------------Anonymous " \
-      4 "Apply No Audio Fix 2----------------------The Pimoroni Crew "\
+      4 "Apply No Audio Fix 2----------------------The Pimoroni Crew " \
       5 "Install I.M.P-----------------------------------RapiEdwin08 " \
       6 "Install T.A.M.P.O--------------------------------thepitster " \
       - "<-------------------->Information<------------------------> " \
