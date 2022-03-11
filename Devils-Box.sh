@@ -2122,7 +2122,15 @@ sudo perl -p -i -e 's/#hdmi_drive=2/hdmi_drive=2/g' /boot/config.txt
 sudo reboot
 fi
 }
-function no-audio2 () { curl https://get.pimoroni.com/audio | bash }
+function no-audio2 () {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
+Offline ... Not Availible Please Connect To Internet!" 0 0
+else
+clear
+curl https://get.pimoroni.com/audio | bash
+fi
+}
 function imp() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
