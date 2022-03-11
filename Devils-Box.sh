@@ -2059,7 +2059,7 @@ function comm_audio() {
       2 "Hursty's Themes--------------------------------------Hursty " \
       - "<----------------->Audio/Mixed Tools<---------------------> " \
       3 "Apply No Audio Fix--------------------------------Anonymous " \
-      4 "Apply No Audio Fix 2----------------------The Pimoroni Crew "\
+      4 "Apply No Audio Fix 2----------------------The Pimoroni Crew " \
       5 "Install I.M.P-----------------------------------RapiEdwin08 " \
       6 "Install T.A.M.P.O--------------------------------thepitster " \
       - "<-------------------->Information<------------------------> " \
@@ -2122,7 +2122,15 @@ sudo perl -p -i -e 's/#hdmi_drive=2/hdmi_drive=2/g' /boot/config.txt
 sudo reboot
 fi
 }
-function no-audio2 () { curl https://get.pimoroni.com/audio | bash }
+function no-audio2 () {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
+Offline ... Not Availible Please Connect To Internet!" 0 0
+else
+clear
+curl https://get.pimoroni.com/audio | bash
+fi
+}
 function imp() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
