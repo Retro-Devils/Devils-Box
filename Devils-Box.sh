@@ -58,7 +58,7 @@ function main_menu() {
   fi
     choice=(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
       --ok-label Select --cancel-label Exit-Devils-Box \
-      --menu "DEVILS BOX V3.06--------------UPDATED 3/2/22" 20 50 30 )
+      --menu "DEVILS BOX V3.06--------------UPDATED 3/10/22" 20 50 30 )
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
       - "<---->Downloaders<---->"
@@ -2059,11 +2059,12 @@ function comm_audio() {
       2 "Hursty's Themes--------------------------------------Hursty " \
       - "<----------------->Audio/Mixed Tools<---------------------> " \
       3 "Apply No Audio Fix--------------------------------Anonymous " \
-      4 "Install I.M.P-----------------------------------RapiEdwin08 " \
-      5 "Install T.A.M.P.O--------------------------------thepitster " \
+      4 "Apply No Audio Fix 2----------------------The Pimoroni Crew "\
+      5 "Install I.M.P-----------------------------------RapiEdwin08 " \
+      6 "Install T.A.M.P.O--------------------------------thepitster " \
       - "<-------------------->Information<------------------------> " \
-      6 "I.M.P-------------Integrated Music Player------------------ " \
-      7 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
+      7 "I.M.P-------------Integrated Music Player------------------ " \
+      8 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -2072,10 +2073,11 @@ function comm_audio() {
     2) hursty-themes ;;
     -) none ;;
     3) no-audio ;;
-    4) imp ;;
-    5) tampo ;;
-    6) imp-info ;;
-    7) tampo-info ;;
+    4) no-audio2 ;;
+    5) imp ;;
+    6) tampo ;;
+    7) imp-info ;;
+    8) tampo-info ;;
     *) break ;;
     esac
   done
@@ -2120,6 +2122,7 @@ sudo perl -p -i -e 's/#hdmi_drive=2/hdmi_drive=2/g' /boot/config.txt
 sudo reboot
 fi
 }
+function no-audio2 () { curl https://get.pimoroni.com/audio | bash }
 function imp() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
