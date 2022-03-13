@@ -2206,16 +2206,14 @@ dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox "
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
 dialog  --sleep 1 --title "Mugen Installer FYI" --msgbox " 
--------------------------------
-  INSTALLER WARNING & FYI
--------------------------------
--This will also overwrite your es_systems.cfg 
--Devils Box will backup your es_systems.cfg
--For this to work you might have to run
-sudo -y update && sudo -y upgrade" 0 0
+--------------------------------------------
+-----------INSTALLER WARNING & FYI----------
+--------------------------------------------
+- This will overwrite your es_systems.cfg 
+- Devils Box will backup your es_systems.cfg" 0 0
 mkdir home/pi/.emulationstation/backups/
 mv /home/pi/.emulationstation/es_systems.cfg -f /home/pi/.emulationstation/backups/es_systems.b4.wine
-curl -sSL https://git.io/Jz9O3 | bash
+curl -sSL https://bit.ly/3MGKWUD | bash
 dialog  --sleep 1 --title "EXIT MESSAGE" --msgbox " 
 ------------------------------POSSIBLE ERRORS & SOLUTIONS-----------------------------
 -Only WINE shows in ES nothing else
@@ -2224,8 +2222,8 @@ dialog  --sleep 1 --title "EXIT MESSAGE" --msgbox "
 -Mugen doesnt launch  
      -FRIST TRY TO LAUNCH AGAIN. Wine sometimes doesnt launch correctly.
      -Wait. Big Mugens/Games can take some time.
-     -Run sudo -y update && sudo -y upgrade
-     -Reinstall. Something might have been missed " 0 0
+     -Reinstall. Something might have been missed 
+-----ALWAYS REMEBER HAVE FUN THATS THE POINT-----" 0 0
 fi
 }
 
