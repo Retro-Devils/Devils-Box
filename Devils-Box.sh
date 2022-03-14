@@ -1,53 +1,29 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
-BACKTITLE="My name is... Shake-Zula. The mic-rula, The old schoolah, Ya wanna trip? I'll bring it to ya"	
+BACKTITLE="My name is... Shake-Zula. The mic-rula, The old schoolah, Ya wanna trip? I'll bring it to ya"
+
 #-----------COLORS----------#
 rst="$(tput sgr0)"
 fgred="${rst}$(tput setaf 1)"
 bld="$(tput bold)"
 bfgred="${bld}$(tput setaf 1)"
-##-------------------------##
-##       HOST SITES        ##
-##-------------------------##
 
-#--------ART HOSTS----------#
-ART_HOST="https://archive.org/download/devils-box-media-alt"
-ART_HOST2="https://github.com/Retro-Devils-Media"
-#ART_HOST3=""
-#ART_HOST4=""
-
-#-----------------DEVILS-GAME HOSTS---------------------#
-HOST1="https://archive.org/download/the-devils-box-alt"
-HOST2="https://archive.org/download/the-devils-box_202112"
-HOST3="https://archive.org/download/devils-bios"
-HOST4="https://archive.org/download/devils-wine"
-HOST5="https://archive.org/download/devils-dos"
-
-#---------------NON-DEVILS-HOSTS-----------------------#
-HOST6="https://archive.org/download/PSP_US_Arquivista"
-HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
-
-#--------PICK & CHOOSE HOST-----#
-PC_HOST="https://archive.org/download/the-devils-box-alt"
-
-
-###  INTRO VIDEO     ###
+#-----------INTRO VIDEO-----------#
 clear
 omxplayer "$HOME"/Devils-Box/files/videos/intro.mp4  > /dev/null 2>&1
-###   NET CHECKER    ###
+
+#-----------NET CHECKER-----------#
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
   NETCHECK=0
 else
   NETCHECK=1
 fi
-#--REQUIRED FOR FUTURE UPDATES--#
+
+#-----------REQUIRED FOR FUTURE UPDATES-----------#
 if ! command -v pv &> /dev/null; then sudo apt -y install pv; fi
 
-###-----------------------###
-### MAIN MENU FUNCTIONS   ###
-###-----------------------###
-
+#-----------MAIN MENU-----------#
 function main_menu() {
   local choice
 
@@ -94,9 +70,8 @@ function main_menu() {
     esac
   done
 }
-#-----------------------#
-# ARTWORK MENU FUNCTIONS #
-#-----------------------#
+
+#-----------Artwork-----------#
 function artwork() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
@@ -105,9 +80,8 @@ Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 bash "$HOME"/Devils-Box/scripts/Artwork.sh
 fi
 }
-###------------------------------###
-### CONSOLE PACKS MENU FUNCTIONS ###
-###------------------------------###
+
+#-----------Consoles-----------#
 function consoles() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
@@ -116,9 +90,8 @@ Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 bash "$HOME"/Devils-Box/scripts/Packs.sh
 fi
 }
-###------------------------------###
-### HACKED PACKS MENU FUNCTIONS  ###
-###------------------------------###
+
+#-----------Hacks-----------#
 function hacked() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
@@ -127,32 +100,8 @@ Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 bash "$HOME"/Devils-Box/scripts/Hacks.sh
 fi
 }
-function hacks-config() {
-clear
-sleep 2 
-echo ${bld}$(tput setaf 1)"Copying Your/Default Configs"
-sleep 2
-cp -r /opt/retropie/configs/gba /opt/retropie/configs/gbah
-cp -r /opt/retropie/configs/gb /opt/retropie/configs/gbh
-cp -r /opt/retropie/configs/megadrive /opt/retropie/configs/genh
-cp -r /opt/retropie/configs/gamegear /opt/retropie/configs/ggh
-cp -r /opt/retropie/configs/nes /opt/retropie/configs/nesh
-cp -r /opt/retropie/configs/snes /opt/retropie/configs/snesh
-sleep 2
-echo "Making Directories For Hacks"
-sleep 2
-mkdir "$HOME"/RetroPie/roms/gbah
-mkdir "$HOME"/RetroPie/roms/gb
-mkdir "$HOME"/RetroPie/roms/genh
-mkdir "$HOME"/RetroPie/roms/ggh
-mkdir "$HOME"/RetroPie/roms/nesh
-mkdir "$HOME"/RetroPie/roms/snesh
-}
 
-###-------------------------------------###
-###          PICK AND CHOOSE            ###
-###-------------------------------------###
-
+#-----------PickChoose-----------#
 function pick() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
@@ -161,142 +110,9 @@ Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 bash "$HOME"/Devils-Box/scripts/PickChoose.sh
 fi
 }
-#----------------------------------#
-#   TOOL BOX GAME FIXES FUNCTIONS  #
-#----------------------------------#
-function game_fixes() {
-  local choice
 
-  while true; do 
-  choice=$(dialog --backtitle "$BACKTITLE" --title " GAME TOOLS/FIXES MENU " \
-      --ok-label Select --cancel-label Main-Menu \
-      --menu "SELECT TOOL OR FIX AND PRESS A  " 20 50 30 \
-      + "--------WINE GAME FIXES-------" \
-      1 "Age Of Empires No-CD Error Fix" \
-      2 "C&C Generals + Zero Hour Fix" \
-      3 "Heroes OF might And Magic Fix" \
-      4 "Silent Hill 4 Fix" \
-      5 "Unreal Anthology Fix" \
-      + "----------GAME TOOLS----------" \
-      6 "Qjoy Layout Downloader" \
-      2>&1 >/dev/tty)
 
-    case "$choice" in
-    +) none ;;
-    1) game_fix "Age-of-Empires-no-cd-error-fix.reg" ;;
-    2) game_fix "Command-And-Conquer-fix.reg" ;;
-    3) game_fix "Heroes-of-Might-and-Magic-fix.reg" ;;
-    4) game_fix "Silent-Hill-4-The-Room-Fix.reg" ;;
-    5) game_fix "Unreal-Anthology-fix.reg" ;;
-    6) download_qjoy ;;
-    *) break ;;
-    esac
-  done
-}
-#----------------------#
-#   WINE GAME FIXES    #
-#----------------------#
-function game_fix(){
-cd ~/
-wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/${1}
-wine reg import ${1}
-sleep 1
-rm -f ${1}
-}
-
-#-------------------#
-#    GAME TOOLS     #
-#-------------------#
-function download_qjoy() {
-if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-  else
-  dialog  --sleep 1 --title "QJOYPAD INFO" --msgbox "
----------------ATTENTION-----------
-QJOYPAD MAPS KEYBOARD TO CONTROLLER
-QJOYPAD IS USED FOR WINE/MUGEN
-THIS DOWNLOADS  PREMADE LAYOUTS
-WILL OVERWRITE LAYOUTS WITH SAME NAME" 0 0
-    local choice
-
-    while true; do
-        choice=$(dialog --backtitle "$BACKTITLE" --title " QJOY DOWNLOADER " \
-            --ok-label Select --cancel-label Back \
-            --menu "Select Type Of Controller" 30 50 40 \
-            1 "Arcade Controller       11 Layouts" \
-            2 "PS3 Controller           4 Layouts" \
-            + "---------------Info---------------" \
-            3 "----Arcade Mapped Games List------" \
-            4 "----PS3 Mapped Games List---------" \
-            2>&1 > /dev/tty)
-
-        case "$choice" in
-            1) qj_arcade  ;;
-            2) qj_ps3     ;;
-            +) none       ;;
-            3) qarcade_info ;;
-            4) qps3-info    ;;
-            *) break      ;;
-        esac
-    done
-fi 
-}
-#-----------------------#
-#      QJ FUNCTIONS     #
-#-----------------------#
-function qj_arcade() { 
-clear
-wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/devils-updates/qjoy-arcade.zip -P "$HOME"/.qjoypad3 -erobots=off
-unzip -o "$HOME"/.qjoypad3/qjoy-arcade.zip -d "$HOME"/.qjoypad3
-sudo rm -R "$HOME"/.qjoypad3/qjoy-ps3.zip
-}
-
-function qj_ps3() {
-clear
-wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/devils-updates/qjoy-ps3.zip -P "$HOME"/.qjoypad3 -erobots=off
-unzip -o "$HOME"/.qjoypad3/qjoy-ps3.zip -d "$HOME"/.qjoypad3/
-sudo rm -R "$HOME"/.qjoypad3/qjoy-ps3.zip
-}
-
-#-------------------------#
-#    Q INFO FUNCTIONS     #
-#-------------------------#
-function qarcade_info() {
-dialog  --sleep 1 --title "Mapped Games" --msgbox "
-ARCADE MAPPED GAMES
--Angry Birds Seasons
--Baldurs Gate
--Cuphead
--Hydro Thunder
--Mugen
--Simpsons Hit & Run
--Skifree
--Spooky Castle
--Sugar Rush
--TMNT
--Terrordome" 0 0
-}
-function qps3_info() {
-dialog  --sleep 1 --title "Mapped Games" --msgbox "
-PS3 MAPPED GAMES
--Baldurs Gate
--Spooky Castle
--Mugen
--Skifree" 0 0
-}
-#       RETRO SCRAPEY FUNCTIONS    #
-function retro_scrapey() {
-bash "$HOME"/Devils-Box/scripts/Retro-Scrapey.sh
-}
-#     FE-SWITCHEROO  FUNCTION      #
-function fe_switch() {
-sudo cp /home/pi/Devils-Box/scripts/FE-Switcheroo.sh -f /usr/local/bin/switcheroo
-bash "$HOME"/Devils-Box/scripts/FE-Switcheroo.sh
-}
-###---------------------------------------###
 ###   COMMUNITY TOOL BOX MENU FUNCTIONS   ###
-###---------------------------------------###
 function community_tools() {
   while true; do 
 dialog  --sleep 1 --title "COMMUNITY TOOLBOX" --msgbox " 
@@ -320,9 +136,7 @@ WE WILL DO OUR BEST TO KEEP UP TO DATE" 0 0
     esac
   done
 }
-#---------------------------------------------#
 #  COMMUNITY AUDIO & VISUAL TOOLS FUNCTIONS   #
-#---------------------------------------------#
 function comm_audio() {
   local choice
 
@@ -427,9 +241,7 @@ cat /home/pi/Devils-Box/files/tampo/README.md
 read -n 1 -s -r -p "Press any key to Continue"
 fi
 }
-###---------------------------------------###
 ###  COMMUNITY EMU TOOLS MENU FUNCTIONS   ###
-###---------------------------------------###
 function comm_emu_tools() {
   local choice
 
@@ -919,9 +731,7 @@ function about_db() {
 read -n 1 -s -r -p "Press any key to Continue"
 }
 
-#---------------------------#
-#REMOVE DEVILS BOX          #
-#---------------------------#
+#-------REMOVE DEVILS BOX-------#
 function remove_db() {
 clear
   echo ${rst}$(tput setaf 1) "Removing Now";
@@ -930,9 +740,7 @@ clear
   sudo reboot
 }
 
-#------------------#
-#UPDATE DEVILS BOX #
-#------------------#
+#-------UPDATE DEVILS BOX--------#
 function update_db() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "UPDATE DEVILS BOX" --msgbox " 
@@ -1028,9 +836,7 @@ clear
 da-version
 }
 
-#----------------------------#
-# SHOW DISK SPACE FUNCTION   #
-#----------------------------#
+#------SHOW DISK SPACE FUNCTION------#
 function show_sysinfo() {
 clear
 cpuTempC=""
@@ -1077,182 +883,38 @@ echo
 read -n 1 -s -r -p "Press any key to continue"
 }
 
-#-------------------#
-#  REBOOT FUNCTION  #
-#-------------------#
+#------REBOOT FUNCTION------#
 function system_reboot() {
 clear
 read -n 1 -s -r -p "Press any key to Reboot"
 sudo reboot
 }
 
-#------------------#
-#  EXPAND MEM.     #
-#------------------#
+#------EXPAND MEM.------#
 function expand_mem() {
 echo "This will Expand Memory and Reboot"
 read -n 1 -s -r -p "Press any key to Continue"
 sudo raspi-config --expand-rootfs 
 sudo reboot
 }
-#------------------#
-# ARTWORK FUNCTION #
-#------------------# 
-function download-art() {
-if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
-clear
-cd "$HOME/RetroPie/roms/"${1}"/"
-git init
-git remote add origin "${ART_HOST2}/${1}.git"
-git fetch
-git pull origin main
-rm -fr "$HOME"/RetroPie/roms/"${1}"/.git
-echo ${bld}$(tput setaf 1)"-----SCRAPING NEW MEDIA NOW------"
-sleep 5
-/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
+
+
+function game_fixes() {
+if [ $NETCHECK  = 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+  else
+bash "$HOME"/Devils-Box/scripts/Game-Fixes.sh
 fi
-}
-#------------------#
-# CONSOLE FUNCTION #
-#------------------#
-function download-bios() {
-clear
-wget -m -r -np -nH -nd -R "index.html" "${HOST3}"/BIOS/ -P "$HOME"/RetroPie/BIOS/ -erobots=off
-rm -f "$HOME"/RetroPie/BIOS/index.html.tmp
-}
-function download-packs() {
-if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
-else
-clear
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
-rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
-echo ${bld}$(tput setaf 1)"-----SCRAPING NEW GAMES INFO NOW------"
-sleep 5
-cd "$HOME/RetroPie/roms/"${1}"/"
-/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
-fi
-}
-function download-packs-alt() {
-if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
-else
-clear
-wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
-rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
-echo ${bld}$(tput setaf 1)"-----SCRAPING NEW MEDIA NOW------"
-sleep 5
-/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
-fi
-}
-#-----------------#
-#  HACKS FUNCTION #
-#-----------------#
-function download-hacks() {
-if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Apply Hacks Config" 6 40;
-else
-clear
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
-rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
-cd "$HOME/RetroPie/roms/"${1}"/"
-/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
-fi
-}
-#  GAME FUNCTION  #
-#-----------------#
-function download-game() {
-  for type in "$@"; do
-    if [ "${type}" != "${1}" ]; then
-      if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
-      else
-      clear
-      wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
-      rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
-fi
-fi
-done
 }
 
-#-----------------#
-#  WINE FUNCTION  #
-#-----------------#
-function download-winegames() {
-if [ ! -d "$HOME/RetroPie/roms/wine/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
-else
-clear
-  wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/wine -erobots=off
-  unzip -o "$HOME"/RetroPie/roms/wine/"${1}" -d "$HOME"/RetroPie/roms/wine/
-  chmod 755 "$HOME"/RetroPie/roms/wine/*.sh
-  sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
-fi
+function retro_scrapey() {
+bash "$HOME"/Devils-Box/scripts/Retro-Scrapey.sh
 }
-function download-pcgames() {
-if [ ! -d "$HOME/RetroPie/roms/pc/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
-else
-clear
-  wget -m -r -np -nH -nd -R "index.html" ${HOST5}/"${1}" -P "$HOME"/RetroPie/roms/pc -erobots=off
-  unzip -o "$HOME"/RetroPie/roms/pc/"${1}" -d "$HOME"/RetroPie/roms/pc/
-  sudo rm -r "$HOME"/RetroPie/roms/pc/"${1}"
-fi
-}
-#----------------------#
-#  PSP GAMES FUNCTIONS  #
-#----------------------#
-function download-psp() {
-if [ ! -d "$HOME/RetroPie/roms/pc/" ]; then dialog  --sleep 1 --title "PSP FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
-else
-clear
-  wget -m -r -np -nH -nd -R "index.html" ${HOST6}/"${1}" -P "$HOME"/RetroPie/roms/psp -erobots=off
-fi
-}
-function psp-pack() {
-if [ ! -d "$HOME"/RetroPie/roms/psp/ ]; then dialog  --sleep 1 --title "PSP FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
-else
-clear
-wget -m -r -np -nH -nd -R "index.html" "${HOST6}"/ -P "$HOME"/RetroPie/roms/psp -erobots=off
-rm -f "$HOME"/RetroPie/roms/psp/index.html.tmp
-echo ${bld}$(tput setaf 1)"-----SCRAPING NEW GAMES INFO NOW------"
-sleep 5
-cd "$HOME/RetroPie/roms/psp/"
-/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
-fi
-}
-#--------------------------#
-#   MSU-1 GAMES FUNCTIONS  #
-#--------------------------#
-function download-msu1() {
-if [ ! -d "$HOME"/RetroPie/roms/snesmsu1/ ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "RUNNING MSU1 SETUP NOW" 6 40;
-chmod 755 "$HOME"/Devils-Box/scripts/MSU1-Setup.sh
-"$HOME"/Devils-Box/scripts/MSU1-Setup.sh
-else
-clear
-  wget -m -r -np -nH -nd -R "index.html" ${HOST7}/"${1}" -P "$HOME"/RetroPie/roms/snesmsu1 -erobots=off
-fi
-}
-function msu1-pack() {
-if [ ! -d "$HOME"/RetroPie/roms/snesmsu1/ ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "RUNNING MSU1 SETUP NOW" 6 40;
-chmod 755 "$HOME"/Devils-Box/scripts/MSU1-Setup.sh
-"$HOME"/Devils-Box/scripts/MSU1-Setup.sh
-else
-clear
-wget -m -r -np -nH -nd -R "index.html" "${HOST7}"/ -P "$HOME"/RetroPie/roms/snesmsu1 -erobots=off
-rm -f "$HOME"/RetroPie/roms/snesmsu1/index.html.tmp
-echo ${bld}$(tput setaf 1)"-----SCRAPING NEW GAMES INFO NOW------"
-sleep 5
-cd "$HOME/RetroPie/roms/snesmsu1/"
-/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
-fi
-}
-#-----------------#
-#  MUGEN FUNCTION  #
-#-----------------#
-function download-mugens() {
-if [ ! -d "$HOME/RetroPie/roms/wine" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
-else
-  clear
-  wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/mugens -erobots=off
-  unzip -o "$HOME"/RetroPie/roms/mugens/"${1}" -d "$HOME"/RetroPie/roms/mugens
-  chmod 755 "$HOME"/RetroPie/roms/mugens/*.sh
-  sudo rm -r "$HOME"/RetroPie/roms/mugens/"${1}"
-fi
+
+function fe_switch() {
+sudo cp /home/pi/Devils-Box/scripts/FE-Switcheroo.sh -f /usr/local/bin/switcheroo
+bash "$HOME"/Devils-Box/scripts/FE-Switcheroo.sh
 }
 
 main_menu
