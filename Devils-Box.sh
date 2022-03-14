@@ -530,6 +530,7 @@ mkdir "$HOME"/RetroPie/roms/snesh
 function pick() {
 if [ $NETCHECK  = 1 ]; then
 "$HOME"/Devils-Box/scripts/PickChoose.sh
+}
 #----------------------------------#
 #   TOOL BOX GAME FIXES FUNCTIONS  #
 #----------------------------------#
