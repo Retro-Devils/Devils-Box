@@ -1,0 +1,185 @@
+##-------------------------##
+##       HOST SITES        ##
+##-------------------------##
+
+#--------ART HOSTS----------#
+ART_HOST="https://archive.org/download/devils-box-media-alt"
+ART_HOST2="https://github.com/Retro-Devils-Media"
+#ART_HOST3=""
+#ART_HOST4=""
+
+#-----------------DEVILS-GAME HOSTS---------------------#
+HOST1="https://archive.org/download/the-devils-box-alt"
+HOST2="https://archive.org/download/the-devils-box_202112"
+HOST3="https://archive.org/download/devils-bios"
+HOST4="https://archive.org/download/devils-wine"
+HOST5="https://archive.org/download/devils-dos"
+
+#---------------NON-DEVILS-HOSTS-----------------------#
+HOST6="https://archive.org/download/PSP_US_Arquivista"
+HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
+
+#--------PICK & CHOOSE HOST-----#
+PC_HOST="https://archive.org/download/the-devils-box-alt"
+
+
+
+#------------------#
+# ARTWORK FUNCTION #
+#------------------# 
+function download-art() {
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
+clear
+cd "$HOME/RetroPie/roms/"${1}"/"
+git init
+git remote add origin "${ART_HOST2}/${1}.git"
+git fetch
+git pull origin main
+rm -fr "$HOME"/RetroPie/roms/"${1}"/.git
+echo ${bld}$(tput setaf 1)"-----SCRAPING NEW MEDIA NOW------"
+sleep 5
+/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
+fi
+}
+#------------------#
+# CONSOLE FUNCTION #
+#------------------#
+function download-bios() {
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST3}"/BIOS/ -P "$HOME"/RetroPie/BIOS/ -erobots=off
+rm -f "$HOME"/RetroPie/BIOS/index.html.tmp
+}
+function download-packs() {
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+else
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
+rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+echo ${bld}$(tput setaf 1)"-----SCRAPING NEW GAMES INFO NOW------"
+sleep 5
+cd "$HOME/RetroPie/roms/"${1}"/"
+/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
+fi
+}
+function download-packs-alt() {
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+else
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
+rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+echo ${bld}$(tput setaf 1)"-----SCRAPING NEW MEDIA NOW------"
+sleep 5
+/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
+fi
+}
+#-----------------#
+#  HACKS FUNCTION #
+#-----------------#
+function download-hacks() {
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Apply Hacks Config" 6 40;
+else
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
+rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+cd "$HOME/RetroPie/roms/"${1}"/"
+/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
+fi
+}
+#  GAME FUNCTION  #
+#-----------------#
+function download-game() {
+  for type in "$@"; do
+    if [ "${type}" != "${1}" ]; then
+      if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+      else
+      clear
+      wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
+      rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+fi
+fi
+done
+}
+
+#-----------------#
+#  WINE FUNCTION  #
+#-----------------#
+function download-winegames() {
+if [ ! -d "$HOME/RetroPie/roms/wine/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/wine -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/wine/"${1}" -d "$HOME"/RetroPie/roms/wine/
+  chmod 755 "$HOME"/RetroPie/roms/wine/*.sh
+  sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
+fi
+}
+function download-pcgames() {
+if [ ! -d "$HOME/RetroPie/roms/pc/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST5}/"${1}" -P "$HOME"/RetroPie/roms/pc -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/pc/"${1}" -d "$HOME"/RetroPie/roms/pc/
+  sudo rm -r "$HOME"/RetroPie/roms/pc/"${1}"
+fi
+}
+#----------------------#
+#  PSP GAMES FUNCTIONS  #
+#----------------------#
+function download-psp() {
+if [ ! -d "$HOME/RetroPie/roms/pc/" ]; then dialog  --sleep 1 --title "PSP FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST6}/"${1}" -P "$HOME"/RetroPie/roms/psp -erobots=off
+fi
+}
+function psp-pack() {
+if [ ! -d "$HOME"/RetroPie/roms/psp/ ]; then dialog  --sleep 1 --title "PSP FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+else
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST6}"/ -P "$HOME"/RetroPie/roms/psp -erobots=off
+rm -f "$HOME"/RetroPie/roms/psp/index.html.tmp
+echo ${bld}$(tput setaf 1)"-----SCRAPING NEW GAMES INFO NOW------"
+sleep 5
+cd "$HOME/RetroPie/roms/psp/"
+/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
+fi
+}
+#--------------------------#
+#   MSU-1 GAMES FUNCTIONS  #
+#--------------------------#
+function download-msu1() {
+if [ ! -d "$HOME"/RetroPie/roms/snesmsu1/ ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "RUNNING MSU1 SETUP NOW" 6 40;
+chmod 755 "$HOME"/Devils-Box/scripts/MSU1-Setup.sh
+"$HOME"/Devils-Box/scripts/MSU1-Setup.sh
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST7}/"${1}" -P "$HOME"/RetroPie/roms/snesmsu1 -erobots=off
+fi
+}
+function msu1-pack() {
+if [ ! -d "$HOME"/RetroPie/roms/snesmsu1/ ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "RUNNING MSU1 SETUP NOW" 6 40;
+chmod 755 "$HOME"/Devils-Box/scripts/MSU1-Setup.sh
+"$HOME"/Devils-Box/scripts/MSU1-Setup.sh
+else
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST7}"/ -P "$HOME"/RetroPie/roms/snesmsu1 -erobots=off
+rm -f "$HOME"/RetroPie/roms/snesmsu1/index.html.tmp
+echo ${bld}$(tput setaf 1)"-----SCRAPING NEW GAMES INFO NOW------"
+sleep 5
+cd "$HOME/RetroPie/roms/snesmsu1/"
+/opt/retropie/supplementary/scraper/scraper -img_format=png -image_dir="./boxart" -image_path="./boxart" -download_images=false -image_suffix="" -marquee_dir="./wheel" -marquee_path="./wheel" -download_marquees=false -marquee_suffix="" -video_dir="./snap" -video_path="./snap" -download_videos=false -video_suffix="" -refresh -console_src gdb,ss,ovgdb
+fi
+}
+#-----------------#
+#  MUGEN FUNCTION  #
+#-----------------#
+function download-mugens() {
+if [ ! -d "$HOME/RetroPie/roms/wine" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
+else
+  clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/mugens -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/mugens/"${1}" -d "$HOME"/RetroPie/roms/mugens
+  chmod 755 "$HOME"/RetroPie/roms/mugens/*.sh
+  sudo rm -r "$HOME"/RetroPie/roms/mugens/"${1}"
+fi
+}
