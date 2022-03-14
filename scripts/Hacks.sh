@@ -12,6 +12,14 @@ HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 
+###   NET CHECKER    ###
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  NETCHECK=0
+else
+  NETCHECK=1
+fi
+
 function hacks-menu() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
