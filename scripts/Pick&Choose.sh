@@ -1353,4 +1353,69 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 fi
 }
 
+function download-game() {
+  for type in "$@"; do
+    if [ "${type}" != "${1}" ]; then
+      if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+      else
+      clear
+      wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
+      rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+fi
+fi
+done
+}
+
+function download-mugens() {
+if [ ! -d "$HOME/RetroPie/roms/wine" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
+else
+  clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/mugens -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/mugens/"${1}" -d "$HOME"/RetroPie/roms/mugens
+  chmod 755 "$HOME"/RetroPie/roms/mugens/*.sh
+  sudo rm -r "$HOME"/RetroPie/roms/mugens/"${1}"
+fi
+}
+
+function download-psp() {
+if [ ! -d "$HOME/RetroPie/roms/pc/" ]; then dialog  --sleep 1 --title "PSP FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST6}/"${1}" -P "$HOME"/RetroPie/roms/psp -erobots=off
+fi
+}
+
+function download-msu1() {
+if [ ! -d "$HOME"/RetroPie/roms/snesmsu1/ ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "RUNNING MSU1 SETUP NOW" 6 40;
+chmod 755 "$HOME"/Devils-Box/scripts/MSU1-Setup.sh
+"$HOME"/Devils-Box/scripts/MSU1-Setup.sh
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST7}/"${1}" -P "$HOME"/RetroPie/roms/snesmsu1 -erobots=off
+fi
+}
+
+function download-winegames() {
+if [ ! -d "$HOME/RetroPie/roms/wine/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/wine -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/wine/"${1}" -d "$HOME"/RetroPie/roms/wine/
+  chmod 755 "$HOME"/RetroPie/roms/wine/*.sh
+  sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
+fi
+}
+
+function download-pcgames() {
+if [ ! -d "$HOME/RetroPie/roms/pc/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST5}/"${1}" -P "$HOME"/RetroPie/roms/pc -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/pc/"${1}" -d "$HOME"/RetroPie/roms/pc/
+  sudo rm -r "$HOME"/RetroPie/roms/pc/"${1}"
+fi
+}
+
+
+
 pick_menu
