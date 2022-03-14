@@ -528,8 +528,11 @@ mkdir "$HOME"/RetroPie/roms/snesh
 ###-------------------------------------###
 
 function pick() {
-if [ $NETCHECK  = 1 ]; then
-"$HOME"/Devils-Box/scripts/PickChoose.sh
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+  else
+bash "$HOME"/Devils-Box/scripts/PickChoose.sh
+fi
 }
 #----------------------------------#
 #   TOOL BOX GAME FIXES FUNCTIONS  #
