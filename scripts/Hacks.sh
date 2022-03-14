@@ -104,4 +104,26 @@ cd "$HOME/RetroPie/roms/"${1}"/"
 fi
 }
 
+function hacks-config() {
+clear
+sleep 2 
+echo ${bld}$(tput setaf 1)"Copying Your/Default Configs"
+sleep 2
+cp -r /opt/retropie/configs/gba /opt/retropie/configs/gbah
+cp -r /opt/retropie/configs/gb /opt/retropie/configs/gbh
+cp -r /opt/retropie/configs/megadrive /opt/retropie/configs/genh
+cp -r /opt/retropie/configs/gamegear /opt/retropie/configs/ggh
+cp -r /opt/retropie/configs/nes /opt/retropie/configs/nesh
+cp -r /opt/retropie/configs/snes /opt/retropie/configs/snesh
+sleep 2
+echo "Making Directories For Hacks"
+sleep 2
+mkdir "$HOME"/RetroPie/roms/gbah
+mkdir "$HOME"/RetroPie/roms/gb
+mkdir "$HOME"/RetroPie/roms/genh
+mkdir "$HOME"/RetroPie/roms/ggh
+mkdir "$HOME"/RetroPie/roms/nesh
+mkdir "$HOME"/RetroPie/roms/snesh
+}
+
 hacks-menu
