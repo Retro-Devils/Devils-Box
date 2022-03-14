@@ -21,6 +21,7 @@ HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
 
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
+
 function pick_menu() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
