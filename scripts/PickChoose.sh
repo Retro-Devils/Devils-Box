@@ -1,3 +1,26 @@
+##-------------------------##
+##       HOST SITES        ##
+##-------------------------##
+
+#--------ART HOSTS----------#
+ART_HOST="https://archive.org/download/devils-box-media-alt"
+ART_HOST2="https://github.com/Retro-Devils-Media"
+#ART_HOST3=""
+#ART_HOST4=""
+
+#-----------------DEVILS-GAME HOSTS---------------------#
+HOST1="https://archive.org/download/the-devils-box-alt"
+HOST2="https://archive.org/download/the-devils-box_202112"
+HOST3="https://archive.org/download/devils-bios"
+HOST4="https://archive.org/download/devils-wine"
+HOST5="https://archive.org/download/devils-dos"
+
+#---------------NON-DEVILS-HOSTS-----------------------#
+HOST6="https://archive.org/download/PSP_US_Arquivista"
+HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
+
+#--------PICK & CHOOSE HOST-----#
+PC_HOST="https://archive.org/download/the-devils-box-alt"
 function pick_menu() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
