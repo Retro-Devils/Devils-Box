@@ -1,3 +1,25 @@
+#-----------------DEVILS-GAME HOSTS---------------------#
+HOST1="https://archive.org/download/the-devils-box-alt"
+HOST2="https://archive.org/download/the-devils-box_202112"
+HOST3="https://archive.org/download/devils-bios"
+HOST4="https://archive.org/download/devils-wine"
+HOST5="https://archive.org/download/devils-dos"
+
+#---------------NON-DEVILS-HOSTS-----------------------#
+HOST6="https://archive.org/download/PSP_US_Arquivista"
+HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
+
+#--------PICK & CHOOSE HOST-----#
+PC_HOST="https://archive.org/download/the-devils-box-alt"
+
+###   NET CHECKER    ###
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  NETCHECK=0
+else
+  NETCHECK=1
+fi
+
 function Consoles-Menu() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
