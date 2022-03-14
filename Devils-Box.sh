@@ -112,7 +112,7 @@ fi
 }
 
 
-###   COMMUNITY TOOL BOX MENU FUNCTIONS   ###
+#-----------COMMUNITY TOOL BOX MENU FUNCTIONS-----------#
 function community_tools() {
   while true; do 
 dialog  --sleep 1 --title "COMMUNITY TOOLBOX" --msgbox " 
@@ -136,7 +136,7 @@ WE WILL DO OUR BEST TO KEEP UP TO DATE" 0 0
     esac
   done
 }
-#  COMMUNITY AUDIO & VISUAL TOOLS FUNCTIONS   #
+#-----------COMMUNITY AUDIO & VISUAL TOOLS FUNCTIONS-----------#
 function comm_audio() {
   local choice
 
@@ -241,7 +241,7 @@ cat /home/pi/Devils-Box/files/tampo/README.md
 read -n 1 -s -r -p "Press any key to Continue"
 fi
 }
-###  COMMUNITY EMU TOOLS MENU FUNCTIONS   ###
+#-----------COMMUNITY EMU TOOLS MENU FUNCTIONS-----------#
 function comm_emu_tools() {
   local choice
 
@@ -263,15 +263,11 @@ function comm_emu_tools() {
   done
 }
 
-#----------------------------------#
-#   RETROPIE SETUP MENU FUNCTION   #
-#----------------------------------#
+#-----------RETROPIE SETUP MENU FUNCTION-----------#
 function rpi-menu() {
   sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
 }
-#-----------#
 #   PIKISS  #
-#-----------#
 function pikiss() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox "
@@ -285,9 +281,7 @@ else
   fi
 fi
 }
-#---------------#
 #     MUGEN     #
-#---------------#
 function mugen() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
@@ -315,9 +309,7 @@ dialog  --sleep 1 --title "EXIT MESSAGE" --msgbox "
 fi
 }
 
-###---------------------------------###
 ###   HARDWARE TOOLS MENU FUNCTIONS ###
-###---------------------------------###
 function comm_hardware_tools() {
   local choice
 
@@ -341,9 +333,7 @@ function comm_hardware_tools() {
   done
 }
 
-#---------------------------------#
 #   CLEAR CONTROLLER FUNCTION     #
-#---------------------------------#
 function clear_controller() {
 clear
 echo ${rst}$(tput setaf 1) "This Wil Clear You ES Controller Mappings"
@@ -352,9 +342,9 @@ sudo rm "$HOME"/.emulationstation/es_input.cfg
 sudo rm /opt/retropie/configs/all/emulationstation/es_temporaryinput.cfg
 }
 
-#--------#
+
 # HDD IN #
-#--------#
+
 function hdd-in() { 
 clear
 mkdir /home/pi/addonusb > /dev/null 2>&1
@@ -439,9 +429,8 @@ sleep 10
 sudo halt
 fi
 }
-#---------#
+
 # HDD OUT #
-#---------#
 function hdd-out() {
 clear
 if [ ! -d /home/pi/RetroPie/localroms ]; then
@@ -459,9 +448,8 @@ unlink /home/pi/RetroPie/roms; sudo umount /home/pi/addonusb; sudo umount overla
 sudo reboot
 fi
 }
-###---------------------------------###
+
 ###    CASES TOOLS MENU FUNCTIONS   ###
-###---------------------------------###
 function cases() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
@@ -523,9 +511,8 @@ dialog  --sleep 1 --title "RetroFlag GPI Install" --msgbox "
 -After complete system will reboot." 0 0
 wget -O - "https://raw.githubusercontent.com/ALLRiPPED/retroflag-picase/master/install_gpi.sh" | sudo bash
 }
-###------------------------------------###
+
 ###   DEVILS TOOL BOX MENU FUNCTIONS   ###
-###------------------------------------###
 function devils_tools() {
   while true; do
 dialog  --sleep 1 --title "DEVILS TOOLBOX" --msgbox " 
@@ -552,9 +539,8 @@ TOOLS HERE ARE MADE BY THE RETRO DEVILS " 0 0
     esac
   done
 }
-#------------------------------------------#
+
 #  DEVILS AUDIO & VISUAL TOOLS FUNCTIONS   #
-#------------------------------------------#
 function devils_visual_tools() {
   local choice
 
@@ -604,9 +590,7 @@ unzip -o "$HOME"/devil-chromey.zip -d /home/pi/.emulationstation/themes/
 sudo rm -R "$HOME"/devil-chromey.zip
 }
 
-###------------------------------------###
 ###  DEVILS EMU TOOLS MENU FUNCTIONS   ###
-###------------------------------------###
 function devils_emu_tools() {
   local choice
 
@@ -638,9 +622,7 @@ curl -sSL https://git.io/J9Z8c | bash
 fi
 }
 
-#----------------------------------#
 #       SM3 EMU FUNCTIONS        #
-#----------------------------------#
 function sm3() {
 if [ $NETCHECK  = 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
@@ -651,9 +633,7 @@ curl -sSL https://git.io/JSDOy | bash
 fi
 }
 
-###---------------------------------###
 ###   DEVILS BOX TOOLS FUNCTION     ###
-###---------------------------------###
 function db_tools() {
   local choice
 
@@ -714,24 +694,22 @@ fi
     esac
   done
 }
-#--------------------------_#
+
 #ABOUT DEVILS BOX #
-#---------------------------#
 function help_db() {
   clear
   cat "$HOME"/Devils-Box/files/db-files/HELP-DB.txt
 read -n 1 -s -r -p "Press any key to Continue"
 }
-#--------------------------_#
+
 #HELP WITH DEVILS BOX #
-#---------------------------#
 function about_db() {
   clear
   cat "$HOME"/Devils-Box/files/db-files/INFO.txt
 read -n 1 -s -r -p "Press any key to Continue"
 }
 
-#-------REMOVE DEVILS BOX-------#
+#REMOVE DEVILS BOX#
 function remove_db() {
 clear
   echo ${rst}$(tput setaf 1) "Removing Now";
