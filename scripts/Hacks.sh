@@ -14,13 +14,13 @@ HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 
 if [ -f "/usr/local/bin/confirm" ]; then
-  confirm=1
-else
   confirm=0
+else
+  confirm=1
 fi
 
 function hacks-menu() {
-if [ $confirm  = 1 ]; then
+if [ $confirm = 1 ]; then
 dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox " 
 PLEASE Install/Update Devils Box" 0 0
 else
