@@ -4,18 +4,17 @@ ART_HOST2="https://github.com/Retro-Devils-Media"
 #ART_HOST3=""
 #ART_HOST4=""
 
-###   NET CHECKER    ###
-wget -q --spider http://google.com
-if [ $? -eq 0 ]; then
-  NETCHECK=0
+
+if [ -f "/usr/local/bin/confirm" ]; then
+  confirm=1
 else
-  NETCHECK=1
+  confirm=0
 fi
 
 function artwork-menu() {
-if [ $NETCHECK  = 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR !! " --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+if [ $confirm  = 1 ]; then
+dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox " 
+PLEASE Install/Update Devils Box" 0 0
 else
 dialog  --sleep 1 --title "ARTWORK PACKS INFO" --msgbox " 
 <-------------WELCOME--------------->
