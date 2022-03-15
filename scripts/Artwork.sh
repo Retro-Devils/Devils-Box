@@ -1,3 +1,4 @@
+#!/bin/bash
 #--------ART HOSTS----------#
 ART_HOST="https://archive.org/download/devils-box-media-alt"
 ART_HOST2="https://github.com/Retro-Devils-Media"
