@@ -1,4 +1,15 @@
+
+if [ -f "/usr/local/bin/confirm" ]; then
+  confirm=1
+else
+  confirm=0
+fi
+
 function game_fixes-menu() {
+if [ $confirm  = 1 ]; then
+dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox " 
+PLEASE Install/Update Devils Box" 0 0
+else
   local choice
 
   while true; do 
