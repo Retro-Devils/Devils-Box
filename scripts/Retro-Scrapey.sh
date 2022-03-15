@@ -1,3 +1,4 @@
+#!/bin/bash
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
   NETCHECK=0
