@@ -30,7 +30,7 @@ else
 fi
 
 function pick_menu() {
-if [ $confirm  = 1 ]; then
+if [ $confirm = 1 ]; then
 dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox " 
 PLEASE Install/Update Devils Box" 0 0
 else
