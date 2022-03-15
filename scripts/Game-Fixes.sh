@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ -f "/usr/local/bin/confirm" ]; then
-  confirm=1
-else
   confirm=0
+else
+  confirm=1
 fi
 
 function game_fixes-menu() {
