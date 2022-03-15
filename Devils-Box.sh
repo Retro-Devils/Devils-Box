@@ -37,19 +37,19 @@ function main_menu() {
       --menu "DEVILS BOX V3.06--------------UPDATED 3/14/22" 23 50 30 )
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
-      - "<---->Downloaders<---->"
+      - "<---->Downloaders<------>"
       1 "Artwork Packs"
       2 "Console Packs"
       3 "Hacked Packs"
       4 "Pick & Choose"
-      + "<------->Tools<------->"
+      + "<---->Tool Boxes<------->"
       5 "Community Tool Box"      
       6 "Devils Tool Box"
-      - "<--------------------->"
+      - "<---->System Tools<----->"
       7 "Reboot System"
       8 "Show System Info"
       9 "Expand System Memory"
-      - "<--------------------->" 
+      - "<----------------------->" 
       10 "Devils Box Credits")
     else
       options=( \
