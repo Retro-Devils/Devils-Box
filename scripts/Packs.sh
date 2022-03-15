@@ -1,3 +1,4 @@
+#!/bin/bash
 #-----------------DEVILS-GAME HOSTS---------------------#
 HOST1="https://archive.org/download/the-devils-box-alt"
 HOST2="https://archive.org/download/the-devils-box_202112"
