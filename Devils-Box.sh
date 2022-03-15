@@ -48,7 +48,9 @@ function main_menu() {
       - "<--------------------->"
       7 "Reboot System"
       8 "Show System Info"
-      9 "Expand System Memory")
+      9 "Expand System Memory"
+      - "<--------------------->" 
+      10 "Devils Box Credits")
     else
       options=( \
       1 "Install Devils-Box")
@@ -64,6 +66,7 @@ function main_menu() {
     7) system_reboot ;;
     8) show_sysinfo ;;
     9) expand_mem ;;
+    10) credits ;;
     -) nono ;;
     +) none ;;
     *) break ;;
@@ -693,6 +696,12 @@ fi
     *) break ;;
     esac
   done
+}
+
+function credits() {
+  clear
+  cat "$HOME"/Devils-Box/files/db-files/CREDITS.txt
+read -n 1 -s -r -p "Press any key to Continue"
 }
 
 #ABOUT DEVILS BOX #
