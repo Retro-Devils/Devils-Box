@@ -7,9 +7,9 @@ ART_HOST2="https://github.com/Retro-Devils-Media"
 
 
 if [ -f "/usr/local/bin/confirm" ]; then
-  confirm=1
-else
   confirm=0
+else
+  confirm=1
 fi
 
 function artwork-menu() {
