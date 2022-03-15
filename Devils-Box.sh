@@ -734,7 +734,7 @@ else
   cp "$HOME"/Devils-Box/Devils-Box.sh -f "$HOME"/RetroPie/retropiemenu/
   sudo cp "$HOME"/Devils-Box/files/box -f /usr/local/bin/
   sudo cp "$HOME"/Devils-Box/Devils-Box.sh -f /usr/local/bin/Devils-Box
-  wget https://github.com/Retro-Devils/Devils-Pi/blob/main/things -P /usr/local/bin/confirm
+  wget https://raw.githubusercontent.com/Retro-Devils/Devils-Pi/main/things -P /usr/local/bin/confirm
   sudo chmod 755 /usr/local/bin/confirm
   sudo chmod 755 /usr/local/bin/box
   sudo chmod 755 /usr/local/bin/Devils-Box
