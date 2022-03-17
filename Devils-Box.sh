@@ -12,14 +12,6 @@ bfgred="${bld}$(tput setaf 1)"
 clear
 omxplayer "$HOME"/Devils-Box/files/videos/intro.mp4  > /dev/null 2>&1
 
-#-----------NET CHECKER-----------#
-wget -q --spider http://google.com
-if [ $? -eq 0 ]; then
-  NETCHECK=0
-else
-  NETCHECK=1
-fi
-
 #-----------REQUIRED FOR FUTURE UPDATES-----------#
 if ! command -v pv &> /dev/null; then sudo apt -y install pv; fi
 
@@ -76,7 +68,7 @@ function main_menu() {
 
 #-----------Artwork-----------#
 function artwork() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
@@ -86,7 +78,7 @@ fi
 
 #-----------Consoles-----------#
 function consoles() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
@@ -96,7 +88,7 @@ fi
 
 #-----------Hacks-----------#
 function hacked() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
@@ -106,7 +98,7 @@ fi
 
 #-----------PickChoose-----------#
 function pick() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
@@ -176,7 +168,7 @@ function comm_audio() {
   done
 }
 function tampo() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
 Offline ... Not Availible Please Connect To Internet!" 0 0
 else
@@ -216,7 +208,7 @@ sudo reboot
 fi
 }
 function no-audio2 () {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
 Offline ... Not Availible Please Connect To Internet!" 0 0
 else
@@ -225,7 +217,7 @@ curl https://get.pimoroni.com/audio | bash
 fi
 }
 function imp() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
 Offline ... Not Availible Please Connect To Internet!" 0 0
 else
@@ -236,7 +228,7 @@ cd ~/imp && ./imp_setup.sh
 fi
 }
 function imp-info() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
 Offline ... Not Availible Please Connect To Internet!" 0 0
 else
@@ -246,7 +238,7 @@ read -n 1 -s -r -p "Press any key to Continue"
 fi
 }
 function tampo-info() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
 Offline ... Not Availible Please Connect To Internet!" 0 0
 else
@@ -283,7 +275,7 @@ function rpi-menu() {
 }
 #   PIKISS  #
 function pikiss() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox "
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
@@ -297,7 +289,7 @@ fi
 }
 #     MUGEN     #
 function mugen() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
@@ -465,7 +457,7 @@ fi
 
 ###    CASES TOOLS MENU FUNCTIONS   ###
 function cases() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 OFFLINE!!!
 Offline ... Downloads Not Availible Please Connect To Internet!" 0 0
@@ -628,7 +620,7 @@ function devils_emu_tools() {
   done
 }
 function devils-ex() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
@@ -638,7 +630,7 @@ fi
 
 #       SM3 EMU FUNCTIONS        #
 function sm3() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
@@ -740,7 +732,7 @@ clear
 
 #-------UPDATE DEVILS BOX--------#
 function update_db() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "UPDATE DEVILS BOX" --msgbox " 
 OFFLINE!!!
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
@@ -900,7 +892,7 @@ sudo reboot
 
 
 function game_fixes() {
-if [ $NETCHECK = 1 ]; then
+if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
@@ -916,5 +908,13 @@ function fe_switch() {
 sudo cp /home/pi/Devils-Box/scripts/FE-Switcheroo.sh -f /usr/local/bin/switcheroo
 bash "$HOME"/Devils-Box/scripts/FE-Switcheroo.sh
 }
+
+#-----------NET CHECKER-----------#
+wget -q --spider http://google.com
+if [ $? -eq 0 ]; then
+  NETCHECK=0
+else
+  NETCHECK=1
+fi
 
 main_menu
