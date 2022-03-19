@@ -192,7 +192,7 @@ function main_menu() {
 	    7 "PEGASUS FE HELPER \
 	    + "|=========*UPDATE*=========|" \
 	    8 "Update FE Switcheroo" \
-            2>&1 > /dev/tty)
+            2>&1 >/dev/tty)
 
         case "$choice" in
 	    +) none ;;
