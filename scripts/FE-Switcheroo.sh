@@ -8,15 +8,15 @@ function fe_menu() {
     while true; do
         choice=$(dialog --backtitle "Front End Switcheroo Currently using $fe" --title " FE SWITCHEROO MENU V 2.5" \
             --ok-label OK --cancel-label Back \
-            --menu "Which Frontend or Helper Which You Like To Use?" 25 75 20 \
+            --menu "Please Select A Option Below" 25 75 20 \
 	    + "<--------->FRONTENDS<--------->" \
-	    1 "SET Attract Mode AS Frontend" \
-            2 "SET Pixel Desktop As Frontend" \
-            3 "SET Emu Station As Frontend" \
-            4 "SET Pegasus FE As Frontend" \
+	    1 "use ATTRACT MODE as FRONTEND" \
+            2 "use PIXEL DESKTOP as FRONTEND" \
+            3 "use EMU STATION as FRONTEND" \
+            4 "use PEGASUS FE as FRONTEND" \
 	    + "<--------->HELPERS<---------->" \
 	    5 "Attract Mode WORK IN PROGRESS" \
-	    6 "Open Pegasus Helper" \
+	    6 "Pegasus FE Helper" \
 	    + "<--------->UPDATE<----------->" \
 	    7 "Update FE Switcheroo" \
             2>&1 > /dev/tty)
@@ -39,7 +39,7 @@ if [ ! -d /opt/retropie/configs/all/attractmode ]; then
 dialog  --sleep 1 --title "ATTRACT MODE NOT INSTALLED !! " --msgbox " 
 INSTALLING NOW" 0 0
 cd $HOME/RetroPie-Setup
-sudo ./retropie_packages.sh raspbiantools attract
+sudo ./retropie_packages.sh attractmode
 AT_FE;
 else
     if grep -q 'emulationstation \#auto' "$AUTOSTART"; then
@@ -68,27 +68,35 @@ fi
 mode_check
 }
 function DE_FE() {
-if grep -q 'attract \#auto' "$AUTOSTART"; then
+if [ ! -f /usr/bin/startx ]; then
+dialog  --sleep 1 --title "PIXEL DESKTOP NOT INSTALLED !! " --msgbox " 
+INSTALLING NOW" 0 0
+cd $HOME/RetroPie-Setup
+sudo ./retropie_packages.sh raspbiantools lxde
+DE_FE;
+else
+    if grep -q 'attract \#auto' "$AUTOSTART"; then
     sudo sed -i 's/attract \#auto/startx \#auto/g' $AUTOSTART
     echo "Desktop Mode Set"
     sleep 2
     pgrep -f attract|xargs sudo kill -9 > /dev/null 2>&1 &
     sudo openvt -c 1 -s -f startx 2>&1
-elif grep -q 'pegasus-fe \#auto' "$AUTOSTART"; then
+    elif grep -q 'pegasus-fe \#auto' "$AUTOSTART"; then
     sudo sed -i 's/pegasus-fe \#auto/startx \#auto/g' $AUTOSTART
     echo "Desktop Mode Set"
     sleep 2
     pgrep -f pegasus-fe|xargs sudo kill -9 > /dev/null 2>&1 &
     sudo openvt -c 1 -s -f startx 2>&1
-elif grep -q 'emulationstation \#auto' "$AUTOSTART"; then
+    elif grep -q 'emulationstation \#auto' "$AUTOSTART"; then
     sudo sed -i 's/emulationstation \#auto/startx \#auto/g' $AUTOSTART
     echo "Desktop Mode Set"
     sleep 2
     pgrep -f emulationstation|xargs sudo kill -9 > /dev/null 2>&1 &
     sudo openvt -c 1 -s -f startx 2>&1
-elif grep -q 'startx \#auto' "$AUTOSTART"; then
+    elif grep -q 'startx \#auto' "$AUTOSTART"; then
     echo "Desktop Mode Already Set"
     sleep 2
+fi
 fi
 mode_check
 }
@@ -196,6 +204,7 @@ local choice
       4 "SkylineOS-------------RbertoCases" \
       - "----------PREVIEWS---------------" \
       5 "NeoRetro Preview-----------------" \
+      6 "SwitchOS Preview-----------------" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -235,19 +244,40 @@ sudo unzip -o /opt/retropie/configs/all/pegasus-fe/Pegasus_flixnet.zip -d /opt/r
 sudo rm -R /opt/retropie/configs/all/pegasus-fe/themes/Pegasus_flixnet.zip
 sudo chmod 755 /opt/retropie/configs/all/pegasus-fe/themes/flixnet
 }
-#-------PREVIEWS----# WORK IN PROGRESS
+#-------PREVIEWS----#
+#function preview_pegasus() {
+#dialog  --sleep 1 --title "PREVIEW FRONTEND" --msgbox "
+#This will play a 30-45 second preview video.
+#Press any button to continue " 0 0
+#omxplayer "$HOME"/Devils-Box/helpers/pegasusfe/previews/pegasus-fe.mp4
+#}
+#function preview_attractmode() {
+#dialog  --sleep 1 --title "PREVIEW FRONTEND" --msgbox "
+#This will play a 30-45 second preview video.
+#Press any button to continue " 0 0
+#omxplayer "$HOME"/Devils-Box/helpers/attractmode/previews/attractmode.mp4
+#}
+#-PEGASUS PREVIEWS-#
 function view_neo() {
-dialog  --sleep 1 --title "PREVIEW THEME" --msgbox "
+dialog  --sleep 1 --title "PREVIEW PEGASUS THEME" --msgbox "
 This will play a 30-45 second preview video.
 Press any button to continue " 0 0
 omxplayer "$HOME"/Devils-Box/helpers/pegasusfe/previews/neoretro-preview.mp4
 }
 
 function view_switchos() {
-dialog  --sleep 1 --title "PREVIEW THEME" --msgbox "
+dialog  --sleep 1 --title "PREVIEW PEGASUS THEME" --msgbox "
 This will play a 30-45 second preview video.
 Press any button to continue " 0 0
 omxplayer "$HOME"/Devils-Box/helpers/pegasusfe/previews/switchOS-preview.mp4
+}
+
+#------------ATTRACT MODE PREVIEWS--------------#
+#function view_devilspin() {
+#dialog  --sleep 1 --title "PREVIEW ATTRACTMODE THEME" --msgbox "
+#This will play a 30-45 second preview video.
+#Press any button to continue " 0 0
+#omxplayer "$HOME"/Devils-Box/helpers/attractmode/previews/devilspin.mp4
 }
 
 function peg-help() {
