@@ -10,10 +10,10 @@ function fe_menu() {
             --ok-label OK --cancel-label Back \
             --menu "Which Frontend or Helper Which You Like To Use?" 25 75 20 \
 	    + "<--------->FRONTENDS<--------->" \
-	    1 "Switch FE Attract Mode" \
-            2 "Switch FE Desktop" \
-            3 "Switch FE Emu Station" \
-            4 "Switch FE Pegasus FE" \
+	    1 "SET Attract Mode AS Frontend" \
+            2 "SET Pixel Desktop As Frontend" \
+            3 "SET Emu Station As Frontend" \
+            4 "SET Pegasus FE As Frontend" \
 	    + "<--------->HELPERS<---------->" \
 	    5 "Attract Mode WORK IN PROGRESS" \
 	    6 "Open Pegasus Helper" \
@@ -240,14 +240,14 @@ function view_neo() {
 dialog  --sleep 1 --title "PREVIEW THEME" --msgbox "
 This will play a 30-45 second preview video.
 Press any button to continue " 0 0
-omxplayer "$HOME"/Devils-Box/helpers/previews/neoretro-preview.mp4
+omxplayer "$HOME"/Devils-Box/helpers/pegasusfe/previews/neoretro-preview.mp4
 }
 
 function view_switchos() {
 dialog  --sleep 1 --title "PREVIEW THEME" --msgbox "
 This will play a 30-45 second preview video.
 Press any button to continue " 0 0
-omxplayer "$HOME"/Devils-Box/helpers/previews/switchOS-preview.mp4
+omxplayer "$HOME"/Devils-Box/helpers/pegasusfe/previews/switchOS-preview.mp4
 }
 
 function peg-help() {
