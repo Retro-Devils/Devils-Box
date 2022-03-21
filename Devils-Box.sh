@@ -110,10 +110,7 @@ fi
 #-----------COMMUNITY TOOL BOX MENU FUNCTIONS-----------#
 function community_tools() {
   while true; do 
-dialog  --sleep 1 --title "COMMUNITY TOOLBOX" --msgbox " 
----------------WELCOME------------------
-TOOLS HERE MADE & MAINTANED BY COMMUNITY 
-WE WILL DO OUR BEST TO KEEP UP TO DATE" 0 0
+omxplayer "$HOME"/Devils-Box/files/videos/community-toolbox.mp4 > /dev/null 2>&1
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " COMMUNITY TOOL BOX MENU " \
       --ok-label Select --cancel-label Main-Menu \
@@ -521,9 +518,7 @@ wget -O - "https://raw.githubusercontent.com/ALLRiPPED/retroflag-picase/master/i
 ###   DEVILS TOOL BOX MENU FUNCTIONS   ###
 function devils_tools() {
   while true; do
-dialog  --sleep 1 --title "DEVILS TOOLBOX" --msgbox " 
----------------WELCOME------------------
-TOOLS HERE ARE MADE BY THE RETRO DEVILS " 0 0
+omxplayer "$HOME"/Devils-Box/files/videos/devils-toolbox.mp4 > /dev/null 2>&1
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS TOOL BOX MENU " \
       --ok-label Select --cancel-label Main-Menu \
