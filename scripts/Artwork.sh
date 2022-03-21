@@ -1,4 +1,8 @@
 #!/bin/bash
+#-----------INTRO VIDEO-----------#
+clear
+omxplayer "$HOME"/Devils-Box/files/videos/art-packs.mp4 > /dev/null 2>&1
+
 #--------ART HOSTS----------#
 ART_HOST="https://archive.org/download/devils-box-media-alt"
 ART_HOST2="https://github.com/Retro-Devils-Media"
