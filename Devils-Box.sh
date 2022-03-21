@@ -702,9 +702,8 @@ fi
 }
 
 function credits() {
-  clear
-  cat "$HOME"/Devils-Box/files/db-files/CREDITS.txt
-read -n 1 -s -r -p "Press any key to Continue"
+clear
+omxplayer "$HOME"/Devils-Box/files/videos/credits.mp4 > /dev/null 2>&1
 }
 
 #ABOUT DEVILS BOX #
