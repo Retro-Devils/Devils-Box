@@ -1,4 +1,8 @@
 #!/bin/bash
+#-----------INTRO VIDEO-----------#
+clear
+omxplayer "$HOME"/Devils-Box/files/videos/console-packs.mp4 > /dev/null 2>&1
+
 #-----------------DEVILS-GAME HOSTS---------------------#
 HOST1="https://archive.org/download/the-devils-box-alt"
 HOST2="https://archive.org/download/the-devils-box_202112"
