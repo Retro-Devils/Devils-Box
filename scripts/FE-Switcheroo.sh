@@ -278,7 +278,7 @@ omxplayer "$HOME"/Devils-Box/helpers/pegasusfe/previews/switchOS-preview.mp4
 #This will play a 30-45 second preview video.
 #Press any button to continue " 0 0
 #omxplayer "$HOME"/Devils-Box/helpers/attractmode/previews/devilspin.mp4
-}
+#}
 
 function peg-help() {
 local choice
