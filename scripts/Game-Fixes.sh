@@ -17,14 +17,14 @@ else
   choice=$(dialog --backtitle "$BACKTITLE" --title " GAME TOOLS/FIXES MENU " \
       --ok-label Select --cancel-label Back \
       --menu "SELECT TOOL OR FIX AND PRESS A  " 20 50 30 \
-      + "--------WINE GAME FIXES-------" \
+      + "--------WINE HELPER-------" \
       1 "Age Of Empires No-CD Error Fix" \
       2 "C&C Generals + Zero Hour Fix" \
       3 "Heroes OF might And Magic Fix" \
       4 "Silent Hill 4 Fix" \
       5 "Unreal Anthology Fix" \
       + "----------GAME TOOLS----------" \
-      6 "Qjoy Layout Downloader" \
+      6 "Qjoypad Helper" \
       2>&1 >/dev/tty)
 
     case "$choice" in
