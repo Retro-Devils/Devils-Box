@@ -365,13 +365,16 @@ if [ ! -d /home/pi/es-pegasus-theme-converter ]; then
 	else
         git clone -b master "https://github.com/mmatyas/es-pegasus-theme-converter.git"
         clear
+	cd
     fi
 
 fi
+    cd "/home/pi/.emulationstation/themes/"
     echo "Please type theme name and press Enter"
     read theme
     /home/pi/es-pegasus-theme-converter/convert.py /etc/emulationstation/themes/$theme /opt/retropie/configs/all/pegasus-fe/theme/$theme
     read -n 1 -s -r -p "Above Is Converting Results-----Press any key to Continue"
+    cd
 }
 
 function update-switcheroo() {
