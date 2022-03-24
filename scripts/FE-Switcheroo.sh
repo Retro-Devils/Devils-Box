@@ -354,11 +354,24 @@ read -n 1 -s -r -p "Above Is A List Of Installed Themes-----Press any key to Con
 }
 
 function convert() {
-echo "Please type theme name and press Enter"
-read theme
-cd "/home/pi/.emulationstation/themes/$theme"
-"$HOME"/Devils-Box/helpers/pegasusfe/pegasus-converter/convert.py $theme /opt/retropie/configs/all/pegasus-fe/themes/$theme
-read -n 1 -s -r -p "Above Is Converting Results-----Press any key to Continue"
+if [ ! -d /home/pi/es-pegasus-theme-converter ]; then
+    echo -e "$(tput setaf 2)ES Pegasus Theme Converter Missing Will Download Now! $(tput sgr0)"
+    sleep 3
+
+        if [ $NETCONNECTED  = 1 ]; then
+        dialog  --sleep 1 --title "OFFLINE?" --msgbox " 
+        Your Offline. Please Connect To The Internet And Try Again! Now Backing Out To Main Menu!" 0 0 
+	quit
+	else
+        git clone -b master "https://github.com/mmatyas/es-pegasus-theme-converter.git"
+        clear
+    fi
+
+fi
+    echo "Please type theme name and press Enter"
+    read theme
+    /home/pi/es-pegasus-theme-converter/convert.py /etc/emulationstation/themes/$theme /opt/retropie/configs/all/pegasus-fe/theme/$theme
+    read -n 1 -s -r -p "Above Is Converting Results-----Press any key to Continue"
 }
 
 function update-switcheroo() {
