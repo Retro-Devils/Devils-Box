@@ -346,14 +346,14 @@ function peg-convert_theme() {
     done
 }
 
-function peg-list-themes() {
+function list-themes() {
 clear
 cd "/home/pi/.emulationstation/themes/"
 ls
 read -n 1 -s -r -p "Above Is A List Of Installed Themes-----Press any key to Continue"
 }
 
-function peg-convert() {
+function convert() {
 echo "Please type theme name and press Enter"
 read theme
 cd "/home/pi/.emulationstation/themes/$theme"
