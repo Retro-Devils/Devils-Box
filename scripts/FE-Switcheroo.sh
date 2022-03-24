@@ -357,7 +357,7 @@ function convert() {
 echo "Please type theme name and press Enter"
 read theme
 cd "/home/pi/.emulationstation/themes/$theme"
-"$HOME"/Devils-Box/helpers/pegasusfe/pegasus-converter/convert.py ..
+"$HOME"/Devils-Box/helpers/pegasusfe/pegasus-converter/convert.py $theme /opt/retropie/configs/all/pegasus-fe/themes/$theme
 read -n 1 -s -r -p "Above Is Converting Results-----Press any key to Continue"
 }
 
