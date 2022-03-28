@@ -196,13 +196,13 @@ local choice
 function es-themes () {
 sudo /home/pi/RetroPie-Setup/retropie_packages.sh retropiemenu launch /home/pi/RetroPie/retropiemenu/esthemes.rp
 }
+
 function hursty-themes () {
 if [ ! -d $HOME/RetroPie/retropiemenu/hurstythemes.sh ]; then
 wget https://raw.githubusercontent.com/RetroHursty69/HurstyThemes/master/install.sh
 chmod +x "install.sh"
 ./install.sh
-else 
-bash $HOME/RetroPie/retropiemenu/hurstythemes.sh
+else bash $HOME/RetroPie/retropiemenu/hurstythemes.sh
 }
 
 function devil-themes() {
