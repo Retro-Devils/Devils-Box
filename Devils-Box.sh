@@ -177,9 +177,13 @@ function es-themes () {
 sudo /home/pi/RetroPie-Setup/retropie_packages.sh retropiemenu launch /home/pi/RetroPie/retropiemenu/esthemes.rp
 }
 function hursty-themes () {
+if [ -f "/home/pi/RetroPie/retropiemenu/hurstythemes.sh" ]; then
+/home/pi/RetroPie/retropiemenu/hurstythemes.sh
+else
 wget https://raw.githubusercontent.com/RetroHursty69/HurstyThemes/master/install.sh
 chmod +x "install.sh"
 ./install.sh
+fi
 }
 function no-audio () {
 sudo grep hdmi_force_edid_audio /boot/config.txt > /dev/null 2>&1
