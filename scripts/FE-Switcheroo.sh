@@ -181,7 +181,7 @@ local choice
      --menu "Version 0.9" 15 30 30 \
       1 "Devils Themes" \
       2 "ES Theme Menu" \
-      3 "Install Hurstys Themes" \
+      3 "Hurstys Themes" \
        2>&1 >/dev/tty)
     
     case "$choice" in 
