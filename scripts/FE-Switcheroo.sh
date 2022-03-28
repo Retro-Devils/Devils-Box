@@ -181,7 +181,7 @@ local choice
      --menu "Version 0.9" 15 30 30 \
       1 "Devils Themes" \
       2 "ES Theme Menu" \
-      3 "Hurstys Themes" \
+      3 "Install Hurstys Themes" \
        2>&1 >/dev/tty)
     
     case "$choice" in 
@@ -197,9 +197,12 @@ function es-themes () {
 sudo /home/pi/RetroPie-Setup/retropie_packages.sh retropiemenu launch /home/pi/RetroPie/retropiemenu/esthemes.rp
 }
 function hursty-themes () {
+if [ ! -d $HOME/RetroPie/retropiemenu/hurstythemes.sh ]; then
 wget https://raw.githubusercontent.com/RetroHursty69/HurstyThemes/master/install.sh
 chmod +x "install.sh"
 ./install.sh
+else 
+bash $HOME/RetroPie/retropiemenu/hurstythemes.sh
 }
 
 function devil-themes() {
