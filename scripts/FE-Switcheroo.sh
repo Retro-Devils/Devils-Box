@@ -185,7 +185,7 @@ local choice
        2>&1 >/dev/tty)
     
     case "$choice" in 
-    1) devils-themes;;
+    1) devils-themes ;;
     2) es-themes  ;;
     3) hursty-themes ;;
     *) break ;;
