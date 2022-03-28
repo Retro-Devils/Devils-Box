@@ -612,35 +612,23 @@ function devils_emu_tools() {
       1 "Devils Extras Installer" \
       2 "BIOS Installer" \
       3 "Game Fixes & Tools" \
-      4 "SEGA Model 3 Installer" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) devils-ex ;;
     2) download-bios ;;
     3) game_fixes ;;    
-    4) sm3 ;;
     *) break ;;
     esac
   done
 }
+
 function devils-ex() {
 if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
 curl -sSL https://git.io/J9Z8c | bash
-fi
-}
-
-#       SM3 EMU FUNCTIONS        #
-function sm3() {
-if [ $NETCHECK -eq 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-else
-clear
-curl -sSL https://git.io/JSDOy | bash
 fi
 }
 
