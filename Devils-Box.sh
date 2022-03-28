@@ -913,6 +913,10 @@ sudo cp /home/pi/Devils-Box/scripts/FE-Switcheroo.sh -f /usr/local/bin/switchero
 bash "$HOME"/Devils-Box/scripts/FE-Switcheroo.sh
 }
 
+function download-bios() {
+bash "$HOME"/Devils-Box/scripts/BIOS.sh
+}
+
 #-----------NET CHECKER-----------#
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
