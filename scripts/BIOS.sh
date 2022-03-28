@@ -1,3 +1,4 @@
+#!/bin/bash
 
 HOST3="https://archive.org/download/devils-bios"
 
