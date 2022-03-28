@@ -230,8 +230,8 @@ local choice
  function neon-ibad() {
  wget https://archive.org/download/devils-themes/NEON-IBAD.zip -P ${HOME}/
  unzip -o "$HOME"/NEON-IBAD.zip -d /home/pi/.emulationstation/themes/
- sudo rm -R "$HOME"/NEON-IBAD.zip}
-
+ sudo rm -R "$HOME"/NEON-IBAD.zip
+ }
 
 function pegasus_helper() {
 local choice
