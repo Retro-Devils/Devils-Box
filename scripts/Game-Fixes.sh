@@ -38,6 +38,7 @@ else
     *) break ;;
     esac
   done
+fi
 }
 #----------------------#
 #   WINE GAME FIXES    #
