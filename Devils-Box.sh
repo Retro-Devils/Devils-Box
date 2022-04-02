@@ -584,13 +584,15 @@ function devil-themes() {
       --menu "SELECT THEME AND PRESS A  " 20 50 30 \
       - "Emulation Station Themes" \
       1 "Devil Chromey " \
-      2 "Neon I.B.A.D  " \
+      2 "Devil Grid Chromey " \
+      3 "Neon I.B.A.D  " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     -) none ;;
     1) devil-chromey ;;
-    2) neon-ibad ;;
+    2) devil-grid-chromey ;;
+    3) neon-ibad ;;
     *) break ;;
     esac
   done
@@ -599,6 +601,12 @@ function devil-chromey() {
 wget https://archive.org/download/devils-themes/devil-chromey.zip -P ${HOME}/
 unzip -o "$HOME"/devil-chromey.zip -d /home/pi/.emulationstation/themes/
 sudo rm -R "$HOME"/devil-chromey.zip
+}
+
+function devil-grid-chromey() {
+wget https://archive.org/download/devils-themes/Chromey-Grid.zip -P ${HOME}/
+unzip -o "$HOME"/Chromey-Grid.zip -d /home/pi/.emulationstation/themes/
+sudo rm -R "$HOME"/Chromey-Grid.zip
 }
 
 function neon-ibad() {
