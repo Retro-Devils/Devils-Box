@@ -155,7 +155,7 @@ choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
 fi
 }
 
-function remove-packs {
+function remove-packs() {
 if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "NO GAMES PRESENT " 6 40;
 else
 clear
