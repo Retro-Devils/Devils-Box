@@ -139,27 +139,29 @@ function comm_audio() {
       + "<------------------->Visual Tools<------------------------> " \
       1 "Emulation Station Themes---------------------------Retropie " \
       2 "Hursty's Themes--------------------------------------Hursty " \
+      3 "Pie Marquee2----------------------------------------Rinalim " \
       - "<----------------->Audio/Mixed Tools<---------------------> " \
-      3 "Apply No Audio Fix--------------------------------Anonymous " \
-      4 "Apply No Audio Fix 2----------------------The Pimoroni Crew " \
-      5 "Install I.M.P-----------------------------------RapiEdwin08 " \
-      6 "Install T.A.M.P.O--------------------------------thepitster " \
+      4 "Apply No Audio Fix--------------------------------Anonymous " \
+      5 "Apply No Audio Fix 2----------------------The Pimoroni Crew " \
+      6 "Install I.M.P-----------------------------------RapiEdwin08 " \
+      7 "Install T.A.M.P.O--------------------------------thepitster " 
       - "<-------------------->Information<------------------------> " \
-      7 "I.M.P-------------Integrated Music Player------------------ " \
-      8 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
+      8 "I.M.P-------------Integrated Music Player------------------ " \
+      9 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     +) nono ;;
     1) es-themes ;;
     2) hursty-themes ;;
+    3) pi-marquee2 ;;
     -) none ;;
-    3) no-audio ;;
-    4) no-audio2 ;;
-    5) imp ;;
-    6) tampo ;;
-    7) imp-info ;;
-    8) tampo-info ;;
+    4) no-audio ;;
+    5) no-audio2 ;;
+    6) imp ;;
+    7) tampo ;;
+    8) imp-info ;;
+    9) tampo-info ;;
     *) break ;;
     esac
   done
@@ -175,6 +177,17 @@ fi
 }
 function es-themes () {
 sudo /home/pi/RetroPie-Setup/retropie_packages.sh retropiemenu launch /home/pi/RetroPie/retropiemenu/esthemes.rp
+}
+function pi-marquee2() {
+if [ -d "/home/pi/PieMarquee2" ]; then
+echo " Pie Marquee Already Installed"
+else
+cd /home/pi 
+git clone https://github.com/rinalim/PieMarquee2 
+cd PieMarquee2 
+sudo chmod 755 ./install.sh 
+sudo ./install.sh
+fi
 }
 function hursty-themes () {
 if [ -f "/home/pi/RetroPie/retropiemenu/hurstythemes.sh" ]; then
