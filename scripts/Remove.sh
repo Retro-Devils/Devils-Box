@@ -136,7 +136,7 @@ choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
     50) remove-packs "sfc" ;;
     51) remove-packs "sg-1000" ;;
     52) remove-packs "snes" ;;
-    53) remove-packs "snes-msu1 ;;
+    53) remove-packs "snes-msu1" ;;
     54) remove-packs "supergrafx" ;;
     55) remove-packs "tg16" ;;
     56) remove-packs "vectrex" ;;
