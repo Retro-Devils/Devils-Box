@@ -15,7 +15,7 @@ else
 while true; do
 local choice
 choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
-      --ok-label Download --cancel-label Main-Menu \
+      --ok-label Remove --cancel-label Game Tools \
       --menu "PRESS A/ENTER TO REMOVE PACK" 30 70 50 \
       1 " Remove Amiga" \
       2 " Remove AmigaCD32" \
@@ -163,7 +163,5 @@ sudo rm -R "$HOME"/RetroPie/roms/"${1}"
 mk dir "$HOME"/RetroPie/roms/"${1}"
 fi
 }
-
-
 
 Remove-Menu
