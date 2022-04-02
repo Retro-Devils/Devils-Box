@@ -604,9 +604,9 @@ sudo rm -R "$HOME"/devil-chromey.zip
 }
 
 function devil-grid-chromey() {
-wget https://archive.org/download/devils-themes/Chromey-Grid.zip -P ${HOME}/
-unzip -o "$HOME"/Chromey-Grid.zip -d /home/pi/.emulationstation/themes/
-sudo rm -R "$HOME"/Chromey-Grid.zip
+wget https://archive.org/download/devils-themes/Devils-Chromey-Grid.zip -P ${HOME}/
+unzip -o "$HOME"/Devils-Chromey-Grid.zip -d /home/pi/.emulationstation/themes/
+sudo rm -R "$HOME"/Devils-Chromey-Grid.zip
 }
 
 function neon-ibad() {
