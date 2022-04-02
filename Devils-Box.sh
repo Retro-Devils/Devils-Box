@@ -528,18 +528,20 @@ omxplayer "$HOME"/Devils-Box/files/videos/devils-toolbox.mp4 > /dev/null 2>&1
       --ok-label Select --cancel-label Main-Menu \
       --menu "SELECT TOOLSET AND PRESS A  " 20 50 30 \
       1 "Devils Emulator Tools " \
-      2 "Devils Visual Tools " \
+      2 "Devils Game Tools " \
+      3 "Devils Visual Tools" \
       - "----------------------" \
-      3 "Devils Box Tools " \
-      4 "Diablos Arcade Tools " \
+      4 "Devils Box Tools " \
+      5 "Diablos Arcade Tools " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) devils_emu_tools ;;
-    2) devils_visual_tools ;;
+    2) devils-game-tools ;;
+    3) devils_visual_tools ;;
     -) none ;;
-    3) db_tools ;;
-    4) da_tools ;;
+    4) db_tools ;;
+    5) da_tools ;;
     *) break ;;
     esac
   done
@@ -615,7 +617,6 @@ function devils_emu_tools() {
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
       1 "Devils Extras Installer" \
       2 "BIOS Installer" \
-      3 "Game Fixes & Tools" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -634,6 +635,25 @@ Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
 curl -sSL https://git.io/J9Z8c | bash
 fi
+}
+
+function devils-game-tools() {
+  local choice
+
+  while true; do
+    choice=$(dialog --backtitle "$BACKTITLE" --title "COMMUNITY EMU TOOLS MENU" \
+      --ok-label Install --cancel-label Back \
+      --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
+      1 "Game Fixes & Tools" \
+      2 "Remove Game Packs" \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) game_fixes ;;
+    2) remove-packs ;;
+    *) break ;;
+    esac
+  done
 }
 
 ###   DEVILS BOX TOOLS FUNCTION     ###
@@ -903,6 +923,10 @@ bash "$HOME"/Devils-Box/scripts/Retro-Scrapey.sh
 function fe_switch() {
 sudo cp /home/pi/Devils-Box/scripts/FE-Switcheroo.sh -f /usr/local/bin/switcheroo
 bash "$HOME"/Devils-Box/scripts/FE-Switcheroo.sh
+}
+
+function remove-packs() {
+bash "$HOME"/Devils-Box/scripts/Remove.sh
 }
 
 function download-bios() {
