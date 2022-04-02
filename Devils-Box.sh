@@ -633,7 +633,7 @@ function devils_emu_tools() {
   local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title "COMMUNITY EMU TOOLS MENU" \
+    choice=$(dialog --backtitle "$BACKTITLE" --title "DEVILS EMU TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
       1 "Devils Extras Installer" \
@@ -662,9 +662,9 @@ function devils-game-tools() {
   local choice
 
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title "COMMUNITY EMU TOOLS MENU" \
+    choice=$(dialog --backtitle "$BACKTITLE" --title "DEVILS GAME TOOLS MENU" \
       --ok-label Install --cancel-label Back \
-      --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
+      --menu "SELECT TOOL AND PRESS A " 30 50 50 \
       1 "Game Fixes & Tools" \
       2 "Remove Game Packs" \
       2>&1 >/dev/tty)
