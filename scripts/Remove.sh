@@ -14,7 +14,7 @@ PLEASE Install/Update Devils Box" 0 0
 else
 while true; do
 local choice
-choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
+choice=$(dialog --backtitle "$BACKTITLE" --title " REMOVE PACKS MENU" \
       --ok-label Remove --cancel-label Game Tools \
       --menu "PRESS A/ENTER TO REMOVE PACK" 30 70 50 \
       1 " Remove Amiga" \
