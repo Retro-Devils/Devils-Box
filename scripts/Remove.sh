@@ -1,17 +1,7 @@
 #!/bin/bash
 clear
 
-if [ -f "/usr/local/bin/confirm" ]; then
-  confirm=0
-else
-  confirm=1
-fi
-
 function Remove-Menu() {
-if [ $confirm = 1 ]; then
-dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox " 
-PLEASE Install/Update Devils Box" 0 0
-else
 while true; do
 local choice
 choice=$(dialog --backtitle "$BACKTITLE" --title " REMOVE PACKS MENU" \
@@ -156,7 +146,8 @@ fi
 }
 
 function remove-packs() {
-if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "NO GAMES PRESENT " 6 40;
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; 
+then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "NO GAMES PRESENT " 6 40;
 else
 clear
 sudo rm -R "$HOME"/RetroPie/roms/"${1}"
