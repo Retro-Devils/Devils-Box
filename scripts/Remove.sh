@@ -17,70 +17,70 @@ local choice
 choice=$(dialog --backtitle "$BACKTITLE" --title " REMOVE PACKS MENU" \
       --ok-label Remove --cancel-label Game Tools \
       --menu "PRESS A/ENTER TO REMOVE PACK" 30 70 50 \
-      1 " Remove Amiga" \
-      2 " Remove AmigaCD32" \
-      3 " Remove Amstrad CPC" \
-      4 " Remove Arcade" \
-      5 " Remove Arcadia" \
-      6 " Remove Astrocade" \
-      7 " Remove Atari800" \
-      8 " Remove Atari2600" \
-      9 " Remove Atari5200" \
-      10 " Remove Atari7800" \
-      11 " Remove AtariLynx" \
-      12 " Remove AtariST" \
-      13 " Remove Atomiswave" \
-      14 " Remove Commadore64" \
-      15 " Remove Colecovision" \
-      16 " Remove Dragon32" \
-      17 " Remove Dreamcast" \
-      18 " Remove Electron" \
-      19 " Remove Famicon" \
-      20 " Remove Famicom Disk" \
-      21 " Remove Game and Watch" \
-      22 " Remove Gameboy" \
-      23 " Remove Gameboy Advance" \
-      24 " Remove Gameboy Color" \
-      25 " Remove Gamegear" \
-      26 " Remove Intellivision" \
-      27 " Remove Lightgun" \
-      28 " Remove MarkIII" \
-      29 " Remove Mastersystem" \
-      30 " Remove Genesis/Megadrive" \
-      31 " Remove Genesis/Megadrive-Japan" \
-      32 " Remove MSX" \
-      33 " Remove MSX 2" \
-      34 " Remove Nintendo 64" \
-      35 " Remove Naomi" \
-      36 " Remove Nintendo DS" \
-      37 " Remove NeoGeo" \
-      38 " Remove Neo Geo Pocket Color" \
-      39 " Remove NES" \
-      40 " Remove Openbor" \
-      41 " Remove Oric" \
-      42 " Remove Pokemini" \
-      43 " Remove PlayStation 1" \
-      44 " Remove PSP" \
-      45 " Remove Sega Saturn" \
-      46 " Remove Sega Saturn Japan" \
-      47 " Remove ScummVM" \
-      48 " Remove Sega32x" \
-      49 " Remove SegaCD" \
-      50 " Remove Super Famicon" \
-      51 " Remove SG-1000" \
-      52 " Remove SNES" \
-      53 " Remove SNES MSU1" \
-      54 " Remove SuperGraffiix" \
-      55 " Remove Turbo Graffix 16" \
-      56 " Remove Vectrex" \
-      57 " Remove VideoPAC" \
-      58 " Remove Virtual Boy" \
-      59 " Remove Dreamcast" \
-      60 " Remove Wonderswan Color" \
-      61 " Remove Sharp X1" \
-      62 " Remove Sharp X68000" \
-      63 " Remove ZMachine" \
-      64 " Remove ZXSpectrum" \
+      1 "Remove Amiga" \
+      2 "Remove AmigaCD32" \
+      3 "Remove Amstrad CPC" \
+      4 "Remove Arcade" \
+      5 "Remove Arcadia" \
+      6 "Remove Astrocade" \
+      7 "Remove Atari800" \
+      8 "Remove Atari2600" \
+      9 "Remove Atari5200" \
+      10 "Remove Atari7800" \
+      11 "Remove AtariLynx" \
+      12 "Remove AtariST" \
+      13 "Remove Atomiswave" \
+      14 "Remove Commadore64" \
+      15 "Remove Colecovision" \
+      16 "Remove Dragon32" \
+      17 "Remove Dreamcast" \
+      18 "Remove Electron" \
+      19 "Remove Famicon" \
+      20 "Remove Famicom Disk" \
+      21 "Remove Game and Watch" \
+      22 "Remove Gameboy" \
+      23 "Remove Gameboy Advance" \
+      24 "Remove Gameboy Color" \
+      25 "Remove Gamegear" \
+      26 "Remove Intellivision" \
+      27 "Remove Lightgun" \
+      28 "Remove MarkIII" \
+      29 "Remove Mastersystem" \
+      30 "Remove Genesis/Megadrive" \
+      31 "Remove Genesis/Megadrive-Japan" \
+      32 "Remove MSX" \
+      33 "Remove MSX 2" \
+      34 "Remove Nintendo 64" \
+      35 "Remove Naomi" \
+      36 "Remove Nintendo DS" \
+      37 "Remove NeoGeo" \
+      38 "Remove Neo Geo Pocket Color" \
+      39 "Remove NES" \
+      40 "Remove Openbor" \
+      41 "Remove Oric" \
+      42 "Remove Pokemini" \
+      43 "Remove PlayStation 1" \
+      44 "Remove PSP" \
+      45 "Remove Sega Saturn" \
+      46 "Remove Sega Saturn Japan" \
+      47 "Remove ScummVM" \
+      48 "Remove Sega32x" \
+      49 "Remove SegaCD" \
+      50 "Remove Super Famicon" \
+      51 "Remove SG-1000" \
+      52 "Remove SNES" \
+      53 "Remove SNES MSU1" \
+      54 "Remove SuperGraffiix" \
+      55 "Remove Turbo Graffix 16" \
+      56 "Remove Vectrex" \
+      57 "Remove VideoPAC" \
+      58 "Remove Virtual Boy" \
+      59 "Remove Dreamcast" \
+      60 "Remove Wonderswan Color" \
+      61 "Remove Sharp X1" \
+      62 "Remove Sharp X68000" \
+      63 "Remove ZMachine" \
+      64 "Remove ZXSpectrum" \
       2>&1 >/dev/tty)
 
     case "$choice" in
