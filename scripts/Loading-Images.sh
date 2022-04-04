@@ -23,7 +23,7 @@ while true; do
 fi
 }
 
- devils() {
+function devils() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images
 wget devils images 
