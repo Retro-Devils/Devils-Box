@@ -25,7 +25,7 @@ if [ -f /home/pi/etc/emulationstation/videos/start.mp4] then sudo rm -R home/pi/
 wget INSERT VIDEO START LINK -p home/pi/etc/emulationstation/videos/
 sleep 3
 sudo cat <<\EOF55 > "/home/pi/etc/emulationstation/runcommand-onstart.sh"
-omxplayer home/pi/etc/emulationstation/videos/start.mp4
+omxplayer home/pi/etc/emulationstation/videos/start.mp4 > /dev/null 2>&1
 EOF55
 fi
 sleep 2
@@ -33,7 +33,7 @@ if [ -f /home/pi/etc/emulationstation/videos/start.mp4] then sudo rm -R home/pi/
 wget INSERT VIDEO END LINK -p home/pi/etc/emulationstation/videos/
 sleep 3
 sudo cat <<\EOF45 > "/home/pi/etc/emulationstation/runcommand-onend.sh"
-omxplayer home/pi/etc/emulationstation/videos/end.mp4
+omxplayer home/pi/etc/emulationstation/videos/end.mp4 > /dev/null 2>&1
 EOF45
 fi 
 }
@@ -42,7 +42,7 @@ if [ -f /home/pi/etc/emulationstation/videos/end.mp4] then sudo rm -R home/pi/et
 wget INSERT VIDEO retrotv END LINK -p home/pi/etc/emulationstation/videos/
 sleep 3
 sudo cat <<\EOF25 > "/home/pi/etc/emulationstation/runcommand-onend.sh"
-omxplayer home/pi/etc/emulationstation/videos/end.mp4
+omxplayer home/pi/etc/emulationstation/videos/end.mp4 > /dev/null 2>&1
 EOF25
 fi
 sleep 3
@@ -50,7 +50,7 @@ if [ -f /home/pi/etc/emulationstation/videos/start.mp4] then sudo rm -R home/pi/
 wget INSERT VIDEO retrotv start LINK -p home/pi/etc/emulationstation/videos/
 sleep 3
 sudo cat <<\EOF35 > "/home/pi/etc/emulationstation/runcommand-onend.sh"
-omxplayer home/pi/etc/emulationstation/videos/start.mp4
+omxplayer home/pi/etc/emulationstation/videos/start.mp4 > /dev/null 2>&1
 EOF35
 fi 
 }
@@ -60,7 +60,7 @@ if [ -f /home/pi/etc/emulationstation/videos/end.mp4] then sudo rm -R home/pi/et
 wget INSERT VIDEO heroes END LINK -p home/pi/etc/emulationstation/videos/
 sleep 3
 sudo cat <<\EOF75 > "/home/pi/etc/emulationstation/runcommand-onend.sh"
-omxplayer home/pi/etc/emulationstation/videos/end.mp4
+omxplayer home/pi/etc/emulationstation/videos/end.mp4 > /dev/null 2>&1
 EOF75
 fi
 sleep 3
@@ -68,7 +68,7 @@ if [ -f /home/pi/etc/emulationstation/videos/start.mp4] then sudo rm -R home/pi/
 wget INSERT VIDEO heroes start LINK -p home/pi/etc/emulationstation/videos/
 sleep 3
 sudo cat <<\EOF65 > "/home/pi/etc/emulationstation/runcommand-onend.sh"
-omxplayer home/pi/etc/emulationstation/videos/start.mp4
+omxplayer home/pi/etc/emulationstation/videos/start.mp4  > /dev/null 2>&1
 EOF65
 fi
 }
