@@ -45,7 +45,7 @@ chmod u+x re3.sh
 
 cd ~/RetroPie/roms/ports/GTA3/GrandTheftAuto3
 sudo rm -f re3.ini
-wget https://raw.githubusercontent.com/CrashCortez/konami/main/re3.ini
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box/main/files/ports/re3.ini
 
 echo "Complete Rebooting Now "
 sleep 5 
