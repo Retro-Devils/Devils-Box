@@ -1,14 +1,6 @@
 #!/bin/bash
 
 clear
-echo "Loading Screens - Utility Script"
-
-echo "This script will allow you to globally enable or disable the Loading Screens."
-
-echo "If enabled, you can still press the A button to bring up the run command window but you must wait"
-echo "until the loading screen dissapears and before the game launches."
-
-echo "It\'s a very narrow window of time, but unfortunately that\'s a drawback of using loading screens."
 
 local choice 
 
@@ -36,10 +28,10 @@ mkdir /home/pi/temp/images
 cd /home/pi/temp/images
 wget devils images 
 unzip 
-mv /opt/retropie/configs/all/launching.png /opt/retropie/configs/all/disable_launching.png
+mv /opt/retro/all/launching.png /opt/retropie/configs/all/disable_launching.png
 mv /opt/retropie/configs/amiga/launching.png /opt/retropie/configs/amiga/disable_launching.png
 mv /opt/retropie/configs/amstradcpc/launching.png /opt/retropie/configs/amstradcpc/disable_launching.png
-mv /opt/retropie/configs/arcade/launching.png /opt/retropie/configs/arcade/disable_launching.png
+mv /opt/retropie/configs/arcade/launching.png
 mv /opt/retropie/configs/atari2600/launching.png /opt/retropie/configs/atari2600/disable_launching.png
 mv /opt/retropie/configs/atari5200/launching.png /opt/retropie/configs/atari5200/disable_launching.png
 mv /opt/retropie/configs/atari7800/launching.png /opt/retropie/configs/atari7800/disable_launching.png
@@ -116,31 +108,31 @@ mv /opt/retropie/configs/megamancollection/launching.png /opt/retropie/configs/m
 mv /opt/retropie/configs/metalslugcollection/launching.png /opt/retropie/configs/metalslugcollection/disable_launching.png
 mv /opt/retropie/configs/midwayclassics/launching.png /opt/retropie/configs/midwayclassics/disable_launching.png
 mv /opt/retropie/configs/mortalkombatcollection/launching.png /opt/retropie/configs/mortalkombatcollection/disable_launching.png
-mv /opt/retropie/configs/namcoclassics/launching.png /opt/retropie/configs/namcoclassics/disable_launching.png
-mv /opt/retropie/configs/nintendoclassics/launching.png /opt/retropie/configs/nintendoclassics/disable_launching.png
-mv /opt/retropie/configs/outruncollection/launching.png /opt/retropie/configs/outruncollection/disable_launching.png
-mv /opt/retropie/configs/pacmancollection/launching.png /opt/retropie/configs/pacmancollection/disable_launching.png
-mv /opt/retropie/configs/pinballcollection/launching.png /opt/retropie/configs/pinballcollection/disable_launching.png
-mv /opt/retropie/configs/pitfallcollection/launching.png /opt/retropie/configs/pitfallcollection/disable_launching.png
-mv /opt/retropie/configs/pokemoncollection/launching.png /opt/retropie/configs/pokemoncollection/disable_launching.png
-mv /opt/retropie/configs/puzzlecollection/launching.png /opt/retropie/configs/puzzlecollection/disable_launching.png
-mv /opt/retropie/configs/segaclassics/launching.png /opt/retropie/configs/segaclassics/disable_launching.png
-mv /opt/retropie/configs/shmupscollection/launching.png /opt/retropie/configs/shmupscollection/disable_launching.png
-mv /opt/retropie/configs/shootemupcollection/launching.png /opt/retropie/configs/shootemupcollection/disable_launching.png
-mv /opt/retropie/configs/simpsonscollection/launching.png /opt/retropie/configs/simpsonscollection/disable_launching.png
-mv /opt/retropie/configs/snkclassics/launching.png /opt/retropie/configs/snkclassics/disable_launching.png
-mv /opt/retropie/configs/soniccollection/launching.png /opt/retropie/configs/soniccollection/disable_launching.png
-mv /opt/retropie/configs/spidermancollection/launching.png /opt/retropie/configs/spidermancollection/disable_launching.png
-mv /opt/retropie/configs/sportscollection/launching.png /opt/retropie/configs/sportscollection/disable_launching.png
-mv /opt/retropie/configs/starwarscollection/launching.png /opt/retropie/configs/starwarscollection/disable_launching.png
-mv /opt/retropie/configs/streetfightercollection/launching.png /opt/retropie/configs/streetfightercollection/disable_launching.png
-mv /opt/retropie/configs/superheroescollection/launching.png /opt/retropie/configs/superheroescollection/disable_launching.png
-mv /opt/retropie/configs/taitoclassics/launching.png /opt/retropie/configs/taitoclassics/disable_launching.png
-mv /opt/retropie/configs/tmntcollection/launching.png /opt/retropie/configs/tmntcollection/disable_launching.png
-mv /opt/retropie/configs/tokicollection/launching.png /opt/retropie/configs/tokicollection/disable_launching.png
-mv /opt/retropie/configs/trackballclassics/launching.png /opt/retropie/configs/trackballclassics/disable_launching.png
-mv /home/pi/temp/images/vectorclassics/launching.png /opt/retropie/configs/vectorclassics/disable_launching.png
-mv /home/pi/temp/images//williamsclassics/launching.png /opt/retropie/configs/williamsclassics/disable_launching.png
-mv /home/pi/temp/images/zeldacollection/launching.png /opt/retropie/configs/zeldacollection/disable_launching.png
+mv /opt/retropie/namcoclassics/launching.png /opt/retropie/configs/namcoclassics/disable_launching.png
+mv /home/pi/temp/images/nintendoclassics/launching.png /opt/retropie/configs/nintendoclassics/disable_launching.png
+mv /home/pi/temp/images/outruncollection/launching.png /opt/retropie/configs/outruncollection/disable_launching.png
+mv /home/pi/temp/images/pacmancollection/launching.png /opt/retropie/configs/pacmancollection/disable_launching.png
+mv /home/pi/temp/images/pinballcollection/launching.png /opt/retropie/configs/pinballcollection/disable_launching.png
+mv /home/pi/temp/images/pitfallcollection/launching.png /opt/retropie/configs/pitfallcollection/disable_launching.png
+mv /home/pi/temp/images/pokemoncollection/launching.png /opt/retropie/configs/pokemoncollection/disable_launching.png
+mv /home/pi/temp/images/puzzlecollection/launching.png /opt/retropie/configs/puzzlecollection/disable_launching.png
+mv /home/pi/temp/images/segaclassics/launching.png /opt/retropie/configs/segaclassics/disable_launching.png
+mv /home/pi/temp/images/shmupscollection/launching.png /opt/retropie/configs/shmupscollection/disable_launching.png
+mv /home/pi/temp/images/shootemupcollection/launching.png /opt/retropie/configs/shootemupcollection/disable_launching.png
+mv /home/pi/temp/images/simpsonscollection/launching.png /opt/retropie/configs/simpsonscollection/disable_launching.png
+mv /home/pi/temp/images/snkclassics/launching.png /opt/retropie/configs/snkclassics/disable_launching.png
+mv /home/pi/temp/images/soniccollection/launching.png /opt/retropie/configs/soniccollection/disable_launching.png
+mv /home/pi/temp/images/spidermancollection/launching.png /opt/retropie/configs/spidermancollection/disable_launching.png
+mv /home/pi/temp/images/sportscollection/launching.png /opt/retropie/configs/sportscollection/disable_launching.png
+mv /home/pi/temp/images/starwarscollection/launching.png /opt/retropie/configs/starwarscollection/disable_launching.png
+mv /home/pi/temp/images/streetfightercollection/launching.png /opt/retropie/configs/streetfightercollection/
+mv /home/pi/temp/images/superheroescollection/launching.png /opt/retropie/configs/superheroescollection/
+mv /home/pi/temp/images/taitoclassics/launching.png /opt/retropie/configs/taitoclassics/
+mv /home/pi/temp/images/tmntcollection/launching.png /opt/retropie/configs/tmntcollection/
+mv /home/pi/temp/images/tokicollection/launching.png /opt/retropie/configs/tokicollection/
+mv /home/pi/temp/images/trackballclassics/launching.png /opt/retropie/configs/trackballclassics/
+mv /home/pi/temp/images/vectorclassics/launching.png /opt/retropie/configs/vectorclassics/
+mv /home/pi/temp/images/williamsclassics/launching.png /opt/retropie/configs/williamsclassics/disable_launching.png
+mv /home/pi/temp/images/zeldacollection/launching.png /opt/retropie/config/zeldacollection/launching.png /opt/retropie/configs/zeldacollection/disable_launching.png
 sudo rm -R /home/pi/temp/images 
 }
