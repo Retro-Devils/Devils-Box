@@ -115,9 +115,9 @@ omxplayer "$HOME"/Devils-Box/files/videos/community-toolbox.mp4 > /dev/null 2>&1
     choice=$(dialog --backtitle "$BACKTITLE" --title " COMMUNITY TOOL BOX MENU " \
       --ok-label Select --cancel-label Main-Menu \
       --menu "SELECT TOOLSET AND PRESS A  " 20 50 30 \
-      1 "Community Audio & Visual Tools   " \
-      2 "Community Emulator Tools    " \
-      3 "Community Hardware Tools       " \
+      1 "Community Audio & Visual Tools " \
+      2 "Community Emulator Tools " \
+      3 "Community Hardware Tools " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -144,7 +144,7 @@ function comm_audio() {
       4 "Apply No Audio Fix--------------------------------Anonymous " \
       5 "Apply No Audio Fix 2----------------------The Pimoroni Crew " \
       6 "Install I.M.P-----------------------------------RapiEdwin08 " \
-      7 "Install T.A.M.P.O--------------------------------thepitster " 
+      7 "Install T.A.M.P.O--------------------------------thepitster " \
       - "<-------------------->Information<------------------------> " \
       8 "I.M.P-------------Integrated Music Player------------------ " \
       9 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
@@ -166,6 +166,7 @@ function comm_audio() {
     esac
   done
 }
+
 function tampo() {
 if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
