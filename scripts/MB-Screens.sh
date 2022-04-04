@@ -1,3 +1,5 @@
+#!/bin/bash
+
 clear
 echo
 echo Motion Blue Loading Screens - Utility Script
@@ -9,7 +11,7 @@ echo
 echo If enabled, you can still press the A button to bring up the run command window but you must wait
 echo until the loading screen dissapears and before the game launches.
 echo
-echo It's a very narrow window of time, but unfortunately that's a drawback of using loading screens.
+echo It\'s a very narrow window of time, but unfortunately that\'s a drawback of using loading screens.
 echo
 echo
 
