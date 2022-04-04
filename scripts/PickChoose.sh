@@ -3,23 +3,6 @@
 ##       HOST SITES        ##
 ##-------------------------##
 
-#--------ART HOSTS----------#
-ART_HOST="https://archive.org/download/devils-box-media-alt"
-ART_HOST2="https://github.com/Retro-Devils-Media"
-#ART_HOST3=""
-#ART_HOST4=""
-
-#-----------------DEVILS-GAME HOSTS---------------------#
-HOST1="https://archive.org/download/the-devils-box-alt"
-HOST2="https://archive.org/download/the-devils-box_202112"
-HOST3="https://archive.org/download/devils-bios"
-HOST4="https://archive.org/download/devils-wine"
-HOST5="https://archive.org/download/devils-dos"
-
-#---------------NON-DEVILS-HOSTS-----------------------#
-HOST6="https://archive.org/download/PSP_US_Arquivista"
-HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
-
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 
@@ -58,10 +41,11 @@ local choice
       8 "NES" \
       9 "PC DOS Games" \
       10 "Playstation 1" \
-      11 "PSP" \
-      12 "Saturn" \
-      13 "Super Nintendo" \
-      14 "Wine" \
+      11 "Ports" \
+      12 "PSP" \
+      13 "Saturn" \
+      14 "Super Nintendo" \
+      15 "Wine" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -75,10 +59,11 @@ local choice
     8) nes ;;
     9) pcgames ;;
     10) psx ;;
-    11) psp ;;
-    12) saturn ;;
-    13) snes ;;
-    14) winegames ;;
+    11) ports ;;
+    12) psp ;;
+    13) saturn ;;
+    14) snes ;;
+    15) winegames ;;
     *) break ;;
     esac
   done
@@ -795,6 +780,16 @@ function psx() {
         esac
         done < /tmp/results
 }
+function ports() {
+        local choice
+          whiptail --clear --title "PICK & CHOOSE PS1" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+            "1" "Grand Theft Auto 3" off \
+	    2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+	
 function psp() {
         local choice
     whiptail --clear --title "PICK & CHOOSE PSP" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
