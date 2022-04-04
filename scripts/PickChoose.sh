@@ -782,7 +782,7 @@ function psx() {
 }
  function ports() {
         local choice
-          whiptail --clear --title "PICK & CHOOSE PORTS" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+    whiptail --clear --title "PICK & CHOOSE PORTS" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
             "1" "Grand Theft Auto 3" off \
 	    "2" "GTA Vice City" off \
@@ -793,7 +793,7 @@ function psx() {
 	      1) GTA3 ;;
 	      2) GTA-VC ;;
               *) ;;
-           esac
+        esac
         done < /tmp/results
 }
 function GTA3() {
