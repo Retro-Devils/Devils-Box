@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo
-echo Loading Screens - Utility Script
+clear
+echo "Loading Screens - Utility Script"
 
-echo This script will allow you to globally enable or disable the Loading Screens.
-echo
+echo "This script will allow you to globally enable or disable the Loading Screens."
+
 echo "If enabled, you can still press the A button to bring up the run command window but you must wait"
 echo "until the loading screen dissapears and before the game launches."
 
@@ -31,7 +31,7 @@ while true; do
 fi
 }
 
-function devils() {
+ devils() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images
 wget devils images 
