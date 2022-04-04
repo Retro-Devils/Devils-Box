@@ -151,7 +151,7 @@ then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "NO GAMES PRESE
 else
 clear
 sudo rm -R "$HOME"/RetroPie/roms/"${1}"
-mk dir "$HOME"/RetroPie/roms/"${1}"
+mkdir "$HOME"/RetroPie/roms/"${1}"
 fi
 }
 
