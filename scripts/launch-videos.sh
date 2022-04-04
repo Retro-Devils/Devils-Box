@@ -12,7 +12,7 @@ local choice
        
      case "$choice" in
        1) devils ;;
-       2) heroes;;
+       2) heroes ;;
        3) retrotv ;;
        *) break ;;
        esac
