@@ -38,7 +38,7 @@ sudo rm -f GrandTheftAuto3.zip
 
 cd ~/RetroPie/roms/ports
 
-wget https://github.com/Retro-Devils/Devils-Box/blob/main/scripts/GTA3.sh
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box/main/files/ports/GTA3.sh
 
 chmod u+x re3.sh
 
