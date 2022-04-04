@@ -35,7 +35,6 @@ function devils() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images
 wget devils images 
-
 unzip 
 mv /opt/retropie/configs/all/launching.png /opt/retropie/configs/all/disable_launching.png
 mv /opt/retropie/configs/amiga/launching.png /opt/retropie/configs/amiga/disable_launching.png
@@ -143,4 +142,5 @@ mv /opt/retropie/configs/trackballclassics/launching.png /opt/retropie/configs/t
 mv /home/pi/temp/images/vectorclassics/launching.png /opt/retropie/configs/vectorclassics/disable_launching.png
 mv /home/pi/temp/images//williamsclassics/launching.png /opt/retropie/configs/williamsclassics/disable_launching.png
 mv /home/pi/temp/images/zeldacollection/launching.png /opt/retropie/configs/zeldacollection/disable_launching.png
-fi
+sudo rm -R /home/pi/temp/images 
+}
