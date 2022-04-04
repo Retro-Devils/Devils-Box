@@ -2,7 +2,7 @@
 local choice 
   
   while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title "HACKED PACKS DOWNLOAD MENU " \
+    choice=$(dialog --backtitle "$BACKTITLE" --title "LAUNCHING VIDEOS MENU" \
       --ok-button Download --cancel-button Back \
       --menu " PRESS A/ENTER TO DOWNLOAD & APPLY VIDEOS" 30 70 50 \
        1 "Retro Devils"/
