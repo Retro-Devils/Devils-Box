@@ -780,17 +780,23 @@ function psx() {
         esac
         done < /tmp/results
 }
-function ports() {
+ function ports() {
         local choice
-          whiptail --clear --title "PICK & CHOOSE PS1" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+          whiptail --clear --title "PICK & CHOOSE PORTS" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
             "1" "Grand Theft Auto 3" off \
-	    2>/tmp/results
-    while read -r choice  
+	     2>/tmp/results
+     while read -r choice  
         do
         case $choice in
-	
-	
+	      1) GTA3-SETUP ;;
+              *) ;;
+           esac
+        done < /tmp/results
+}
+function GTA3-Setup() {
+bash/home/pi/Devils-Box/scripts/GTA3-Setup.sh
+}
 function psp() {
         local choice
     whiptail --clear --title "PICK & CHOOSE PSP" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
