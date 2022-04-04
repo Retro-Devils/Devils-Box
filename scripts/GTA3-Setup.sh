@@ -59,8 +59,4 @@ echo "Complete Rebooting Now "
 sleep 5 
 sudo reboot
 
-
-
-
-
-
+fi
