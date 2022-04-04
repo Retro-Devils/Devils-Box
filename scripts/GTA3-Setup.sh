@@ -1,4 +1,12 @@
 #!/bin/bash
+echo "Making Sure Desktop Is Installed"
+
+if [ ! -f /usr/bin/startx ]; then
+dialog --sleep 1 --title "PIXEL DESKTOP NOT INSTALLED !! " --msgbox 
+"INSTALLING NOW" 0 0
+cd $HOME/RetroPie-Setup
+sudo ./retropie_packages.sh raspbiantools lxde;
+else
 
 echo "Setting Up Folders"
 sleep 1
