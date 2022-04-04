@@ -786,12 +786,16 @@ function psx() {
       --ok-button Download --cancel-button Back \
             "1" "Grand Theft Auto 3" off \
 	    "2" "GTA Vice City" off \
+	    "3" "Jedi Academy" off \
+	    "4" "Jedi Outcast" off \
 	     2>/tmp/results
      while read -r choice  
         do
         case $choice in
 	      1) GTA3 ;;
 	      2) GTA-VC ;;
+	      3) jedi-academy ;;
+	      4) jedi-outcast ;;
               *) ;;
         esac
         done < /tmp/results
@@ -801,6 +805,12 @@ bash /home/pi/Devils-Box/scripts/GTA3-Setup.sh
 }
 function GTA-VC(){
 bash /home/pi/Devils-Box/scripts/GTA-VC-Setup.sh
+}
+function jedi-academy() {
+bash /home/pi/Devils-Box/scripts/jedi-academy.sh
+}
+function jedi-outcast(){
+bash /home/pi/Devils-Box/scripts/jedi-outcast.sh
 }
 function psp() {
         local choice
