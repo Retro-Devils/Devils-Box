@@ -36,9 +36,7 @@ dialog  --sleep 1 --title "COLLECTIONS HOW TO" --msgbox "
        Hurstys Chromey Wheels
 
 - Why Make this?
-       Too Make your life easier
-
-" 0 0
+       Too Make your life easier" 0 0
 }
 
 function list-themes() {
