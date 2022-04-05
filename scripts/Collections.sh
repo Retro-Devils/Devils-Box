@@ -61,16 +61,20 @@ function pick-collections() {
     while read -r choice
         do
         case $choice in
-           1) make-collection "battletoads" ;;
-           2) make-collection "capcom" ;;
-           3) make-collection "fighters" ;; 
-           4) make-collection "shooters" ;;
+           +) none ;;
+           1) hursty-logos "battletoads" ;;
+           2) hursty-logos "capcom" ;;
+           3) hursty-logos "fighters" ;; 
+           4) hursty-logos "shooters" ;;
+           -) nono ;;
+           5) devil-logos "battletoads" ;;
+           6) devil-logos "capcom" ;;
            *) ;;
         esac
         done < /tmp/results
 }
 
-function make-collection() {
+function hursty-logos() {
 cd "/home/pi/.emulationstation/themes/"
 echo "Please type theme name and press Enter"
 read theme
@@ -82,3 +86,17 @@ cd
 read -n 1 -s -r -p "Thanks For Using-----Press any key to Continue"
 cd
 }
+function devil-logos() {
+cd "/home/pi/.emulationstation/themes/"
+echo "Please type theme name and press Enter"
+read theme
+cd ~/$theme
+mkdir ~/"${1}"
+cd ~/"${1}"
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/NEON-IBAD/"${1}"/_inc/system.png -P /home/pi/.emulationstation/themes/$theme/"${1}"
+cd 
+read -n 1 -s -r -p "Thanks For Using-----Press any key to Continue"
+cd
+}
+
+collections-menu
