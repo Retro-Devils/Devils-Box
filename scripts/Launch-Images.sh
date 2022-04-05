@@ -28,23 +28,23 @@ mkdir /home/pi/temp/images
 cd /home/pi/temp/images
 wget devils images 
 unzip 
-mv /home/pi/temp/images//all/launching.png /opt/retropie/configs/all/disable_launching.png
-mv /home/pi/temp/images/amiga/launching.png /opt/retropie/configs/amiga/disable_launching.png
-mv /home/pi/temp/images/amstradcpc/launching.png /opt/retropie/configs/amstradcpc/disable_launching.png
-mv /home/pi/temp/images/arcade/launching.png
-mv /home/pi/temp/images/atari2600/launching.png /opt/retropie/configs/atari2600/disable_launching.png
-mv /home/pi/temp/images/atari5200/launching.png /opt/retropie/configs/atari5200/disable_launching.png
-mv /home/pi/temp/images/atari7800/launching.png /opt/retropie/configs/atari7800/disable_launching.png
-mv /home/pi/temp/images//atarilynx/launching.png /opt/retropie/configs/atarilynx/disable_launching.png
-mv /home/pi/temp/images/c64/launching.png /opt/retropie/configs/c64/disable_launching.png
-mv /home/pi/temp/images/coleco/launching.png /opt/retropie/configs/coleco/disable_launching.png
-mv /home/pi/temp/images/daphne/launching.png /opt/retropie/configs/daphne/disable_launching.png
-mv /home/pi/temp/images/dreamcast/launching.png /opt/retropie/configs/dreamcast/disable_launching.png
-mv /home/pi/temp/images/famicom/launching.png /opt/retropie/configs/famicom/disable_launching.png
-mv /home/pi/temp/images/fba/launching.png /opt/retropie/configs/fba/disable_launching.png
-mv /home/pi/temp/images/fds/launching.png /opt/retropie/configs/fds/disable_launching.png
-mv /home/pi/temp/images/gameandwatch/launching.png /opt/retropie/configs/gameandwatch/disable_launching.png
-mv /home/pi/temp/images/gamegear/launching.png /opt/retropie/configs/gamegear/disable_launching.png
+mv /home/pi/temp/images//all/launching.png -f /opt/retropie/configs/all/
+mv /home/pi/temp/images/amiga/launching.png -f /opt/retropie/configs/amiga/
+mv /home/pi/temp/images/amstradcpc/launching.png -f /opt/retropie/configs/amstradcpc/
+mv /home/pi/temp/images/arcade/launching.png -f /opt/retropie/configs/arcade/
+mv /home/pi/temp/images/atari2600/launching.png - f /opt/retropie/configs/atari2600/
+mv /home/pi/temp/images/atari5200/launching.png -f /opt/retropie/configs/atari5200/
+mv /home/pi/temp/images/atari7800/launching.png -f /opt/retropie/configs/atari7800/
+mv /home/pi/temp/images//atarilynx/launching.png -f /opt/retropie/configs/atarilynx/
+mv /home/pi/temp/images/c64/launching.png -f /opt/retropie/configs/c64/
+mv /home/pi/temp/images/coleco/launching.png -f /opt/retropie/configs/coleco/
+mv /home/pi/temp/images/daphne/launching.png -f /opt/retropie/configs/daphne/
+mv /home/pi/temp/images/dreamcast/launching.png -f /opt/retropie/configs/dreamcast/
+mv /home/pi/temp/images/famicom/launching.png -f /opt/retropie/configs/famicom/
+mv /home/pi/temp/images/fba/launching.png -f /opt/retropie/configs/fba/
+mv /home/pi/temp/images/fds/launching.png -f /opt/retropie/configs/fds/
+mv /home/pi/temp/images/gameandwatch/launching.png -f /opt/retropie/configs/gameandwatch/
+mv /home/pi/temp/images/gamegear/launching.png -f /opt/retropie/configs/gamegear/disable_launching.png
 mv /home/pi/temp/images/gb/launching.png /opt/retropie/configs/gb/disable_launching.png
 mv /home/pi/temp/images/gba/launching.png /opt/retropie/configs/gba/disable_launching.png
 mv /home/pi/temp/images/gbc/launching.png /opt/retropie/configs/gbc/disable_launching.png
