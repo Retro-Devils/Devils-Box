@@ -80,12 +80,3 @@ echo "Complete Testing Now"
 sleep 5
 cd ~/RetroPie/roms/ports/gtavc/GrandTheftAutoViceCity
 startx ./reVC
-
-
-
-
-
-
-
-
-
