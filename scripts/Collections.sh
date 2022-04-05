@@ -1,4 +1,8 @@
 #!/bin/bash
+dialog --sleep 1 --title "COLLECTIONS MENU" --msgbox"
+------YOU WILL NEED A KEYBOARD------
+---THIS MAKES COLLECTIONS FOR YOU---" 0 0
+
 function collections-menu() {
     local choice
 
@@ -8,7 +12,7 @@ function collections-menu() {
             --menu "COLLECTIONS MAKER MENU" 25 40 40 \
             1 "How To Use This ???" \
             2 "List Installed ES Themes " \
-            3 "Select Collections To Make " \
+            3 "Pick Collections To Make " \
             2>&1 > /dev/tty)
 
         case "$choice" in
