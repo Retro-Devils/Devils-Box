@@ -52,7 +52,8 @@ function pick-collections() {
        local choice
    whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \ 
       --ok-button Download --cancel-button Back \
-               "1" "Batman Collection" off \
+               "+" "---Hurstys Chromey Wheel---" off \
+               "1" "Battletoads Collection" off \
                "2" "Capcom Collection" off \
                "3" "Fighters  Collection" off \
                "4" "Shooters Collection" off |
@@ -60,7 +61,7 @@ function pick-collections() {
     while read -r choice
         do
         case $choice in
-           1) make-collection "batman" ;;
+           1) make-collection "battletoads" ;;
            2) make-collection "capcom" ;;
            3) make-collection "fighters" ;; 
            4) make-collection "shooters" ;;
@@ -74,9 +75,9 @@ cd "/home/pi/.emulationstation/themes/"
 echo "Please type theme name and press Enter"
 read theme
 cd ~/$theme
-mkdir ~/"*"
-cd ~/"*"
-wget LOST AS HELL HERE 
+mkdir ~/"${1}"
+cd ~/"${1}"
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/"${1}"/_inc/system.png -P /home/pi/.emulationstation/themes/$theme/"${1}"
 cd 
 read -n 1 -s -r -p "Thanks For Using-----Press any key to Continue"
 cd
