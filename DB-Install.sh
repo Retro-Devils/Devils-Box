@@ -53,6 +53,10 @@ else
 	cat $HOME/temp > $HOME/RetroPie/retropiemenu/gamelist.xml
 	rm -f $HOME/temp
 fi
+echo "FOR MORE INFO,HELP,SUGGESTIONS ETC"
+echo "VISIT --RETRO DEVILS COMMUNITY-- ON FACEBOOK"
+echo "OR OUR WEBSITE WWW.RETRO-DEVILS.COM"
+sleep 5
 echo "Emulationstation Will Now Restart ..."
 sleep 1
 killall emulationstation
@@ -95,8 +99,11 @@ __CREDITS__
 -CRASH-----------------------SCRIPTING KNOWLEDGE & ADVICE  
 -BIGED-----------------------SCRIPTING KNOWLEDGE & ADVICE
 -MONK OF THE FUNK------------SCRIPTING KNOWLEDGE & ADVICE 
--SOLARBABY-------------------SCRIPTING KNOWLEDGE & ADVICE" 0 0
+-SOLARBABY-------------------SCRIPTING KNOWLEDGE & ADVICE
 
+
+MORE INFO SEE
+WWW.RETRO-DEVILS.COM OR RETRO DEVILS COMMUNITY ON FACEBOOK" 0 0 \
 }
 
 # Main
