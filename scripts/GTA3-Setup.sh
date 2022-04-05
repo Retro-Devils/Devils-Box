@@ -48,7 +48,7 @@ cd ~/RetroPie/roms/ports
 
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box/main/files/ports/GTA3.sh
 
-chmod u+x re3.sh
+chmod u+x GTA3.sh
 
 
 cd ~/RetroPie/roms/ports/GTA3/GrandTheftAuto3
