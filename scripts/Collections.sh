@@ -26,8 +26,6 @@ function collections-menu() {
 
 function how-to() {
 dialog  --sleep 1 --title "COLLECTIONS HOW TO" --msgbox "
------------YOU WILL NEED A KEYBOARD-----------
-
 1. Click -List Installed ES Themes- To See Themes
 2. Click -Select Collections To Make-
 3. Type Theme You Want To Add Collections Too
