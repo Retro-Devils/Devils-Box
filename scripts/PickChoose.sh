@@ -822,6 +822,7 @@ bash /home/pi/Devils-Box/scripts/jedi-academy.sh
 function jedi-outcast(){
 bash /home/pi/Devils-Box/scripts/jedi-outcast.sh
 }
+
 function psp() {
         local choice
     whiptail --clear --title "PICK & CHOOSE PSP" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
