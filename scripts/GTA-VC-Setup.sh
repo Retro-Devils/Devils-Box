@@ -28,8 +28,8 @@ sudo apt install libmpg123-dev
 
 
 echo " Building and Installing ReVc"
-sleep 3
 
+sleep 3
 wget https://github.com/premake/premake-core/archive/v5.0.0-alpha15.tar.gz
 tar xvf v5.0.0-alpha15.tar.gz
 cd premake-core-5.0.0-alpha15/
@@ -59,7 +59,6 @@ sed '2 i cd ~/RetroPie/roms/ports/gtavc/GrandTheftAutoViceCity' reVC.sh
 sed '3 i startx ./re3' reVC.sh
 
 chmod u+x reVC.sh
-
 
 print
 ptint Find the [VideoMode] and change it like so
