@@ -570,7 +570,7 @@ function devils_visual_tools() {
       --ok-label Select --cancel-label Back \
       --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 50 50 \
       + "<--->Visual Tools<---------> " \
-      1 "Devils Themes and Artwork " \
+      1 "Devils Themes " \
       + "<--->Frontend Tools<-------> " \
       2 "Frontend Switcheroo " \
       + "<--->Experimental Tools<---> " \
@@ -594,7 +594,7 @@ function devil-themes() {
   while true; do 
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS THEMES MENU " \
-      --ok-label Select --cancel-label Main-Menu \
+      --ok-label Select --cancel-label Back \
       --menu "SELECT THEME AND PRESS A  " 20 50 30 \
       - "Emulation Station Themes" \
       1 "Devil Chromey " \
