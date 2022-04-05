@@ -1,3 +1,4 @@
+#!/bin/bash
 function collections-menu() {
     local choice
 
@@ -74,6 +75,9 @@ echo "Please type theme name and press Enter"
 read theme
 cd ~/$theme
 mkdir ~/"*"
+cd ~/"*"
+wget LOST AS HELL HERE 
+cd 
 read -n 1 -s -r -p "Thanks For Using-----Press any key to Continue"
 cd
 }
