@@ -1208,45 +1208,48 @@ dialog  --sleep 1 --title "PC/DOS Downloader Help" --msgbox "
                "17" "Dynablaster I                           810KB" off \
                "18" "Fable                                   124MB" off \
                "19" "Grand Theft Auto                        109MB" off \
-               "20" "Hexxagon II                             649KB" off \
-               "21" "Indy Car                                616KB" off \
-               "22" "Ironman                                 540KB" off \
-               "23" "Lemmings                                440KB" off \
-               "24" "Locomotion                              753KB" off \
-               "25" "Mech Warrior                            1.2MB" off \
-               "26" "Micro Machines 2                       11.2MB" off \
-               "27" "Mortal Kombat                          18.5MB" off \
-               "28" "Mortal Kombat 2                        18.9MB" off \
-               "29" "OpenBOR                                59.8MB" off \
-               "30" "Prehistorik                             785KB" off \
-               "31" "Prehistorik 2                             1MB" off \
-               "32" "Rampage                                 194KB" off \
-               "33" "Scorched Earth                          1.5MB" off \
-               "34" "SimCity 2000 SE                          18MB" off \
-               "35" "Snake 2                                  40KB" off \
-               "36" "Star Trek Rites                          40MB" off \
-               "37" "Star Wars Dark Forces                    67MB" off \
-               "38" "Star Wars X Wing                         12MB" off \
-               "39" "Street Rod 1                            689KB" off \
-               "40" "Street Rod 2                            1.2MB" off \
-               "41" "Super Solvers - Midnight Rescue         630KB" off \
-               "42" "Super Solvers - Treasure Mountain       651KB" off \
-               "43" "Super-Solvers - Outnumbered             564KB" off \
-               "44" "Terep 1                                 149KB" off \
-               "45" "Test Drive 1                            288KB" off \
-               "46" "The Incredible Machine                  716KB" off \
-               "47" "The Incredible Machine 2                4.9MB" off \
-               "48" "The Lost Vikings                        1.6MB" off \
-               "49" "The Oregon Trail 2                      635KB" off \
-               "50" "The Oregon Trail 3                      3.8MB" off \
-               "51" "The Settlers                           35.8MB" off \
-               "52" "the Settlers 2                          642MB" off \
-               "53" "Tie Fighter                              13MB" off \
-               "54" "Volfied                                 717KB" off \
-               "55" "WarCraft - Orcs and Humans              7.6MB" off \
-               "56" "Warcraft 2                               45MB" off \
-               "57" "Where in the World Is Carmen San Diego  479KB" off \
-               "58" "Wolfeinstein 3D                         2.4MB" off \
+               "20" "Heroes2Gold II Gold                     649KB" off \
+               "21" "Heroes III                              649KB" off \
+               "22" "Heroes IV                               649KB" off \
+               "23" "Hexxagon II                             649KB" off \
+               "24" "Indy Car                                616KB" off \
+               "25" "Ironman                                 540KB" off \
+               "26" "Lemmings                                440KB" off \
+               "27" "Locomotion                              753KB" off \
+               "28" "Mech Warrior                            1.2MB" off \
+               "29" "Micro Machines 2                       11.2MB" off \
+               "31" "Mortal Kombat                          18.5MB" off \
+               "31" "Mortal Kombat 2                        18.9MB" off \
+               "32" "OpenBOR                                59.8MB" off \
+               "33" "Prehistorik                             785KB" off \
+               "34" "Prehistorik 2                             1MB" off \
+               "35" "Rampage                                 194KB" off \
+               "36" "Scorched Earth                          1.5MB" off \
+               "37" "SimCity 2000 SE                          18MB" off \
+               "38" "Snake 2                                  40KB" off \
+               "39" "Star Trek Rites                          40MB" off \
+               "40" "Star Wars Dark Forces                    67MB" off \
+               "41" "Star Wars X Wing                         12MB" off \
+               "42" "Street Rod 1                            689KB" off \
+               "43" "Street Rod 2                            1.2MB" off \
+               "44" "Super Solvers - Midnight Rescue         630KB" off \
+               "45" "Super Solvers - Treasure Mountain       651KB" off \
+               "46" "Super-Solvers - Outnumbered             564KB" off \
+               "47" "Terep 1                                 149KB" off \
+               "48" "Test Drive 1                            288KB" off \
+               "49" "The Incredible Machine                  716KB" off \
+               "50" "The Incredible Machine 2                4.9MB" off \
+               "51" "The Lost Vikings                        1.6MB" off \
+               "52" "The Oregon Trail 2                      635KB" off \
+               "53" "The Oregon Trail 3                      3.8MB" off \
+               "54" "The Settlers                           35.8MB" off \
+               "55" "the Settlers 2                          642MB" off \
+               "56" "Tie Fighter                              13MB" off \
+               "57" "Volfied                                 717KB" off \
+               "58" "WarCraft - Orcs and Humans              7.6MB" off \
+               "59" "Warcraft 2                               45MB" off \
+               "60" "Where in the World Is Carmen San Diego  479KB" off \
+               "61" "Wolfeinstein 3D                         2.4MB" off \
                 2>/tmp/results
     while read -r choice  
         do
@@ -1272,47 +1275,47 @@ dialog  --sleep 1 --title "PC/DOS Downloader Help" --msgbox "
               18) download-pcgames "Retro-Devils_Fable.zip" ;;
               19) download-pcgames "Retro-Devils_GTA" ;;
               20) download-pcgames "Retro-Devils_Heroes2Gold.zip" ;;
-              20) download-pcgames "Retro-Devils_Heroes3.zip" ;;
-              20) download-pcgames "Retro-Devils_Heroes4.zip" ;;
-              20) download-pcgames "Retro-Devils_Hexxagon-II.zip" ;;
-              21) download-pcgames "Retro-Devils_Indy-Car.zip" ;;
-              22) download-pcgames "Retro-Devils_Ironman.zip" ;;
-              23) download-pcgames "Retro-Devils_Lemmings.zip" ;;
-              24) download-pcgames "Retro-Devils_Locomotion.zip";;
-              25) download-pcgames "Retro-Devils_Mechwarrior.zip"-3 ;;
-              26) download-pcgames "Retro-Devils_Micro-Machines-2.zip";;
-              27) download-pcgames "Retro-Devils_MortalKombat.zip" ;;
-              28) download-pcgames "Retro-Devils_MortalKombat-2.zip" ;;
-              29) download-pcgames "Retro-Devils_OPENBOR.zip";;
-              30) download-pcgames "Retro-Devils_Prehistorik.zip" ;;
-              31) download-pcgames "Retro-Devils_Prehistorik-2.zip" ;;
-              32) download-pcgames "Retro-Devils_Rampage.zip" ;;
-              33) download-pcgames "Retro-Devils_Scorched-Earth.zip" ;;
-              34) download-pcgames "Retro-Devils_SimCity 2000 SE.zip" ;;
-              35) download-pcgames "Retro-Devils_Snake 2.zip" ;;
-              36) download-pcgames "Retro-Devils_startrek.zip" ;;
-              37) download-pcgames "Retro-Devils_Star-Wars-Dark-Forces.zip" ;;
-              38) download-pcgames "Retro-Devils_Star-Wars-X-Wing.zip.zip" ;;
-              39) download-pcgames "Retro-Devils_Street-Rod.zip" ;;
-              40) download-pcgames "Retro-Devils_Street-Rod-2.zip" ;;
-              41) download-pcgames "Retro-Devils_Super-Solvers-Midnight-Rescue.zip" ;;
-              42) download-pcgames "Retro-Devils_Super-Solvers-Outnumbered.zip" ;;
-              43) download-pcgames "Retro-Devils_Super-Solvers-Treasure--Mountain.zip" ;;
-              44) download-pcgames "Retro-Devils_Terep-1.zip" ;;
-              45) download-pcgames "Retro-Devils_Test-Drive-1.zip" ;;
-              46) download-pcgames "Retro-Devils_The-Incredible-Machine.zip" ;;
-              47) download-pcgames "Retro-Devils_The-Incredible-Machine-2.zip" ;;
-              48) download-pcgames "Retro-Devils_The-Lost-Vikings.zip" ;;
-              49) download-pcgames "Retro-Devils_The-Oregon-Trail-2.zip" ;;
-              50) download-pcgames "Retro-Devils_The-Oregon-Trail-3.zip" ;;
-              51) download-pcgames "Retro-Devils_TheSettlers.zip";;
-              52) download-pcgames "Retro-Devils_TheSettlers2.zip";;
-              53) download-pcgames "Retro-Devils_Tiefighter.zip" ;;
-              54) download-pcgames "Retro-Devils_Volfied.zip" ;;
-              55) download-pcgames "Retro-Devils_WarCraft-Orcs-and-Humans.zip" ;;
-              56) download-pcgames "Retro-Devils_WarCraft-2.zip" ;;
-              57) download-pcgames "Retro-Devils_Where-in-the-World-Is-Carmen-San-Diego.zip" ;;
-              58) download-pcgames "Retro-Devils_Wolfeinstein-3D" ;;
+              21) download-pcgames "Retro-Devils_Heroes3.zip" ;;
+              22) download-pcgames "Retro-Devils_Heroes4.zip" ;;
+              23) download-pcgames "Retro-Devils_Hexxagon-II.zip" ;;
+              24) download-pcgames "Retro-Devils_Indy-Car.zip" ;;
+              25) download-pcgames "Retro-Devils_Ironman.zip" ;;
+              26) download-pcgames "Retro-Devils_Lemmings.zip" ;;
+              27) download-pcgames "Retro-Devils_Locomotion.zip";;
+              28) download-pcgames "Retro-Devils_Mechwarrior.zip"-3 ;;
+              29) download-pcgames "Retro-Devils_Micro-Machines-2.zip";;
+              30) download-pcgames "Retro-Devils_MortalKombat.zip" ;;
+              31) download-pcgames "Retro-Devils_MortalKombat-2.zip" ;;
+              32) download-pcgames "Retro-Devils_OPENBOR.zip";;
+              33) download-pcgames "Retro-Devils_Prehistorik.zip" ;;
+              34) download-pcgames "Retro-Devils_Prehistorik-2.zip" ;;
+              35) download-pcgames "Retro-Devils_Rampage.zip" ;;
+              36) download-pcgames "Retro-Devils_Scorched-Earth.zip" ;;
+              37) download-pcgames "Retro-Devils_SimCity 2000 SE.zip" ;;
+              38) download-pcgames "Retro-Devils_Snake 2.zip" ;;
+              39) download-pcgames "Retro-Devils_startrek.zip" ;;
+              40) download-pcgames "Retro-Devils_Star-Wars-Dark-Forces.zip" ;;
+              41) download-pcgames "Retro-Devils_Star-Wars-X-Wing.zip.zip" ;;
+              42) download-pcgames "Retro-Devils_Street-Rod.zip" ;;
+              43) download-pcgames "Retro-Devils_Street-Rod-2.zip" ;;
+              44) download-pcgames "Retro-Devils_Super-Solvers-Midnight-Rescue.zip" ;;
+              45) download-pcgames "Retro-Devils_Super-Solvers-Outnumbered.zip" ;;
+              46) download-pcgames "Retro-Devils_Super-Solvers-Treasure--Mountain.zip" ;;
+              47) download-pcgames "Retro-Devils_Terep-1.zip" ;;
+              48) download-pcgames "Retro-Devils_Test-Drive-1.zip" ;;
+              49) download-pcgames "Retro-Devils_The-Incredible-Machine.zip" ;;
+              50) download-pcgames "Retro-Devils_The-Incredible-Machine-2.zip" ;;
+              51) download-pcgames "Retro-Devils_The-Lost-Vikings.zip" ;;
+              52) download-pcgames "Retro-Devils_The-Oregon-Trail-2.zip" ;;
+              53) download-pcgames "Retro-Devils_The-Oregon-Trail-3.zip" ;;
+              54) download-pcgames "Retro-Devils_TheSettlers.zip";;
+              55) download-pcgames "Retro-Devils_TheSettlers2.zip";;
+              56) download-pcgames "Retro-Devils_Tiefighter.zip" ;;
+              57) download-pcgames "Retro-Devils_Volfied.zip" ;;
+              58) download-pcgames "Retro-Devils_WarCraft-Orcs-and-Humans.zip" ;;
+              59) download-pcgames "Retro-Devils_WarCraft-2.zip" ;;
+              60) download-pcgames "Retro-Devils_Where-in-the-World-Is-Carmen-San-Diego.zip" ;;
+              61) download-pcgames "Retro-Devils_Wolfeinstein-3D" ;;
                *) ;;
         esac
         done < /tmp/results
