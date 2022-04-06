@@ -639,13 +639,11 @@ function devils_emu_tools() {
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
       1 "Devils Extras Installer" \
       2 "BIOS Installer" \
-      3 "Game Fixes" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) devils-ex ;;
     2) download-bios ;;
-    3) game_fixes ;;    
     *) break ;;
     esac
   done
