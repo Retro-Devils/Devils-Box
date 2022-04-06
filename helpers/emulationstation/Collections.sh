@@ -50,7 +50,7 @@ read -n 1 -s -r -p "Above Is A List Of Installed Themes-----Press any key to Con
 
 function pick-collections() { 
        local choice
-   whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \ 
+   whiptail --clear --title "PICK COLLECTIONS MENU" --separate-output --checklist "Choose Collection(s) and click Download:" 0 0 0 \ 
       --ok-button Download --cancel-button Back \
                "+" "---Hurstys Chromey Wheel---" off \
                "1" "Battletoads Collection" off \
