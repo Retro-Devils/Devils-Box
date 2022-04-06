@@ -66,9 +66,6 @@ function pick-collections() {
            2) hursty-logos "capcom" ;;
            3) hursty-logos "fighters" ;; 
            4) hursty-logos "shooters" ;;
-           -) nono ;;
-           5) devil-logos "battletoads" ;;
-           6) devil-logos "capcom" ;;
            *) ;;
         esac
         done < /tmp/results
