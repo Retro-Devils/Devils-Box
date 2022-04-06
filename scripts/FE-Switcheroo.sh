@@ -195,7 +195,7 @@ local choice
   done
 }
 function collections() {
-bash "$HOME"/Devils-Box/helpers/Collections.sh
+bash "$HOME"/Devils-Box/helpers/emulationstation/Collections.sh
 }
 function es-themes () {
 sudo /home/pi/RetroPie-Setup/retropie_packages.sh retropiemenu launch /home/pi/RetroPie/retropiemenu/esthemes.rp
