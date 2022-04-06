@@ -22,7 +22,8 @@ local choice
 }
 
 function collections() {
-bash "$HOME"/Devils-Box/helpers/Collections.sh
+bash "$HOME"/Devils-Box/helpers/emulationstation/Collections.sh
+}
 
 function how-to() {
 dialog  --sleep 1 --title "COLLECTIONS HOW TO" --msgbox "
