@@ -179,20 +179,24 @@ local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title "ES HELPER " \
      --ok-button Select --cancel-button Exit \
      --menu "Version 0.9" 15 30 30 \
-      1 "Devils Themes" \
-      2 "ES Theme Menu" \
-      3 "Hurstys Themes" \
+      1 "Collections Maker" \
+      2 "Devils Themes" \
+      3 "ES Theme Menu" \
+      4 "Hurstys Themes" \
        2>&1 >/dev/tty)
     
-    case "$choice" in 
-    1) devils-themes ;;
-    2) es-themes  ;;
-    3) hursty-themes ;;
+    case "$choice" in
+    1) collections ;;
+    2) devils-themes ;;
+    3) es-themes  ;;
+    4) hursty-themes ;;
     *) break ;;
     esac
   done
 }
-
+function collections() {
+bash "$HOME"/Devils-Box/helpers/Collections.sh
+}
 function es-themes () {
 sudo /home/pi/RetroPie-Setup/retropie_packages.sh retropiemenu launch /home/pi/RetroPie/retropiemenu/esthemes.rp
 }
