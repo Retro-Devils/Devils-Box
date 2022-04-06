@@ -547,6 +547,8 @@ omxplayer "$HOME"/Devils-Box/files/videos/devils-toolbox.mp4 > /dev/null 2>&1
       - "----------------------" \
       4 "Devils Box Tools " \
       5 "Diablos Arcade Tools " \
+      - "----------------------" \
+      6 "Testers & Devils Area " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -556,6 +558,8 @@ omxplayer "$HOME"/Devils-Box/files/videos/devils-toolbox.mp4 > /dev/null 2>&1
     -) none ;;
     4) db_tools ;;
     5) da_tools ;;
+    -) none ;;
+    6) testers ;;
     *) break ;;
     esac
   done
@@ -647,6 +651,10 @@ function devils_emu_tools() {
     *) break ;;
     esac
   done
+}
+
+function testers() {
+bash "$HOME"/Devils-Box/scripts/Tester-Menu.sh 
 }
 
 function devils-ex() {
