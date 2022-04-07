@@ -9,9 +9,9 @@ echo "YOU ENTERED ${useranswer} ..PROCESSING.. "
 sleep 5
 
 if [ $useranswer = "420" ]; then
+omxplayer "$HOME"/Devils-Box/files/videos/droids.mp4 
 correct
 fi
-omxplayer "$HOME"/Devils-Box/files/videos/droids.mp4 
 
 function correct() {
 local choice
@@ -46,7 +46,7 @@ local choice
   done
 }
 
-function  ports() {
+function ports() {
         local choice
     whiptail --clear --title "PICK & CHOOSE PORTS" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
@@ -66,7 +66,6 @@ function  ports() {
         esac
         done < /tmp/results
 }
-
 
 function GTA3() {
 bash /home/pi/Devils-Box/scripts/GTA3-Setup.sh
