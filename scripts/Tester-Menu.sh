@@ -7,7 +7,7 @@ read -p "PLEASE ENTER CODE" useranswer
 echo
 echo "YOU ENTERED ${useranswer} ..PROCESSING.. "
 sleep 5
-omxplayer"$HOME"/Devils-Box/files/videos/droids.mp4 
+omxplayer "$HOME"/Devils-Box/files/videos/droids.mp4 
 
 if [[ $useranswer == "420" ]]; then correct; fi
 
