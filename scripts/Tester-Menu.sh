@@ -7,7 +7,9 @@ echo "You have chosen option ${useranswer}."
 
 echo "....Processing...."
 sleep 5 
-if [[ $useranswer == 420" ]]; then
+if [[ $useranswer == 420" ]]; then yes
+
+function yes() {
 local choice
 
   while true; do
@@ -41,6 +43,7 @@ local choice
   done
 fi
 }
+
 else 
 echo "INCORRECT PLEASE CONTECT THE DEVILS IF YOU WANNA TEST!!!!"
 sleep 4
