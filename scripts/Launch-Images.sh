@@ -8,13 +8,13 @@ while true; do
   choice=$(dialog --backtitle "$BACKTITLE" --title "LAUNCHING IMAGES MENU" \ 
   --ok-button Download --cancel-button Back \ 
   --menu " PRESS A/ENTER TO DOWNLOAD & APPLY IMAGES" 30 70 50 \
-     1 "Back To The Future" \
-     2 "Grid Blue" \
-     3 "Hursty Blue" \
-     4 "Motion Blue" \
-     5 "Retro Devils" \
-     6 "Retro TV" \ 
-     7 "Simple Grey" \
+     1 "Back To The Future----------MBB" \
+     2 "Grid Blue---------------Dmmarti" \
+     3 "Hursty Blue--------------Hursty" \
+     4 "Motion Blue-------------Dmmarti" \
+     5 "Devil Laughing-----Retro Devils" \
+     6 "Retro TV-----------Retro Devils" \ 
+     7 "Simple Grey-------------Dmmarti" \
      2>&1 >/dev/tty) 
      
      case "$choice" in 
@@ -30,7 +30,7 @@ while true; do
    done
 fi
 }
-function bttf() {
+ bttf() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images/
 wget 
@@ -66,7 +66,23 @@ move-image "launchingscreens-simple_gray-master" "all"
 sudo rm -R /home/pi/temp/images
 }
 
+function retro-tv() {
+mkdir /home/pi/temp/images
+cd /home/pi/temp/images/
+wget 
+unzip 
+move-image "" "all"
+sudo rm -R /home/pi/temp/images
+}
 
+function simple-grey() {
+mkdir /home/pi/temp/images
+cd /home/pi/temp/images/
+wget 
+unzip 
+move-image "" "all"
+sudo rm -R /home/pi/temp/images
+}
 
 
 function retro-devils() {
