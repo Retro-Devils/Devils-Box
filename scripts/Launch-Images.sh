@@ -28,22 +28,22 @@ mkdir /home/pi/temp/images
 cd /home/pi/temp/images
 wget devils images 
 unzip 
-mv /home/pi/temp/images//all/launching.png -f /opt/retropie/configs/all/
-mv /home/pi/temp/images/amiga/launching.png -f /opt/retropie/configs/amiga/
-mv /home/pi/temp/images/amstradcpc/launching.png -f /opt/retropie/configs/amstradcpc/
-mv /home/pi/temp/images/arcade/launching.png -f /opt/retropie/configs/arcade/
-mv /home/pi/temp/images/atari2600/launching.png - f /opt/retropie/configs/atari2600/
-mv /home/pi/temp/images/atari5200/launching.png -f /opt/retropie/configs/atari5200/
-mv /home/pi/temp/images/atari7800/launching.png -f /opt/retropie/configs/atari7800/
-mv /home/pi/temp/images//atarilynx/launching.png -f /opt/retropie/configs/atarilynx/
-mv /home/pi/temp/images/c64/launching.png -f /opt/retropie/configs/c64/
-mv /home/pi/temp/images/coleco/launching.png -f /opt/retropie/configs/coleco/
-mv /home/pi/temp/images/daphne/launching.png -f /opt/retropie/configs/daphne/
-mv /home/pi/temp/images/dreamcast/launching.png -f /opt/retropie/configs/dreamcast/
-mv /home/pi/temp/images/famicom/launching.png -f /opt/retropie/configs/famicom/
-mv /home/pi/temp/images/fba/launching.png -f /opt/retropie/configs/fba/
-mv /home/pi/temp/images/fds/launching.png -f /opt/retropie/configs/fds/
-mv /home/pi/temp/images/gameandwatch/launching.png -f /opt/retropie/configs/gameandwatch/
+move-image "all"
+move-image "amiga"
+move-image "amstradcpc"
+move-image "arcade"
+move-image "atari2600"
+move-image "atari5200"
+mv /home/pi/temp/images/atari7800/launching.png -f //
+mv /home/pi/temp/images//atarilynx/launching.png -f //
+mv /home/pi/temp/images/c64/launching.png -f //
+move-image "coleco"
+move-image "daphne"
+mv /home/pi/temp/images/dreamcast/launching.png -f //
+mv /home/pi/temp/images/famicom/launching.png -f //
+mv /home/pi/temp/images/fba/launching.png -f //
+mv /home/pi/temp/images/fds/launching.png -f //
+mv /home/pi/temp/images/gameandwatch/launching.png -
 mv /home/pi/temp/images/gamegear/launching.png -f /opt/retropie/configs/gamegear/
 mv /home/pi/temp/images/gb/launching.png /opt/retropie/configs/gb/
 mv /home/pi/temp/images/gba/launching.png /opt/retropie/configs/gba/
