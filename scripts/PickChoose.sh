@@ -50,7 +50,7 @@ local choice
       8 "NES" \
       9 "PC DOS Games" \
       10 "Playstation 1" \
-      11 "Ports" \
+      11 "Ports *COMING SOON*" \
       12 "PSP" \
       13 "Saturn" \
       14 "Super Nintendo" \
@@ -786,26 +786,6 @@ function psx() {
             28) download-game "psx" "Tony Hawk's Pro Skater 4 (USA).pbp" ;;
             29) download-game "psx" "Twisted Metal (USA).pbp" ;;
             *) ;;
-        esac
-        done < /tmp/results
-}
-function ports() {
-        local choice
-    whiptail --clear --title "PICK & CHOOSE PORTS" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
-      --ok-button Download --cancel-button Back \
-            "1" "Grand Theft Auto 3" off \
-	    "2" "GTA Vice City" off \
-	    "3" "Jedi Academy" off \
-	    "4" "Jedi Outcast" off \
-	    2>/tmp/results
-    while read -r choice  
-        do
-        case $choice in
-	     1) GTA3 ;;
-	     2) GTA-VC ;;
-	     3) jedi-academy ;;
-	     4) jedi-outcast ;;
-             *) ;;
         esac
         done < /tmp/results
 }
