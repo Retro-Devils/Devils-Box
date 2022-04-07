@@ -41,11 +41,11 @@ local choice
     *) break ;;
     esac
   done
-}
 
 else 
 omxplayer"$HOME"/Devils-Box/files/videos/droids.mp4 
 fi 
+}
 
 function  ports() {
         local choice
