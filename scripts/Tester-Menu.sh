@@ -1,6 +1,6 @@
 #!/bin/bash
 IFS=';'
-
+echo
 read -p "PLEASE ENTER CODE & HIT <enter> : " useranswer
 sleep 1
 echo "You have chosen option ${useranswer}."
@@ -21,7 +21,7 @@ local choice
       2 "Loading Images " \
       3 "Loading Videos  " \
       4 "--------------- " \
-      + "--UNFINISHED--" \
+      + "--UNFINISHED/NOT WORKING--" \
       5 "Pick & Choose Ports" \
       6 "--------------- " \
       7 "--------------- " \
@@ -32,8 +32,8 @@ local choice
     1) bash "$HOME"/Devils-Box/helpers/emulationstation/Collections.sh ;;
     2) bash "$HOME"/Devils-Box/scripts/Launch-Images.sh ;;
     3) bash "$HOME"/Devils-Box/scripts/Launch-Videos.sh ;;
-    4) nonex;;
-    +) no ;;
+    4) no ;;
+    +) none ;;
     5) ports ;;
     6) no ;;
     7) no ;;
@@ -42,11 +42,16 @@ local choice
   done
 }
 
-function ports() {
+else 
+echo "INCORRECT PLEASE CONTECT THE DEVILS IF YOU WANNA TEST!!!!"
+sleep 4
+fi 
+
+function  ports() {
         local choice
     whiptail --clear --title "PICK & CHOOSE PORTS" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
-      "1" "Grand Theft Auto 3" off \
+            "1" "Grand Theft Auto 3" off \
 	    "2" "GTA Vice City" off \
 	    "3" "Jedi Academy" off \
 	    "4" "Jedi Outcast" off \
@@ -62,12 +67,6 @@ function ports() {
         esac
         done < /tmp/results
 }
-
-else 
-echo "INCORRECT PLEASE CONTECT THE DEVILS IF YOU WANNA TEST!!!!"
-sleep 4
-fi 
-
 
 
 
