@@ -3,6 +3,7 @@ IFS=';'
 
 echo
 read -p "PLEASE ENTER CODE" useranswer
+
 echo
 echo "YOU ENTERED ${useranswer}"
 echo "....Processing...."
