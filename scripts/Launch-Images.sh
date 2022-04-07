@@ -138,4 +138,6 @@ sudo rm -R /home/pi/temp/images
 }
 
 
-
+function move-image(){
+mv /home/pi/temp/images/$system/launching.png -f opt/retropie/config/$system/launching.png
+}
