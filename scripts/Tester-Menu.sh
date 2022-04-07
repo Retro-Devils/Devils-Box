@@ -24,7 +24,7 @@ local choice
       4 "--------------- " \
       + "--UNFINISHED/NOT WORKING--" \
       5 "Pick & Choose Ports" \
-      6 "--------------- " \
+      6 "Aimtrack Setup " \
       7 "--------------- " \
       2>&1 >/dev/tty)
 
@@ -36,7 +36,7 @@ local choice
     4) no ;;
     +) none ;;
     5) ports ;;
-    6) no ;;
+    6) aimtrack ;;
     7) no ;;
     *) break ;;
     esac
@@ -80,4 +80,7 @@ bash /home/pi/Devils-Box/scripts/jedi-academy.sh
 }
 function jedi-outcast(){
 bash /home/pi/Devils-Box/scripts/jedi-outcast.sh
+}
+function aimtrack(){
+bash /home/pi/Devils-Box/scripts/Aimtrack.sh
 }
