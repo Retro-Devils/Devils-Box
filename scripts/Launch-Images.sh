@@ -43,20 +43,20 @@ move-image "dreamcast"
 move-image "famicom"
 move-image "fba"
 move-image "fds"
-mv /home/pi/temp/images/gameandwatch/launching.png -
-mv /home/pi/temp/images/gamegear/launching.png -f //
-mv /home/pi/temp/images/gb/launching.png //
-mv /home/pi/temp/images/gba/launching.png //
-mv /home/pi/temp/images/gbc/launching.png /
-mv /home/pi/temp/images/intellivision/launching.png //
-mv /home/pi/temp/images/mame-advmame/launching.png //
-mv /home/pi/temp/images/mame-libretro/launching.png //
-mv /home/pi/temp/images/mame-mame4all/launching.png //
-mv /home/pi/temp/images/mastersystem/launching.png //
-mv /home/pi/temp/images/megadrive/launching.png /opt/retropie/configs/megadrive/
-mv /home/pi/temp/images/msx/launching.png /opt/retropie/configs/msx/
-mv /home/pi/temp/images/n64/launching.png /opt/retropie/configs/n64/
-mv /home/pi/temp/images/neogeo/launching.png /opt/retropie/configs/neogeo/
+move-image "gameandwatch"
+move-image "gamegear"
+move-image "gb"
+move-image "gba"
+move-image "gbc"
+move-image "intellivision"
+move-image "mame-advmame"
+move-image "mame-libretro"
+move-image "mame-mame4all"
+move-image "mastersystem"
+move-image "megadrive"
+move-image "msx"
+move-image "n64"
+move-image "neogeo"
 mv /home/pi/temp/images/nes/launching.png /opt/retropie/configs/nes/
 mv /home/pi/temp/images/ngp/launching.png /opt/retropie/configs/ngp/
 mv /home/pi/temp/images/ngpc/launching.png /opt/retropie/configs/ngpc/
