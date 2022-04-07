@@ -8,7 +8,9 @@ echo
 echo "YOU ENTERED ${useranswer} ..PROCESSING.. "
 sleep 5
 
-if [ $useranswer = "420" ]; then correct; fi
+if [ $useranswer = "420" ]; then
+correct
+fi
 omxplayer "$HOME"/Devils-Box/files/videos/droids.mp4 
 
 function correct() {
