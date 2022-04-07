@@ -24,12 +24,18 @@ function devils() {
 if [ -f /home/pi/etc/emulationstation/videos/start.mp4] then sudo rm -R home/pi/etc/emulationstation/videos/start.mp4
 wget INSERT VIDEO START LINK -p home/pi/etc/emulationstation/videos/
 sleep 3
+else
+wget INSERT VIDEO START LINK -p home/pi/etc/emulationstation/videos/
+sleep 3
 sudo cat <<\EOF55 > "/home/pi/etc/emulationstation/runcommand-onstart.sh"
 omxplayer home/pi/etc/emulationstation/videos/start.mp4 > /dev/null 2>&1
 EOF55
 fi
 sleep 2
 if [ -f /home/pi/etc/emulationstation/videos/start.mp4] then sudo rm -R home/pi/etc/emulationstation/videos/start.mp4
+wget INSERT VIDEO END LINK -p home/pi/etc/emulationstation/videos/
+sleep 3
+else
 wget INSERT VIDEO END LINK -p home/pi/etc/emulationstation/videos/
 sleep 3
 sudo cat <<\EOF45 > "/home/pi/etc/emulationstation/runcommand-onend.sh"
@@ -41,6 +47,9 @@ function retrotv() {
 if [ -f /home/pi/etc/emulationstation/videos/end.mp4] then sudo rm -R home/pi/etc/emulationstation/videos/end.mp4
 wget https://github.com/Retro-Devils/Devils-Themes/blob/main/Videos/RetroTV/end.mp4?raw=true -P home/pi/etc/emulationstation/videos/
 sleep 3
+else
+wget https://github.com/Retro-Devils/Devils-Themes/blob/main/Videos/RetroTV/end.mp4?raw=true -P home/pi/etc/emulationstation/videos/
+sleep 3
 sudo cat <<\EOF25 > "/home/pi/etc/emulationstation/runcommand-onend.sh"
 omxplayer home/pi/etc/emulationstation/videos/end.mp4 > /dev/null 2>&1
 EOF25
@@ -48,6 +57,9 @@ fi
 sleep 3
 if [ -f /home/pi/etc/emulationstation/videos/start.mp4] then sudo rm -R home/pi/etc/emulationstation/videos/start.mp4
 wget https://github.com/Retro-Devils/Devils-Themes/blob/main/Videos/RetroTV/start.mp4?raw=true -P home/pi/etc/emulationstation/videos/
+sleep 3
+else
+wget https://github.com/Retro-Devils/Devils-Themes/blob/main/Videos/RetroTV/start.mp4?raw=true -p home/pi/etc/emulationstation/videos/
 sleep 3
 sudo cat <<\EOF35 > "/home/pi/etc/emulationstation/runcommand-onstart.sh"
 omxplayer home/pi/etc/emulationstation/videos/start.mp4 > /dev/null 2>&1
@@ -59,6 +71,9 @@ function heroes() {
 if [ -f /home/pi/etc/emulationstation/videos/end.mp4] then sudo rm -R home/pi/etc/emulationstation/videos/end.mp4
 wget https://github.com/Retro-Devils/Devils-Themes/blob/main/Videos/Heroes/end.mp4?raw=true -P home/pi/etc/emulationstation/videos/
 sleep 3
+else
+wget https://github.com/Retro-Devils/Devils-Themes/blob/main/Videos/Heroes/end.mp4?raw=true -p home/pi/etc/emulationstation/videos/
+sleep 3
 sudo cat <<\EOF75 > "/home/pi/etc/emulationstation/runcommand-onend.sh"
 omxplayer home/pi/etc/emulationstation/videos/end.mp4 > /dev/null 2>&1
 EOF75
@@ -66,6 +81,9 @@ fi
 sleep 3
 if [ -f /home/pi/etc/emulationstation/videos/start.mp4] then sudo rm -R home/pi/etc/emulationstation/videos/start.mp4
 wget https://github.com/Retro-Devils/Devils-Themes/blob/main/Videos/Heroes/start.mp4?raw=true -P home/pi/etc/emulationstation/videos/
+sleep 3
+else
+wget https://github.com/Retro-Devils/Devils-Themes/blob/main/Videos/Heroes/start.mp4?raw=true -p home/pi/etc/emulationstation/videos/
 sleep 3
 sudo cat <<\EOF65 > "/home/pi/etc/emulationstation/runcommand-onstart.sh"
 omxplayer home/pi/etc/emulationstation/videos/start.mp4  > /dev/null 2>&1
