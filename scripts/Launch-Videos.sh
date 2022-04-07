@@ -39,7 +39,7 @@ fi
 }
 function retrotv() {
 if [ -f /home/pi/etc/emulationstation/videos/end.mp4] then sudo rm -R home/pi/etc/emulationstation/videos/end.mp4
-wget INSERT VIDEO retrotv END LINK -p home/pi/etc/emulationstation/videos/
+wget https://github.com/Retro-Devils/Devils-Themes/blob/main/Videos/RetroTV/end.mp4?raw=true -P home/pi/etc/emulationstation/videos/
 sleep 3
 sudo cat <<\EOF25 > "/home/pi/etc/emulationstation/runcommand-onend.sh"
 omxplayer home/pi/etc/emulationstation/videos/end.mp4 > /dev/null 2>&1
