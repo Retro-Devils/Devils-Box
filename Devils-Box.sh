@@ -649,7 +649,7 @@ function devils_emu_tools() {
     case "$choice" in
     1) devils-ex ;;
     2) download-bios ;;
-    3) msu-step ;;
+    3) msu-setup ;;
     *) break ;;
     esac
   done
