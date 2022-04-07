@@ -7,24 +7,39 @@ local choice
 while true; do 
   choice=$(dialog --backtitle "$BACKTITLE" --title "LAUNCHING IMAGES MENU" \ 
   --ok-button Download --cancel-button Back \ 
-  --menu " PRESS A/ENTER TO DOWNLOAD & APPLY IMAGES" 30 70 50 \ 
-     1 "Retro Devils" \
-     2 "Back To The Future" \
-     3 "Retro TV" \ 
-     4 "Simple Grey" \
+  --menu " PRESS A/ENTER TO DOWNLOAD & APPLY IMAGES" 30 70 50 \
+     1 "Back To The Future" \
+     2 "Grid Blue" \
+     3 "Hursty Blue" \
+     4 "Motion Blue" \
+     5 "Retro Devils" \
+     6 "Retro TV" \ 
+     7 "Simple Grey" \
      2>&1 >/dev/tty) 
      
      case "$choice" in 
-     1) devils ;; 
-     2) bttf ;; 
-     3) retrotv ;;
-     4 simple-grey ;;
+     1) bttf ;; 
+     2) grid-blue ;; 
+     3) hursty-blue ;;
+     4) motion-blue ;;
+     5) retro-devils ;;
+     6) retro-tv ;;
+     7) simple-grey ;;
      *) break ;; 
      esac 
    done
 fi
 }
-function simple-grey() {
+function bttf() {
+mkdir /home/pi/temp/images
+cd /home/pi/temp/images/
+wget 
+unzip 
+move-image "" "all"
+sudo rm -R /home/pi/temp/images
+}
+
+function grid-blue() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images/
 wget https://github.com/dmmarti/launchingscreens-simple_gray/archive/refs/heads/master.zip
@@ -32,7 +47,29 @@ unzip launchingscreens-simple_gray-master.zip
 move-image "launchingscreens-simple_gray-master" "all"
 sudo rm -R /home/pi/temp/images
 }
-function devils() {
+
+function hursty-blue() {
+mkdir /home/pi/temp/images
+cd /home/pi/temp/images/
+wget https://github.com/dmmarti/launchingscreens-simple_gray/archive/refs/heads/master.zip
+unzip launchingscreens-simple_gray-master.zip
+move-image "launchingscreens-simple_gray-master" "all"
+sudo rm -R /home/pi/temp/images
+}
+
+function motion-blue() {
+mkdir /home/pi/temp/images
+cd /home/pi/temp/images/
+wget https://github.com/dmmarti/launchingscreens-motionblue/archive/refs/heads/master.zip
+unzip launchingscreens-simple_gray-master.zip
+move-image "launchingscreens-simple_gray-master" "all"
+sudo rm -R /home/pi/temp/images
+}
+
+
+
+
+function retro-devils() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images
 wget devils images 
