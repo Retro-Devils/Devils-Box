@@ -7,7 +7,7 @@ echo "You have chosen option ${useranswer}."
 
 echo "....Processing...."
 sleep 5 
-if [[ $useranswer == "420" ]]; then code-correct
+if [[ $useranswer == "420" ]]; then correct
 
 function correct() {
 local choice
