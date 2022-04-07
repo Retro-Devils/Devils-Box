@@ -69,4 +69,15 @@ function  ports() {
 }
 
 
-
+function GTA3() {
+bash /home/pi/Devils-Box/scripts/GTA3-Setup.sh
+}
+function GTA-VC(){
+bash /home/pi/Devils-Box/scripts/GTA-VC-Setup.sh
+}
+function jedi-academy() {
+bash /home/pi/Devils-Box/scripts/jedi-academy.sh
+}
+function jedi-outcast(){
+bash /home/pi/Devils-Box/scripts/jedi-outcast.sh
+}
