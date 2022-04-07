@@ -41,9 +41,6 @@ local choice
   done
 fi
 }
-
-tester-menu 
-
 else 
 echo "INCORRECT PLEASE CONTECT THE DEVILS IF YOU WANNA TEST!!!!"
 sleep 4
