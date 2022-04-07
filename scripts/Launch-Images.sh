@@ -30,7 +30,7 @@ while true; do
    done
 fi
 }
- bttf() {
+function bttf() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images/
 wget 
@@ -119,8 +119,8 @@ move-image "megadrive"
 move-image "msx"
 move-image "n64"
 move-image "neogeo"
-mv /home/pi/temp/images/nes/launching.png /opt/retropie/configs/nes/
-mv /home/pi/temp/images/ngp/launching.png /opt/retropie/configs/ngp/
+move-image "nes"
+move-image "ngp"
 mv /home/pi/temp/images/ngpc/launching.png /opt/retropie/configs/ngpc/
 mv /home/pi/temp/images/pcengine/launching.png /opt/retropie/configs/pcengine/
 mv /home/pi/temp/images/pcenginecd/launching.png /opt/retropie/configs/pcenginecd/
