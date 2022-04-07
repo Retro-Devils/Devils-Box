@@ -2,8 +2,6 @@
 IFS=';'
 
 function correct() {
-omxplayer "$HOME"/Devils-Box/files/videos/droids.mp4 
-
 local choice
 
   while true; do
@@ -80,6 +78,4 @@ echo
 echo "YOU ENTERED ${useranswer} ..PROCESSING.. "
 sleep 5
 
-if [ $useranswer = "420" ]; then
-correct
-fi
+if [ $useranswer = "420" ]; then correct; else omxplayer "$HOME"/Devils-Box/files/videos/droids.mp4; fi
