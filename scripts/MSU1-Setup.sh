@@ -9,10 +9,8 @@ echo "<----Checking For Emu Now---->"
 sleep 2
 if [ ! -d /opt/retropie/libretrocores/lr-snes9x ]; then
 dialog  --sleep 1 --title "LR-SNES9X NOT INSTALLED !! " --msgbox " 
-Taking you to Retropie Setup
-GO TO-- Manage Main Pacakges/lr-snes9x
-Presss A To Install" 0 0
-sudo "$HOME"/RetroPie-Setup/retropie_setup.sh;
+Taking you to Retropie Setup" 0 0
+sudo ./retropie_packages.sh lr-snes9x;
 else
 echo "<----Snes9X Installed Begining Setup Now---->"
 sleep 2
