@@ -1,13 +1,13 @@
 #!/bin/bash
-echo 
+IFS=';'
+
 read -p "PLEASE ENTER CODE & HIT <enter> : " useranswer
 sleep 1
 echo "You have chosen option ${useranswer}."
 
 echo "....Processing...."
 sleep 5 
-if [[ $useranswer == 420" ]]; then
-function tester-menu() {
+if [[ $useranswer == 420" ]]; then function tester-menu() {
 local choice
 
   while true; do
