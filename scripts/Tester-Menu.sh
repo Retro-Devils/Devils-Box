@@ -44,7 +44,7 @@ local choice
 }
 
 else 
-echo "INCORRECT PLEASE CONTACT THE DEVILS IF YOU WANNA TEST!!!!"
+bash "$HOME"/Devils-Box/files/videos/droids.mp4 
 sleep 4
 fi 
 
