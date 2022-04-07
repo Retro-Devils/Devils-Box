@@ -7,7 +7,7 @@ echo "You have chosen option ${useranswer}."
 
 echo "....Processing...."
 sleep 5 
-if [[ $useranswer == 420" ]]; then function tester-menu() {
+if [[ $useranswer == 420" ]]; then
 local choice
 
   while true; do
