@@ -14,6 +14,9 @@ HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 
+
+
+omxplayer "$HOME"/Devils-Box/files/videos/packs.mp4 > /dev/null 2>&1
 if [ -f "/usr/local/bin/confirm" ]; then
   confirm=0
 else
@@ -25,20 +28,6 @@ if [ $confirm = 1 ]; then
 dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox " 
 PLEASE Install/Update Devils Box" 0 0
 else
-dialog  --sleep 1 --title "CONSOLE PACKS INFO" --msgbox " 
-<-------------WELCOME--------------->
-WHATS THIS DO?
--DOWNLOADS GAME PACKS TO CORRECT FOLDERS
--TRYS TO SCRAPE AFTERWARDS 
-F.A.Q
-WILL THIS OVERWRITE MY GAMES?
-NOPE 
- 
-CAN I STOP MIDWAY THRU?
-SURE PRESS CONTROL+C
-WILL IT KEEP MY PROGRESS?
-YES. GAMES WILL BE THIER 
-BUT THEY WONT SCRAPE" 0 0
     while true; do
     local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
