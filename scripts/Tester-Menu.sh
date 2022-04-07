@@ -42,7 +42,6 @@ local choice
   done
 fi
 }
-correct
 
 function ports() {
         local choice
