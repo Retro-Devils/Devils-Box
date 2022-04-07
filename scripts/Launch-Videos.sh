@@ -47,7 +47,7 @@ EOF25
 fi
 sleep 3
 if [ -f /home/pi/etc/emulationstation/videos/start.mp4] then sudo rm -R home/pi/etc/emulationstation/videos/start.mp4
-wget INSERT VIDEO retrotv start LINK -p home/pi/etc/emulationstation/videos/
+wget https://github.com/Retro-Devils/Devils-Themes/blob/main/Videos/RetroTV/start.mp4?raw=true -P home/pi/etc/emulationstation/videos/
 sleep 3
 sudo cat <<\EOF35 > "/home/pi/etc/emulationstation/runcommand-onend.sh"
 omxplayer home/pi/etc/emulationstation/videos/start.mp4 > /dev/null 2>&1
