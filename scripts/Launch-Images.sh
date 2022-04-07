@@ -42,9 +42,9 @@ sudo rm -R /home/pi/temp/images
 function grid-blue() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images/
-wget https://github.com/dmmarti/launchingscreens-simple_gray/archive/refs/heads/master.zip
-unzip launchingscreens-simple_gray-master.zip
-move-image "launchingscreens-simple_gray-master" "all"
+wget https://github.com/dmmarti/launchingscreens-gridblue/archive/refs/heads/master.zip
+unzip launchingscreens-gridblue-master.zip
+move-image "launchingscreens-gridblue-master" "all"
 sudo rm -R /home/pi/temp/images
 }
 
@@ -61,8 +61,8 @@ function motion-blue() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images/
 wget https://github.com/dmmarti/launchingscreens-motionblue/archive/refs/heads/master.zip
-unzip launchingscreens-simple_gray-master.zip
-move-image "launchingscreens-simple_gray-master" "all"
+unzip launchingscreens-motionblue-master.zip
+move-image "launchingscreens-motionblue-master" "all"
 sudo rm -R /home/pi/temp/images
 }
 
@@ -78,7 +78,7 @@ sudo rm -R /home/pi/temp/images
 function simple-grey() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images/
-wget 
+wget https://github.com/dmmarti/launchingscreens-simplegrey/archive/refs/heads/master.zip
 unzip 
 move-image "" "all"
 sudo rm -R /home/pi/temp/images
