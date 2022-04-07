@@ -16,7 +16,7 @@ PC_HOST="https://archive.org/download/the-devils-box-alt"
 
 
 
-omxplayer "$HOME"/Devils-Box/files/videos/packs.mp4 > /dev/null 2>&1
+omxplayer "$HOME"/Devils-Box/files/videos/console-packs.mp4 > /dev/null 2>&1
 if [ -f "/usr/local/bin/confirm" ]; then
   confirm=0
 else
