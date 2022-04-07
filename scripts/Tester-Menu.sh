@@ -44,7 +44,7 @@ local choice
 }
 
 else 
-bash "$HOME"/Devils-Box/files/videos/droids.mp4 
+omxplayer"$HOME"/Devils-Box/files/videos/droids.mp4 
 fi 
 
 function  ports() {
