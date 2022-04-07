@@ -52,7 +52,7 @@ function hursty-blue() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images/
 wget https://github.com/dmmarti/launchingscreens-hurstyblue/archive/refs/heads/master.zip
-unzip launchingscretro-hurstyblue.zip
+unzip launchingscreens-hurstyblue-master.zip
 move-image "launchingscreens-hurstyblue-master" "all"
 sudo rm -R /home/pi/temp/images
 }
