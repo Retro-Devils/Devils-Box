@@ -7,7 +7,7 @@ echo "You have chosen option ${useranswer}."
 
 echo "....Processing...."
 sleep 5 
-if [[ $useranswer == "420" ]]; then correct
+if [[ $useranswer == "420" ]]; then correct; fi
 
 function correct() {
 local choice
@@ -40,7 +40,6 @@ local choice
     *) break ;;
     esac
   done
-fi
 }
 
 function ports() {
