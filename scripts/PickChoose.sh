@@ -15,6 +15,8 @@ HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 
 
+
+omxplayer "$HOME"/Devils-Box/files/videos/pickchoose.mp4 > /dev/null 2>&1
 if [ -f "/usr/local/bin/confirm" ]; then
   confirm=0
 else
@@ -26,14 +28,6 @@ if [ $confirm = 1 ]; then
 dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox " 
 PLEASE Install/Update Devils Box" 0 0
 else
-dialog  --sleep 1 --title "PICK & CHOOSE INFO" --msgbox " 
-<-------------WELCOME--------------->
-WHATS THIS DO?
--DOWNLOADS GAMES YOU SELECT
-HOW TO USE?
--PICK A SYSTEM
--CHOOSE YOUR GAME(S) 
--CLICK DOWNLOAD" 0 0
 local choice
   
   while true; do
