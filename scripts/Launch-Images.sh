@@ -34,25 +34,25 @@ move-image "amstradcpc"
 move-image "arcade"
 move-image "atari2600"
 move-image "atari5200"
-mv /home/pi/temp/images/atari7800/launching.png -f //
-mv /home/pi/temp/images//atarilynx/launching.png -f //
-mv /home/pi/temp/images/c64/launching.png -f //
+move-image "atari7800"
+move-image "atarilynx"
+move-image "c64"
 move-image "coleco"
 move-image "daphne"
-mv /home/pi/temp/images/dreamcast/launching.png -f //
-mv /home/pi/temp/images/famicom/launching.png -f //
-mv /home/pi/temp/images/fba/launching.png -f //
-mv /home/pi/temp/images/fds/launching.png -f //
+move-image "dreamcast"
+move-image "famicom"
+move-image "fba"
+move-image "fds"
 mv /home/pi/temp/images/gameandwatch/launching.png -
-mv /home/pi/temp/images/gamegear/launching.png -f /opt/retropie/configs/gamegear/
-mv /home/pi/temp/images/gb/launching.png /opt/retropie/configs/gb/
-mv /home/pi/temp/images/gba/launching.png /opt/retropie/configs/gba/
-mv /home/pi/temp/images/gbc/launching.png /opt/retropie/configs/gbc
-mv /home/pi/temp/images/intellivision/launching.png /opt/retropie/configs/intellivision/
-mv /home/pi/temp/images/mame-advmame/launching.png /opt/retropie/configs/mame-advmame/
-mv /home/pi/temp/images/mame-libretro/launching.png /opt/retropie/configs/mame-libretro/
-mv /home/pi/temp/images/mame-mame4all/launching.png /opt/retropie/configs/mame-mame4all/
-mv /home/pi/temp/images/mastersystem/launching.png /opt/retropie/configs/mastersystem/
+mv /home/pi/temp/images/gamegear/launching.png -f //
+mv /home/pi/temp/images/gb/launching.png //
+mv /home/pi/temp/images/gba/launching.png //
+mv /home/pi/temp/images/gbc/launching.png /
+mv /home/pi/temp/images/intellivision/launching.png //
+mv /home/pi/temp/images/mame-advmame/launching.png //
+mv /home/pi/temp/images/mame-libretro/launching.png //
+mv /home/pi/temp/images/mame-mame4all/launching.png //
+mv /home/pi/temp/images/mastersystem/launching.png //
 mv /home/pi/temp/images/megadrive/launching.png /opt/retropie/configs/megadrive/
 mv /home/pi/temp/images/msx/launching.png /opt/retropie/configs/msx/
 mv /home/pi/temp/images/n64/launching.png /opt/retropie/configs/n64/
