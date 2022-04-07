@@ -1,12 +1,13 @@
 #!/bin/bash
 IFS=';'
+
 echo
 read -p "PLEASE ENTER CODE" useranswer
-sleep 1
-echo "You have chosen option ${useranswer}."
-
+echo
+echo "YOU ENTERED ${useranswer}"
 echo "....Processing...."
-sleep 5 
+sleep 5
+
 if [[ $useranswer == "420" ]]; then correct; fi
 
 function correct() {
