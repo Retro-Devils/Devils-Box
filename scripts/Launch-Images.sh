@@ -8,7 +8,7 @@ while true; do
   choice=$(dialog --backtitle "$BACKTITLE" --title "LAUNCHING IMAGES MENU" \ 
   --ok-button Download --cancel-button Back \ 
   --menu " PRESS A/ENTER TO DOWNLOAD & APPLY IMAGES" 30 70 50 \
-     1 "Back To The Future----------MBB" \
+     1 "Back To The Future----------MBM" \
      2 "Grid Blue---------------Dmmarti" \
      3 "Hursty Blue--------------Hursty" \
      4 "Motion Blue-------------Dmmarti" \
