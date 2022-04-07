@@ -45,7 +45,6 @@ local choice
 
 else 
 bash "$HOME"/Devils-Box/files/videos/droids.mp4 
-sleep 4
 fi 
 
 function  ports() {
