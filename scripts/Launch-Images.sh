@@ -8,21 +8,30 @@ while true; do
   choice=$(dialog --backtitle "$BACKTITLE" --title "LAUNCHING IMAGES MENU" \ 
   --ok-button Download --cancel-button Back \ 
   --menu " PRESS A/ENTER TO DOWNLOAD & APPLY IMAGES" 30 70 50 \ 
-     1 "Retro Devils"/ 
-     2 "Back To The Future" 
-     3 "Retro TV" / 
+     1 "Retro Devils" \
+     2 "Back To The Future" \
+     3 "Retro TV" \ 
+     4 "Simple Grey" \
      2>&1 >/dev/tty) 
      
      case "$choice" in 
      1) devils ;; 
      2) bttf ;; 
-     3) retrotv ;; 
+     3) retrotv ;;
+     4 simple-grey ;;
      *) break ;; 
      esac 
    done
 fi
 }
-
+function simple-grey() {
+mkdir /home/pi/temp/images
+cd /home/pi/temp/images/
+wget https://github.com/dmmarti/launchingscreens-simple_gray/archive/refs/heads/master.zip
+unzip launchingscreens-simple_gray-master.zip
+move-image "launchingscreens-simple_gray-master" "all"
+sudo rm -R /home/pi/temp/images
+}
 function devils() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images
@@ -137,5 +146,5 @@ move-image "zeldacollection"
 sudo rm -R /home/pi/temp/images
 
 function move-image(){
-mv /home/pi/temp/images/${1}/launching.png -f opt/retropie/config/${1}/launching.png
+mv /home/pi/temp/images/${theme}/${1}/launching.png -f opt/retropie/config/${1}/launching.png
 }
