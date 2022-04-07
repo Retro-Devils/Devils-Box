@@ -1,19 +1,9 @@
 #!/bin/bash
 IFS=';'
 
-echo
-read -p "PLEASE ENTER CODE" useranswer
-
-echo
-echo "YOU ENTERED ${useranswer} ..PROCESSING.. "
-sleep 5
-
-if [ $useranswer = "420" ]; then
-omxplayer "$HOME"/Devils-Box/files/videos/droids.mp4 
-correct
-fi
-
 function correct() {
+omxplayer "$HOME"/Devils-Box/files/videos/droids.mp4 
+
 local choice
 
   while true; do
@@ -82,3 +72,14 @@ bash /home/pi/Devils-Box/scripts/jedi-outcast.sh
 function aimtrack(){
 bash /home/pi/Devils-Box/scripts/Aimtrack.sh
 }
+
+echo
+read -p "PLEASE ENTER CODE" useranswer
+
+echo
+echo "YOU ENTERED ${useranswer} ..PROCESSING.. "
+sleep 5
+
+if [ $useranswer = "420" ]; then
+correct
+fi
