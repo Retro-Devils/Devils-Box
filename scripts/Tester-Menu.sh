@@ -1,7 +1,7 @@
 #!/bin/bash
 IFS=';'
 echo
-read -p "PLEASE ENTER CODE & HIT <enter> : " useranswer
+read -p "PLEASE ENTER CODE" useranswer
 sleep 1
 echo "You have chosen option ${useranswer}."
 
