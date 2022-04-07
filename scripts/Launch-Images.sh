@@ -131,11 +131,11 @@ mv /home/pi/temp/images/taitoclassics/launching.png /opt/retropie/configs/taitoc
 mv /home/pi/temp/images/tmntcollection/launching.png /opt/retropie/configs/tmntcollection/
 mv /home/pi/temp/images/tokicollection/launching.png /opt/retropie/configs/tokicollection/
 mv /home/pi/temp/images/trackballclassics/launching.png /opt/retropie/configs/trackballclassics/
-mv /home/pi/temp/images/vectorclassics/launching.png /opt/retropie/configs/vectorclassics/
-mv /home/pi/temp/images/williamsclassics/launching.png /opt/retropie/configs/williamsclassics/disable_launching.png
+move-image "vectorclassics"
+move-image "williamsclassics"
 move-image "zeldacollection"
 sudo rm -R /home/pi/temp/images
 
 function move-image(){
-mv /home/pi/temp/images/${1}/launching.png -f opt/retropie/config/${1}launching.png
+mv /home/pi/temp/images/${1}/launching.png -f opt/retropie/config/${1}/launching.png
 }
