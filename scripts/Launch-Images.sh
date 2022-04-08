@@ -12,8 +12,8 @@ while true; do
      2 "Grid Blue---------------Dmmarti" \
      3 "Hursty Blue--------------Hursty" \
      4 "Motion Blue-------------Dmmarti" \
-     5 "Devil Laughing-----Retro Devils" \
-     6 "Retro TV-----------Retro Devils" \ 
+     5 "Devil Laughing-----UNFINISHED--" \
+     6 "Retro TV-----------UNFINISHED--" \ 
      7 "Simple Grey-------------Dmmarti" \
      2>&1 >/dev/tty) 
      
@@ -34,8 +34,7 @@ function bttf() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images/
 wget https://archive.org/download/devils-themes/bttf--------MBM.zip
-unzip bttf.zip
-move-image "" "all"
+unzip bttf--------MBM.zip
 move-image "bttf" "all"
 move-image "bttf" "amiga"
 move-image "bttf" "amstradcpc"
@@ -79,14 +78,13 @@ mkdir /home/pi/temp/images
 cd /home/pi/temp/images/
 wget https://github.com/dmmarti/launchingscreens-gridblue/archive/refs/heads/master.zip
 unzip launchingscreens-gridblue-master.zip
-move-image "launchingscreens-gridblue-master" "all"
 move-image "launchingscreens-motionblue-master" "all"
 move-image "launchingscreens-gridblue-master" "amiga"
 move-image "launchingscreens-gridblue-master" "amstradcpc"
 move-image "launchingscreens-gridblue-master" "arcade"
 move-image "launchingscreens-gridblue-master" "atari2600"
 move-image "launchingscreens-gridblue-master" "atari5200"
-move-image "launchingscreens-motionblue-master" "atari7800"
+move-image "launchingscreens-gridblue-master" "atari7800"
 move-image "launchingscreens-gridblue-master" "atarilynx"
 move-image "launchingscreens-gridblue-master" "c64"
 move-image "launchingscreens-gridblue-master" "coleco"
