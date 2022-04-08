@@ -5,8 +5,9 @@
 wget -q --spider https://archive.org/download/the-devils-box-alt
 if [ $? -eq 0 ]; then
 dialog  --sleep 1 --title "MAIN SERVER CHECK" --msgbox "
----MAIN SERVERS ARE UP AND RUNNING---
+---MAIN SERVERS ARE UP AND RUNNING---" 0 0
 else
+dialog  --sleep 1 --title "MAIN SERVER CHECK" --msgbox "
 ---MAIN SERVERS ARE DOWN---" 0 0
 fi
 sleep 1
@@ -15,8 +16,9 @@ sleep 1
 wget -q --spider https://archive.org/download/the-devils-box-alt
 if [ $? -eq 0 ]; then
 dialog  --sleep 1 --title "HACKS SERVER CHECK" --msgbox "
----HACKS SERVERS ARE UP AND RUNNING---
+---HACKS SERVERS ARE UP AND RUNNING---" 0 0
 else
+dialog  --sleep 1 --title "HACKS SERVER CHECK" --msgbox "
 ---HACKS SERVERS ARE DOWN----" 0 0
 fi
 sleep 1
@@ -25,8 +27,9 @@ sleep 1
 wget -q --spider https://archive.org/download/the-devils-box-alt
 if [ $? -eq 0 ]; then
 dialog  --sleep 1 --title "PICK & CHOOSE SERVER CHECK" --msgbox "
----PICK CHOOSE SERVERS ARE UP AND RUNNING---
+---PICK CHOOSE SERVERS ARE UP AND RUNNING---" 0 0
 else
+dialog  --sleep 1 --title "PICK CHOOSE SERVER CHECK" --msgbox "
 ---PICK CHOOSE SERVERS ARE DOWN---" 0 0
 fi
 sleep 1
@@ -35,8 +38,9 @@ sleep 1
 wget -q --spider https://archive.org/download/PSP_US_Arquivista
 if [ $? -eq 0 ]; then
 dialog  --sleep 1 --title "PSP SERVER CHECK" --msgbox "
----PSP SERVERS ARE UP AND RUNNING---
+---PSP SERVERS ARE UP AND RUNNING---" 0 0
 else
+dialog  --sleep 1 --title "PSP SERVER CHECK" --msgbox "
 ---PSP SERVERS ARE DOWN---" 0 0
 fi
 sleep 1
@@ -45,8 +49,9 @@ sleep 1
 wget -q --spider https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0
 if [ $? -eq 0 ]; then
 dialog  --sleep 1 --title "MSU1 SERVER CHECK" --msgbox "
----MSU1 SERVERS ARE UP AND RUNNING---
+---MSU1 SERVERS ARE UP AND RUNNING---" 0 0 
 else
+dialog  --sleep 1 --title "MSU1 SERVER CHECK" --msgbox "
 ---MSU1 SERVERS ARE DOWN----" 0 0
 fi
 sleep 1
