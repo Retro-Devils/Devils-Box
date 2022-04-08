@@ -17,6 +17,7 @@ local choice
       5 "Pick & Choose Ports" \
       6 "Aimtrack Setup " \
       7 "--------------- " \
+      + "Update Testers Menu"
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -29,6 +30,7 @@ local choice
     5) ports ;;
     6) aimtrack ;;
     7) no ;;
+    +) update-test ;;
     *) break ;;
     esac
   done
@@ -69,6 +71,10 @@ bash /home/pi/Devils-Box/scripts/jedi-outcast.sh
 }
 function aimtrack(){
 bash /home/pi/Devils-Box/scripts/Aimtrack.sh
+}
+function update-test() {
+sudo rm "$HOME"/Devils-Box/scripts/Tester-Menu.sh
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box/main/scripts/Tester-Menu.sh -P "$HOME"/Devils-Box/scripts/
 }
 
 echo
