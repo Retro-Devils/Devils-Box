@@ -17,7 +17,7 @@ local choice
       5 "Pick & Choose Ports" \
       6 "Aimtrack Setup " \
       7 "--------------- " \
-      + "Update Testers Menu"
+      8 "Update Testers Menu"
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -30,7 +30,7 @@ local choice
     5) ports ;;
     6) aimtrack ;;
     7) no ;;
-    +) update-test ;;
+    8) update-test ;;
     *) break ;;
     esac
   done
