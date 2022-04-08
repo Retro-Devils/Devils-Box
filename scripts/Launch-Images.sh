@@ -280,7 +280,7 @@ sudo rm -R /home/pi/temp/images
 function simple-grey() {
 mkdir /home/pi/temp/images
 cd /home/pi/temp/images/
-wget https://github.com/dmmarti/launchingscreens-simplegrey/archive/refs/heads/master.zip
+wget https://github.com/dmmarti/launchingscreens-simple_gray/archive/refs/heads/master.zip
 unzip 
 move-image "" "all"
 sudo rm -R /home/pi/temp/images
