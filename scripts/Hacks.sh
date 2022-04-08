@@ -56,7 +56,7 @@ local choice
       + "--------------------------------------------------------- " \
       7 "Apply/Update Hacks Configs                      6 Configs " \
       8 "Get ES-SYSTEMS Config                              1 File " \
-      9 "PRESS HERE FOR HELP WITH HACKS DOWNLOADER.                " \                      
+      9 "PRESS HERE FOR HELP WITH HACKS DOWNLOADER" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -97,8 +97,9 @@ mkdir "$HOME"/RetroPie/roms/ggh
 mkdir "$HOME"/RetroPie/roms/nesh
 mkdir "$HOME"/RetroPie/roms/snesh
 }
+
 function help-me() {
-dialog  --sleep 1 --title "HACKS EXIT MESSAGE" --msgbox " 
+dialog  --sleep 1 --title "HACKS HELP MESSAGE" --msgbox " 
 <-------------FAQ & HELP----------------->
 GAMES DONT SHOW?
 YOUR ES SYSTEMS PROBABLY DOESNT HAVE HACKS.
