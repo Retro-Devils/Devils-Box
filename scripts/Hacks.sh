@@ -55,7 +55,7 @@ local choice
       6 "SNES Hacks                              40MB     37 GAMES " \
       + "--------------------------------------------------------- " \
       7 "Apply/Update Hacks Configs                      6 Configs " \
-      8 "Get ES-SYSTEMS Config                              1 File " \
+      8 "GET ES-SYSTEMS CONFIG                              1 File " \
       9 "PRESS HERE FOR HELP WITH HACKS DOWNLOADER" \
       2>&1 >/dev/tty)
 
