@@ -7,7 +7,7 @@ local choice
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "TESTERS & DEVILS MENU  " \
      --ok-button Download --cancel-button Main-Menu \
-     --menu " PRESS SOMETHING " 30 70 50 \
+     --menu " TEST SOMETHING " 30 70 50 \
       + "--FINISHED OR CLOSE TO IT--" \
       1 "Collections Helper " \
       2 "Loading Images " \
@@ -28,7 +28,7 @@ local choice
     4) no ;;
     +) none ;;
     5) ports ;;
-    6) bash /home/pi/Devils-Box/scripts/Aimtrack.sh ;;
+    6) bash "$HOME"/Devils-Box/scripts/Aimtrack.sh ;;
     7) no ;;
     8) update-test ;;
     *) break ;;
@@ -58,16 +58,16 @@ function ports() {
 }
 
 function GTA3() {
-bash /home/pi/Devils-Box/scripts/GTA3-Setup.sh
+bash "$HOME"/Devils-Box/scripts/GTA3-Setup.sh
 }
 function GTA-VC(){
-bash /home/pi/Devils-Box/scripts/GTA-VC-Setup.sh
+bash "$HOME"/Devils-Box/scripts/GTA-VC-Setup.sh
 }
 function jedi-academy() {
-bash /home/pi/Devils-Box/scripts/jedi-academy.sh
+bash "$HOME"/Devils-Box/scripts/jedi-academy.sh
 }
 function jedi-outcast(){
-bash /home/pi/Devils-Box/scripts/jedi-outcast.sh
+bash "$HOME"/Devils-Box/scripts/jedi-outcast.sh
 }
 
 function update-test() {
