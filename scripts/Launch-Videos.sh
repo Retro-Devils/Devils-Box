@@ -5,7 +5,7 @@ local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title "LAUNCHING VIDEOS MENU" \
       --ok-button Download --cancel-button Back \
       --menu " PRESS A/ENTER TO DOWNLOAD & APPLY VIDEOS" 30 70 50 \
-       1 "Retro Devils"/
+       1 "Retro Devils INCOMPLETE"/
        2 "Super Heroes"
        2 "Retro TV" /
        2>&1 >/dev/tty)
