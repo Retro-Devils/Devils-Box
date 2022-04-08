@@ -28,7 +28,7 @@ local choice
     4) no ;;
     +) none ;;
     5) ports ;;
-    6) aimtrack ;;
+    6) bash /home/pi/Devils-Box/scripts/Aimtrack.sh ;;
     7) no ;;
     8) update-test ;;
     *) break ;;
@@ -69,9 +69,7 @@ bash /home/pi/Devils-Box/scripts/jedi-academy.sh
 function jedi-outcast(){
 bash /home/pi/Devils-Box/scripts/jedi-outcast.sh
 }
-function aimtrack(){
-bash /home/pi/Devils-Box/scripts/Aimtrack.sh
-}
+
 function update-test() {
 sudo rm "$HOME"/Devils-Box/scripts/Tester-Menu.sh
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box/main/scripts/Tester-Menu.sh -P "$HOME"/Devils-Box/scripts/
