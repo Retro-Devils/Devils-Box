@@ -964,11 +964,12 @@ bash "$HOME"/Devils-Box/scripts/BIOS.sh
 }
 
 function msu-setup() {
-bash  "$HOME"/Devils-Box/scripts/MSU1-Setup.sh
+bash "$HOME"/Devils-Box/scripts/MSU1-Setup.sh
 }
 
 function check-servers() {
 bash "$HOME"/Devils-Box/scripts/Server-Check.sh
+}
 
 #-----------NET CHECKER-----------#
 wget -q --spider http://google.com
