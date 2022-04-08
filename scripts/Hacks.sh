@@ -124,8 +124,12 @@ fi
 }
 
 function get-config() {
-mv "$HOME"/.emulationstation/es_systems.cfg -P "$HOME"/.emulationstation/backups/
-wget essystems -P "$HOME"/.emulationstation/
+dialog --sleep 1 --title "GET ES SYSTEMS INFO" --msgbox "
+<----> ATTENTION <---->
+THIS WILL OVERWRITE OR ES-SYSTEMS.CFG
+THIS WILL ALSO BACKUP ES-SYSTEMS TO .../.emulationstation/backups/b4hacks.cfg" 0 0
+mv "$HOME"/.emulationstation/es_systems.cfg -f "$HOME"/.emulationstation/backups/b4hacks.cfg
+wget https://archive.org/download/devils-updates/es_systems.cfg -P "$HOME"/.emulationstation/
 }
 
 hacks-menu
