@@ -12,9 +12,6 @@ bfgred="${bld}$(tput setaf 1)"
 clear
 omxplayer "$HOME"/Devils-Box/files/videos/intro.mp4  > /dev/null 2>&1
 
-#-----------REQUIRED FOR FUTURE UPDATES-----------#
-if ! command -v pv &> /dev/null; then sudo apt -y install pv; fi
-
 #-----------MAIN MENU-----------#
 function main_menu() {
   local choice
