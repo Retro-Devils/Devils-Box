@@ -546,6 +546,7 @@ omxplayer "$HOME"/Devils-Box/files/videos/devils-toolbox.mp4 > /dev/null 2>&1
       5 "Diablos Arcade Tools " \
       - "----------------------" \
       6 "Testers & Devils Area " \
+      7 "Check Server Status" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -557,6 +558,7 @@ omxplayer "$HOME"/Devils-Box/files/videos/devils-toolbox.mp4 > /dev/null 2>&1
     5) da_tools ;;
     -) none ;;
     6) testers ;;
+    7) check-servers ;;
     *) break ;;
     esac
   done
@@ -964,6 +966,9 @@ bash "$HOME"/Devils-Box/scripts/BIOS.sh
 function msu-setup() {
 bash  "$HOME"/Devils-Box/scripts/MSU1-Setup.sh
 }
+
+function check-servers() {
+bash "$HOME"/Devils-Box/scripts/Server-Check.sh
 
 #-----------NET CHECKER-----------#
 wget -q --spider http://google.com
