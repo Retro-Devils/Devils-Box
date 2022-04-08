@@ -55,6 +55,8 @@ local choice
       6 "SNES Hacks                              40MB     37 GAMES " \
       + "--------------------------------------------------------- " \
       7 "Apply/Update Hacks Configs                      6 Configs " \
+      8 "Get ES-SYSTEMS Config                              1 File " \
+      9 "PRESS HERE FOR HELP WITH HACKS DOWNLOADER.                " \                      
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -66,6 +68,8 @@ local choice
     5) download-hacks "nesh" ;;
     6) download-hacks "snesh" ;;
     7) hacks-config ;;
+    8) get-config ;;
+    9) help-me ;;
     *) break ;;
     esac
   done
@@ -87,11 +91,25 @@ sleep 2
 echo "Making Directories For Hacks"
 sleep 2
 mkdir "$HOME"/RetroPie/roms/gbah
-mkdir "$HOME"/RetroPie/roms/gb
+mkdir "$HOME"/RetroPie/roms/gbh
 mkdir "$HOME"/RetroPie/roms/genh
 mkdir "$HOME"/RetroPie/roms/ggh
 mkdir "$HOME"/RetroPie/roms/nesh
 mkdir "$HOME"/RetroPie/roms/snesh
+}
+function help-me() {
+dialog  --sleep 1 --title "HACKS EXIT MESSAGE" --msgbox " 
+<-------------FAQ & HELP----------------->
+GAMES DONT SHOW?
+YOUR ES SYSTEMS PROBABLY DOESNT HAVE HACKS.
+
+WHAT CAN I DO?
+YOU CAN GO BACK AND PRESS GET ES-SYSTEMS CONFIG
+OR
+YOU CAN MAUNAULLY ADD HACKS. HOW ?
+GO TO /home/pi/.emulationstation/es_systems.cfg
+EDIT THIS FILE WITH TEXT EDITOR
+COPY GB AND ADD HACKS AT THE END" 0 0
 }
 
 function download-hacks() {
@@ -105,26 +123,9 @@ cd "$HOME/RetroPie/roms/"${1}"/"
 fi
 }
 
-function hacks-config() {
-clear
-sleep 2 
-echo ${bld}$(tput setaf 1)"Copying Your/Default Configs"
-sleep 2
-cp -r /opt/retropie/configs/gba /opt/retropie/configs/gbah
-cp -r /opt/retropie/configs/gb /opt/retropie/configs/gbh
-cp -r /opt/retropie/configs/megadrive /opt/retropie/configs/genh
-cp -r /opt/retropie/configs/gamegear /opt/retropie/configs/ggh
-cp -r /opt/retropie/configs/nes /opt/retropie/configs/nesh
-cp -r /opt/retropie/configs/snes /opt/retropie/configs/snesh
-sleep 2
-echo "Making Directories For Hacks"
-sleep 2
-mkdir "$HOME"/RetroPie/roms/gbah
-mkdir "$HOME"/RetroPie/roms/gb
-mkdir "$HOME"/RetroPie/roms/genh
-mkdir "$HOME"/RetroPie/roms/ggh
-mkdir "$HOME"/RetroPie/roms/nesh
-mkdir "$HOME"/RetroPie/roms/snesh
+function get-config() {
+mv "$HOME"/.emulationstation/es_systems.cfg -P "$HOME"/.emulationstation/backups/
+wget essystems -P "$HOME"/.emulationstation/
 }
 
 hacks-menu
