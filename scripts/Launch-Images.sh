@@ -63,6 +63,55 @@ cd /home/pi/temp/images/
 wget https://github.com/dmmarti/launchingscreens-motionblue/archive/refs/heads/master.zip
 unzip launchingscreens-motionblue-master.zip
 move-image "launchingscreens-motionblue-master" "all"
+move-image "launchingscreens-motionblue-master" "amiga"
+move-image "launchingscreens-motionblue-master" "amstradcpc"
+move-image "launchingscreens-motionblue-master" "arcade"
+move-image "launchingscreens-motionblue-master" "atari2600"
+move-image "launchingscreens-motionblue-master" "atari5200"
+move-image "launchingscreens-motionblue-master" "atari7800"
+move-image "launchingscreens-motionblue-master" "atarilynx"
+move-image "launchingscreens-motionblue-master" "c64"
+move-image "launchingscreens-motionblue-master" "coleco"
+move-image "launchingscreens-motionblue-master" "daphne"
+move-image "launchingscreens-motionblue-master" "dreamcast"
+move-image "launchingscreens-motionblue-master" "famicom"
+move-image "launchingscreens-motionblue-master" "fba"
+move-image "launchingscreens-motionblue-master" "fds"
+move-image "launchingscreens-motionblue-master" "gameandwatch"
+move-image "launchingscreens-motionblue-master" "gamegear"
+move-image "launchingscreens-motionblue-master" "gb"
+move-image "launchingscreens-motionblue-master" "gba"
+move-image "launchingscreens-motionblue-master" "gbc"
+move-image "launchingscreens-motionblue-master" "intellivision"
+move-image "mame-advmame"
+move-image "mame-libretro"
+move-image "mame-mame4all"
+move-image "mastersystem"
+move-image "megadrive"
+move-image "msx"
+move-image "n64"
+move-image "neogeo"
+move-image "nes"
+move-image "ngp"
+move-iamge "ngpc"
+move-image "pcengine"
+move-image "pcenginecd"
+move-image "psp"
+move-image "pspminis"
+move-image "psx"
+move-image "sega32x"
+move-image "segacd"
+move-image "sfc"
+move-image "sg-1000"
+move-image "sgfx"
+move-image "snes"
+move-image "tg16"
+move-image "tg16cd"
+move-image "vectrex"
+move-image "videopac"
+move-image "virtualboy"
+move-image "wonderswan"
+move-image "wonderswancolor"
 sudo rm -R /home/pi/temp/images
 }
 
@@ -72,25 +121,6 @@ cd /home/pi/temp/images/
 wget 
 unzip 
 move-image "" "all"
-sudo rm -R /home/pi/temp/images
-}
-
-function simple-grey() {
-mkdir /home/pi/temp/images
-cd /home/pi/temp/images/
-wget https://github.com/dmmarti/launchingscreens-simplegrey/archive/refs/heads/master.zip
-unzip 
-move-image "" "all"
-sudo rm -R /home/pi/temp/images
-}
-
-
-function retro-devils() {
-mkdir /home/pi/temp/images
-cd /home/pi/temp/images
-wget devils images 
-unzip 
-move-image "all"
 move-image "amiga"
 move-image "amstradcpc"
 move-image "arcade"
@@ -124,24 +154,92 @@ move-image "ngp"
 move-iamge "ngpc"
 move-image "pcengine"
 move-image "pcenginecd"
-mv /home/pi/temp/images/psp/launching.png /opt/retropie/configs/psp/
+move-image "psp"
 move-image "pspminis"
-mv /home/pi/temp/images/psx/launching.png /opt/retropie/configs/psx/
-mv /home/pi/temp/images/sega32x/launching.png /opt/retropie/configs/sega32x/
-mv /home/pi/temp/images/segacd/launching.png /opt/retropie/configs/segacd/
-mv /home/pi/temp/images/sfc/launching.png /opt/retropie/configs/sfc/
-mv /home/pi/temp/images/sg-1000/launching.png /opt/retropie/configs/sg-1000/
-mv /home/pi/temp/images/sgfx/launching.png /opt/retropie/configs/sgfx/
-mv /home/pi/temp/images/snes/launching.png /opt/retropie/configs/snes/
-mv /home/pi/temp/images/tg16/launching.png //
-mv /home/pi/temp/images/tg16cd/launching.png /opt/retropie/configs/tg16cd/
-mv /home/pi/temp/images/vectrex/launching.png /opt/retropie/configs/vectrex/
-mv /home/pi/temp/images/videopac/launching.png /opt/retropie/configs/videopac/
+move-image "psx"
+move-image "sega32x"
+move-image "segacd"
+move-image "sfc"
+move-image "sg-1000"
+move-image "sgfx"
+move-image "snes"
+move-image "tg16"
+move-image "tg16cd"
+move-image "vectrex"
+move-image "videopac"
 move-image "virtualboy"
 move-image "wonderswan"
-mv /home/pi/temp/images/wonderswancolor/launching.png //
-mv /home/pi/temp/images/zmachine/launching.png //
-mv /home/pi/temp/images/zxspectrum/launching.png //
+move-image "wonderswancolor"
+sudo rm -R /home/pi/temp/images
+}
+
+function simple-grey() {
+mkdir /home/pi/temp/images
+cd /home/pi/temp/images/
+wget https://github.com/dmmarti/launchingscreens-simplegrey/archive/refs/heads/master.zip
+unzip 
+move-image "" "all"
+sudo rm -R /home/pi/temp/images
+}
+
+
+function retro-devils() {
+mkdir /home/pi/temp/images
+cd /home/pi/temp/images
+wget devils images 
+unzip 
+ "all"
+move-image "amiga"
+move-image "amstradcpc"
+move-image "arcade"
+move-image "atari2600"
+move-image "atari5200"
+move-image "atari7800"
+move-image "atarilynx"
+move-image "c64"
+move-image "coleco"
+move-image "daphne"
+move-image "dreamcast"
+move-image "famicom"
+move-image "fba"
+move-image "fds"
+move-image "gameandwatch"
+move-image "gamegear"
+move-image "gb"
+move-image "gba"
+move-image "gbc"
+move-image "intellivision"
+move-image "mame-advmame"
+move-image "mame-libretro"
+move-image "mame-mame4all"
+move-image "mastersystem"
+move-image "megadrive"
+move-image "msx"
+move-image "n64"
+move-image "neogeo"
+move-image "nes"
+move-image "ngp"
+move-iamge "ngpc"
+move-image "pcengine"
+move-image "pcenginecd"
+move-image "psp"
+move-image "pspminis"
+move-image "psx"
+move-image "sega32x"
+move-image "segacd"
+move-image "sfc"
+move-image "sg-1000"
+move-image "sgfx"
+move-image "snes"
+move-image "tg16"
+move-image "tg16cd"
+move-image "vectrex"
+move-image "videopac"
+move-image "virtualboy"
+move-image "wonderswan"
+move-image "wonderswancolor"
+move-image "zmachine"
+move-image "zxspectrum"
 sudo rm -R /home/pi/temp/images
 
 function move-image(){
