@@ -7,7 +7,7 @@ if [ $? -eq 0 ]; then
 dialog  --sleep 1 --title "MAIN SERVER CHECK" --msgbox "
 ---MAIN SERVERS ARE UP AND RUNNING---
 else
----MAIN SERVERS ARE DOWN---
+---MAIN SERVERS ARE DOWN---" 0 0
 fi
 sleep 1
 
@@ -17,7 +17,7 @@ if [ $? -eq 0 ]; then
 dialog  --sleep 1 --title "HACKS SERVER CHECK" --msgbox "
 ---HACKS SERVERS ARE UP AND RUNNING---
 else
----HACKS SERVERS ARE DOWN----
+---HACKS SERVERS ARE DOWN----" 0 0
 fi
 sleep 1
 
@@ -27,7 +27,7 @@ if [ $? -eq 0 ]; then
 dialog  --sleep 1 --title "PICK & CHOOSE SERVER CHECK" --msgbox "
 ---PICK CHOOSE SERVERS ARE UP AND RUNNING---
 else
----PICK CHOOSE SERVERS ARE DOWN---
+---PICK CHOOSE SERVERS ARE DOWN---" 0 0
 fi
 sleep 1
 
@@ -37,7 +37,7 @@ if [ $? -eq 0 ]; then
 dialog  --sleep 1 --title "PSP SERVER CHECK" --msgbox "
 ---PSP SERVERS ARE UP AND RUNNING---
 else
----PSP SERVERS ARE DOWN---
+---PSP SERVERS ARE DOWN---" 0 0
 fi
 sleep 1
 
@@ -47,7 +47,7 @@ if [ $? -eq 0 ]; then
 dialog  --sleep 1 --title "MSU1 SERVER CHECK" --msgbox "
 ---MSU1 SERVERS ARE UP AND RUNNING---
 else
----MSU1 SERVERS ARE DOWN----
+---MSU1 SERVERS ARE DOWN----" 0 0
 fi
 sleep 1
 
