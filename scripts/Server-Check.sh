@@ -45,6 +45,16 @@ dialog  --sleep 1 --title "PSP SERVER CHECK" --msgbox "
 fi
 sleep 1
 
+wget -q --spider https://archive.org/download/the-devils-box-alt/model3
+if [ $? -eq 0 ]; then
+dialog  --sleep 1 --title "MODEL 3 SERVER CHECK" --msgbox "
+---MODEL 3 SERVERS ARE UP AND RUNNING---" 0 0
+else
+dialog  --sleep 1 --title "PSP SERVER CHECK" --msgbox "
+---MODEL 3 SERVERS ARE DOWN---" 0 0
+fi
+sleep 1
+
 #---MSU1 SERVERS---#
 wget -q --spider https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0
 if [ $? -eq 0 ]; then
