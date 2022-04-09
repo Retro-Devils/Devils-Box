@@ -6,7 +6,7 @@ HOST2="https://archive.org/download/the-devils-box_202112"
 HOST3="https://archive.org/download/devils-bios"
 HOST4="https://archive.org/download/devils-wine"
 HOST5="https://archive.org/download/devils-dos"
-HOST8="https://archive.org/download/the-devils-box-alt/model3/"
+HOST8="https://archive.org/download/the-devils-box-alt/model3"
 
 #---------------NON-DEVILS-HOSTS-----------------------#
 HOST6="https://archive.org/download/PSP_US_Arquivista"
