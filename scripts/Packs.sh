@@ -6,6 +6,7 @@ HOST2="https://archive.org/download/the-devils-box_202112"
 HOST3="https://archive.org/download/devils-bios"
 HOST4="https://archive.org/download/devils-wine"
 HOST5="https://archive.org/download/devils-dos"
+HOST8="https://archive.org/download/the-devils-box-alt/model3/"
 
 #---------------NON-DEVILS-HOSTS-----------------------#
 HOST6="https://archive.org/download/PSP_US_Arquivista"
@@ -78,26 +79,27 @@ else
       42 "Pokemini                         5.4MB       44 GAMES" \
       43 "PlayStation 1                      3GB       29 GAMES" \
       44 "PSP                              ???GB      600 GAMES" \
-      45 "Sega Saturn                      108GB      303 GAMES" \
-      46 "Sega Saturn Japan                3.9GB       18 GAMES" \
-      47 "ScummVM                          2.5GB       21 GAMES" \
-      48 "Sega32x                           63MB       37 GAMES" \
-      49 "SegaCD                            11GB       52 GAMES" \
-      50 "Super Famicon                    475MB      487 GAMES" \
-      51 "SG-1000                            1MB       68 GAMES" \
-      52 "SNES                             508MB      603 GAMES" \
-      53 "SNES MSU1                         ??MB       ?? GAMES" \
-      54 "SuperGraffiix                    2.4MB        5 GAMES" \
-      55 "Turbo Graffix 16                  20MB       94 GAMES" \
-      56 "Vectrex                          201KB       20 GAMES" \
-      57 "VideoPAC                         430KB       99 GAMES" \
-      58 "Virtual Boy                        8MB       24 GAMES" \
-      59 "Dreamcast VMU                      3MB      115 GAMES" \
-      60 "Wonderswan Color                 116MB       84 GAMES" \
-      61 "Sharp X1                         7.6MB       69 GAMES" \
-      62 "Sharp X68000                     504MB      418 GAMES" \
-      63 "ZMachine                           4MB       30 GAMES" \
-      64 "ZXSpectrum                        38MB     1111 GAMES" \
+      45 "Sega Model 3.                     ??GB       15 GAMES" \
+      46 "Sega Saturn                      108GB      303 GAMES" \
+      47 "Sega Saturn Japan                3.9GB       18 GAMES" \
+      48 "ScummVM                          2.5GB       21 GAMES" \
+      49 "Sega32x                           63MB       37 GAMES" \
+      50 "SegaCD                            11GB       52 GAMES" \
+      51 "Super Famicon                    475MB      487 GAMES" \
+      52 "SG-1000                            1MB       68 GAMES" \
+      53 "SNES                             508MB      603 GAMES" \
+      54 "SNES MSU1                         ??MB       ?? GAMES" \
+      55 "SuperGraffiix                    2.4MB        5 GAMES" \
+      56 "Turbo Graffix 16                  20MB       94 GAMES" \
+      57 "Vectrex                          201KB       20 GAMES" \
+      58 "VideoPAC                         430KB       99 GAMES" \
+      59 "Virtual Boy                        8MB       24 GAMES" \
+      60 "Dreamcast VMU                      3MB      115 GAMES" \
+      61 "Wonderswan Color                 116MB       84 GAMES" \
+      62 "Sharp X1                         7.6MB       69 GAMES" \
+      63 "Sharp X68000                     504MB      418 GAMES" \
+      64 "ZMachine                           4MB       30 GAMES" \
+      65 "ZXSpectrum                        38MB     1111 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -145,6 +147,7 @@ else
     42) download-packs "pokemini" ;;
     43) download-packs "psx" ;;
     44) psp-pack ;;
+    45) model-3 ;;
     45) download-packs "saturn" ;;
     46) download-packs "saturn-japan" ;;
     47) download-packs "scummvm" ;;
@@ -181,6 +184,15 @@ else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST6}"/ -P "$HOME"/RetroPie/roms/psp -erobots=off
 rm -f "$HOME"/RetroPie/roms/psp/index.html.tmp
+fi
+}
+
+function model-3() {
+if [ ! -d "$HOME"/RetroPie/roms/model3/ ]; then dialog  --sleep 1 --title "MODEL 3 FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+else
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST8}"/ -P "$HOME"/RetroPie/roms/model3 -erobots=off
+rm -f "$HOME"/RetroPie/roms/model3/index.html.tmp
 fi
 }
 
