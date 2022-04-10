@@ -8,7 +8,7 @@ function collections-menu() {
     local choice
 
     while true; do
-        choice=$(dialog --backtitle "$BACKTITLE" --title "COLLECTIONS MEMU" \
+        choice=$(dialog --backtitle "$BACKTITLE" --title "COLLECTIONS HELPER" \
             --ok-label Select --cancel-label Back \
             --menu "COLLECTIONS MAKER MENU" 25 40 40 \
             1 "How To Use This ???" \
