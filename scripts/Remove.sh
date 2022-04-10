@@ -138,7 +138,7 @@ choice=$(dialog --backtitle "$BACKTITLE" --title " REMOVE PACKS MENU" \
     62) remove-packs "x68000" ;;
     63) remove-packs "zmachine" ;;
     64) remove-packs "zxspectrum" ;;
-     *) break ;;
+    *) break ;;
     esac
    done
 fi
