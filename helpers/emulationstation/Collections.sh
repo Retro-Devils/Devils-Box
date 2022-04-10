@@ -94,10 +94,8 @@ TO FINISH USING PLEASE .
 -COLLECTIONS 
 -GENERATE COLLECTION FROM THEME .
 YOU SHOULD SEE ADDED COLLECTIONS THIER" 0 0
-
- 
-cd
 }
+
 function ibad-logos() {
 cd "/home/pi/.emulationstation/themes/"
 echo "Please type theme name and press Enter"
@@ -109,6 +107,15 @@ wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/NEON-IBAD
 cd 
 read -n 1 -s -r -p "Thanks For Using-----Press any key to Continue"
 cd
+dialog --sleep 1 --title "COLLECTIONS EXIT MESSAGE" --msgbox"
+-------THANKS FOR USING--------
+TO FINISH USING PLEASE . 
+-GO TO RETROPIE
+-PRESS START 
+-GOT TO UI SETTINGS 
+-COLLECTIONS 
+-GENERATE COLLECTION FROM THEME .
+YOU SHOULD SEE ADDED COLLECTIONS THIER" 0 0
 }
 
 collections-menu
