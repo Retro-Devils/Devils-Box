@@ -140,7 +140,7 @@ choice=$(dialog --backtitle "$BACKTITLE" --title " REMOVE PACKS MENU" \
     64) remove-packs "zxspectrum" ;;
     *) break ;;
     esac
-   done
+  done
 fi
 }
 
