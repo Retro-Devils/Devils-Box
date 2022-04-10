@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 dialog --sleep 1 --title "COLLECTIONS MENU" --msgbox"
 ------YOU WILL NEED A KEYBOARD------
 ---THIS MAKES COLLECTIONS FOR YOU---" 0 0
@@ -56,7 +57,9 @@ function pick-collections() {
                "1" "Battletoads Collection" off \
                "2" "Capcom Collection" off \
                "3" "Fighters  Collection" off \
-               "4" "Shooters Collection" off |
+               "4" "Shooters Collection" off \
+               "+" "---Devils Neon I.B.A.D" off \
+               "5" "Shooters Collection" off \
                 2>/tmp/results 
     while read -r choice
         do
@@ -66,6 +69,8 @@ function pick-collections() {
            2) hursty-logos "capcom" ;;
            3) hursty-logos "fighters" ;; 
            4) hursty-logos "shooters" ;;
+           +) no ;; 
+           5) ibad-logo "shooters"
            *) ;;
         esac
         done < /tmp/results
@@ -80,10 +85,20 @@ mkdir ~/"${1}"
 cd ~/"${1}"
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/"${1}"/_inc/system.png -P /home/pi/.emulationstation/themes/$theme/"${1}"
 cd 
-read -n 1 -s -r -p "Thanks For Using-----Press any key to Continue"
+dialog --sleep 1 --title "COLLECTIONS EXIT MESSAGE" --msgbox"
+-------THANKS FOR USING--------
+TO FINISH USING PLEASE . 
+-GO TO RETROPIE
+-PRESS START 
+-GOT TO UI SETTINGS 
+-COLLECTIONS 
+-GENERATE COLLECTION FROM THEME .
+YOU SHOULD SEE ADDED COLLECTIONS THIER" 0 0
+
+ 
 cd
 }
-function devil-logos() {
+function ibad-logos() {
 cd "/home/pi/.emulationstation/themes/"
 echo "Please type theme name and press Enter"
 read theme
