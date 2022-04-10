@@ -8,10 +8,10 @@ function collections-menu() {
     local choice
 
     while true; do
-        choice=$(dialog --backtitle "$BACKTITLE" --title "COLLECTIONS HELPER" \
+        choice=$(dialog --backtitle "$BACKTITLE" --title "COLLECTIONS HELPER V1.0" \
             --ok-label Select --cancel-label Back \
-            --menu "COLLECTIONS MAKER MENU" 25 40 40 \
-            1 "How To Use This ???" \
+            --menu "COLLECTIONS HELPER MENU" 25 40 40 \
+            1 "How To Use Helper ???" \
             2 "List Installed ES Themes " \
             3 "Pick Collections To Make " \
             2>&1 > /dev/tty)
@@ -20,7 +20,7 @@ function collections-menu() {
             1) how-to ;;
             2) list-themes ;;
             3) pick-collections ;;
-            *) break       ;;
+            *) break ;;
         esac
     done
 }
@@ -51,26 +51,26 @@ read -n 1 -s -r -p "Above Is A List Of Installed Themes-----Press any key to Con
 
 function pick-collections() { 
        local choice
-   whiptail --clear --title "PICK COLLECTIONS MENU" --separate-output --checklist "Choose Collection(s) and click Download:" 0 0 0 \ 
+   whiptail --clear --title "PICK COLLECTIONS MENU" --separate-output --checklist "Choose Collection(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
                "+" "---Hurstys Chromey Wheel---" off \
                "1" "Battletoads Collection" off \
                "2" "Capcom Collection" off \
                "3" "Fighters  Collection" off \
                "4" "Shooters Collection" off \
-               "+" "---Devils Neon I.B.A.D" off \
+               "+" "----Devils Neon I.B.A.D----" off \
                "5" "Shooters Collection" off \
-                2>/tmp/results 
+                2>/tmp/results
     while read -r choice
         do
         case $choice in
            +) none ;;
            1) hursty-logos "battletoads" ;;
            2) hursty-logos "capcom" ;;
-           3) hursty-logos "fighters" ;; 
+           3) hursty-logos "fighters" ;;
            4) hursty-logos "shooters" ;;
-           +) no ;; 
-           5) ibad-logo "shooters"
+           +) no ;;
+           5) ibad-logo "shooters" ;;
            *) ;;
         esac
         done < /tmp/results
@@ -84,15 +84,15 @@ cd ~/$theme
 mkdir ~/"${1}"
 cd ~/"${1}"
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/"${1}"/_inc/system.png -P /home/pi/.emulationstation/themes/$theme/"${1}"
-cd 
+cd
 dialog --sleep 1 --title "COLLECTIONS EXIT MESSAGE" --msgbox"
 -------THANKS FOR USING--------
-TO FINISH USING PLEASE . 
+TO SEE COLLECTIONS IN ES PLEASE
 -GO TO RETROPIE
--PRESS START 
--GOT TO UI SETTINGS 
--COLLECTIONS 
--GENERATE COLLECTION FROM THEME .
+-PRESS START
+-GOT TO UI SETTINGS
+-COLLECTIONS
+-GENERATE COLLECTION FROM THEME
 YOU SHOULD SEE ADDED COLLECTIONS THIER" 0 0
 }
 
@@ -104,17 +104,17 @@ cd ~/$theme
 mkdir ~/"${1}"
 cd ~/"${1}"
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/NEON-IBAD/"${1}"/_inc/system.png -P /home/pi/.emulationstation/themes/$theme/"${1}"
-cd 
+cd
 read -n 1 -s -r -p "Thanks For Using-----Press any key to Continue"
 cd
 dialog --sleep 1 --title "COLLECTIONS EXIT MESSAGE" --msgbox"
 -------THANKS FOR USING--------
-TO FINISH USING PLEASE . 
+TO SEE COLLECTION IN ES PLEASE
 -GO TO RETROPIE
--PRESS START 
--GOT TO UI SETTINGS 
+-PRESS START
+-GOT TO UI SETTINGS
 -COLLECTIONS 
--GENERATE COLLECTION FROM THEME .
+-GENERATE COLLECTION FROM THEME
 YOU SHOULD SEE ADDED COLLECTIONS THIER" 0 0
 }
 
