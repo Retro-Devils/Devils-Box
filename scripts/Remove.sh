@@ -142,7 +142,6 @@ local choice
     *) break ;;
     esac
   done
-fi
 }
 
 function remove-packs() {
