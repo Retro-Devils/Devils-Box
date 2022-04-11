@@ -19,7 +19,7 @@ function collections-menu() {
         case "$choice" in
             1) how-to ;;
             2) list-themes ;;
-            3) pick-collections ;;
+            3) pick ;;
             *) break ;;
         esac
     done
@@ -49,7 +49,7 @@ ls
 read -n 1 -s -r -p "Above Is A List Of Installed Themes-----Press any key to Continue"
 }
 
-function pick-collections() { 
+function pick() { 
        local choice
    whiptail --clear --title "PICK COLLECTIONS MENU" --separate-output --checklist "Choose Collection(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
@@ -70,7 +70,7 @@ function pick-collections() {
            3) hursty-logos "fighters" ;;
            4) hursty-logos "shooters" ;;
            +) no ;;
-           5) ibad-logo "shooters" ;;
+           5) ibad-logos "shooters" ;;
            *) ;;
         esac
         done < /tmp/results
