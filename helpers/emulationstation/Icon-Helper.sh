@@ -112,21 +112,21 @@ read theme
 echo "Searching For Common Missing Icons Now "
 sleep 2 
 #---MODEL 3----#
-if [ -d /home/pi/.emulationstation/themes/$theme/model3] then 
+if [ ! -d /home/pi/.emulationstation/themes/$theme/model3] then 
 wget HURSTY LOGOS MODEL 3
 else skip 
 fi 
 #---WINE---#
-if [ -d /home/pi/.emulationstation/themes/$theme/wine]
+if [ ! -d /home/pi/.emulationstation/themes/$theme/wine]
 then wget HURSTY LOGOS WINE
 else skip
 fi
 #---MUGEN---#
-if [ -d /home/pi/.emulationstation/themes/$theme/model3] then wget HURSTY LOGOS MUGEN
+if [ ! -d /home/pi/.emulationstation/themes/$theme/model3] then wget HURSTY LOGOS MUGEN
 else skip
 fi
 #--ATOMISWAVE--#
-if [ -d /home/pi/.emulationstation/themes/$theme/atomiswave]
+if [ ! -d /home/pi/.emulationstation/themes/$theme/atomiswave]
 then wget HURSTY LOGOS ATOMISWAVE
 else skip
 fi
@@ -139,21 +139,21 @@ read theme
 echo "Searching For Common Missing Icons Now "
 sleep 2 
 #---MODEL 3----#
-if [ -d /home/pi/.emulationstation/themes/$theme/model3] then 
+if [ ! -d /home/pi/.emulationstation/themes/$theme/model3] then 
 wget HURSTY LOGOS MODEL 3
 else skip 
 fi 
 #---WINE---#
-if [ -d /home/pi/.emulationstation/themes/$theme/wine]
+if [ ! -d /home/pi/.emulationstation/themes/$theme/wine]
 then wget HURSTY LOGOS WINE
 else skip
 fi
 #---MUGEN---#
-if [ -d /home/pi/.emulationstation/themes/$theme/model3] then wget HURSTY LOGOS MUGEN
+if [ ! -d /home/pi/.emulationstation/themes/$theme/model3] then wget HURSTY LOGOS MUGEN
 else skip
 fi
 #--ATOMISWAVE--#
-if [ -d /home/pi/.emulationstation/themes/$theme/atomiswave]
+if [ ! -d /home/pi/.emulationstation/themes/$theme/atomiswave]
 then wget HURSTY LOGOS ATOMISWAVE
 else skip
 fi
@@ -166,21 +166,21 @@ read theme
 echo "Searching For Common Missing Icons Now "
 sleep 2 
 #---MODEL 3----#
-if [ -d /home/pi/.emulationstation/themes/$theme/model3] then 
+if [ ! -d /home/pi/.emulationstation/themes/$theme/model3] then 
 wget HURSTY LOGOS MODEL 3
 else skip 
 fi 
 #---WINE---#
-if [ -d /home/pi/.emulationstation/themes/$theme/wine]
+if [ ! -d /home/pi/.emulationstation/themes/$theme/wine]
 then wget HURSTY LOGOS WINE
 else skip
 fi
 #---MUGEN---#
-if [ -d /home/pi/.emulationstation/themes/$theme/model3] then wget HURSTY LOGOS MUGEN
+if [ ! -d /home/pi/.emulationstation/themes/$theme/model3] then wget HURSTY LOGOS MUGEN
 else skip
 fi
 #--ATOMISWAVE--#
-if [ -d /home/pi/.emulationstation/themes/$theme/atomiswave]
+if [ ! -d /home/pi/.emulationstation/themes/$theme/atomiswave]
 then wget HURSTY LOGOS ATOMISWAVE
 else skip
 fi
