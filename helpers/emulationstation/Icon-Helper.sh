@@ -2,15 +2,15 @@ function icons-menu() {
     local choice
 
     while true; do
-        choice=$(dialog --backtitle "$BACKTITLE" --title "COLLECTIONS MEMU" \
+        choice=$(dialog --backtitle "$BACKTITLE" --title "ICON HELPER v1.0" \
             --ok-label Select --cancel-label Back \
-            --menu "COLLECTIONS MAKER MENU" 25 40 40 \
+            --menu "ICON HELPER MENU" 25 40 40 \
             1 "How To Use This ???" \
             2 "List Installed ES Themes " \
             + "-------CHOOSE ICON SET------" \
-            3 "Chromey Icons------Hursty " \
-            4 "Set2 Icons-----COMING SOON " \
-            5 "Set3 Icons-----COMING SOON " \
+            3 "Chromey Icons---------Hursty" \
+            4 "Set2 Icons-------COMING SOON" \
+            5 "Set3 Icons-------COMING SOON" \
             + "------PREVIEW ICONS---------" \
             6 "Preview Chromey Icons " \
             7 "Preview Set 2 Icons " \
