@@ -17,7 +17,7 @@ local choice
       5 "Pick & Choose Ports" \
       6 "Aimtrack Setup " \
       7 "--------------- " \
-      8 "Update Testers Menu"
+      8 "Update Testers Menu" \
       2>&1 >/dev/tty)
 
     case "$choice" in
