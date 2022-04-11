@@ -197,10 +197,10 @@ fi
 }
 
 function msu1-pack() {
-if [ ! -d "$HOME"/RetroPie/roms/msu1/ ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+if [ ! -d "$HOME"/RetroPie/roms/snesmsu1/ ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "Please Run MSU1 Setup First" 6 40;
 else
 clear
-wget -m -r -np -nH -nd -R "index.html" "${HOST7}"/ -P "$HOME"/RetroPie/roms/msu1 -erobots=off
+wget -m -r -np -nH -nd -R "index.html" "${HOST7}"/ -P "$HOME"/RetroPie/roms/snesmsu1 -erobots=off
 rm -f "$HOME"/RetroPie/roms/msu1/index.html.tmp
 fi
 }
