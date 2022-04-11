@@ -71,7 +71,7 @@ UNLIKELY. PLEASE USE SCRAPPER" 0 0
       30 "Mastersystem Artwork     [*]box  [*]cart  [*]snap  [*]wheel" \
       31 "Megadrive Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
       32 "Megadrive-Japan Artwork  [*]box  [*]cart  [*]snap  [*]wheel" \
-      33 "Model 3 Artwork           [ ]box  [ ]cart  [*]snap  [ ]wheel" \
+      33 "Model 3 Artwork          [ ]box  [ ]cart  [*]snap  [ ]wheel" \
       34 "MSX Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
       35 "MSX2 Artwork             [*]box  [*]cart  [*]snap  [*]wheel" \
       36 "N64 Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
