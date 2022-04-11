@@ -30,6 +30,10 @@ Please add the following
     <command>/opt/retropie/supplementary/runcommand/runcommand.sh 0 _SYS_ snesmsu1 %ROM%</command>
     <platform>snes</platform>
     <theme>snesmsu1</theme>
-  </system>" 0 0
+  </system>
+  
+ADDITIONAL WHEN YOU FIRST FIRST MSU1 GAME 
+- Open Up RetroPie Runcommand by pressing while game loads 
+- Set Default Emu for ALL MSU1 to LR-SNES9X" 0 0
 fi
 
