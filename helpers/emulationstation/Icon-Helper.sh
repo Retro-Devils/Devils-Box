@@ -139,13 +139,19 @@ read theme
 echo "Searching For Common Missing Icons Now "
 sleep 2 
 #---MODEL 3----#
-if [ ! -d /home/pi/.emulationstation/themes/$theme/model3] then 
+if [ ! -d /home/pi/.emulationstation/themes/$theme/model3]
+then
+mkdir /home/pi/.emulationstation/themes/$theme/model3
+cd "$HOME"/.emulationstation/themes/$theme/model3
 wget HURSTY LOGOS MODEL 3
 else skip 
 fi 
 #---WINE---#
 if [ ! -d /home/pi/.emulationstation/themes/$theme/wine]
-then wget HURSTY LOGOS WINE
+then
+mkdir "$HOME"/.emulationstation/themes/$theme/wine
+cd "$HOME"/.emulationstation/themes/$theme/wine
+wget HURSTY LOGOS WINE
 else skip
 fi
 #---MUGEN---#
