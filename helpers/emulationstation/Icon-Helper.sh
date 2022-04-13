@@ -113,13 +113,20 @@ read theme
 echo "Searching For Common Missing Icons Now "
 sleep 2 
 #---MODEL 3----#
-if [ ! -d /home/pi/.emulationstation/themes/$theme/model3] then 
-wget HURSTY LOGOS MODEL 3
+if [ ! -d "$HOME"/.emulationstation/themes/$theme/model3 ] then
+mkdir "$HOME"/.emulationstation/$theme/model3/_inc
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/model3/_inc/system.png
+cd "$HOME"/.emulationstation/$theme/model3
+wget https://github.com/Retro-Devils/Devils-Themes/blob/main/Devil-Chromey/model3/theme.xml
+cd
 else skip 
 fi 
 #---WINE---#
-if [ ! -d /home/pi/.emulationstation/themes/$theme/wine]
-then wget HURSTY LOGOS WINE
+if [ ! -d /home/pi/.emulationstation/themes/$theme/wine] then
+mkdir "$HOME"/.emulationstation/$theme/wine/_inc
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/wine/_inc/system.png
+cd "$HOME"/.emulationstation/$theme/wine
+wget 
 else skip
 fi
 #---MUGEN---#
