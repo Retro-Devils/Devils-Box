@@ -76,6 +76,8 @@ cd "/home/pi/.emulationstation/themes/"
 echo "Please type theme name and press Enter"
 read theme
 cd ~/$theme
+if [ -d "$HOME"/.emulationstation/themes/$theme/$1 ] 
+then
 mkdir ~/"${1}"
 cd ~/"${1}"
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/"${1}"/_inc/system.png -P /home/pi/.emulationstation/themes/$theme/"${1}"
@@ -89,6 +91,10 @@ TO SEE COLLECTIONS IN ES PLEASE
 -COLLECTIONS
 -GENERATE COLLECTION FROM THEME
 YOU SHOULD SEE ADDED COLLECTIONS THIER" 0 0
+else
+dialog --sleep 1 --title "COLLECTIONS ALREADY EXSIST" --msgbox"
+COLLECTION ALREADY EXSIST
+- CANT GENERATE A COLLECTION THAT EXSIST" 0 0
 }
 
 function ibad-logos() {
