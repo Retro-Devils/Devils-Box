@@ -130,7 +130,11 @@ wget
 else skip
 fi
 #---MUGEN---#
-if [ ! -d /home/pi/.emulationstation/themes/$theme/mugens ] then wget HURSTY LOGOS MUGEN
+if [ ! -d /home/pi/.emulationstation/themes/$theme/mugens ] then
+mkdir "$HOME"/.emulationstation/$theme/mugens
+wget
+cd "$HOME"/.emulationstation/$theme/mugens
+wget
 else skip
 fi
 #--ATOMISWAVE--#
@@ -138,12 +142,6 @@ if [ ! -d /home/pi/.emulationstation/themes/$theme/atomiswave]
 then wget HURSTY LOGOS ATOMISWAVE
 else skip
 fi
-#--ATOMISWAVE--#
-if [ ! -d /home/pi/.emulationstation/themes/$theme/at]
-then wget HURSTY LOGOS ATOMISWAVE
-else skip
-fi
-
 }
 
 function set2-icons() {
