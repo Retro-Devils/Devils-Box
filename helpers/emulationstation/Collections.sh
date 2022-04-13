@@ -4,7 +4,7 @@ dialog --sleep 1 --title "COLLECTIONS MENU" --msgbox"
 ------YOU WILL NEED A KEYBOARD------
 ---THIS MAKES COLLECTIONS FOR YOU---" 0 0
 
-function collections-menu() {
+function collections_menu() {
     local choice
 
     while true; do
@@ -127,4 +127,4 @@ COLLECTION ALREADY EXSIST
 fi
 }
 
-collections-menu
+collections_menu
