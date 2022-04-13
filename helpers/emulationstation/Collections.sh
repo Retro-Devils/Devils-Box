@@ -49,31 +49,26 @@ ls
 read -n 1 -s -r -p "Above Is A List Of Installed Themes-----Press any key to Continue"
 }
 
-function pick() { 
-       local choice
-   whiptail --clear --title "PICK COLLECTIONS MENU" --separate-output --checklist "Choose Collection(s) and click Download:" 0 0 0 \
-      --ok-button Download --cancel-button Back \
-               "+" "---Hurstys Chromey Wheel---" off \
-               "1" "Battletoads Collection" off \
-               "2" "Capcom Collection" off \
-               "3" "Fighters  Collection" off \
-               "4" "Shooters Collection" off \
-               "+" "----Devils Neon I.B.A.D----" off \
-               "5" "Shooters Collection" off \
-                2>/tmp/results
-    while read -r choice
-        do
-        case $choice in
-           +) none ;;
-           1) hursty-logos "battletoads" ;;
-           2) hursty-logos "capcom" ;;
-           3) hursty-logos "fighters" ;;
-           4) hursty-logos "shooters" ;;
-           +) no ;;
-           5) ibad-logos "shooters" ;;
-           *) ;;
+        
+function pick() {
+local choice
+
+    while true; do
+        choice=$(dialog --backtitle "$BACKTITLE" --title "COLLECTIONS HELPER V1.0" \
+            --ok-label Select --cancel-label Back \
+            --menu "COLLECTIONS HELPER MENU" 25 40 40 \
+            + "Hurstys Collections" \
+            1 "Battletoads Collection " \
+            2 "Fighters Collection " \
+            2>&1 > /dev/tty)
+
+        case "$choice" in
+            +) none  ;;
+            1) hursty-logos "battletoads" ;;
+            2) hursty-logos "fighters" ;;
+            *) break ;;
         esac
-        done < /tmp/results
+    done
 }
 
 function hursty-logos() {
