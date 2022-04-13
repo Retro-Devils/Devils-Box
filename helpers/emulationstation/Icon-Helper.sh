@@ -92,7 +92,7 @@ sudo rm -R "$HOME"/temp/icons-preview
 }
 
 function preview-set³() {
-mkdir $HOME"/temp/icons-preview
+mkdir "$HOME"/temp/icons-preview
 cd "$HOME"/temp/icons-preview
 echo "Getting Previews Now"
 sleep 2
@@ -196,12 +196,14 @@ then wget HURSTY LOGOS WINE
 else skip
 fi
 #---MUGEN---#
-if [ ! -d /home/pi/.emulationstation/themes/$theme/model3] then wget HURSTY LOGOS MUGEN
+if [ ! -d /home/pi/.emulationstation/themes/$theme/model3 ] then wget HURSTY LOGOS MUGEN
 else skip
 fi
 #--ATOMISWAVE--#
-if [ ! -d /home/pi/.emulationstation/themes/$theme/atomiswave]
+if [ ! -d /home/pi/.emulationstation/themes/$theme/atomiswave ]
 then wget HURSTY LOGOS ATOMISWAVE
 else skip
 fi
 }
+
+icons-menu
