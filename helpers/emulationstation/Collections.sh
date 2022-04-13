@@ -19,7 +19,7 @@ function collections_menu() {
         case "$choice" in
             1) how-to ;;
             2) list-themes ;;
-            3) pick ;;
+            3) pick-collections ;;
             *) break ;;
         esac
     done
@@ -50,8 +50,8 @@ read -n 1 -s -r -p "Above Is A List Of Installed Themes-----Press any key to Con
 }
 
         
-function pick() {
-local choice
+function pick-collections() {
+    local choice
 
     while true; do
         choice=$(dialog --backtitle "$BACKTITLE" --title "COLLECTIONS HELPER V1.0" \
@@ -70,7 +70,6 @@ local choice
         esac
     done
 }
-
 function hursty-logos() {
 cd "/home/pi/.emulationstation/themes/"
 echo "Please type theme name and press Enter"
