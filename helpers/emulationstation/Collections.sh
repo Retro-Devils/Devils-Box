@@ -57,14 +57,14 @@ local choice
         choice=$(dialog --backtitle "$BACKTITLE" --title "COLLECTIONS HELPER V1.0" \
             --ok-label Select --cancel-label Back \
             --menu "COLLECTIONS HELPER MENU" 25 40 40 \
-            + "Hurstys Collections" \
-            1 "Battletoads Collection " \
+            + "----Hurstys Collections----" \
+            1 "BeatEmUps Collection " \
             2 "Fighters Collection " \
             2>&1 > /dev/tty)
 
         case "$choice" in
             +) none  ;;
-            1) hursty-logos "battletoads" ;;
+            1) hursty-logos "beatemups" ;;
             2) hursty-logos "fighters" ;;
             *) break ;;
         esac
@@ -95,6 +95,7 @@ else
 dialog --sleep 1 --title "COLLECTIONS ALREADY EXSIST" --msgbox"
 COLLECTION ALREADY EXSIST
 - CANT GENERATE A COLLECTION THAT EXSIST" 0 0
+fi
 }
 
 function ibad-logos() {
@@ -102,6 +103,8 @@ cd "/home/pi/.emulationstation/themes/"
 echo "Please type theme name and press Enter"
 read theme
 cd ~/$theme
+if [ -d "$HOME"/.emulationstation/themes/$theme/$1 ] 
+then
 mkdir ~/"${1}"
 cd ~/"${1}"
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/NEON-IBAD/"${1}"/_inc/system.png -P /home/pi/.emulationstation/themes/$theme/"${1}"
@@ -117,6 +120,11 @@ TO SEE COLLECTION IN ES PLEASE
 -COLLECTIONS 
 -GENERATE COLLECTION FROM THEME
 YOU SHOULD SEE ADDED COLLECTIONS THIER" 0 0
+else
+dialog --sleep 1 --title "COLLECTIONS ALREADY EXSIST" --msgbox"
+COLLECTION ALREADY EXSIST
+- CANT GENERATE A COLLECTION THAT EXSIST" 0 0
+fi
 }
 
 collections-menu
