@@ -64,17 +64,17 @@ read -n 1 -s -r -p "Above Is A List Of Installed Themes-----Press any key to Con
 
 function preview-chromey() {
 sudo apt-get install fbi
-mkdir $HOME"/temp/icons-preview
+mkdir "$HOME"/temp/icons-preview
 cd "$HOME"/temp/icons-preview
 echo "Getting Previews Now"
 sleep 2
-wget HURSTY ICON GAMEBOY -f $HOME"/temp/icons-preview/gameboy.png 
-wget HURSTY ICON ATARI7800 -f $HOME"/temp/icons-preview/atari7800.png
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/gb/_inc/system.png -f "$HOME"/temp/icons-preview/gameboy.png 
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/asteroids/_inc/system.png -f "$HOME"/temp/icons-preview/atari7800.png
 echo "Displaying Icons Now "
 sleep 3
-fbi $HOME"/temp/icons-preview/atari7800.png
-fbi $HOME"/temp/icons-preview/gameboy.png
-sudo rm -R $HOME"/temp/icons-preview
+fbi ~/atari7800.png
+fbi ~/gameboy.png
+sudo rm -R "$HOME"/temp/icons-preview
 }
 
 function preview-set2() {
@@ -86,9 +86,9 @@ wget HURSTY ICON GAMEBOY -f $HOME"/temp/icons-preview/gameboy.png
 wget HURSTY ICON ATARI7800 -f $HOME"/temp/icons-preview/atari7800.png
 echo "Displaying Icons Now "
 sleep 3
-view $HOME"/temp/icons-preview/atari7800.png
-view $HOME"/temp/icons-preview/gameboy.png
-sudo rm -R $HOME"/temp/icons-preview
+view "$HOME"/temp/icons-preview/atari7800.png
+view "$HOME"/temp/icons-preview/gameboy.png
+sudo rm -R "$HOME"/temp/icons-preview
 }
 
 function preview-set³() {
@@ -96,13 +96,13 @@ mkdir $HOME"/temp/icons-preview
 cd "$HOME"/temp/icons-preview
 echo "Getting Previews Now"
 sleep 2
-wget HURSTY ICON GAMEBOY -f $HOME"/temp/icons-preview/gameboy.png 
-wget HURSTY ICON ATARI7800 -f $HOME"/temp/icons-preview/atari7800.png
+wget HURSTY ICON GAMEBOY -f "$HOME"/temp/icons-preview/gameboy.png 
+wget HURSTY ICON ATARI7800 -f "$HOME"/temp/icons-preview/atari7800.png
 echo "Displaying Icons Now "
 sleep 3
-view $HOME"/temp/icons-preview/atari7800.png
-view $HOME"/temp/icons-preview/gameboy.png
-sudo rm -R $HOME"/temp/icons-preview
+view "$HOME"/temp/icons-preview/atari7800.png
+view "$HOME"/temp/icons-preview/gameboy.png
+sudo rm -R "$HOME"/temp/icons-preview
 }
 
 
