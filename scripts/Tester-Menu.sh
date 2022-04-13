@@ -12,7 +12,7 @@ local choice
       1 "Collections Helper " \
       2 "Loading Images " \
       3 "Loading Videos  " \
-      4 "--------------- " \
+      4 "Icon Helper " \
       + "--UNFINISHED/NOT WORKING--" \
       5 "Pick & Choose Ports" \
       6 "Aimtrack Setup " \
@@ -25,7 +25,7 @@ local choice
     1) bash "$HOME"/Devils-Box/helpers/emulationstation/Collections.sh ;;
     2) bash "$HOME"/Devils-Box/scripts/Launch-Images.sh ;;
     3) bash "$HOME"/Devils-Box/scripts/Launch-Videos.sh ;;
-    4) no ;;
+    4) bash "$HOME"/Devils-Box/helpers/emulationstation/Icon-Helper.sh ;;
     +) none ;;
     5) ports ;;
     6) bash "$HOME"/Devils-Box/scripts/Aimtrack.sh ;;
