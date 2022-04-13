@@ -123,7 +123,7 @@ then wget HURSTY LOGOS WINE
 else skip
 fi
 #---MUGEN---#
-if [ ! -d /home/pi/.emulationstation/themes/$theme/model3] then wget HURSTY LOGOS MUGEN
+if [ ! -d /home/pi/.emulationstation/themes/$theme/mugens ] then wget HURSTY LOGOS MUGEN
 else skip
 fi
 #--ATOMISWAVE--#
@@ -131,6 +131,12 @@ if [ ! -d /home/pi/.emulationstation/themes/$theme/atomiswave]
 then wget HURSTY LOGOS ATOMISWAVE
 else skip
 fi
+#--ATOMISWAVE--#
+if [ ! -d /home/pi/.emulationstation/themes/$theme/at]
+then wget HURSTY LOGOS ATOMISWAVE
+else skip
+fi
+
 }
 
 function set2-icons() {
