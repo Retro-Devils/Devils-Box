@@ -115,32 +115,41 @@ sleep 2
 #---MODEL 3----#
 if [ ! -d "$HOME"/.emulationstation/themes/$theme/model3 ] then
 mkdir "$HOME"/.emulationstation/$theme/model3/_inc
+cd "$HOME"/.emulationstation/themes/model3/_inc/
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/model3/_inc/system.png
 cd "$HOME"/.emulationstation/$theme/model3
-wget https://github.com/Retro-Devils/Devils-Themes/blob/main/Devil-Chromey/model3/theme.xml
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/model3/theme.xml
 cd
-else skip 
+else echo "MODEL 3 PRESENT ALREADY"
 fi 
 #---WINE---#
-if [ ! -d /home/pi/.emulationstation/themes/$theme/wine] then
+if [ ! -d /home/pi/.emulationstation/themes/$theme/wine ] then
 mkdir "$HOME"/.emulationstation/$theme/wine/_inc
+cd "$HOME"/.emulationstation/$theme/wine/_inc
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/wine/_inc/system.png
 cd "$HOME"/.emulationstation/$theme/wine
-wget 
-else skip
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/wine/theme.xml
+cd
+else echo "WINE PRESENT ALREADY"
 fi
 #---MUGEN---#
 if [ ! -d /home/pi/.emulationstation/themes/$theme/mugens ] then
-mkdir "$HOME"/.emulationstation/$theme/mugens
-wget
+mkdir "$HOME"/.emulationstation/$theme/mugens/_inc
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/mugens/_inc/system.png
 cd "$HOME"/.emulationstation/$theme/mugens
-wget
-else skip
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/mugens/theme.xml
+cd
+else echo "MUGENS PRESENT ALREADY"
 fi
 #--ATOMISWAVE--#
-if [ ! -d /home/pi/.emulationstation/themes/$theme/atomiswave]
-then wget HURSTY LOGOS ATOMISWAVE
-else skip
+if [ ! -d /home/pi/.emulationstation/themes/$theme/atomiswave ] then
+mkdir "$HOME"/.emulationstation/themes/$theme/atomiswave/_inc
+cd "$HOME"/.emulationstation/themes/$theme/atomiswave/_inc
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/atomiswave/_inc/system.png
+cd "$HOME"/.emulationstation/themes/$theme/atomiswave/
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Themes/main/Devil-Chromey/atomiswave/theme.xml
+cd
+else echo "ATOMISWAVE ALREADY PRESENT"
 fi
 }
 
