@@ -141,7 +141,7 @@ function comm_audio() {
       4 "Apply No Audio Fix--------------------------------Anonymous " \
       5 "Apply No Audio Fix 2----------------------The Pimoroni Crew " \
       6 "Install I.M.P-----------------------------------RapiEdwin08 " \
-      7 "Install T.A.M.P.O--------------------------------thepitster " \
+      7 "Install T.A.M.O. Plus----------------------------thepitster " \
       - "<-------------------->Information<------------------------> " \
       8 "I.M.P-------------Integrated Music Player------------------ " \
       9 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
@@ -156,21 +156,21 @@ function comm_audio() {
     4) no-audio ;;
     5) no-audio2 ;;
     6) imp ;;
-    7) tampo ;;
+    7) tamoplus ;;
     8) imp-info ;;
-    9) tampo-info ;;
+    9) tamoplus-info ;;
     *) break ;;
     esac
   done
 }
 
-function tampo() {
+function tamoplus() {
 if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
 Offline ... Not Availible Please Connect To Internet!" 0 0
 else
 clear
-curl -sSL https://git.io/JDfjg | bash
+curl -sSL https://t.ly/5Oqi | bash
 fi
 }
 function es-themes () {
@@ -249,13 +249,13 @@ cat /home/pi/Devils-Box/files/IMP/README.md
 read -n 1 -s -r -p "Press any key to Continue"
 fi
 }
-function tampo-info() {
+function tamoplus-info() {
 if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR" --msgbox " 
 Offline ... Not Availible Please Connect To Internet!" 0 0
 else
 clear
-cat /home/pi/Devils-Box/files/tampo/README.md
+cat /home/pi/Devils-Box/files/tamoplus/README.md
 read -n 1 -s -r -p "Press any key to Continue"
 fi
 }
