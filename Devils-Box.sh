@@ -672,7 +672,7 @@ function devils-game-tools() {
 
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "DEVILS GAME TOOLS MENU" \
-      --ok-label Install --cancel-label Back \
+      --ok-label Select --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A " 30 50 50 \
       1 "Game Fixes & Tools" \
       2 "Remove Game Packs" \
