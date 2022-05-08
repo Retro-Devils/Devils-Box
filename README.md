@@ -34,11 +34,11 @@
     
     ~ Remove Game Packs/Collections 
     
-## WHATS PI/DEVICE DOES THIS WORK ON ?
+## WHATS PI DOES THIS WORK ON ?
 
 Devils Box has been tested and works on PI ZERO, PI 3, PI4. *BUT MOST THINGS ARE FOR PI 4. see below*
 
-WORKS ON ALL PIS (with RetroPie installed)
+*WORKS ON ALL PIS (with RetroPie installed)*
   
   ~ Getting packs and indivaul "things & stuff" from web.
   
@@ -46,18 +46,17 @@ WORKS ON ALL PIS (with RetroPie installed)
   
   ~ Themes and stuff like that
   
-PI 4 ONLY 
+*PI 4 ONLY (with RetroPie installed)*
   
   ~ Most Tools 
   
   ~ Some Emus. Mugen/WINE and Model 3 for examples.
-  
-  ~ 
+
 Devils Box also (again in theory) works on any linux device that retropie is isntalled.
 
 We have tested on 3 seperate pcs with linux running on them. One pc didnt have Retropie at all. 
 
-## DOES THIS HAVE TO BE ON A DEVILS RETROPIE IMAGE?
+## DEVILS RETROPIE IMAGE ONLY?
 
 - NOPE. Built to work on as many as possible. Tested on the following
   
