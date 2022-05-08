@@ -385,6 +385,7 @@ move-image "retro-devils"  "wonderswancolor"
 move-image "retro-devils"  "zmachine"
 move-image "retro-devils"  "zxspectrum"
 sudo rm -R /home/pi/temp/images
+}
 
 function move-image(){
 mv /home/pi/temp/images/${theme}/${1}/launching.png -f opt/retropie/config/${1}/launching.png
