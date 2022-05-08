@@ -34,7 +34,44 @@
     
     ~ Remove Game Packs/Collections 
     
-    
+## WHATS PI/DEVICE DOES THIS WORK ON ?
+
+Devils Box has been tested and works on PI ZERO, PI 3, PI4. *BUT MOST THINGS ARE FOR PI 4. see below*
+
+WORKS ON ALL PIS (with RetroPie installed)
+  
+  ~ Getting packs and indivaul "things & stuff" from web.
+  
+  ~ Expand Memory
+  
+  ~ Themes and stuff like that
+  
+PI 4 ONLY 
+  
+  ~ Most Tools 
+  
+  ~ Some Emus. Mugen/WINE and Model 3 for examples.
+  
+  ~ 
+Devils Box also (again in theory) works on any linux device that retropie is isntalled.
+
+We have tested on 3 seperate pcs with linux running on them. One pc didnt have Retropie at all. 
+
+## DOES THIS HAVE TO BE ON A DEVILS RETROPIE IMAGE?
+
+- NOPE. Built to work on as many as possible. Tested on the following
+  
+  ~  Supreme Ultra------------------Some Tools cause slight issues, other than worked fine.
+  
+  ~ Virtual Man---------------------Some tools cause slight issues, other than that worked fine.
+  
+  ~ Diablos Arcade------------------Works Great.
+  
+  ~ Pleasure Paradise---------------Some tools cause slight issues, other than that woked fine.
+  
+  ~ Images with irregular retropie roms paths. UNLIKELY TO WORK WITH EDITS TO PATHS.
+  
+  
 ## UPDATES MONTHLY OR AS NEEDED 
 
 LAST UPDATE 
