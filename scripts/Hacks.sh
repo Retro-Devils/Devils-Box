@@ -33,12 +33,12 @@ WHATS THIS DO?
 
 F.A.Q
 WILL THIS OVERWRITE MY GAMES?
-NOPE 
+--NOPE 
  
 CAN I STOP MIDWAY THRU?
-SURE PRESS CONTROL+C
+--SURE PRESS CONTROL+C
 WILL IT KEEP MY PROGRESS?
-YES" 0 0
+--YES TO LAST DOWNLOADED GAME" 0 0
 local choice
 
   while true; do
@@ -52,7 +52,7 @@ local choice
       4 "Gamegear Hacks                           1MB      4 GAMES " \
       5 "NES Hacks                              962KB      6 GAMES " \
       6 "SNES Hacks                              40MB     37 GAMES " \
-      + "--------------------------------------------------------- " \
+      + "<->TOOLS------------------------------------------------- " \
       7 "Apply/Update Hacks Configs                      6 Configs " \
       8 "GET ES-SYSTEMS CONFIG                              1 File " \
       9 "PRESS HERE FOR HELP WITH HACKS DOWNLOADER" \
