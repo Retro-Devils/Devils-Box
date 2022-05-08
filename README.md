@@ -14,7 +14,7 @@
 
 - Functions
     
-    ~ Grabs packs of 'things and stuff'  from web to Pi. 
+    ~ Grabs packs of 'things & stuff'  from web to Pi. 
     
     ~ Grabs indivual 'thing & stuff' from web to Pi.
     
@@ -52,9 +52,9 @@ Devils Box has been tested and works on PI ZERO, PI 3, PI4. *BUT MOST THINGS ARE
   
   ~ Some Emus. Mugen/WINE and Model 3 for examples.
 
-Devils Box also (again in theory) works on any linux device that retropie is isntalled.
+*Devils Box also works on any linux device that retropie is isntalled. TO A EXTENT EXPERMINTAL AT BEST.*
 
-We have tested on 3 seperate pcs with linux running on them. One pc didnt have Retropie at all. 
+*We have tested on 3 seperate pcs with linux running on them. One pc didnt have Retropie at all. *
 
 ## DEVILS RETROPIE IMAGE ONLY?
 
