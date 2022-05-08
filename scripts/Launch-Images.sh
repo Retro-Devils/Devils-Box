@@ -29,7 +29,6 @@ while true; do
      *) break ;; 
      esac 
    done
-fi
 }
 function bttf() {
 mkdir /home/pi/temp/images
