@@ -2,10 +2,10 @@
 
 clear
 
-function tester-menu() {
-local choice 
+function testers() {
+local choice
 
-while true; do 
+  while true; do
   choice=$(dialog --backtitle "$BACKTITLE" --title "LAUNCHING IMAGES MENU" \ 
   --ok-button Download --cancel-button Back \ 
   --menu " PRESS A/ENTER TO DOWNLOAD & APPLY IMAGES" 30 70 50 \
