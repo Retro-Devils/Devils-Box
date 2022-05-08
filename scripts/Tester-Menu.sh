@@ -6,7 +6,7 @@ local choice
 
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "TESTERS & DEVILS MENU  " \
-     --ok-button Download --cancel-button Main-Menu \
+     --ok-button Select --cancel-button Back \
      --menu " TEST SOMETHING " 30 70 50 \
       + "--FINISHED OR CLOSE TO IT--" \
       1 "Collections Helper " \
