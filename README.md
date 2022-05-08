@@ -14,21 +14,26 @@
 
 - Functions
     
-    ~ Grabs 'things and stuff'  from web to Pi. 
+    ~ Grabs packs of 'things and stuff'  from web to Pi. 
     
-    ~ Community made installers.
+    ~ Grabs indivual 'thing & stuff' from web to Pi.
+    
+    ~ Community made/assembled emu installers.
 
-    ~ Custom made installers for Pi 4.
+    ~ Custom made/assembled emu installers for Pi 4.
     
     ~ Easy access to RetroPie Tools.
     
-    ~ Community Tools
+    ~ Community Tools like Pi Marquee, TAMO+, I.M.P, etc. 
     
-    ~ Custom Themes 
+    ~ Custom Made/Modified Themes 
     
     ~ Easy access to Hurstys Themes
     
-    ~ Community Themes
+    ~ Community Made/Modified Themes
+    
+    ~ Remove Game Packs/Collections 
+    
     
 ## UPDATES MONTHLY OR AS NEEDED 
 
