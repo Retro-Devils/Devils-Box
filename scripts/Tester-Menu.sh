@@ -10,27 +10,23 @@ local choice
      --menu " TEST SOMETHING " 30 70 50 \
       + "--FINISHED OR CLOSE TO IT--" \
       1 "Collections Helper " \
-      2 "Loading Images " \
-      3 "Loading Videos  " \
-      4 "Icon Helper " \
+      2 "Icon Helper " \
       + "--UNFINISHED/NOT WORKING--" \
-      5 "Pick & Choose Ports" \
-      6 "Aimtrack Setup " \
-      7 "--------------- " \
-      8 "Update Testers Menu" \
+      3 "Pick & Choose Ports" \
+      4 "Aimtrack Setup " \
+      + "--------------- " \
+      5 "Update Testers Menu" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     +) none ;;
     1) bash "$HOME"/Devils-Box/helpers/emulationstation/Collections.sh ;;
-    2) bash "$HOME"/Devils-Box/scripts/Launch-Images.sh ;;
-    3) bash "$HOME"/Devils-Box/scripts/Launch-Videos.sh ;;
-    4) bash "$HOME"/Devils-Box/helpers/emulationstation/Icon-Helper.sh ;;
+    2) bash "$HOME"/Devils-Box/helpers/emulationstation/Icon-Helper.sh ;;
     +) none ;;
-    5) ports ;;
-    6) bash "$HOME"/Devils-Box/scripts/Aimtrack.sh ;;
-    7) no ;;
-    8) update-test ;;
+    3) ports ;;
+    4) bash "$HOME"/Devils-Box/scripts/Aimtrack.sh ;;
+    +) no ;;
+    5) update-test ;;
     *) break ;;
     esac
   done
