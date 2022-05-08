@@ -6,7 +6,7 @@ local choice
 
   while true; do
   choice=$(dialog --backtitle "$BACKTITLE" --title " REMOVE PACKS MENU" \
-      --ok-label Remove --cancel-label Game Tools \
+      --ok-label Remove --cancel-label "Game Tools" \
       --menu "PRESS A/ENTER TO REMOVE PACK" 30 70 50 \
       1 "Remove Amiga" \
       2 "Remove AmigaCD32" \
