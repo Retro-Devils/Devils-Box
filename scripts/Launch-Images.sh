@@ -2,6 +2,7 @@
 
 clear
 
+function tester-menu() {
 local choice 
 
 while true; do 
