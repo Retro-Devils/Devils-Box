@@ -72,7 +72,7 @@ wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box/main/scripts/Test
 }
 
 echo
-read -p "PLEASE ENTER CODE" useranswer
+read -p "PLEASE ENTER CODE  " useranswer
 echo
 echo "YOU ENTERED ${useranswer} ..PROCESSING.. "
 sleep 2
