@@ -1,11 +1,11 @@
 #!/bin/bash
 
-echo " Creating Foldes"
+echo "Creating Foldes"
 sleep 3
 mkdir -p ~/RetroPie/roms/ports/gtavc
 mkdir -p ~/RetroPie/roms/ports/gtavc/GrandTheftAutoViceCity
 
-echo "Getting Files & Dependencies "
+echo "Getting Files & Dependencies"
 sleep 3
 cd ~/RetroPie/roms/ports/gtavc
 
