@@ -1206,24 +1206,25 @@ dialog  --sleep 1 --title "PC/DOS Downloader Help" --msgbox "
                "41" "Star Wars X Wing                         12MB" off \
                "42" "Street Rod 1                            689KB" off \
                "43" "Street Rod 2                            1.2MB" off \
-               "44" "Super Solvers - Midnight Rescue         630KB" off \
-               "45" "Super Solvers - Treasure Mountain       651KB" off \
-               "46" "Super-Solvers - Outnumbered             564KB" off \
-               "47" "Terep 1                                 149KB" off \
-               "48" "Test Drive 1                            288KB" off \
-               "49" "The Incredible Machine                  716KB" off \
-               "50" "The Incredible Machine 2                4.9MB" off \
-               "51" "The Lost Vikings                        1.6MB" off \
-               "52" "The Oregon Trail 2                      635KB" off \
-               "53" "The Oregon Trail 3                      3.8MB" off \
-               "54" "The Settlers                           35.8MB" off \
-               "55" "the Settlers 2                          642MB" off \
-               "56" "Tie Fighter                              13MB" off \
-               "57" "Volfied                                 717KB" off \
-               "58" "WarCraft - Orcs and Humans              7.6MB" off \
-               "59" "Warcraft 2                               45MB" off \
-               "60" "Where in the World Is Carmen San Diego  479KB" off \
-               "61" "Wolfeinstein 3D                         2.4MB" off \
+	       "44" "Sugar Rush Speedway                     4.3GB" oof \
+               "45" "Super Solvers - Midnight Rescue         630KB" off \
+               "46" "Super Solvers - Treasure Mountain       651KB" off \
+               "47" "Super-Solvers - Outnumbered             564KB" off \
+               "48" "Terep 1                                 149KB" off \
+               "49" "Test Drive 1                            288KB" off \
+               "50" "The Incredible Machine                  716KB" off \
+               "51" "The Incredible Machine 2                4.9MB" off \
+               "52" "The Lost Vikings                        1.6MB" off \
+               "53" "The Oregon Trail 2                      635KB" off \
+               "54" "The Oregon Trail 3                      3.8MB" off \
+               "55" "The Settlers                           35.8MB" off \
+               "56" "the Settlers 2                          642MB" off \
+               "57" "Tie Fighter                              13MB" off \
+               "58" "Volfied                                 717KB" off \
+               "59" "WarCraft - Orcs and Humans              7.6MB" off \
+               "60" "Warcraft 2                               45MB" off \
+               "61" "Where in the World Is Carmen San Diego  479KB" off \
+               "62" "Wolfeinstein 3D                         2.4MB" off \
                 2>/tmp/results
     while read -r choice  
         do
@@ -1272,24 +1273,25 @@ dialog  --sleep 1 --title "PC/DOS Downloader Help" --msgbox "
               41) download-pcgames "Retro-Devils_Star-Wars-X-Wing.zip.zip" ;;
               42) download-pcgames "Retro-Devils_Street-Rod.zip" ;;
               43) download-pcgames "Retro-Devils_Street-Rod-2.zip" ;;
-              44) download-pcgames "Retro-Devils_Super-Solvers-Midnight-Rescue.zip" ;;
-              45) download-pcgames "Retro-Devils_Super-Solvers-Outnumbered.zip" ;;
-              46) download-pcgames "Retro-Devils_Super-Solvers-Treasure--Mountain.zip" ;;
-              47) download-pcgames "Retro-Devils_Terep-1.zip" ;;
-              48) download-pcgames "Retro-Devils_Test-Drive-1.zip" ;;
-              49) download-pcgames "Retro-Devils_The-Incredible-Machine.zip" ;;
-              50) download-pcgames "Retro-Devils_The-Incredible-Machine-2.zip" ;;
-              51) download-pcgames "Retro-Devils_The-Lost-Vikings.zip" ;;
-              52) download-pcgames "Retro-Devils_The-Oregon-Trail-2.zip" ;;
-              53) download-pcgames "Retro-Devils_The-Oregon-Trail-3.zip" ;;
-              54) download-pcgames "Retro-Devils_TheSettlers.zip";;
-              55) download-pcgames "Retro-Devils_TheSettlers2.zip";;
-              56) download-pcgames "Retro-Devils_Tiefighter.zip" ;;
-              57) download-pcgames "Retro-Devils_Volfied.zip" ;;
-              58) download-pcgames "Retro-Devils_WarCraft-Orcs-and-Humans.zip" ;;
-              59) download-pcgames "Retro-Devils_WarCraft-2.zip" ;;
-              60) download-pcgames "Retro-Devils_Where-in-the-World-Is-Carmen-San-Diego.zip" ;;
-              61) download-pcgames "Retro-Devils_Wolfeinstein-3D" ;;
+	      44) download-pcgames "Retro-Devils_Sugar-Rush-Speedway" ;;
+              45) download-pcgames "Retro-Devils_Super-Solvers-Midnight-Rescue.zip" ;;
+              46) download-pcgames "Retro-Devils_Super-Solvers-Outnumbered.zip" ;;
+              47) download-pcgames "Retro-Devils_Super-Solvers-Treasure--Mountain.zip" ;;
+              48) download-pcgames "Retro-Devils_Terep-1.zip" ;;
+              49) download-pcgames "Retro-Devils_Test-Drive-1.zip" ;;
+              50) download-pcgames "Retro-Devils_The-Incredible-Machine.zip" ;;
+              51) download-pcgames "Retro-Devils_The-Incredible-Machine-2.zip" ;;
+              52) download-pcgames "Retro-Devils_The-Lost-Vikings.zip" ;;
+              53) download-pcgames "Retro-Devils_The-Oregon-Trail-2.zip" ;;
+              54) download-pcgames "Retro-Devils_The-Oregon-Trail-3.zip" ;;
+              55) download-pcgames "Retro-Devils_TheSettlers.zip";;
+              56) download-pcgames "Retro-Devils_TheSettlers2.zip";;
+              57) download-pcgames "Retro-Devils_Tiefighter.zip" ;;
+              58) download-pcgames "Retro-Devils_Volfied.zip" ;;
+              59) download-pcgames "Retro-Devils_WarCraft-Orcs-and-Humans.zip" ;;
+              60) download-pcgames "Retro-Devils_WarCraft-2.zip" ;;
+              61) download-pcgames "Retro-Devils_Where-in-the-World-Is-Carmen-San-Diego.zip" ;;
+              62) download-pcgames "Retro-Devils_Wolfeinstein-3D" ;;
                *) ;;
         esac
         done < /tmp/results
