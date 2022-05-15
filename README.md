@@ -81,4 +81,4 @@ Date--------5/7/22
 
 ## To Install/Update 
 
-curl -sSL https://git.io/JSDGq | bash 
+curl -sSL bit.ly/Install-Devils-Box | bash 
