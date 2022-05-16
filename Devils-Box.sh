@@ -574,19 +574,21 @@ function devils_visual_tools() {
       --menu "SELECT AUDIO/VISUAL TOOL AND PRESS A TO APPLY " 30 50 50 \
       + "<--->Visual Tools<---------> " \
       1 "Devils Themes " \
+      2 "O.P.P (Omx Player Pi) " \
       + "<--->Frontend Tools<-------> " \
-      2 "Frontend Switcheroo " \
+      3 "Frontend Switcheroo " \
       + "<--->Experimental Tools<---> " \
-      3 "Retro Scrapey " \
+      4 "Retro Scrapey " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     +) none ;;
     1) devil-themes ;;
+    2) opp ;;
     +) none ;;
-    2) fe_switch ;;
+    3) fe_switch ;;
     +) none ;;
-    3) retro_scrapey ;;
+    4) retro_scrapey ;;
     *) break ;;
     esac
   done
@@ -630,6 +632,10 @@ function neon-ibad() {
 wget https://archive.org/download/devils-themes/NEON-IBAD.zip -P ${HOME}/
 unzip -o "$HOME"/NEON-IBAD.zip -d /home/pi/.emulationstation/themes/
 sudo rm -R "$HOME"/NEON-IBAD.zip
+}
+
+function opp() { 
+curl -sSL bit.ly/Install-OPP | bash
 }
 
 ###  DEVILS EMU TOOLS MENU FUNCTIONS   ###
