@@ -52,10 +52,12 @@ local choice
       4 "Gamegear Hacks                           1MB      4 GAMES " \
       5 "NES Hacks                              962KB      6 GAMES " \
       6 "SNES Hacks                              40MB     37 GAMES " \
+      + "<->ALL IN ONE CLICK <------------------------------------>" \
+      7 "Apply Configs & Download All Hack Packs  " \
       + "<->TOOLS------------------------------------------------- " \
-      7 "Apply/Update Hacks Configs                      6 Configs " \
-      8 "GET ES-SYSTEMS CONFIG                              1 File " \
-      9 "PRESS HERE FOR HELP WITH HACKS DOWNLOADER" \
+      8 "Apply/Update Hacks Configs                      6 Configs " \
+      9 "GET ES-SYSTEMS CONFIG                              1 File " \
+     10 "PRESS HERE FOR HELP WITH HACKS DOWNLOADER" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -66,13 +68,23 @@ local choice
     4) download-hacks "ggh" ;;
     5) download-hacks "nesh" ;;
     6) download-hacks "snesh" ;;
-    7) hacks-config ;;
-    8) get-config ;;
-    9) help-me ;;
+    7) all ;;
+    8) hacks-config ;;
+    9) get-config ;;
+   10) help-me ;;
     *) break ;;
     esac
   done
 fi
+}
+
+function all() {
+hacks-config
+download hacks "gba"
+download hacks "gbah"
+download hacks "snesh"
+download hacks "genh"
+download-hacks "ggh" 
 }
 
 function hacks-config() {
