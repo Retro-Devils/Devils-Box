@@ -335,20 +335,65 @@ function comm_hardware_tools() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " HARDWARE TOOLS MENU " \
       --ok-label Select --cancel-label Back \
       --menu "SELECT TOOL PRESS TO APPLY/INSTALL" 20 50 30 \
-      1 "Cases Tools Menu        " \
-      2 "Clear Controller Config " \
-      3 "Setup Extended HDD      " \
-      4 "Remove Extended HDD     " \
+      1 "Cases Tools Menu                " \
+      2 "Clear Controller Config         " \
+      3 "OneForAll------------Helder1981 " \
+      4 "Setup Extended HDD              " \
+      5 "Remove Extended HDD             " \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) cases ;;
     2) clear_controller ;;
-    3) hdd-in ;;
-    4) hdd-out ;; 
+    3) oneforall ;;
+    4) hdd-in ;;
+    5) hdd-out ;; 
     *) break ;;
     esac
   done
+}
+
+# ONEFORALL #
+
+function oneforall() {
+  local choice
+
+  while true; do
+    choice=$(dialog --backtitle "$BACKTITLE" --title " ONEFORALL MENU " \
+      --ok-label Select --cancel-label Back \
+      --menu "SELECT OPTION" 20 50 30 \
+      1 "OneForALL INFO " \
+      2 "OneForALL INSTALLER  " \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) oneforall-info ;;
+    2) oneforall-install ;;
+    *) break ;;
+    esac
+  done
+}
+
+function oneforall-info
+dialog  --sleep 1 --title "ONE FOR ALL INFO" --msgbox " 
+All in one software for the Retro PSU and other handheld projects.
+
+This OSD (on screen display) is designed to be fast and informative, it uses low level gpu system calls as well as signals and interrupts to keep the resources consuption low. The software is intendeed for mobile application as it features:
+
+Battery meter.
+Wifi connectivity indicator. Can be toggled On/Off.
+Bluetooth connectivity indicator. Can be toggled On/Off.
+Analog Stick. Can be toggled On/Off.
+Built In GPIO Controls (no need for RetroGame from Adafruit, edit the keys.cfg).
+Control Volume with Button Combo.
+Overlay that shows all hotkey combinations."
+fi
+}
+
+function oneforall-install
+git clone --recursive https://github.com/Helder1981/OneForAll.git
+sudo chmod 755 /home/pi/OneForAll/install.sh
+sudo /home/pi/OneForAll/./install.sh
 }
 
 #   CLEAR CONTROLLER FUNCTION     #
