@@ -13,7 +13,6 @@ local choice
       2 "Icon Helper " \
       + "--UNFINISHED/NOT WORKING--" \
       3 "Pick & Choose Ports" \
-      4 "Aimtrack Setup " \
       + "--------------- " \
       5 "Update Testers Menu" \
       2>&1 >/dev/tty)
@@ -24,7 +23,6 @@ local choice
     2) bash "$HOME"/Devils-Box/helpers/emulationstation/Icon-Helper.sh ;;
     +) none ;;
     3) ports ;;
-    4) bash "$HOME"/Devils-Box/scripts/Aimtrack.sh ;;
     +) no ;;
     5) update-test ;;
     *) break ;;
