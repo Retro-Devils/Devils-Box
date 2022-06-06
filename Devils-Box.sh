@@ -335,22 +335,45 @@ function comm_hardware_tools() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " HARDWARE TOOLS MENU " \
       --ok-label Select --cancel-label Back \
       --menu "SELECT TOOL PRESS TO APPLY/INSTALL" 20 50 30 \
-      1 "Cases Tools Menu                " \
-      2 "Clear Controller Config         " \
-      3 "OneForAll------------Helder1981 " \
-      4 "Setup Extended HDD              " \
-      5 "Remove Extended HDD             " \
+      1 "Cases Tools Menu" \
+      2 "Clear Controller Config" \
+      3 "Handheld Tools Menu" \
+      4 "Setup Extended HDD" \
+      5 "Remove Extended HDD" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) cases ;;
     2) clear_controller ;;
-    3) oneforall ;;
+    3) handhelds ::
     4) hdd-in ;;
     5) hdd-out ;; 
     *) break ;;
     esac
   done
+}
+
+function handhelds() {
+if [ $NETCHECK -eq 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+OFFLINE!!!
+Offline ... Downloads Not Availible Please Connect To Internet!" 0 0
+else
+  local choice
+
+  while true; do
+    choice=$(dialog --backtitle "$BACKTITLE" --title " HANDHELDS TOOLS MENU " \
+      --ok-label Select --cancel-label Back \
+      --menu "SELECT TOOL PRESS TO APPLY/INSTALL " 20 50 30 \
+      1 "OneForAll---------Helder1981" \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) oneforall ;;
+    *) break ;;
+    esac
+  done
+fi
 }
 
 # ONEFORALL #
