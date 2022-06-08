@@ -345,7 +345,7 @@ function comm_hardware_tools() {
     case "$choice" in
     1) cases ;;
     2) clear_controller ;;
-    3) handhelds ::
+    3) handhelds ;;
     4) hdd-in ;;
     5) hdd-out ;; 
     *) break ;;
@@ -397,7 +397,7 @@ function oneforall() {
   done
 }
 
-function oneforall-info
+function oneforall-info() {
 dialog  --sleep 1 --title "ONE FOR ALL INFO" --msgbox " 
 All in one software for the Retro PSU and other handheld projects.
 
@@ -410,10 +410,9 @@ Analog Stick. Can be toggled On/Off.
 Built In GPIO Controls (no need for RetroGame from Adafruit, edit the keys.cfg).
 Control Volume with Button Combo.
 Overlay that shows all hotkey combinations."
-fi
 }
 
-function oneforall-install
+function oneforall-install() {
 git clone --recursive https://github.com/Helder1981/OneForAll.git
 sudo chmod 755 /home/pi/OneForAll/install.sh
 sudo /home/pi/OneForAll/./install.sh
