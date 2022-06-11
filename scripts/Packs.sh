@@ -158,7 +158,7 @@ else
     53) download-packs "snes" ;;
     54) msu1-pack ;;
     55) download-packs "supergrafx" ;;
-    56) download-packs "tg16" ;;
+    56) tg16-fix ;;
     57) download-packs "vectrex" ;;
     58) download-packs "videopac" ;;
     59) download-packs "virtualboy" ;;
@@ -204,7 +204,14 @@ wget -m -r -np -nH -nd -R "index.html" "${HOST7}"/ -P "$HOME"/RetroPie/roms/snes
 rm -f "$HOME"/RetroPie/roms/msu1/index.html.tmp
 fi
 }
-
+function tg16-fix() {
+if [ ! -d "$HOME"/RetroPie/roms/pcengine/ ]; then dialog  --sleep 1 --title "EMU FOLDER MISSING!" --msgbox "Please Install It's Emulator Firstt" 6 40;
+else
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/ -P "$HOME"/RetroPie/roms/pcengine -erobots=off
+rm -f "$HOME"/RetroPie/roms/pcengine/index.html.tmp
+fi
+}
 function download-packs() {
 if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
 else
