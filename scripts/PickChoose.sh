@@ -1320,7 +1320,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "+" "GAME NAME                          FILE SIZE" off \
                 "1" "Age Of Empires                         215MB" off \
                 "2" "Age Of Empires 2                       6.1GB" off \
-                "3" "Angry Birds                              91MB" off \
+                "3" "Angry Birds                             91MB" off \
                 "4" "Angry Birds Seasons                    180MB" off \
                 "5" "Angry Birds Star Wars 2                110MB" off \
                 "6" "Command & Conquer Generals+Zero Hour   2.7GB" off \
