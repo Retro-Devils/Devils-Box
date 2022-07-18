@@ -90,7 +90,7 @@ else
       53 "SNES                             508MB      603 GAMES" \
       54 "SNES MSU1                         ??MB       ?? GAMES" \
       55 "SuperGraffiix                    2.4MB        5 GAMES" \
-      56 "Turbo Graffix 16                  20MB       94 GAMES" \
+      56 "Turbo Graffix 16/PC Engine        20MB       94 GAMES" \
       57 "Vectrex                          201KB       20 GAMES" \
       58 "VideoPAC                         430KB       99 GAMES" \
       59 "Virtual Boy                        8MB       24 GAMES" \
@@ -208,7 +208,7 @@ function tg16-fix() {
 if [ ! -d "$HOME"/RetroPie/roms/pcengine/ ]; then dialog  --sleep 1 --title "EMU FOLDER MISSING!" --msgbox "Please Install It's Emulator Firstt" 6 40;
 else
 clear
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/ -P "$HOME"/RetroPie/roms/pcengine -erobots=off
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/tg16 -P "$HOME"/RetroPie/roms/pcengine -erobots=off
 rm -f "$HOME"/RetroPie/roms/pcengine/index.html.tmp
 fi
 }
