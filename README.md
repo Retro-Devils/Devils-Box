@@ -75,9 +75,9 @@ Devils Box has been tested and works on PI ZERO, PI 3, PI4. *BUT MOST THINGS ARE
 
 LAST UPDATE 
 
-Version-----3.08
+Version-----3.09
 
-Date--------7/20/22
+Date--------8/1/22
 
 ## To Install/Update 
 
