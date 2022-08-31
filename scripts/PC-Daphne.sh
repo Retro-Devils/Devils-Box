@@ -95,26 +95,5 @@ clear
 fi
 }
 
-function actionmax() {
-if [ ! -d "$HOME/RetroPie/roms/daphne/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
-else
-clear
-  wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/singev1-actionmax/actionmax_hypseus.zip -P "$HOME"/RetroPie/roms/daphne/temp -erobots=off
-  unzip -o "$HOME"/RetroPie/roms/daphne/temp/actionmax_hypseus.zip -d "$HOME"/RetroPie/roms/daphne/
-  sudo rm -r "$HOME"/RetroPie/roms/daphne/temp
-fi
-}
-
-function actionmax() {
-if [ ! -d "$HOME/RetroPie/roms/daphne/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
-else
-clear
-  wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/singev1-actionmax/actionmax_hypseus.zip -P "$HOME"/RetroPie/roms/daphne/temp -erobots=off
-  unzip -o "$HOME"/RetroPie/roms/daphne/temp/actionmax_hypseus.zip -d "$HOME"/RetroPie/roms/daphne/
-  sudo rm -r "$HOME"/RetroPie/roms/daphne/temp
-fi
-}
-
-
 
 daphne_menu
