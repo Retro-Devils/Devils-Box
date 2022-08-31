@@ -11,8 +11,9 @@ local choice
       + "--FINISHED OR CLOSE TO IT--" \
       1 "Collections Helper " \
       2 "Icon Helper " \
+      3 "Pick Choose Daphne " \
       + "--UNFINISHED/NOT WORKING--" \
-      3 "Pick & Choose Ports" \
+      4 "Pick & Choose Ports" \
       + "--------------- " \
       5 "Update Testers Menu" \
       2>&1 >/dev/tty)
@@ -21,8 +22,9 @@ local choice
     +) none ;;
     1) bash "$HOME"/Devils-Box/helpers/emulationstation/Collections.sh ;;
     2) bash "$HOME"/Devils-Box/helpers/emulationstation/Icon-Helper.sh ;;
+    3) bash "$HOME"/Devils-Box/scripts/PC-Daphne.sh ;;
     +) none ;;
-    3) ports ;;
+    4) ports ;;
     +) no ;;
     5) update-test ;;
     *) break ;;
