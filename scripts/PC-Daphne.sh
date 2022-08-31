@@ -13,6 +13,7 @@ HOST6="https://archive.org/download/PSP_US_Arquivista"
 HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0" 
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
+D_HOST="https://ia801007.us.archive.org/view_archive.php?archive=/6/items/daphneforretropiepart1of2/Daphne%20for%20Retropie%20-%20Part%201%20of%202.rar"
 
 
 
@@ -34,8 +35,8 @@ local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title "DAPHNE PICK & CHOOSE MENU" \
       --ok-label Select --cancel-label Main-Menu \
       --menu "PICK & DOWNLOAD A GAME " 20 50 30 \
-      1 "ActionMax-----------3.4-GB--" \
-      2 "Altered Carbon------2.3-GB--" \
+      1 "Astron" \
+      2 "Cliff" \
       3 "HOLD" \
       4 "HOLD" \
       5 "HOLD" \
@@ -73,25 +74,13 @@ local choice
 fi
 }
 
-function actionmax() {
+function astron() {
 if [ ! -d "$HOME/RetroPie/roms/daphne/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
 else
 clear
-  wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/singev1-actionmax/actionmax_hypseus.zip -P "$HOME"/RetroPie/roms/daphne/temp -erobots=off
-  unzip -o "$HOME"/RetroPie/roms/daphne/temp/actionmax_hypseus.zip -d "$HOME"/RetroPie/roms/daphne/
-  weird fram file shit lol
-  sudo rm -r "$HOME"/RetroPie/roms/daphne/temp
-fi
-}
-
-function altered-carbon() {
-if [ ! -d "$HOME/RetroPie/roms/daphne/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
-else
-clear
-  wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/hypseus_singe_carbon/hypseus_singe_carbon.zip -P "$HOME"/RetroPie/roms/daphne/temp -erobots=off
-  unzip -o "$HOME"/RetroPie/roms/daphne/temp/hypseus_singe_carbon.zip -d "$HOME"/RetroPie/roms/daphne/
-  weird frame file shit lol 
-  sudo rm -r "$HOME"/RetroPie/roms/daphne/temp
+  wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/daphneforretropiepart1of2/Daphne%20for%20Retropie%20-%20Part%201%20of%202.rar/Part%201%2FROMs%2Froms%2Fastron.zip -P "$HOME"/RetroPie/roms/daphne/roms -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/daphneforretropiepart1of2/Daphne%20for%20Retropie%20-%20Part%201%20of%202.rar/Part%201%2FROMs%2Froms%2Fastron.zip -P "$HOME"/RetroPie/roms/daphne/roms -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/daphneforretropiepart1of2/Daphne%20for%20Retropie%20-%20Part%201%20of%202.rar/Part%201%2FROMs%2Froms%2Fastron.zip -P "$HOME"/RetroPie/roms/daphne/roms -erobots=off
 fi
 }
 
