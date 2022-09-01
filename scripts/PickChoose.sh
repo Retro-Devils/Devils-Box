@@ -141,20 +141,20 @@ function daphne() {
 local choice
     whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
        --ok-button Download --cancel-button Back \
-       1 "Astron Belt" \
-       2 "Cliff Hanger" \
-       3 "Cobra Command" \
-       4 "Dragons Lair" \
-       5 "Dragons Lair 2" \
-       6 "Eshs Aurunmilla" \
-       7 "Galaxy Ranger" \
-       8 "Gp World" \
-       9 "Interstellar Laser Fantasy" \
-      10 "M.a.c.h. 3" \
-      11 "Space Ace" \
-      12 "Super Don Quix-ote" \
-      13 "Thayers Quest" \
-      14 "Us Vs Them" \
+       "1" "Astron Belt" off \
+       "2" "Cliff Hanger" off \
+       "3" "Cobra Command" off \
+       "4" "Dragons Lair" off \
+       "5" "Dragons Lair 2" off \
+       "6" "Eshs Aurunmilla" off \
+       "7" "Galaxy Ranger" off \
+       "8" "Gp World" off \
+       "9" "Interstellar Laser Fantasy" off \
+      "10" "M.a.c.h. 3" off \
+      "11" "Space Ace" off \
+      "12" "Super Don Quix-ote" off \
+      "13" "Thayers Quest" off \
+      "14" "Us Vs Them" off \
       2>/tmp/results
 
   while read -r choice  
@@ -1494,10 +1494,11 @@ function download-daphnegames() {
 if [ ! -d "$HOME/RetroPie/roms/daphne/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Daphne or Hypseus First" 6 40;
 else
 clear
-  wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/daphne"${1}" -P "$HOME"/RetroPie/roms/daphne -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/daphne/"${1}" -P "$HOME"/RetroPie/roms/daphne -erobots=off
   unzip -o "$HOME"/RetroPie/roms/daphne/"${1}" -d "$HOME"/RetroPie/roms/daphne/
   sudo rm -r "$HOME"/RetroPie/roms/daphne/"${1}"
 fi
+sleep 10
 }
 
 pick_menu
