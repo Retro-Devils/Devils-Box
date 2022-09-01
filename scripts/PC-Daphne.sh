@@ -79,9 +79,15 @@ if [ ! -d "$HOME/RetroPie/roms/daphne/" ]; then dialog  --sleep 1 --title ""${1}
 else
 clear
   wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/daphneforretropiepart1of2/Daphne%20for%20Retropie%20-%20Part%201%20of%202.rar/Part%201%2FROMs%2Froms%2Fastron.zip -P "$HOME"/RetroPie/roms/daphne/roms -erobots=off
-  wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/daphneforretropiepart1of2/Daphne%20for%20Retropie%20-%20Part%201%20of%202.rar/Part%201%2FROMs%2Froms%2Fastron.zip -P "$HOME"/RetroPie/roms/daphne/roms -erobots=off
-  wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/daphneforretropiepart1of2/Daphne%20for%20Retropie%20-%20Part%201%20of%202.rar/Part%201%2FROMs%2Froms%2Fastron.zip -P "$HOME"/RetroPie/roms/daphne/roms -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" txt -P "$HOME"/RetroPie/roms/daphne/roms -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" ogg -P "$HOME"/RetroPie/roms/daphne/roms -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" m2v -P "$HOME"/RetroPie/roms/daphne/roms -erobots=off
 fi
+
+# or 
+# wget game.zip 
+# unzip
+# move stuff around
 }
 
 
