@@ -42,6 +42,11 @@ dialog  --sleep 1 --title "ATTRACT MODE NOT INSTALLED !! " --msgbox "
 INSTALLING NOW" 0 0
 cd $HOME/RetroPie-Setup
 sudo ./retropie_packages.sh attractmode
+dialog  --sleep 1 --title "HELP/POSSIBLE ERROR!! " --msgbox " 
+IF INSTALL FAILS PRESS CONTROL+C TO CANCEL THEN 
+TYPE EMULATIONSTATION GO TO RETROPIE TOOLS 
+THEN MANAGE PACKAGES/EXPERIMENTAL PACKAGES/ATTRACT MODE
+THEN INSTALL FROM PRECOMPLIEDED BINARY" 0 0
 AT_FE;
 else
     if grep -q 'emulationstation \#auto' "$AUTOSTART"; then
