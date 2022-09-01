@@ -54,7 +54,7 @@ UNLIKELY. PLEASE USE SCRAPPER" 0 0
       13 "Atomiswave               [*]box  [*]cart  [*]snap  [*]wheel" \
       14 "Commadore64 Artwork      [*]box  [*]cart  [*]snap  [*]wheel" \
       15 "Coleco Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
-      16 "***Daphne Artwork***     [*]box  [*]cart  [*]snap  [ ]wheel" \
+      16 "Daphne Artwork **NEW**   [*]box  [*]cart  [*]snap  [ ]wheel" \
       17 "Dragon32 Artwork         [*]box  [ ]cart  [*]snap  [ ]wheel" \
       18 "Dreamcast Artwork        [*]box  [ ]cart  [*]snap  [ ]wheel" \
       19 "Electron                 [ ]box  [ ]cart  [*]snap  [*]wheel" \
