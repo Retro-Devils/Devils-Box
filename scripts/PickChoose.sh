@@ -35,38 +35,40 @@ local choice
       --ok-label Select --cancel-label Main-Menu \
       --menu "PICK CONSOLE & CHOOSE GAME(S) " 20 50 30 \
       1 "AtomisWave" \
-      2 "Dreamcast" \
-      3 "GameBoy Advance" \
-      4 "MegaDrive" \
-      5 "Mugens" \
-      6 "Nintendo 64" \
-      7 "Nintendo DS" \
-      8 "NES" \
-      9 "PC DOS Games" \
-      10 "Playstation 1" \
-      11 "Ports *COMING SOON*" \
-      12 "PSP" \
-      13 "Saturn" \
-      14 "Super Nintendo" \
-      15 "Wine" \
+      2 "Daphne" \
+      3 "Dreamcast" \
+      4 "GameBoy Advance" \
+      5 "MegaDrive" \
+      6 "Mugens" \
+      7 "Nintendo 64" \
+      8 "Nintendo DS" \
+      9 "NES" \
+      10 "PC DOS Games" \
+      11 "Playstation 1" \
+      12 "Ports *COMING SOON*" \
+      13 "PSP" \
+      14 "Saturn" \
+      15 "Super Nintendo" \
+      16 "Wine" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) atomiswave ;;
-    2) dreamcast ;;
-    3) gba ;;
-    4) megadrive ;;
-    5) mugens ;;
-    6) n64 ;;
-    7) nds ;;
-    8) nes ;;
-    9) pcgames ;;
-    10) psx ;;
-    11) ports ;;
-    12) psp ;;
-    13) saturn ;;
-    14) snes ;;
-    15) winegames ;;
+    2) daphne ;;
+    3) dreamcast ;;
+    4) gba ;;
+    5) megadrive ;;
+    6) mugens ;;
+    7) n64 ;;
+    8) nds ;;
+    9) nes ;;
+    10) pcgames ;;
+    11) psx ;;
+    12) ports ;;
+    13) psp ;;
+    14) saturn ;;
+    15) snes ;;
+    16) winegames ;;
     *) break ;;
     esac
   done
@@ -134,6 +136,53 @@ function atomiswave() {
             *) ;;
         esac
         done < /tmp/results
+}
+function daphne() {
+if [ $confirm = 1 ]; then
+dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox " 
+PLEASE Install/Update Devils Box" 0 0
+else
+local choice
+  
+  while true; do
+    choice=$(dialog --backtitle "$BACKTITLE" --title "DAPHNE PICK & CHOOSE MENU" \
+      --ok-label Select --cancel-label Main-Menu \
+      --menu "PICK & DOWNLOAD A GAME " 20 50 30 \
+       1 "Astron Belt" \
+       2 "Cliff Hanger" \
+       3 "Cobra Command" \
+       4 "Dragons Lair" \
+       5 "Dragons Lair 2" \
+       6 "Eshs Aurunmilla" \
+       7 "Galaxy Ranger" \
+       8 "Gp World" \
+       9 "Interstellar Laser Fantasy" \
+      10 "M.a.c.h. 3" \
+      11 "Space Ace" \
+      12 "Super Don Quix-ote" \
+      13 "Thayers Quest" \
+      14 "Us Vs Them" \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+     1) download-game "daphne" "astron.zip";;
+     2) download-game "daphne" "cliff.zip";;
+     3) download-game "daphne" "cobraab.zip" ;;
+     4) download-game "daphne" "dle21.zip" ;;
+     5) download-game "daphne" "lair2.zip" ;;
+     6) download-game "daphne" "esh.zip" ;;
+     7) download-game "daphne" "galaxy.zip" ;;
+     8) download-game "daphne" "gpworld.zip" ;;
+     9) download-game "daphne" "interstellar.zip" ;;
+    10) download-game "daphne" "mach3.zip" ;;
+    11) download-game "daphne" "sae.zip" ;;
+    12) download-game "daphne" "sdq.zip" ;;
+    13) download-game "daphne" "tq.zip" ;;
+    14) download-game "daphne" "uvt.zip" ;;
+    *) break ;;
+    esac
+  done
+fi
 }
 function dreamcast() {
         local choice
