@@ -170,7 +170,7 @@ UNLIKELY. PLEASE USE SCRAPPER" 0 0
       53) download-art "sg-1000" ;;
       54) download-art "snes" ;;
       55) download-art "supergrafx" ;;
-      56) tg16-art ;;
+      56) download-art "tg16" ;;
       57) download-art "vectrex" ;;
       58) download-art "videopac" ;;
       59) download-art "virtualboy" ;;
@@ -206,15 +206,5 @@ git pull origin main
 rm -fr "$HOME"/RetroPie/roms/"${1}"/.git
 fi
 }
-function tg16-art() {
-if [ ! -d "$HOME/RetroPie/roms/pcengine/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
-clear
-cd "$HOME/RetroPie/roms/pcengine/"
-git init
-git remote add origin "${ART_HOST2}/${1}.git"
-git fetch
-git pull origin main
-rm -fr "$HOME"/RetroPie/roms/"${1}"/.git
-fi
-}
+
 artwork-menu
