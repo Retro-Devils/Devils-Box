@@ -1,10 +1,12 @@
-## Some stuff someone said at some point.
+## Some stuff someone said at some point, somewhere .
 
 "I don’t regret the things I’ve done, I regret the things I didn’t do when I had the chance."
 
 "In order to succeed, your desire for success should be greater than your fear of failure."
 
 "I feel like a slice of butter, on a big oh pile of flapjacks. "
+
+“Do you want to know who you are? Don't ask. Act! Action will delineate and define you.”
 
 "Madness? No......this is SPARTA!!!!"
 
