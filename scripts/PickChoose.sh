@@ -173,7 +173,7 @@ local choice
      6) download-daphnegames "esh.zip" ;;
      7) download-daphnegames "galaxy.zip" ;;
      8) download-daphnegames "gpworld.zip" ;;
-     9) download-daphnegames "nterstellar.zip" ;;
+     9) download-daphnegames "interstellar.zip" ;;
     10) download-daphnegames "mach3.zip" ;;
     11) download-daphnegames "sae.zip" ;;
     12) download-daphnegames "sdq.zip" ;;
