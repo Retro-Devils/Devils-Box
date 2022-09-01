@@ -139,7 +139,7 @@ local choice
 }
 function daphne() {
 local choice
-    whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+    whiptail --clear --title "PICK & CHOOSE DAPHNE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
        --ok-button Download --cancel-button Back \
        "1" "Astron Belt" off \
        "2" "Cliff Hanger" off \
