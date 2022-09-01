@@ -1500,7 +1500,7 @@ function download-daphnegames() {
 if [ ! -d "$HOME/RetroPie/roms/daphne/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Daphne or Hypseus First" 6 40;
 else
 clear
-  wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}" -P "$HOME"/RetroPie/roms/daphne -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/daphne"${1}" -P "$HOME"/RetroPie/roms/daphne -erobots=off
   unzip -o "$HOME"/RetroPie/roms/daphne/"${1}" -d "$HOME"/RetroPie/roms/daphne/
   sudo rm -r "$HOME"/RetroPie/roms/daphne/"${1}"
 fi
