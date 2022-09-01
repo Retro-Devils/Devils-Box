@@ -28,7 +28,7 @@ DEVILS BOX RETROPIE INSTALLER" 25 40 40 \
 # INSTALL/UPDATE  DEVILS BOX #
 #----------------------------#
 function install_db() {
-if [ -d "$HOME/RetroPie/retropiemenu/Devils-Box/" ]; then sudo rm -fR $HOME/RetroPie/retropiemenu/Devils-Box/; fi
+if [ -d "$HOME/RetroPie/retropiemenu/Devils-Box/" ]; then sudo rm -R $HOME/RetroPie/retropiemenu/Devils-Box/; fi
 if [ -f "$HOME/RetroPie/retropiemenu/Devils-Box.sh" ]; then sudo rm $HOME/RetroPie/retropiemenu/Devils-Box.sh; fi
 if [ -d "$HOME/Devils-Box/" ]; then sudo rm -R $HOME/Devils-Box/; fi
 cd $HOME
@@ -38,10 +38,12 @@ cp $HOME/Devils-Box/files/images/Devils-Box.png -f $HOME/RetroPie/retropiemenu/i
 sudo cp $HOME/Devils-Box/files/box -f /usr/local/bin/
 sudo cp $HOME/Devils-Box/Devils-Box.sh -f /usr/local/bin/Devils-Box
 sudo wget -O "/usr/local/bin/confirm" https://raw.githubusercontent.com/Retro-Devils/Devils-Pi/main/things
+sudo wget https://github.com/Retro-Devils/FE-Switcheroo/blob/main/switcheroo -f /usr/local/bin/switcheroo
 sudo chmod 755 /usr/local/bin/confirm
 sudo chmod 755 /usr/local/bin/box
 chmod 755 $HOME/RetroPie/retropiemenu/Devils-Box.sh
 sudo chmod 755 /usr/local/bin/Devils-Box
+sudo chmod 755 /usr/local/bin/switcheroo
 sleep 1
 if [ ! -s "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then sudo rm -f $HOME/RetroPie/retropiemenu/gamelist.xml; fi
 if [ ! -f "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml $HOME/RetroPie/retropiemenu/gamelist.xml; fi
