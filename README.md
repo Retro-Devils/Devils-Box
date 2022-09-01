@@ -43,7 +43,7 @@
 
 Devils Box has been tested and works on PI ZERO, PI 3, PI4. *BUT MOST THINGS ARE FOR PI 4. see below*
 
-
+_______________________________________________________________________    
 *WORKS ON ALL PIS (with RetroPie installed)*
 _______________________________________________________________________  
   ~ Getting packs and indivaul "things & stuff" from web.
@@ -51,10 +51,8 @@ _______________________________________________________________________
   ~ Expand Memory
   
   ~ Themes and stuff like that
+  
 _______________________________________________________________________  
-
-
-
 *PI 4 ONLY (with RetroPie installed)*
 _______________________________________________________________________    
   ~ Most Tools 
@@ -64,6 +62,8 @@ _______________________________________________________________________
 _______________________________________________________________________  
 
 *Devils Box also works on any linux device that retropie is isntalled. TO A EXTENT EXPERMINTAL AT BEST.*
+_______________________________________________________________________    
+
 
 *We have tested on 3 seperate pcs with linux running on them. One pc didnt have Retropie at all. *
 
