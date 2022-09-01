@@ -165,20 +165,20 @@ local choice
       2>&1 >/dev/tty)
 
     case "$choice" in
-     1) download-daphnegames "daphne" "astron.zip";;
-     2) download-daphnegames "daphne" "cliff.zip";;
-     3) download-daphnegames "daphne" "cobraab.zip" ;;
-     4) download-daphnegames "daphne" "dle21.zip" ;;
-     5) download-daphnegames "daphne" "lair2.zip" ;;
-     6) download-daphnegames "daphne" "esh.zip" ;;
-     7) download-daphnegames "daphne" "galaxy.zip" ;;
-     8) download-daphnegames "daphne" "gpworld.zip" ;;
-     9) download-daphnegames "daphne" "interstellar.zip" ;;
-    10) download-daphnegames "daphne" "mach3.zip" ;;
-    11) download-daphnegames "daphne" "sae.zip" ;;
-    12) download-daphnegames "daphne" "sdq.zip" ;;
-    13) download-daphnegames "daphne" "tq.zip" ;;
-    14) download-daphnegames "daphne" "uvt.zip" ;;
+     1) download-daphnegames "astron.zip";;
+     2) download-daphnegames "cliff.zip";;
+     3) download-daphnegames "cobraab.zip" ;;
+     4) download-daphnegames "dle21.zip" ;;
+     5) download-daphnegames "lair2.zip" ;;
+     6) download-daphnegames "esh.zip" ;;
+     7) download-daphnegames "galaxy.zip" ;;
+     8) download-daphnegames "gpworld.zip" ;;
+     9) download-daphnegames "nterstellar.zip" ;;
+    10) download-daphnegames "mach3.zip" ;;
+    11) download-daphnegames "sae.zip" ;;
+    12) download-daphnegames "sdq.zip" ;;
+    13) download-daphnegames "tq.zip" ;;
+    14) download-daphnegames "uvt.zip" ;;
     *) break ;;
     esac
   done
