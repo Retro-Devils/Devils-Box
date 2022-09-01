@@ -82,6 +82,7 @@ clear
   wget -m -r -np -nH -nd -R "index.html" txt -P "$HOME"/RetroPie/roms/daphne/roms -erobots=off
   wget -m -r -np -nH -nd -R "index.html" ogg -P "$HOME"/RetroPie/roms/daphne/roms -erobots=off
   wget -m -r -np -nH -nd -R "index.html" m2v -P "$HOME"/RetroPie/roms/daphne/roms -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" dat -P "$HOME"/RetroPie/roms/daphne/roms -erobots=off
 fi
 
 # or 
