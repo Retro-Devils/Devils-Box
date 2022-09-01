@@ -45,22 +45,23 @@ Devils Box has been tested and works on PI ZERO, PI 3, PI4. *BUT MOST THINGS ARE
 
 
 *WORKS ON ALL PIS (with RetroPie installed)*
-  
+_______________________________________________________________________  
   ~ Getting packs and indivaul "things & stuff" from web.
   
   ~ Expand Memory
   
   ~ Themes and stuff like that
-  
-  
-  
+_______________________________________________________________________  
+
+
+
 *PI 4 ONLY (with RetroPie installed)*
-  
+_______________________________________________________________________    
   ~ Most Tools 
   
   ~ Some Emus. Mugen/WINE and Model 3 for examples.
   
-  
+_______________________________________________________________________  
 
 *Devils Box also works on any linux device that retropie is isntalled. TO A EXTENT EXPERMINTAL AT BEST.*
 
