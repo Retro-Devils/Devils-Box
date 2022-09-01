@@ -165,20 +165,20 @@ local choice
       2>&1 >/dev/tty)
 
     case "$choice" in
-     1) download-game "daphne" "astron.zip";;
-     2) download-game "daphne" "cliff.zip";;
-     3) download-game "daphne" "cobraab.zip" ;;
-     4) download-game "daphne" "dle21.zip" ;;
-     5) download-game "daphne" "lair2.zip" ;;
-     6) download-game "daphne" "esh.zip" ;;
-     7) download-game "daphne" "galaxy.zip" ;;
-     8) download-game "daphne" "gpworld.zip" ;;
-     9) download-game "daphne" "interstellar.zip" ;;
-    10) download-game "daphne" "mach3.zip" ;;
-    11) download-game "daphne" "sae.zip" ;;
-    12) download-game "daphne" "sdq.zip" ;;
-    13) download-game "daphne" "tq.zip" ;;
-    14) download-game "daphne" "uvt.zip" ;;
+     1) download-daphnegames "astron.zip";;
+     2) download-daphnegames "cliff.zip";;
+     3) download-daphnegames "cobraab.zip" ;;
+     4) download-daphnegames "dle21.zip" ;;
+     5) download-daphnegames "lair2.zip" ;;
+     6) download-daphnegames "esh.zip" ;;
+     7) download-daphnegames "galaxy.zip" ;;
+     8) download-daphnegames "gpworld.zip" ;;
+     9) download-daphnegames "interstellar.zip" ;;
+    10) download-daphnegames "mach3.zip" ;;
+    11) download-daphnegames "sae.zip" ;;
+    12) download-daphnegames "sdq.zip" ;;
+    13) download-daphnegames "tq.zip" ;;
+    14) download-daphnegames "uvt.zip" ;;
     *) break ;;
     esac
   done
@@ -1439,7 +1439,6 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
         done < /tmp/results
 fi
 }
-
 function download-game() {
   for type in "$@"; do
     if [ "${type}" != "${1}" ]; then
@@ -1452,7 +1451,6 @@ fi
 fi
 done
 }
-
 function download-mugens() {
 if [ ! -d "$HOME/RetroPie/roms/wine" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
 else
@@ -1463,7 +1461,6 @@ else
   sudo rm -r "$HOME"/RetroPie/roms/mugens/"${1}"
 fi
 }
-
 function download-psp() {
 if [ ! -d "$HOME/RetroPie/roms/psp/" ]; then dialog  --sleep 1 --title "PSP FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
 else
@@ -1471,7 +1468,6 @@ clear
   wget -m -r -np -nH -nd -R "index.html" ${HOST6}/"${1}" -P "$HOME"/RetroPie/roms/psp -erobots=off
 fi
 }
-
 function download-msu1() {
 if [ ! -d "$HOME"/RetroPie/roms/snesmsu1/ ]; then dialog  --sleep 1 --title "MSU1 FOLDER MISSING!" --msgbox "RUNNING MSU1 SETUP NOW" 6 40;
 chmod 755 "$HOME"/Devils-Box/scripts/MSU1-Setup.sh
@@ -1481,7 +1477,6 @@ clear
   wget -m -r -np -nH -nd -R "index.html" ${HOST7}/"${1}" -P "$HOME"/RetroPie/roms/snesmsu1 -erobots=off
 fi
 }
-
 function download-winegames() {
 if [ ! -d "$HOME/RetroPie/roms/wine/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
 else
@@ -1492,7 +1487,6 @@ clear
   sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
 fi
 }
-
 function download-pcgames() {
 if [ ! -d "$HOME/RetroPie/roms/pc/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
 else
@@ -1502,7 +1496,14 @@ clear
   sudo rm -r "$HOME"/RetroPie/roms/pc/"${1}"
 fi
 }
-
-
+function download-daphnegames() {
+if [ ! -d "$HOME/RetroPie/roms/daphne/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Daphne or Hypseus First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/daphne -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/daphne/"${1}" -d "$HOME"/RetroPie/roms/daphne/
+  sudo rm -r "$HOME"/RetroPie/roms/daphne/"${1}"
+fi
+}
 
 pick_menu
