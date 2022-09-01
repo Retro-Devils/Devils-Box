@@ -10,6 +10,9 @@
 
 "Madness? No......this is SPARTA!!!!"
 
+“Couscous: the food's so nice they named it twice.”
+
+
 ## Whats This? 
 
 - A Toolbox and more built for RetroPie. 
