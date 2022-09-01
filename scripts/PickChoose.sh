@@ -76,9 +76,9 @@ fi
 }
 
 function atomiswave() {
-        local choice
-    whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
-      --ok-button Download --cancel-button Back \
+local choice
+  whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+    --ok-button Download --cancel-button Back \
                 "1" "Animal Basket" off \
                 "2" "Demolish Fist" off \
                 "3" "Dirty Pigskin Football" off \
@@ -138,16 +138,9 @@ function atomiswave() {
         done < /tmp/results
 }
 function daphne() {
-if [ $confirm = 1 ]; then
-dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox " 
-PLEASE Install/Update Devils Box" 0 0
-else
 local choice
-  
-  while true; do
-    choice=$(dialog --backtitle "$BACKTITLE" --title "DAPHNE PICK & CHOOSE MENU" \
-      --ok-label Select --cancel-label Main-Menu \
-      --menu "PICK & DOWNLOAD A GAME " 20 50 30 \
+    whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+       --ok-button Download --cancel-button Back \
        1 "Astron Belt" \
        2 "Cliff Hanger" \
        3 "Cobra Command" \
@@ -162,9 +155,11 @@ local choice
       12 "Super Don Quix-ote" \
       13 "Thayers Quest" \
       14 "Us Vs Them" \
-      2>&1 >/dev/tty)
+      2>/tmp/results
 
-    case "$choice" in
+  while read -r choice  
+      do
+      case "$choice" in
      1) download-daphnegames "astron.zip";;
      2) download-daphnegames "cliff.zip";;
      3) download-daphnegames "cobraab.zip" ;;
@@ -179,10 +174,9 @@ local choice
     12) download-daphnegames "sdq.zip" ;;
     13) download-daphnegames "tq.zip" ;;
     14) download-daphnegames "uvt.zip" ;;
-    *) break ;;
+    *) ;;
     esac
-  done
-fi
+  done < /tmp/results
 }
 function dreamcast() {
         local choice
