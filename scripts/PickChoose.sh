@@ -1480,7 +1480,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "7" "Cuphead                                 11GB" off \
                 "8" "Delta Force Xtreme                     843MB" off \
                 "9" "Diablo 2                               1.8GB" off \
-	       "10" "EVE Mugen                             10.0GB" off \
+	       "10" "EVE Mugen                             12.0GB" off \
                "11" "Fallout                                535MB" off \
                "12" "Fallout 2                              555MB" off \
                "13" "Fallout Tactics                        1.5GB" off \
