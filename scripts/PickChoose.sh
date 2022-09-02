@@ -1495,14 +1495,15 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                "22" "Starcraft                              1.2GB" off \
                "23" "Star Wars Battlefront                  2.3GB" off \
                "24" "Street of Rage Remake v5.2             605MB" off \
-	       "25" "Sugar Rush Speedway                     4.3GB" off \
+	       "25" "Sugar Rush Speedway                    4.3GB" off \
                "26" "Teenage Muntant Ninja Turtles          1.3GB" off \
-               "27" "The House Of The Dead                  299MB" off \
-               "28" "The House Of The Dead 2                579MB" off \
-               "29" "The Settlers                            26MB" off \
-               "30" "The Simpsons Hit & Run                 1.8GB" off \
-               "31" "Unreal Anthology                       8.8GB" off \
-               "32" "Warcraft 3                             1.9GB" off \
+	       "27" "TMNT Shredders Revenge                 1.0GB" off \
+               "28" "The House Of The Dead                  299MB" off \
+               "29" "The House Of The Dead 2                579MB" off \
+               "30" "The Settlers                            26MB" off \
+               "31" "The Simpsons Hit & Run                 1.8GB" off \
+               "32" "Unreal Anthology                       8.8GB" off \
+               "33" "Warcraft 3                             1.9GB" off \
                 2>/tmp/results
     while read -r choice  
         do
@@ -1534,12 +1535,13 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
               24) download-winegames "Retro-Devils_Strees-of-Rage-Remake.zip" ;;
 	      25) download-winegames "Retro-Devils_Sugar-Rush-Speedway.zip" ;;
               26) download-winegames "Retro-Devils_TMNT.zip" ;;
-              27) download-winegames "Retro-Devils_THOTD.zip" ;;
-              28) download-winegames "Retro-Devils_THOTD2.zip" ;;
-              29) download-winegames "Retro-Devils_TheSettlers.zip" ;;
-              30) download-winegames "Retro-Devils_TheSimpsonsHitandRun.zip" ;;
-              31) download-winegames "Retro-Devils_UNREAL.zip"; game_fix "Unreal-Anthology-fix.reg" ;;
-              32) download-winegames "Retro-Devils_Warcraft3.zip"-3 ;;
+	      27) download-winegames "Retro-Devils_TMNT-Shredders-Revenge.zip" ;;
+              28) download-winegames "Retro-Devils_THOTD.zip" ;;
+              29) download-winegames "Retro-Devils_THOTD2.zip" ;;
+              30) download-winegames "Retro-Devils_TheSettlers.zip" ;;
+              31) download-winegames "Retro-Devils_TheSimpsonsHitandRun.zip" ;;
+              32) download-winegames "Retro-Devils_UNREAL.zip"; game_fix "Unreal-Anthology-fix.reg" ;;
+              33) download-winegames "Retro-Devils_Warcraft3.zip"-3 ;;
                *) ;;
         esac
         done < /tmp/results
