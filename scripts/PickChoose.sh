@@ -38,18 +38,19 @@ local choice
       3 "Daphne" \
       4 "Dreamcast" \
       5 "GameBoy Advance" \
-      6 "MegaDrive" \
-      7 "Mugens" \
-      8 "Nintendo 64" \
-      9 "Nintendo DS" \
-      10 "NES" \
-      11 "PC DOS Games" \
-      12 "Playstation 1" \
-      13 "Ports *COMING SOON*" \
-      14 "PSP" \
-      15 "Saturn" \
-      16 "Super Nintendo" \
-      17 "Wine" \
+      6 "Hypseus" \
+      7 "MegaDrive" \
+      8 "Mugens" \
+      9 "Nintendo 64" \
+      10 "Nintendo DS" \
+      11 "NES" \
+      12 "PC DOS Games" \
+      13 "Playstation 1" \
+      14 "Ports *COMING SOON*" \
+      15 "PSP" \
+      16 "Saturn" \
+      17 "Super Nintendo" \
+      18 "Wine" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -58,18 +59,19 @@ local choice
     3) daphne ;;
     4) dreamcast ;;
     5) gba ;;
-    6) megadrive ;;
-    7) mugens ;;
-    8) n64 ;;
-    9) nds ;;
-    10) nes ;;
-    11) pcgames ;;
-    12) psx ;;
-    13) ports ;;
-    14) psp ;;
-    15) saturn ;;
-    16) snes ;;
-    17) winegames ;;
+    6) hypseus ;;
+    7) megadrive ;;
+    8) mugens ;;
+    9) n64 ;;
+    10) nds ;;
+    11) nes ;;
+    12) pcgames ;;
+    13) psx ;;
+    14) ports ;;
+    15) psp ;;
+    16) saturn ;;
+    17) snes ;;
+    18) winegames ;;
     *) break ;;
     esac
   done
@@ -448,7 +450,7 @@ function gba() {
         esac
         done < /tmp/results
 }
-function daphne() {
+function hypseus() {
 local choice
     whiptail --clear --title "PICK & CHOOSE HYPSEUS" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
        --ok-button Download --cancel-button Back \
