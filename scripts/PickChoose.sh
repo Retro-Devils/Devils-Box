@@ -15,7 +15,6 @@ HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 
 
-
 omxplayer "$HOME"/Devils-Box/files/videos/pickchoose.mp4 > /dev/null 2>&1
 if [ -f "/usr/local/bin/confirm" ]; then
   confirm=0
@@ -39,18 +38,19 @@ local choice
       3 "Daphne" \
       4 "Dreamcast" \
       5 "GameBoy Advance" \
-      6 "MegaDrive" \
-      7 "Mugens" \
-      8 "Nintendo 64" \
-      9 "Nintendo DS" \
-      10 "NES" \
-      11 "PC DOS Games" \
-      12 "Playstation 1" \
-      13 "Ports *COMING SOON*" \
-      14 "PSP" \
-      15 "Saturn" \
-      16 "Super Nintendo" \
-      17 "Wine" \
+      6 "Hypseus" \
+      7 "MegaDrive" \
+      8 "Mugens" \
+      9 "Nintendo 64" \
+      10 "Nintendo DS" \
+      11 "NES" \
+      12 "PC DOS Games" \
+      13 "Playstation 1" \
+      14 "Ports *COMING SOON*" \
+      15 "PSP" \
+      16 "Saturn" \
+      17 "Super Nintendo" \
+      18 "Wine" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -59,24 +59,24 @@ local choice
     3) daphne ;;
     4) dreamcast ;;
     5) gba ;;
-    6) megadrive ;;
-    7) mugens ;;
-    8) n64 ;;
-    9) nds ;;
-    10) nes ;;
-    11) pcgames ;;
-    12) psx ;;
-    13) ports ;;
-    14) psp ;;
-    15) saturn ;;
-    16) snes ;;
-    17) winegames ;;
+    6) hypseus ;;
+    7) megadrive ;;
+    8) mugens ;;
+    9) n64 ;;
+    10) nds ;;
+    11) nes ;;
+    12) pcgames ;;
+    13) psx ;;
+    14) ports ;;
+    15) psp ;;
+    16) saturn ;;
+    17) snes ;;
+    18) winegames ;;
     *) break ;;
     esac
   done
 fi
 }
-
 function arcade() {
           whiptail --clear --title "PICK & CHOOSE ARCADE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
@@ -186,7 +186,6 @@ function arcade() {
         esac
         done < /tmp/results
 }
-
 function atomiswave() {
 local choice
   whiptail --clear --title "PICK & CHOOSE ATOMISWAVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
@@ -450,6 +449,125 @@ function gba() {
             *) ;;
         esac
         done < /tmp/results
+}
+function hypseus() {
+local choice
+    whiptail --clear --title "PICK & CHOOSE HYPSEUS" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+       --ok-button Download --cancel-button Back \
+       "1" "Asterix" off \
+       "2" "Esh's Arunmilla" off \
+       "3" "Altered Carbon" off \
+       "4" "Chantze's Stone" off \
+       "5" "Cliff Hanger v1" off \
+       "6" "Cliff Hanger v2" off \
+       "7" "Conan the Boy in the Future" off \
+       "8" "Crime Patrol" off \
+       "9" "Crime Patrol HD" off \
+      "10" "Daitarn 3" off \
+      "11" "Dragon's Lair TV" off \
+      "12" "Dragon's Lair 2" off \
+      "13" "Dragon's Lair 2 Extended" off \
+      "14" "Dragon Trainer" off \
+      "15" "Drug Wars" off \
+      "16" "Drug Wars HD" off \
+      "17" "Fire And Ice" off \
+      "18" "Freedom Fighter" off \
+      "19" "Friday The 13th" off \
+      "20" "Ninja Hayate" off \
+      "21" "Ninja Hayate HD" off \
+      "22" "Samurai Jack" off \
+      "23" "Who Shot Johnny Rock" off \
+      "24" "Who Shot Johnny Rock HD" off \
+      "25" "Who Shot Johnny Rock Noir" off \
+      "26" "Who Shot Johnny Rock Noir Enhanced" off \
+      "27" "The Last Bounty Hunter" off \
+      "28" "The Last Bounty Hunter HD" off \
+      "29" "Mad Dog McCree" off \
+      "30" "Mad Dog McCree HD" off \
+      "31" "Mad Dog McCree 2 The Lost Gold" off \
+      "32" "Mad Dog McCree 2 HD" off \
+      "33" "Mad Dog McCree 2 Typing Edition" off \
+      "34" "Princess Mononoke" off \
+      "35" "Oeil pour Oeil" off \
+      "36" "Platoon" off \
+      "37" "Puss in Boots" off \
+      "38" "Rollercoaster" off \
+      "39" "Scrat: No Time for Nuts" off \
+      "40" "Space Pirates" off \
+      "41" "Space Pirates HD" off \
+      "42" "Starblazers" off \
+      "43" "Sucker Punch" off \
+      "44" "Time Gal v1 DEX" off \
+      "45" "Time Gal v1 RDG" off \
+      "46" "Time Gal v2 HD" off \
+      "47" "Hologram Time Traveler 3D" off \
+      "48" "Titan A.E. v1" off \
+      "49" "Titan A.E. v2" off \
+      "50" "Triad Stone" off \
+      "51" "Tron" off \
+      "52" "ActionMax Include 5 Games" off \
+      "53" "ActionMax Remux Will Overwrite Above" off \
+      2>/tmp/results
+
+  while read -r choice  
+      do
+      case "$choice" in
+     1) download-hypseusgames "asterix" ;;
+     2) download-hypseusgames "arunmilla" ;;
+     3) download-hypseusgames "carbon" ;;
+     4) download-hypseusgames "chantze" ;;
+     5) download-hypseusgames "cliffhang" ;;
+     6) download-hypseusgames "cliffhanger" ;;
+     7) download-hypseusgames "conan" ;;
+     8) download-hypseusgames "crimepatrol" ;;
+     9) download-hypseusgames "crimepatrol-hd" ;;
+    10) download-hypseusgames "daitarn" ;;
+    11) download-hypseusgames "dltv" ;;
+    12) download-hypseusgames "dl2e" ;;
+    13) download-hypseusgames "dl2e-ext" ;;
+    14) download-hypseusgames "dragon" ;;
+    15) download-hypseusgames "drugwars" ;;
+    16) download-hypseusgames "drugwars-hd" ;;
+    17) download-hypseusgames "fireandice" ;;
+    18) download-hypseusgames "freedomfighter" ;;
+    19) download-hypseusgames "friday13" ;;
+    20) download-hypseusgames "hayate" ;;
+    21) download-hypseusgames "hayate-hd" ;;
+    22) download-hypseusgames "jack" ;;
+    23) download-hypseusgames "johnnyrock" ;;
+    24) download-hypseusgames "johnnyrosk-hd" ;;
+    25) download-hypseusgames "johnnyrocknoir" ;;
+    26) download-hypseusgames "johnnyrocknoirRGB" ;;
+    27) download-hypseusgames "lbh" ;;
+    28) download-hypseusgames "lbh-hd" ;;
+    29) download-hypseusgames "maddog" ;;
+    30) download-hypseusgames "maddog-hd" ;;
+    31) download-hypseusgames "maddog2" ;;
+    32) download-hypseusgames "maddog2-hd" ;;
+    33) download-hypseusgames "maddog2-typing" ;;
+    34) download-hypseusgames "mononoke" ;;
+    35) download-hypseusgames "oeil" ;;
+    36) download-hypseusgames "platoon" ;;
+    37) download-hypseusgames "pussinboots" ;;
+    38) download-hypseusgames "rollercoaster" ;;
+    39) download-hypseusgames "scrat" ;;
+    40) download-hypseusgames "spacepirates" ;;
+    41) download-hypseusgames "spacepirates-hd" ;;
+    42) download-hypseusgames "starblazers" ;;
+    43) download-hypseusgames "suckerpunch" ;;
+    44) download-hypseusgames "timegal-dex" ;;
+    45) download-hypseusgames "timegal-rdg" ;;
+    46) download-hypseusgames "timegal-hd" ;;
+    47) download-hypseusgames "timwtraveler" ;;
+    48) download-hypseusgames "titanae-v1" ;;
+    49) download-hypseusgames "titanae-v2" ;;
+    50) download-hypseusgames "triad" ;;
+    51) download-hypseusgames "tron" ;;
+    52) download-actionmaxgames "actionmax-hypseus" ;;
+    53) download-actionmaxgames "actionmax-hypseus-remux" ;;
+    *) ;;
+    esac
+  done < /tmp/results
 }
 function megadrive() {
           whiptail --clear --title "PICK & CHOOSE MEGADRIVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
@@ -1615,6 +1733,29 @@ clear
   sudo rm -r "$HOME"/RetroPie/roms/daphne/"${1}"
 fi
 sleep 10
+}
+function download-hypseusgames() {
+if [ ! -d "$HOME/RetroPie/roms/daphne/" ]; then dialog  --sleep 1 --title "DAPHNE FOLDER MISSING!" --msgbox "Please Install Daphne or Hypseus First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST1}/hypseus/"${1}".zip -P "$HOME"/RetroPie/roms/daphne -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/daphne/"${1}".zip -d "$HOME"/RetroPie/roms/daphne/
+  sudo rm -r "$HOME"/RetroPie/roms/daphne/"${1}".zip
+fi
+}
+function download-actionmaxgames() {
+if [ ! -d "$HOME/RetroPie/roms/daphne/" ]; then dialog  --sleep 1 --title "DAPHNE FOLDER MISSING!" --msgbox "Please Install Daphne or Hypseus First" 6 40;
+else
+clear
+wget -m -r -np -nH -nd -R "index.html" ${HOST1}/hypseus/"${1}".zip -P "$HOME"/RetroPie/roms/daphne -erobots=off
+unzip -o "$HOME"/RetroPie/roms/daphne/"${1}".zip -d "$HOME"/RetroPie/roms/daphne/
+ln -s "$HOME"/RetroPie/roms/daphne/actionmax "$HOME"/RetroPie/roms/daphne/38ambushalley.daphne
+ln -s "$HOME"/RetroPie/roms/daphne/actionmax "$HOME"/RetroPie/roms/daphne/bluethunder.daphne
+ln -s "$HOME"/RetroPie/roms/daphne/actionmax "$HOME"/RetroPie/roms/daphne/hydrosub2021.daphne
+ln -s "$HOME"/RetroPie/roms/daphne/actionmax "$HOME"/RetroPie/roms/daphne/popsghostly.daphne
+ln -s "$HOME"/RetroPie/roms/daphne/actionmax "$HOME"/RetroPie/roms/daphne/sonicfury.daphne
+sudo rm -r "$HOME"/RetroPie/roms/daphne/"${1}".zip
+fi
 }
 
 pick_menu
