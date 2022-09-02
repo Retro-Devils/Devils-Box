@@ -34,45 +34,157 @@ local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title "PICK & CHOOSE MENU" \
       --ok-label Select --cancel-label Main-Menu \
       --menu "PICK CONSOLE & CHOOSE GAME(S) " 20 50 30 \
-      1 "AtomisWave" \
-      2 "Daphne" \
-      3 "Dreamcast" \
-      4 "GameBoy Advance" \
-      5 "MegaDrive" \
-      6 "Mugens" \
-      7 "Nintendo 64" \
-      8 "Nintendo DS" \
-      9 "NES" \
-      10 "PC DOS Games" \
-      11 "Playstation 1" \
-      12 "Ports *COMING SOON*" \
-      13 "PSP" \
-      14 "Saturn" \
-      15 "Super Nintendo" \
-      16 "Wine" \
+      1 "Arcade" \
+      2 "AtomisWave" \
+      3 "Daphne" \
+      4 "Dreamcast" \
+      5 "GameBoy Advance" \
+      6 "MegaDrive" \
+      7 "Mugens" \
+      8 "Nintendo 64" \
+      9 "Nintendo DS" \
+      10 "NES" \
+      11 "PC DOS Games" \
+      12 "Playstation 1" \
+      13 "Ports *COMING SOON*" \
+      14 "PSP" \
+      15 "Saturn" \
+      16 "Super Nintendo" \
+      17 "Wine" \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) atomiswave ;;
-    2) daphne ;;
-    3) dreamcast ;;
-    4) gba ;;
-    5) megadrive ;;
-    6) mugens ;;
-    7) n64 ;;
-    8) nds ;;
-    9) nes ;;
-    10) pcgames ;;
-    11) psx ;;
-    12) ports ;;
-    13) psp ;;
-    14) saturn ;;
-    15) snes ;;
-    16) winegames ;;
+    1) arcade ;;
+    2) atomiswave ;;
+    3) daphne ;;
+    4) dreamcast ;;
+    5) gba ;;
+    6) megadrive ;;
+    7) mugens ;;
+    8) n64 ;;
+    9) nds ;;
+    10) nes ;;
+    11) pcgames ;;
+    12) psx ;;
+    13) ports ;;
+    14) psp ;;
+    15) saturn ;;
+    16) snes ;;
+    17) winegames ;;
     *) break ;;
     esac
   done
 fi
+}
+
+function arcade() {
+          whiptail --clear --title "PICK & CHOOSE ARCADE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+                "1" "Arkanoid" off \
+                "2" "Atlantis" off \
+                "3" "Bubble Bobble" off \
+                "4" "BurgerTime" off \
+                "5" "Centipede" off \
+                "6" "Donkey Kong" off \
+                "7" "Double Dragon" off \
+                "8" "Forgotten" off \
+                "9" "Frogger" off \
+                "10" "Gaiden" off \
+                "11" "Galaga" off \
+                "12" "Gorf" off \
+                "13" "Golden Axe" off \
+                "14" "Goonies" off \
+                "15" "Gyruss" off \
+                "16" "Ice Climbers" off \
+                "17" "Ikari Warriors" off \
+                "18" "Invaders From Space " off \
+                "19" "Joust" off \
+                "20" "King Of Fighters 2000" off \
+                "21" "King Of Fighters 2003" off \
+                "22" "King Of Fighters 95" off \
+                "23" "King Of Fighters 96" off \
+                "24" "King Kong" off \
+                "25" "Legion" off \
+                "26" "Lemmings" off \
+                "27" "Legendary Wings" off \
+                "28" "Mario Bros" off \
+                "29" "Markham" off \
+                "30" "Mat Mania" off \
+                "31" "Matrimelle, Power Instinct" off \
+                "32" "Mayhem" off \
+                "33" "MayDay!!" off \
+                "34" "Megaman" off \
+                "35" "Missile Command" off \
+                "36" "Mortal Kombat 3" off \
+                "37" "Mortal Kombat 2" off \
+                "38" "Mortal Kombat " off \
+                "39" "Mars Matrix" off \
+                "40" "Ms Pacman" off \
+                "41" "Marvel VS Capcom" off \
+                "42" "MoonWalker" off \
+                "43" "Nemesis" off \
+                "44" "Pac Man" off \
+                "45" "Penguin Brothers" off \
+                "46" "Raiders" off \
+                "47" "RoboCop" off \
+                "48" "RoboCop 2" off \
+                "49" "RoboTron" off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+            1) download-game "arcade" "arkanoid.zip" ;;
+            2) download-game "arcade" "atlantis.zip" ;;
+            3) download-game "arcade" "bublbobl.zip" ;;
+            4) download-game "arcade" "btime.zip" ;;
+            5) download-game "arcade" "centiped.zip" ;;
+            6) download-game "arcade" "dkong.zip" ;;
+            7) download-game "arcade" "doubledr.zip" ;;
+            8) download-game "arcade" "forgottn.zip" ;;
+            9) download-game "arcade" "frogger.zip" ;;
+            10) download-game "arcade" "gaiden.zip" ;;
+            11) download-game "arcade" "galaga.zip" ;;
+            12) download-game "arcade" "gorf.zip" ;;
+            13) download-game "arcade" "goldnaxe.zip" ;;
+            14) download-game "arcade" "goonies.zip" ;;
+            15) download-game "arcade" "gyruss.zip" ;;
+            16) download-game "arcade" "iceclimb.zip" ;;
+            17) download-game "arcade" "ikari.zip" ;;
+            18) download-game "arcade" "invaders.zip" ;;
+            19) download-game "arcade" "joust.zip" ;;
+            20) download-game "arcade" "kof2000.zip" ;;
+            21) download-game "arcade" "kof2003.zip" ;;
+            22) download-game "arcade" "kof95.zip" ;;
+            23) download-game "arcade" "kof96.zip" ;;
+            24) download-game "arcade" "kong.zip" ;;
+            25) download-game "arcade" "legion.zip" ;;
+            26) download-game "arcade" "lemmings.zip" ;;
+            27) download-game "arcade" "lwings.zip" ;;
+            28) download-game "arcade" "mario.zip" ;;
+            29) download-game "arcade" "markham.zip" ;;
+            30) download-game "arcade" "matmania.zip" ;;
+            31) download-game "arcade" "matrim.zip" ;;
+            32) download-game "arcade" "mayhem.zip" ;;
+            33) download-game "arcade" "mayday.zip" ;;
+            34) download-game "arcade" "megaman.zip" ;;
+            35) download-game "arcade" "missile.zip" ;;
+            36) download-game "arcade" "mk3.zip" ;;
+            37) download-game "arcade" "mk2.zip" ;;
+            38) download-game "arcade" "mk.zip" ;;
+            39) download-game "arcade" "mmatrix.zip" ;;
+            40) download-game "arcade" "mspacman.zip" ;;
+            41) download-game "arcade" "mvsc.zip" ;;
+            42) download-game "arcade" "mwalk.zip" ;;
+            43) download-game "arcade" "nemesis.zip" ;;
+            44) download-game "arcade" "pacman.zip" ;;
+            45) download-game "arcade" "penbros.zip" ;;
+            46) download-game "arcade" "raiders.zip" ;;
+            47) download-game "arcade" "robocop.zip" ;;
+            48) download-game "arcade" "robocop2.zip" ;;
+            49) download-game "arcade" "robotron.zip" ;;
+            *) ;;
+        esac
+        done < /tmp/results
 }
 
 function atomiswave() {
