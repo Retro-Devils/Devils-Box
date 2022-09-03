@@ -1715,6 +1715,13 @@ clear
   sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
 fi
 }
+function game_fix(){
+cd ~/
+wget https://github.com/ALLRiPPED/Devils-Wine-Updates/raw/main/reg-patches/${1}
+wine reg import ${1}
+sleep 1
+rm -f ${1}
+}
 function download-pcgames() {
 if [ ! -d "$HOME/RetroPie/roms/pc/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
 else
