@@ -810,15 +810,22 @@ fi
       1 "Changes V1.0 - V1.1" \
       2 "Update  V1.0 - V1.1" \
       3 "Version Checker" \
+      4 "Force Retropie Setup" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) change_v1 ;;
     2) update_v1  ;;
     3) version_da ;;
+    4) force-setup-da ;;
     *) break ;;
     esac
   done
+}
+
+function force-setup-da() {
+cd /home/pi/RetroPie-Setup
+git checkout .; git reset --hard HEAD; git pull
 }
 
 function credits() {
