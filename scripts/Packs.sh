@@ -106,18 +106,18 @@ else
     1) download-packs "amiga" ;;
     2) download-packs "amigacd32" ;;
     3) download-packs "amstradcpc" ;;
-    4) download-packs "arcade" ;;
+    4) download-packs "arcade" "lr-mame2003" ;;
     5) download-packs "arcadia" ;;
     6) download-packs "astrocade" ;;
     7) download-packs "atari800" ;;
     8) download-packs "atari2600" ;;
-    9) download-packs "atari5200" ;;
-    10) download-packs "atari7800" ;;
+    9) download-packs "atari5200" "lr-atari800";;
+    10) download-packs "atari7800" "lr-prosystem";;
     11) download-packs "atarilynx" ;;
     12) download-packs "atarist" ;;
     13) download-packs "atomiswave" ;;
     14) download-packs "c64" ;;
-    15) download-packs "coleco" ;;
+    15) download-packs "coleco" "lr-bluemsx" ;;
     16) download-packs "dragon32" ;;
     17) download-packs "dreamcast" ;;
     18) download-packs "electron" ;;
@@ -132,7 +132,7 @@ else
     27) download-packs "lightgun" ;;
     28) download-packs "markiii" ;;
     29) download-packs "mastersystem" ;;
-    30) download-packs "megadrive" ;;
+    30) download-packs "megadrive" "lr-genesis-plus-gx" ;;
     31) megadrive-japan ;;
     32) download-packs "msx" ;;
     33) download-packs "msx2" ;;
@@ -152,14 +152,14 @@ else
     47) saturn-japan "saturn-japan" ;;
     48) download-packs "scummvm" ;;
     49) download-packs "sega32x" ;;
-    50) download-packs "segacd" ;;
+    50) download-packs "segacd" "lr-picodrive";;
     51) download-packs "sfc" ;;
-    52) download-packs "sg-1000" ;;
-    53) download-packs "snes" ;;
+    52) download-packs "sg-1000" "lr-genesis-plus-gx";;
+    53) download-packs "snes" "lr-snes9x";;
     54) msu1-pack ;;
-    55) download-packs "supergrafx" ;;
+    55) download-packs "supergrafx" "lr-beetle" ;;
     56) tg16-fix ;;
-    57) download-packs "vectrex" ;;
+    57) download-packs "vectrex" "lr-vecx";;
     58) download-packs "videopac" ;;
     59) download-packs "virtualboy" ;;
     60) download-packs "svmu" ;;
@@ -220,7 +220,7 @@ if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then choice=$(dialog --backtitle "$BA
       2 "NO" \
       2<&1 >/dev/tty)
     case "$choice" in
-      1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" install ;;
+      1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
       2) Consoles-Menu ;;
       *) return ;;
     esac
@@ -232,7 +232,17 @@ fi
 }
 
 function download-packs-alt() {
-if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
+      --ok-label Download --cancel-label Skip \
+      --menu "DO YOU WANT TO INSTALL EMU?" 30 70 50 \
+      1 "YES" \
+      2 "NO" \
+      2<&1 >/dev/tty)
+    case "$choice" in
+      1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
+      2) Consoles-Menu ;;
+      *) return ;;
+    esac
 else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
