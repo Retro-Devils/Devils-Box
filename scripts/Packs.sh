@@ -133,7 +133,7 @@ else
     28) download-packs "markiii" ;;
     29) download-packs "mastersystem" ;;
     30) download-packs "megadrive" ;;
-    31) download-packs "megadrive-japan" ;;
+    31) megadrive-japan ;;
     32) download-packs "msx" ;;
     33) download-packs "msx2" ;;
     34) download-packs "n64" ;;
@@ -149,7 +149,7 @@ else
     44) psp-pack ;;
     45) model-3 ;;
     46) download-packs "saturn" ;;
-    47) download-packs "saturn-japan" ;;
+    47) saturn-japan "saturn-japan" ;;
     48) download-packs "scummvm" ;;
     49) download-packs "sega32x" ;;
     50) download-packs "segacd" ;;
@@ -227,6 +227,26 @@ else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST2}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
 rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+fi
+}
+
+function saturn-japan() {
+if [ ! -d "$HOME/RetroPie/roms/saturn/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+else
+clear
+sudo mkdir "$HOME"/RetroPie/roms/saturn/Japanese/
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/saturn-japan/ -P "$HOME"/RetroPie/roms/saturn/Japanese/ -erobots=off
+rm -f "$HOME"/RetroPie/roms/saturn/index.html.tmp
+fi
+}
+
+function megadrive-japan() {
+if [ ! -d "$HOME/RetroPie/roms/megadrive/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+else
+clear
+sudo mkdir "$HOME"/RetroPie/roms/megadrive/Japanese/
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/megadrive-japan/ -P "$HOME"/RetroPie/roms/megadrive/Japanese/ -erobots=off
+rm -f "$HOME"/RetroPie/roms/saturn/index.html.tmp
 fi
 }
 
