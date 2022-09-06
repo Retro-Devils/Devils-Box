@@ -196,7 +196,18 @@ fi
 }
 
 function download-art() {
-if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
+      --ok-label Download --cancel-label Skip \
+      --menu "DO YOU WANT TO INSTALL EMU?" 30 70 50 \
+      1 "YES" \
+      2 "NO" \
+      2<&1 >/dev/tty)
+    case "$choice" in
+      1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
+      2) artwork-menu ;;
+      *) return ;;
+    esac
+else
 clear
 cd "$HOME/RetroPie/roms/"${1}"/"
 git init
@@ -208,8 +219,18 @@ fi
 }
 
 function saturn-japan-art() {
-if [ ! -d "$HOME"/RetroPie/roms/saturn/ ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
-clear
+if [ ! -d "$HOME/RetroPie/roms/saturn/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
+      --ok-label Download --cancel-label Skip \
+      --menu "DO YOU WANT TO INSTALL EMU?" 30 70 50 \
+      1 "YES" \
+      2 "NO" \
+      2<&1 >/dev/tty)
+    case "$choice" in
+      1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
+      2) artwork-menu ;;
+      *) return ;;
+    esac
+elseclear
 cd "$HOME"/RetroPie/roms/saturn/japan
 git init
 git remote add origin "${ART_HOST2}/saturn-japan.git"
@@ -220,8 +241,18 @@ fi
 }
 
 function megadrive-japan-art() {
-if [ ! -d "$HOME"/RetroPie/roms/megadriive/ ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
-clear
+if [ ! -d "$HOME/RetroPie/roms/megadrive/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
+      --ok-label Download --cancel-label Skip \
+      --menu "DO YOU WANT TO INSTALL EMU?" 30 70 50 \
+      1 "YES" \
+      2 "NO" \
+      2<&1 >/dev/tty)
+    case "$choice" in
+      1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
+      2) artwork-menu ;;
+      *) return ;;
+    esac
+elseclear
 cd "$HOME"/RetroPie/roms/megadrive/japan
 git init
 git remote add origin "${ART_HOST2}/megadrive-japan.git"
