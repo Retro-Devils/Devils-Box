@@ -146,7 +146,7 @@ UNLIKELY. PLEASE USE SCRAPPER" 0 0
       29) download-art "markiii" ;;
       30) download-art "mastersystem" ;;
       31) download-art "megadrive" ;;
-      32) download-art "megadrive-japan" ;;
+      32) megadrive-japan-art ;;
       33) download-art "model3" ;;
       34) download-art "msx" ;;
       35) download-art "msx2" ;;
@@ -162,7 +162,7 @@ UNLIKELY. PLEASE USE SCRAPPER" 0 0
       45) download-art "pc-engine" ;;
       46) download-art "psx" ;;
       47) download-art "saturn" ;;
-      48) download-art "saturn-japan" ;;
+      48) saturn-japan-art ;;
       49) download-art "scummvm" ;;
       50) download-art "sega32x" ;;
       51) download-art "segacd" ;;
