@@ -125,7 +125,7 @@ else
     20) download-packs "fds" ;;
     21) download-packs "gameandwatch" ;;
     22) download-packs "gb" ;;
-    23) download-packs "gba" ;;
+    23) download-packs "gba" "lr-mgba" ;;
     24) download-packs "gbc" ;;
     25) download-packs "gamegear" ;;
     26) download-packs "intellivision" ;;
@@ -213,7 +213,21 @@ rm -f "$HOME"/RetroPie/roms/pcengine/index.html.tmp
 fi
 }
 function download-packs() {
-if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; 
+then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
+      --ok-label Download --cancel-label Skip \
+      --menu "DO YOU WANT TO INSTALL EMU?" 30 70 50 \
+      - "<--------------------------------->" \
+      1 "YES" \
+      2 "NO" \
+      2<&1 >/dev/tty)
+    case "$choice" in
+      1) sudo ./retropie_packages.sh "$2" install ;;
+      2)  ;;
+      *) break ;;
+    esac
+  done
+fi
 else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
