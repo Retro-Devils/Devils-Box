@@ -205,7 +205,7 @@ rm -f "$HOME"/RetroPie/roms/msu1/index.html.tmp
 fi
 }
 function tg16-fix() {
-if [ ! -d "$HOME"/RetroPie/roms/pcengine/ ]; then dialog  --sleep 1 --title "EMU FOLDER MISSING!" --msgbox "Please Install It's Emulator Firstt" 6 40;
+if [ ! -d "$HOME"/RetroPie/roms/pcengine/ ]; then dialog  --sleep 1 --title "EMU FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
 else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/tg16 -P "$HOME"/RetroPie/roms/pcengine -erobots=off
@@ -213,7 +213,7 @@ rm -f "$HOME"/RetroPie/roms/pcengine/index.html.tmp
 fi
 }
 function download-packs() {
-if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "DEVILS BOX WILL NOW INSTALL EMU FOR YOU" 6 40 sudo ./retropie_packages.sh "$2" install ;
 else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
