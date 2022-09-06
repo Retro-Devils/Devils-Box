@@ -207,4 +207,28 @@ rm -fr "$HOME"/RetroPie/roms/"${1}"/.git
 fi
 }
 
+function saturn-japan-art() {
+if [ ! -d "$HOME"/RetroPie/roms/saturn/ ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
+clear
+cd "$HOME"/RetroPie/roms/saturn/japan
+git init
+git remote add origin "${ART_HOST2}/saturn-japan.git"
+git fetch
+git pull origin main
+rm -fr "$HOME"/RetroPie/roms/"${1}"/.git
+fi
+}
+
+function megadrive-japan-art() {
+if [ ! -d "$HOME"/RetroPie/roms/megadriive/ ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40; else
+clear
+cd "$HOME"/RetroPie/roms/megadrive/japan
+git init
+git remote add origin "${ART_HOST2}/megadrive-japan.git"
+git fetch
+git pull origin main
+rm -fr "$HOME"/RetroPie/roms/"${1}"/.git
+fi
+}
+
 artwork-menu
