@@ -213,8 +213,7 @@ rm -f "$HOME"/RetroPie/roms/pcengine/index.html.tmp
 fi
 }
 function download-packs() {
-if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; 
-then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
       --ok-label Download --cancel-label Skip \
       --menu "DO YOU WANT TO INSTALL EMU?" 30 70 50 \
       - "<--------------------------------->" \
@@ -263,5 +262,4 @@ wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/megadrive-japan/ -P "$HOME"/Re
 rm -f "$HOME"/RetroPie/roms/saturn/index.html.tmp
 fi
 }
-
 Consoles-Menu
