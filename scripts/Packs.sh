@@ -213,7 +213,7 @@ rm -f "$HOME"/RetroPie/roms/pcengine/index.html.tmp
 fi
 }
 function download-packs() {
-if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "DEVILS BOX WILL NOW INSTALL EMU FOR YOU" 6 40 sudo ./retropie_packages.sh "$2" install ;
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "DEVILS BOX WILL NOW INSTALL EMU FOR YOU" 6 40; sudo ./retropie_packages.sh "$2" install 
 else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
