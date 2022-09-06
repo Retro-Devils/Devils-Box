@@ -216,7 +216,6 @@ function download-packs() {
 if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
       --ok-label Download --cancel-label Skip \
       --menu "DO YOU WANT TO INSTALL EMU?" 30 70 50 \
-      - "<--------------------------------->" \
       1 "YES" \
       2 "NO" \
       2<&1 >/dev/tty)
