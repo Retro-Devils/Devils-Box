@@ -227,12 +227,11 @@ then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
       *) break ;;
     esac
   done
-fi
-;
 else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
 rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+fi
 fi
 }
 
