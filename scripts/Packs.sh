@@ -103,23 +103,23 @@ else
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) download-packs "amiga" ;;
-    2) download-packs "amigacd32" ;;
-    3) download-packs "amstradcpc" ;;
+    1) download-packs "amiga" "lr-puae" ;;
+    2) download-packs "amigacd32" "lr-puae" ;;
+    3) download-packs "amstradcpc" "lr-caprice32" ;;
     4) download-packs "arcade" "lr-mame2003" ;;
     5) download-packs "arcadia" ;;
     6) download-packs "astrocade" ;;
     7) download-packs "atari800" ;;
-    8) download-packs "atari2600" ;;
+    8) download-packs "atari2600" "lr-stella" ;;
     9) download-packs "atari5200" "lr-atari800";;
     10) download-packs "atari7800" "lr-prosystem";;
-    11) download-packs "atarilynx" ;;
-    12) download-packs "atarist" ;;
+    11) download-packs "atarilynx" "lr-beetle-lynx" ;;
+    12) download-packs "atarist" "lr-hatari" ;;
     13) download-packs "atomiswave" ;;
     14) download-packs "c64" ;;
     15) download-packs "coleco" "lr-bluemsx" ;;
-    16) download-packs "dragon32" ;;
-    17) download-packs "dreamcast" ;;
+    16) download-packs "dragon32" "xroar";;
+    17) download-packs "dreamcast" "redream";;
     18) download-packs "electron" ;;
     19) download-packs "famicon" ;;
     20) download-packs "fds" ;;
