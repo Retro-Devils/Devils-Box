@@ -127,8 +127,8 @@ else
     22) download-packs "gb" ;;
     23) download-packs "gba" "lr-mgba" ;;
     24) download-packs "gbc" ;;
-    25) download-packs "gamegear" ;;
-    26) download-packs "intellivision" ;;
+    25) download-packs "gamegear" "lr-genesis-plus-gx";;
+    26) download-packs "intellivision" "lr-freeintv" ;;
     27) download-packs "lightgun" ;;
     28) download-packs "markiii" ;;
     29) download-packs "mastersystem" ;;
