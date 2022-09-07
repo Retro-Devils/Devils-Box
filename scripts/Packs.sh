@@ -109,7 +109,7 @@ else
     4) download-packs "arcade" "lr-mame2003" ;;
     5) download-packs "arcadia" ;;
     6) download-packs "astrocade" ;;
-    7) download-packs "atari800" ;;
+    7) download-packs "atari800" "lr-atari800";;
     8) download-packs "atari2600" "lr-stella" ;;
     9) download-packs "atari5200" "lr-atari800";;
     10) download-packs "atari7800" "lr-prosystem";;
