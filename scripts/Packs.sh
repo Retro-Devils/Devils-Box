@@ -145,10 +145,10 @@ else
     40) download-packs "openbor" ;;
     41) download-packs "oric" ;;
     42) download-packs "pokemini" ;;
-    43) download-packs "psx" ;;
+    43) download-packs "psx" "lr-pcsx_rearmed" ;;
     44) psp-pack ;;
     45) model-3 ;;
-    46) download-packs "saturn" ;;
+    46) download-packs "saturn" "lr-yabause" ;;
     47) saturn-japan "saturn-japan" ;;
     48) download-packs "scummvm" ;;
     49) download-packs "sega32x" ;;
