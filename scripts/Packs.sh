@@ -118,8 +118,8 @@ else
     13) download-packs "atomiswave" ;;
     14) download-packs "c64" ;;
     15) download-packs "coleco" "lr-bluemsx" ;;
-    16) download-packs "dragon32" "xroar";;
-    17) download-packs "dreamcast" "redream";;
+    16) download-packs "dragon32" "xroar" ;;
+    17) download-packs "dreamcast" "redream" ;;
     18) download-packs "electron" ;;
     19) download-packs "famicon" ;;
     20) download-packs "fds" ;;
@@ -127,7 +127,7 @@ else
     22) download-packs "gb" ;;
     23) download-packs "gba" "lr-mgba" ;;
     24) download-packs "gbc" ;;
-    25) download-packs "gamegear" "lr-genesis-plus-gx";;
+    25) download-packs "gamegear" "lr-genesis-plus-gx" ;;
     26) download-packs "intellivision" "lr-freeintv" ;;
     27) download-packs "lightgun" ;;
     28) download-packs "markiii" ;;
@@ -152,14 +152,14 @@ else
     47) saturn-japan "saturn-japan" ;;
     48) download-packs "scummvm" ;;
     49) download-packs "sega32x" ;;
-    50) download-packs "segacd" "lr-picodrive";;
+    50) download-packs "segacd" "lr-picodrive" ;;
     51) download-packs "sfc" ;;
-    52) download-packs "sg-1000" "lr-genesis-plus-gx";;
-    53) download-packs "snes" "lr-snes9x";;
+    52) download-packs "sg-1000" "lr-genesis-plus-gx" ;;
+    53) download-packs "snes" "lr-snes9x" ;;
     54) msu1-pack ;;
     55) download-packs "supergrafx" "lr-beetle" ;;
     56) tg16-fix ;;
-    57) download-packs "vectrex" "lr-vecx";;
+    57) download-packs "vectrex" "lr-vecx" ;;
     58) download-packs "videopac" ;;
     59) download-packs "virtualboy" ;;
     60) download-packs "svmu" ;;
@@ -167,7 +167,7 @@ else
     62) download-packs "x1" ;;
     63) download-packs "x68000" ;;
     64) download-packs "zmachine" ;;
-    65) download-packs "zxspectrum" ;;  
+    65) download-packs "zxspectrum" ;;
      +) none  ;;
      *) break ;;
     esac
