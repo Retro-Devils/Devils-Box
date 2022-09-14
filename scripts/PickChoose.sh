@@ -304,7 +304,7 @@ function dreamcast() {
                  "9" "Alone in the Dark The New Nightmare CD1 " off \
                 "10" "Alone in the Dark The New Nightmare CD2 " off \
                 "11" "Aqua GT                                 " off \
-                "12" "ARL-RTE                                 " off \
+                "12" "Arcade Racing Legends                   " off \
                 "13" "Army Men Sarge's Heroes                 " off \
                 "14" "Bangai-O                                " off \
                 "15" "Biohazard Code Veronica Kanzenban CD1   " off \
