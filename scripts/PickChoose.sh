@@ -293,48 +293,110 @@ function dreamcast() {
         local choice
       whiptail --clear --title "PICK & CHOOSE DREAMCAST" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
-                "1" "Capcom VS SNK          " off \
-                "2" "Capcom VS SNK 2        " off \
-                "3" "Confindentl Mission    " off \
-                "4" "Crazy Taxi             " off \
-                "5" "Crazy Taxi 2           " off \
-                "6" "Dead Or Alive 2        " off \
-                "7" "Jet Grind Radio        " off \
-                "8" "Marvel VS Capcom 2       " off \
-                "9" "Power Stone 2            " off \
-                "10" "Psychic Force 2012       " off \
-                "11" "Resident Evil Veronica CD1" off \
-                "12" "Resident Evil Veronica CD2" off \
-                "13" "Shenmue Disc 1            " off \
-                "14" "Shenmue Disc 2            " off \
-                "15" "Shenmue Disc 3            " off \
-                "16" "Sonic Adventure      " off \
-                "17" "Sonic Adventures 2   " off \
-                "18" "Soul Calibur         " off \
-                "19" "gamelist.xml          " off \
+                 "1" "4 Wheel Thunder                         " off \
+                 "2" "18 Wheeler American Pro Trucker         " off \
+                 "3" "102 Dalmatians Puppies to the Rescue    " off \
+                 "4" "Advanced Daisenryaku 2001               " off \
+                 "5" "AeroWings                               " off \
+                 "6" "AeroWings 2 Airstrike                   " off \
+                 "7" "AirForce Delta                          " off \
+                 "8" "Alien Front Online                      " off \
+                 "9" "Alone in the Dark The New Nightmare CD1 " off \
+                "10" "Alone in the Dark The New Nightmare CD2 " off \
+                "11" "Aqua GT                                 " off \
+                "12" "ARL-RTE                                 " off \
+                "13" "Army Men Sarge's Heroes                 " off \
+                "14" "Bangai-O                                " off \
+                "15" "Biohazard Code Veronica Kanzenban CD1   " off \
+                "16" "Biohazard Code Veronica Kanzenban CD2   " off \
+                "17" "Biohazard Code Veronica Genteiban CD1   " off \
+                "18" "Biohazard Code Veronica Genteiban CD2   " off \
+                "19" "Biohazard 3 Last Escape                 " off \
+                "20" "Blue Stinger                            " off \
+                "21" "Bomberman Online                        " off \
+                "22" "Border Down                             " off \
+                "23" "Buzz Lightyear of Star Command          " off \
+                "24" "Cannon Spike                            " off \
+                "25" "Capcom vs. SNK Millennium Fight 2000    " off \
+                "26" "Capcom vs. SNK Millennium Fight 2000 Pro" off \
+                "27" "Capcom vs. SNK 2 Millionaire Fighting 2001" off \
+                "28" "Capcom vs K                             " off \
+                "29" "Carrier                                 " off \
+                "30" "Castlevania Chronicles DX               " off \
+                "31" "Centipede                               " off \
+                "32" "Chaos Field                             " off \
+                "33" "Charge 'N Blast                         " off \
+                "34" "Chicken Run                             " off \
+                "35" "ChuChu Rocket!                          " off \
+                "36" "Cleopatra Fortune                       " off \
+                "37" "Coaster Works                           " off \
+                "38" "Confidential Mission                    " off \
+                "39" "Conflict Zone Modern War Strategy       " off \
+                "40" "Cool Cool Toon                          " off \
+                "41" "Cosmic Smash                            " off \
+                "42" "Crazy Taxi                              " off \
+                "43" "Crazy Taxi 2                            " off \
+                "44" "D2 CD1                                  " off \
+                "45" "D2 CD2                                  " off \
+                "46" "D2 CD3                                  " off \
+                "47" "D2 CD4                                  " off \
+                "48" "Dance Dance Revolution 2nd Mix          " off \
+                "49" "Dance Dance Revolution Club Version     " off \
+                "50" "Dave Mirra Freestyle BMX                " off \
                 2>/tmp/results
     while read -r choice  
         do
         case $choice in
-            1) download-game "dreamcast" "CapcomvsSNK.cdi" ;;
-            2) download-game "dreamcast" "Capcom vs. SNK 2 - Millionaire Fighting 2001 (Japan).cdi" ;;
-            3) download-game "dreamcast" "Confidential Mission (USA).chd" ;;
-            4) download-game "dreamcast" "Crazy Taxi (USA).chd" ;;
-            5) download-game "dreamcast" "Crazy Taxi 2 (USA).cdi" ;;
-            6) download-game "dreamcast" "Dead or Alive 2 (USA).cdi" ;;
-            7) download-game "dreamcast" "Jet Grind Radio (USA).cdi" ;;
-            8) download-game "dreamcast" "Marvel vs. Capcom 2 (USA).cdi" ;;
-            9) download-game "dreamcast" "Power Stone 2 (USA).cdi" ;;
-            10) download-game "dreamcast" "Psychic Force 2012 (USA).cdi" ;;
-            11) download-game "dreamcast" "Resident Evil Code - Veronica (Disc 1) (USA).cdi" ;;
-            12) download-game "dreamcast" "Resident Evil Code - Veronica (Disc 2) (USA).cdi" ;;
-            13) download-game "dreamcast" "Shenmue (USA) (Disc 1).cdi" ;;
-            14) download-game "dreamcast" "Shenmue (USA) (Disc 2).cdi" ;;
-            15) download-game "dreamcast" "Shenmue (USA) (Disc 3).cdi" ;;
-            16) download-game "dreamcast" "Sonic Adventure (USA).cdi" ;;
-            17) download-game "dreamcast" "Sonic Adventure 2 (USA).cdi" ;;
-            18) download-game "dreamcast" "Soul Calibur (USA).cdi" ;;
-            19) download-game "dreamcast" "gamelist.xml" ;;
+             1) download-game "dreamcast" "4 Wheel Thunder (USA).chd" ;;
+             2) download-game "dreamcast" "18 Wheeler - American Pro Trucker (USA).chd" ;;
+             3) download-game "dreamcast" "102 Dalmatians - Puppies to the Rescue (USA).chd" ;;
+             4) download-game "dreamcast" "Advanced Daisenryaku 2001 (Japan) (Translated En).chd" ;;
+             5) download-game "dreamcast" "AeroWings (USA).chd" ;;
+             6) download-game "dreamcast" "AeroWings 2 - Airstrike (USA).chd" ;;
+             7) download-game "dreamcast" "AirForce Delta (USA).chd" ;;
+             8) download-game "dreamcast" "Alien Front Online (USA).chd" ;;
+             9) download-game "dreamcast" "Alone in the Dark - The New Nightmare (USA) (Disc 1).chd" ;;
+            10) download-game "dreamcast" "Alone in the Dark - The New Nightmare (USA) (Disc 2).chd" ;;
+            11) download-game "dreamcast" "Aqua GT (Europe).chd" ;;
+            12) download-game "dreamcast" "ARL-RTE.cdi" ;;
+            13) download-game "dreamcast" "Army Men - Sarge's Heroes (USA).chd" ;;
+            14) download-game "dreamcast" "Bangai-O (USA).chd" ;;
+            15) download-game "dreamcast" "Biohazard - Code - Veronica - Kanzenban (Japan) (Translated En) (Disc 1).chd" ;;
+            16) download-game "dreamcast" "Biohazard - Code - Veronica - Kanzenban (Japan) (Translated En) (Disc 2).chd" ;;
+            17) download-game "dreamcast" "Biohazard - Code - Veronica (Japan) (Disc 1) (Genteiban).chd" ;;
+            18) download-game "dreamcast" "Biohazard - Code - Veronica (Japan) (Disc 2) (Genteiban).chd" ;;
+            19) download-game "dreamcast" "Biohazard 3 - Last Escape (Japan).chd" ;;
+            20) download-game "dreamcast" "Blue Stinger (USA).chd" ;;
+            21) download-game "dreamcast" "Bomberman Online (USA).chd" ;;
+            22) download-game "dreamcast" "Border Down (Japan).chd" ;;
+            23) download-game "dreamcast" "Buzz Lightyear of Star Command (USA).chd" ;;
+            24) download-game "dreamcast" "Cannon Spike (USA).chd" ;;
+            25) download-game "dreamcast" "Capcom vs. SNK - Millennium Fight 2000 (USA).chd" ;;
+            26) download-game "dreamcast" "Capcom vs. SNK - Millennium Fight 2000 Pro (Japan).chd" ;;
+            27) download-game "dreamcast" "Capcom vs. SNK 2 - Millionaire Fighting 2001 (Japan).chd" ;;
+            28) download-game "dreamcast" "CapcomvsSNK.cdi" ;;
+            29) download-game "dreamcast" "Carrier (USA).chd" ;;
+            30) download-game "dreamcast" "Castlevania Chronicles DX (Dreamcast Edition).cdi" ;;
+            31) download-game "dreamcast" "Centipede (USA).chd" ;;
+            32) download-game "dreamcast" "Chaos Field (Japan).chd" ;;
+            33) download-game "dreamcast" "Charge 'N Blast (USA).chd" ;;
+            34) download-game "dreamcast" "Chicken Run (USA).chd" ;;
+            35) download-game "dreamcast" "ChuChu Rocket! (USA).chd" ;;
+            36) download-game "dreamcast" "Cleopatra Fortune (Japan).chd" ;;
+            37) download-game "dreamcast" "Coaster Works (USA).chd" ;;
+            38) download-game "dreamcast" "Confidential Mission (USA).chd" ;;
+            39) download-game "dreamcast" "Conflict Zone - Modern War Strategy (USA).chd" ;;
+            40) download-game "dreamcast" "Cool Cool Toon (Japan).chd" ;;
+            41) download-game "dreamcast" "Cosmic Smash (Japan).chd" ;;
+            42) download-game "dreamcast" "Crazy Taxi (USA).chd" ;;
+            43) download-game "dreamcast" "Crazy Taxi 2 (USA).chd" ;;
+            44) download-game "dreamcast" "D2 (USA) (Disc 1).chd" ;;
+            45) download-game "dreamcast" "D2 (USA) (Disc 2).chd" ;;
+            46) download-game "dreamcast" "D2 (USA) (Disc 3).chd" ;;
+            47) download-game "dreamcast" "D2 (USA) (Disc 4).chd" ;;
+            48) download-game "dreamcast" "Dance Dance Revolution 2nd Mix - Dreamcast Edition (Japan).chd" ;;
+            49) download-game "dreamcast" "Dance Dance Revolution Club Version - Dreamcast Edition (Japan).chd" ;;
+            50) download-game "dreamcast" "Dave Mirra Freestyle BMX (USA).chd" ;;
             *)  ;;
         esac
         done < /tmp/results
