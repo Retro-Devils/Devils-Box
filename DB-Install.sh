@@ -8,7 +8,7 @@ function main_menu() {
     local choice
 
     while true; do
-        choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX 3.09---UPDATED 8/31/22 " \
+        choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX 3.10---UPDATED 9/14/22 " \
             --ok-label Select --cancel-label Exit-Installer \
             --menu "DEVILS BOX RETROPIE INSTALLER" 25 40 40 \
             1 "Install/Update Devils Box " \
