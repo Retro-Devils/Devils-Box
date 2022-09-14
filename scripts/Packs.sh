@@ -109,9 +109,9 @@ else
     4) download-packs "arcade" "lr-mame2003" ;;
     5) download-packs "arcadia" ;;
     6) download-packs "astrocade" ;;
-    7) download-packs "atari800" "lr-atari800";;
+    7) download-packs "atari800" "lr-atari800" ;;
     8) download-packs "atari2600" "lr-stella" ;;
-    9) download-packs "atari5200" "lr-atari800";;
+    9) download-packs "atari5200" "lr-atari800" ;;
     10) download-packs "atari7800" "lr-prosystem";;
     11) download-packs "atarilynx" "lr-beetle-lynx" ;;
     12) download-packs "atarist" "lr-hatari" ;;
@@ -215,7 +215,7 @@ fi
 function download-packs() {
 if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
       --ok-label Download --cancel-label Skip \
-      --menu "DO YOU WANT TO INSTALL EMU?" 30 70 50 \
+      --menu "DO YOU WANT TO INSTALL "${2}"?" 30 70 50 \
       1 "YES" \
       2 "NO" \
       2<&1 >/dev/tty)
@@ -234,7 +234,7 @@ fi
 function download-packs-alt() {
 if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
       --ok-label Download --cancel-label Skip \
-      --menu "DO YOU WANT TO INSTALL EMU?" 30 70 50 \
+      --menu "DO YOU WANT TO INSTALL "${2}"?" 30 70 50 \
       1 "YES" \
       2 "NO" \
       2<&1 >/dev/tty)
