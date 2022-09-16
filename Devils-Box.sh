@@ -178,7 +178,7 @@ curl -sSL https://t.ly/5Oqi | bash
 fi
 }
 function es-themes () {
-sudo /home/pi/RetroPie-Setup/retropie_packages.sh retropiemenu launch /home/pi/RetroPie/retropiemenu/esthemes.rp
+sudo /home/pi/RetroPie-Setup/retropie_packages.sh esthemes gui
 }
 function pi-marquee2() {
 if [ -d "/home/pi/PieMarquee2" ]; then
