@@ -839,9 +839,7 @@ git checkout .; git reset --hard HEAD; git pull
 
 function credits() {
 clear
-if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
-	omxplayer "$HOME"/Devils-Box/files/videos/credits.mp4 > /dev/null 2>&1
-fi
+omxplayer "$HOME"/Devils-Box/files/videos/credits.mp4 > /dev/null 2>&1
 }
 
 #ABOUT DEVILS BOX #
@@ -892,7 +890,7 @@ check_for_dbsettings
   while true; do
     choice=$(dialog --colors --backtitle "$BACKTITLE" --title " DEVILS BOX SETTINGS MENU " \
       --ok-label Select --cancel-label Back \
-      --menu "SELECT AND APPLY SETTING" 30 50 30 \
+      --menu "SELECT AND APPLY SETTING" 1 0 50 10 \
       1 "Auto Update Devils Box $audb" \
       2 "Turn Script Videos ON/OFF $isdb" \
       2>&1 >/dev/tty)
