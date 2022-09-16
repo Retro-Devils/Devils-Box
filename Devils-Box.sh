@@ -109,7 +109,9 @@ fi
 #-----------COMMUNITY TOOL BOX MENU FUNCTIONS-----------#
 function community_tools() {
   while true; do 
-omxplayer "$HOME"/Devils-Box/files/videos/community-toolbox.mp4 > /dev/null 2>&1
+if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
+	omxplayer "$HOME"/Devils-Box/files/videos/community-toolbox.mp4 > /dev/null 2>&1
+fi
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " COMMUNITY TOOL BOX MENU " \
       --ok-label Select --cancel-label Main-Menu \
@@ -602,7 +604,9 @@ wget -O - "https://raw.githubusercontent.com/ALLRiPPED/retroflag-picase/master/i
 ###   DEVILS TOOL BOX MENU FUNCTIONS   ###
 function devils_tools() {
   while true; do
-omxplayer "$HOME"/Devils-Box/files/videos/devils-toolbox.mp4 > /dev/null 2>&1
+if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
+	omxplayer "$HOME"/Devils-Box/files/videos/devils-toolbox.mp4 > /dev/null 2>&1
+fi
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS TOOL BOX MENU " \
       --ok-label Select --cancel-label Main-Menu \
