@@ -1,4 +1,5 @@
 #!/bin/bash
+DB_SETTINGS="$HOME/.devilsbox/db_settings.ini"
 #-----------------DEVILS-GAME HOSTS---------------------#
 HOST1="https://archive.org/download/the-devils-box-alt"
 HOST2="https://archive.org/download/the-devils-box_202112"
@@ -13,7 +14,9 @@ HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 
-omxplayer "$HOME"/Devils-Box/files/videos/hack-packs.mp4 > /dev/null 2>&1
+if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
+	omxplayer "$HOME"/Devils-Box/files/videos/hack-packs.mp4 > /dev/null 2>&1
+fi
 
 if [ -f "/usr/local/bin/confirm" ]; then
   confirm=0

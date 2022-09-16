@@ -1,7 +1,10 @@
 #!/bin/bash
+DB_SETTINGS="$HOME/.devilsbox/db_settings.ini"
 #-----------INTRO VIDEO-----------#
 clear
-omxplayer "$HOME"/Devils-Box/files/videos/art-packs.mp4 > /dev/null 2>&1
+if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
+	omxplayer "$HOME"/Devils-Box/files/videos/art-packs.mp4 > /dev/null 2>&1
+fi
 
 #--------ART HOSTS----------#
 ART_HOST="https://archive.org/download/devils-box-media-alt"

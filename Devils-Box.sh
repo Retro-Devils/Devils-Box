@@ -1,6 +1,7 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
 BACKTITLE="My name is... Shake-Zula. The mic-rula, The old schoolah, Ya wanna trip? I'll bring it to ya"
+DB_SETTINGS="$HOME/.devilsbox/db_settings.ini"
 
 #-----------COLORS----------#
 rst="$(tput sgr0)"
@@ -10,7 +11,9 @@ bfgred="${bld}$(tput setaf 1)"
 
 #-----------INTRO VIDEO-----------#
 clear
-omxplayer "$HOME"/Devils-Box/files/videos/intro.mp4  > /dev/null 2>&1
+if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
+	omxplayer "$HOME"/Devils-Box/files/videos/intro.mp4  > /dev/null 2>&1
+fi
 
 #-----------MAIN MENU-----------#
 function main_menu() {
@@ -23,7 +26,7 @@ function main_menu() {
   fi
     choice=(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
       --ok-label Select --cancel-label Exit-Devils-Box \
-      --menu "DEVILS BOX V3.10--------------UPDATED 9/14/22" 23 50 30 )
+      --menu "DEVILS BOX V3.15--------------UPDATED 9/15/22" 23 50 30 )
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
       - "<---->Downloaders<------>"
@@ -102,7 +105,6 @@ Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 bash "$HOME"/Devils-Box/scripts/PickChoose.sh
 fi
 }
-
 
 #-----------COMMUNITY TOOL BOX MENU FUNCTIONS-----------#
 function community_tools() {
@@ -769,23 +771,26 @@ function db_tools() {
       --menu "SELECT AND APPLY TOOL" 20 50 30 \
       1 "About Devils Box    " \
       2 "Help With Devils Box" \
-      3 "Remove Devils Box   " \
-      4 "Update Devils Box   " \
+      3 "Devils Box Settings " \
+      4 "Remove Devils Box   " \
+      5 "Update Devils Box   " \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) about_db  ;;
-    2) help_db   ;;
-    3) remove_db ;;
-    4) update_db ;;
+    1) about_db ;;
+    2) help_db ;;
+    3) settings_db ;;
+    4) remove_db ;;
+    5) update_db ;;
     *) break ;;
     esac
   done
 }
+
 #----DIABLOS ARCADE TOOLS---#
 function da_tools() {
   DA_STATUS=0
-  if [ -d "/opt/retropie/configs/all/emulationstation/themes/devil chromey/" ]; then 
+  if [ -d "/opt/retropie/configs/all/emulationstation/themes/devil chromey/" ]; then
     DA_STATUS=1
   fi
   local choice
@@ -847,6 +852,53 @@ function about_db() {
 read -n 1 -s -r -p "Press any key to Continue"
 }
 
+#------Check for DB Settings------#
+function check_for_dbsettings() {
+if [ ! -d "$HOME/.devilsbox" ]; then mkdir "$HOME/.devilsbox"; fi
+if [ ! -f "$DB_SETTINGS" ]; then 
+cat <<\EOF_db_settings.ini > "$DB_SETTINGS"
+#DB SETTINGS
+auto_update_flag=0
+intro_splash_flag=1
+EOF_db_settings.ini
+sudo chmod +x $DB_SETTINGS
+else
+	if ! grep 'auto_update_flag=' "$DB_SETTINGS" > /dev/null 2>&1; then sed -i -e '$aauto_update_flag=0' "$DB_SETTINGS" > /dev/null 2>&1; fi
+	if ! grep 'intro_splash_flag=' "$DB_SETTINGS" > /dev/null 2>&1; then sed -i -e '$aintro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; fi
+fi
+if grep 'auto_update_flag=0' "$DB_SETTINGS" > /dev/null 2>&1; then
+	audb="\Z1Disabled\Zn"
+else
+	audb="\Z2Enabled\Zn"
+fi
+if grep 'intro_splash_flag=0' "$DB_SETTINGS" > /dev/null 2>&1; then
+	isdb="\Z1Disabled\Zn"
+else
+	isdb="\Z2Enabled\Zn"
+fi
+}
+
+#DEVILS BOX SETTINGS#
+function settings_db() {
+check_for_dbsettings
+  local choice
+
+  while true; do
+    choice=$(dialog --colors --backtitle "$BACKTITLE" --title " DEVILS BOX SETTINGS MENU " \
+      --ok-label Select --cancel-label Back \
+      --menu "SELECT AND APPLY SETTING" 30 50 30 \
+      1 "Auto Update Devils Box $audb" \
+      2 "Turn Script Videos ON/OFF $isdb" \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) auto_update ;;
+    2) intro_splash ;;
+    *) break ;;
+    esac
+  done
+}
+
 #REMOVE DEVILS BOX#
 function remove_db() {
 clear
@@ -868,7 +920,8 @@ else
   sleep 1
   sudo rm "$HOME"/RetroPie/retropiemenu/Devils-Box.sh
   cd "$HOME"/Devils-Box || exit
-  git pull -f
+  git reset --hard
+  git pull
   cp "$HOME"/Devils-Box/Devils-Box.sh -f "$HOME"/RetroPie/retropiemenu/
   sudo cp "$HOME"/Devils-Box/files/box -f /usr/local/bin/
   sudo cp "$HOME"/Devils-Box/Devils-Box.sh -f /usr/local/bin/Devils-Box
@@ -884,9 +937,7 @@ else
 fi
 }
 
-
 #------DIABLOS ARCADE FUNCTIONS----#
-
 function update_v1() {
 clear
 sudo rm -R /usr/local/bin/da-version
@@ -1051,12 +1102,62 @@ function check-servers() {
 bash "$HOME"/Devils-Box/scripts/Server-Check.sh
 }
 
+function auto_update() {
+check_for_dbsettings
+if grep 'auto_update_flag=0' "$DB_SETTINGS" > /dev/null 2>&1; then
+	echo "Auto update Turned On"
+	sed -i "s|auto_update_flag=0|auto_update_flag=1|" "$DB_SETTINGS"
+	audb="\Z2Enabled\Zn"
+else
+	echo "Auto Update Turned Off"
+	sed -i "s|auto_update_flag=1|auto_update_flag=0|" "$DB_SETTINGS"
+	audb="\Z1Disabled\Zn"
+fi
+}
+
+function intro_splash() {
+check_for_dbsettings
+if grep 'intro_splash_flag=0' "$DB_SETTINGS" > /dev/null 2>&1; then
+	echo "Turning Script Videos On"
+	sed -i "s|intro_splash_flag=0|intro_splash_flag=1|" "$DB_SETTINGS"
+	isdb="\Z2Enabled\Zn"
+else
+	echo "Turning Script Videos Off"
+	sed -i "s|intro_splash_flag=1|intro_splash_flag=0|" "$DB_SETTINGS"
+	isdb="\Z1Disabled\Zn"
+fi
+}
+
 #-----------NET CHECKER-----------#
 wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
   NETCHECK=0
 else
   NETCHECK=1
+fi
+
+if [ $NETCHECK = 1 ]; then dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " Offline ... Updates not Availible Please Connect To Internet!" 0 0
+else
+	check_for_dbsettings
+	if grep 'auto_update_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
+		cd "$HOME"/Devils-Box || exit
+		git remote update
+		LAST_UPDATE=`git show --no-notes --format=format:"%H" main | head -n 1`
+		LAST_COMMIT=`git show --no-notes --format=format:"%H" origin/main | head -n 1`
+
+		if [ $LAST_COMMIT != $LAST_UPDATE ]; then
+			if dialog --stdout --title "Update Availible, Continue Auto-Update?" \
+					--backtitle "Continue Auto-Update?" \
+					--yesno "Yes: Continue Auto-Update, No: Skip Auto-Update" 7 60; then
+				update_db
+				exit 1
+			else
+				echo "$(tput setaf 2)Skipping Update$(tput setaf 0)"
+			fi
+		else
+			echo "$(tput setaf 2)No updates available$(tput setaf 0)"
+		fi
+	fi
 fi
 
 main_menu
