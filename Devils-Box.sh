@@ -890,7 +890,7 @@ check_for_dbsettings
   while true; do
     choice=$(dialog --colors --backtitle "$BACKTITLE" --title " DEVILS BOX SETTINGS MENU " \
       --ok-label Select --cancel-label Back \
-      --menu "SELECT AND APPLY SETTING" 1 0 50 10 \
+      --menu "SELECT AND APPLY SETTING" 20 50 10 \
       1 "Auto Update Devils Box $audb" \
       2 "Turn Script Videos ON/OFF $isdb" \
       2>&1 >/dev/tty)
