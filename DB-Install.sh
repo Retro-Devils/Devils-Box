@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export NCURSES_NO_UTF8_ACS=1
+DB_SETTINGS="$HOME/.devilsbox/db_settings.ini"
 ###----------------------------###
 ### INSTALLER MENU FUNCTIONS   ###
 ###----------------------------###
@@ -8,7 +9,7 @@ function main_menu() {
     local choice
 
     while true; do
-        choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX 3.10---UPDATED 9/14/22 " \
+        choice=$(dialog --backtitle "$BACKTITLE" --title " DEVILS BOX 3.15---UPDATED 9/15/22 " \
             --ok-label Select --cancel-label Exit-Installer \
             --menu "DEVILS BOX RETROPIE INSTALLER" 25 40 40 \
             1 "Install/Update Devils Box " \
@@ -43,6 +44,15 @@ sudo chmod 755 /usr/local/bin/box
 chmod 755 $HOME/RetroPie/retropiemenu/Devils-Box.sh
 sudo chmod 755 /usr/local/bin/Devils-Box
 sudo chmod 755 /usr/local/bin/switcheroo
+if [ ! -d "$HOME/.devilsbox" ]; then mkdir "$HOME/.devilsbox"; fi
+if [ ! -f "$DB_SETTINGS" ]; then 
+cat <<\EOF_db_settings.ini > "$DB_SETTINGS"
+#DB SETTINGS
+auto_update_flag=0
+intro_splash_flag=1
+EOF_db_settings.ini
+sudo chmod +x $DB_SETTINGS
+fi
 sleep 1
 if [ ! -s "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then sudo rm -f $HOME/RetroPie/retropiemenu/gamelist.xml; fi
 if [ ! -f "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml $HOME/RetroPie/retropiemenu/gamelist.xml; fi
