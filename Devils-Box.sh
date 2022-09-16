@@ -882,7 +882,7 @@ else
 fi
 }
 
-#DEVILS BOX SETTINGS#
+#-----DEVILS BOX SETTINGS-----#
 function settings_db() {
 check_for_dbsettings
   local choice
