@@ -839,7 +839,9 @@ git checkout .; git reset --hard HEAD; git pull
 
 function credits() {
 clear
-omxplayer "$HOME"/Devils-Box/files/videos/credits.mp4 > /dev/null 2>&1
+if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
+	omxplayer "$HOME"/Devils-Box/files/videos/credits.mp4 > /dev/null 2>&1
+fi
 }
 
 #ABOUT DEVILS BOX #
