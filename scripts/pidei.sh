@@ -134,7 +134,7 @@ function emu-menu() {
     45) install-emu "Sega Model-3" "lr-snes9x" ;;
     46) install-emu "Sega Saturn" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
     47) multi-cores "Sega Saturn Japan" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
-    48) install-emu "ScummVM" ;;
+    48) install-emu "ScummVM" "lr-scummvm" "NO" "scummvm" ;;
     49) install-emu "Sega32x" ;;
     50) install-emu "SegaCD" "lr-picodrive" ;;
     51) install-emu "SFC" ;;
@@ -146,7 +146,7 @@ function emu-menu() {
     57) install-emu "Vectrex" "lr-vecx" ;;
     58) install-emu "Videopac" ;;
     59) install-emu "Virtualboy" "lr-bettle-vb" ;;
-    60) install-emu "ScumVMu" "lr-scummvm" "NO" "scummvm" ;;
+    60) install-emu "VMU" "lr-vemulator.sh" ;;
     61) install-wine ;;
     62) install-emu "Wonderswancolor" "lr-bettle-wsan";;
     63) install-emu "X1" ;;
@@ -166,7 +166,7 @@ function emu-menu() {
 
 function install-emu() {
 cd $HOME/RetroPie-Setup
-sudo ./retropie_packages.sh "$2"
+sudo ./retropie_packages.sh "$2" install_bin
 }
 
 
@@ -182,9 +182,9 @@ function multi-cores() {
     while read -r choice
         do
         case $choice in
-            1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
-            2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" ;;
-            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" ;;
+            1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" install_bin ;;
+            2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" install_bin ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" install_bin ;;
 	    +) none ;;
             *) ;;
         esac
@@ -205,10 +205,10 @@ function multi-cores2() {
     while read -r choice
         do
         case $choice in
-            1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
-            2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" ;;
-            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" ;;
-            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" ;;
+            1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" install_bin ;;
+            2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" install_bin ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" install_bin ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" install_bin ;;
 	    +) none ;;
             *) ;;
         esac
@@ -230,10 +230,12 @@ function multi-cores3() {
     while read -r choice
         do
         case $choice in
-            1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
-            2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" ;;
-            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" ;;
-            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" ;;
+            1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" install_bin ;;
+            2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" install_bin ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" install_bin ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" install_bin ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$6" install_bin ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$7" install_bin ;;
 	    +) none ;;
             *) ;;
         esac
@@ -267,6 +269,11 @@ https://raw.githubusercontent.com/Retro-Devils/Sega-Model-3-PI-4/main/SM3-INSTAL
 ###-----------------------------PI.D.E.I TOOLS-----------------------------###
 
 function update-setup-script() {
+dialog  --sleep 1 --title "UPDATE RPI SETUP" --msgbox "
+<------------------ATTENTION------------------->
+Pi D.E.I WILL NOW FORCE UPDATE RETROPIE SETUP
+IF YOU WANT TO CANCEL PLEASE PRES CONTROL+C NOW
+<---------------------------------------------->" 0 0
 cd /home/pi/RetroPie-Setup
 git checkout .; git reset --hard HEAD; git pull
 }
