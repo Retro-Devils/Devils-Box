@@ -274,12 +274,14 @@ function comm_emu_tools() {
       1 "RetroPie Setup Menu------------------Retro Pie" \
       2 "Mugen Installer-----------Supreme/Retro Devils" \
       3 "PIKISS Installer-----------------Jose Cerrejon" \
+      4 "MAME-DEV--------------------------Folly/DTeam1" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) rpi-menu ;;
     2) mugen ;;
     3) pikiss ;;
+    4) mame-dev ;;
     *) break ;;
     esac
   done
@@ -329,6 +331,28 @@ dialog  --sleep 1 --title "EXIT MESSAGE" --msgbox "
      -Reinstall. Something might have been missed 
 -----ALWAYS REMEBER HAVE FUN THATS THE POINT-----" 0 0
 fi
+}
+
+function mame-dev() {
+clear
+if [ -f "/home/pi/RetroPie-Setup/scriptmodules/supplementary/add-mamedev-systems.sh" ]; then
+sudo rm "$HOME"/RetroPie-Setup/scriptmodules/supplementary/add-mamedev-systems.sh
+wget https://raw.githubusercontent.com/FollyMaddy/RetroPie-Share/main/00-scriptmodules-00/supplementary/add-mamedev-systems.sh -f /home/pi/RetroPie-Setup/scriptmodules/supplementary/add-mamedev-systems.sh
+sleep 2
+dialog  --sleep 1 --title "MAME Dev Installer FYI" --msgbox " 
+--------------------------------------------
+-----------INSTALLER WARNING & FYI----------
+--------------------------------------------
+- This installer adds generators for lr-mess, lr-mame and mame standalone
+- This makes it way easier to play Tiger Handhelds, Konami Hnadhelds & more
+--------------------------------------------
+Devils Box Will Now Launch RetroPie Setup
+You may have to update it to see --add-mamedev-systems--
+----------------TO USE----------------------
+GO TO
+- Configuration / tools
+- add-mamedev-systems" 0 0
+sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
 }
 
 ###   HARDWARE TOOLS MENU FUNCTIONS ###
