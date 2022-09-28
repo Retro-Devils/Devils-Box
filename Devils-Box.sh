@@ -274,7 +274,7 @@ function comm_emu_tools() {
       1 "RetroPie Setup Menu------------------Retro Pie" \
       2 "Mugen Installer-----------Supreme/Retro Devils" \
       3 "PIKISS Installer-----------------Jose Cerrejon" \
-      4 "MAME-DEV--------------------------Folly/DTeam1" \
+      4 "MAME-Dev Installer----------------Folly/DTeam1" \
       2>&1 >/dev/tty)
 
     case "$choice" in
