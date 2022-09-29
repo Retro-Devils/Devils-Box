@@ -148,7 +148,7 @@ function comm_audio() {
       7 "Install T.A.M.O. Plus----------------------------thepitster " \
       - "<-------------------->Information<------------------------> " \
       8 "I.M.P-------------Integrated Music Player------------------ " \
-      9 "T.A.M.P.O --------Theme And Music Plus Overlay------------- " \
+      9 "T.A.M.O. Plus-----Theme And Music Overlay Plus------------- " \
       2>&1 >/dev/tty)
 
     case "$choice" in
