@@ -339,10 +339,10 @@ if [ -f "/home/pi/RetroPie-Setup/scriptmodules/supplementary/add-mamedev-systems
 sudo rm "$HOME"/RetroPie-Setup/scriptmodules/supplementary/add-mamedev-systems.sh
 dialog  --sleep 1 --title "Updating MAME Dev" --msgbox "
 ----Devils Box Will Now Try To Update MAME Dev----" 0 0
-wget https://raw.githubusercontent.com/FollyMaddy/RetroPie-Share/main/00-scriptmodules-00/supplementary/add-mamedev-systems.sh -f /home/pi/RetroPie-Setup/scriptmodules/supplementary/add-mamedev-systems.sh
+wget https://raw.githubusercontent.com/FollyMaddy/RetroPie-Share/main/00-scriptmodules-00/supplementary/add-mamedev-systems.sh -P /home/pi/RetroPie-Setup/scriptmodules/supplementary/
 sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
 else
-wget https://raw.githubusercontent.com/FollyMaddy/RetroPie-Share/main/00-scriptmodules-00/supplementary/add-mamedev-systems.sh -f /home/pi/RetroPie-Setup/scriptmodules/supplementary/add-mamedev-systems.sh
+wget https://raw.githubusercontent.com/FollyMaddy/RetroPie-Share/main/00-scriptmodules-00/supplementary/add-mamedev-systems.sh -P /home/pi/RetroPie-Setup/scriptmodules/supplementary/
 sleep 2
 dialog  --sleep 1 --title "MAME Dev Installer FYI" --msgbox " 
 --------------------------------------------
