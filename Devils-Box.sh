@@ -271,10 +271,12 @@ function comm_emu_tools() {
     choice=$(dialog --backtitle "$BACKTITLE" --title "COMMUNITY EMU TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 70 50 \
-      1 "RetroPie Setup Menu------------------Retro Pie" \
-      2 "Mugen Installer-----------Supreme/Retro Devils" \
-      3 "PIKISS Installer-----------------Jose Cerrejon" \
-      4 "MAME-Dev Installer----------------Folly/DTeam1" \
+      1 "RetroPie Setup Menu------------------------Retro Pie" \
+      2 "Mugen Installer-----------------Supreme/Retro Devils" \
+      3 "PIKISS Installer-----------------------Jose Cerrejon" \
+      4 "MAME-Dev Installer----------------------Folly/DTeam1" \
+      5 "Legal Games------------------------------------Folly" \
+      6 "Add GeorgeMcMullen, Xarkuniv, Valerino & Folly Repos" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -282,6 +284,8 @@ function comm_emu_tools() {
     2) mugen ;;
     3) pikiss ;;
     4) mame-dev ;;
+    5) legal-stuff ;;
+    6) add-repos ;;
     *) break ;;
     esac
   done
@@ -357,6 +361,60 @@ You may have to update it to see --add-mamedev-systems--
 GO TO
 - Configuration / tools
 - add-mamedev-systems" 0 0
+sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
+fi
+}
+
+function legal-stuff() {
+clear
+if [ -f "/home/pi/RetroPie-Setup/scriptmodules/supplementary/download-legal-stuff.sh" ]; then
+sudo rm "$HOME"/RetroPie-Setup/scriptmodules/supplementary/add-mamedev-systems.sh
+dialog  --sleep 1 --title "Updating Legall Stuff" --msgbox "
+Devils Box Will Now Try To Legal Stuff by Folly" 0 0
+wget https://raw.githubusercontent.com/FollyMaddy/RetroPie-Share/main/00-scriptmodules-00/supplementary/download-legal-stuff.sh -P /home/pi/RetroPie-Setup/scriptmodules/supplementary/
+sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
+else
+wget https://raw.githubusercontent.com/FollyMaddy/RetroPie-Share/main/00-scriptmodules-00/supplementary/download-legal-stuff.sh -P /home/pi/RetroPie-Setup/scriptmodules/supplementary/
+sleep 2
+dialog  --sleep 1 --title "Legal Stuff Installer FYI" --msgbox " 
+--------------------------------------------
+-----------INSTALLER WARNING & FYI----------
+--------------------------------------------
+- This installer adds a downloader for legal games to RetroPie Setup
+--------------------------------------------
+Devils Box Will Now Launch RetroPie Setup
+You may have to update it to see --download-legal-stuff--
+----------------TO USE----------------------
+GO TO
+- Configuration / tools
+- click download-legal-stuff
+--------------------------------------------
+Props and Credits To Folly" 0 0
+sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
+fi
+}
+
+function add-repos() {
+clear
+if [ -f "/home/pi/RetroPie-Setup/scriptmodules/supplementary/add-ext-repos.sh.sh" ]; then
+sudo rm "$HOME"/RetroPie-Setup/scriptmodules/supplementary/add-ext-repos.sh.sh
+dialog  --sleep 1 --title "Updating Add Reposf" --msgbox "
+Devils Box Will Now Try To Add Repos by Folly" 0 0
+wget https://raw.githubusercontent.com/FollyMaddy/RetroPie-Share/main/00-scriptmodules-00/supplementary/add-ext-repos.sh.sh -P /home/pi/RetroPie-Setup/scriptmodules/supplementary/
+sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
+else
+wget https://raw.githubusercontent.com/FollyMaddy/RetroPie-Share/main/00-scriptmodules-00/supplementary/add-ext-repos.sh -P /home/pi/RetroPie-Setup/scriptmodules/supplementary/
+sleep 2
+dialog  --sleep 1 --title "Legal Stuff Installer FYI" --msgbox " 
+--------------------------------------------
+-----------INSTALLER WARNING & FYI----------
+--------------------------------------------
+- This installer adds extra repos to RetroPie Setup Script
+--------------------------------------------
+Devils Box Will Now Launch RetroPie Setup
+You may have to update RetroPie Setup
+--------------------------------------------
+Props and Credits To Folly" 0 0
 sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
 fi
 }
