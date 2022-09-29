@@ -353,6 +353,7 @@ GO TO
 - Configuration / tools
 - add-mamedev-systems" 0 0
 sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
+fi
 }
 
 ###   HARDWARE TOOLS MENU FUNCTIONS ###
