@@ -9,7 +9,7 @@ HOST4="https://archive.org/download/devils-wine"
 HOST5="https://archive.org/download/devils-dos"
 HOST8="https://archive.org/download/the-devils-box-alt/model3"
 HOST9="https://archive.org/download/rpi-homebrews"
-HOST10="https://archive.org/download/rpi-homebrews"
+HOST10="https://archive.org/download/rpi-translations"
 
 #---------------NON-DEVILS-HOSTS-----------------------#
 HOST6="https://archive.org/download/PSP_US_Arquivista"
@@ -81,7 +81,7 @@ if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then choice=$(dialog --backtitle "$BA
     esac
 else
 clear
-wget -m -r -np -nH -nd -R "index.html" "${HOST10}"/"${2}"/ -P "$HOME"/RetroPie/roms/"${1}"/Homebrews -erobots=off
+wget -m -r -np -nH -nd -R "index.html" "${HOST10}"/"${2}"/ -P "$HOME"/RetroPie/roms/"${1}"/Translations -erobots=off
 rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
 fi
 }
