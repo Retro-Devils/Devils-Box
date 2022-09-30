@@ -33,18 +33,20 @@ else
     choice=$(dialog --backtitle "$BACKTITLE" --title " HOMEBREWS DOWNLOAD MENU" \
       --ok-label Download --cancel-label Main-Menu \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK" 30 70 50 \
-      + "<->CONSOLE NAME<----------------># OF GAMES" \
-      1 "Atari2600 HOMEBREWS               425 GAMES" \
-      2 "Colecovision HOMEBREWS             61 GAMES" \
-      3 "Gameboy Advance HOMEBREWS           1 GAMES" \
-      4 "Gameboy Color HOMEBREWS            41 GAMES" \
-      5 "Gameboy HOMEBREWS                 47 GAMES" \
-      6 "Genesis HOMEBREWS                  9 GAMES" \
-      7 "Gamegear HOMEBREWS                 2 GAMES" \
-      8 "NES HOMEBREWS                    143 GAMES" \
-      9 "PSP HOMEBREWS                     23 GAMES" \
-      10 "SNES HOMEBREWS                   33 GAMES" \
-      + "<--------->LAST UPDATED 9/30/22<--------->" \
+      + "<->CONSOLE NAME<-----------------># OF GAMES" \
+      1 "Atari2600 HOMEBREWS                425 GAMES" \
+      2 "Colecovision HOMEBREWS              61 GAMES" \
+      3 "Gameboy Advance HOMEBREWS            1 GAMES" \
+      4 "Gameboy Color HOMEBREWS             41 GAMES" \
+      5 "Gameboy HOMEBREWS                  47 GAMES" \
+      6 "Genesis HOMEBREWS                   9 GAMES" \
+      7 "Gamegear HOMEBREWS                  2 GAMES" \
+      8 "NES HOMEBREWS                     143 GAMES" \
+      9 "PSP HOMEBREWS                      23 GAMES" \
+      10 "SNES HOMEBREWS                    33 GAMES" \
+      + "<--------->LAST UPDATED 9/30/22<---------->" \
+      + "<->Credits to Official Rom Hack Database<->" \
+
       2>&1 >/dev/tty)
 
     case "$choice" in
