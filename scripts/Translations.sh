@@ -45,6 +45,8 @@ else
       8 "NES TRANSLATIONS                    143 GAMES" \
       9 "PSP TRANSLATIONS                     23 GAMES" \
       10 "SNES TRANSLATIONS                   33 GAMES" \
+      + "<---------->LAST UPDATED 9/30/22<----------->" \
+      + "<-->Credits to Official Rom Hack Database<-->" \
       2>&1 >/dev/tty)
 
     case "$choice" in
