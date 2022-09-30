@@ -44,6 +44,7 @@ else
       8 "NES HOMEBREWS                    143 GAMES" \
       9 "PSP HOMEBREWS                     23 GAMES" \
       10 "SNES HOMEBREWS                   33 GAMES" \
+      + "<--------->LAST UPDATED 9/30/22<--------->" \
       2>&1 >/dev/tty)
 
     case "$choice" in
