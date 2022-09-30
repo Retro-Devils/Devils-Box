@@ -60,7 +60,7 @@ else
     7) homebrew-packs "genesis" "Genesis-Homebrews" ;;
     8) homebrew-packs "nes" "NES-Homebrews" ;;
     9) homebrew-packs "psp" "PSP-Homebrews" ;;
-    10) download-packs "snes" "SNES-Homebrews" ;;
+    10) homebrew-packs "snes" "SNES-Homebrews" ;;
      +) none  ;;
      *) break ;;
     esac
