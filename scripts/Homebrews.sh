@@ -81,7 +81,7 @@ if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then choice=$(dialog --backtitle "$BA
 else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST9}"/"${2}"/ -P "$HOME"/RetroPie/roms/"${1}"/Homebrews -erobots=off
-rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+rm -f "$HOME"/RetroPie/roms/"${1}"/Homebrews/index.html.tmp
 fi
 }
 
