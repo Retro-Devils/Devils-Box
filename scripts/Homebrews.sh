@@ -17,10 +17,6 @@ HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 
-
-if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
-	omxplayer "$HOME"/Devils-Box/files/videos/console-packs.mp4 > /dev/null 2>&1
-fi
 if [ -f "/usr/local/bin/confirm" ]; then
   confirm=0
 else
