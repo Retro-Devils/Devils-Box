@@ -33,16 +33,17 @@ function main_menu() {
       1 "Artwork Packs"
       2 "Console Packs"
       3 "Hacked Packs"
-      4 "Pick & Choose"
+      4 "Homebrew Packs"
+      5 "Pick & Choose"
       + "<---->Tool Boxes<------->"
-      5 "Community Tool Box"      
-      6 "Devils Tool Box"
+      6 "Community Tool Box"      
+      7 "Devils Tool Box"
       - "<---->System Tools<----->"
-      7 "Reboot System"
-      8 "Show System Info"
-      9 "Expand System Memory"
+      8 "Reboot System"
+      9 "Show System Info"
+      10 "Expand System Memory"
       - "<----------------------->" 
-      10 "Devils Box Credits")
+      11 "Devils Box Credits")
     else
       options=( \
       1 "Install Devils-Box")
@@ -52,13 +53,14 @@ function main_menu() {
     1) if [ "$DB_STATUS" == 1 ]; then artwork; else curl -sSL https://git.io/JSDGq | bash; fi; ;;
     2) consoles ;;
     3) hacked ;;
-    4) pick ;;
-    5) community_tools ;;
-    6) devils_tools ;;
-    7) system_reboot ;;
-    8) show_sysinfo ;;
-    9) expand_mem ;;
-    10) credits ;;
+    4) homebrew ;;
+    5) pick ;;
+    6) community_tools ;;
+    7) devils_tools ;;
+    8) system_reboot ;;
+    9) show_sysinfo ;;
+    10) expand_mem ;;
+    11) credits ;;
     -) nono ;;
     +) none ;;
     *) break ;;
@@ -93,6 +95,17 @@ dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox "
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
 bash "$HOME"/Devils-Box/scripts/Hacks.sh
+fi
+}
+
+
+#-----------Homebrews-----------#
+function hacked() {
+if [ $NETCHECK -eq 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+  else
+bash "$HOME"/Devils-Box/scripts/Homebrews.sh
 fi
 }
 
