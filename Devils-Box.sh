@@ -100,7 +100,7 @@ fi
 
 
 #-----------Homebrews-----------#
-function hacked() {
+function homebrew() {
 if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
