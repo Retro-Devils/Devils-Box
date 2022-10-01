@@ -26,7 +26,7 @@ function main_menu() {
   fi
     choice=(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
       --ok-label Select --cancel-label Exit-Devils-Box \
-      --menu "DEVILS BOX V3.15--------------UPDATED 9/15/22" 23 50 30 )
+      --menu "DEVILS BOX V3.16--------------UPDATED 9/15/22" 23 50 30 )
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
       - "<---->Downloaders<------>"
