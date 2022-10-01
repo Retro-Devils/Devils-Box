@@ -61,7 +61,7 @@ else
     2) translation-packs "dreamcast" "Dreamcast-Translations" ;;
     3) translation-packs "gbc" "Gameboy-Color-Translations" ;;
     4) translation-packs "gb" "Gameboy-Translations" ;;
-    5) translation-packs "gg" "Gamegear-Translations" ;;
+    5) translation-packs "gamegear" "Gamegear-Translations" ;;
     6) translation-packs "nds" "NDS-Translations" ;;
     7) translation-packs "saturn" "Saturn-Translations" ;;
     8) translation-packs "sfc" "Super-Famicon-Translations" ;;
