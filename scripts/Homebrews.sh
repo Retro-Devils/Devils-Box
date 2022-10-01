@@ -22,6 +22,15 @@ if [ -f "/usr/local/bin/confirm" ]; then
 else
   confirm=1
 fi
+dialog  --sleep 1 --title "HOMEBREW PACKS INFO" --msgbox " 
+<-------------WELCOME--------------->
+WHATS A HOMEBREW?
+A HOMEBREW IS A GAME MADE BY SOMEONE NOT A COMPANY.
+ 
+CAN I STOP DOWNLOAD MIDWAY THRU?
+--SURE PRESS CONTROL+C
+WILL IT KEEP MY PROGRESS?
+--YES TO LAST DOWNLOADED GAME" 0 0
 
 function Homebrew-Menu() {
 if [ $confirm = 1 ]; then
