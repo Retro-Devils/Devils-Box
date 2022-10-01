@@ -35,31 +35,23 @@ else
       --ok-label Download --cancel-label Main-Menu \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK" 30 70 50 \
       + "<->CONSOLE NAME<-------------------># OF GAMES" \
-      1 "Atari2600 TRANSLATIONS               425 GAMES" \
-      2 "Colecovision TRANSLATIONS             61 GAMES" \
-      3 "Gameboy Advance TRANSLATIONS           1 GAMES" \
-      4 "Gameboy Color TRANSLATIONS            41 GAMES" \
-      5 "Gameboy TRANSLATIONS                 47 GAMES" \
-      6 "Genesis TRANSLATIONS                  9 GAMES" \
-      7 "Gamegear TRANSLATIONS                 2 GAMES" \
-      8 "NES TRANSLATIONS                    143 GAMES" \
-      9 "PSP TRANSLATIONS                     23 GAMES" \
-      10 "SNES TRANSLATIONS                   33 GAMES" \
+      1 "3DO TRANSLATIONS                       2 GAMES" \
+      2 "Gameboy Color TRANSLATIONS            20 GAMES" \
+      3 "Gameboy TRANSLATIONS                  59 GAMES" \
+      4 "NDS TRANSLATIONS                       1 GAMES" \
+      5 "Saturn TRANSLATIONS                    1 GAMES" \
+      6 "Super Famicon TRANSLATIONS           232 GAMES" \
       + "<---------->LAST UPDATED 9/30/22<----------->" \
       + "<-->Credits to Official Rom Hack Database<-->" \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) translation-packs "atari2600" "Atari-2600-Translations" ;;
-    2) translation-packs "coleco" "Colecovision-2600-Translations" ;;
-    3) translation-packs "gba" "Gameboy-Advance-Translations" ;;
-    4) translation-packs "gbc" "Gameboy-Color-Translations" ;;
-    5) translation-packs "gb" "Atari-2600-Translations" ;;
-    6) translation-packs "gamegear" "Gamegear-Translations" ;;
-    7) translation-packs "genesis" "Genesis-Translations" ;;
-    8) translation-packs "nes" "NES-Translations" ;;
-    9) translation-packs "psp" "PSP-Translations" ;;
-    10) translation-packs "snes" "SNES-Translations" ;;
+    1) translation-packs "3do" "3DO-Translations" ;;
+    2) translation-packs "gbc" "Gameboy-Color-Translations" ;;
+    3) translation-packs "gb" "Gameboy-Translations" ;;
+    4) translation-packs "nds" "NDS-Translations" ;;
+    5) translation-packs "saturn" "Saturn-Translations" ;;
+    6) translation-packs "sfc" "Super-Famicon-Translations" ;;
      +) none  ;;
      *) break ;;
     esac
