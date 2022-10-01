@@ -24,6 +24,17 @@ else
   confirm=1
 fi
 
+dialog  --sleep 1 --title "HOMEBREW PACKS INFO" --msgbox " 
+<-------------WELCOME--------------->
+WHATS ARE TRANSLATIONS?
+THESE GAME PACKS ARE TRANSLATED FROM LANGUAGE TO ENGLISH.
+THIS IS DONE BY THE COMMUNITY/INDIVUALS.
+ 
+CAN I STOP DOWNLOAD MIDWAY THRU?
+--SURE PRESS CONTROL+C
+WILL IT KEEP MY PROGRESS?
+--YES TO LAST DOWNLOADED GAME" 0 0
+
 function Translations-Menu() {
 if [ $confirm = 1 ]; then
 dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox " 
