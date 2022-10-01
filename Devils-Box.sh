@@ -393,7 +393,7 @@ fi
 function legal-stuff() {
 clear
 if [ -f "/home/pi/RetroPie-Setup/scriptmodules/supplementary/download-legal-stuff.sh" ]; then
-sudo rm "$HOME"/RetroPie-Setup/scriptmodules/supplementary/add-mamedev-systems.sh
+sudo rm "$HOME"/RetroPie-Setup/scriptmodules/supplementary/download-legal-stuff.sh
 dialog  --sleep 1 --title "Updating Legall Stuff" --msgbox "
 Devils Box Will Now Try To Update Legal Stuff by Folly" 0 0
 wget https://raw.githubusercontent.com/FollyMaddy/RetroPie-Share/main/00-scriptmodules-00/supplementary/download_legal_stuff.sh -P /home/pi/RetroPie-Setup/scriptmodules/supplementary/
