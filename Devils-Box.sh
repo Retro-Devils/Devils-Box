@@ -35,15 +35,16 @@ function main_menu() {
       3 "Hacked Packs"
       4 "Homebrew Packs"
       5 "Pick & Choose"
+      6 "Translations Packs"
       + "<---->Tool Boxes<------->"
-      6 "Community Tool Box"      
-      7 "Devils Tool Box"
+      7 "Community Tool Box"      
+      8 "Devils Tool Box"
       - "<---->System Tools<----->"
-      8 "Reboot System"
-      9 "Show System Info"
-      10 "Expand System Memory"
+      9 "Reboot System"
+      10 "Show System Info"
+      11 "Expand System Memory"
       - "<----------------------->" 
-      11 "Devils Box Credits")
+      12 "Devils Box Credits")
     else
       options=( \
       1 "Install Devils-Box")
@@ -55,12 +56,13 @@ function main_menu() {
     3) hacked ;;
     4) homebrew ;;
     5) pick ;;
-    6) community_tools ;;
-    7) devils_tools ;;
-    8) system_reboot ;;
-    9) show_sysinfo ;;
-    10) expand_mem ;;
-    11) credits ;;
+    6) translations ;;
+    7) community_tools ;;
+    8) devils_tools ;;
+    9) system_reboot ;;
+    10) show_sysinfo ;;
+    11) expand_mem ;;
+    12) credits ;;
     -) nono ;;
     +) none ;;
     *) break ;;
@@ -116,6 +118,16 @@ dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox "
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
 bash "$HOME"/Devils-Box/scripts/PickChoose.sh
+fi
+}
+
+#-----------Translations-----------#
+function translations() {
+if [ $NETCHECK -eq 1 ]; then
+dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
+Offline ... Downloads not Availible Please Connect To Internet!" 0 0
+  else
+bash "$HOME"/Devils-Box/scripts/Translations.sh
 fi
 }
 
