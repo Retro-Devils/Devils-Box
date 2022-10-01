@@ -58,11 +58,13 @@ else
 
     case "$choice" in
     1) translation-packs "3do" "3DO-Translations" ;;
-    2) translation-packs "gbc" "Gameboy-Color-Translations" ;;
-    3) translation-packs "gb" "Gameboy-Translations" ;;
-    4) translation-packs "nds" "NDS-Translations" ;;
-    5) translation-packs "saturn" "Saturn-Translations" ;;
-    6) translation-packs "sfc" "Super-Famicon-Translations" ;;
+    2) translation-packs "dreamcast" "Dreamcast-Translations" ;;
+    3) translation-packs "gbc" "Gameboy-Color-Translations" ;;
+    4) translation-packs "gb" "Gameboy-Translations" ;;
+    5) translation-packs "gg" "Gamegear-Translations" ;;
+    6) translation-packs "nds" "NDS-Translations" ;;
+    7) translation-packs "saturn" "Saturn-Translations" ;;
+    8) translation-packs "sfc" "Super-Famicon-Translations" ;;
      +) none  ;;
      *) break ;;
     esac
