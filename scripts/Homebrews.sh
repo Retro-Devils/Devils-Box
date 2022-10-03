@@ -62,7 +62,7 @@ else
     2) homebrew-packs "coleco" "Colecovision-2600-Homebrews" ;;
     3) homebrew-packs "gba" "Gameboy-Advance-Homebrews" ;;
     4) homebrew-packs "gbc" "Gameboy-Color-Homebrews" ;;
-    5) homebrew-packs "gb" "Atari-2600-Homebrews" ;;
+    5) homebrew-packs "gb" "Gameboy-Homebrews" ;;
     6) homebrew-packs "genesis" "Gamegear-Homebrews" ;;
     7) homebrew-packs "gamegear" "Genesis-Homebrews" ;;
     8) homebrew-packs "nes" "NES-Homebrews" ;;
