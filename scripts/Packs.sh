@@ -123,7 +123,7 @@ else
     16) download-packs "dragon32" "xroar" ;;
     17) download-packs "dreamcast" "redream" ;;
     18) download-packs "electron" ;;
-    19) download-packs "famicon" ;;
+    19) download-packs "famicon" "lr-fceumm";;
     20) download-packs "fds" ;;
     21) download-packs "gameandwatch" ;;
     22) download-packs "gb" ;;
