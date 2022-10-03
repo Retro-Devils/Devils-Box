@@ -1663,7 +1663,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                 "7" "Cuphead                                 11GB" off \
                 "8" "Delta Force Xtreme                     843MB" off \
                 "9" "Diablo 2                               1.8GB" off \
-	       "10" "EVE Mugen                             12.0GB" off \
+	       "10" "EVE Mugen                             15.5GB" off \
                "11" "Fallout                                535MB" off \
                "12" "Fallout 2                              555MB" off \
                "13" "Fallout Tactics                        1.5GB" off \
@@ -1702,7 +1702,7 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                7) download-winegames "Retro-Devils_Cuphead.zip" ;;
                8) download-winegames "Retro-Devils_DeltaForceXtreme.zip" ;;
                9) download-winegames "Retro-Devils_Diablo2.zip" ;;
-	      10) download-winegames "Retro-Devils_EVE-Mugen.zip" ;;
+	      10) download-eve "Retro-Devils_EVE-MUGEN.7z" ;;
               11) download-winegames "Retro-Devils_Fallout.zip" ;;
               12) download-winegames "Retro-Devils_Fallout2.zip" ;;
               13) download-winegames "Retro-Devils_FalloutTactics.zip" ;;
@@ -1751,6 +1751,18 @@ else
   wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/mugens -erobots=off
   unzip -o "$HOME"/RetroPie/roms/mugens/"${1}" -d "$HOME"/RetroPie/roms/mugens
   chmod 755 "$HOME"/RetroPie/roms/mugens/*.sh
+  sudo rm -r "$HOME"/RetroPie/roms/mugens/"${1}"
+fi
+}
+function download-eve() {
+if [ ! -d "$HOME/RetroPie/roms/wine" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
+else
+  clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/mugens/games/.installs/ -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/mugens/games/.installs/"${1}" -d "$HOME"/RetroPie/roms/mugens/games/.installs
+  sleep 2 
+  wget wget -m -r -np -nH -nd -R "index.html" ${HOST4}/EVE-Mugen.sh -P "$HOME"/RetroPie/roms/mugens/ -erobots=off
+  chmod 755 "$HOME"/RetroPie/roms/mugens/EVE-Mugen.sh
   sudo rm -r "$HOME"/RetroPie/roms/mugens/"${1}"
 fi
 }
