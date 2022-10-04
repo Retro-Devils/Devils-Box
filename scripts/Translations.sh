@@ -18,12 +18,9 @@ HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 
-if [ -f "/usr/local/bin/confirm" ]; then
-  confirm=0
-else
-  confirm=1
-fi
-
+if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
+omxplayer "$HOME"/Devils-Box/files/videos/translations-packs.mp4 > /dev/null 2>&1
+sleep 1
 dialog  --sleep 1 --title "HOMEBREW PACKS INFO" --msgbox " 
 <-------------WELCOME--------------->
 WHATS ARE TRANSLATIONS?
@@ -34,6 +31,13 @@ CAN I STOP DOWNLOAD MIDWAY THRU?
 --SURE PRESS CONTROL+C
 WILL IT KEEP MY PROGRESS?
 --YES TO LAST DOWNLOADED GAME" 0 0
+fi
+
+if [ -f "/usr/local/bin/confirm" ]; then
+  confirm=0
+else
+  confirm=1
+fi
 
 function Translations-Menu() {
 if [ $confirm = 1 ]; then
