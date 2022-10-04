@@ -1004,8 +1004,8 @@ check_for_dbsettings
     choice=$(dialog --colors --backtitle "$BACKTITLE" --title " DEVILS BOX SETTINGS MENU " \
       --ok-label Select --cancel-label Back \
       --menu "SELECT AND APPLY SETTING" 20 50 10 \
-      1 "Auto Update Devils Box $audb" \
-      2 "Turn Script Videos ON/OFF $isdb" \
+      1 "Auto Update Devils Box ON/OFF $audb" \
+      2 "Turn Intro Videos/Messages ON/OFF $isdb" \
       2>&1 >/dev/tty)
 
     case "$choice" in
