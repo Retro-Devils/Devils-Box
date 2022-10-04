@@ -3,7 +3,18 @@ DB_SETTINGS="$HOME/.devilsbox/db_settings.ini"
 #-----------INTRO VIDEO-----------#
 clear
 if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
-	omxplayer "$HOME"/Devils-Box/files/videos/art-packs.mp4 > /dev/null 2>&1
+omxplayer "$HOME"/Devils-Box/files/videos/art-packs.mp4 > /dev/null 2>&1
+sleep 1
+dialog  --sleep 1 --title "ARTWORK PACKS INFO" --msgbox " 
+<-------------WELCOME--------------->
+WHATS THIS DO?
+-DOWNLOADS ARTWORK PACKS
+-TRYS TO SCRAPE AFTERWARDS 
+F.A.Q
+WHAT GAMES IS THIS ART FOR?
+THE CONSOLES/GAMES IN DEVILS BOX 
+WILL THIS WORK WITH MY GAMES?
+UNLIKELY. PLEASE USE SCRAPPER" 0 0
 fi
 
 #--------ART HOSTS----------#
@@ -24,16 +35,6 @@ if [ $confirm = 1 ]; then
 dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox " 
 PLEASE Install/Update Devils Box" 0 0
 else
-dialog  --sleep 1 --title "ARTWORK PACKS INFO" --msgbox " 
-<-------------WELCOME--------------->
-WHATS THIS DO?
--DOWNLOADS ARTWORK PACKS
--TRYS TO SCRAPE AFTERWARDS 
-F.A.Q
-WHAT GAMES IS THIS ART FOR?
-THE CONSOLES/GAMES IN DEVILS BOX 
-WILL THIS WORK WITH MY GAMES?
-UNLIKELY. PLEASE USE SCRAPPER" 0 0
   local choice
 
  while true; do
