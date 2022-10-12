@@ -217,7 +217,7 @@ function fm_emu() {
 
 #-----------FOLLYMADDY GAMES MENU FUNCTIONS-----------#
 
-function fm_emu() {
+function fm_games() {
   while true; do 
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title "FOLLYMADDY EMU MENU " \
