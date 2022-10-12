@@ -184,7 +184,7 @@ function follymaddy_toolbox() {
       --ok-label Select --cancel-label Main-Menu \
       --menu "SELECT TOOLSET AND PRESS A  " 20 50 30 \
       1 "FollyMaddy Emulator Tools " \
-      3 "FollyMaddy Game Tools " \
+      2 "FollyMaddy Game Tools " \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -197,7 +197,7 @@ function follymaddy_toolbox() {
 
 #-----------FOLLYMADDY EMU MENU FUNCTIONS-----------#
 
-function fd_emu() {
+function fm_emu() {
   while true; do 
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title "FOLLYMADDY EMU MENU " \
@@ -217,7 +217,7 @@ function fd_emu() {
 
 #-----------FOLLYMADDY GAMES MENU FUNCTIONS-----------#
 
-function fd_emu() {
+function fm_emu() {
   while true; do 
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title "FOLLYMADDY EMU MENU " \
