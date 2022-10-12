@@ -37,7 +37,7 @@ function main_menu() {
       5 "Pick & Choose"
       6 "Translations Packs"
       + "<---->Tool Boxes<------->"
-      7 "Community Tool Box"      
+      7 "Community Tool Boxes"      
       8 "Devils Tool Box"
       - "<---->System Tools<----->"
       9 "Reboot System"
@@ -57,7 +57,7 @@ function main_menu() {
     4) homebrew ;;
     5) pick ;;
     6) translations ;;
-    7) community_tools ;;
+    7) community_toolboxes ;;
     8) devils_tools ;;
     9) system_reboot ;;
     10) show_sysinfo ;;
@@ -131,14 +131,33 @@ bash "$HOME"/Devils-Box/scripts/Translations.sh
 fi
 }
 
-#-----------COMMUNITY TOOL BOX MENU FUNCTIONS-----------#
-function community_tools() {
+#-----------COMMUNITY TOOL BOXES MENU FUNCTIONS-----------#
+function community_toolboxes() {
   while true; do 
 if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
 	omxplayer "$HOME"/Devils-Box/files/videos/community-toolbox.mp4 > /dev/null 2>&1
 fi
   local choice
-    choice=$(dialog --backtitle "$BACKTITLE" --title " COMMUNITY TOOL BOX MENU " \
+    choice=$(dialog --backtitle "$BACKTITLE" --title " COMMUNITY TOOL BOXes MENU " \
+      --ok-label Select --cancel-label Main-Menu \
+      --menu "SELECT TOOLBOX AND PRESS A  " 20 50 30 \
+      1 "FollyMaddy Toolbox " \
+      2 "General Toolbox " \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) follymaddy_toolbox ;;
+    2) general_toolbox ;;
+    *) break ;;
+    esac
+  done
+}
+
+#-----------GENERAL TOOL BOX MENU FUNCTIONS-----------#
+function general_toolbox() {
+  while true; do
+  local choice
+    choice=$(dialog --backtitle "$BACKTITLE" --title " GENERAL TOOL BOX MENU " \
       --ok-label Select --cancel-label Main-Menu \
       --menu "SELECT TOOLSET AND PRESS A  " 20 50 30 \
       1 "Community Audio & Visual Tools " \
@@ -150,6 +169,65 @@ fi
     1) comm_audio ;;
     2) comm_emu_tools ;;
     3) comm_hardware_tools ;;
+    *) break ;;
+    esac
+  done
+}
+
+
+#-----------FOLLYMADDY TOOL BOX MENU FUNCTIONS-----------#
+
+function follymaddy_toolbox() {
+  while true; do 
+  local choice
+    choice=$(dialog --backtitle "$BACKTITLE" --title " GENERAL TOOL BOX MENU " \
+      --ok-label Select --cancel-label Main-Menu \
+      --menu "SELECT TOOLSET AND PRESS A  " 20 50 30 \
+      1 "FollyMaddy Emulator Tools " \
+      3 "FollyMaddy Game Tools " \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) fm_emu ;;
+    2) fm_games ;;
+    *) break ;;
+    esac
+  done
+}
+
+#-----------FOLLYMADDY EMU MENU FUNCTIONS-----------#
+
+function fd_emu() {
+  while true; do 
+  local choice
+    choice=$(dialog --backtitle "$BACKTITLE" --title "FOLLYMADDY EMU MENU " \
+      --ok-label Select --cancel-label Main-Menu \
+      --menu "SELECT EMU TOOL & PRESS A  " 20 50 30 \
+      1 "ADD MESS-MENU TO RPI SETUP " \
+      2 "ADD EXTRA REPOS TO RPI SETUP " \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) mame-dev ;;
+    2) add-fm-repos ;;
+    *) break ;;
+    esac
+  done
+}
+
+#-----------FOLLYMADDY GAMES MENU FUNCTIONS-----------#
+
+function fd_emu() {
+  while true; do 
+  local choice
+    choice=$(dialog --backtitle "$BACKTITLE" --title "FOLLYMADDY EMU MENU " \
+      --ok-label Select --cancel-label Main-Menu \
+      --menu "SELECT EMU TOOL & PRESS A  " 20 50 30 \
+      1 "ADD LEGAL GAMES TO RPI SETUP " \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) legal-games ;;
     *) break ;;
     esac
   done
@@ -299,18 +377,12 @@ function comm_emu_tools() {
       1 "RetroPie Setup Menu------------------------Retro Pie" \
       2 "Mugen Installer-----------------Supreme/Retro Devils" \
       3 "PIKISS Installer-----------------------Jose Cerrejon" \
-      4 "MAME-Dev Installer----------------------Folly/DTeam1" \
-      5 "Legal Games------------------------------------Folly" \
-      6 "Add GeorgeMcMullen, Xarkuniv, Valerino & Folly Repos" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) rpi-menu ;;
     2) mugen ;;
     3) pikiss ;;
-    4) mame-dev ;;
-    5) legal-stuff ;;
-    6) add-repos ;;
     *) break ;;
     esac
   done
@@ -390,7 +462,7 @@ sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
 fi
 }
 
-function legal-stuff() {
+function legal-games() {
 clear
 if [ -f "/home/pi/RetroPie-Setup/scriptmodules/supplementary/download-legal-stuff.sh" ]; then
 sudo rm "$HOME"/RetroPie-Setup/scriptmodules/supplementary/download-legal-stuff.sh
@@ -419,7 +491,7 @@ sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
 fi
 }
 
-function add-repos() {
+function add-fm-repos() {
 clear
 if [ -f "/home/pi/RetroPie-Setup/scriptmodules/supplementary/add-ext-repos.sh.sh" ]; then
 sudo rm "$HOME"/RetroPie-Setup/scriptmodules/supplementary/add-ext-repos.sh.sh
