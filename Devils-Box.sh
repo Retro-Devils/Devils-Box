@@ -158,7 +158,7 @@ function general_toolbox() {
   while true; do
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " GENERAL TOOL BOX MENU " \
-      --ok-label Select --cancel-label Main-Menu \
+      --ok-label Select --cancel-label Back \
       --menu "SELECT TOOLSET AND PRESS A  " 20 50 30 \
       1 "Community Audio & Visual Tools " \
       2 "Community Emulator Tools " \
@@ -181,7 +181,7 @@ function follymaddy_toolbox() {
   while true; do 
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " GENERAL TOOL BOX MENU " \
-      --ok-label Select --cancel-label Main-Menu \
+      --ok-label Select --cancel-label Back \
       --menu "SELECT TOOLSET AND PRESS A  " 20 50 30 \
       1 "FollyMaddy Emulator Tools " \
       2 "FollyMaddy Game Tools " \
@@ -201,7 +201,7 @@ function fm_emu() {
   while true; do 
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title "FOLLYMADDY EMU MENU " \
-      --ok-label Select --cancel-label Main-Menu \
+      --ok-label Select --cancel-label Back \
       --menu "SELECT EMU TOOL & PRESS A  " 20 50 30 \
       1 "ADD MESS-MENU TO RPI SETUP " \
       2 "ADD EXTRA REPOS TO RPI SETUP " \
@@ -221,7 +221,7 @@ function fm_emu() {
   while true; do 
   local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title "FOLLYMADDY EMU MENU " \
-      --ok-label Select --cancel-label Main-Menu \
+      --ok-label Select --cancel-label Back \
       --menu "SELECT EMU TOOL & PRESS A  " 20 50 30 \
       1 "ADD LEGAL GAMES TO RPI SETUP " \
       2>&1 >/dev/tty)
