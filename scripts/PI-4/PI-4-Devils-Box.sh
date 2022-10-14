@@ -1041,6 +1041,7 @@ else
   sudo chmod 755 /usr/local/bin/box
   sudo chmod 755 /usr/local/bin/Devils-Box
   chmod 755 "$HOME"/RetroPie/retropiemenu/Devils-Box.sh
+  chmod -R 755 $HOME/Devils-Box
   sleep 1
   if [ -d "$HOME/RetroPie/retropiemenu/Devils-Box/" ]; then sudo rm -fR "$HOME"/RetroPie/retropiemenu/Devils-Box/; fi
   bash "$HOME"/RetroPie/retropiemenu/Devils-Box.sh
