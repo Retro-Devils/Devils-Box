@@ -107,7 +107,7 @@ if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
-bash "$HOME"/Devils-Box/scripts/Homebrews.sh
+bash "$HOME"/Devils-Box/scripts/PI-3/PI-3-Homebrews.sh
 fi
 }
 
