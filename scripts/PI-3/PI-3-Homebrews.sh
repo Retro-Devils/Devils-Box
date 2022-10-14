@@ -56,8 +56,7 @@ else
       6 "Genesis HOMEBREWS                   9 GAMES" \
       7 "Gamegear HOMEBREWS                  2 GAMES" \
       8 "NES HOMEBREWS                     143 GAMES" \
-      9 "PSP HOMEBREWS                      23 GAMES" \
-      10 "SNES HOMEBREWS                    33 GAMES" \
+      9 "SNES HOMEBREWS                    33 GAMES" \
        + "<--------->LAST UPDATED 9/30/22<---------->" \
        + "<->Credits to Official Rom Hack Database<->" \
       2>&1 >/dev/tty)
@@ -71,8 +70,7 @@ else
     6) homebrew-packs "genesis" "Gamegear-Homebrews" ;;
     7) homebrew-packs "gamegear" "Genesis-Homebrews" ;;
     8) homebrew-packs "nes" "NES-Homebrews" ;;
-    9) homebrew-packs "psp" "PSP-Homebrews" ;;
-    10) homebrew-packs "snes" "SNES-Homebrews" ;;
+    9) homebrew-packs "snes" "SNES-Homebrews" ;;
      +) none  ;;
      *) break ;;
     esac
