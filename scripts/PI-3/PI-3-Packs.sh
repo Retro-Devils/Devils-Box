@@ -63,7 +63,6 @@ else
       24 "Gameboy Color                    232MB      538 GAMES" \
       25 "Gamegear                          42MB      249 GAMES" \
       26 "Intellivision                      1MB       62 GAMES" \
-      27 "Jakks                             20MB       25 GAMES" \
       28 "****Lightgun MAME****             ??GB       ?? GAMES" \
       29 "MarkIII                            6MB       58 GAMES" \
       30 "Mastersystem                      35MB      280 GAMES" \
@@ -71,21 +70,13 @@ else
       32 "Genesis/Megadrive-Japan          149MB      278 GAMES" \
       33 "MSX                               30MB      708 GAMES" \
       34 "MSX 2                           6.24MB       83 GAMES" \
-      35 "Nintendo 64                      5.0GB      338 GAMES" \
-      36 "Naomi                            1.5GB       15 GAMES" \
       37 "Nintendo DS                        4GB      171 GAMES" \
       38 "NeoGeo                           2.3GB      142 GAMES" \
       39 "Neo Geo Pocket Color              21MB       40 GAMES" \
       40 "Nintendo Entertainment System    100MB      869 GAMES" \
-      41 "Openbor                         1.84GB       37 GAMES" \
-      42 "Oric                             5.4MB      136 GAMES" \
       43 "Pokemini                         5.4MB       44 GAMES" \
       44 "PlayStation 1                      3GB       29 GAMES" \
       45 "PSP                              ???GB      600 GAMES" \
-      46 "Sega Model 3.                     ??GB       15 GAMES" \
-      47 "Sega Saturn                      108GB      303 GAMES" \
-      48 "Sega Saturn Japan                3.9GB       18 GAMES" \
-      49 "ScummVM                          2.5GB       21 GAMES" \
       50 "Sega32x                           63MB       37 GAMES" \
       51 "SegaCD                            11GB       52 GAMES" \
       52 "Super Famicon                    475MB      487 GAMES" \
