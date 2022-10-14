@@ -45,7 +45,8 @@ Devils Box has been tested and works on PI ZERO, PI 3, PI4. *BUT MOST THINGS ARE
 
 * UPDATE 10/14/22
 
-DEVILS BOX WILL NOW CHECK THE DEVICE YOU ARE ON. THEN IT WILL LOAD DIFFERENT VERSIONS BASED OPUON WHAT YOU ARE USING IT ON.
+* DEVILS BOX WILL NOW CHECK THE DEVICE YOU ARE ON. *
+* THEN IT WILL LOAD DIFFERENT VERSIONS BASED OPUON WHAT YOU ARE USING IT ON. *
 
 VERSIONS INFO:
 
@@ -79,7 +80,8 @@ _______________________________________________________________________
 _______________________________________________________________________    
 
   ~ Downloaders 
-  ~ REboot and very simple tools.
+  
+  ~ Rboot and very simple tools.
 
 *We have tested on 3 seperate pcs with linux running on them. One pc didnt have Retropie at all. *
 
