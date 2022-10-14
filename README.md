@@ -51,7 +51,7 @@ Devils Box has been tested and works on PI ZERO, PI 3, PI4 and Linux PC(with Ret
 
 VERSIONS INFO:
 
-- PI 0/1 ------ RASPBERRY PI ZERO/W & RASPBERRY PI 2 ----V 1.0
+- PI 0/1 ------ RASPBERRY PI ZERO/W & RASPBERRY PI 1 ----V 1.1
 
 - PI 2/3 ------ RASPBERRY PI 2 & RASPBERRY PI 3 ---------V 1.0
 
