@@ -82,7 +82,7 @@ _______________________________________________________________________
 
   ~ Downloaders 
   
-  ~ Rboot and very simple tools.
+  ~ Reboot and very simple tools.
 
 *We have tested on 3 seperate pcs with linux running on them. One pc didnt have Retropie at all. *
 
