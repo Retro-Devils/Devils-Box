@@ -46,8 +46,7 @@ local choice
       8 "NES" \
       9 "PC DOS Games" \
       10 "Playstation 1" \
-      11 "PSP" \
-      12 "Super Nintendo" \
+      11 "Super Nintendo" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -61,8 +60,7 @@ local choice
     8) nes ;;
     9) pcgames ;;
     10) psx ;;
-    11) psp ;;
-    12) snes ;;
+    11) snes ;;
     *) break ;;
     esac
   done
