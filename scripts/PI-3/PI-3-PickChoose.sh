@@ -38,43 +38,31 @@ local choice
       --menu "PICK CONSOLE & CHOOSE GAME(S) " 20 50 30 \
       1 "Arcade" \
       2 "AtomisWave" \
-      3 "Daphne" \
-      4 "Dreamcast" \
-      5 "GameBoy Advance" \
-      6 "Hypseus" \
-      7 "MegaDrive" \
-      8 "Mugens" \
-      9 "Nintendo 64" \
-      10 "Nintendo DS" \
-      11 "NES" \
-      12 "PC DOS Games" \
-      13 "Playstation 1" \
-      14 "Ports *COMING SOON*" \
-      15 "PSP" \
-      16 "Saturn" \
-      17 "Super Nintendo" \
-      18 "Wine" \
+      3 "Dreamcast" \
+      4 "GameBoy Advance" \
+      5 "MegaDrive" \
+      6 "Nintendo 64" \
+      7 "Nintendo DS" \
+      8 "NES" \
+      9 "PC DOS Games" \
+      10 "Playstation 1" \
+      11 "PSP" \
+      12 "Super Nintendo" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) arcade ;;
     2) atomiswave ;;
-    3) daphne ;;
-    4) dreamcast ;;
-    5) gba ;;
-    6) hypseus ;;
-    7) megadrive ;;
-    8) mugens ;;
-    9) n64 ;;
-    10) nds ;;
-    11) nes ;;
-    12) pcgames ;;
-    13) psx ;;
-    14) ports ;;
-    15) psp ;;
-    16) saturn ;;
-    17) snes ;;
-    18) winegames ;;
+    3) dreamcast ;;
+    4) gba ;;
+    5) megadrive ;;
+    6) n64 ;;
+    7) nds ;;
+    8) nes ;;
+    9) pcgames ;;
+    10) psx ;;
+    11) psp ;;
+    12) snes ;;
     *) break ;;
     esac
   done
