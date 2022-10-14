@@ -63,37 +63,37 @@ else
       24 "Gameboy Color                    232MB      538 GAMES" \
       25 "Gamegear                          42MB      249 GAMES" \
       26 "Intellivision                      1MB       62 GAMES" \
-      28 "****Lightgun MAME****             ??GB       ?? GAMES" \
-      29 "MarkIII                            6MB       58 GAMES" \
-      30 "Mastersystem                      35MB      280 GAMES" \
-      31 "Genesis/Megadrive                409MB      561 GAMES" \
-      32 "Genesis/Megadrive-Japan          149MB      278 GAMES" \
-      33 "MSX                               30MB      708 GAMES" \
-      34 "MSX 2                           6.24MB       83 GAMES" \
-      37 "Nintendo DS                        4GB      171 GAMES" \
-      38 "NeoGeo                           2.3GB      142 GAMES" \
-      39 "Neo Geo Pocket Color              21MB       40 GAMES" \
-      40 "Nintendo Entertainment System    100MB      869 GAMES" \
-      43 "Pokemini                         5.4MB       44 GAMES" \
-      44 "PlayStation 1                      3GB       29 GAMES" \
-      45 "PSP                              ???GB      600 GAMES" \
-      50 "Sega32x                           63MB       37 GAMES" \
-      51 "SegaCD                            11GB       52 GAMES" \
-      52 "Super Famicon                    475MB      487 GAMES" \
-      53 "SG-1000                            1MB       68 GAMES" \
-      54 "SNES                             508MB      603 GAMES" \
-      55 "SNES MSU1                         ??MB       ?? GAMES" \
-      56 "SuperGraffiix                    2.4MB        5 GAMES" \
-      57 "Turbo Graffix 16/PC Engine        20MB       94 GAMES" \
-      58 "Vectrex                          201KB       20 GAMES" \
-      59 "VideoPAC                         430KB       99 GAMES" \
-      50 "Virtual Boy                        8MB       24 GAMES" \
-      61 "Dreamcast VMU                      3MB      115 GAMES" \
-      62 "Wonderswan Color                 116MB       84 GAMES" \
-      63 "Sharp X1                         7.6MB       69 GAMES" \
-      64 "Sharp X68000                     504MB      418 GAMES" \
-      65 "ZMachine                           4MB       30 GAMES" \
-      66 "ZXSpectrum                        38MB     1111 GAMES" \
+      27 "****Lightgun MAME****             ??GB       ?? GAMES" \
+      28 "MarkIII                            6MB       58 GAMES" \
+      29 "Mastersystem                      35MB      280 GAMES" \
+      30 "Genesis/Megadrive                409MB      561 GAMES" \
+      31 "Genesis/Megadrive-Japan          149MB      278 GAMES" \
+      32 "MSX                               30MB      708 GAMES" \
+      33 "MSX 2                           6.24MB       83 GAMES" \
+      34 "Nintendo DS                        4GB      171 GAMES" \
+      35 "NeoGeo                           2.3GB      142 GAMES" \
+      36 "Neo Geo Pocket Color              21MB       40 GAMES" \
+      37 "Nintendo Entertainment System    100MB      869 GAMES" \
+      38 "Pokemini                         5.4MB       44 GAMES" \
+      39 "PlayStation 1                      3GB       29 GAMES" \
+      40 "PSP                              ???GB      600 GAMES" \
+      41 "Sega32x                           63MB       37 GAMES" \
+      42 "SegaCD                            11GB       52 GAMES" \
+      43 "Super Famicon                    475MB      487 GAMES" \
+      44 "SG-1000                            1MB       68 GAMES" \
+      45 "SNES                             508MB      603 GAMES" \
+      46 "SNES MSU1                         ??MB       ?? GAMES" \
+      47 "SuperGraffiix                    2.4MB        5 GAMES" \
+      48 "Turbo Graffix 16/PC Engine        20MB       94 GAMES" \
+      49 "Vectrex                          201KB       20 GAMES" \
+      50 "VideoPAC                         430KB       99 GAMES" \
+      51 "Virtual Boy                        8MB       24 GAMES" \
+      52 "Dreamcast VMU                      3MB      115 GAMES" \
+      53 "Wonderswan Color                 116MB       84 GAMES" \
+      54 "Sharp X1                         7.6MB       69 GAMES" \
+      55 "Sharp X68000                     504MB      418 GAMES" \
+      56 "ZMachine                           4MB       30 GAMES" \
+      57 "ZXSpectrum                        38MB     1111 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -123,46 +123,37 @@ else
     24) download-packs "gbc" "lr-gambatte" ;;
     25) download-packs "gamegear" "lr-genesis-plus-gx" ;;
     26) download-packs "intellivision" "lr-freeintv" ;;
-    27) download-jakks ;;
-    28) download-packs "lightgun" "mame" ;;
-    29) download-packs "markiii" "lr-genesis-plus-gx" ;;
-    30) download-packs "mastersystem" "lr-picodrive" ;;
-    31) download-packs "megadrive" "lr-genesis-plus-gx" ;;
-    32) megadrive-japan ;;
-    33) download-packs "msx" "lr-bluemsx" ;;
-    34) download-packs "msx2" "lr-bluemsx" ;;
-    35) download-packs "n64" "lr-mupen64plus" ;;
-    36) download-packs "naomi" "lr-flycast" ;;
-    37) download-packs "nds" "drastic" ;;
-    38) download-packs "neogeo" ;;
-    39) download-packs "ngpc" "lr-beetle-ngp" ;;
-    40) download-packs "nes" "lr-nestopia" ;;
-    41) download-packs "openbor" ;;
-    42) download-packs "oric" "oricutron" ;;
-    43) download-packs "pokemini" ;;
-    44) download-packs "psx" "lr-pcsx_rearmed" ;;
-    45) psp-pack ;;
-    46) model-3 ;;
-    47) download-packs "saturn" "lr-yabause" ;;
-    48) saturn-japan "saturn-japan" "lr-yabause" ;;
-    49) download-packs "scummvm" "scummvm" ;;
-    50) download-packs "sega32x" "lr-picodrive" ;;
-    51) download-packs "segacd" "lr-picodrive" ;;
-    52) download-packs "sfc" ;;
-    53) download-packs "sg-1000" "lr-genesis-plus-gx" ;;
-    54) download-packs "snes" "lr-snes9x" ;;
-    55) msu1-pack ;;
-    56) download-packs "supergrafx" "lr-beetle" ;;
-    57) tg16-fix ;;
-    58) download-packs "vectrex" "lr-vecx" ;;
-    59) download-packs "videopac" "lr-o2em" ;;
-    60) download-packs "virtualboy" "lr-beetle-vb" ;;
-    61) download-packs "svmu" ;;
-    62) download-packs "wonderswancolor" "lr-beetle-wswan" ;;
-    63) download-packs "x1" ;;
-    64) download-packs "x68000" ;;
-    65) download-packs "zmachine""frotz"  ;;
-    66) download-packs "zxspectrum" "lr-fuse" ;;
+    27) download-packs "lightgun" "mame" ;;
+    28) download-packs "markiii" "lr-genesis-plus-gx" ;;
+    29) download-packs "mastersystem" "lr-picodrive" ;;
+    30) download-packs "megadrive" "lr-genesis-plus-gx" ;;
+    31) megadrive-japan ;;
+    32) download-packs "msx" "lr-bluemsx" ;;
+    33) download-packs "msx2" "lr-bluemsx" ;;
+    34) download-packs "nds" "drastic" ;;
+    35) download-packs "neogeo" ;;
+    36) download-packs "ngpc" "lr-beetle-ngp" ;;
+    37) download-packs "nes" "lr-nestopia" ;;
+    38) download-packs "pokemini" ;;
+    39) download-packs "psx" "lr-pcsx_rearmed" ;;
+    40) download-packs "scummvm" "scummvm" ;;
+    41) download-packs "sega32x" "lr-picodrive" ;;
+    42) download-packs "segacd" "lr-picodrive" ;;
+    43) download-packs "sfc" ;;
+    44) download-packs "sg-1000" "lr-genesis-plus-gx" ;;
+    45) download-packs "snes" "lr-snes9x" ;;
+    46) msu1-pack ;;
+    47) download-packs "supergrafx" "lr-beetle" ;;
+    48) tg16-fix ;;
+    49) download-packs "vectrex" "lr-vecx" ;;
+    50) download-packs "videopac" "lr-o2em" ;;
+    51) download-packs "virtualboy" "lr-beetle-vb" ;;
+    52) download-packs "svmu" ;;
+    53) download-packs "wonderswancolor" "lr-beetle-wswan" ;;
+    54) download-packs "x1" ;;
+    55) download-packs "x68000" ;;
+    56) download-packs "zmachine""frotz"  ;;
+    57) download-packs "zxspectrum" "lr-fuse" ;;
      +) none  ;;
      *) break ;;
     esac
