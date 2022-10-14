@@ -41,7 +41,7 @@
     
 ## WHAT PI DOES THIS WORK ON ?
 
-Devils Box has been tested and works on PI ZERO, PI 3, PI4. *BUT MOST THINGS ARE FOR PI 4. see below*
+Devils Box has been tested and works on PI ZERO, PI 3, PI4 and Linux PC(with RetroPie)
 
 * UPDATE 10/14/22
 
