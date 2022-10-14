@@ -44,6 +44,7 @@ sudo chmod 755 /usr/local/bin/box
 chmod 755 $HOME/RetroPie/retropiemenu/Devils-Box.sh
 sudo chmod 755 /usr/local/bin/Devils-Box
 sudo chmod 755 /usr/local/bin/switcheroo
+chmod -R 755 $HOME/Devils-Box
 if [ ! -d "$HOME/.devilsbox" ]; then mkdir "$HOME/.devilsbox"; fi
 if [ ! -f "$DB_SETTINGS" ]; then 
 cat <<\EOF_db_settings.ini > "$DB_SETTINGS"
