@@ -76,7 +76,7 @@ if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
-bash "$HOME"/Devils-Box/scripts/PI-0/PI0-Artwork.sh
+bash "$HOME"/Devils-Box/scripts/PI-0/PI-0-Artwork.sh
 fi
 }
 
@@ -86,7 +86,7 @@ if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
-bash "$HOME"/Devils-Box/scripts/PI-0/PI0-Packs.sh
+bash "$HOME"/Devils-Box/scripts/PI-0/PI-0-Packs.sh
 fi
 }
 
@@ -107,7 +107,7 @@ if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
-bash "$HOME"/Devils-Box/scripts/PI-0/PI0-Homebrews.sh
+bash "$HOME"/Devils-Box/scripts/PI-0/PI-0-Homebrews.sh
 fi
 }
 
