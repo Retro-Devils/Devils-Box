@@ -26,7 +26,7 @@ function main_menu() {
   fi
     choice=(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
       --ok-label Select --cancel-label Exit-Devils-Box \
-      --menu "DEVILS BOX--------------PI ZERO V1.0" 23 50 30 )
+      --menu "DEVILS BOX--------------PI 4 V 3.16" 23 50 30 )
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
       - "<---->Downloaders<------>"
@@ -76,7 +76,7 @@ if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
-bash "$HOME"/Devils-Box/scripts/PI0-Artwork.sh
+bash "$HOME"/Devils-Box/scripts/PI-4/PI-4-Artwork.sh
 fi
 }
 
@@ -86,7 +86,7 @@ if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
-bash "$HOME"/Devils-Box/scripts/PI0-Packs.sh
+bash "$HOME"/Devils-Box/scripts/PI-4/PI-4-Packs.sh
 fi
 }
 
@@ -96,7 +96,7 @@ if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
-bash "$HOME"/Devils-Box/scripts/PI0-Hacks.sh
+bash "$HOME"/Devils-Box/scripts/Hacks.sh
 fi
 }
 
@@ -107,7 +107,7 @@ if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
-bash "$HOME"/Devils-Box/scripts/PI0-Homebrews.sh
+bash "$HOME"/Devils-Box/scripts/Homebrews.sh
 fi
 }
 
@@ -117,7 +117,7 @@ if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
-bash "$HOME"/Devils-Box/scripts/PI0-PickChoose.sh
+bash "$HOME"/Devils-Box/scripts/PI-4/PI-4-PickChoose.sh
 fi
 }
 
