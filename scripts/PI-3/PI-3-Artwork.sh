@@ -75,23 +75,15 @@ else
       30 "Mastersystem Artwork     [*]box  [*]cart  [*]snap  [*]wheel" \
       31 "Megadrive Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
       32 "Megadrive-Japan Artwork  [*]box  [*]cart  [*]snap  [*]wheel" \
-      33 "Model 3 Artwork          [ ]box  [ ]cart  [*]snap  [ ]wheel" \
       34 "MSX Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
       35 "MSX2 Artwork             [*]box  [*]cart  [*]snap  [*]wheel" \
-      36 "N64 Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
-      37 "Naomi Artwork            [*]box  [ ]cart  [*]snap  [*]wheel" \
       38 "NDS Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
       39 "NeoGeo Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
       40 "NES Artwork              [*]box  [ ]cart  [*]snap  [*]wheel" \
       41 "NGPC Artwork             [*]box  [ ]cart  [*]snap  [ ]wheel" \
-      42 "Openbor Artwork          [*]box  [ ]cart  [*]snap  [*]wheel" \
-      43 "Oric Artwork             [*]box  [ ]cart  [ ]snap  [ ]wheel" \
       44 "Pokemini Artwork         [*]box  [ ]cart  [*]snap  [ ]wheel" \
       45 "***PC Engine Artwork***  [*]box  [*]cart  [*]snap  [ ]wheel" \
       46 "PS1 Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
-      47 "Saturn Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
-      48 "Saturn-Japan Artwork     [*]box  [*]cart  [*]snap  [*]wheel" \
-      49 "Scummvm Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
       50 "Sega32x Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
       51 "SegaCD Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
       52 "Super Famicon Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
@@ -103,7 +95,6 @@ else
       58 "Videopac Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
       59 "Virtualboy Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
       60 "VMU Artwork              [*]box  [ ]cart  [ ]snap  [ ]wheel" \
-      61 "Wine Artwork             [*]box  [ ]cart  [ ]snap  [ ]wheel" \
       62 "WonderswanColor Artwork  [*]box  [*]cart  [*]snap  [*]wheel" \
       63 "Sharp x1 Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
       64 "Sharp x68000 Artwork     [*]box  [ ]cart  [*]snap  [*]wheel" \
