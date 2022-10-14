@@ -45,18 +45,19 @@ Devils Box has been tested and works on PI ZERO, PI 3, PI4. *BUT MOST THINGS ARE
 
 * UPDATE 10/14/22
 
-* DEVILS BOX WILL NOW CHECK THE DEVICE YOU ARE ON. *
-* THEN IT WILL LOAD DIFFERENT VERSIONS BASED OPUON WHAT YOU ARE USING IT ON. *
+* DEVILS BOX WILL NOW CHECK THE DEVICE YOU ARE ON. 
+ 
+* THEN IT WILL LOAD DIFFERENT VERSIONS BASED OPUON WHAT YOU ARE USING IT ON. 
 
 VERSIONS INFO:
 
-- PI 0/1 ---- RASPBERRY PI ZERO/W & RASPBERRY PI 2 
+- PI 0/1 ------ RASPBERRY PI ZERO/W & RASPBERRY PI 2 ----V 1.0
 
-- PI 2/3 ---- RASPBERRY PI 2 & RASPBERRY PI 3 
+- PI 2/3 ------ RASPBERRY PI 2 & RASPBERRY PI 3 ---------V 1.0
 
-- PI 4 ---- RASPBERRY PI 4B
+- PI 4 -------- RASPBERRY PI 4B -------------------------V 3.16
 
-- MULTI ---- OTHER DEVICES WITH RETROPIE INSTALLED 
+- MULTI ------- OTHER DEVICES WITH RETROPIE INSTALLED ---V 1.0
 
 _______________________________________________________________________    
 *AVAILABLE ON ALL PIS VERSIONS (with RetroPie installed)*
@@ -104,9 +105,9 @@ _______________________________________________________________________
 
 LAST UPDATE 
 
-Version-----3.16
+Version-----See Version Info Above
 
-Date--------9/30/22
+Date--------10/14/22
 
 ## To Install/Update 
 
