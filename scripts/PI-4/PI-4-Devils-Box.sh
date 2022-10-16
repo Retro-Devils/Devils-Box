@@ -132,6 +132,42 @@ fi
 }
 
 
+function toolboxes() {
+  local choice
+
+  while true; do
+    choice=$(dialog --backtitle "$BACKTITLE" --title "DEVILS GAME TOOLS MENU" \
+      --ok-label Select --cancel-label Back \
+      --menu "SELECT TOOL AND PRESS A " 30 50 50 \
+      1 "Community Toolbox" \
+      2 "FollyMaddy ToolBox" \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) general_toolbox ;;
+    2) fm_toolbox ;;
+    *) break ;;
+    esac
+  done
+}
+
+
+#-----------FOLLY MADDY TOOL BOX MENU FUNCTIONS-----------#
+function fm_toolbox() {
+  while true; do
+  local choice
+    choice=$(dialog --backtitle "$BACKTITLE" --title " FollyMaddy TOOL BOX MENU " \
+      --ok-label Select --cancel-label Back \
+      --menu "SELECT TOOLSET AND PRESS A  " 20 50 30 \
+      1 "FollyMaddy RPI Setup Tools " \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) fm_rpi-tools ;;
+    *) break ;;
+    esac
+  done
+}
 #-----------GENERAL TOOL BOX MENU FUNCTIONS-----------#
 function general_toolbox() {
   while true; do
@@ -356,7 +392,27 @@ dialog  --sleep 1 --title "EXIT MESSAGE" --msgbox "
 fi
 }
 
-function mame-dev() {
+#-----------FOLLY MADDY EMU MENU FUNCTIONS-----------#
+function fm_rpi-tools() {
+  while true; do
+  local choice
+    choice=$(dialog --backtitle "$BACKTITLE" --title "FollyMaddy EMU TOOLSMENU " \
+      --ok-label Select --cancel-label Back \
+      --menu "SELECT TOOLSET AND PRESS A  " 20 50 30 \
+      1 "Add Extra Repos To RPI Setup " \
+      2 "Add --Legal Games-- To RPI Setup" \
+      2 "Add --MAME-Dev-- To RPI Setup " \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    1) fm-add-repos ;;
+    2) fm-legal-games ;;
+    3) fm-mame-dev ;;
+    *) break ;;
+    esac
+  done
+}
+function fm-mame-dev() {
 clear
 if [ -f "/home/pi/RetroPie-Setup/scriptmodules/supplementary/add-mamedev-systems.sh" ]; then
 sudo rm "$HOME"/RetroPie-Setup/scriptmodules/supplementary/add-mamedev-systems.sh
@@ -384,7 +440,7 @@ sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
 fi
 }
 
-function legal-games() {
+function fm-legal-games() {
 clear
 if [ -f "/home/pi/RetroPie-Setup/scriptmodules/supplementary/download-legal-stuff.sh" ]; then
 sudo rm "$HOME"/RetroPie-Setup/scriptmodules/supplementary/download-legal-stuff.sh
@@ -413,7 +469,7 @@ sudo "$HOME"/RetroPie-Setup/retropie_setup.sh
 fi
 }
 
-function add-fm-repos() {
+function fm-add-repos() {
 clear
 if [ -f "/home/pi/RetroPie-Setup/scriptmodules/supplementary/add-ext-repos.sh.sh" ]; then
 sudo rm "$HOME"/RetroPie-Setup/scriptmodules/supplementary/add-ext-repos.sh.sh
