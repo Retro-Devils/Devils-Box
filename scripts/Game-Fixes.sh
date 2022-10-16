@@ -22,9 +22,10 @@ else
       2 "C&C Generals + Zero Hour Fix" \
       3 "Heroes OF might And Magic Fix" \
       4 "Silent Hill 4 Fix" \
-      5 "Unreal Anthology Fix" \
+      5 "Spooky Castle Fix" /
+      6 "Unreal Anthology Fix" \
       + "----------GAME TOOLS----------" \
-      6 "Qjoypad Helper" \
+      7 "Qjoypad Helper" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -33,12 +34,17 @@ else
     2) game_fix "Command-And-Conquer-fix.reg" ;;
     3) game_fix "Heroes-of-Might-and-Magic-fix.reg" ;;
     4) game_fix "Silent-Hill-4-The-Room-Fix.reg" ;;
+    5) castle-fix ;;
     5) game_fix "Unreal-Anthology-fix.reg" ;;
     6) download_qjoy ;;
     *) break ;;
     esac
   done
 fi
+}
+#--------Spooky Castle Fix-------#
+function castle-fix() {
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/files/emu.cfg/wine/Spooky-Castle.sh -P $HOME/.qjopyad/
 }
 #----------------------#
 #   WINE GAME FIXES    #
