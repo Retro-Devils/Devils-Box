@@ -37,7 +37,7 @@ function main_menu() {
       5 "Pick & Choose"
       6 "Translations Packs"
       + "<---->Tool Boxes<------->"
-      7 "Community Tool Box"      
+      7 "Community Tool Boxes"      
       8 "Devils Tool Box"
       - "<---->System Tools<----->"
       9 "Reboot System"
@@ -57,7 +57,7 @@ function main_menu() {
     4) homebrew ;;
     5) pick ;;
     6) translations ;;
-    7) general_toolbox ;;
+    7) toolboxes ;;
     8) devils_tools ;;
     9) system_reboot ;;
     10) show_sysinfo ;;
