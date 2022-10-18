@@ -294,6 +294,7 @@ wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/megadrive-japan/ -P "$HOME"/Re
 rm -f "$HOME"/RetroPie/roms/saturn/index.html.tmp
 fi
 }
+
 function download-bbcmicro() {
 if [ ! -d "$HOME/RetroPie/roms/bbcmicro/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
       --ok-label Download --cancel-label Skip \
@@ -302,7 +303,7 @@ if [ ! -d "$HOME/RetroPie/roms/bbcmicro/" ]; then choice=$(dialog --backtitle "$
       2 "NO" \
       2<&1 >/dev/tty)
     case "$choice" in
-      1) curl -sSL bit.ly/BBC-Installer | bash 
+      1) curl -sSL bit.ly/BBC-Installer | bash ;;
       2) Consoles-Menu ;;
       *) return ;;
     esac
