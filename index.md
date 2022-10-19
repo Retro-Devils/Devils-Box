@@ -34,15 +34,22 @@ Devils Box has the wonderful following features
 ### DEVILS BOX USAGE
 
 ```markdown
+- In RetroPie go to RetroPie/Config. Then select Devils Box
+- From terminal or command line type "Devils-Box"
+```
+
+### SCREENSHOTS & SHOWCASES
+
+```markdown
+
+-
+-
 -
 -
 -
 -
 
 ```
-
-
-
 
 
 
