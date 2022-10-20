@@ -1697,9 +1697,9 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
 	       +) none ;;
                1) download-winegames "Retro-Devils_AoE.zip"; game_fix "Age-of-Empires-no-cd-error-fix.reg" ;;
                2) download-winegames "Retro-Devils_AoE2.zip" ;;
-               3) download-winegames "Retro-Devils_AngryBirds.zip" ;;
-               4) download-winegames "Retro-Devils_AngryBirdsSeasons.zip" ;;
-               5) download-winegames "Retro-Devils_AngryBirdsStarWars2.zip" ;;
+               3) download-winegames "Retro-Devils_AngryBirds.zip" ; birds-exit ;;
+               4) download-winegames "Retro-Devils_AngryBirdsSeasons.zip" ; birds-exit "Seasons" ;;
+               5) download-winegames "Retro-Devils_AngryBirdsStarWars2.zip" ; birds-exit "Star Wars 2";;
                6) download-winegames "Retro-Devils_CNCGENS-ZH.zip"; game_fix "Command-And-Conquer-fix.reg" ;;
                7) download-winegames "Retro-Devils_DeltaForceXtreme.zip" ;;
                8) download-winegames "Retro-Devils_Diablo2.zip" ;;
@@ -1796,6 +1796,16 @@ clear
   sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
 fi
 }
+function birds-exit() {
+dialog  --sleep 1 --title "ANGRY BIRDS "${1}" EXIT MESSAGE" --msgbox " 
+<-------------ATTENTION--------------->
+THESE ARE TRIALS OF GAMES.
+Please enter activation code, in game menu, for full game.
+
+ACTIVATION KEY: 
+xoxo-oxox-xxoo-ooxx" 0 0
+}
+
 function castle-fix() {
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/files/emu.cfg/wine/Spooky-Castle.sh -P $HOME/.qjoypad/
 }
