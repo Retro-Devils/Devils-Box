@@ -22,7 +22,7 @@ else
       2 "C&C Generals + Zero Hour Fix" \
       3 "Heroes OF might And Magic Fix" \
       4 "Silent Hill 4 Fix" \
-      5 "Spooky Castle Fix" /
+      5 "Spooky Castle Fix" \
       6 "Unreal Anthology Fix" \
       + "----------GAME TOOLS----------" \
       7 "Qjoypad Helper" \
@@ -35,8 +35,8 @@ else
     3) game_fix "Heroes-of-Might-and-Magic-fix.reg" ;;
     4) game_fix "Silent-Hill-4-The-Room-Fix.reg" ;;
     5) castle-fix ;;
-    5) game_fix "Unreal-Anthology-fix.reg" ;;
-    6) download_qjoy ;;
+    6) game_fix "Unreal-Anthology-fix.reg" ;;
+    7) download_qjoy ;;
     *) break ;;
     esac
   done
