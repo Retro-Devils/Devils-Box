@@ -884,13 +884,15 @@ function devils_emu_tools() {
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
       1 "Devils Extras Installer" \
       2 "BIOS Installer" \
-      3 "MSU1 Setup" \
+      3 "BBC Micro Installer" \
+      4 "MSU1 Setup" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) devils-ex ;;
     2) download-bios ;;
-    3) msu-setup ;;
+    3) bbc-install ;;
+    4) msu-setup ;;
     *) break ;;
     esac
   done
@@ -907,6 +909,10 @@ Offline ... Downloads not Availible Please Connect To Internet!" 0 0
 else
 curl -sSL https://git.io/J9Z8c | bash
 fi
+}
+
+function bbc-install() {
+curl -sSL bit.ly/BBC-Installer | bash
 }
 
 function devils-game-tools() {
