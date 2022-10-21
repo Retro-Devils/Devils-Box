@@ -43,17 +43,18 @@ local choice
       5 "GameBoy Advance" \
       6 "Hypseus" \
       7 "MegaDrive" \
-      8 "Mugens" \
-      9 "Nintendo 64" \
-      10 "Nintendo DS" \
-      11 "NES" \
-      12 "PC DOS Games" \
-      13 "Playstation 1" \
-      14 "Ports *COMING SOON*" \
-      15 "PSP" \
-      16 "Saturn" \
-      17 "Super Nintendo" \
-      18 "Wine" \
+      8 "Model 3" \
+      9 "Mugens" \
+      10 "Nintendo 64" \
+      11 "Nintendo DS" \
+      12 "NES" \
+      13 "PC DOS Games" \
+      14 "Playstation 1" \
+      15 "Ports *COMING SOON*" \
+      16 "PSP" \
+      17 "Saturn" \
+      18 "Super Nintendo" \
+      19 "Wine" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -64,17 +65,18 @@ local choice
     5) gba ;;
     6) hypseus ;;
     7) megadrive ;;
-    8) mugens ;;
-    9) n64 ;;
-    10) nds ;;
-    11) nes ;;
-    12) pcgames ;;
-    13) psx ;;
-    14) ports ;;
-    15) psp ;;
-    16) saturn ;;
-    17) snes ;;
-    18) winegames ;;
+    8) model3 ;;
+    9) mugens ;;
+    10) n64 ;;
+    11) nds ;;
+    12) nes ;;
+    13) pcgames ;;
+    14) psx ;;
+    15) ports ;;
+    16) psp ;;
+    17) saturn ;;
+    18) snes ;;
+    19) winegames ;;
     *) break ;;
     esac
   done
@@ -725,10 +727,53 @@ function megadrive() {
         esac
         done < /tmp/results
 }
+function model3() {
+          whiptail --clear --title "PICK & CHOOSE MODEL3" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+                "1" "Daytona" off \
+                "2" "Daytona 2" off \
+                "3" "Dirt Devils" off \
+                "4" "Fighting Vipers 2" off \
+                "5" "LA Machine Guns" off \
+                "6" "Le Mans 24 " off \
+                "7" "Lost World Jurrasic Park" off \
+                "8" "Magical Truck Adventure" off \
+                "9" "Scud Race" off \
+                "10" "Ski Champ" off \
+                "11" "Spikeout" off \
+                "12" "Sega Rally" off \
+                "13" "Virtua Fighter 3" off \
+                "14" "Virtua On 2" off \
+                "15" "Virtua Striker 2" off \
+
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+            1) download-game "model3" "dayto2pe.zip" ;;
+            2) download-game "model3" "daytona2.zip" ;;
+            3) download-game "model3" "dirtdvls.zip" ;;
+            4) download-game "model3" "fvipers2.zip" ;;
+            5) download-game "model3" "lamachin.zip" ;;
+            6) download-game "model3" "lemans24.zip" ;;
+            7) download-game "model3" "lostwsga.zip" ;;
+            8) download-game "model3" "magtruck.zip" ;;
+            9) download-game "model3" "scud.zip" ;;
+            10) download-game "model3" "skichamp.zip" ;;
+            11) download-game "model3" "spikeout.zip" ;;
+            12) download-game "model3" "srally2.zip" ;;
+            13) download-game "model3" "vf3.zip" ;;
+            14) download-game "model3" "von2.zip" ;;
+            15) download-game "model3" "vs2.zip" ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
+
 function n64() {
           whiptail --clear --title "PICK & CHOOSE NINTENDO 64" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
-                "1" "007 - GoldenEye (USA).n64" off \
+                "1" "007 - GoldenEye" off \
                 "2" "Army Men - Air Combat" off \
                 "3" "Army Men - Sarge's Heroes 2" off \
                 "4" "Banjo-Kazooie" off \
