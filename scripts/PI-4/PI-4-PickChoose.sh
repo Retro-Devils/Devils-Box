@@ -750,21 +750,21 @@ function model3() {
     while read -r choice  
         do
         case $choice in
-            1) download-game "model3" "dayto2pe.zip" ;;
-            2) download-game "model3" "daytona2.zip" ;;
-            3) download-game "model3" "dirtdvls.zip" ;;
-            4) download-game "model3" "fvipers2.zip" ;;
-            5) download-game "model3" "lamachin.zip" ;;
-            6) download-game "model3" "lemans24.zip" ;;
-            7) download-game "model3" "lostwsga.zip" ;;
-            8) download-game "model3" "magtruck.zip" ;;
-            9) download-game "model3" "scud.zip" ;;
-            10) download-game "model3" "skichamp.zip" ;;
-            11) download-game "model3" "spikeout.zip" ;;
-            12) download-game "model3" "srally2.zip" ;;
-            13) download-game "model3" "vf3.zip" ;;
-            14) download-game "model3" "von2.zip" ;;
-            15) download-game "model3" "vs2.zip" ;;
+            1) download-model3 "dayto2pe.zip" ;;
+            2) download-model3 "daytona2.zip" ;;
+            3) download-model3 "dirtdvls.zip" ;;
+            4) download-model3 "fvipers2.zip" ;;
+            5) download-model3 "lamachin.zip" ;;
+            6) download-model3 "lemans24.zip" ;;
+            7) download-model3 "lostwsga.zip" ;;
+            8) download-model3 "magtruck.zip" ;;
+            9) download-model3 "scud.zip" ;;
+            10) download-model3 "skichamp.zip" ;;
+            11) download-model3 "spikeout.zip" ;;
+            12) download-model3 "srally2.zip" ;;
+            13) download-model3 "vf3.zip" ;;
+            14) download-model3 "von2.zip" ;;
+            15) download-model3 "vs2.zip" ;;
             *) ;;
         esac
         done < /tmp/results
@@ -1820,6 +1820,14 @@ if [ ! -d "$HOME/RetroPie/roms/psp/" ]; then dialog  --sleep 1 --title "PSP FOLD
 else
 clear
   wget -m -r -np -nH -nd -R "index.html" ${HOST6}/"${1}" -P "$HOME"/RetroPie/roms/psp -erobots=off
+fi
+}
+function download-model3() {
+if [ ! -d "$HOME/RetroPie/roms/model3/" ]; then dialog  --sleep 1 --title "MODEL 3 FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+curl -sSL https://git.io/JSDOy | bash
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}" -P "$HOME"/RetroPie/roms/model3 -erobots=off
 fi
 }
 function download-msu1() {
