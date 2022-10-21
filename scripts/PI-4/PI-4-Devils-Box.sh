@@ -886,6 +886,7 @@ function devils_emu_tools() {
       2 "BIOS Installer" \
       3 "BBC Micro Installer" \
       4 "MSU1 Setup" \
+      5 "Pi Dynamic Emu Installer" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -893,9 +894,14 @@ function devils_emu_tools() {
     2) download-bios ;;
     3) bbc-install ;;
     4) msu-setup ;;
+    5) pidei ;;
     *) break ;;
     esac
   done
+}
+
+function pidei() {
+bash $HOME/Devils-Box/scripts/pidei.sh
 }
 
 function testers() {
