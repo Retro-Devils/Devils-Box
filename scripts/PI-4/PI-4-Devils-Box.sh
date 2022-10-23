@@ -141,11 +141,13 @@ function toolboxes() {
       --menu "SELECT TOOL AND PRESS A " 30 50 50 \
       1 "Community Toolbox" \
       2 "FollyMaddy ToolBox" \
+      3 "RetroPie Setup Script" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) general_toolbox ;;
     2) fm_toolbox ;;
+    3) rpi-menu ;;
     *) break ;;
     esac
   done
@@ -332,15 +334,13 @@ function comm_emu_tools() {
     choice=$(dialog --backtitle "$BACKTITLE" --title "COMMUNITY EMU TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 70 50 \
-      1 "RetroPie Setup Menu------------------------Retro Pie" \
-      2 "Mugen Installer-----------------Supreme/Retro Devils" \
-      3 "PIKISS Installer-----------------------Jose Cerrejon" \
+      1 "Mugen Installer-----------------Supreme/Retro Devils" \
+      2 "PIKISS Installer-----------------------Jose Cerrejon" \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) rpi-menu ;;
-    2) mugen ;;
-    3) pikiss ;;
+    1) mugen ;;
+    2) pikiss ;;
     *) break ;;
     esac
   done
