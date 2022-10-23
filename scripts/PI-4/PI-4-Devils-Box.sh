@@ -401,7 +401,7 @@ function fm_rpi-tools() {
       --menu "SELECT TOOLSET AND PRESS A  " 20 50 30 \
       1 "Add Extra Repos To RPI Setup " \
       2 "Add --Legal Games-- To RPI Setup" \
-      2 "Add --MAME-Dev-- To RPI Setup " \
+      3 "Add --MAME-Dev-- To RPI Setup " \
       2>&1 >/dev/tty)
 
     case "$choice" in
