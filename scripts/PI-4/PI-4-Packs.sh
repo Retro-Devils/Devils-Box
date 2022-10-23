@@ -264,7 +264,7 @@ if [ ! -d "$HOME/RetroPie/roms/plugnplay/" ]; then choice=$(dialog --backtitle "
       2 "NO" \
       2<&1 >/dev/tty)
     case "$choice" in
-      1) wget https://bit.ly/PlugNPlay-Emu -P $HOME/RetroPie-Setup/ ; cd $HOME/RetroPie-Setup ; sudo ./retropie_packages.sh lr-mess-plugnplay ;;
+      1) wget https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/libretrocores/lr-mess-plugnplay.sh -P "$HOME"/RetroPie-Setup/scriptmodules/emulators/ ; cd $HOME/RetroPie-Setup ; sudo ./retropie_packages.sh lr-mess-plugnplay install ;;
       2) Consoles-Menu ;;
       *) return ;;
     esac
