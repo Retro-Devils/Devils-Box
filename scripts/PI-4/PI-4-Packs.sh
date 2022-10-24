@@ -274,7 +274,7 @@ wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/jakks/ -P "$HOME"/RetroPie/rom
 rm -f "$HOME"/RetroPie/roms/plugnplay/index.html.tmp
 fi
 }
-function mess-system()
+function mess-system() {
 dialog  --sleep 1 --title "MESS System Installer FYI" --msgbox " 
 --------------------------------------------
 ---------------INSTALLER FYI----------------
