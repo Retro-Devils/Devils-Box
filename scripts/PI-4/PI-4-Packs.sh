@@ -264,7 +264,7 @@ if [ ! -d "$HOME/RetroPie/roms/plugnplay/" ]; then choice=$(dialog --backtitle "
       2 "NO" \
       2<&1 >/dev/tty)
     case "$choice" in
-      1) wget https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/libretrocores/lr-mess-plugnplay.sh -P "$HOME"/RetroPie-Setup/scriptmodules/emulators/ ; cd $HOME/RetroPie-Setup ; sudo ./retropie_packages.sh lr-mess-plugnplay install ;;
+      1) mess-system "jakks" ;;
       2) Consoles-Menu ;;
       *) return ;;
     esac
@@ -274,7 +274,38 @@ wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/jakks/ -P "$HOME"/RetroPie/rom
 rm -f "$HOME"/RetroPie/roms/plugnplay/index.html.tmp
 fi
 }
+function mess-system()
+dialog  --sleep 1 --title "MESS System Installer FYI" --msgbox " 
+--------------------------------------------
+---------------INSTALLER FYI----------------
+-------THIS IS A LONG READ PLEASE READ IT---
+--------------------------------------------
+Taken from here:
+https://github.com/FollyMaddy/RetroPie-Share/blob/main/readme-post-one-thread.md
+--------------------------------------------
+Run RetroPie-Setup and go to :
+Configuration / tools
+add-mamedev-systems
+Now you can install :
 
+lr-mess/mame <-- make sure you do this first, otherwise you can't add systems !
+lr-mess/mame systems
+the handhelds by @DTEAM
+link to the handheld and plug & play systems of @DTEAM
+special systems with added slot-devices (for example : nes_datach,famicom_disksys,famicom_famibs3)
+other systems that are mentioned in the threads
+download retropie-gamelists
+download mame-artwork
+create overlays from mame-artwork for running handhelds with lr-mess
+(make sure you put the BIOS files in -->> ~/RetroPie/BIOS/mame
+--------------------------------------------
+To install "$1"
+In MAMEDEV Systems Menu
+- Install System Default Settings
+- Predefined Sorts List
+- Upoun Systems
+- "$1" " 0 0
+}
 function saturn-japan() {
 if [ ! -d "$HOME/RetroPie/roms/saturn/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
 else
