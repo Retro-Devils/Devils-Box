@@ -14,11 +14,6 @@ function main_menu() {
             --menu "DEVILS BOX RETROPIE INSTALLER" 25 40 40 \
             1 "Install/Update Devils Box " \
             2 "Devils Box Info   " \
-            2>&1 > /dev/tty)
-
-        case "$choice" in
-            1) install_db  ;;
-            2) info        ;;
 	    - "__________        __                  " \
             - "\______   \ _____/  |________  ____   " \
             - " |       _// __ \   __\_  __ \/  _ \  " \
@@ -31,6 +26,12 @@ function main_menu() {
             - " |    `   \  ___/\   /|  |  |__\___ \ " \
             - "/_______  /\___  >\_/ |__|____/____  >" \
             - "        \/     \/                  \/ " \
+            2>&1 > /dev/tty)
+
+        case "$choice" in
+            1) install_db  ;;
+            2) info        ;;
+            -) no ;;
             *) break       ;;
         esac
     done
