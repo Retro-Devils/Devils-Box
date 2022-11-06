@@ -9,25 +9,31 @@ local choice
      --ok-button Select --cancel-button Back \
      --menu " TEST SOMETHING " 30 70 50 \
       + "--FINISHED OR CLOSE TO IT--" \
-      1 "Collections Helper " \
-      2 "Icon Helper " \
+      1 "RPI Lightgun Tool" \
       + "--UNFINISHED/NOT WORKING--" \
-      3 "Pick & Choose Ports" \
+      2 "Collections Helper " \
+      3 "Icon Helper " \
+      4 "Pick & Choose Ports" \
       + "--------------- " \
-      4 "Update Testers Menu" \
+      5 "Update Testers Menu" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     +) none ;;
-    1) bash "$HOME"/Devils-Box/helpers/emulationstation/Collections.sh ;;
-    2) bash "$HOME"/Devils-Box/helpers/emulationstation/Icon-Helper.sh ;;
+    1) rpi-lg-tool ;;
+    2) bash "$HOME"/Devils-Box/helpers/emulationstation/Collections.sh ;;
+    3) bash "$HOME"/Devils-Box/helpers/emulationstation/Icon-Helper.sh ;;
     +) none ;;
-    3) ports ;;
+    4) ports ;;
     +) no ;;
-    4) update-test ;;
+    5) update-test ;;
     *) break ;;
     esac
   done
+}
+
+function rpi-lg-tool() {
+curl -sSL bit.ly/Install-RPI-LG-Tool | bash 
 }
 
 function ports() {
