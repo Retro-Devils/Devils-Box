@@ -1010,29 +1010,30 @@ function nes() {
                 "30" "G.I. Joe - A Real American Hero" off \
                 "31" "Galaga - Demons of Death" off \
                 "32" "Gradius" off \
-                "33" "Ikari Warriors II - Victory Road" off \
-                "34" "Jurassic Park" off \
-                "35" "Karate Kid, The" off \
-                "36" "Kid Icarus" off \
-                "37" "Kirby's Adventure" off \
-                "38" "Legend of Zelda, The" off \
-                "39" "Mario Bros." off \
-                "40" "Mega Man 6" off \
-                "41" "Metroid" off \
-                "42" "Mike Tyson's Punch-Out!!" off \
-                "43" "Ninja Gaiden" off \
-                "44" "Pac-Man" off \
-                "45" "Platoon" off \
-                "46" "Q-bert" off \
-                "47" "Rad Racer" off \
-                "48" "RoboCop" off \
-                "49" "Super Mario Bros." off \
-                "50" "Super Mario Bros. 2" off \
-                "51" "Super Mario Bros. 3" off \
-                "52" "Super Spy Hunter" off \
-                "53" "Teenage Mutant Ninja Turtles" off \
-                "54" "Tetris" off \
-                "55" "Zelda II - The Adventure of Link" off \
+		"33" "Ice Climber" off \
+                "34" "Ikari Warriors II - Victory Road" off \
+                "35" "Jurassic Park" off \
+                "36" "Karate Kid, The" off \
+                "37" "Kid Icarus" off \
+                "38" "Kirby's Adventure" off \
+                "39" "Legend of Zelda, The" off \
+                "40" "Mario Bros." off \
+                "41" "Mega Man 6" off \
+                "42" "Metroid" off \
+                "43" "Mike Tyson's Punch-Out!!" off \
+                "44" "Ninja Gaiden" off \
+                "45" "Pac-Man" off \
+                "46" "Platoon" off \
+                "47" "Q-bert" off \
+                "49" "Rad Racer" off \
+                "49" "RoboCop" off \
+                "50" "Super Mario Bros." off \
+                "51" "Super Mario Bros. 2" off \
+                "52" "Super Mario Bros. 3" off \
+                "53" "Super Spy Hunter" off \
+                "54" "Teenage Mutant Ninja Turtles" off \
+                "55" "Tetris" off \
+                "56" "Zelda II - The Adventure of Link" off \
                 2>/tmp/results
     while read -r choice  
         do
@@ -1051,47 +1052,48 @@ function nes() {
             12) download-game "nes" "Battletoads (USA).zip" ;;
             13) download-game "nes" "Battletoads-Double Dragon (USA).zip" ;;
             14) download-game "nes" "Blues Brothers, The (USA).zip" ;;
-            15) download-game "nes" "Bubble Bobble (USA).zip" ;;
-            16) download-game "nes" "BurgerTime (USA).zip" ;;
-            17) download-game "nes" "Captain Comic - The Adventure (USA) (Unl).zip" ;;
-            18) download-game "nes" "Castlevania (USA).zip" ;;
-            19) download-game "nes" "Castlevania III - Dracula's Curse (USA).zip" ;;
-            20) download-game "nes" "Cliffhanger (USA).zip" ;;
-            21) download-game "nes" "Dig Dug II - Trouble in Paradise (USA).zip" ;;
-            22) download-game "nes" "Donkey Kong (World) (Rev A).zip" ;;
-            23) download-game "nes" "Double Dragon (USA).zip" ;;
-            24) download-game "nes" "Double Dragon III - The Sacred Stones (USA).zip" ;;
-            25) download-game "nes" "Dr. Mario (Japan, USA).zip" ;;
-            26) download-game "nes" "Duck Hunt (World).zip" ;;
-            27) download-game "nes" "Excitebike (Japan, USA).zip" ;;
-            28) download-game "nes" "Fire 'n Ice (USA).zip" ;;
-            29) download-game "nes" "G.I. Joe - A Real American Hero (USA).zip" ;;
-            30) download-game "nes" "Galaga - Demons of Death (USA).zip" ;;
-            31) download-game "nes" "Gradius (USA).zip" ;;
-            32) download-game "nes" "Ice Climber (USA, Europe).zip" ;;
-            33) download-game "nes" "Ikari Warriors II - Victory Road (USA).zip" ;;
-            34) download-game "nes" "Jurassic Park (USA).zip" ;;
-            35) download-game "nes" "Karate Kid, The (USA).zip" ;;
-            36) download-game "nes" "Kid Icarus (USA, Europe).zip" ;;
-            37) download-game "nes" "Kirby's Adventure (USA).zip" ;;
-            38) download-game "nes" "Legend of Zelda, The (USA).zip" ;;
-            39) download-game "nes" "Mario Bros. (World).zip" ;;
-            40) download-game "nes" "Mega Man 6 (USA).zip" ;;
-            41) download-game "nes" "Metroid (USA).zip" ;;
-            42) download-game "nes" "Mike Tyson's Punch-Out!! (Japan, USA).zip" ;;
-            43) download-game "nes" "Ninja Gaiden (USA).zip" ;;
-            44) download-game "nes" "Pac-Man (USA).zip" ;;
-            45) download-game "nes" "Platoon (USA).zip" ;;
-            46) download-game "nes" "Q-bert (USA).zip" ;;
-            47) download-game "nes" "Rad Racer (USA).zip" ;;
-            48) download-game "nes" "RoboCop (USA).zip" ;;
-            49) download-game "nes" "Super Mario Bros. (World).zip" ;;
-            50) download-game "nes" "Super Mario Bros. 2 (USA) (Rev A).zip" ;;
-            51) download-game "nes" "Super Mario Bros. 3 (USA).zip" ;;
-            52) download-game "nes" "Super Spy Hunter (USA).zip" ;;
-            53) download-game "nes" "Teenage Mutant Ninja Turtles (USA).zip" ;;
-            54) download-game "nes" "Tetris (USA).zip" ;;
-            55) download-game "nes" "Zelda II - The Adventure of Link (USA).zip" ;;
+	    15) download-game "nes" "Bomberman (USA).zip" ;;
+            16) download-game "nes" "Bubble Bobble (USA).zip" ;;
+            17) download-game "nes" "BurgerTime (USA).zip" ;;
+            18) download-game "nes" "Captain Comic - The Adventure (USA) (Unl).zip" ;;
+            19) download-game "nes" "Castlevania (USA).zip" ;;
+            20) download-game "nes" "Castlevania III - Dracula's Curse (USA).zip" ;;
+            21) download-game "nes" "Cliffhanger (USA).zip" ;;
+            22) download-game "nes" "Dig Dug II - Trouble in Paradise (USA).zip" ;;
+            23) download-game "nes" "Donkey Kong (World) (Rev A).zip" ;;
+            24) download-game "nes" "Double Dragon (USA).zip" ;;
+            25) download-game "nes" "Double Dragon III - The Sacred Stones (USA).zip" ;;
+            26) download-game "nes" "Dr. Mario (Japan, USA).zip" ;;
+            27) download-game "nes" "Duck Hunt (World).zip" ;;
+            28) download-game "nes" "Excitebike (Japan, USA).zip" ;;
+            29) download-game "nes" "Fire 'n Ice (USA).zip" ;;
+            30) download-game "nes" "G.I. Joe - A Real American Hero (USA).zip" ;;
+            31) download-game "nes" "Galaga - Demons of Death (USA).zip" ;;
+            32) download-game "nes" "Gradius (USA).zip" ;;
+            33) download-game "nes" "Ice Climber (USA, Europe).zip" ;;
+            34) download-game "nes" "Ikari Warriors II - Victory Road (USA).zip" ;;
+            35) download-game "nes" "Jurassic Park (USA).zip" ;;
+            36) download-game "nes" "Karate Kid, The (USA).zip" ;;
+            37) download-game "nes" "Kid Icarus (USA, Europe).zip" ;;
+            38) download-game "nes" "Kirby's Adventure (USA).zip" ;;
+            39) download-game "nes" "Legend of Zelda, The (USA).zip" ;;
+            40) download-game "nes" "Mario Bros. (World).zip" ;;
+            41) download-game "nes" "Mega Man 6 (USA).zip" ;;
+            42) download-game "nes" "Metroid (USA).zip" ;;
+            43) download-game "nes" "Mike Tyson's Punch-Out!! (Japan, USA).zip" ;;
+            44) download-game "nes" "Ninja Gaiden (USA).zip" ;;
+            45) download-game "nes" "Pac-Man (USA).zip" ;;
+            46) download-game "nes" "Platoon (USA).zip" ;;
+            47) download-game "nes" "Q-bert (USA).zip" ;;
+            48) download-game "nes" "Rad Racer (USA).zip" ;;
+            49) download-game "nes" "RoboCop (USA).zip" ;;
+            50) download-game "nes" "Super Mario Bros. (World).zip" ;;
+            51) download-game "nes" "Super Mario Bros. 2 (USA) (Rev A).zip" ;;
+            52) download-game "nes" "Super Mario Bros. 3 (USA).zip" ;;
+            53) download-game "nes" "Super Spy Hunter (USA).zip" ;;
+            54) download-game "nes" "Teenage Mutant Ninja Turtles (USA).zip" ;;
+            55) download-game "nes" "Tetris (USA).zip" ;;
+            56) download-game "nes" "Zelda II - The Adventure of Link (USA).zip" ;;
              *) ;;
         esac
         done < /tmp/results
