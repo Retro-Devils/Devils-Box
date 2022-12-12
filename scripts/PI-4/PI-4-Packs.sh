@@ -82,28 +82,29 @@ else
       43 "Oric                             5.4MB      136 GAMES" \
       44 "Pokemini                         5.4MB       44 GAMES" \
       45 "PlayStation 1                      3GB       29 GAMES" \
-      46 "PSP                              ???GB      600 GAMES" \
-      47 "Sega Model 3.                     ??GB       15 GAMES" \
-      48 "Sega Saturn                      108GB      303 GAMES" \
-      49 "Sega Saturn Japan                3.9GB       18 GAMES" \
-      50 "ScummVM                          2.5GB       21 GAMES" \
-      51 "Sega32x                           63MB       37 GAMES" \
-      52 "SegaCD                            11GB       52 GAMES" \
-      53 "Super Famicon                    475MB      487 GAMES" \
-      54 "SG-1000                            1MB       68 GAMES" \
-      55 "SNES                             508MB      603 GAMES" \
-      56 "SNES MSU1                         ??MB       ?? GAMES" \
-      57 "SuperGraffiix                    2.4MB        5 GAMES" \
-      58 "Turbo Graffix 16/PC Engine        20MB       94 GAMES" \
-      59 "Vectrex                          201KB       20 GAMES" \
-      60 "VideoPAC                         430KB       99 GAMES" \
-      61 "Virtual Boy                        8MB       24 GAMES" \
-      62 "Dreamcast VMU                      3MB      115 GAMES" \
-      63 "Wonderswan Color                 116MB       84 GAMES" \
-      64 "Sharp X1                         7.6MB       69 GAMES" \
-      65 "Sharp X68000                     504MB      418 GAMES" \
-      66 "ZMachine                           4MB       30 GAMES" \
-      67 "ZXSpectrum                        38MB     1111 GAMES" \
+      46 "Pokitto			   4.5MB       37 GAMES" \       
+      47 "PSP                              ???GB      600 GAMES" \
+      48 "Sega Model 3.                     ??GB       15 GAMES" \
+      49 "Sega Saturn                      108GB      303 GAMES" \
+      50 "Sega Saturn Japan                3.9GB       18 GAMES" \
+      51 "ScummVM                          2.5GB       21 GAMES" \
+      52 "Sega32x                           63MB       37 GAMES" \
+      53 "SegaCD                            11GB       52 GAMES" \
+      54 "Super Famicon                    475MB      487 GAMES" \
+      55 "SG-1000                            1MB       68 GAMES" \
+      56 "SNES                             508MB      603 GAMES" \
+      57 "SNES MSU1                         ??MB       ?? GAMES" \
+      58 "SuperGraffiix                    2.4MB        5 GAMES" \
+      59 "Turbo Graffix 16/PC Engine        20MB       94 GAMES" \
+      60 "Vectrex                          201KB       20 GAMES" \
+      61 "VideoPAC                         430KB       99 GAMES" \
+      62 "Virtual Boy                        8MB       24 GAMES" \
+      63 "Dreamcast VMU                      3MB      115 GAMES" \
+      64 "Wonderswan Color                 116MB       84 GAMES" \
+      65 "Sharp X1                         7.6MB       69 GAMES" \
+      66 "Sharp X68000                     504MB      418 GAMES" \
+      67 "ZMachine                           4MB       30 GAMES" \
+      68 "ZXSpectrum                        38MB     1111 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -152,28 +153,29 @@ else
     43) download-packs "oric" "oricutron" ;;
     44) download-packs "pokemini" ;;
     45) download-packs "psx" "lr-pcsx_rearmed" ;;
-    46) psp-pack ;;
-    47) model-3 ;;
-    48) download-packs "saturn" "lr-yabause" ;;
-    49) saturn-japan "saturn-japan" "lr-yabause" ;;
-    50) download-packs "scummvm" "scummvm" ;;
-    51) download-packs "sega32x" "lr-picodrive" ;;
-    52) download-packs "segacd" "lr-picodrive" ;;
-    53) download-packs "sfc" ;;
-    54) download-packs "sg-1000" "lr-genesis-plus-gx" ;;
-    55) download-packs "snes" "lr-snes9x" ;;
-    56) msu1-pack ;;
-    57) download-packs "supergrafx" "lr-beetle" ;;
-    58) tg16-fix ;;
-    59) download-packs "vectrex" "lr-vecx" ;;
-    60) download-packs "videopac" "lr-o2em" ;;
-    61) download-packs "virtualboy" "lr-beetle-vb" ;;
-    62) download-packs "svmu" ;;
-    63) download-packs "wonderswancolor" "lr-beetle-wswan" ;;
-    64) download-packs "x1" ;;
-    65) download-packs "x68000" ;;
-    66) download-packs "zmachine""frotz"  ;;
-    67) download-packs "zxspectrum" "lr-fuse" ;;
+    46) download-pokitto ;;
+    47) psp-pack ;;
+    48) model-3 ;;
+    49) download-packs "saturn" "lr-yabause" ;;
+    50) saturn-japan "saturn-japan" "lr-yabause" ;;
+    51) download-packs "scummvm" "scummvm" ;;
+    52) download-packs "sega32x" "lr-picodrive" ;;
+    53) download-packs "segacd" "lr-picodrive" ;;
+    54) download-packs "sfc" ;;
+    55) download-packs "sg-1000" "lr-genesis-plus-gx" ;;
+    56) download-packs "snes" "lr-snes9x" ;;
+    57) msu1-pack ;;
+    58) download-packs "supergrafx" "lr-beetle" ;;
+    59) tg16-fix ;;
+    60) download-packs "vectrex" "lr-vecx" ;;
+    61) download-packs "videopac" "lr-o2em" ;;
+    62) download-packs "virtualboy" "lr-beetle-vb" ;;
+    63) download-packs "svmu" ;;
+    64) download-packs "wonderswancolor" "lr-beetle-wswan" ;;
+    65) download-packs "x1" ;;
+    66) download-packs "x68000" ;;
+    67) download-packs "zmachine""frotz"  ;;
+    68) download-packs "zxspectrum" "lr-fuse" ;;
      +) none  ;;
      *) break ;;
     esac
@@ -335,6 +337,25 @@ if [ ! -d "$HOME/RetroPie/roms/bbcmicro/" ]; then choice=$(dialog --backtitle "$
       2<&1 >/dev/tty)
     case "$choice" in
       1) curl -sSL bit.ly/BBC-Installer | bash ;;
+      2) Consoles-Menu ;;
+      *) return ;;
+    esac
+else
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/bbcmicro/ -P "$HOME"/RetroPie/roms/bbcmicro -erobots=off
+rm -f "$HOME"/RetroPie/roms/bbcmicro/index.html.tmp
+fi
+}
+
+function download-pokitto() {
+if [ ! -d "$HOME/RetroPie/roms/pokitto/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
+      --ok-label Download --cancel-label Skip \
+      --menu "DO YOU WANT TO INSTALL POKITTO EMU?" 30 70 50 \
+      1 "YES" \
+      2 "NO" \
+      2<&1 >/dev/tty)
+    case "$choice" in
+      1) curl -sSL bit.ly/Pokitto-Installer | bash ;;
       2) Consoles-Menu ;;
       *) return ;;
     esac
