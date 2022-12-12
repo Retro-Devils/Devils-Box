@@ -33,8 +33,8 @@ function lightgun_menu() {
 
     case "$choice" in
     +) nono ;;
-    1) lg-pack "NES" ;;
-    2) lg-pack "SNES" ;;
+    1) lg-pack "NES" "nes" ;;
+    2) lg-pack "SNES" "snes" ;;
     -) none ;;
     *) break ;;
     esac
@@ -47,6 +47,7 @@ wget -m -r -np -nH -nd -R "index.html" "${LG_HOST1}"/"$1"-Gun-Games.zip -P "$HOM
 unzip "$HOME"/RetroPie/roms/"$2"/"$1"-Gun-Games.zip
 sudo rm "$HOME"/RetroPie/roms/"$2"/"$1"-Gun-Games.zip
 rm -f "$HOME"/RetroPie/roms/saturn/index.html.tmp
+rm -f "$HOME"/RetroPie/roms/"$2"/gun-games/gamelist.xml
 fi
 }
 
