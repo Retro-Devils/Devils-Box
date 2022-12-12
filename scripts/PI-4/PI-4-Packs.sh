@@ -65,7 +65,7 @@ else
       26 "Gamegear                          42MB      249 GAMES" \
       27 "Intellivision                      1MB       62 GAMES" \
       28 "Jakks                             20MB       25 GAMES" \
-      29 "****Lightgun MAME****             ??GB       ?? GAMES" \
+      29 "Lightgun Menu         SUB MENU	      SUB MENU " \
       30 "MarkIII                            6MB       58 GAMES" \
       31 "Mastersystem                      35MB      280 GAMES" \
       32 "Genesis/Megadrive                409MB      561 GAMES" \
@@ -136,7 +136,7 @@ else
     26) download-packs "gamegear" "lr-genesis-plus-gx" ;;
     27) download-packs "intellivision" "lr-freeintv" ;;
     28) download-jakks ;;
-    29) download-packs "lightgun" "mame" ;;
+    29) lightgun-packs ;;
     30) download-packs "markiii" "lr-genesis-plus-gx" ;;
     31) download-packs "mastersystem" "lr-picodrive" ;;
     32) download-packs "megadrive" "lr-genesis-plus-gx" ;;
@@ -365,5 +365,10 @@ wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/bbcmicro/ -P "$HOME"/RetroPie/
 rm -f "$HOME"/RetroPie/roms/bbcmicro/index.html.tmp
 fi
 }
+
+function lightgun-packs() {
+bash "$HOME"/Devils-Box/scripts/Lightgun-Packs.sh
+}
+
 
 Consoles-Menu
