@@ -120,7 +120,7 @@ else
     10) download-packs "atari7800" "lr-prosystem";;
     11) download-packs "atarilynx" "lr-beetle-lynx" ;;
     12) download-packs "atarist" "lr-hatari" ;;
-    13) download-packs "atomiswave" "lr-flycast" ;;
+    13) atomiswave-pack "atomiswave" "lr-flycast" ;;
     14) download-bbcmicro  ;;
     15) download-packs "c64" "lr-vice" ;;
     16) download-packs "coleco" "lr-bluemsx" ;;
@@ -220,6 +220,7 @@ wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/tg16 -P "$HOME"/RetroPie/roms/
 rm -f "$HOME"/RetroPie/roms/pcengine/index.html.tmp
 fi
 }
+
 function download-packs() {
 if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
       --ok-label Download --cancel-label Skip \
@@ -276,6 +277,26 @@ wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/jakks/ -P "$HOME"/RetroPie/rom
 rm -f "$HOME"/RetroPie/roms/plugnplay/index.html.tmp
 fi
 }
+
+function atomiswave-pack() {
+if [ ! -d "$HOME/RetroPie/roms/dreamcast/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
+      --ok-label Download --cancel-label Skip \
+      --menu "DO YOU WANT TO INSTALL "${2}"?" 30 70 50 \
+      1 "YES" \
+      2 "NO" \
+      2<&1 >/dev/tty)
+    case "$choice" in
+      1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
+      2) Consoles-Menu ;;
+      *) return ;;
+    esac
+else
+clear
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
+rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+fi
+}
+
 function mess-system() {
 dialog  --sleep 1 --title "MESS System Installer FYI" --msgbox " 
 --------------------------------------------
