@@ -292,6 +292,7 @@ if [ ! -d "$HOME/RetroPie/roms/dreamcast/" ]; then choice=$(dialog --backtitle "
     esac
 else
 clear
+if [ ! -d "$HOME/RetroPie/roms/atomiswave/" ]; then mkdir "$HOME/RetroPie/roms/atomiswave/"; else echo "YOU GOOD" ; fi 
 wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
 rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
 fi
