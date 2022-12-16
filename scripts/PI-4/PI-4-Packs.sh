@@ -82,7 +82,7 @@ else
       43 "Oric                             5.4MB      136 GAMES" \
       44 "Pokemini                         5.4MB       44 GAMES" \
       45 "PlayStation 1                      3GB       29 GAMES" \
-      46 "Pokitto			   4.5MB       37 GAMES" \       
+      46 "Pokitto			   4.5MB       37 GAMES" \
       47 "PSP                              ???GB      600 GAMES" \
       48 "Sega Model 3.                     ??GB       15 GAMES" \
       49 "Sega Saturn                      108GB      303 GAMES" \
