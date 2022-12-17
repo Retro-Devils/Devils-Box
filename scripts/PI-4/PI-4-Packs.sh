@@ -144,7 +144,7 @@ else
     34) download-packs "msx" "lr-bluemsx" ;;
     35) download-packs "msx2" "lr-bluemsx" ;;
     36) download-packs "n64" "lr-mupen64plus" ;;
-    37) download-packs "naomi" "lr-flycast" ;;
+    37) atomiswave-pack "naomi" "lr-flycast" ;;
     38) download-packs "nds" "drastic" ;;
     39) download-packs "neogeo" ;;
     40) download-packs "ngpc" "lr-beetle-ngp" ;;
@@ -292,8 +292,8 @@ if [ ! -d "$HOME/RetroPie/roms/dreamcast/" ]; then choice=$(dialog --backtitle "
     esac
 else
 clear
-if [ ! -d "$HOME/RetroPie/roms/atomiswave/" ]; then mkdir "$HOME/RetroPie/roms/atomiswave/"; else echo "YOU GOOD" ; fi 
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
+if [ ! -d "$HOME/RetroPie/roms/dreamcast/$1/" ]; then mkdir "$HOME/RetroPie/roms/dreamcast/$1/"; else echo "YOU GOOD" ; fi 
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/dreamcast/"${1}" -erobots=off
 rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
 fi
 }
