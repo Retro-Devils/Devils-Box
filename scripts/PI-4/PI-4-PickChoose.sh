@@ -224,31 +224,31 @@ local choice
     while read -r choice  
         do
         case $choice in
-           1) download-game "atomiswave" "anmlbskt.zip" ;;
-           2) download-game "atomiswave" "demofist.zip" ;;
-           3) download-game "atomiswave" "dirtypig.zip" ;;
-           4) download-game "atomiswave" "dolphin.zip" ;;
-           5) download-game "atomiswave" "fotns.zip" ;;
-           6) download-game "atomiswave" "ftspeed.zip" ;;
-           7) download-game "atomiswave" "gamelist.xml" ;;
-           8) download-game "atomiswave" "ggisuka.zip" ;;
-           9) download-game "atomiswave" "ggx15.zip" ;;
-           10) download-game "atomiswave" "kofnw.zip" ;; 
-           11) download-game "atomiswave" "kofnwj.zip" ;;
-           12) download-game "atomiswave" "kofxi.zip" ;;
-           13) download-game "atomiswave" "kov7sprt.zip" ;;
-           14) download-game "atomiswave" "maxspeed.zip" ;;
-           15) download-game "atomiswave" "mslug6.zip" ;;
-           16) download-game "atomiswave" "ngbc.zip"  ;;
-           17) download-game "atomiswave" "rangrmsn.zip" ;;
-           18) download-game "atomiswave" "rumblef.zip" ;;
-           19) download-game "atomiswave" "rumblef2.zip" ;;
-           20) download-game "atomiswave" "samsptk.zip" ;;
-           21) download-game "atomiswave" "sprtshot.zip" ;;
-           22) download-game "atomiswave" "sushibar.zip" ;;
-           23) download-game "atomiswave" "vfurlong.zip" ;;
-           24) download-game "atomiswave" "xtrmhnt2.zip" ;;
-           25) download-game "atomiswave" "xtrmhunt.zip" ;;	
+           1) download-game-dc "atomiswave" "anmlbskt.zip" ;;
+           2) download-game-dc "atomiswave" "demofist.zip" ;;
+           3) download-game-dc "atomiswave" "dirtypig.zip" ;;
+           4) download-game-dc "atomiswave" "dolphin.zip" ;;
+           5) download-game-dc "atomiswave" "fotns.zip" ;;
+           6) download-game-dc "atomiswave" "ftspeed.zip" ;;
+           7) download-game-dc "atomiswave" "gamelist.xml" ;;
+           8) download-game-dc "atomiswave" "ggisuka.zip" ;;
+           9) download-game-dc "atomiswave" "ggx15.zip" ;;
+           10) download-game-dc "atomiswave" "kofnw.zip" ;; 
+           11) download-game-dc "atomiswave" "kofnwj.zip" ;;
+           12) download-game-dc "atomiswave" "kofxi.zip" ;;
+           13) download-game-dc "atomiswave" "kov7sprt.zip" ;;
+           14) download-game-dc "atomiswave" "maxspeed.zip" ;;
+           15) download-game-dc "atomiswave" "mslug6.zip" ;;
+           16) download-game-dc "atomiswave" "ngbc.zip"  ;;
+           17) download-game-dc "atomiswave" "rangrmsn.zip" ;;
+           18) download-game-dc "atomiswave" "rumblef.zip" ;;
+           19) download-game-dc "atomiswave" "rumblef2.zip" ;;
+           20) download-game-dc "atomiswave" "samsptk.zip" ;;
+           21) download-game-dc "atomiswave" "sprtshot.zip" ;;
+           22) download-game-dc "atomiswave" "sushibar.zip" ;;
+           23) download-game-dc "atomiswave" "vfurlong.zip" ;;
+           24) download-game-dc "atomiswave" "xtrmhnt2.zip" ;;
+           25) download-game-dc "atomiswave" "xtrmhunt.zip" ;;	
             *) ;;
         esac
         done < /tmp/results
@@ -1795,6 +1795,18 @@ function download-game() {
       clear
       wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
       rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+fi
+fi
+done
+}
+function download-game-dc() {
+  for type in "$@"; do
+    if [ "${type}" != "${1}" ]; then
+      if [ ! -d "$HOME/RetroPie/roms/dreamcast/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install LR FLYCAST Emulator First" 6 40;
+      else
+      clear
+      wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P "$HOME"/RetroPie/roms/dreamcast/"${1}" -erobots=off
+      rm -f "$HOME"/RetroPie/roms/dreamcast/"${1}"/index.html.tmp
 fi
 fi
 done
