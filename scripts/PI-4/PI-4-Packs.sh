@@ -120,7 +120,7 @@ else
     10) download-packs "atari7800" "lr-prosystem";;
     11) download-packs "atarilynx" "lr-beetle-lynx" ;;
     12) download-packs "atarist" "lr-hatari" ;;
-    13) atomiswave-pack "atomiswave" "lr-flycast" ;;
+    13) download-packs-alt2 "atomiswave" "lr-flycast" "AtomIsWave" "zip" "ZIP" ;;
     14) download-bbcmicro  ;;
     15) download-packs "c64" "lr-vice" ;;
     16) download-packs "coleco" "lr-bluemsx" ;;
@@ -259,6 +259,39 @@ rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
 fi
 }
 
+function download-packs-alt2() {
+if [ ! -d "$HOME/RetroPie/roms/dreamcast/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
+      --ok-label Download --cancel-label Skip \
+      --menu "DO YOU WANT TO INSTALL "${2}"?" 30 70 50 \
+      1 "YES" \
+      2 "NO" \
+      2<&1 >/dev/tty)
+    case "$choice" in
+      1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
+      2) Consoles-Menu ;;
+      *) return ;;
+    esac
+else
+clear
+if [ ! -d "$HOME/RetroPie/roms/$1/" ]; then mkdir "$HOME/RetroPie/roms/$1/"; else echo "YOU GOOD" ; fi 
+wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
+rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+if [ ! -d "opt/retropie/configs/"$1"" ]; then sudo cp -R opt/retropie/conifgs/dreamcast opt/retropie/conifgs/"$1" ; fi
+if [ ! -s "$HOME/.emulationstation/es_systems.cfg" ]; then sudo rm -f $HOME/.emulationstation/es_systems.cfg; fi
+if [ ! -f "$HOME/.emulationstation/es_systems.cfg" ]; then cp $HOME/.emulationstation/es_systems.cfg $HOME/RetroPie/retropiemenu/gamelist.xml; fi
+CONTENT1="\t<system>\n\t\t  <name>"$1"</name>\n\t\t  <fullname>"$3"</fullname> \n\t\t  <path>/home/pi/RetroPie/roms/"$1"</path> \n\t\t  <extension>"$4" "$5"</extension> \n\t\t<command>/opt/retropie/supplementary/runcommand/runcommand.sh 0 _SYS_ "$1" %ROM%</command> \n\t\t  <platform>"$1"</platform> \n\t\t  <theme>"$1"</theme> \n\t\t</system>"
+C1=$(echo $CONTENT1 | sed 's/\//\\\//g')
+if grep -q model3 "$HOME/.emulationstation/es_systems.cfg"; then echo "es_systems.cfg entry confirmed"
+else
+	sed "/<\/system>/ s/.*/${C1}\n&/" $HOME/.emulationstation/es_systems.cfg > $HOME/temp
+	cat $HOME/temp > $HOME/.emulationstation/es_systems.cfg
+	rm -f $HOME/temp
+fi
+fi
+done
+}
+
+
 function download-jakks() {
 if [ ! -d "$HOME/RetroPie/roms/plugnplay/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
       --ok-label Download --cancel-label Skip \
@@ -275,26 +308,6 @@ else
 clear
 wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/jakks/ -P "$HOME"/RetroPie/roms/plugnplay -erobots=off
 rm -f "$HOME"/RetroPie/roms/plugnplay/index.html.tmp
-fi
-}
-
-function atomiswave-pack() {
-if [ ! -d "$HOME/RetroPie/roms/dreamcast/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
-      --ok-label Download --cancel-label Skip \
-      --menu "DO YOU WANT TO INSTALL "${2}"?" 30 70 50 \
-      1 "YES" \
-      2 "NO" \
-      2<&1 >/dev/tty)
-    case "$choice" in
-      1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
-      2) Consoles-Menu ;;
-      *) return ;;
-    esac
-else
-clear
-if [ ! -d "$HOME/RetroPie/roms/dreamcast/$1/" ]; then mkdir "$HOME/RetroPie/roms/dreamcast/$1/"; else echo "YOU GOOD" ; fi 
-wget -m -r -np -nH -nd -R "index.html" "${HOST1}"/"${1}"/ -P "$HOME"/RetroPie/roms/dreamcast/"${1}" -erobots=off
-rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
 fi
 }
 
@@ -330,6 +343,7 @@ In MAMEDEV Systems Menu
 - Upoun Systems
 - "$1" " 0 0
 }
+
 function saturn-japan() {
 if [ ! -d "$HOME/RetroPie/roms/saturn/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
 else
