@@ -288,7 +288,6 @@ else
 	rm -f $HOME/temp
 fi
 fi
-done
 }
 
 
