@@ -1799,18 +1799,65 @@ fi
 fi
 done
 }
-function download-game-dc() {
+
+function edit-es-naomi() {
+if [ ! -d "opt/retropie/configs/atomiswave" ]; then sudo cp -R opt/retropie/conifgs/dreamcast opt/retropie/conifgs/naomi ; fi
+if [ ! -s "$HOME/.emulationstation/es_systems.cfg" ]; then sudo rm -f $HOME/.emulationstation/es_systems.cfg; fi
+if [ ! -f "$HOME/.emulationstation/es_systems.cfg" ]; then cp $HOME/.emulationstation/es_systems.cfg $HOME/RetroPie/retropiemenu/gamelist.xml; fi
+CONTENT1="\t<system>\n\t\t  <name>naomi</name>\n\t\t  <fullname>Sega Naomi</fullname> \n\t\t  <path>/home/pi/RetroPie/roms/naomi</path> \n\t\t  <extension>.zip .ZIP</extension> \n\t\t<command>/opt/retropie/supplementary/runcommand/runcommand.sh 0 _SYS_ naomi %ROM%</command> \n\t\t  <platform>naomi</platform> \n\t\t  <theme>naomi</theme> \n\t\t</system>"
+C1=$(echo $CONTENT1 | sed 's/\//\\\//g')
+if grep -q model3 "$HOME/.emulationstation/es_systems.cfg"; then echo "es_systems.cfg entry confirmed"
+else
+	sed "/<\/system>/ s/.*/${C1}\n&/" $HOME/.emulationstation/es_systems.cfg > $HOME/temp
+	cat $HOME/temp > $HOME/.emulationstation/es_systems.cfg
+	rm -f $HOME/temp
+fi
+}
+
+function download-game-naomi() {
+
   for type in "$@"; do
     if [ "${type}" != "${1}" ]; then
       if [ ! -d "$HOME/RetroPie/roms/dreamcast/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install LR FLYCAST Emulator First" 6 40;
       else
       clear
-      wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P "$HOME"/RetroPie/roms/dreamcast/"${1}" -erobots=off
-      rm -f "$HOME"/RetroPie/roms/dreamcast/"${1}"/index.html.tmp
+      wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
+      rm -f "$HOME"/RetroPie/roms/"${1}"/index.html.tmp
+      edit-es-naomi
 fi
 fi
 done
 }
+
+function edit-es-atom() {
+if [ ! -d "opt/retropie/configs/atomiswave" ]; then sudo cp -R opt/retropie/conifgs/dreamcast opt/retropie/conifgs/atomiswave ; fi
+if [ ! -s "$HOME/.emulationstation/es_systems.cfg" ]; then sudo rm -f $HOME/.emulationstation/es_systems.cfg; fi
+if [ ! -f "$HOME/.emulationstation/es_systems.cfg" ]; then cp $HOME/.emulationstation/es_systems.cfg $HOME/RetroPie/retropiemenu/gamelist.xml; fi
+CONTENT1="\t<system>\n\t\t  <name>atomiswave</name>\n\t\t  <fullname>AtomIsWave</fullname> \n\t\t  <path>/home/pi/RetroPie/roms/atomiswave</path> \n\t\t  <extension>.zip .ZIP</extension> \n\t\t<command>/opt/retropie/supplementary/runcommand/runcommand.sh 0 _SYS_ atomiswave %ROM%</command> \n\t\t  <platform>atomiswave</platform> \n\t\t  <theme>atomiswave</theme> \n\t\t</system>"
+C1=$(echo $CONTENT1 | sed 's/\//\\\//g')
+if grep -q model3 "$HOME/.emulationstation/es_systems.cfg"; then echo "es_systems.cfg entry confirmed"
+else
+	sed "/<\/system>/ s/.*/${C1}\n&/" $HOME/.emulationstation/es_systems.cfg > $HOME/temp
+	cat $HOME/temp > $HOME/.emulationstation/es_systems.cfg
+	rm -f $HOME/temp
+fi
+}
+
+function download-game-atom() {
+
+  for type in "$@"; do
+    if [ "${type}" != "${1}" ]; then
+      if [ ! -d "$HOME/RetroPie/roms/dreamcast/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install LR FLYCAST Emulator First" 6 40;
+      else
+      clear
+      wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
+      rm -f "$HOME"/RetroPie/roms/dreamcast/"${1}"/index.html.tmp
+      edit-es-atom
+fi
+fi
+done
+}
+
 function download-mugens() {
 if [ ! -d "$HOME/RetroPie/roms/wine" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
 else
