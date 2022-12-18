@@ -402,7 +402,7 @@ fi
 }
 
 function lightgun-packs() {
-bash "$HOME"/Devils-Box/scripts/Lightgun-Packs.sh
+bash "$HOME"/Devils-Box/scripts/PI-4/Pi-4-Lightgun-Packs.sh
 }
 
 
