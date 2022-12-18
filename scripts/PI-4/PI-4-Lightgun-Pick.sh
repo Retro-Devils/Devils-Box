@@ -136,7 +136,7 @@ function download-game() {
       if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
       else
       clear
-      wget -m -r -np -nH -nd -R "index.html" ${LG_PICK}/gun-games/"${1}"/"${type}" -P "$HOME"/RetroPie/roms/"${1}"/gun-games/ -erobots=off
+      wget -m -r -np -nH -nd -R "index.html" ${LG_PICK}/"${1}"/gun-games/"${type}" -P "$HOME"/RetroPie/roms/"${1}"/gun-games/ -erobots=off
       rm -f "$HOME"/RetroPie/roms/"${1}"/gun-games/index.html.tmp
 fi
 fi
