@@ -7,7 +7,7 @@ DB_SETTINGS="$HOME/.devilsbox/db_settings.ini"
 HOST1="https://archive.org/download/the-devils-box-alt"
 HOST2="https://archive.org/download/the-devils-box_202112"
 HOST3="https://archive.org/download/devils-bios"
-HOST4="https://archive.org/download/devils-wine"
+HOST4="https://archive.org/download/devils-wine_20221218"
 HOST5="https://archive.org/download/devils-dos"
 #---------------NON-DEVILS-HOSTS-----------------------#
 HOST6="https://archive.org/download/PSP_US_Arquivista"
