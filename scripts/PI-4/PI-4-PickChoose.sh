@@ -12,7 +12,7 @@ HOST5="https://archive.org/download/devils-dos"
 #---------------NON-DEVILS-HOSTS-----------------------#
 HOST6="https://archive.org/download/PSP_US_Arquivista"
 HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
-HOST8="https://archive.org/download/devils-wine2"
+HOST8="https://archive.org/details/devils-wine2_202212"
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 
