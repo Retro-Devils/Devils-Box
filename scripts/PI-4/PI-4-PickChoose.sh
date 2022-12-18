@@ -11,9 +11,11 @@ HOST4="https://archive.org/download/devils-wine_20221218"
 HOST5="https://archive.org/download/devils-dos"
 #---------------NON-DEVILS-HOSTS-----------------------#
 HOST6="https://archive.org/download/PSP_US_Arquivista"
-HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0" 
+HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
+HOST8="https://archive.org/download/devils-wine2"
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
+
 
 
 if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
@@ -1779,8 +1781,8 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
               32) download-winegames "Retro-Devils_TheSettlers.zip" ;;
               33) download-winegames "Retro-Devils_TheSimpsonsHitandRun.zip" ;;
               34) download-winegames "Retro-Devils_UNREAL.zip"; game_fix "Unreal-Anthology-fix.reg" ;;
-	      35) download-winegames "Retro-Devils_VCOP.zip" ;;
-	      36) download-winegames "Retro-Devils_VCOP2.zip" ;;
+	      35) alt-winegames "VCOP.zip" ;;
+	      36) alt-winegames "VCOP2.zip" ;;
               37) download-winegames "Retro-Devils_Warcraft3.zip" ;;
                *) ;;
         esac
@@ -1904,6 +1906,7 @@ clear
   wget -m -r -np -nH -nd -R "index.html" ${HOST7}/"${1}" -P "$HOME"/RetroPie/roms/snesmsu1 -erobots=off
 fi
 }
+
 function download-winegames() {
 if [ ! -d "$HOME/RetroPie/roms/wine/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
 else
@@ -1914,6 +1917,18 @@ clear
   sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
 fi
 }
+
+function alt-winegames() {
+if [ ! -d "$HOME/RetroPie/roms/wine/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST8}/"${1}" -P "$HOME"/RetroPie/roms/wine -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/wine/"${1}" -d "$HOME"/RetroPie/roms/wine/
+  chmod 755 "$HOME"/RetroPie/roms/wine/*.sh
+  sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
+fi
+}
+
 function birds-exit() {
 dialog  --sleep 1 --title "ANGRY BIRDS "${1}" EXIT MESSAGE" --msgbox " 
 <-------------ATTENTION--------------->
