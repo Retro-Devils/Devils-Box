@@ -88,35 +88,36 @@ else
       43 "Openbor Artwork          [*]box  [ ]cart  [*]snap  [*]wheel" \
       44 "Oric Artwork             [*]box  [ ]cart  [ ]snap  [ ]wheel" \
       45 "Pokemini Artwork         [*]box  [ ]cart  [*]snap  [ ]wheel" \
-      46 "***PC Engine Artwork***  [*]box  [*]cart  [*]snap  [ ]wheel" \
-      47 "PS1 Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
-      48 "Saturn Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
-      49 "Saturn-Japan Artwork     [*]box  [*]cart  [*]snap  [*]wheel" \
-      50 "Scummvm Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
-      51 "Sega32x Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
-      52 "SegaCD Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
-      53 "Super Famicon Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
-      54 "SG-1000 Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
-      55 "SNES Artwork             [*]box  [*]cart  [*]snap  [ ]wheel" \
-      56 "SuperGrafx Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
-      57 "TurboGrafx 16 Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
-      58 "Vectrex Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
-      59 "Videopac Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
-      60 "Virtualboy Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
-      61 "VMU Artwork              [*]box  [ ]cart  [ ]snap  [ ]wheel" \
-      62 "Wine Artwork             [*]box  [ ]cart  [ ]snap  [ ]wheel" \
-      63 "WonderswanColor Artwork  [*]box  [*]cart  [*]snap  [*]wheel" \
-      64 "Sharp x1 Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
-      65 "Sharp x68000 Artwork     [*]box  [ ]cart  [*]snap  [*]wheel" \
-      66 "ZMachine Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
-      67 "ZXspectrum Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
+      46 "Pokitto Artwork          [*]box  [ ]cart  [*]snap  [ ]wheel" \
+      47 "***PC Engine Artwork***  [*]box  [*]cart  [*]snap  [ ]wheel" \
+      48 "PS1 Artwork              [*]box  [*]cart  [*]snap  [*]wheel" \
+      49 "Saturn Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
+      50 "Saturn-Japan Artwork     [*]box  [*]cart  [*]snap  [*]wheel" \
+      51 "Scummvm Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
+      52 "Sega32x Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
+      53 "SegaCD Artwork           [*]box  [*]cart  [*]snap  [*]wheel" \
+      54 "Super Famicon Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
+      55 "SG-1000 Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
+      56 "SNES Artwork             [*]box  [*]cart  [*]snap  [ ]wheel" \
+      57 "SuperGrafx Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
+      58 "TurboGrafx 16 Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
+      59 "Vectrex Artwork          [*]box  [*]cart  [*]snap  [*]wheel" \
+      60 "Videopac Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
+      61 "Virtualboy Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
+      62 "VMU Artwork              [*]box  [ ]cart  [ ]snap  [ ]wheel" \
+      63 "Wine Artwork             [*]box  [ ]cart  [ ]snap  [ ]wheel" \
+      64 "WonderswanColor Artwork  [*]box  [*]cart  [*]snap  [*]wheel" \
+      65 "Sharp x1 Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
+      66 "Sharp x68000 Artwork     [*]box  [ ]cart  [*]snap  [*]wheel" \
+      67 "ZMachine Artwork         [*]box  [*]cart  [*]snap  [*]wheel" \
+      68 "ZXspectrum Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
       +  "<---------------Consoles-Hacks-Artwork-------------------->" \
-      68 "GBA Hacks Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
-      69 "GameBoy Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
-      70 "Genesis Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
-      71 "Gamegear Hacks Artwork   [*]box  [*]cart  [*]snap  [*]wheel" \
-      72 "NES Hacks Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
-      73 "SNES Hacks Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
+      69 "GBA Hacks Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
+      70 "GameBoy Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
+      71 "Genesis Hacks Artwork    [*]box  [*]cart  [*]snap  [*]wheel" \
+      72 "Gamegear Hacks Artwork   [*]box  [*]cart  [*]snap  [*]wheel" \
+      73 "NES Hacks Artwork        [*]box  [*]cart  [*]snap  [*]wheel" \
+      74 "SNES Hacks Artwork       [*]box  [*]cart  [*]snap  [*]wheel" \
       2<&1 >/dev/tty)
 
     case "$choice" in
@@ -165,34 +166,35 @@ else
       43) download-art "openbor" ;;
       44) download-art "oric" ;;
       45) download-art "pokemini" ;;
-      46) download-art "pc-engine" ;;
-      47) download-art "psx" "lr-pcsx_rearmed" ;;
-      48) download-art "saturn" "lr-yabause" ;;
-      49) saturn-japan-art ;;
-      50) download-art "scummvm" ;;
-      51) download-art "sega32x" ;;
-      52) download-art "segacd" ;;
-      53) download-art "sfc" ;;
-      54) download-art "sg-1000" ;;
-      55) download-art "snes" ;;
-      56) download-art "supergrafx" ;;
-      57) download-art "tg16" ;;
-      58) download-art "vectrex" ;;
-      59) download-art "videopac" ;;
-      60) download-art "virtualboy" ;;
-      61) download-art "vmu"  ;;
-      62) download-art "wine" ;;
-      63) download-art "wonderswancolor" ;;
-      64) download-art "x1" ;;
-      65) download-art "x68000" ;;
-      66) download-art "zmachine" ;;
-      67) download-art "zxspectrum" ;;
-      68) download-art "gbah" ;;
-      69) download-art "gbh" ;;
-      70) download-art "genh" ;;
-      71) download-art "ggh" ;;
-      72) download-art "nesh" ;;
-      73) download-art "snesh" ;;
+      46) download-pokitto-art "pokitto" ;;
+      47) download-art "pc-engine" ;;
+      48) download-art "psx" "lr-pcsx_rearmed" ;;
+      49) download-art "saturn" "lr-yabause" ;;
+      50) saturn-japan-art ;;
+      51) download-art "scummvm" ;;
+      52) download-art "sega32x" ;;
+      53) download-art "segacd" ;;
+      54) download-art "sfc" ;;
+      55) download-art "sg-1000" ;;
+      56) download-art "snes" ;;
+      57) download-art "supergrafx" ;;
+      58) download-art "tg16" ;;
+      59) download-art "vectrex" ;;
+      50) download-art "videopac" ;;
+      61) download-art "virtualboy" ;;
+      62) download-art "vmu"  ;;
+      63) download-art "wine" ;;
+      64) download-art "wonderswancolor" ;;
+      65) download-art "x1" ;;
+      66) download-art "x68000" ;;
+      67) download-art "zmachine" ;;
+      68) download-art "zxspectrum" ;;
+      69) download-art "gbah" ;;
+      70) download-art "gbh" ;;
+      71) download-art "genh" ;;
+      72) download-art "ggh" ;;
+      73) download-art "nesh" ;;
+      74) download-art "snesh" ;;
       -) nono  ;;
       +) none  ;;
       *) break ;;
@@ -246,6 +248,30 @@ git pull origin main
 rm -fr "$HOME"/RetroPie/roms/"${1}"/.git
 fi
 }
+
+function download-pokitto-art() {
+if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
+      --ok-label Download --cancel-label Skip \
+      --menu "DO YOU WANT TO INSTALL EMU?" 30 70 50 \
+      1 "YES" \
+      2 "NO" \
+      2<&1 >/dev/tty)
+    case "$choice" in
+      1) curl -sSL https://bit.ly/Pokitto-Installer | bash ;;
+      2) artwork-menu ;;
+      *) return ;;
+    esac
+else
+clear
+cd "$HOME/RetroPie/roms/"${1}"/"
+git init
+git remote add origin "${ART_HOST2}/${1}.git"
+git fetch
+git pull origin main
+rm -fr "$HOME"/RetroPie/roms/"${1}"/.git
+fi
+}
+
 function saturn-japan-art() {
 if [ ! -d "$HOME/RetroPie/roms/saturn/" ]; then choice=$(dialog --backtitle "$BACKTITLE" --title " EMU IS MISSING " \
       --ok-label Download --cancel-label Skip \
