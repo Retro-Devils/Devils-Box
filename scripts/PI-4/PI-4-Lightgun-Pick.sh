@@ -18,7 +18,7 @@ LG_PICK="https://archive.org/download/RPI-Lightgun-Games/"
 
 
 if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
-	omxplayer "$HOME"/Devils-Box/files/videos/pickchoose.mp4 > /dev/null 2>&1
+	omxplayer "$HOME"/Devils-Box/files/videos/lightguns.mp4 > /dev/null 2>&1
 fi
 if [ -f "/usr/local/bin/confirm" ]; then
   confirm=0
