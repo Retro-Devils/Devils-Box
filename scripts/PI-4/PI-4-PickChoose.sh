@@ -12,7 +12,7 @@ HOST5="https://archive.org/download/devils-dos"
 #---------------NON-DEVILS-HOSTS-----------------------#
 HOST6="https://archive.org/download/PSP_US_Arquivista"
 HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
-HOST8="https://archive.org/details/devils-wine2_202212"
+HOST8="https://archive.org/download/devils-wine-packs"
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 
@@ -1739,9 +1739,8 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
                "32" "The Settlers                            26MB" off \
                "33" "The Simpsons Hit & Run                 1.8GB" off \
                "34" "Unreal Anthology                       8.8GB" off \
-	       "35" "Virtua Cop 			    0.5GB" off \
-	       "36" "Virtua Cop 2			    0.3GB" off \
-               "37" "Warcraft 3                             1.9GB" off \
+	       "35" "Virtua Cop 1 & 2			    0.5GB" off \
+               "36" "Warcraft 3                             1.9GB" off \
                 2>/tmp/results
     while read -r choice  
         do
@@ -1781,9 +1780,8 @@ dialog  --sleep 1 --title "Wine Downloader Help" --msgbox "
               32) download-winegames "Retro-Devils_TheSettlers.zip" ;;
               33) download-winegames "Retro-Devils_TheSimpsonsHitandRun.zip" ;;
               34) download-winegames "Retro-Devils_UNREAL.zip"; game_fix "Unreal-Anthology-fix.reg" ;;
-	      35) alt-winegames "VCOP.zip" ;;
-	      36) alt-winegames "VCOP2.zip" ;;
-              37) download-winegames "Retro-Devils_Warcraft3.zip" ;;
+	      35) alt-winegames "VCOP-Pack.zip" ;;
+              36) download-winegames "Retro-Devils_Warcraft3.zip" ;;
                *) ;;
         esac
         done < /tmp/results
