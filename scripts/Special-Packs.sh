@@ -48,7 +48,7 @@ function christmas-hacks() {
     1) xmas-nes-pack "nes" "xmas22-nes.zip" ;;
     2) xmas-n64pack "nes" "xmas22-nes.zip" ;;
     3) xmas-snes-pack "snes" "xmas22-snes-zip" ;;
-    4) wine-xmas-pack "Merry-Gear-Solid-Pack.zip" ;;
+    4) wine-xmas-pack "Merry-Gear-Pack.zip" ;;
      +) none  ;;
      *) break ;;
     esac
