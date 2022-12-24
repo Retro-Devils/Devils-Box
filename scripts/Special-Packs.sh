@@ -30,7 +30,6 @@ function Special-Packs() {
      *) break ;;
     esac
    done
-fi
 }
 
 function christmas-packs() {
