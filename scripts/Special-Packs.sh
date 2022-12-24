@@ -39,17 +39,17 @@ function christmas-packs() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " CHRISTMAS PACKS DOWNLOAD MENU" \
       --ok-label Download --cancel-label Main-Menu \
       --menu "PRESS A/ENTER DOWNLOAD PACK" 30 70 50 \
-      1 "NES PACK " \
-      2 "N64 PACK" \
-      3 "SNES PACK" \
-      4 "WINE PACK" \
+      1 "NES-- GAME PACK " \
+      2 "N64-- GAME PACK" \
+      3 "SNES--GAME PACK" \
+      4 "WINE--Merry Gear Solid Pack" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) download-xmas-pack "nes" "xmas22-nes.zip" ;;
     2) download-xmas-pack "nes" "xmas22-nes.zip" ;;
     3) download-xmas-pack "snes" "xmas22-snes-zip" ;;
-    4) wine-xmas-pack "xmas22-wine-pack.zip" ;;
+    4) wine-xmas-pack "Merry-Gear-Solid-Pack.zip" ;;
      +) none  ;;
      *) break ;;
     esac
