@@ -45,9 +45,9 @@ function christmas-packs() {
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) download-xmas-pack "nes" "xmas22-nes.zip" ;;
-    2) download-xmas-pack "nes" "xmas22-nes.zip" ;;
-    3) download-xmas-pack "snes" "xmas22-snes-zip" ;;
+    1) xmas-nes-pack "nes" "xmas22-nes.zip" ;;
+    2) xmas-n64pack "nes" "xmas22-nes.zip" ;;
+    3) xmas-snes-pack "snes" "xmas22-snes-zip" ;;
     4) wine-xmas-pack "Merry-Gear-Solid-Pack.zip" ;;
      +) none  ;;
      *) break ;;
