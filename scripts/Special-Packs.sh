@@ -40,14 +40,16 @@ function christmas-packs() {
       --ok-label Download --cancel-label Main-Menu \
       --menu "PRESS A/ENTER DOWNLOAD PACK" 30 70 50 \
       1 "NES PACK " \
-      2 "SNES PACK" \
-      3 "WINE PACK" \
+      2 "N64 PACK" \
+      3 "SNES PACK" \
+      4 "WINE PACK" \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) download-xmas-pack "nes" "xmas-nes.zip" ;;
-    2) download-xmas-pack "snes" "xmas-snes-zip" ;;
-    3) wine-xmas-pack "xmas-wine-pack.zip" ;;
+    1) download-xmas-pack "nes" "xmas22-nes.zip" ;;
+    2) download-xmas-pack "nes" "xmas22-nes.zip" ;;
+    3) download-xmas-pack "snes" "xmas22-snes-zip" ;;
+    4) wine-xmas-pack "xmas22-wine-pack.zip" ;;
      +) none  ;;
      *) break ;;
     esac
@@ -59,7 +61,7 @@ function download-xmas-pack() {
 if [ ! -d "$HOME/RetroPie/roms/wine/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
 else
 clear
-  wget -m -r -np -nH -nd -R "index.html" ${HOST2}/"${1}"/xmas-2022/"{$1}"-xmas.zip -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
+  wget -m -r -np -nH -nd -R "index.html" ${HOST2}/"${1}"/xmas22-"{$1}".zip -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
   unzip -o "$HOME"/RetroPie/roms/"{$1}"/"${2}" -d "$HOME"/RetroPie/roms/"{$1}"/
   sudo rm -r "$HOME"/RetroPie/roms/"{$1}"/"${2}"
 fi
