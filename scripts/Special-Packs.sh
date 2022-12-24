@@ -55,6 +55,8 @@ function christmas-hacks() {
    done
 }
 
+######---------------------------------XMAS HACKS-----------------------#####
+
 function xmas-nes-pack() {
 if [ ! -d "$HOME/RetroPie/roms/nes/" ]; then dialog  --sleep 1 --title "NES FOLDER MISSING!" --msgbox "Please Install EMU First" 6 40;
 else
@@ -97,6 +99,11 @@ clear
 fi
 }
 
+######---------------------------------HALLOWEEN HACKS-----------------------#####
+
+
+
+######---------------------------------XMAS PACKS-----------------------#####
 
 
 Special-Packs
