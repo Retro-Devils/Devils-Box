@@ -92,19 +92,20 @@ else
       53 "SegaCD                            11GB       52 GAMES" \
       54 "Super Famicon                    475MB      487 GAMES" \
       55 "SG-1000                            1MB       68 GAMES" \
-      56 "SNES                             508MB      603 GAMES" \
-      57 "SNES MSU1                         ??MB       ?? GAMES" \
-      58 "SuperGraffiix                    2.4MB        5 GAMES" \
-      59 "Turbo Graffix 16/PC Engine        20MB       94 GAMES" \
-      60 "Vectrex                          201KB       20 GAMES" \
-      61 "VideoPAC                         430KB       99 GAMES" \
-      62 "Virtual Boy                        8MB       24 GAMES" \
-      63 "Dreamcast VMU                      3MB      115 GAMES" \
-      64 "Wonderswan Color                 116MB       84 GAMES" \
-      65 "Sharp X1                         7.6MB       69 GAMES" \
-      66 "Sharp X68000                     504MB      418 GAMES" \
-      67 "ZMachine                           4MB       30 GAMES" \
-      68 "ZXSpectrum                        38MB     1111 GAMES" \
+      56 "Special/Themed Packs		SUB MENU       SUB MENU" \
+      57 "SNES                             508MB      603 GAMES" \
+      58 "SNES MSU1                         ??MB       ?? GAMES" \
+      59 "SuperGraffiix                    2.4MB        5 GAMES" \
+      60 "Turbo Graffix 16/PC Engine        20MB       94 GAMES" \
+      61 "Vectrex                          201KB       20 GAMES" \
+      62 "VideoPAC                         430KB       99 GAMES" \
+      63 "Virtual Boy                        8MB       24 GAMES" \
+      64 "Dreamcast VMU                      3MB      115 GAMES" \
+      65 "Wonderswan Color                 116MB       84 GAMES" \
+      66 "Sharp X1                         7.6MB       69 GAMES" \
+      67 "Sharp X68000                     504MB      418 GAMES" \
+      68 "ZMachine                           4MB       30 GAMES" \
+      69 "ZXSpectrum                        38MB     1111 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -163,19 +164,20 @@ else
     53) download-packs "segacd" "lr-picodrive" ;;
     54) download-packs "sfc" ;;
     55) download-packs "sg-1000" "lr-genesis-plus-gx" ;;
-    56) download-packs "snes" "lr-snes9x" ;;
-    57) msu1-pack ;;
-    58) download-packs "supergrafx" "lr-beetle" ;;
-    59) tg16-fix ;;
-    60) download-packs "vectrex" "lr-vecx" ;;
-    61) download-packs "videopac" "lr-o2em" ;;
-    62) download-packs "virtualboy" "lr-beetle-vb" ;;
-    63) download-packs "svmu" ;;
-    64) download-packs "wonderswancolor" "lr-beetle-wswan" ;;
-    65) download-packs "x1" ;;
-    66) download-packs "x68000" ;;
-    67) download-packs "zmachine""frotz"  ;;
-    68) download-packs "zxspectrum" "lr-fuse" ;;
+    56) special-packs ;;
+    57) download-packs "snes" "lr-snes9x" ;;
+    58) msu1-pack ;;
+    59) download-packs "supergrafx" "lr-beetle" ;;
+    60) tg16-fix ;;
+    61) download-packs "vectrex" "lr-vecx" ;;
+    62) download-packs "videopac" "lr-o2em" ;;
+    63) download-packs "virtualboy" "lr-beetle-vb" ;;
+    64) download-packs "svmu" ;;
+    65) download-packs "wonderswancolor" "lr-beetle-wswan" ;;
+    66) download-packs "x1" ;;
+    67) download-packs "x68000" ;;
+    68) download-packs "zmachine""frotz"  ;;
+    69) download-packs "zxspectrum" "lr-fuse" ;;
      +) none  ;;
      *) break ;;
     esac
@@ -403,6 +405,11 @@ fi
 
 function lightgun-packs() {
 bash "$HOME"/Devils-Box/scripts/PI-4/Pi-4-Lightgun-Packs.sh
+}
+
+
+function special-packs() {
+bash "$HOME"/Devils-Box/scripts/Special-Packs.sh
 }
 
 
