@@ -53,16 +53,35 @@ function christmas-packs() {
      *) break ;;
     esac
    done
+}
+
+function xmas-nes-pack() {
+if [ ! -d "$HOME/RetroPie/roms/nes/" ]; then dialog  --sleep 1 --title "NES FOLDER MISSING!" --msgbox "Please Install EMU First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST2}/xmas22-nes.zip -P "$HOME"/RetroPie/roms/nes -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/nes/xmas22-nes.zip -d "$HOME"/RetroPie/roms/nes/
+  sudo rm -r "$HOME"/RetroPie/roms/nes/xmas22-nes.zip
 fi
 }
 
-function download-xmas-pack() {
-if [ ! -d "$HOME/RetroPie/roms/wine/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
+function xmas-nes-pack() {
+if [ ! -d "$HOME/RetroPie/roms/snes/" ]; then dialog  --sleep 1 --title "SNES FOLDER MISSING!" --msgbox "Please Install EMU First" 6 40;
 else
 clear
-  wget -m -r -np -nH -nd -R "index.html" ${HOST2}/"${1}"/xmas22-"{$1}".zip -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
-  unzip -o "$HOME"/RetroPie/roms/"{$1}"/"${2}" -d "$HOME"/RetroPie/roms/"{$1}"/
-  sudo rm -r "$HOME"/RetroPie/roms/"{$1}"/"${2}"
+  wget -m -r -np -nH -nd -R "index.html" ${HOST2}/xmas22-snes.zip -P "$HOME"/RetroPie/roms/snes -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/snes/xmas22-snes.zip -d "$HOME"/RetroPie/roms/snes/
+  sudo rm -r "$HOME"/RetroPie/roms/nes/xmas22-snes.zip
+fi
+}
+
+function xmas-n64-pack() {
+if [ ! -d "$HOME/RetroPie/roms/n64/" ]; then dialog  --sleep 1 --title "N64 FOLDER MISSING!" --msgbox "Please Install EMU First" 6 40;
+else
+clear
+  wget -m -r -np -nH -nd -R "index.html" ${HOST2}/xmas22-n64.zip -P "$HOME"/RetroPie/roms/n64 -erobots=off
+  unzip -o "$HOME"/RetroPie/roms/n64/xmas22-n64.zip -d "$HOME"/RetroPie/roms/n64/
+  sudo rm -r "$HOME"/RetroPie/roms/nes/xmas22-n64.zip
 fi
 }
 
