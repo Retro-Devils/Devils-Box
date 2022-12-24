@@ -21,7 +21,7 @@ function Special-Packs() {
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) christmas-packs ;;
+    1) christmas-hacks ;;
     2) no ;;
     3) no ;;
     4) no ;;
@@ -32,7 +32,7 @@ function Special-Packs() {
    done
 }
 
-function christmas-packs() {
+function christmas-hacks() {
     while true; do
     local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " CHRISTMAS PACKS DOWNLOAD MENU" \
@@ -65,7 +65,7 @@ clear
 fi
 }
 
-function xmas-nes-pack() {
+function xmas-snes-pack() {
 if [ ! -d "$HOME/RetroPie/roms/snes/" ]; then dialog  --sleep 1 --title "SNES FOLDER MISSING!" --msgbox "Please Install EMU First" 6 40;
 else
 clear
