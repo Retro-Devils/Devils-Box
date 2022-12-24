@@ -13,7 +13,7 @@ function Special-Packs() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
       --ok-label Download --cancel-label Main-Menu \
       --menu "PRESS A/ENTER SUBMENU" 30 70 50 \
-      1 "Christmas Packs " \
+      1 "Christmas Hack Packs " \
       2 "COMING SOON" \
       3 "COMING SOON" \
       4 "COMING SOON" \
