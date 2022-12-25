@@ -65,7 +65,7 @@ else
       26 "Gamegear                          42MB      249 GAMES" \
       27 "Intellivision                      1MB       62 GAMES" \
       28 "Jakks                             20MB       25 GAMES" \
-      29 "Lightgun Menu         SUB MENU	      SUB MENU " \
+      29 "Lightgun Packs Menu------SUB MENU	      SUB MENU " \
       30 "MarkIII                            6MB       58 GAMES" \
       31 "Mastersystem                      35MB      280 GAMES" \
       32 "Genesis/Megadrive                409MB      561 GAMES" \
@@ -92,7 +92,7 @@ else
       53 "SegaCD                            11GB       52 GAMES" \
       54 "Super Famicon                    475MB      487 GAMES" \
       55 "SG-1000                            1MB       68 GAMES" \
-      56 "Special/Themed Packs		SUB MENU       SUB MENU" \
+      56 "Special/Themed Packs------SUB MENU	      SUB MENU " \
       57 "SNES                             508MB      603 GAMES" \
       58 "SNES MSU1                         ??MB       ?? GAMES" \
       59 "SuperGraffiix                    2.4MB        5 GAMES" \
