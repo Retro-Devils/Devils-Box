@@ -1340,4 +1340,9 @@ else
 	fi
 fi
 
+echo "Emulationstation Will Now Restart ..."
+sleep 1
+killall emulationstation
+sudo openvt -c 1 -s -f emulationstation 2>&1
+
 main_menu
