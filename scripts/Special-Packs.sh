@@ -63,7 +63,7 @@ else
 clear
   wget -m -r -np -nH -nd -R "index.html" ${HOST2}/xmas22-nes.zip -P "$HOME"/RetroPie/roms/nes -erobots=off
   unzip -o "$HOME"/RetroPie/roms/nes/xmas22-nes.zip -d "$HOME"/RetroPie/roms/nes/
-  sudo rm -r "$HOME"/RetroPie/roms/nes/xmas22-nes.zip
+  sudo rm "$HOME"/RetroPie/roms/nes/xmas22-nes.zip
 fi
 }
 
@@ -73,7 +73,7 @@ else
 clear
   wget -m -r -np -nH -nd -R "index.html" ${HOST2}/xmas22-snes.zip -P "$HOME"/RetroPie/roms/snes -erobots=off
   unzip -o "$HOME"/RetroPie/roms/snes/xmas22-snes.zip -d "$HOME"/RetroPie/roms/snes/
-  sudo rm -r "$HOME"/RetroPie/roms/nes/xmas22-snes.zip
+  sudo rm "$HOME"/RetroPie/roms/nes/xmas22-snes.zip
 fi
 }
 
@@ -83,7 +83,7 @@ else
 clear
   wget -m -r -np -nH -nd -R "index.html" ${HOST2}/xmas22-n64.zip -P "$HOME"/RetroPie/roms/n64 -erobots=off
   unzip -o "$HOME"/RetroPie/roms/n64/xmas22-n64.zip -d "$HOME"/RetroPie/roms/n64/
-  sudo rm -r "$HOME"/RetroPie/roms/nes/xmas22-n64.zip
+  sudo rm "$HOME"/RetroPie/roms/nes/xmas22-n64.zip
 fi
 }
 
@@ -95,7 +95,7 @@ clear
   wget -m -r -np -nH -nd -R "index.html" ${HOST1}/"${1}" -P "$HOME"/RetroPie/roms/wine -erobots=off
   unzip -o "$HOME"/RetroPie/roms/wine/"${1}" -d "$HOME"/RetroPie/roms/wine/
   chmod 755 "$HOME"/RetroPie/roms/wine/*.sh
-  sudo rm -r "$HOME"/RetroPie/roms/wine/"${1}"
+  sudo rm "$HOME"/RetroPie/roms/wine/"${1}"
 fi
 }
 
