@@ -16,7 +16,7 @@ PC_HOST="https://archive.org/download/the-devils-box-alt"
 
 #--------LIGHTGUN HOSTS--------#
 LG_HOST1 = "https://archive.org/download/RPI-Lightgun-Games"
-LG_HOST2 = "https://archive.org/download/RPI-Lightgun-Games/zips/"
+LG_HOST2 = "https://archive.org/download/RPI-Lightgun-Games/zips"
 
 
 function lightgun_menu() {
@@ -42,12 +42,12 @@ function lightgun_menu() {
 }
 
 function lg-pack() {
-if [ ! -d "$HOME/RetroPie/roms/$2/gun-games" ]; then sudo mkdir "$HOME"/RetroPie/roms/"$2"/gun-games/; fi
-wget -m -r -np -nH -nd -R "index.html" "${LG_HOST1}"/"$1"-Gun-Games.zip -P "$HOME"/RetroPie/roms/"$2"/gun-games -erobots=off
-unzip "$HOME"/RetroPie/roms/"$2"/"$1"-Gun-Games.zip
-sudo rm "$HOME"/RetroPie/roms/"$2"/"$1"-Gun-Games.zip
+if [ ! -d "$HOME/RetroPie/roms/"${2}"/gun-games" ]; then sudo mkdir "$HOME"/RetroPie/roms/"${2}"/gun-games/; fi
+wget -m -r -np -nH -nd -R "index.html" "${LG_HOST2}"/"${1}"-Gun-Games.zip -P "$HOME"/RetroPie/roms/"${2}"/gun-games -erobots=off
+unzip "$HOME"/RetroPie/roms/"${2}"/"${1}"-Gun-Games.zip
+sudo rm "$HOME"/RetroPie/roms/"${2}"/"${1}"-Gun-Games.zip
 rm -f "$HOME"/RetroPie/roms/saturn/index.html.tmp
-rm -f "$HOME"/RetroPie/roms/"$2"/gun-games/gamelist.xml
+rm -f "$HOME"/RetroPie/roms/"${2}"/gun-games/gamelist.xml
 }
 
 
