@@ -1,3 +1,5 @@
+#!/bin/bash
+
 clear
 #-----------------DEVILS-GAME HOSTS---------------------#
 HOST1="https://archive.org/download/the-devils-box-alt"
@@ -15,8 +17,8 @@ HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 
 #--------LIGHTGUN HOSTS--------#
-LG_HOST1 = "https://archive.org/download/RPI-Lightgun-Games"
-LG_HOST2 = "https://archive.org/download/RPI-Lightgun-Games/zips"
+LG_HOST1 ="https://archive.org/download/RPI-Lightgun-Games"
+LG_HOST2 ="https://archive.org/download/RPI-Lightgun-Games/zips"
 
 
 function lightgun_menu() {
