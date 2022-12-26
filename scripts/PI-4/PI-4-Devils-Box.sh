@@ -1307,6 +1307,10 @@ else
 	isdb="\Z1Disabled\Zn"
 fi
 }
+echo "Emulationstation Will Now Restart ..."
+sleep 1
+killall emulationstation
+sudo openvt -c 1 -s -f emulationstation 2>&1
 
 #-----------NET CHECKER-----------#
 wget -q --spider http://google.com
@@ -1339,10 +1343,5 @@ else
 		fi
 	fi
 fi
-
-echo "Emulationstation Will Now Restart ..."
-sleep 1
-killall emulationstation
-sudo openvt -c 1 -s -f emulationstation 2>&1
 
 main_menu
