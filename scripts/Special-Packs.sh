@@ -46,7 +46,7 @@ function christmas-hacks() {
 
     case "$choice" in
     1) xmas-nes-pack "nes" "xmas22-nes.zip" ;;
-    2) xmas-n64pack "n64" "xmas22-n64.zip" ;;
+    2) xmas-n64-pack "n64" "xmas22-n64.zip" ;;
     3) xmas-snes-pack "snes" "xmas22-snes-zip" ;;
     4) wine-xmas-pack "Merry-Gear-Pack.zip" ;;
      +) none  ;;
