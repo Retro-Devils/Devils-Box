@@ -38,7 +38,7 @@ local choice
       --ok-label Select --cancel-label Main-Menu \
       --menu "PICK CONSOLE & CHOOSE GAME(S) " 20 50 30 \
        1 "NES" \
-       2 "SNES" \    
+       2 "SNES" \
        3 "Wine" \
       2>&1 >/dev/tty)
 
