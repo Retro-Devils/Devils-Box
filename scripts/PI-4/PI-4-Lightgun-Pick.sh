@@ -14,7 +14,7 @@ HOST6="https://archive.org/download/PSP_US_Arquivista"
 HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0" 
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
-LG_PICK="https://archive.org/download/RPI-Lightgun-Games/"
+LG_PICK="https://archive.org/download/RPI-Lightgun-Games"
 
 
 if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
@@ -137,6 +137,8 @@ function download-game() {
       else
       clear
       wget -m -r -np -nH -nd -R "index.html" ${LG_PICK}/"${1}"/gun-games/"${type}" -P "$HOME"/RetroPie/roms/"${1}"/gun-games/ -erobots=off
+      wget -m -r -np -nH -nd -R "index.html" ${PC_HOST}/"${1}"/"${type}" -P "$HOME"/RetroPie/roms/"${1}" -erobots=off
+
       rm -f "$HOME"/RetroPie/roms/"${1}"/gun-games/index.html.tmp
 fi
 fi
