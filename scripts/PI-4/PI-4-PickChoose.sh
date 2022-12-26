@@ -44,19 +44,20 @@ local choice
       4 "Dreamcast" \
       5 "GameBoy Advance" \
       6 "Hypseus" \
-      7 "MegaDrive" \
-      8 "Model 3" \
-      9 "Mugens" \
-      10 "Nintendo 64" \
-      11 "Nintendo DS" \
-      12 "NES" \
-      13 "PC DOS Games" \
-      14 "Playstation 1" \
-      15 "Ports *COMING SOON*" \
-      16 "PSP" \
-      17 "Saturn" \
-      18 "Super Nintendo" \
-      19 "Wine" \
+      7 "Lightgun Games" \
+      8 "MegaDrive" \
+      9 "Model 3" \
+      10 "Mugens" \
+      11 "Nintendo 64" \
+      12 "Nintendo DS" \
+      13 "NES" \
+      14 "PC DOS Games" \
+      15 "Playstation 1" \
+      16 "Ports *COMING SOON*" \
+      17 "PSP" \
+      18 "Saturn" \
+      19 "Super Nintendo" \
+      20 "Wine" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -66,24 +67,30 @@ local choice
     4) dreamcast ;;
     5) gba ;;
     6) hypseus ;;
-    7) megadrive ;;
-    8) model3 ;;
-    9) mugens ;;
-    10) n64 ;;
-    11) nds ;;
-    12) nes ;;
-    13) pcgames ;;
-    14) psx ;;
-    15) ports ;;
-    16) psp ;;
-    17) saturn ;;
-    18) snes ;;
-    19) winegames ;;
+    7) lightgun-pick ;;
+    8) megadrive ;;
+    9) model3 ;;
+    10) mugens ;;
+    11) n64 ;;
+    12) nds ;;
+    13) nes ;;
+    14) pcgames ;;
+    15) psx ;;
+    16) ports ;;
+    17) psp ;;
+    18) saturn ;;
+    19) snes ;;
+    20) winegames ;;
     *) break ;;
     esac
   done
 fi
 }
+
+function lightgun-pick()
+bash "$HOME"/Devils-Box/scripts/PI-4/PI-4-Lightgun-Pick.sh
+}
+
 function arcade() {
           whiptail --clear --title "PICK & CHOOSE ARCADE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
