@@ -45,7 +45,7 @@ local choice
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) arcade ;;
+    1) all-n64 ;;
     2) bg-n64 ;;
     3) bl-n64 ;;
     4) t50-n64 ;;
@@ -83,6 +83,32 @@ function bl-n64() {
   done
 }
 
+function bg-n64() {
+  local choice
+
+  while true; do
+    choice=$(dialog --backtitle "$BACKTITLE" --title "SORT BY LETTER MENU N64" \
+      --ok-label Select --cancel-label Back \
+      --menu "PLEASE SELECT LETTER SET TO SORT BY " 30 70 50 \
+      0 "Action" \
+      1 "Adventure" \
+      2 "Beat Em Up Games" \
+      3 "Multiplayer Games" \
+      4 "Platform Games" \
+      5 "Shooters" \
+      2>&1 >/dev/tty)
+
+    case "$choice" in
+    +) nono ;;
+    0) action-n64 ;;
+    1) adventure-n64 ;;
+    2) beatem-n64 ;;
+    3) multip-n64 ;;
+    4) platf-n64 ;;
+    5) shoot-n64 ;;
+    *) break ;;
+    esac
+  done
 }
 
 
