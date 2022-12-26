@@ -39,9 +39,9 @@ local choice
       --ok-label Select --cancel-label Main-Menu \
       --menu "HOW WOULD YOU LIKE THE GAMES SORTED? " 20 50 30 \
       1 "All Games" \
-      2 "By Genres" \
-      3 "By Letter" \
-      4 "Top 50" \
+      2 "By Genre" \
+      3 "By Letters" \
+      4 "Top 50 List" \
       2>&1 >/dev/tty)
 
     case "$choice" in
