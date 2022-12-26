@@ -60,12 +60,14 @@ function nes-pack() {
 wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/RPI-Lightgun-Games/zips/NES-Gun-Games.zip -P "$HOME"/RetroPie/roms/nes/ -erobots=off
 unzip "$HOME"/RetroPie/roms/nes/NES-Gun-Games.zip
 sudo rm "$HOME"/RetroPie/roms/nes/NES-Gun-Games.zip
+chmod 777 -R "$HOME"/RetroPie/roms/nes/
 }
 
 function snes-pack() {
 wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/RPI-Lightgun-Games/zips/SNES-Gun-Games.zip -P "$HOME"/RetroPie/roms/snes/ -erobots=off
 unzip "$HOME"/RetroPie/roms/snes/SNES-Gun-Games.zip
 sudo rm "$HOME"/RetroPie/roms/snes/SNES-Gun-Games.zip
+chmod 777 -R "$HOME"/RetroPie/roms/snes/
 }
 
 lightgun_menu
