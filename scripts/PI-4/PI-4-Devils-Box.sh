@@ -41,10 +41,11 @@ function main_menu() {
       8 "Devils Tool Box"
       - "<---->System Tools<----->"
       9 "Reboot System"
-      10 "Show System Info"
-      11 "Expand System Memory"
+      10 "Restart EmuStation"
+      11 "Show System Info"
+      12 "Expand System Memory"
       - "<----------------------->" 
-      12 "Devils Box Credits")
+      13 "Devils Box Credits")
     else
       options=( \
       1 "Install Devils-Box")
@@ -60,14 +61,30 @@ function main_menu() {
     7) toolboxes ;;
     8) devils_tools ;;
     9) system_reboot ;;
-    10) show_sysinfo ;;
-    11) expand_mem ;;
-    12) credits ;;
+    10) restart_es ;;
+    11) show_sysinfo ;;
+    12) expand_mem ;;
+    13) credits ;;
     -) nono ;;
     +) none ;;
     *) break ;;
     esac
   done
+}
+
+#-----------Restart ES--------#
+function restart_es() {
+echo "ES Restart Selected"
+sleep 3
+echo "Emulationstation Will Restart In"
+sleep 2
+echo "3"
+sleep 1
+echo "2"
+sleep 1
+echo "Restarting Now"
+killall emulationstation
+sudo openvt -c 1 -s -f emulationstation 2>&1
 }
 
 #-----------Artwork-----------#
@@ -1307,10 +1324,7 @@ else
 	isdb="\Z1Disabled\Zn"
 fi
 }
-echo "Emulationstation Will Now Restart ..."
-sleep 1
-killall emulationstation
-sudo openvt -c 1 -s -f emulationstation 2>&1
+
 
 #-----------NET CHECKER-----------#
 wget -q --spider http://google.com
