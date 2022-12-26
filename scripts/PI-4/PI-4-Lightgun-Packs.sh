@@ -58,7 +58,7 @@ fi
 
 function nes-pack() {
 if [ ! -d "$HOME/RetroPie/roms/nes/Gun-Games" ]; then sudo mkdir "$HOME"/RetroPie/roms/nes/Gun-Games/ ; fi
-wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/RPI-Lightgun-Games/zips/NES-Gun-Games.zip -P "$HOME"/RetroPie/roms/"${1}"/Gun-Games/ -erobots=off
+wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/RPI-Lightgun-Games/zips/NES-Gun-Games.zip -P "$HOME"/RetroPie/roms/nes/Gun-Games/ -erobots=off
 unzip "$HOME"/RetroPie/roms/nes/NES-Gun-Games.zip
 sudo rm "$HOME"/RetroPie/roms/nes/NES-Gun-Games.zip
 rm -f "$HOME"/RetroPie/roms/nes/Gun-Games/index.html.tmp
@@ -67,7 +67,7 @@ rm -f "$HOME"/RetroPie/roms/nes/Gun-Games/gamelist.xml
 
 function snes-pack() {
 if [ ! -d "$HOME/RetroPie/roms/snes/Gun-Games" ]; then sudo mkdir "$HOME"/RetroPie/roms/nes/Gun-Games/ ; fi
-wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/RPI-Lightgun-Games/zips/SNES-Gun-Games.zip -P "$HOME"/RetroPie/roms/"${1}"/Gun-Games/ -erobots=off
+wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/RPI-Lightgun-Games/zips/SNES-Gun-Games.zip -P "$HOME"/RetroPie/roms/snes/Gun-Games/ -erobots=off
 unzip "$HOME"/RetroPie/roms/snes/SNES-Gun-Games.zip
 sudo rm "$HOME"/RetroPie/roms/snes/SNES-Gun-Games.zip
 rm -f "$HOME"/RetroPie/roms/snes/Gun-Games/index.html.tmp
