@@ -87,7 +87,7 @@ local choice
 fi
 }
 
-function lightgun-pick()
+function lightgun-pick() {
 bash "$HOME"/Devils-Box/scripts/PI-4/PI-4-Lightgun-Pick.sh
 }
 
