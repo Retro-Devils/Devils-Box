@@ -43,7 +43,7 @@ function lightgun_menu() {
 
 function lg-pack() {
 if [ ! -d "$HOME/RetroPie/roms/"${2}"/gun-games" ]; then sudo mkdir "$HOME"/RetroPie/roms/"${2}"/gun-games/; fi
-wget -m -r -np -nH -nd -R "index.html" "${LG_HOST2}"/"${1}"-Gun-Games.zip -P "$HOME"/RetroPie/roms/"${2}"/gun-games -erobots=off
+wget -m -r -np -nH -nd -R "index.html" ${LG_HOST2}/"${1}"-Gun-Games.zip -P "$HOME"/RetroPie/roms/"${2}"/gun-games -erobots=off
 unzip "$HOME"/RetroPie/roms/"${2}"/"${1}"-Gun-Games.zip
 sudo rm "$HOME"/RetroPie/roms/"${2}"/"${1}"-Gun-Games.zip
 rm -f "$HOME"/RetroPie/roms/saturn/index.html.tmp
