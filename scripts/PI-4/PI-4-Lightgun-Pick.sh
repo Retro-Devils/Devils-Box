@@ -133,10 +133,11 @@ function snes() {
 function download-game() {
   for type in "$@"; do
     if [ "${type}" != "${1}" ]; then
+      if [ ! -d "$HOME/RetroPie/roms/"${1}"/Gun-Games" ]; then mkdir $HOME/RetroPie/roms/"${1}"/Gun-Games ; fi
       if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
       else
       clear
-      wget -m -r -np -nH -nd -R "index.html" ${LG_PICK}/"${1}"/gun-games/"${type}" -P "$HOME"/RetroPie/roms/"${1}"/ -erobots=off
+      wget -m -r -np -nH -nd -R "index.html" ${LG_PICK}/"${1}"/gun-games/"${type}" -P "$HOME"/RetroPie/roms/"${1}"/Gun-Games/ -erobots=off
       rm -f "$HOME"/RetroPie/roms/"${1}"/gun-games/index.html.tmp
 fi
 fi
