@@ -33,21 +33,21 @@ function lightgun_menu() {
 
     case "$choice" in
     +) nono ;;
-    1) lg-pack "NES" "nes" ;;
-    2) lg-pack "SNES" "snes" ;;
+    1) nes-pack ;;
+    2) snes-pack ;;
     -) none ;;
     *) break ;;
     esac
   done
 }
 
-function lg-pack() {
-if [ ! -d "$HOME/RetroPie/roms/"${2}"/gun-games" ]; then sudo mkdir "$HOME"/RetroPie/roms/"${2}"/gun-games/; fi
-wget -m -r -np -nH -nd -R "index.html" ${LG_HOST2}/"${1}"-Gun-Games.zip -P "$HOME"/RetroPie/roms/"${2}"/gun-games -erobots=off
-unzip "$HOME"/RetroPie/roms/"${2}"/"${1}"-Gun-Games.zip
-sudo rm "$HOME"/RetroPie/roms/"${2}"/"${1}"-Gun-Games.zip
+function nes-pack() {
+if [ ! -d "$HOME/RetroPie/roms/nes/Gun-Games" ]; then sudo mkdir "$HOME"/RetroPie/roms/nes/Gun-Games/; fi
+wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/RPI-Lightgun-Games/zips/NES-Gun-Games.zip -P "$HOME"/RetroPie/roms/"${1}"/Gun-Games/ -erobots=off
+unzip "$HOME"/RetroPie/roms/nes/NES-Gun-Games.zip
+sudo rm "$HOME"/RetroPie/roms/nes/NES-Gun-Games.zip
 rm -f "$HOME"/RetroPie/roms/saturn/index.html.tmp
-rm -f "$HOME"/RetroPie/roms/"${2}"/gun-games/gamelist.xml
+rm -f "$HOME"/RetroPie/roms/nes/Gun-Games/gamelist.xml
 }
 
 
