@@ -826,15 +826,13 @@ function devils_emu_tools() {
     choice=$(dialog --backtitle "$BACKTITLE" --title "DEVILS EMU TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
-      1 "Devils Extras Installer" \
-      2 "BIOS Installer" \
-      3 "MSU1 Setup" \
+      1 "BIOS Installer" \
+      2 "MSU1 Setup" \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) devils-ex ;;
-    2) download-bios ;;
-    3) msu-setup ;;
+    1) download-bios ;;
+    2) msu-setup ;;
     *) break ;;
     esac
   done
@@ -842,15 +840,6 @@ function devils_emu_tools() {
 
 function testers() {
 bash "$HOME"/Devils-Box/scripts/Tester-Menu.sh 
-}
-
-function devils-ex() {
-if [ $NETCHECK -eq 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-else
-curl -sSL https://git.io/J9Z8c | bash
-fi
 }
 
 function devils-game-tools() {
