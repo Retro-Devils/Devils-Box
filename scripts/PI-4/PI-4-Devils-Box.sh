@@ -899,19 +899,17 @@ function devils_emu_tools() {
     choice=$(dialog --backtitle "$BACKTITLE" --title "DEVILS EMU TOOLS MENU" \
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
-      1 "Devils Extras Installer" \
-      2 "BIOS Installer" \
-      3 "BBC Micro Installer" \
-      4 "MSU1 Setup" \
-      5 "Pi Dynamic Emu Installer" \
+      1 "BIOS Installer" \
+      2 "BBC Micro Installer" \
+      3 "MSU1 Setup" \
+      4 "Pi Dynamic Emu Installer" \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) devils-ex ;;
-    2) download-bios ;;
-    3) bbc-install ;;
-    4) msu-setup ;;
-    5) pidei ;;
+    1) download-bios ;;
+    2) bbc-install ;;
+    3) msu-setup ;;
+    4) pidei ;;
     *) break ;;
     esac
   done
@@ -923,15 +921,6 @@ bash $HOME/Devils-Box/scripts/pidei.sh
 
 function testers() {
 bash "$HOME"/Devils-Box/scripts/Tester-Menu.sh 
-}
-
-function devils-ex() {
-if [ $NETCHECK -eq 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-else
-curl -sSL https://git.io/J9Z8c | bash
-fi
 }
 
 function bbc-install() {
