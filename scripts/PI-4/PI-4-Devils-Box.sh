@@ -916,7 +916,7 @@ function devils_emu_tools() {
 }
 
 function pidei() {
-bash $HOME/Devils-Box/scripts/pidei.sh
+bash $HOME/Devils-Box/scripts/PI-4/PI-4-pidei.sh
 }
 
 function testers() {
