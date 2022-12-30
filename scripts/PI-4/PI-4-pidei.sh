@@ -20,7 +20,7 @@ function emu-menu() {
       3 "AmigaCD32<-------------------->RA PUAE" \
       4 "Amstrad CPC<------------------>RA CAPRICE32" \
       5 "Arcade<----------------------->MULTI CORES/EMUS" \
-      6 "Arcadia<---------------------->" \
+      6 "Arcadia<---------------------->RA MESS" \
       7 "Astrocade<-------------------->RA MESS" \
       8 "Atari800<--------------------->RA ATARI800"\
       9 "Atari2600<-------------------->RA STELLA" \
