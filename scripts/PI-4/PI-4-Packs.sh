@@ -157,8 +157,8 @@ else
     46) download-pokitto ;;
     47) psp-pack ;;
     48) model-3 ;;
-    49) download-packs "saturn" "lr-yabause" ;;
-    50) saturn-japan "saturn-japan" "lr-yabause" ;;
+    49) download-packs "saturn" "yabasanshiro" ;;
+    50) saturn-japan "saturn-japan" "yabasanshiro" ;;
     51) download-packs "scummvm" "scummvm" ;;
     52) download-packs "sega32x" "lr-picodrive" ;;
     53) download-packs "segacd" "lr-picodrive" ;;
