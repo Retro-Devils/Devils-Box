@@ -150,8 +150,8 @@ function emu-menu() {
     47) install-pokitto ;;
     48) multi-cores "PSP" "lr-ppsspp" "----" "ppsspp" ;;
     49) install-model-3 ;;
-    50) install-emu "Sega Saturn" "yabasanshiro" ;;
-    51) install-emu "Sega Saturn Japan" "yabasanshiro" ;;
+    50) install-emu2 "Sega Saturn" "yabasanshiro" ;;
+    51) install-emu2 "Sega Saturn Japan" "yabasanshiro" ;;
     52) install-emu "ScummVM" "lr-scummvm" "----" "scummvm" ;;
     53) install-emu "Sega32x" ;;
     54) install-emu "SegaCD" "lr-picodrive" ;;
@@ -191,7 +191,7 @@ sudo ./retropie_packages.sh "$2" install_bin
 
 function install-emu2() {
 cd $HOME/RetroPie-Setup
-sudo ./retropie_packages.sh "$2" install
+sudo ./retropie_packages.sh "$2"
 }
 
 function multi-cores() {
