@@ -21,7 +21,7 @@ function emu-menu() {
       4 "Amstrad CPC<------------------>RA CAPRICE32" \
       5 "Arcade<----------------------->MULTI CORES/EMUS" \
       6 "Arcadia<---------------------->" \
-      7 "Astrocade<-------------------->" \
+      7 "Astrocade<-------------------->RA MESS" \
       8 "Atari800<--------------------->RA ATARI800"\
       9 "Atari2600<-------------------->RA STELLA" \
       10 "Atari5200<-------------------->RA ATARI800" \
@@ -35,7 +35,7 @@ function emu-menu() {
       18 "Dragon32<-------------------->EMU--XROAR" \
       19 "Daphne<---------------------->EMU--DAPHNE" \
       20 "Dreamcast<------------------->MULTI CORES/EMUS" \
-      21 "Electron<-------------------->" \
+      21 "Electron<-------------------->RA MESS " \
       22 "Famicon<--------------------->" \
       23 "Famicom Disk<---------------->" \
       24 "Game and Watch<-------------->" \
@@ -61,29 +61,30 @@ function emu-menu() {
       44 "Pokemini<-------------------->" \
       45 "PlayStation 1<--------------->MULTI CORES/EMUS" \
       46 "Plug N Play<----------------->RA MESS SYSTEM" \
-      47 "PSP<------------------------->MULTI CORES/EMUS" \
-      48 "Sega Model 3<---------------->EMU--" \
-      49 "Sega Saturn<----------------->CORE/EMU" \
-      50 "Sega Saturn Japan<----------->CORE/EMU" \
-      51 "ScummVM<--------------------->CORE/EMU" \
-      52 "Sega32x<--------------------->CORE/EMU" \
-      53 "SegaCD<---------------------->CORE/EMU" \
-      54 "Super Famicon<--------------->CORE/EMU" \
-      55 "SG-1000<--------------------->CORE/EMU" \
-      56 "SNES<------------------------>CORE/EMU" \
-      57 "SNES MSU1<------------------->CORES/EMU" \
-      58 "SuperGraffiix<--------------->RA BEETLE SUPERGRAX" \
-      59 "Turbo Graffix 16/PC Engine<-->RA BEETLE PCE FAST" \
-      60 "Vectrex<--------------------->CORE/EMU" \
-      61 "VideoPAC<-------------------->CORE/EMU" \
-      62 "Virtual Boy<----------------->CORE/EMU" \
-      63 "VMU Dreamcast<--------------->CORE/EMU" \
-      64 "Wine<------------------------>EMU--WINE/BOX86" \
-      65 "Wonderswan Color<------------>RA BEETLE WSWAN" \
-      66 "Sharp X1<-------------------->CORE/EMU" \
-      67 "Sharp X68000<---------------->CORE/EMU" \
-      68 "ZMachine<-------------------->CORE/EMU" \
-      69 "ZXSpectrum<------------------>CORE/EMU" \
+      47 "Pokitto<--------------------->EMU--POKITTO" \
+      48 "PSP<------------------------->MULTI CORES/EMUS" \
+      49 "Sega Model 3<---------------->EMU--" \
+      50 "Sega Saturn<----------------->CORE/EMU" \
+      51 "Sega Saturn Japan<----------->CORE/EMU" \
+      52 "ScummVM<--------------------->CORE/EMU" \
+      53 "Sega32x<--------------------->CORE/EMU" \
+      54 "SegaCD<---------------------->CORE/EMU" \
+      55 "Super Famicon<--------------->CORE/EMU" \
+      56 "SG-1000<--------------------->CORE/EMU" \
+      57 "SNES<------------------------>CORE/EMU" \
+      58 "SNES MSU1<------------------->CORES/EMU" \
+      59 "SuperGraffiix<--------------->RA BEETLE SUPERGRAX" \
+      60 "Turbo Graffix 16/PC Engine<-->RA BEETLE PCE FAST" \
+      61 "Vectrex<--------------------->CORE/EMU" \
+      62 "VideoPAC<-------------------->CORE/EMU" \
+      63 "Virtual Boy<----------------->CORE/EMU" \
+      64 "VMU Dreamcast<--------------->CORE/EMU" \
+      65 "Wine<------------------------>EMU--WINE/BOX86" \
+      66 "Wonderswan Color<------------>RA BEETLE WSWAN" \
+      67 "Sharp X1<-------------------->CORE/EMU" \
+      68 "Sharp X68000<---------------->CORE/EMU" \
+      69 "ZMachine<-------------------->CORE/EMU" \
+      70 "ZXSpectrum<------------------>CORE/EMU" \
        + "<                                     >" \
        + "<-----------Pi.D.E.I Tools------------>" \
        + "<                                     >" \
@@ -91,16 +92,22 @@ function emu-menu() {
       T2 "PI.D.E.I UPDATER                       " \
       T3 "PI.D.E.I INFORMATION                   " \
       T4 "PI.D.E.I CREDITS                       " \
+       - "  _____   _     ___     _____   ______  " \
+       - " |  __ | |_|   |    \  |  ___| |_    _| " \
+       - " |  ___|  _    |  |  \ | |__     |  |   " \
+       - " | |     | |   |  |  | |  __|    |  |   " \
+       - " | |     | |   |  |  / | |___   _|  |_  " \
+       - " |_|     |_|   |___/   |_____| |______| " \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) install-action max ;;
+    1) install-actionmax ;;
     2) install-emu "Amiga" "lr-puae" ;;
     3) install-emu "Amigacd32" "lr-puae" ;;
     4) install-emu "Amstradcpc" "lr-caprice32" ;;
     5) multi-cores3 "Arcade" "lr-mame2003" "lr-fbaplha2012" "lr-mame200" "lr-mame2003-plus" "mame" ;;
-    6) install-emu "Arcadia" ;;
-    7) install-emu "Astrocade" ;;
+    6) mess-system "Arcadia" "arcadia" ;;
+    7) mess-system "Astrocade" "astrocade" ;;
     8) install-emu "Atari800" "atari800" ;;
     9) multi-cores "Atari2600" "lr-stella" "----" "stella" ;;
     10) install-emu "Atari5200" "lr-atari800";;
@@ -114,8 +121,8 @@ function emu-menu() {
     18) install-emu "Dragon32" "xroar" ;;
     19) install-emu "Daphne" "daphne" ;;
     20) install-emu "Dreamcast" "lr-dreamcast" "lr-flycast" "redream" ;;
-    21) install-emu "Electron" ;;
-    22) install-emu "Famicon" ;;
+    21) mess-system "Electron" "electron";;
+    22) install-emu "Famicon" "lr-nestopia";;
     23) install-emu "FDS" ;;
     24) install-emu "Game&Watch" "lr-gw" ;;
     25) multi-cores "GameBoy" "lr-mgba" "lr-gb" ;;
@@ -140,34 +147,36 @@ function emu-menu() {
     44) install-emu "Pokemini" "lr-pokemini" ;;
     45) multi-cores "PS1" "lr-pcsx_rearmed" ;;
     46) mess-system "plugnplay" ;;
-    47) multi-cores "PSP" "lr-ppsspp" "----" "ppsspp" ;;
-    48) install-model-3 ;;
-    49) install-emu "Sega Saturn" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
-    50) multi-cores "Sega Saturn Japan" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
-    51) install-emu "ScummVM" "lr-scummvm" "----" "scummvm" ;;
-    52) install-emu "Sega32x" ;;
-    53) install-emu "SegaCD" "lr-picodrive" ;;
-    54) install-emu "SFC" ;;
-    55) install-emu "SG-1000" "lr-genesis-plus-gx" ;;
-    56) multi-cores2 "SNES" "lr-snes9x" "lr-bsnes" "lr-snes9x2002" ;;
-    57) install-emu "SNES-MSU1" "lr-snes9x" ;;
-    58) install-emu "SuperGrafx" "lr-beetle-supergrafx" ;;
-    59) install-emu "TurboGrafx-16" "lr-beetle-pce-fast" ;;
-    60) install-emu "Vectrex" "lr-vecx" ;;
-    61) install-emu "Videopac" ;;
-    62) install-emu "Virtualboy" "lr-bettle-vb" ;;
-    63) install-emu "VMU" "lr-vemulator.sh" ;;
-    64) install-wine ;;
-    65) install-emu "Wonderswancolor" "lr-bettle-wsan";;
-    66) install-emu "X1" ;;
-    67) install-emu "X68000" "lr-px68k" ;;
-    68) install-emu "Zmachine" ;;
-    69) multi-cores "ZXspectrum" "lr-fuse" "----" "zesarux" ;;
+    47) install-pokitto ;;
+    48) multi-cores "PSP" "lr-ppsspp" "----" "ppsspp" ;;
+    49) install-model-3 ;;
+    50) install-emu "Sega Saturn" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
+    51) multi-cores "Sega Saturn Japan" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
+    52) install-emu "ScummVM" "lr-scummvm" "----" "scummvm" ;;
+    53) install-emu "Sega32x" ;;
+    54) install-emu "SegaCD" "lr-picodrive" ;;
+    55) install-emu "SFC" ;;
+    56) install-emu "SG-1000" "lr-genesis-plus-gx" ;;
+    57) multi-cores2 "SNES" "lr-snes9x" "lr-bsnes" "lr-snes9x2002" ;;
+    58) install-emu "SNES-MSU1" "lr-snes9x" ;;
+    59) install-emu "SuperGrafx" "lr-beetle-supergrafx" ;;
+    60) install-emu "TurboGrafx-16" "lr-beetle-pce-fast" ;;
+    61) install-emu "Vectrex" "lr-vecx" ;;
+    62) install-emu "Videopac" ;;
+    63) install-emu "Virtualboy" "lr-bettle-vb" ;;
+    64) install-emu "VMU" "lr-vemulator.sh" ;;
+    65) install-wine ;;
+    66) install-emu "Wonderswancolor" "lr-bettle-wsan";;
+    67) install-emu "X1" ;;
+    68) install-emu "X68000" "lr-px68k" ;;
+    69) install-emu "Zmachine" ;;
+    70) multi-cores "ZXspectrum" "lr-fuse" "----" "zesarux" ;;
      +) none  ;;
     T1) update-setup-script ;;
     T2) update-pidei ;;
     T3) pidei-info ;;
     T4) pidei-credits ;;
+     -) no ;;
      *) break ;;
     esac
    done
@@ -270,16 +279,6 @@ PI.D.E.I. WILL NOW INSTALL WINE/BOX86
 curl -sSL https://bit.ly/3P2HiW8 | bash
 }
 
-function mess-system() {
-if [ -f "$HOME"/pidei/mess-confirm.sh ]; then
-wget -m -r -np -nH -nd -R "index.html" https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/libretrocores/lr-mess-"${1}".sh -P "$HOME"/RetroPie-Setup/scriptmodules/libretrocores/ -erobots=off
-sleep 2 
-cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh lr-mess-"$1"
-else
-bash $HOME/pidei/scripts/mess/mess-menu.sh
-fi
-}
-
 
 
 function install-actionmax() {
@@ -301,9 +300,41 @@ curl -sSL https://git.io/JSDOy | bash
 
 
 function install-bbc() {
-curl -sSL bit.ly/BBC-Installer| bash
+curl -sSL bit.ly/BBC-Installer | bash
 }
 
+function install-pokitto() {
+curl -sSL bit.ly/Pokitto-Installer | bash
+}
+
+function mess-system() {
+mess-check
+sleep 1
+if [ ! -f "$HOME/RetroPie-Setup/scriptmodules/libretrocores/lr-mess-"$2".sh" ]; then wget https://raw.githubusercontent.com/Retro-Devils/Devils-Extra/main/scriptmodules/libretrocores/lr-mess-"$2".sh -P $HOME/RetroPie-Setup/scriptmodules/libretrocores/; fi
+if [ -f "opt/retropie/lr-mess-"$2"/mess_"$2"_libretro.so" ]; then 
+dialog  --sleep 1 --title "INSTALL ERROR" --msgbox "
+"$1" IS ALREADY INSTALLED
+NO NEED TO INSTALL" 0 0
+else
+cd $HOME/RetroPie-Setup
+sudo ./retropie_packages.sh lr-mess-"$2"
+cd
+fi
+}
+
+function mess-check() {
+if [ ! -f "/opt/retropie/libretrocores/lr-mess/mess_libretro.so" ]
+then
+dialog  --sleep 1 --title "LR MESS ERROR" --msgbox "
+MESS NOT INSTALLED
+INSTALLING NOW" 0 0
+cd $HOME/RetroPie-Setup
+sudo ./retropie_packages.sh lr-mess
+cd
+echo "MESS Install Complete"
+sleep 4
+fi
+}
 
 ###-----------------------------PI.D.E.I TOOLS-----------------------------###
 
@@ -318,10 +349,32 @@ git checkout .; git reset --hard HEAD; git pull
 }
 
 function update-pidei() {
-rm $HOME/Devils-Box/scripts/pidei.sh
-sleep 1
-cd $HOME/Devils-Box/scripts/
-wget https://github.com/Retro-Devils/Devils-Box/edit/main/scripts/pidei.sh
+if [ -d "$HOME/pidei/" ]; then sudo rm -R "$HOME"/pidei/; fi
+if [ -f "$HOME/RetroPie/retropiemenu/pidei.sh" ]; then sudo rm "$HOME"/RetroPie/retropiemenupidei.sh; fi
+if [ -f "/usr/local/bin/pidei" ]; then sudo rm /usr/local/bin/pidei; fi
+wget https://github.com/Retro-Devils/Pi.D.E.I./raw/main/intro.mp4 -P "$HOME"/pidei/
+wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei.sh -P "$HOME"/pidei/
+wget https://github.com/Retro-Devils/Pi.D.E.I./raw/main/pi-dei-logo.png -P "$HOME"/pidei/
+sudo wget -O "/usr/local/bin/pidei" https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/pidei.sh
+wget https://raw.githubusercontent.com/Retro-Devils/Pi.D.E.I./main/scripts/mess/mess-menu.sh -P "$HOME"/pidei/scripts/
+cp "$HOME"/pidei/pidei.sh -f "$HOME"/RetroPie/retropiemenu/
+cp "$HOME"/pidei/pi-dei-logo.png -f "$HOME"/RetroPie/retropiemenu/icons/
+sudo chmod 755 /usr/local/bin/pidei
+chmod 755 "$HOME"/RetroPie/retropiemenu/pidei.sh
+chmod 755 -R "$HOME"/pidei/
+sleep 2
+if [ ! -s "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then sudo rm -f $HOME/RetroPie/retropiemenu/gamelist.xml; fi
+if [ ! -f "$HOME/RetroPie/retropiemenu/gamelist.xml" ]; then cp /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml $HOME/RetroPie/retropiemenu/gamelist.xml; fi
+CONTENT1="\t<game>\n\t\t<path>./pidei.sh</path>\n\t\t<name>Pi Dynamic Emu Installer</name>\n\t\t<desc>PI Dynamic Emu Installer is a tool to install offical and unoffical emus with ease. </desc>\n\t\t<image>./icons/pi-dei-logo.png</image>\n\t\t<releasedate>20220907T173842</releasedate>\n\t\t<developer>The Retro Devils</developer>\n\t\t<publisher>The Retro Devils</publisher>\n\t\t<genre>Pi-DEI Script</genre>\n\t</game>"
+C1=$(echo $CONTENT1 | sed 's/\//\\\//g')
+if grep -q pidei.sh "$HOME/RetroPie/retropiemenu/gamelist.xml"; then echo "gamelist.xml entry confirmed"
+else
+	sed "/<\/gameList>/ s/.*/${C1}\n&/" $HOME/RetroPie/retropiemenu/gamelist.xml > $HOME/temp
+	cat $HOME/temp > $HOME/RetroPie/retropiemenu/gamelist.xml
+	rm -f $HOME/temp
+fi
+bash "$HOME/RetroPie/retropiemenu/pidei.sh"
+exit 1
 }
 
 
