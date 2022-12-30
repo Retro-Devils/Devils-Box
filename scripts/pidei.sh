@@ -150,7 +150,7 @@ function emu-menu() {
     47) install-pokitto ;;
     48) multi-cores "PSP" "lr-ppsspp" "----" "ppsspp" ;;
     49) install-model-3 ;;
-    50) install-emu "Sega Saturn" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
+    50) multi-cores "Sega Saturn" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
     51) multi-cores "Sega Saturn Japan" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
     52) install-emu "ScummVM" "lr-scummvm" "----" "scummvm" ;;
     53) install-emu "Sega32x" ;;
