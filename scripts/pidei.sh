@@ -189,6 +189,11 @@ cd $HOME/RetroPie-Setup
 sudo ./retropie_packages.sh "$2" install_bin
 }
 
+function install-emu2() {
+cd $HOME/RetroPie-Setup
+sudo ./retropie_packages.sh "$2" install
+}
+
 function multi-cores() {
           whiptail --clear --title "$1 Multi Core Menu" --separate-output --checklist "Choose Core(s) and click Download:" 0 0 0 \
       --ok-button Install --cancel-button Back \
