@@ -64,8 +64,8 @@ function emu-menu() {
       47 "Pokitto<--------------------->EMU--POKITTO" \
       48 "PSP<------------------------->MULTI CORES/EMUS" \
       49 "Sega Model 3<---------------->EMU--" \
-      50 "Sega Saturn<----------------->CORE/EMU" \
-      51 "Sega Saturn Japan<----------->CORE/EMU" \
+      50 "Sega Saturn<----------------->EMU-YABASANSHIRO" \
+      51 "Sega Saturn Japan<----------->EMU--YABASHANSIRO" \
       52 "ScummVM<--------------------->CORE/EMU" \
       53 "Sega32x<--------------------->CORE/EMU" \
       54 "SegaCD<---------------------->CORE/EMU" \
@@ -150,8 +150,8 @@ function emu-menu() {
     47) install-pokitto ;;
     48) multi-cores "PSP" "lr-ppsspp" "----" "ppsspp" ;;
     49) install-model-3 ;;
-    50) multi-cores "Sega Saturn" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
-    51) multi-cores "Sega Saturn Japan" "lr-beetle-saturn" "lr-yabuse" "yabasanshiro" ;;
+    50) install-emu "Sega Saturn" "yabasanshiro" ;;
+    51) install-emu "Sega Saturn Japan" "yabasanshiro" ;;
     52) install-emu "ScummVM" "lr-scummvm" "----" "scummvm" ;;
     53) install-emu "Sega32x" ;;
     54) install-emu "SegaCD" "lr-picodrive" ;;
