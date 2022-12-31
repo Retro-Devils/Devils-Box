@@ -900,16 +900,12 @@ function devils_emu_tools() {
       --ok-label Install --cancel-label Back \
       --menu "SELECT TOOL AND PRESS A TO DOWNLOAD/INSTALL " 30 50 50 \
       1 "BIOS Installer" \
-      2 "BBC Micro Installer" \
-      3 "MSU1 Setup" \
-      4 "Pi Dynamic Emu Installer" \
+      2 "Pi Dynamic Emu Installer" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) download-bios ;;
-    2) bbc-install ;;
-    3) msu-setup ;;
-    4) pidei ;;
+    2) pidei ;;
     *) break ;;
     esac
   done
@@ -921,10 +917,6 @@ bash $HOME/Devils-Box/scripts/PI-4/PI-4-pidei.sh
 
 function testers() {
 bash "$HOME"/Devils-Box/scripts/Tester-Menu.sh 
-}
-
-function bbc-install() {
-curl -sSL bit.ly/BBC-Installer | bash
 }
 
 function devils-game-tools() {
