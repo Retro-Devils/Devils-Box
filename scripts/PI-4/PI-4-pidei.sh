@@ -231,7 +231,7 @@ function multi-cores2() {
             1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" install_bin ;;
             2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" install_bin ;;
             3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" install_bin ;;
-            4) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" install_bin ;;
+            4) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" ;;
 	    +) none ;;
             *) ;;
         esac
@@ -258,12 +258,57 @@ function multi-cores3() {
             3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" install_bin ;;
             4) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" install_bin ;;
             5) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$6" install_bin ;;
-            6) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$7" install_bin ;;
+            6) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$7" ;;
 	    +) none ;;
             *) ;;
         esac
         done < /tmp/results
 }
+
+function multi-cores() {
+          whiptail --clear --title "$1 Multi Core Menu" --separate-output --checklist "Choose Core(s) and click Download:" 0 0 0 \
+      --ok-button Install --cancel-button Back \
+                "+" "<--->RetroArch Cores<--->" off \
+                "1" ""$2" Retroarch Core" off \
+                "2" ""$3" Retroarch Core" off \
+		"+" "<--->Standalone Emus<--->" off \
+                "3" ""$4" Standalone Emu" off \
+                2>/tmp/results
+    while read -r choice
+        do
+        case $choice in
+            1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" install_bin ;;
+            2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" install_bin ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" ;;
+	    +) none ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
+
+function multi-cores4() {
+          whiptail --clear --title "$1 Multi Core Menu" --separate-output --checklist "Choose Core(s) and click Download:" 0 0 0 \
+      --ok-button Install --cancel-button Back \
+                "+" "<--->RetroArch Cores<--->" off \
+                "1" ""$2" Retroarch Core" off \
+                "2" ""$3" Retroarch Core" off \
+                "3" ""$4" Retroarch Core" off \
+	        "+" "<--->Standalone Emus<--->" off \
+                "4" ""$5" Standalone Emu" off \
+                2>/tmp/results
+    while read -r choice
+        do
+        case $choice in
+            1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
+            2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" ;;
+            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" ;;
+            4) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" ;;
+	    +) none ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
+
 
 
 ##-----------------------------UnOffical Emus/Cores-----------------------------##
