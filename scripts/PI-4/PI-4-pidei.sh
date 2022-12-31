@@ -120,7 +120,7 @@ function emu-menu() {
     17) install-emu "Coleco" "lr-bluemsx" ;;
     18) install-emu "Dragon32" "xroar" ;;
     19) install-emu "Daphne" "daphne" ;;
-    20) multi-cores "Dreamcast" "lr-dreamcast" "lr-flycast" "redream" ;;
+    20) multi-cores4 "Dreamcast" "lr-dreamcast" "lr-flycast" "redream" ;;
     21) mess-system "Electron" "electron";;
     22) install-emu "Famicon" "lr-nestopia";;
     23) install-emu "FDS" "lr-nestopia" ;;
