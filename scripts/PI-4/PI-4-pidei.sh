@@ -120,7 +120,7 @@ function emu-menu() {
     17) install-emu "Coleco" "lr-bluemsx" ;;
     18) install-emu "Dragon32" "xroar" ;;
     19) install-emu "Daphne" "daphne" ;;
-    20) install-emu "Dreamcast" "lr-dreamcast" "lr-flycast" "redream" ;;
+    20) multi-cores "Dreamcast" "lr-dreamcast" "lr-flycast" "redream" ;;
     21) mess-system "Electron" "electron";;
     22) install-emu "Famicon" "lr-nestopia";;
     23) install-emu "FDS" "lr-nestopia" ;;
@@ -148,7 +148,7 @@ function emu-menu() {
     45) multi-cores "PS1" "lr-pcsx_rearmed" ;;
     46) mess-system "plugnplay" ;;
     47) install-pokitto ;;
-    48) multi-cores "PSP" "lr-ppsspp" "----" "ppsspp" ;;
+    48) install-emu2 "PSP" "ppsspp" ;;
     49) install-model-3 ;;
     50) install-emu2 "Sega Saturn" "yabasanshiro" ;;
     51) install-emu2 "Sega Saturn Japan" "yabasanshiro" ;;
