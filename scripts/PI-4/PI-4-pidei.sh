@@ -120,7 +120,7 @@ function emu-menu() {
     17) install-emu "Coleco" "lr-bluemsx" ;;
     18) install-emu "Dragon32" "xroar" ;;
     19) install-emu "Daphne" "daphne" ;;
-    20) multi-cores4 "Dreamcast" "lr-dreamcast" "lr-flycast" "redream" ;;
+    20) multi-cores4 "Dreamcast" "lr-flycast" "redream" ;;
     21) mess-system "Electron" "electron";;
     22) install-emu "Famicon" "lr-nestopia";;
     23) install-emu "FDS" "lr-nestopia" ;;
@@ -291,18 +291,14 @@ function multi-cores4() {
       --ok-button Install --cancel-button Back \
                 "+" "<--->RetroArch Cores<--->" off \
                 "1" ""$2" Retroarch Core" off \
-                "2" ""$3" Retroarch Core" off \
-                "3" ""$4" Retroarch Core" off \
 	        "+" "<--->Standalone Emus<--->" off \
-                "4" ""$5" Standalone Emu" off \
+                "2" ""$5" Standalone Emu" off \
                 2>/tmp/results
     while read -r choice
         do
         case $choice in
             1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
             2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" ;;
-            3) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$4" ;;
-            4) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$5" ;;
 	    +) none ;;
             *) ;;
         esac
