@@ -120,7 +120,7 @@ function emu-menu() {
     17) install-emu "Coleco" "lr-bluemsx" ;;
     18) install-emu "Dragon32" "xroar" ;;
     19) install-emu "Daphne" "daphne" ;;
-    20) multi-cores4 "Dreamcast" "lr-flycast" "redream" ;;
+    20) multi-cores5 "Dreamcast" "lr-flycast" "redream" ;;
     21) mess-system "Electron" "electron";;
     22) install-emu "Famicon" "lr-nestopia";;
     23) install-emu "FDS" "lr-nestopia" ;;
@@ -298,6 +298,25 @@ function multi-cores4() {
         do
         case $choice in
             1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" ;;
+            2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" ;;
+	    +) none ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
+
+function multi-cores5() {
+          whiptail --clear --title "$1 Multi Core Menu" --separate-output --checklist "Choose Core(s) and click Download:" 0 0 0 \
+      --ok-button Install --cancel-button Back \
+                "+" "<--->RetroArch Cores<--->" off \
+                "1" ""$2" Retroarch Core" off \
+	        "+" "<--->Standalone Emus<--->" off \
+                "2" ""$5" Standalone Emu" off \
+                2>/tmp/results
+    while read -r choice
+        do
+        case $choice in
+            1) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$2" install_bin ;;
             2) cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh "$3" ;;
 	    +) none ;;
             *) ;;
