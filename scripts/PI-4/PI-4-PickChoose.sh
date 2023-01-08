@@ -1867,16 +1867,29 @@ fi
 done
 }
 
+
 function download-mugens() {
-if [ ! -d "$HOME/RetroPie/roms/wine" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
+if [ ! -d "$HOME/RetroPie/roms/wine/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40; 
 else
-  clear
-  wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/mugens -erobots=off
-  unzip -o "$HOME"/RetroPie/roms/mugens/"${1}" -d "$HOME"/RetroPie/roms/mugens
-  chmod 755 "$HOME"/RetroPie/roms/mugens/*.sh
-  sudo rm -r "$HOME"/RetroPie/roms/mugens/"${1}"
+if [ ! -s "$HOME/.emulationstation/es_systems.cfg" ]; then sudo rm -f $HOME/.emulationstation/es_systems.cfg; fi
+if [ ! -f "$HOME/.emulationstation/es_systems.cfg" ]; then cp $HOME/.emulationstation/es_systems.cfg $HOME/RetroPie/retropiemenu/gamelist.xml; fi
+CONTENT1="\t<system>\n\t\t  <name>mugen</name>\n\t\t  <fullname>M.U.G.E.N</fullname> \n\t\t  <path>/home/pi/RetroPie/roms/mugens</path> \n\t\t  <extension>.sh .SH</extension> \n\t\t<command>/opt/retropie/supplementary/runcommand/runcommand.sh 0 _SYS_ wine %ROM%</command> \n\t\t  <platform>wine</platform> \n\t\t  <theme>mugens</theme> \n\t\t</system>"
+C1=$(echo $CONTENT1 | sed 's/\//\\\//g')
+if grep -q model3 "$HOME/.emulationstation/es_systems.cfg"; then echo "es_systems.cfg entry confirmed"
+else
+	sed "/<\/system>/ s/.*/${C1}\n&/" $HOME/.emulationstation/es_systems.cfg > $HOME/temp
+	cat $HOME/temp > $HOME/.emulationstation/es_systems.cfg
+	rm -f $HOME/temp
+	clear
+        wget -m -r -np -nH -nd -R "index.html" ${HOST4}/"${1}" -P "$HOME"/RetroPie/roms/mugens -erobots=off
+        unzip -o "$HOME"/RetroPie/roms/mugens/"${1}" -d "$HOME"/RetroPie/roms/mugens
+        chmod 755 "$HOME"/RetroPie/roms/mugens/*.sh
+        sudo rm -r "$HOME"/RetroPie/roms/mugens/"${1}"
+fi
 fi
 }
+
+
 function download-eve() {
 if [ ! -d "$HOME/RetroPie/roms/wine" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install Wine First" 6 40;
 else
