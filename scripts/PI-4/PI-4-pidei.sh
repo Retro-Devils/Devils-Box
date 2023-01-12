@@ -85,6 +85,8 @@ function emu-menu() {
       68 "Sharp X68000<---------------->RA PX68K" \
       69 "ZMachine<-------------------->UNFINISHED" \
       70 "ZXSpectrum<------------------>RA FUSE" \
+       + "<---------------OTHER STUFF---------->" \
+       E1 "<--OPP OmxPlayer Pi---              > " \
        + "<                                     >" \
        + "<-----------Pi.D.E.I Tools------------>" \
        + "<                                     >" \
@@ -172,6 +174,7 @@ function emu-menu() {
     69) install-emu "Zmachine" ;;
     70) install-emu "ZXspectrum" "lr-fuse" "----" "zesarux" ;;
      +) none  ;;
+    E1) install-opp ;;
     T1) update-setup-script ;;
     T2) update-pidei ;;
     T3) pidei-info ;;
@@ -360,9 +363,13 @@ cd $HOME/RetroPie-Setup && sudo ./retropie_packages.sh actionmax
 #}
 
 function install-model-3() {
-curl -sSL https://git.io/JSDOy | bash
+curl -sSL bit.ly/Install-Model3 | bash
 }
 
+
+function install-opp() {
+curl -sSL bit.ly/Install-OPP | bash
+}
 
 function install-bbc() {
 curl -sSL bit.ly/BBC-Installer | bash
