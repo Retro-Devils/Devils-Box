@@ -18,7 +18,7 @@ PC_HOST="https://archive.org/download/the-devils-box-alt"
 
 #--------LIGHTGUN HOSTS--------#
 LG_HOST1 ="https://archive.org/download/RPI-Lightgun-Games"
-LG_HOST2 ="https://archive.org/download/RPI-Lightgun-Games/zips"
+LG_HOST2 ="https://archive.org/download/sinden_barebones_rompack"
 
 if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
 	omxplayer "$HOME"/Devils-Box/files/videos/lightguns.mp4 > /dev/null 2>&1
