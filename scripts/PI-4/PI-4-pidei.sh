@@ -20,8 +20,6 @@ function emu-menu() {
       3 "AmigaCD32<-------------------->RA PUAE" \
       4 "Amstrad CPC<------------------>RA CAPRICE32" \
       5 "Arcade<----------------------->MULTI CORES/EMUS" \
-      6 "Arcadia<---------------------->RA MESS" \
-      7 "Astrocade<-------------------->RA MESS" \
       8 "Atari800<--------------------->RA ATARI800"\
       9 "Atari2600<-------------------->RA STELLA" \
       10 "Atari5200<-------------------->RA ATARI800" \
@@ -59,7 +57,6 @@ function emu-menu() {
       43 "Oric<------------------------>UNFINISHED" \
       44 "Pokemini<-------------------->RA POKEMINI" \
       45 "PlayStation 1<--------------->MULTI CORES/EMUS" \
-      46 "Plug N Play<----------------->RA MESS SYSTEM" \
       47 "Pokitto<--------------------->EMU--POKITTO" \
       48 "PSP<------------------------->MULTI CORES/EMUS" \
       49 "Sega Model 3<---------------->EMU--SUPERMODEL3" \
@@ -107,8 +104,6 @@ function emu-menu() {
     3) install-emu "Amigacd32" "lr-puae" ;;
     4) install-emu "Amstradcpc" "lr-caprice32" ;;
     5) multi-cores3 "Arcade" "lr-mame2003" "lr-fbaplha2012" "lr-mame200" "lr-mame2003-plus" "mame" ;;
-    6) mess-system "Arcadia" "arcadia" ;;
-    7) mess-system "Astrocade" "astrocade" ;;
     8) install-emu "Atari800" "atari800" ;;
     9) multi-cores "Atari2600" "lr-stella" "----" "stella" ;;
     10) install-emu "Atari5200" "lr-atari800";;
@@ -146,7 +141,6 @@ function emu-menu() {
     43) install-emu "Oric" ;;
     44) install-emu "Pokemini" "lr-pokemini" ;;
     45) multi-cores "PS1" "lr-pcsx_rearmed" ;;
-    46) mess-system "plugnplay" ;;
     47) install-pokitto ;;
     48) install-emu2 "PSP" "ppsspp" ;;
     49) install-model-3 ;;
