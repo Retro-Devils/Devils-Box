@@ -35,7 +35,6 @@ function emu-menu() {
       18 "Dragon32<-------------------->EMU--XROAR" \
       19 "Daphne<---------------------->EMU--DAPHNE" \
       20 "Dreamcast<------------------->MULTI CORES/EMUS" \
-      21 "Electron<-------------------->RA MESS " \
       22 "Famicon<--------------------->RA NESTOPIA" \
       23 "Famicom Disk<---------------->RA NESTOPIA" \
       24 "Game and Watch<-------------->RA GW" \
@@ -123,7 +122,6 @@ function emu-menu() {
     18) install-emu "Dragon32" "xroar" ;;
     19) install-emu "Daphne" "daphne" ;;
     20) multi-cores5 "Dreamcast" "lr-flycast" "redream" ;;
-    21) mess-system "Electron" "electron";;
     22) install-emu "Famicon" "lr-nestopia";;
     23) install-emu "FDS" "lr-nestopia" ;;
     24) install-emu "Game&Watch" "lr-gw" ;;
