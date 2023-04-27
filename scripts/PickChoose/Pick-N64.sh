@@ -38,17 +38,15 @@ local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title "N64 PICK & CHOOSE MENU" \
       --ok-label Select --cancel-label Main-Menu \
       --menu "HOW WOULD YOU LIKE THE GAMES SORTED? " 20 50 30 \
-      1 "All Games" \
-      2 "By Genre" \
-      3 "By Letters" \
-      4 "Top 50 List" \
+      1 "By Genre" \
+      2 "By Letters" \
+      3 "Top 50 List" \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) all-n64 ;;
-    2) bg-n64 ;;
-    3) bl-n64 ;;
-    4) t50-n64 ;;
+    1) bg-n64 ;;
+    2) bl-n64 ;;
+    3) t50-n64 ;;
     *) break ;;
     esac
   done
