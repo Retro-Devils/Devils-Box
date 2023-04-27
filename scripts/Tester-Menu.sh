@@ -12,9 +12,8 @@ local choice
       + "--UNFINISHED/NOT WORKING--" \
       1 "Collections Helper " \
       2 "Icon Helper " \
-      3 "Pick & Choose Ports" \
       + "--------------- " \
-      4 "Update Testers Menu" \
+      3 "Update Testers Menu" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -22,50 +21,11 @@ local choice
     1) bash "$HOME"/Devils-Box/helpers/emulationstation/Collections.sh ;;
     2) bash "$HOME"/Devils-Box/helpers/emulationstation/Icon-Helper.sh ;;
     +) none ;;
-    3) ports ;;
     +) no ;;
-    4) update-test ;;
+    3) update-test ;;
     *) break ;;
     esac
   done
-}
-
-function rpi-lg-tool() {
-curl -sSL bit.ly/Install-RPI-LG-Tool | bash 
-}
-
-function ports() {
-        local choice
-    whiptail --clear --title "PICK & CHOOSE PORTS" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
-      --ok-button Download --cancel-button Back \
-            "1" "Grand Theft Auto 3" off \
-	    "2" "GTA Vice City" off \
-	    "3" "Jedi Academy" off \
-	    "4" "Jedi Outcast" off \
-	    2>/tmp/results
-    while read -r choice  
-        do
-        case $choice in
-	     1) GTA3 ;;
-	     2) GTA-VC ;;
-	     3) jedi-academy ;;
-	     4) jedi-outcast ;;
-             *) ;;
-        esac
-        done < /tmp/results
-}
-
-function GTA3() {
-bash "$HOME"/Devils-Box/scripts/GTA3-Setup.sh
-}
-function GTA-VC(){
-bash "$HOME"/Devils-Box/scripts/GTA-VC-Setup.sh
-}
-function jedi-academy() {
-bash "$HOME"/Devils-Box/scripts/jedi-academy.sh
-}
-function jedi-outcast(){
-bash "$HOME"/Devils-Box/scripts/jedi-outcast.sh
 }
 
 function update-test() {
