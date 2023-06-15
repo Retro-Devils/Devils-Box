@@ -89,7 +89,7 @@ fi
 
 
 #-----------System_Tools-----------#
-function pick() {
+function system_tools() {
 if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
