@@ -31,21 +31,12 @@ function main_menu() {
       options=( \
       - "<---->Downloaders<------>"
       1 "Artwork Packs"
-      2 "Console Packs"
-      3 "Hacked Packs"
-      4 "Homebrew Packs"
-      5 "Pick & Choose"
-      6 "Translations Packs"
-      + "<---->Tool Boxes<------->"
-      7 "Community Tool Boxes"      
-      8 "Devils Tool Box"
-      - "<---->System Tools<----->"
-      9 "Reboot System"
-      10 "Restart EmuStation"
-      11 "Show System Info"
-      12 "Expand System Memory"
-      - "<----------------------->" 
-      13 "Devils Box Credits")
+      2 "Game Packs"
+      3 "Pick & Choose"
+      4 "Community Tool Boxes"      
+      5 "Devils Tool Box"
+      6 "System Tools"
+      7 "Devils Box Credits")
     else
       options=( \
       1 "Install Devils-Box")
@@ -53,38 +44,17 @@ function main_menu() {
     choice=$("${choice[@]}" "${options[@]}" 2>&1 >/dev/tty)
     case $choice in
     1) if [ "$DB_STATUS" == 1 ]; then artwork; else curl -sSL https://git.io/JSDGq | bash; fi; ;;
-    2) consoles ;;
-    3) hacked ;;
-    4) homebrew ;;
-    5) pick ;;
-    6) translations ;;
-    7) toolboxes ;;
-    8) devils_tools ;;
-    9) system_reboot ;;
-    10) restart_es ;;
-    11) show_sysinfo ;;
-    12) expand_mem ;;
-    13) credits ;;
+    2) game-packs ;;
+    3) pick ;;
+    4) toolboxes ;;
+    5) devils_tools ;;
+    6) system_tools ;;
+    7) credits ;;
     -) nono ;;
     +) none ;;
     *) break ;;
     esac
   done
-}
-
-#-----------Restart ES--------#
-function restart_es() {
-echo "ES Restart Selected"
-sleep 3
-echo "Emulationstation Will Restart In"
-sleep 2
-echo "3"
-sleep 1
-echo "2"
-sleep 1
-echo "Restarting Now"
-killall emulationstation
-sudo openvt -c 1 -s -f emulationstation 2>&1
 }
 
 #-----------Artwork-----------#
@@ -97,34 +67,13 @@ bash "$HOME"/Devils-Box/scripts/PI-4/PI-4-Artwork.sh
 fi
 }
 
-#-----------Consoles-----------#
-function consoles() {
+#-----------Game Packs-----------#
+function game-packs() {
 if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
-bash "$HOME"/Devils-Box/scripts/PI-4/PI-4-Packs.sh
-fi
-}
-
-#-----------Hacks-----------#
-function hacked() {
-if [ $NETCHECK -eq 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-  else
-bash "$HOME"/Devils-Box/scripts/Hacks.sh
-fi
-}
-
-
-#-----------Homebrews-----------#
-function homebrew() {
-if [ $NETCHECK -eq 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-  else
-bash "$HOME"/Devils-Box/scripts/PI-4/PI-4-Homebrews.sh
+bash "$HOME"/Devils-Box/scripts/PI-4/PI-4-Game-Packs.sh
 fi
 }
 
@@ -138,13 +87,14 @@ bash "$HOME"/Devils-Box/scripts/PI-4/PI-4-PickChoose.sh
 fi
 }
 
-#-----------Translations-----------#
-function translations() {
+
+#-----------System_Tools-----------#
+function pick() {
 if [ $NETCHECK -eq 1 ]; then
 dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
 Offline ... Downloads not Availible Please Connect To Internet!" 0 0
   else
-bash "$HOME"/Devils-Box/scripts/PI-4/PI-4-Translations.sh
+bash "$HOME"/Devils-Box/scripts/System-Tools.sh
 fi
 }
 
@@ -1182,69 +1132,6 @@ Please update for newest awesomness" 0 0
 clear
 da-version
 }
-
-#------SHOW DISK SPACE FUNCTION------#
-function show_sysinfo() {
-clear
-cpuTempC=""
-cpuTempF=""
-gpuTempC=""
-gpuTempF=""
-if [[ -f "/sys/class/thermal/thermal_zone0/temp" ]]; then cpuTempC=$(($(cat /sys/class/thermal/thermal_zone0/temp)/1000)) && cpuTempF=$((cpuTempC*9/5+32)); fi
-if [[ -f "/opt/vc/bin/vcgencmd" ]]; then
-    if gpuTempC=$(/opt/vc/bin/vcgencmd measure_temp); then
-        gpuTempC=${gpuTempC:5:2}
-        gpuTempF=$((gpuTempC*9/5+32))
-    else
-        gpuTempC=""
-    fi
-fi
-let upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
-let secs=$((${upSeconds}%60))
-let mins=$((${upSeconds}/60%60))
-let hours=$((${upSeconds}/3600%24))
-let days=$((${upSeconds}/86400))
-UPTIME=`printf "%d days, %02dh%02dm%02ds" "$days" "$hours" "$mins" "$secs"`
-
-echo "$(tput setaf 7)
-  ........OS INFO.......:
-  $(tput setaf 2)`uname -srmo`
-  `lsb_release -ds`
-  `date +"%A, %e %B %Y, %r"`
-  Uptime......: ${UPTIME}
-  Last Login..: `exec -- last | head -1`
-  $(tput setaf 7)......SYSTEM INFO.....:
-  $(tput setaf 1)CPU Temperature.......: ${cpuTempC} C/${cpuTempF} F
-  GPU Temperature.......: ${gpuTempC} C/${gpuTempF} F
-  $(tput setaf 3)CPU Model.............: `lscpu | grep "Model name"`
-  CPU Max Speed.........: `lscpu | grep max`
-  GPU Version...........: `exec -- /opt/vc/bin/vcgencmd version`
-  $(tput setaf 7)			Size     Used     Avail    Used%
-  $(tput setaf 3)Boot Partition........: `df -h | grep '/dev/sda1' | awk '{print $2,"     "$3,"     "$4,"     "$5}'`
-  Root Partition........: `df -h | grep '/dev/root' | awk '{print $2,"    "$3,"     "$4,"      "$5}'`
-  $(tput setaf 6)Memory................: `cat /proc/meminfo | grep MemFree | awk '{printf( "%.2f\n", $2 / 1024 )}'`MB (Free) / `cat /proc/meminfo | grep MemTotal | awk '{printf( "%.2f\n", $2 / 1024 )}'`MB (Total)
-  Running Processes.....: `ps ax | wc -l | tr -d " "`
-  LAN IP Address........: `ip -4 route get 8.8.8.8 2>/dev/null | awk '{print $(NF-2); exit}'`
-  WAN IP Address........: `curl -4 icanhazip.com 2>/dev/null | awk '{print $NF; exit}'`$(tput sgr0)"
-echo
-read -n 1 -s -r -p "Press any key to continue"
-}
-
-#------REBOOT FUNCTION------#
-function system_reboot() {
-clear
-read -n 1 -s -r -p "Press any key to Reboot"
-sudo reboot
-}
-
-#------EXPAND MEM.------#
-function expand_mem() {
-echo "This will Expand Memory and Reboot"
-read -n 1 -s -r -p "Press any key to Continue"
-sudo raspi-config --expand-rootfs 
-sudo reboot
-}
-
 
 function game_fixes() {
 if [ $NETCHECK -eq 1 ]; then
