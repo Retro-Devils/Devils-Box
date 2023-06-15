@@ -19,6 +19,7 @@ PC_HOST="https://archive.org/download/the-devils-box-alt"
 #--------LIGHTGUN HOSTS--------#
 LG_HOST1 ="https://archive.org/download/RPI-Lightgun-Games"
 LG_HOST2 ="https://archive.org/download/sinden_barebones_rompack"
+LG_HOST3 ="https://archive.org/download/RPI-Lightgun-Games/zips/"
 
 if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
 	omxplayer "$HOME"/Devils-Box/files/videos/lightguns.mp4 > /dev/null 2>&1
@@ -47,8 +48,8 @@ local choice
 
     case "$choice" in
     +) nono ;;
-    1) nes-pack ;;
-    2) snes-pack ;;
+    1) lg-pack "NES" "nes" ;;
+    2) lg-pack "SNES" "snes" ;;
     -) none ;;
     *) break ;;
     esac
@@ -56,20 +57,12 @@ local choice
 fi
 }
 
-function nes-pack() {
-wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/sinden_barebones_rompack/nes.rar -P "$HOME"/RetroPie/roms/nes/Lightgun_Games/ -erobots=off
-cd "$HOME"/RetroPie/roms/nes/Lightgun_Games/
-unzip "$HOME"/RetroPie/roms/nes/Lightgun_Games/nes.rar
-sudo rm "$HOME"/RetroPie/roms/nes/Lightgun_Games/nes.rar
-chmod 777 -R "$HOME"/RetroPie/roms/nes/Lightgun_Games/
-}
-
-function snes-pack() {
-wget -m -r -np -nH -nd -R "index.html" https://archive.org/download/sinden_barebones_rompack/snes.rar -P "$HOME"/RetroPie/roms/snes/ -erobots=off
-cd "$HOME"/RetroPie/roms/snes/Lightgun_Games/
-unzip "$HOME"/RetroPie/roms/snes/Lightgun_Games/snes.rar
-sudo rm "$HOME"/RetroPie/roms/snes/Lightgun_Games/snes.rar
-chmod 777 -R "$HOME"/RetroPie/roms/snes/Lightgun_Games/
+function lg-pack() {
+wget -m -r -np -nH -nd -R "index.html" "${LG_HOST3}"/"${1}"-Gun-Games.zip -P "$HOME"/RetroPie/roms/"${2}"/Lightgun_Games/ -erobots=off
+cd "$HOME"/RetroPie/roms/"${2}"/Lightgun_Games/
+unzip "$HOME"/RetroPie/roms/"${2}"/Lightgun_Games/"${1}"-Gun-Games.zip
+sudo rm "$HOME"/RetroPie/roms/"${2}"/Lightgun_Games/"${1}"-Gun-Games.zip
+chmod 777 -R "$HOME"/RetroPie/roms/"${2}"/Lightgun_Games/
 }
 
 lightgun_menu
