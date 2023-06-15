@@ -26,10 +26,9 @@ function main_menu() {
   fi
     choice=(dialog --backtitle "$BACKTITLE" --title "MAIN MENU " \
       --ok-label Select --cancel-label Exit-Devils-Box \
-      --menu "DEVILS BOX--------------PI 4 V 3.17" 23 50 30 )
+      --menu "DEVILS BOX--------------PI 4 V 4.00" 23 50 30 )
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
-      - "<---->Downloaders<------>"
       1 "Artwork Packs"
       2 "Game Packs"
       3 "Pick & Choose"
