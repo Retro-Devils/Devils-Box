@@ -21,10 +21,10 @@ function system-tools() {
     choice=$(dialog --backtitle "$BACKTITLE" --title " SYSTEM TOOLS " \
       --ok-label Select --cancel-label Back \
       --menu "SELECT Tool AND PRESS A  " 20 50 30 \
-      1 "Reboot System" /
-      2 "Restart EmuStation" /
-      3 "Show System Info" /
-      4 "Expand System Memory" /
+      1 "Reboot System"
+      2 "Restart EmuStation"
+      3 "Show System Info"
+      4 "Expand System Memory"
       2>&1 >/dev/tty)
 
     case "$choice" in
