@@ -35,7 +35,7 @@ local choice
   
   while true; do
     choice=$(dialog --backtitle "$BACKTITLE" --title "PICK & CHOOSE MENU" \
-      --ok-label Select --cancel-label Main-Menu \
+      --ok-label Select --cancel-label Back \
       --menu "PICK CONSOLE & CHOOSE GAME(S) " 20 50 30 \
        1 "NES" \
        2 "SNES" \
