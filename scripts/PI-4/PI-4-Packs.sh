@@ -34,7 +34,7 @@ else
     while true; do
     local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " CONSOLES DOWNLOAD MENU" \
-      --ok-label Download --cancel-label Main-Menu \
+      --ok-label Download --cancel-label Back \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK..........****MEANS COMING SOON" 30 70 50 \
       + "<->CONSOLE NAME<---------------->SIZE<----># OF GAMES" \
       1 "Amiga                            300MB      340 GAMES" \
