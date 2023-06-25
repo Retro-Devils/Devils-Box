@@ -25,7 +25,7 @@ else
       2 "Hacked Game Packs" \
       3 "Homebrew Game Packs" \
       4 "Lightgun Game Packs" \
-      6 "Translations Game Packs" \
+      5 "Translations Game Packs" \
       2>&1 >/dev/tty)
 
     case "$choice" in
