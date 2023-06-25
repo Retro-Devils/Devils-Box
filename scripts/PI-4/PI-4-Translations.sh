@@ -47,7 +47,7 @@ else
     while true; do
     local choice
     choice=$(dialog --backtitle "$BACKTITLE" --title " TRANSLATIONS DOWNLOAD MENU" \
-      --ok-label Download --cancel-label Main-Menu \
+      --ok-label Download --cancel-label Back \
       --menu "PRESS A/ENTER TO DOWNLOAD PACK" 30 70 50 \
       + "<->CONSOLE NAME<-------------------># OF GAMES" \
       1 "3DO TRANSLATIONS                       2 GAMES" \
