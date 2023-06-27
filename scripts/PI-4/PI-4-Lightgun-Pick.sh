@@ -39,13 +39,13 @@ local choice
       --menu "PICK CONSOLE & CHOOSE GAME(S) " 20 50 30 \
        1 "NES" \
        2 "SNES" \
-       3 "Wine" \
+       3 "Wine--COMING SOON" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) nes ;;
     2) snes ;;
-    3) wine ;;
+    3) wine-pick ;;
     *) break ;;
     esac
   done
