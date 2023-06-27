@@ -29,12 +29,15 @@ function main_menu() {
       --menu "DEVILS BOX--------------PI 4 V 4.00" 23 50 30 )
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
+      - "-----Downloads------"
       1 "Artwork Packs"
       2 "Game Packs"
       3 "Pick & Choose"
+      - "-----Tools---------"
       4 "Community Tool Boxes"      
       5 "Devils Tool Box"
       6 "System Tools"
+      - "--------------------"
       7 "Devils Box Credits")
     else
       options=( \
