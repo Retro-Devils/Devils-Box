@@ -21,7 +21,7 @@ PC_HOST="https://archive.org/download/the-devils-box-alt"
 if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
 omxplayer "$HOME"/Devils-Box/files/videos/translations-packs.mp4 > /dev/null 2>&1
 sleep 1
-dialog  --sleep 1 --title "HOMEBREW PACKS INFO" --msgbox " 
+dialog  --sleep 1 --title "TRANSLATIONS PACKS INFO" --msgbox " 
 <-------------WELCOME--------------->
 WHATS ARE TRANSLATIONS?
 THESE GAME PACKS ARE TRANSLATED FROM LANGUAGE TO ENGLISH.
@@ -59,7 +59,7 @@ else
       7 "Playstation TRNASLATIONS               7 GAMES" \
       8 "Saturn TRANSLATIONS                    1 GAMES" \
       9 "Super Famicon TRANSLATIONS           232 GAMES" \
-      + "<---------->LAST UPDATED 9/30/22<----------->" \
+      + "<---------->LAST UPDATED 6/28/23<----------->" \
       + "<-->Credits to Official Rom Hack Database<-->" \
       2>&1 >/dev/tty)
 
