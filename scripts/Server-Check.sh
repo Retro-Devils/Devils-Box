@@ -66,6 +66,17 @@ dialog  --sleep 1 --title "MSU1 SERVER CHECK" --msgbox "
 fi
 sleep 1
 
+#---LIGHTGUN PACKS SERVERS---#
+wget -q --spider https://archive.org/download/sinden_barebones_rompack
+if [ $? -eq 0 ]; then
+dialog  --sleep 1 --title "LIGHTGUN PACKS SERVER CHECK" --msgbox "
+---LIGHTGUN PACKS SERVER IS UP AND RUNNING---" 0 0 
+else
+dialog  --sleep 1 --title "MSU1 SERVER CHECK" --msgbox "
+---LIGHTGUN PACKS SERVERS IS DOWN----" 0 0
+fi
+sleep 1
+
 
 dialog  --sleep 1 --title "CHECK COMPLETE" --msgbox "
 ---------------------------------
