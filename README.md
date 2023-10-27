@@ -8,9 +8,9 @@
 
 “Do you want to know who you are? Don't ask. Act! Action will delineate and define you.”
 
-"Madness? No......this is SPARTA!!!!"
+"Madness? No......this is CODING!!!!"
 
-“Couscous: the food's so nice they named it twice.”
+“Cous cous: the food's so nice they named it twice.”
 
 
 ## Whats This? 
