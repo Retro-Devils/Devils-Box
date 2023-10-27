@@ -10,7 +10,7 @@
 
 "Madness? No......this is SPARTA!!!!"
 
-“Couscous: the food's so nice they named it twice.”
+“Cous cous: the food's so nice they named it twice.”
 
 
 ## Whats This? 
