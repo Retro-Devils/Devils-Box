@@ -47,8 +47,16 @@ local choice
       3 "Atari2600                        16KB         2 GAMES" \
       4 "Commadore64                     900KB        22 GAMES" \
       5 "Dreamcast                       1.5GB         5 GAMES" \
-      6 "NES                              10MB        15 GAMES" \
-      7 "SNES                             20MB        18 GAMES" \
+      6 "Daphne Actionmax                3.4GB         7 GAMES" \
+      7 "Daphne Hypseus                 10.5GB         9 GAMES" \
+      8 "Daphne Hypseus HD              11.8GB         7 GAMES" \
+      9 "Mastersystem                    1.2MB        13 GAMES" \
+      10 "Megadrive                      4.5MB         8 GAMES" \
+      11 "NES                             10MB        15 GAMES" \
+      12 "NES Hacks                      400KB        16 GAMES" \
+      13 "Playstation 1                    6GB        28 GAMES" \
+      14 "Plug N Play                     10MB         3 GAMES" \
+      15 "SNES                             20MB        18 GAMES" \
       2>&1 >/dev/tty)
 
     case "$choice" in
@@ -57,9 +65,17 @@ local choice
     2) lg-pack "arcade" "arcade" ;;
     3) lg-pack "atari2600" "atari2600" ;;
     4) lg-pack "c64" "c64" ;;
-    5) l-pack "dreamcast" "dreamcast" ;;
-    6) lg-pack "nes" "nes" ;;
-    7) lg-pack "snes" "snes" ;;
+    5) lg-pack "dreamcast" "dreamcast" ;;
+    6) lg-pack "daphne-actionmax" "daphne" ;;
+    7) lg-pack "daphne-hypseus" "daphne" ;;
+    8) lg-pack "daphne-hypseusHD" "daphne" ;;
+    9) lg-pack "mastersystem" "mastersystem" ;;
+    10) lg-pack "megadrive" "megadrive" ;;
+    11) lg-pack "nes" "nes" ;;
+    12) lg-pack "nes_hacks" "nes" ;;
+    13) lg-pack "psx" "psx" ;;
+    14) lg-pack "pnp" "pnp" ;; 
+    15) lg-pack "snes" "snes" ;;
     -) none ;;
     *) break ;;
     esac
