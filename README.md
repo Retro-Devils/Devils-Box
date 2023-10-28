@@ -107,8 +107,14 @@ LAST UPDATE
 
 Version-----See Version Info Above
 
-Date--------4/20/23
+Date--------10/28/23
 
 ## To Install/Update 
 
 curl -sSL bit.ly/Install-Devils-Box | bash 
+
+
+
+![51xFxo5VMUL _AC_AC_SR98,95_](https://github.com/Retro-Devils/Devils-Box/assets/88673522/9c64ba2e-c6ba-40da-83af-745ee96f044c)
+
+
