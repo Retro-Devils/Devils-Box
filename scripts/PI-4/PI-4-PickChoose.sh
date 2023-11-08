@@ -357,7 +357,6 @@ function dreamcast() {
                 "48" "Dance Dance Revolution 2nd Mix          " off \
                 "49" "Dance Dance Revolution Club Version     " off \
                 "50" "Dave Mirra Freestyle BMX                " off \
-		"--" "----------USER REQUESTED GAMES----------" off \
                 "51" "Zombie Revenge                          " off \
 		"52" "South Park - Chef's Luv Shack           " off \
                 "53" "Spawn - In the Demon's Hand             " off \
