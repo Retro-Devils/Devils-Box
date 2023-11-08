@@ -362,8 +362,8 @@ function dreamcast() {
 		"52" "South Park - Chef's Luv Shack           " off \
                 "53" "Spawn - In the Demon's Hand             " off \
 		"54" "Test Drive 6                            " off \
-                
                 2>/tmp/results
+
     while read -r choice  
         do
         case $choice in
@@ -422,7 +422,7 @@ function dreamcast() {
 	    52) download-game "dreamcast" "South Park - Chef's Luv Shack (USA).chd" ;;
             53) download-game "dreamcast" "Spawn - In the Demon's Hand (USA).chd" ;;
 	    54) download-game "dreamcast" "Test Drive 6 (USA).chd" ;;
-            *)  ;;
+            *) ;;
         esac
         done < /tmp/results
 }
