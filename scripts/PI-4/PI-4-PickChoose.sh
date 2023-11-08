@@ -357,6 +357,12 @@ function dreamcast() {
                 "48" "Dance Dance Revolution 2nd Mix          " off \
                 "49" "Dance Dance Revolution Club Version     " off \
                 "50" "Dave Mirra Freestyle BMX                " off \
+		"--" "----------USER REQUESTED GAMES----------" off \
+                "51" "Zombie Revenge                          " off \
+		"52" "South Park - Chef's Luv Shack           " off \
+                "53" "Spawn - In the Demon's Hand             " off \
+		"54" "Test Drive 6                            " off \
+                
                 2>/tmp/results
     while read -r choice  
         do
@@ -411,6 +417,11 @@ function dreamcast() {
             48) download-game "dreamcast" "Dance Dance Revolution 2nd Mix - Dreamcast Edition (Japan).chd" ;;
             49) download-game "dreamcast" "Dance Dance Revolution Club Version - Dreamcast Edition (Japan).chd" ;;
             50) download-game "dreamcast" "Dave Mirra Freestyle BMX (USA).chd" ;;
+	    --) no 
+            51) download-game "dreamcast" "Zombie Revenge (USA).chd" ;;
+	    52) download-game "dreamcast" "South Park - Chef's Luv Shack (USA).chd" ;;
+            53) download-game "dreamcast" "Spawn - In the Demon's Hand (USA).chd" ;;
+	    54) download-game "dreamcast" "Test Drive 6 (USA).chd" ;;
             *)  ;;
         esac
         done < /tmp/results
