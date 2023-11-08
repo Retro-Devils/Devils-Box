@@ -39,13 +39,13 @@ local choice
       --ok-label Select --cancel-label Main-Menu \
       --menu "HOW WOULD YOU LIKE THE GAMES SORTED? " 20 50 30 \
       1 "By Genre" \
-      2 "By Letters" \
-      3 "Top 50 List" \
+      2 "By Title" \
+      2 "Top 50 List" \
       2>&1 >/dev/tty)
 
     case "$choice" in
-    1) bg-n64 ;;
-    2) bl-n64 ;;
+    1) bg-n64
+    2) bt-n64 ;;
     3) t50-n64 ;;
     *) break ;;
     esac
@@ -69,11 +69,11 @@ function bl-n64() {
 
     case "$choice" in
     +) nono ;;
-    1) bl_ae ;;
-    2) bl_fk ;;
-    3) bl_lp ;;
-    4) bl_qu ;;
-    5) bl_vz ;;
+    1) bt_ae ;;
+    2) bt_fk ;;
+    3) bt_lp ;;
+    4) bt_qu ;;
+    5) bt_vz ;;
     *) break ;;
     esac
   done
@@ -109,7 +109,7 @@ function bg-n64() {
 
 #######------------------------------------------ A - E GAMES --------------------------------------------------------#######
 
-function bl_ae() {
+function bt_ae() {
           whiptail --clear --title "NINTENDO 64 A - E " --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
                 "1" "007 - GoldenEye" off \
