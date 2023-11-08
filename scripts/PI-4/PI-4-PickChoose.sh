@@ -417,7 +417,6 @@ function dreamcast() {
             48) download-game "dreamcast" "Dance Dance Revolution 2nd Mix - Dreamcast Edition (Japan).chd" ;;
             49) download-game "dreamcast" "Dance Dance Revolution Club Version - Dreamcast Edition (Japan).chd" ;;
             50) download-game "dreamcast" "Dave Mirra Freestyle BMX (USA).chd" ;;
-	    --) no 
             51) download-game "dreamcast" "Zombie Revenge (USA).chd" ;;
 	    52) download-game "dreamcast" "South Park - Chef's Luv Shack (USA).chd" ;;
             53) download-game "dreamcast" "Spawn - In the Demon's Hand (USA).chd" ;;
