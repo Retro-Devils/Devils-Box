@@ -1,3 +1,11 @@
+## LAST UPDATE
+
+Date--------11/27/23
+
+## To Install/Update 
+
+curl -sSL bit.ly/Install-Devils-Box | bash 
+
 ## Some stuff someone said at some point, somewhere .
 
 "I don’t regret the things I’ve done, I regret the things I didn’t do when I had the chance."
@@ -95,17 +103,5 @@ _______________________________________________________________________
   ~ Pleasure Paradise---------------Some tools cause slight issues, other than that woked fine.
   
   ~ Images with irregular retropie roms paths. UNLIKELY TO WORK WITHOUT EDITS TO PATHS.
-  
-  
-## UPDATES MONTHLY OR AS NEEDED 
 
-LAST UPDATE 
-
-Version-----See Version Info Above
-
-Date--------11/27/23
-
-## To Install/Update 
-
-curl -sSL bit.ly/Install-Devils-Box | bash 
 
