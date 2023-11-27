@@ -43,11 +43,7 @@
 
 Devils Box has been tested and works on PI ZERO, PI 3, PI4 and Linux PC(with RetroPie)
 
-* UPDATE 10/14/22
-
-* DEVILS BOX WILL NOW CHECK THE DEVICE YOU ARE ON. 
- 
-* THEN IT WILL LOAD DIFFERENT VERSIONS BASED OPUON WHAT YOU ARE USING IT ON. 
+* DEVILS BOX CHECKS THE DEVICE YOU ARE ON & WILL LOAD DIFFERENT VERSIONS BASED ON WHAT YOU ARE USING IT ON. 
 
 VERSIONS INFO:
 
@@ -90,7 +86,7 @@ _______________________________________________________________________
 
 - NOPE. Built to work on as many as possible. Tested on the following
   
-  ~  Supreme Ultra------------------Some Tools cause slight issues, other than worked fine.
+  ~  Supreme Ultra------------------Some Tools cause slight issues, other than that worked fine.
   
   ~ Virtual Man---------------------Some tools cause slight issues, other than that worked fine.
   
@@ -98,7 +94,7 @@ _______________________________________________________________________
   
   ~ Pleasure Paradise---------------Some tools cause slight issues, other than that woked fine.
   
-  ~ Images with irregular retropie roms paths. UNLIKELY TO WORK WITH EDITS TO PATHS.
+  ~ Images with irregular retropie roms paths. UNLIKELY TO WORK WITHOUT EDITS TO PATHS.
   
   
 ## UPDATES MONTHLY OR AS NEEDED 
@@ -107,7 +103,7 @@ LAST UPDATE
 
 Version-----See Version Info Above
 
-Date--------10/28/23
+Date--------11/27/23
 
 ## To Install/Update 
 
