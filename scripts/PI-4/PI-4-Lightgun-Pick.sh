@@ -13,8 +13,7 @@ HOST5="https://archive.org/download/devils-dos"
 HOST6="https://archive.org/download/PSP_US_Arquivista"
 HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
 #--------PICK & CHOOSE HOST-----#
-PC_HOST="https://archive.org/download/the-devils-box-alt"
-LG_PICK="https://archive.org/download/RPI-Lightgun-Games/"
+LG_PICK="https://ia601407.us.archive.org/view_archive.php?archive=/29/items/sinden_barebones_rompack/"
 
 
 if grep 'intro_splash_flag=1' "$DB_SETTINGS" > /dev/null 2>&1; then
@@ -38,14 +37,16 @@ local choice
       --ok-label Select --cancel-label Back \
       --menu "PICK CONSOLE & CHOOSE GAME(S) " 20 50 30 \
        1 "NES" \
-       2 "SNES" \
-       3 "Wine--COMING SOON" \
+       2 "MEGADRIVE" \
+       3 "SNES" \
+       4 "Wine--COMING SOON" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) nes ;;
-    2) snes ;;
-    3) wine-pick ;;
+    2) megadrive ;;
+    3) snes ;;
+    4) wine-pick ;;
     *) break ;;
     esac
   done
@@ -53,7 +54,7 @@ fi
 }
 
 function nes() {
-          whiptail --clear --title "PICK & CHOOSE NES" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+          whiptail --clear --title "LIGHT GUN P&C NES" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
                 "1" "Baby Boomer" off \
                 "2" "Barker Bill's Trick Shooting" off \
@@ -94,8 +95,30 @@ function nes() {
         done < /tmp/results
 }
 
+function megadrive() {
+whiptail --clear --title "LIGHT GUN P&C MEGADRIVE" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+      --ok-button Download --cancel-button Back \
+                "1" "Body Count" off \
+                "2" "Lethal Enforcers" off \
+                "3" "Lethal Enforcers 2" off \
+                "4" "Menacer 6 Game Cart" off \
+                "5" "Terminator 2 The Arcade Game" off \
+                2>/tmp/results
+    while read -r choice  
+        do
+        case $choice in
+            1) download-game "megadrive" "Body Count (Europe).zip" ;;
+            2) download-game "megadrive" "Lethal Enforcers (USA).zip		" ;;
+            3) download-game "megadrive" "Lethal Enforcers II - Gun Fighters (USA).zip" ;;
+            4) download-game "megadrive" "Menacer - 6-Game Cartridge (USA, Europe).zip" ;;
+            5) download-game "megadrive" "T2 - The Arcade Game (USA, Europe).zip" ;;
+            *) ;;
+        esac
+        done < /tmp/results
+}
+
 function snes() {
-          whiptail --clear --title "PICK & CHOOSE SNES" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
+          whiptail --clear --title "LIGHT GUN P&C SNES" --separate-output --checklist "Choose Game(s) and click Download:" 0 0 0 \
       --ok-button Download --cancel-button Back \
                 "1" "Battle Clash" off \
                 "2" "Bazooka Blitzkreig" off \
@@ -137,7 +160,7 @@ function download-game() {
       if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40
       else
       clear
-      wget -m -r -np -nH -nd -R "index.html" ${LG_PICK}/"${1}"/Lightgun_Games/"${type}" -P "$HOME"/RetroPie/roms/"${1}"/Lightgun_Games/ -erobots=off
+      wget -m -r -np -nH -nd -R "index.html" ${LG_PICK}/"${1}".rar/"${type}" -P "$HOME"/RetroPie/roms/"${1}"/Lightgun_Games/ -erobots=off
       rm -f "$HOME"/RetroPie/roms/"${1}"/Lightgun_Games/index.html.tmp
 fi
 fi
