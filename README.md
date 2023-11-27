@@ -51,7 +51,7 @@ VERSIONS INFO:
 
 - PI 2/3 ------ RASPBERRY PI 2 & RASPBERRY PI 3 ---------V 1.0
 
-- PI 4 -------- RASPBERRY PI 4B -------------------------V 4.0
+- PI 4 -------- RASPBERRY PI 4B -------------------------V 4.1
 
 - MULTI ------- OTHER DEVICES WITH RETROPIE INSTALLED ---V 1.0
 
