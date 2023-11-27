@@ -11,7 +11,7 @@ HOST4="https://archive.org/download/devils-wine_20221218"
 HOST5="https://archive.org/download/devils-dos"
 #---------------NON-DEVILS-HOSTS-----------------------#
 HOST6="https://archive.org/download/PSP_US_Arquivista"
-HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0" 
+HOST7="https://archive.org/download/secretofmanausamsu1hackbydarkshockv1.0"
 #--------PICK & CHOOSE HOST-----#
 PC_HOST="https://archive.org/download/the-devils-box-alt"
 LG_PICK="https://archive.org/download/RPI-Lightgun-Games/"
@@ -28,7 +28,7 @@ fi
 
 function lightgun_pick() {
 if [ $confirm = 1 ]; then
-dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox " 
+dialog  --sleep 1 --title "Devils Box ERROR !! " --msgbox "
 PLEASE Install/Update Devils Box" 0 0
 else
 local choice
@@ -133,8 +133,8 @@ function snes() {
 function download-game() {
   for type in "$@"; do
     if [ "${type}" != "${1}" ]; then
-      if [ ! -d "$HOME/RetroPie/roms/"${1}"/Lightgun_Games" ]; then mkdir $HOME/RetroPie/roms/"${1}"/Lightgun_Games ; fi
-      if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40;
+      if [ ! -d "$HOME/RetroPie/roms/"${1}"/Lightgun_Games" ]; then mkdir $HOME/RetroPie/roms/"${1}"/Lightgun_Games; fi
+      if [ ! -d "$HOME/RetroPie/roms/"${1}"/" ]; then dialog  --sleep 1 --title ""${1}" FOLDER MISSING!" --msgbox "Please Install It's Emulator First" 6 40
       else
       clear
       wget -m -r -np -nH -nd -R "index.html" ${LG_PICK}/"${1}"/Lightgun_Games/"${type}" -P "$HOME"/RetroPie/roms/"${1}"/Lightgun_Games/ -erobots=off
