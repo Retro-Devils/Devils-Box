@@ -37,13 +37,15 @@ local choice
       --ok-label Select --cancel-label Back \
       --menu "PICK CONSOLE & CHOOSE GAME(S) " 20 50 30 \
        1 "NES" \
-       2 "MEGADRIVE" \
-       3 "SNES" \
-       4 "Wine--COMING SOON" \
+       2 "MASTERSYSTEM" \
+       3 "MEGADRIVE" \
+       4 "SNES" \
+       5 "Wine--COMING SOON" \
       2>&1 >/dev/tty)
 
     case "$choice" in
     1) nes ;;
+    2) mastersystem ;,
     2) megadrive ;;
     3) snes ;;
     4) wine-pick ;;
