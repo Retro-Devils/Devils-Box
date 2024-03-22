@@ -45,10 +45,10 @@ local choice
 
     case "$choice" in
     1) nes ;;
-    2) mastersystem ;,
-    2) megadrive ;;
-    3) snes ;;
-    4) wine-pick ;;
+    2) mastersystem ;;
+    3) megadrive ;;
+    4) snes ;;
+    5) wine-pick ;;
     *) break ;;
     esac
   done
