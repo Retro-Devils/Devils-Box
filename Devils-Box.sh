@@ -11,6 +11,7 @@ elif [ "$rpi" = "3" ]; then bash $HOME/Devils-Box/scripts/PI-3/PI-3-Devils-Box.s
 elif [ "$rpi" = "4" ]; then bash $HOME/Devils-Box/scripts/PI-4/PI-4-Devils-Box.sh
 elif [ "$rpi" = "400" ]; then bash $HOME/Devils-Box/scripts/PI-4/PI-4-Devils-Box.sh
 elif [ "$rpi" = "5" ]; then bash $HOME/Devils-Box/scripts/PI-4/PI-4-Devils-Box.sh
+elif [ "$rpi" = "pitchfork" ]; then bash $HOME/Devils-Box/scripts/Pitchfork/Pitchfork-Devils-Box.sh
 else
 bash $HOME/Devils-Box/scripts/Multi-Devils-Box.sh
 fi
