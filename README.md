@@ -1,4 +1,4 @@
-## LAST UPDATE ------- 11/27/23
+## LAST UPDATE ------- 9/22/26
 
 ## To Install/Update 
 
@@ -53,15 +53,17 @@ Devils Box has been tested and works on PI ZERO, PI 3, PI4 and Linux.
 
 VERSIONS INFO:
 
-- PI 0/1 ------ RASPBERRY PI ZERO/W & RASPBERRY PI 1 ----V 1.1
+- PI 0/1 -------------- RASPBERRY PI ZERO/W & RASPBERRY PI 1 ----------- V 1.1
 
-- PI 2/3 ------ RASPBERRY PI 2 & RASPBERRY PI 3 ---------V 1.0
+- PI 2/3 -------------- RASPBERRY PI 2 & RASPBERRY PI 3 ---------------- V 1.0
 
-- PI 4 -------- RASPBERRY PI 4B -------------------------V 4.1
+- PI 4 ---------------- RASPBERRY PI 4B -------------------------------- V 4.1
 
-- FYDE OS ----- LINUX DEVICE WITH FYDEOS ----------------V 1.0 (WIP)
+- PITCHFORKOS --------- LINUX DEVICES USING PITCHFORKOS ---------------- V 1.0 (WIP)
 
-- GENERIC ------- OTHER LINUX DEVICES  WITH RETRODECK, RETROPIE OR ES-DE -------------------V 1.0
+- RETRODECK ----------- LINUX DEVICES WITH RETRODECK INSTALLED --------- V 1.0(WIP)
+
+- GENERIC RETROPIE ---- NON PI LINUX DEVICES RETROPIE INSTALLED -------- V 1.0
 
 _______________________________________________________________________    
 *AVAILABLE ON ALL PI VERSIONS (with RetroPie installed)*
@@ -110,5 +112,3 @@ _______________________________________________________________________
 - Retropie
   
 - RetroDeck
-  
-- ES-DE
