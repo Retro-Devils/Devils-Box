@@ -25,9 +25,9 @@ curl -sSL bit.ly/Install-Devils-Box | bash
 
 - Functions
     
-    ~ Grabs packs of 'things & stuff'  from web to Pi. 
+    ~ Grabs packs of 'things & stuff'  from web to Linux device. 
     
-    ~ Grabs indivual 'thing & stuff' from web to Pi.
+    ~ Grabs indivual 'thing & stuff' from web to Linux device.
     
     ~ Community made/assembled emu installers.
 
@@ -35,21 +35,21 @@ curl -sSL bit.ly/Install-Devils-Box | bash
     
     ~ Easy access to RetroPie Tools.
     
-    ~ Community Tools like Pi Marquee, TAMO+, I.M.P, etc. 
+    ~ Community RetroPie Tools like Pi Marquee, TAMO+, I.M.P, etc. 
     
-    ~ Custom Made/Modified Themes 
+    ~ Custom Made/Modified Retropie Themes 
     
     ~ Easy access to Hurstys Themes
     
-    ~ Community Made/Modified Themes
+    ~ Community Made/Modified Retropie Themes
     
     ~ Remove Game Packs/Collections 
     
-## WHAT PI DOES THIS WORK ON ?
+## WHAT DOES THIS WORK ON ?
 
-Devils Box has been tested and works on PI ZERO, PI 3, PI4 and Linux PC(with RetroPie)
+Devils Box has been tested and works on PI ZERO, PI 3, PI4 and Linux. 
 
-* DEVILS BOX CHECKS THE DEVICE YOU ARE ON & WILL LOAD DIFFERENT VERSIONS BASED ON WHAT YOU ARE USING IT ON. 
+* DEVILS BOX CHECKS THE DEVICE YOU ARE ON & FRONTEND . THEN WILL LOAD DIFFERENT VERSIONS BASED ON WHAT YOU ARE USING IT ON. 
 
 VERSIONS INFO:
 
@@ -59,10 +59,12 @@ VERSIONS INFO:
 
 - PI 4 -------- RASPBERRY PI 4B -------------------------V 4.1
 
-- MULTI ------- OTHER DEVICES WITH RETROPIE INSTALLED ---V 1.0
+- FYDE OS ----- LINUX DEVICE WITH FYDEOS ----------------V 1.0 (WIP)
+
+- GENERIC ------- OTHER LINUX DEVICES  WITH RETRODECK, RETROPIE OR ES-DE -------------------V 1.0
 
 _______________________________________________________________________    
-*AVAILABLE ON ALL PIS VERSIONS (with RetroPie installed)*
+*AVAILABLE ON ALL PI VERSIONS (with RetroPie installed)*
 _______________________________________________________________________  
   ~ Getting packs and indivaul "things & stuff" from web.
   
@@ -86,7 +88,7 @@ _______________________________________________________________________
   
   ~ Reboot and very simple tools.
 
-*We have tested on 3 seperate pcs with linux running on them. One pc didnt have Retropie at all. *
+*We have tested on 3 seperate pcs with linux running on them.*
 
 ## DEVILS RETROPIE IMAGE ONLY?
 
@@ -103,3 +105,10 @@ _______________________________________________________________________
   ~ Images with irregular retropie roms paths. UNLIKELY TO WORK WITHOUT EDITS TO PATHS.
 
 
+## WHAT FRONTEND DOES THIS WORK WITH? 
+
+- Retropie
+  
+- RetroDeck
+  
+- ES-DE
