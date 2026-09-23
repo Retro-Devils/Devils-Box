@@ -3,13 +3,13 @@ export NCURSES_NO_UTF8_ACS=1
 
 # Detect RetroDECK
 if [ -d "$HOME/retrodeck" ]; then
-    bash "$HOME/Devils-Box/scripts/RetroDECK/RD-Devils-Box.sh"
+    bash "$HOME/Devils-Box/scripts/RETRODECK/RD-Devils-Box.sh"
     exit
 fi
 
 # Detect FydeOS
 if grep -qi "fydeos" /etc/os-release 2>/dev/null; then
-    bash "$HOME/Devils-Box/scripts/Pitchfork/PF-Devils-Box.sh"
+    bash "$HOME/Devils-Box/scripts/PITCHFORK/PF-Devils-Box.sh"
     exit
 fi
 
