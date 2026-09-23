@@ -2,7 +2,7 @@
 export NCURSES_NO_UTF8_ACS=1
 
 # Detect RetroDECK
-if [ -d "$HOME/RetroDeck" ]; then
+if [ -d "$HOME/retrodeck" ]; then
     bash "$HOME/Devils-Box/scripts/RetroDECK/RD-Devils-Box.sh"
     exit
 fi
