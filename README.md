@@ -21,7 +21,7 @@ curl -sSL bit.ly/Install-Devils-Box | bash
 
 ## Whats This? 
 
-- A Toolbox and more built for RetroPie. 
+- A Toolbox and more built for Linux retro gaming. 
 
 - Functions
     
