@@ -1,19 +1,25 @@
 #!/bin/bash
 export NCURSES_NO_UTF8_ACS=1
 
-# Detect RetroDECK
+# Are you using RetroDECK
 if [ -d "$HOME/retrodeck" ]; then
     bash "$HOME/Devils-Box/scripts/RETRODECK/RD-Devils-Box.sh"
     exit
 fi
 
-# Detect FydeOS
+# Are you using FydeOS
 if grep -qi "fydeos" /etc/os-release 2>/dev/null; then
     bash "$HOME/Devils-Box/scripts/PITCHFORK/PF-Devils-Box.sh"
     exit
 fi
 
-# Detect Raspberry Pi
+# Are you using Pegasus Frontend
+if grep -qi "pegasus" /etc/os-release 2>/dev/null; then
+    bash "$HOME/Devils-Box/scripts/GRP/Generic-Devils-Box.sh"
+    exit
+fi
+
+# Are you using a Raspberry Pi
 if [ -f /proc/device-tree/model ]; then
     rpi=$(tr -d '\0' < /proc/device-tree/model | awk '{print $3}')
 
