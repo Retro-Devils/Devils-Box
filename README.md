@@ -94,7 +94,7 @@ _______________________________________________________________________
 
 _______________________________________________________________________  
 
-*AVAILABLE ON PEGASUS VERSION(with correct paths set in pegasus*
+*AVAILABLE ON PEGASUS VERSION(with correct paths set in pegasus)
 _______________________________________________________________________   
 
   - Download stuff & things to .../roms/systemname/
