@@ -50,9 +50,24 @@ curl -sSL bit.ly/Install-Devils-Box | bash
 
 Devils Box has been tested and works on PI ZERO, PI 3, PI4 and Linux PCs. 
 
-* DEVILS BOX CHECKS THE DEVICE & FRONTEND  YOU ARE ON. THEN WILL LOAD DIFFERENT VERSIONS BASED ON WHAT YOU ARE USING IT ON. 
+* DEVILS BOX CHECKS THE DEVICE & FRONTEND  YOU ARE ON. THEN WILL LOAD DIFFERENT VERSIONS BASED ON WHAT YOU ARE USING IT ON.
 
-VERSIONS INFO:
+
+
+## WHAT FRONTEND DOES THIS WORK WITH? 
+
+ - Retropie
+  
+ - RetroDeck
+
+ - Batocera (in development might not happen)
+
+ - Pegasus FE
+   
+    ~ YOU MUST SET CORRECT PATHS!! Paths will be created for you at "yourbasedirectory/roms/....."
+
+
+## VERSIONS INFO:
 
   - PI 0/1 -------------- RASPBERRY PI ZERO/W & RASPBERRY PI 1 ---------------- V 1.1
 
@@ -67,6 +82,7 @@ VERSIONS INFO:
   - GENERIC RETROPIE ---- NON PI LINUX DEVICES WITH RETROPIE INSTALLED -------- V 1.0
 
   - PEGASUS FRONTEND ---- COMING SOON IN DEVELOPMENT
+    
 _______________________________________________________________________    
 *AVAILABLE ON ALL PI VERSIONS (with RetroPie installed)*
 _______________________________________________________________________  
@@ -94,7 +110,7 @@ _______________________________________________________________________
 
 _______________________________________________________________________  
 
-*AVAILABLE ON PEGASUS VERSION(with correct paths set in pegasus)
+*AVAILABLE ON PEGASUS VERSION(with correct paths set in pegasus)*
 _______________________________________________________________________   
 
   - Download stuff & things to .../roms/systemname/
@@ -126,19 +142,6 @@ NOPE. Built to work on as many as possible. Tested on the following
   - Pleasure Paradise---------------Some tools cause slight issues, other than that woked fine.
   
   - Images with irregular retropie roms paths. UNLIKELY TO WORK WITHOUT EDITS TO PATHS.
-
-
-## WHAT FRONTEND DOES THIS WORK WITH? 
-
- - Retropie
-  
- - RetroDeck
-
- - Batocera (in development might not happen)
-
- - Pegasus FE
-   
-    ~ YOU MUST SET CORRECT PATHS!! Paths will be created for you at "yourbasedirectory/roms/....."
 
 
 ## WHY MAKE/MANTAIN THIS?
