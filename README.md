@@ -1,8 +1,16 @@
-## LAST UPDATE ------- 9/22/26
+## LAST UPDATE ------- 9/25/26
 
 ## To Install/Update 
 
-curl -sSL bit.ly/Install-Devils-Box | bash 
+1. Open your terminal 
+
+2. copy and paste below code.
+   
+   *curl -sSL bit.ly/Install-Devils-Box | bash*
+
+3. Wait for it to do its thing .
+
+4. Follow on screen instructions.
 
 ## Some stuff someone said at some point, somewhere .
 
