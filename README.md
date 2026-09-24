@@ -27,7 +27,7 @@ curl -sSL bit.ly/Install-Devils-Box | bash
     
     ~ Grabs packs of 'things & stuff'  from web to Linux device. 
     
-    ~ Grabs indivual 'thing & stuff' from web to Linux device.
+    ~ Grabs indivual 'things & stuff' from web to Linux device.
     
     ~ Community made/assembled emu installers.
 
@@ -44,57 +44,60 @@ curl -sSL bit.ly/Install-Devils-Box | bash
     ~ Community Made/Modified Retropie Themes
     
     ~ Remove Game Packs/Collections 
-    
+
+    ~ 
+  
 ## WHAT DOES THIS WORK ON ?
 
-Devils Box has been tested and works on PI ZERO, PI 3, PI4 and Linux. 
+Devils Box has been tested and works on PI ZERO, PI 3, PI4 and Linux PCs. 
 
-* DEVILS BOX CHECKS THE DEVICE YOU ARE ON & FRONTEND . THEN WILL LOAD DIFFERENT VERSIONS BASED ON WHAT YOU ARE USING IT ON. 
+* DEVILS BOX CHECKS THE DEVICE & FRONTEND  YOU ARE ON. THEN WILL LOAD DIFFERENT VERSIONS BASED ON WHAT YOU ARE USING IT ON. 
 
 VERSIONS INFO:
 
-- PI 0/1 -------------- RASPBERRY PI ZERO/W & RASPBERRY PI 1 ----------- V 1.1
+  - PI 0/1 -------------- RASPBERRY PI ZERO/W & RASPBERRY PI 1 ----------- V 1.1
 
-- PI 2/3 -------------- RASPBERRY PI 2 & RASPBERRY PI 3 ---------------- V 1.0
+  - PI 2/3 -------------- RASPBERRY PI 2 & RASPBERRY PI 3 ---------------- V 1.0
 
-- PI 4 ---------------- RASPBERRY PI 4B -------------------------------- V 4.1
+  - PI 4 ---------------- RASPBERRY PI 4B -------------------------------- V 4.1
 
-- PITCHFORKOS --------- LINUX DEVICES USING PITCHFORKOS ---------------- V 1.0 (WIP)
+  - PITCHFORKOS --------- LINUX DEVICES USING PITCHFORKOS ---------------- V 1.0 (WIP)
 
-- RETRODECK ----------- LINUX DEVICES WITH RETRODECK INSTALLED --------- V 1.0(WIP)
+  - RETRODECK ----------- LINUX DEVICES WITH RETRODECK INSTALLED --------- V 1.0(WIP)
 
-- GENERIC RETROPIE ---- NON PI LINUX DEVICES RETROPIE INSTALLED -------- V 1.0
+  - GENERIC RETROPIE ---- NON PI LINUX DEVICES RETROPIE INSTALLED -------- V 1.0
 
+  - ES-DE --------------- COMING SOON IN DEVELOPMENT
 _______________________________________________________________________    
 *AVAILABLE ON ALL PI VERSIONS (with RetroPie installed)*
 _______________________________________________________________________  
-  ~ Getting packs and indivaul "things & stuff" from web.
+  - Getting packs and indivaul "things & stuff" from web.
   
-  ~ Expand Memory
+  - Expand Memory
   
-  ~ Themes and stuff like that
+  - Themes and stuff like that
   
 _______________________________________________________________________  
 *AVAILABLE ON PI 4 VERSION ONLY (with RetroPie installed)*
 _______________________________________________________________________    
-  ~ Most Tools 
+  - Most Tools 
   
-  ~ Some Emus. Mugen/WINE and Model 3 for examples.
+  - Some Emus. Mugen/WINE and Model 3 for examples.
   
 _______________________________________________________________________  
 
-*AVAILABLE ON MULTI VERSION*
+*AVAILABLE ON GENERIC RETROPIE VERSION*
 _______________________________________________________________________    
 
-  ~ Downloaders 
+  - Downloaders 
   
-  ~ Reboot and very simple tools.
+  - Reboot and very simple tools.
 
 *We have tested on 3 seperate pcs with linux running on them.*
 
 ## DEVILS RETROPIE IMAGE ONLY?
 
-- NOPE. Built to work on as many as possible. Tested on the following
+  - NOPE. Built to work on as many as possible. Tested on the following
   
   ~  Supreme Ultra------------------Some Tools cause slight issues, other than that worked fine.
   
@@ -109,6 +112,19 @@ _______________________________________________________________________
 
 ## WHAT FRONTEND DOES THIS WORK WITH? 
 
-- Retropie
+ - Retropie
   
-- RetroDeck
+ - RetroDeck
+
+ - ES-DE (coming soon)
+
+ - Batocera (in development might not happen)
+
+
+## WHY MAKE/MANTAIN THIS?
+
+ - Freewill
+
+ - To help other devils, rejects, misfits, grab stuff & things easier.
+
+ - Gaming should never die & we shouldnt be charge for 30 year old games .
