@@ -116,26 +116,6 @@ bash "$HOME"/Devils-Box/scripts/RETRODECK-Translations.sh
 fi
 }
 
-
-#-----------RETROPIE SETUP MENU FUNCTION-----------#
-function rpi-menu() {
-  sudo "$HOME"/RetroPie-Setup/retrodeck_setup.sh
-}
-#   PIKISS  #
-function pikiss() {
-if [ $NETCHECK -eq 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox "
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-else
-  if [ -d "$HOME/piKiss/" ]; then bash $HOME/piKiss/piKiss.sh;
-  else
-    cd $HOME/
-    curl -sSL https://git.io/JfAPE | bash
-    bash $HOME/piKiss/piKiss.sh
-  fi
-fi
-}
-
 ###   DEVILS BOX TOOLS FUNCTION     ###
 function db_tools() {
   local choice
