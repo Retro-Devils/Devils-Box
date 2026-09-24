@@ -45,7 +45,6 @@ curl -sSL bit.ly/Install-Devils-Box | bash
     
     ~ Remove Game Packs/Collections 
 
-    ~ 
   
 ## WHAT DOES THIS WORK ON ?
 
@@ -97,17 +96,17 @@ _______________________________________________________________________
 
 ## DEVILS RETROPIE IMAGE ONLY?
 
-  - NOPE. Built to work on as many as possible. Tested on the following
+NOPE. Built to work on as many as possible. Tested on the following
   
-  ~  Supreme Ultra------------------Some Tools cause slight issues, other than that worked fine.
+  -  Supreme Ultra------------------Some Tools cause slight issues, other than that worked fine.
   
-  ~ Virtual Man---------------------Some tools cause slight issues, other than that worked fine.
+  - Virtual Man---------------------Some tools cause slight issues, other than that worked fine.
   
-  ~ Diablos Arcade------------------Works Great.
+  - Diablos Arcade------------------Works Great.
   
-  ~ Pleasure Paradise---------------Some tools cause slight issues, other than that woked fine.
+  - Pleasure Paradise---------------Some tools cause slight issues, other than that woked fine.
   
-  ~ Images with irregular retropie roms paths. UNLIKELY TO WORK WITHOUT EDITS TO PATHS.
+  - Images with irregular retropie roms paths. UNLIKELY TO WORK WITHOUT EDITS TO PATHS.
 
 
 ## WHAT FRONTEND DOES THIS WORK WITH? 
