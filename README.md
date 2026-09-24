@@ -68,11 +68,11 @@ Devils Box has been tested and works on PI ZERO, PI 3, PI4 and Linux PCs.
   
  - RetroDeck
 
- - Batocera (in development might not happen)
-
  - Pegasus FE
    
     ~ YOU MUST SET CORRECT PATHS!! Paths will be created for you at "yourbasedirectory/roms/....."
+
+ - Batocera (in development might not happen)
 
 
 ## VERSIONS INFO:
