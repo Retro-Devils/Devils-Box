@@ -136,7 +136,9 @@ NOPE. Built to work on as many as possible. Tested on the following
 
  - Batocera (in development might not happen)
 
- - Pegasus FE (YOU MUST SET CORRECT PATHS!) Paths will be created for you at "yourbasedirectory/roms/....."
+ - Pegasus FE
+   
+    ~ YOU MUST SET CORRECT PATHS!! Paths will be created for you at "yourbasedirectory/roms/....."
 
 
 ## WHY MAKE/MANTAIN THIS?
