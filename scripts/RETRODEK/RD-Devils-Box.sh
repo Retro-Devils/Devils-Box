@@ -30,51 +30,39 @@ function main_menu() {
     if [ "$DB_STATUS" == 1 ]; then
       options=( \
       - "<---->Downloaders<------>"
-      1 "Artwork Packs"
-      2 "Console Packs"
-      3 "Hacked Packs"
-      4 "Homebrew Packs"
-      5 "Pick & Choose"
-      6 "Translations Packs"
+      1 "Console Packs"
+      2 "Hacked Packs"
+      3 "Homebrew Packs"
+      4 "Pick & Choose"
+      5 "Translations Packs"
       - "<---Devils Box Tools---->"
-      7 "Devils Box Tools" 
-      8 "Devils Box Credits"
-      9 "DB Games Server Check"
+      6 "Devils Box Tools" 
+      7 "Devils Box Credits"
+      8 "DB Games Server Check"
       - "<----------------------->"
-      10 "Show System Info"
-      11 "Reboot System"
+      9 "Show System Info"
+      10 "Reboot System"
     else
       options=( \
       1 "Install Devils-Box")
     fi
     choice=$("${choice[@]}" "${options[@]}" 2>&1 >/dev/tty)
     case $choice in
-    1) if [ "$DB_STATUS" == 1 ]; then artwork; else curl -sSL https://git.io/JSDGq | bash; fi; ;;
-    2) consoles ;;
-    3) hacked ;;
-    4) homebrew ;;
-    5) pick ;;
-    6) translations ;;
-    7) db_tools ;;
-    8) db_credits ;;
-    9) check-servers ;;
-    10) show_sysinfo ;;
-    11) system_reboot ;;
+    1) if [ "$DB_STATUS" == 1 ]; then consoles; else curl -sSL https://git.io/JSDGq | bash; fi; ;;
+    2) hacked ;;
+    3) homebrew ;;
+    4) pick ;;
+    5) translations ;;
+    6) db_tools ;;
+    7) db_credits ;;
+    8) check-servers ;;
+    9) show_sysinfo ;;
+    10) system_reboot ;;
     -) nono ;;
     +) none ;;
     *) break ;;
     esac
   done
-}
-
-#-----------Artwork-----------#
-function artwork() {
-if [ $NETCHECK -eq 1 ]; then
-dialog  --sleep 1 --title "OFFLINE ERROR!!" --msgbox " 
-Offline ... Downloads not Availible Please Connect To Internet!" 0 0
-  else
-bash "$HOME"/Devils-Box/scripts/RETRODECK/RETRODECK-Artwork.sh
-fi
 }
 
 #-----------Consoles-----------#
