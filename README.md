@@ -83,7 +83,7 @@ Devils Box has been tested and works on PI ZERO, PI 3, PI4 and Linux PCs.
 
   - PI 4 ---------------- RASPBERRY PI 4B ------------------------------------- V 4.1
 
-  - PITCHFORKOS --------- LINUX DEVICES USING PITCHFORKOS --------------------- V 1.0 (WIP)
+  - PITCHFORKOS --------- COMING SOON IN DEVELOPMENT
 
   - RETRODECK ----------- LINUX DEVICES WITH RETRODECK INSTALLED -------------- V 1.0(WIP)
 
