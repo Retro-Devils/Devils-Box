@@ -14,7 +14,7 @@ if grep -qi "fydeos" /etc/os-release 2>/dev/null; then
 fi
 
 # Are you using Pegasus Frontend
-if grep -qi "pegasus" /etc/os-release 2>/dev/null; then
+if [ -d "$HOME/retrodeck" ]; then
     bash "$HOME/Devils-Box/scripts/GRP/Generic-Devils-Box.sh"
     exit
 fi
