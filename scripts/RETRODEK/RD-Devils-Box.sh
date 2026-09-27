@@ -297,7 +297,7 @@ read -n 1 -s -r -p "Press any key to continue"
 #------REBOOT FUNCTION------#
 function system_reboot() {
 clear
-read -n 1 -s -r -p "Press any key to Reboot"
+read -n 1 -s -r -p "Press any key to Reboot--- You Might Have To Enter Your Password"
 sudo reboot
 }
 
