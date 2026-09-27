@@ -15,7 +15,7 @@ fi
 
 # Are you using Pegasus Frontend
 if [ -d "$HOME/retrodeck" ]; then
-    bash "$HOME/Devils-Box/scripts/GRP/Generic-Devils-Box.sh"
+    bash "$HOME/Devils-Box/scripts/Pegasus-Devils-Box.sh"
     exit
 fi
 
